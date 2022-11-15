@@ -4,40 +4,42 @@
 
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
-          <TypeId>Inventory</TypeId>
-          <SubtypeId>RAI-Behavior-PirateDagger</SubtypeId>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>RAI-Behavior-PirateDagger</SubtypeId>
       </Id>
       <Description>
 
-      [RivalAI Behavior]
-      [BehaviorName:Hunter]
-	  
-	  [UseProjectileLeadPrediction:true]
-	  [UseBarrageFire:true]
-	  [UseTurrets:true]
-	  [UseStaticGuns:true]
-	  [IdealMaxSpeed:70]
-	  [UseVanillaCollisionAvoidance:false]
-	  [AllowStrafing:true]
-	  [StrafeMinDurationMs:1500]
-	  [StrafeMaxDurationMs:20000]
-	  [StrafeMinimumTargetDistance:800]
-	  [StrafeMinCooldownMs:1]
-	  [StrafeMaxCooldownMs:1]
-	  [StrafeSpeedCutOff:60]
-	  [StrafeDistanceCutOff:1500]
-	  [FighterEngageDistanceSpace:1200]
-	  [FighterDisengageDistanceSpace:1201]
-	  [UseVelocityCollisionEvasion:true]
-	  [CollisionEvasionWaypointDistance:600]
-	  [CollisionEvasionResumeDistance:300]
-	  [CollisionEvasionResumeTime:10]
-	  
-	  [TargetData:Pirate-Target-Main-A]
-      [OverrideTargetData:Pirate-Target-Main-A]
-	  
-	  [EngageOnTargetLineOfSight:true]
-      [EngageOnWeaponActivation:true]
+        [RivalAI Behavior]
+        [BehaviorName:Hunter]
+
+        [UseProjectileLeadPrediction:true]
+        [UseBarrageFire:true]
+        [UseTurrets:true]
+        [UseStaticGuns:true]
+        [IdealMaxSpeed:70]
+        [UseVanillaCollisionAvoidance:false]
+        [AllowStrafing:true]
+        [StrafeMinDurationMs:1500]
+        [StrafeMaxDurationMs:20000]
+        [StrafeMinimumTargetDistance:800]
+        [StrafeMinCooldownMs:1]
+        [StrafeMaxCooldownMs:1]
+        [StrafeSpeedCutOff:60]
+        [StrafeDistanceCutOff:1500]
+        [FighterEngageDistanceSpace:1200]
+        [FighterDisengageDistanceSpace:1201]
+        [UseVelocityCollisionEvasion:true]
+        [CollisionEvasionWaypointDistance:600]
+        [CollisionEvasionResumeDistance:300]
+        [CollisionEvasionResumeTime:10]
+
+        [TargetData:Pirate-Target-Main-A]
+        [OverrideTargetData:Pirate-Target-Main-A]
+        
+        [Triggers:GVA-ScoutTattleTrigger]
+
+        [EngageOnTargetLineOfSight:true]
+        [EngageOnWeaponActivation:true]
       </Description>
     </EntityComponent>
   </EntityComponents>

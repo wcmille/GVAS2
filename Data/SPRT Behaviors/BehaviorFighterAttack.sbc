@@ -1,44 +1,44 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <EntityComponents>
-	<!-- SPRT Behaviors -->
+    <!-- SPRT Behaviors -->
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
-          <TypeId>Inventory</TypeId>
-          <SubtypeId>GVA-Pirate-Behavior-Start</SubtypeId>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Pirate-Behavior-Start</SubtypeId>
       </Id>
       <Description>
-      [RivalAI Behavior]
-	  
-      [BehaviorName:Fighter]
-	  [UseProjectileLeadPrediction:true]
-	  [UseBarrageFire:false]
-	  [UseTurrets:true]
-	  [UseStaticGuns:true]
-	  [IdealMaxSpeed:90]
-	  [UseVanillaCollisionAvoidance:false]
-	  [AllowStrafing:true]
-	  [StrafeMinDurationMs:1500]
-	  [StrafeMaxDurationMs:20000]
-	  [StrafeMinCooldownMs:1]
-	  [StrafeMaxCooldownMs:1]
-	  [StrafeSpeedCutOff:60]
-	  [StrafeDistanceCutOff:1500]
-	  [FighterEngageDistanceSpace:800]
-	  [FighterDisengageDistanceSpace:900]
-	  [UseVelocityCollisionEvasion:true]
-	  [CollisionEvasionWaypointDistance:600]
-	  [CollisionEvasionResumeDistance:300]
-	  [CollisionEvasionResumeTime:10]
-	  [RotationMultiplier:0.5]
-	  [UseAmmoReplenish:true]
-	  [AmmoReplenishClipAmount:100]
-	  [UsePlayerDistanceTimer:true]
-	  [PlayerDistanceTimerTrigger:5]
-	  [PlayerDistanceTrigger:50000]
-	  [UseNoTargetTimer:true]
-	  [NoTargetTimerTrigger:600]
-	  [UseRetreatTimer:false]
+        [RivalAI Behavior]
+
+        [BehaviorName:Fighter]
+        [UseProjectileLeadPrediction:true]
+        [UseBarrageFire:false]
+        [UseTurrets:true]
+        [UseStaticGuns:true]
+        [IdealMaxSpeed:90]
+        [UseVanillaCollisionAvoidance:false]
+        [AllowStrafing:true]
+        [StrafeMinDurationMs:1500]
+        [StrafeMaxDurationMs:20000]
+        [StrafeMinCooldownMs:1]
+        [StrafeMaxCooldownMs:1]
+        [StrafeSpeedCutOff:60]
+        [StrafeDistanceCutOff:1500]
+        [FighterEngageDistanceSpace:800]
+        [FighterDisengageDistanceSpace:900]
+        [UseVelocityCollisionEvasion:true]
+        [CollisionEvasionWaypointDistance:600]
+        [CollisionEvasionResumeDistance:300]
+        [CollisionEvasionResumeTime:10]
+        [RotationMultiplier:0.5]
+        [UseAmmoReplenish:true]
+        [AmmoReplenishClipAmount:100]
+        [UsePlayerDistanceTimer:true]
+        [PlayerDistanceTimerTrigger:5]
+        [PlayerDistanceTrigger:50000]
+        [UseNoTargetTimer:true]
+        [NoTargetTimerTrigger:600]
+        [UseRetreatTimer:false]
       </Description>
     </EntityComponent>
   </EntityComponents>

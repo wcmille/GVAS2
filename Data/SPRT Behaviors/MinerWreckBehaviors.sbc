@@ -9,18 +9,18 @@
       <Description>
         [MES Manipulation]
 
-		[OverrideBlockDamageModifier:false]
-		[BlockDamageModifier:100]
-		[GridsAreDestructable:true]
-		[GridsAreEditable:true]
+        [OverrideBlockDamageModifier:false]
+        [BlockDamageModifier:100]
+        [GridsAreDestructable:true]
+        [GridsAreEditable:true]
 
-		[ShiftBlockColorsHue:false]
-		[RandomHueShift:false]
+        [ShiftBlockColorsHue:false]
+        [RandomHueShift:false]
 
-		[UseRandomNameGenerator:true]
-		[RandomGridNamePattern:[NPC] NeutralAdjective EZ-POD RandomLetter-RandomNumber]
+        [UseRandomNameGenerator:true]
+        [RandomGridNamePattern:[NPC] NeutralAdjective EZ-POD RandomLetter-RandomNumber]
       </Description>
-    </EntityComponent>  
+    </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
@@ -29,22 +29,22 @@
       <Description>
         [MES Manipulation]
 
-		[OverrideBlockDamageModifier:false]
-		[BlockDamageModifier:100]
-		[GridsAreDestructable:true]
-		[GridsAreEditable:true]
+        [OverrideBlockDamageModifier:false]
+        [BlockDamageModifier:100]
+        [GridsAreDestructable:true]
+        [GridsAreEditable:true]
 
-		[ShiftBlockColorsHue:false]
-		[RandomHueShift:false]
-		
-		[UseGridDereliction:true]
-		[DerelictionProfiles:GVE-Dereliction-Armor-DamageOnly]
-		[DerelictionProfiles:GVE-Dereliction-NonArmor-DamageOnly]
-		[DerelictionProfiles:GVE-Dereliction-DerelictTurrets]
+        [ShiftBlockColorsHue:false]
+        [RandomHueShift:false]
 
-		[UseRandomNameGenerator:true]
-		[RandomGridNamePattern:[NPC] NeutralAdjective EZ-POD NatoLetter-RandomNumber]
+        [UseGridDereliction:true]
+        [DerelictionProfiles:GVE-Dereliction-Armor-DamageOnly]
+        [DerelictionProfiles:GVE-Dereliction-NonArmor-DamageOnly]
+        [DerelictionProfiles:GVE-Dereliction-DerelictTurrets]
+
+        [UseRandomNameGenerator:true]
+        [RandomGridNamePattern:[NPC] NeutralAdjective EZ-POD NatoLetter-RandomNumber]
       </Description>
-    </EntityComponent>  
+    </EntityComponent>
   </EntityComponents>
 </Definitions>

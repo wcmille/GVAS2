@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <EntityComponents>
-	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
         <SubtypeId>GVA-Manipulation-StdBlue</SubtypeId>
@@ -9,17 +9,17 @@
       <Description>
         [MES Manipulation]
 
-		[OverrideBlockDamageModifier:false]
-		[BlockDamageModifier:100]
-		[GridsAreDestructable:true]
-		[GridsAreEditable:true]
+        [OverrideBlockDamageModifier:false]
+        [BlockDamageModifier:100]
+        [GridsAreDestructable:true]
+        [GridsAreEditable:true]
 
-		[ShiftBlockColorsHue:false]
-		[RandomHueShift:false]
+        [ShiftBlockColorsHue:false]
+        [RandomHueShift:false]
 
-		[UseRandomNameGenerator:true]
-		[RandomGridNamePattern:[NPC] NeutralAdjective AuthorityNoun-RandomNumber]
+        [UseRandomNameGenerator:true]
+        [RandomGridNamePattern:[NPC] NeutralAdjective AuthorityNoun-RandomNumber]
       </Description>
-    </EntityComponent>  
+    </EntityComponent>
   </EntityComponents>
 </Definitions>

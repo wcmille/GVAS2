@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>GVA-ScoutTattleTrigger</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Trigger]
+        [UseTrigger:true]
+        [Type:PlayerNear]
+        [MinCooldownMs:900000]
+        [MaxCooldownMs:900001]
+        [TargetDistance:4000]
+        [StartsReady:true]
+
+        [MaxActions:1]
+        [Actions:GVA-Action-CallReinforcements]
+      </Description>
+      
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Action-CallReinforcements</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Action]
+
+        [CreateKnownPlayerArea:true]
+        [KnownPlayerAreaRadius:8000]
+        [KnownPlayerAreaTimer:30]
+
+      </Description>
+
+    </EntityComponent>
+  </EntityComponents>
+</Definitions>

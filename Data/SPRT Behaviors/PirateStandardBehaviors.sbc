@@ -9,19 +9,19 @@
       <Description>
         [MES Manipulation]
 
-		[OverrideBlockDamageModifier:false]
-		[BlockDamageModifier:100]
-		[GridsAreDestructable:true]
-		[GridsAreEditable:true]
+        [OverrideBlockDamageModifier:false]
+        [BlockDamageModifier:100]
+        [GridsAreDestructable:true]
+        [GridsAreEditable:true]
 
-		[ShiftBlockColorsHue:false]
-		[RandomHueShift:false]
+        [ShiftBlockColorsHue:false]
+        [RandomHueShift:false]
 
-		[UseRandomNameGenerator:true]
-		[RandomGridNamePattern:[NPC] BadAdjective Hook]
+        [UseRandomNameGenerator:true]
+        [RandomGridNamePattern:[NPC] BadAdjective Hook]
       </Description>
-    </EntityComponent>  
-	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
         <SubtypeId>GVA-Manipulation-PirateRaider</SubtypeId>
@@ -29,19 +29,19 @@
       <Description>
         [MES Manipulation]
 
-		[OverrideBlockDamageModifier:false]
-		[BlockDamageModifier:100]
-		[GridsAreDestructable:true]
-		[GridsAreEditable:true]
+        [OverrideBlockDamageModifier:false]
+        [BlockDamageModifier:100]
+        [GridsAreDestructable:true]
+        [GridsAreEditable:true]
 
-		[ShiftBlockColorsHue:false]
-		[RandomHueShift:false]
+        [ShiftBlockColorsHue:false]
+        [RandomHueShift:false]
 
-		[UseRandomNameGenerator:true]
-		[RandomGridNamePattern:[NPC] BadAdjective Raider]
+        [UseRandomNameGenerator:true]
+        [RandomGridNamePattern:[NPC] BadAdjective Raider]
       </Description>
-    </EntityComponent>  
-	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
         <SubtypeId>GVA-Manipulation-PirateDagger</SubtypeId>
@@ -49,17 +49,17 @@
       <Description>
         [MES Manipulation]
 
-		[OverrideBlockDamageModifier:false]
-		[BlockDamageModifier:100]
-		[GridsAreDestructable:true]
-		[GridsAreEditable:true]
+        [OverrideBlockDamageModifier:false]
+        [BlockDamageModifier:100]
+        [GridsAreDestructable:true]
+        [GridsAreEditable:true]
 
-		[ShiftBlockColorsHue:false]
-		[RandomHueShift:false]
+        [ShiftBlockColorsHue:false]
+        [RandomHueShift:false]
 
-		[UseRandomNameGenerator:true]
-		[RandomGridNamePattern:[NPC] BadAdjective Dagger-RandomNumber]
+        [UseRandomNameGenerator:true]
+        [RandomGridNamePattern:[NPC] BadAdjective Dagger-RandomNumber]
       </Description>
-    </EntityComponent>  
+    </EntityComponent>
   </EntityComponents>
 </Definitions>
