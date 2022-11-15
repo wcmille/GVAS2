@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Factions>
+    <!--Do Not Edit Above Here-->
+    <!--Copy From This Line-->
+    <Faction Tag="KAJI" Founder="Shotaro Kaneda CEO">
+      <Id>
+        <TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+        <!--Do Not Edit-->
+        <SubtypeId>REDFactionSubID</SubtypeId>
+        <!--Must Be Unique-->
+      </Id>
+      <DisplayName>Kajiya Industrial</DisplayName>
+      <IsDefault>true</IsDefault>
+      <DefaultRelation>Neutral</DefaultRelation>
+      <!--Enemies, Neutral, Friends-->
+      <AcceptHumans>false</AcceptHumans>
+      <AutoAcceptMember>false</AutoAcceptMember>
+      <StartingBalance>10000</StartingBalance>
+      <Type>Builder</Type>
+      <!--None, Miner, Trader, Builder-->
+      <DiscoveredByDefault>true</DiscoveredByDefault>
+      <FactionIcon>Textures\FactionLogo\Builders\BuilderIcon_15.dds</FactionIcon>
+      <!--Game or Mod Path For Texture File-->
+    </Faction>
+    <Faction Tag="JAGH" Founder="Helmut Adenauer CEO">
+      <Id>
+        <TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+        <!--Do Not Edit-->
+        <SubtypeId>BLUEFactionSubID</SubtypeId>
+        <!--Must Be Unique-->
+      </Id>
+      <DisplayName>Jagdhund SAE</DisplayName>
+      <IsDefault>true</IsDefault>
+      <DefaultRelation>Neutral</DefaultRelation>
+      <!--Enemies, Neutral, Friends-->
+      <AcceptHumans>false</AcceptHumans>
+      <AutoAcceptMember>false</AutoAcceptMember>
+      <StartingBalance>10000</StartingBalance>
+      <Type>None</Type>
+      <!--None, Miner, Trader, Builder-->
+      <DiscoveredByDefault>true</DiscoveredByDefault>
+      <FactionIcon>Textures\FactionLogo\Others\OtherIcon_1.dds</FactionIcon>
+      <!--Game or Mod Path For Texture File-->
+    </Faction>
+    <!--Copy To This Line And Paste Directly Below-->
+    <!--Do Not Edit Below Here-->
+  </Factions>
+</Definitions>

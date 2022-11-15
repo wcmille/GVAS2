@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+    <!-- NorthAlienRegion Zone-->
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>MES-Zone-NorthAlienRegion</SubtypeId>
+      </Id>
+      <Description>
+        [MES Zone]
+
+        [PublicName:NorthAlienRegion]
+
+        [Active:true]
+        [Persistent:true]
+        [Strict:false]
+        [UseZoneAnnounce:true]
+        [ZoneEnterAnnounce:Entering: North Region]
+        [ZoneLeaveAnnounce:Leaving: North Region]
+        [Coordinates:{X:131072.5 Y:241072.5 Z:5731072.5}]
+        [Radius:125000]
+      </Description>
+    </EntityComponent>
+    <!-- South Alien Region Zone-->
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>MES-Zone-SouthAlienRegion</SubtypeId>
+      </Id>
+      <Description>
+        [MES Zone]
+
+        [PublicName:SouthAlienRegion]
+
+        [Active:true]
+        [Persistent:true]
+        [Strict:false]
+        [UseZoneAnnounce:true]
+        [ZoneEnterAnnounce:Entering: South Region]
+        [ZoneLeaveAnnounce:Leaving: South Region]
+        [Coordinates:{X:131072.5 Y:21072.5 Z:5731072.5}]
+        [Radius:125000]
+      </Description>
+    </EntityComponent>
+    <!-- Planet Zone -->
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>MES-Zone-AlienPlanet</SubtypeId>
+      </Id>
+      <Description>
+        [MES Zone]
+
+        [PublicName:AlienPlanet]
+
+        [Active:true]
+        [Persistent:true]
+        [Strict:false]
+        [UseZoneAnnounce:false]
+        [Coordinates:{X:131072.5 Y:131072.5 Z:5731072.5}]
+        [Radius:200000]
+      </Description>
+    </EntityComponent>
+
+
+    <!-- Zone Conditions -->
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>MES-ZoneConditionProfile-NorthAlienRegion</SubtypeId>
+      </Id>
+      <Description>
+        [MES Zone Conditions]
+        [ZoneName:NorthAlienRegion]
+        [MaxDistanceFromZoneCenter:125000]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>MES-ZoneConditionProfile-AlienPlanet</SubtypeId>
+      </Id>
+      <Description>
+        [MES Zone Conditions]
+        [ZoneName:AlienPlanet]
+        [MaxDistanceFromZoneCenter:200000]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>MES-ZoneConditionProfile-SouthAlienRegion</SubtypeId>
+      </Id>
+      <Description>
+        [MES Zone Conditions]
+        [ZoneName:SouthAlienRegion]
+        [MaxDistanceFromZoneCenter:125000]
+      </Description>
+    </EntityComponent>
+
+
+    <!-- Spawn Conditions -->
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>MES-NorthAlienRegion-Spawns</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+        [ZoneConditions:MES-ZoneConditionProfile-NorthAlienRegion]
+        [SpaceRandomEncounter:true]
+        [SpaceCargoShips:true]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>MES-AlienPlanet-Spawns</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+        [ZoneConditions:MES-ZoneConditionProfile-AlienPlanet]
+        [SpaceRandomEncounter:true]
+        [SpaceCargoShips:true]
+      </Description>
+    </EntityComponent>
+  </EntityComponents>
+</Definitions>

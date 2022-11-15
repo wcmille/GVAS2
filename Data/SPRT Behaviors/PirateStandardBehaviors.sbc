@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Manipulation-PirateHook</SubtypeId>
+      </Id>
+      <Description>
+        [MES Manipulation]
+
+		[OverrideBlockDamageModifier:false]
+		[BlockDamageModifier:100]
+		[GridsAreDestructable:true]
+		[GridsAreEditable:true]
+
+		[ShiftBlockColorsHue:false]
+		[RandomHueShift:false]
+
+		[UseRandomNameGenerator:true]
+		[RandomGridNamePattern:[NPC] BadAdjective Hook]
+      </Description>
+    </EntityComponent>  
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Manipulation-PirateRaider</SubtypeId>
+      </Id>
+      <Description>
+        [MES Manipulation]
+
+		[OverrideBlockDamageModifier:false]
+		[BlockDamageModifier:100]
+		[GridsAreDestructable:true]
+		[GridsAreEditable:true]
+
+		[ShiftBlockColorsHue:false]
+		[RandomHueShift:false]
+
+		[UseRandomNameGenerator:true]
+		[RandomGridNamePattern:[NPC] BadAdjective Raider]
+      </Description>
+    </EntityComponent>  
+	<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Manipulation-PirateDagger</SubtypeId>
+      </Id>
+      <Description>
+        [MES Manipulation]
+
+		[OverrideBlockDamageModifier:false]
+		[BlockDamageModifier:100]
+		[GridsAreDestructable:true]
+		[GridsAreEditable:true]
+
+		[ShiftBlockColorsHue:false]
+		[RandomHueShift:false]
+
+		[UseRandomNameGenerator:true]
+		[RandomGridNamePattern:[NPC] BadAdjective Dagger-RandomNumber]
+      </Description>
+    </EntityComponent>  
+  </EntityComponents>
+</Definitions>
