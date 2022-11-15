@@ -19,24 +19,19 @@
         [MaxActions:1]
         [Actions:GVA-Action-CallReinforcements]
       </Description>
-      
     </EntityComponent>
-
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
         <SubtypeId>GVA-Action-CallReinforcements</SubtypeId>
       </Id>
       <Description>
-
         [RivalAI Action]
 
         [CreateKnownPlayerArea:true]
         [KnownPlayerAreaRadius:8000]
         [KnownPlayerAreaTimer:30]
-
       </Description>
-
     </EntityComponent>
   </EntityComponents>
 </Definitions>

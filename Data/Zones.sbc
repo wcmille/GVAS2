@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <EntityComponents>
-    <!-- NorthAlienRegion Zone-->
+    <!-- NorthAlienRegion Zone
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
@@ -21,7 +21,8 @@
         [Coordinates:{X:131072.5 Y:241072.5 Z:5731072.5}]
         [Radius:125000]
       </Description>
-    </EntityComponent>
+    </EntityComponent>-->
+    
     <!-- South Alien Region Zone-->
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
@@ -43,7 +44,8 @@
         [Radius:125000]
       </Description>
     </EntityComponent>
-    <!-- Planet Zone -->
+    
+    <!-- Planet Zone 
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
@@ -61,10 +63,10 @@
         [Coordinates:{X:131072.5 Y:131072.5 Z:5731072.5}]
         [Radius:200000]
       </Description>
-    </EntityComponent>
+    </EntityComponent>-->
 
 
-    <!-- Zone Conditions -->
+    <!-- Zone Conditions
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
@@ -86,7 +88,7 @@
         [ZoneName:AlienPlanet]
         [MaxDistanceFromZoneCenter:200000]
       </Description>
-    </EntityComponent>
+    </EntityComponent>-->
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
@@ -100,7 +102,7 @@
     </EntityComponent>
 
 
-    <!-- Spawn Conditions -->
+    <!-- Spawn Conditions 
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
@@ -124,6 +126,6 @@
         [SpaceRandomEncounter:true]
         [SpaceCargoShips:true]
       </Description>
-    </EntityComponent>
+    </EntityComponent>-->
   </EntityComponents>
 </Definitions>

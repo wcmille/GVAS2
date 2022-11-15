@@ -3705,8 +3705,8 @@ Last: Welcome to [PAM]!
                       <ShowInToolbarConfig>true</ShowInToolbarConfig>
                       <ShowInInventory>true</ShowInInventory>
                       <NumberInGrid>0</NumberInGrid>
-                      <Enabled>false</Enabled>
-                      <BroadcastRadius>5000</BroadcastRadius>
+                      <Enabled>true</Enabled>
+                      <BroadcastRadius>50000</BroadcastRadius>
                       <ShowShipName>false</ShowShipName>
                       <EnableBroadcasting>true</EnableBroadcasting>
                       <AttachedPB>0</AttachedPB>
