@@ -28,6 +28,7 @@
         [CustomPathStartAltitude:1000]
         [CustomPathEndAltitude:1000]
         [UseKnownPlayerLocations:true]
+        [KnownPlayerLocationMustMatchFaction:true]
       </Description>
     </EntityComponent>
   </EntityComponents>

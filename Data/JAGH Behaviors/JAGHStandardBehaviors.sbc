@@ -17,6 +17,9 @@
         [ShiftBlockColorsHue:false]
         [RandomHueShift:false]
 
+        [ConfigureSpecialNpcThrusters:true]
+        [NpcHydroThrustForceMultiply:1.4]
+
         [UseRandomNameGenerator:true]
         [RandomGridNamePattern:[NPC] NeutralAdjective AuthorityNoun-RandomNumber]
       </Description>
