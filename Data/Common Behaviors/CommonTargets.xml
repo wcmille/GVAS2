@@ -6,7 +6,7 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Pirate-Target-Main-A</SubtypeId>
+        <SubtypeId>Common-Target-Main-A</SubtypeId>
       </Id>
       <Description>
 

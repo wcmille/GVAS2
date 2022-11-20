@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<SpawnGroups>
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>GVA-Blue-ProductionShip-PCS</SubtypeId> 
+			</Id>
+			<Description>
+			[Modular Encounters SpawnGroup]
+			[ManipulationProfiles:GVA-Manipulation-StdBlue]
+			[IgnoreCleanupRules:false]
+			[ReplenishSystems:true]
+			[SpawnConditionsProfiles:Blue-SouthAlienRegion-Default-Spawns]
+			[UseRivalAi:true]
+			[RivalAiReplaceRemoteControl:true]
+			[FactionOwner:JAGH]
+			</Description>
+			<IsPirate>true</IsPirate>
+			<Frequency>5.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="SPS-350 Dagger">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>50</Speed>
+					<Behaviour>RAI-Behavior-PirateDagger</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+	</SpawnGroups>
+</Definitions>

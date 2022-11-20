@@ -33,8 +33,8 @@
         [CollisionEvasionResumeDistance:300]
         [CollisionEvasionResumeTime:10]
 
-        [TargetData:Pirate-Target-Main-A]
-        [OverrideTargetData:Pirate-Target-Main-A]
+        [TargetData:Common-Target-Main-A]
+        [OverrideTargetData:Common-Target-Main-A]
         
         [Triggers:GVA-ScoutTattleTrigger]
 

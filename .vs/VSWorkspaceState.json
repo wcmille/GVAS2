@@ -2,9 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\Data",
-    "\\Data\\Encounters",
-    "\\Data\\SPRT Behaviors"
+    "\\Data\\JAGH Behaviors",
+    "\\Data\\NorthEncounters"
   ],
-  "SelectedNode": "\\Data\\JAGH-SpawnConditions.sbc",
+  "SelectedNode": "\\Data\\NorthEncounters",
   "PreviewInSolutionExplorer": false
 }

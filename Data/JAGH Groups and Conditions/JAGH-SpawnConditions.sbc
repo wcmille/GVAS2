@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Blue-SouthAlienRegion-Default-Spawns</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+        [FactionOwner:JAGH]
+        [ZoneConditions:MES-ZoneConditionProfile-SouthAlienRegion]
+        [AtmosphericCargoShip:true]
+        [CustomPathStartAltitude:1000]
+        [CustomPathEndAltitude:1000]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Blue-SouthAlienRegion-Discovered-Spawns</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+        [FactionOwner:JAGH]
+        [ZoneConditions:MES-ZoneConditionProfile-SouthAlienRegion]
+        [AtmosphericCargoShip:true]
+        [CustomPathStartAltitude:1000]
+        [CustomPathEndAltitude:1000]
+        [UseKnownPlayerLocations:true]
+        [KnownPlayerLocationMustMatchFaction:true]
+      </Description>
+    </EntityComponent>
+  </EntityComponents>
+</Definitions>
