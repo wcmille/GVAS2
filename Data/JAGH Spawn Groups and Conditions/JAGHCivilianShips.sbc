@@ -27,7 +27,7 @@
             <Z>0.0</Z>
           </Position>
           <Speed>50</Speed>
-          <Behaviour>RAI-Behavior-PirateDagger</Behaviour>
+          <Behaviour>GVA-Behavior-StandardCivilianr</Behaviour>
         </Prefab>
       </Prefabs>
     </SpawnGroup>
@@ -57,7 +57,7 @@
             <Z>0.0</Z>
           </Position>
           <Speed>50</Speed>
-          <Behaviour>RAI-Behavior-PirateDagger</Behaviour>
+          <Behaviour>GVA-Behavior-StandardCivilian</Behaviour>
         </Prefab>
       </Prefabs>
     </SpawnGroup>

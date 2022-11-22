@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Behavior-StandardCivilian</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Behavior]
+        [BehaviorName:CargoShip]
+
+        [UseProjectileLeadPrediction:true]
+        [UseBarrageFire:true]
+        [UseTurrets:true]
+        [UseStaticGuns:true]
+        [IdealMaxSpeed:70]
+        [UseVanillaCollisionAvoidance:false]
+        [AllowStrafing:true]
+        [StrafeMinDurationMs:1500]
+        [StrafeMaxDurationMs:20000]
+        [StrafeMinimumTargetDistance:800]
+        [StrafeMinCooldownMs:1]
+        [StrafeMaxCooldownMs:1]
+        [StrafeSpeedCutOff:60]
+        [StrafeDistanceCutOff:1500]
+        [FighterEngageDistanceSpace:1200]
+        [FighterDisengageDistanceSpace:1201]
+        [UseVelocityCollisionEvasion:true]
+        [CollisionEvasionWaypointDistance:600]
+        [CollisionEvasionResumeDistance:300]
+        [CollisionEvasionResumeTime:10]
+
+        [Triggers:GVA-ScoutTattleTrigger]
+      </Description>
+    </EntityComponent>
+  </EntityComponents>
+</Definitions>

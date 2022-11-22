@@ -26,7 +26,7 @@
 						<Z>0.0</Z>
 					</Position>
 					<Speed>50</Speed>
-					<Behaviour>RAI-Behavior-PirateDagger</Behaviour>
+					<Behaviour>GVA-Behavior-HybridMilitaryTattler</Behaviour>
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>
@@ -55,7 +55,7 @@
 						<Z>0.0</Z>
 					</Position>
 					<Speed>50</Speed>
-					<Behaviour>RAI-Behavior-PirateDagger</Behaviour>
+					<Behaviour>GVA-Behavior-AtmoMilitary</Behaviour>
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>

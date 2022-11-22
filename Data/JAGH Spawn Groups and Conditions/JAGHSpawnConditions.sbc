@@ -18,17 +18,15 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Blue-SouthAlienRegion-Discovered-Spawns</SubtypeId>
+        <SubtypeId>Blue-SouthAlienRegion-Fixed-Spawns</SubtypeId>
       </Id>
       <Description>
         [MES Spawn Conditions]
         [FactionOwner:JAGH]
         [ZoneConditions:MES-ZoneConditionProfile-SouthAlienRegion]
-        [AtmosphericCargoShip:true]
+        [PlanetaryInstallation:true]
         [CustomPathStartAltitude:1000]
         [CustomPathEndAltitude:1000]
-        [UseKnownPlayerLocations:true]
-        [KnownPlayerLocationMustMatchFaction:true]
       </Description>
     </EntityComponent>
   </EntityComponents>
