@@ -1,12 +1,13 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Data",
     "\\Data\\Common Behaviors",
     "\\Data\\JAGH Behaviors",
     "\\Data\\JAGH Spawn Groups and Conditions",
     "\\Data\\SPRT Behaviors",
     "\\MESConfig"
   ],
-  "SelectedNode": "\\MESConfig",
+  "SelectedNode": "\\Data",
   "PreviewInSolutionExplorer": false
 }

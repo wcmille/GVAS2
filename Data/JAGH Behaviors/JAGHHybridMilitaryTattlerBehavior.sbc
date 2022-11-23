@@ -8,26 +8,15 @@
         <SubtypeId>GVA-Behavior-HybridMilitaryTattler</SubtypeId>
       </Id>
       <Description>
-
         [RivalAI Behavior]
-        [BehaviorName:Hunter]
+        [BehaviorName:Horsefly]
 
-        [UseProjectileLeadPrediction:true]
-        [UseBarrageFire:true]
+        [OffsetPlanetMinDistFromTarget:3000]
+        [OffsetPlanetMaxDistFromTarget:5000]
+
         [UseTurrets:true]
-        [UseStaticGuns:true]
-        [IdealMaxSpeed:70]
+        [IdealMaxSpeed:130]
         [UseVanillaCollisionAvoidance:false]
-        [AllowStrafing:true]
-        [StrafeMinDurationMs:1500]
-        [StrafeMaxDurationMs:20000]
-        [StrafeMinimumTargetDistance:800]
-        [StrafeMinCooldownMs:1]
-        [StrafeMaxCooldownMs:1]
-        [StrafeSpeedCutOff:60]
-        [StrafeDistanceCutOff:1500]
-        [FighterEngageDistanceSpace:1200]
-        [FighterDisengageDistanceSpace:1201]
         [UseVelocityCollisionEvasion:true]
         [CollisionEvasionWaypointDistance:600]
         [CollisionEvasionResumeDistance:300]
@@ -35,7 +24,7 @@
 
         [TargetData:Common-Target-Main-A]
         [OverrideTargetData:Common-Target-Main-A]
-        
+
         [Triggers:GVA-ScoutTattleTrigger]
 
         [EngageOnTargetLineOfSight:true]
