@@ -5,14 +5,16 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-Behavior-AtmoMilitary</SubtypeId>
+        <SubtypeId>GVA-Behavior-HybridInterdictor</SubtypeId>
       </Id>
       <Description>
         [RivalAI Behavior]
-        [BehaviorName:Horsefly]
+        [BehaviorName:Horsefighter]
 
         [OffsetPlanetMinDistFromTarget:1200]
         [OffsetPlanetMaxDistFromTarget:1950]
+        [OffsetPlanetMinTargetAltitude:-100]
+        [OffsetPlanetMaxTargetAltitude:0]
 
         [UseProjectileLeadPrediction:true]
         [UseBarrageFire:true]

@@ -5,9 +5,10 @@
     "\\Data\\Common Behaviors",
     "\\Data\\JAGH Behaviors",
     "\\Data\\JAGH Spawn Groups and Conditions",
+    "\\Data\\Prefabs",
     "\\Data\\SPRT Behaviors",
     "\\MESConfig"
   ],
-  "SelectedNode": "\\Data",
+  "SelectedNode": "\\Data\\JAGH Spawn Groups and Conditions\\JAGHProductionShips.sbc",
   "PreviewInSolutionExplorer": false
 }

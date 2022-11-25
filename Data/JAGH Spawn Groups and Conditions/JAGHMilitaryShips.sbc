@@ -19,7 +19,7 @@
 			<IsPirate>true</IsPirate>
 			<Frequency>5.0</Frequency>
 			<Prefabs>
-				<Prefab SubtypeId="ISL - Aquila-AV 125 Bomber">
+				<Prefab SubtypeId="Huginn Interceptor">
 					<Position>
 						<X>0.0</X>
 						<Y>0.0</Y>
@@ -40,22 +40,22 @@
 			[ManipulationProfiles:GVA-Manipulation-StdBlue]
 			[IgnoreCleanupRules:false]
 			[ReplenishSystems:true]
-			[SpawnConditionsProfiles:Blue-SouthAlienRegion-Discovered-Spawns]
+			[SpawnConditionsProfiles:Blue-SouthAlienRegion-Default-Spawns]
 			[UseRivalAi:true]
 			[RivalAiReplaceRemoteControl:true]
 			[FactionOwner:JAGH]
 			</Description>
 			<IsPirate>true</IsPirate>
-			<Frequency>10.0</Frequency>
+			<Frequency>5.0</Frequency>
 			<Prefabs>
-				<Prefab SubtypeId="GVA Raider">
+				<Prefab SubtypeId="Fenrir-class Interdictor - Vanilla">
 					<Position>
 						<X>0.0</X>
 						<Y>0.0</Y>
 						<Z>0.0</Z>
 					</Position>
 					<Speed>50</Speed>
-					<Behaviour>GVA-Behavior-AtmoMilitary</Behaviour>
+					<Behaviour>GVA-Behavior-HybridInterdictor</Behaviour>
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>

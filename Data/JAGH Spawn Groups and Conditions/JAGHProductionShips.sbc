@@ -19,10 +19,10 @@
 			<IsPirate>true</IsPirate>
 			<Frequency>5.0</Frequency>
 			<Prefabs>
-				<Prefab SubtypeId="Production Center">
+				<Prefab SubtypeId="Brokk Mobile Refinery">
 					<Position>
 						<X>0.0</X>
-						<Y>0.0</Y>
+						<Y>17.0</Y>
 						<Z>0.0</Z>
 					</Position>
 					<Speed>50</Speed>

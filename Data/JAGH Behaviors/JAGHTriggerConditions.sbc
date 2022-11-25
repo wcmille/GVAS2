@@ -10,12 +10,10 @@
       <Description>
         [RivalAI Trigger]
         [UseTrigger:true]
-        [Type:PlayerNear]
-        [MinCooldownMs:900000]
-        [MaxCooldownMs:900001]
-        [TargetDistance:4000]
-        [StartsReady:true]
-
+        [Type:AcquiredTarget]
+        [MinCooldownMs:140000]
+        [MaxCooldownMs:900000]
+        [StartsReady:false]
         [MaxActions:1]
         [Actions:GVA-Action-CallReinforcements]
       </Description>
@@ -26,11 +24,51 @@
         <SubtypeId>GVA-Action-CallReinforcements</SubtypeId>
       </Id>
       <Description>
-        [RivalAI Action]
+        [SpawnEncounter:true]
+        [Spawner:GVA-JAGH-Spawn-CallReinforcements-Hybrid]
 
+        [UseChatBroadcast:true]
+        [ChatData:GVA-JAGH-Chat-CallReinforcements]
+
+        [RivalAI Action]
         [CreateKnownPlayerArea:true]
         [KnownPlayerAreaRadius:8000]
         [KnownPlayerAreaTimer:30]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-JAGH-Spawn-CallReinforcements-Hybrid</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Spawn]
+
+        [UseSpawn:true]
+
+        [SpawningType:PlanetaryCargoShip]
+        [StartsReady:true]
+        [MaxSpawns:1]
+
+        [SpawnGroups:GVA-Blue-Patrol-PCS]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-JAGH-Chat-CallReinforcements</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Chat]
+
+        [UseChat:true]
+        [StartsReady:true]
+        [MaxChats:5]
+        [BroadcastRandomly:true]
+        [Author:JAGH]
+        [Color:Blue]
+        [ChatMessages:Reinforcements inbound.]
+        [BroadcastChatType:Chat]
       </Description>
     </EntityComponent>
   </EntityComponents>
