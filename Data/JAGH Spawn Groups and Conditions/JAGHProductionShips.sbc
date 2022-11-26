@@ -4,18 +4,19 @@
 		<SpawnGroup>
 			<Id>
 				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
-				<SubtypeId>GVA-Blue-ProductionShip-PCS</SubtypeId> 
+				<SubtypeId>GVA-Blue-ProductionShip-PI</SubtypeId> 
 			</Id>
 			<Description>
-			[Modular Encounters SpawnGroup]
-			[ManipulationProfiles:GVA-Manipulation-StdBlue]
-			[IgnoreCleanupRules:false]
-			[ReplenishSystems:true]
-			[SpawnConditionsProfiles:Blue-SouthAlienRegion-Fixed-Spawns]
-			[UseRivalAi:true]
-			[RivalAiReplaceRemoteControl:true]
-			[FactionOwner:JAGH]
-			</Description>
+        [Modular Encounters SpawnGroup]
+        [ManipulationProfiles:GVA-Manipulation-StdBlue]
+        [ManipulationProfiles:GVA-Manipulation-Blue-ProductionName]
+        [IgnoreCleanupRules:false]
+        [ReplenishSystems:true]
+        [SpawnConditionsProfiles:Blue-SouthAlienRegion-Fixed-Spawns]
+        [UseRivalAi:true]
+        [RivalAiReplaceRemoteControl:true]
+        [FactionOwner:JAGH]
+      </Description>
 			<IsPirate>true</IsPirate>
 			<Frequency>5.0</Frequency>
 			<Prefabs>

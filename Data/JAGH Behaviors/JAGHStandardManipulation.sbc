@@ -19,9 +19,39 @@
 
         [ConfigureSpecialNpcThrusters:true]
         [NpcHydroThrustForceMultiply:1.4]
-
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Manipulation-Blue-FrigateName</SubtypeId>
+      </Id>
+      <Description>
+        [MES Manipulation]
         [UseRandomNameGenerator:true]
-        [RandomGridNamePattern:[NPC] NeutralAdjective AuthorityNoun-RandomNumber]
+        [RandomGridNamePattern:[NPC] FFO NeutralAdjective AuthorityNoun]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Manipulation-Blue-InterceptorName</SubtypeId>
+      </Id>
+      <Description>
+        [MES Manipulation]
+        [UseRandomNameGenerator:true]
+        [RandomGridNamePattern:[NPC] F2-RandomNumberRandomNumberRandomNumber]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Manipulation-Blue-ProductionName</SubtypeId>
+      </Id>
+      <Description>
+        [MES Manipulation]
+        [UseRandomNameGenerator:true]
+        [RandomGridNamePattern:[NPC] MNR-GoodNoun NeutralNoun]
       </Description>
     </EntityComponent>
   </EntityComponents>

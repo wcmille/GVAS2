@@ -7,17 +7,18 @@
 				<SubtypeId>GVA-Blue-Scout-PCS</SubtypeId> 
 			</Id>
 			<Description>
-			[Modular Encounters SpawnGroup]
-			[ManipulationProfiles:GVA-Manipulation-StdBlue]
-			[IgnoreCleanupRules:false]
-			[ReplenishSystems:true]
-			[SpawnConditionsProfiles:Blue-SouthAlienRegion-Default-Spawns]
-			[UseRivalAi:true]
-			[RivalAiReplaceRemoteControl:true]
-			[FactionOwner:JAGH]
-			</Description>
+        [Modular Encounters SpawnGroup]
+        [ManipulationProfiles:GVA-Manipulation-StdBlue]
+        [ManipulationProfiles:GVA-Manipulation-Blue-InterceptorName]
+        [IgnoreCleanupRules:false]
+        [ReplenishSystems:true]
+        [SpawnConditionsProfiles:Blue-SouthAlienRegion-Default-Spawns]
+        [UseRivalAi:true]
+        [RivalAiReplaceRemoteControl:true]
+        [FactionOwner:JAGH]
+      </Description>
 			<IsPirate>true</IsPirate>
-			<Frequency>5.0</Frequency>
+			<Frequency>300.0</Frequency>
 			<Prefabs>
 				<Prefab SubtypeId="Huginn Interceptor">
 					<Position>
@@ -36,15 +37,16 @@
 				<SubtypeId>GVA-Blue-Patrol-PCS</SubtypeId> 
 			</Id>
 			<Description>
-			[Modular Encounters SpawnGroup]
-			[ManipulationProfiles:GVA-Manipulation-StdBlue]
-			[IgnoreCleanupRules:false]
-			[ReplenishSystems:true]
-			[SpawnConditionsProfiles:Blue-SouthAlienRegion-Default-Spawns]
-			[UseRivalAi:true]
-			[RivalAiReplaceRemoteControl:true]
-			[FactionOwner:JAGH]
-			</Description>
+        [Modular Encounters SpawnGroup]
+        [ManipulationProfiles:GVA-Manipulation-StdBlue]
+        [ManipulationProfiles:GVA-Manipulation-Blue-FrigateName]
+        [IgnoreCleanupRules:false]
+        [ReplenishSystems:true]
+        [SpawnConditionsProfiles:Blue-SouthAlienRegion-Default-Spawns]
+        [UseRivalAi:true]
+        [RivalAiReplaceRemoteControl:true]
+        [FactionOwner:JAGH]
+      </Description>
 			<IsPirate>true</IsPirate>
 			<Frequency>5.0</Frequency>
 			<Prefabs>
