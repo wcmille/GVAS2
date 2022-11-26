@@ -18,9 +18,11 @@
 
         [UseProjectileLeadPrediction:true]
         [UseBarrageFire:true]
-        [UseTurrets:true]
+        [UseTurrets:false]
         [UseStaticGuns:true]
         [IdealMaxSpeed:70]
+        [ChangeTurretSettings:true]
+        [TurretRange:2000]
         [UseVanillaCollisionAvoidance:false]
         [UseVelocityCollisionEvasion:true]
         [CollisionEvasionWaypointDistance:600]

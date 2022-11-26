@@ -23,7 +23,7 @@
 				<Prefab SubtypeId="Brokk Mobile Refinery">
 					<Position>
 						<X>0.0</X>
-						<Y>17.0</Y>
+						<Y>15.75</Y>
 						<Z>0.0</Z>
 					</Position>
 					<Speed>50</Speed>
