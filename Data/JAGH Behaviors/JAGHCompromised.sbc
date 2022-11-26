@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>GVA-Trigger-StandardCompromised</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Trigger]
+        [UseTrigger:true]
+        [Type:Compromised]
+        [MaxActions:1]
+        [Actions:GVA-Action-Knockout]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Action-Knockout</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Action]
+        [TerminateBehavior:true]
+        [RandomThrustDirection:true]
+        [RandomGyroRotation:true]
+      </Description>
+    </EntityComponent>
+  </EntityComponents>
+</Definitions>

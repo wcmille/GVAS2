@@ -24,13 +24,13 @@
         <SubtypeId>GVA-Action-CallReinforcements</SubtypeId>
       </Id>
       <Description>
+        [RivalAI Action]
         [SpawnEncounter:true]
         [Spawner:GVA-JAGH-Spawn-CallReinforcements-Hybrid]
 
         [UseChatBroadcast:true]
         [ChatData:GVA-JAGH-Chat-CallReinforcements]
 
-        [RivalAI Action]
         [CreateKnownPlayerArea:true]
         [KnownPlayerAreaRadius:8000]
         [KnownPlayerAreaTimer:30]

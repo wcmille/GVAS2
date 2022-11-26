@@ -32,7 +32,7 @@
         [TargetData:Common-Target-Main-A]
         [OverrideTargetData:Common-Target-Main-A]
 
-        [Triggers:GVA-ScoutTattleTrigger]
+        [Triggers:GVA-Trigger-ScoutTattle]
 
         [EngageOnTargetLineOfSight:true]
         [EngageOnWeaponActivation:true]

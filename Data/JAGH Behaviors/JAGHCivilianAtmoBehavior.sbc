@@ -24,7 +24,7 @@
         [CollisionEvasionResumeDistance:300]
         [CollisionEvasionResumeTime:10]
 
-        [Triggers:GVA-ScoutTattleTrigger]
+        [Triggers:GVA-Trigger-ScoutTattle]
       </Description>
     </EntityComponent>
   </EntityComponents>
