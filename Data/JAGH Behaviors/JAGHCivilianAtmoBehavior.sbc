@@ -8,15 +8,12 @@
         <SubtypeId>GVA-Behavior-StandardCivilian</SubtypeId>
       </Id>
       <Description>
-
         [RivalAI Behavior]
         [BehaviorName:CargoShip]
 
         [UseProjectileLeadPrediction:true]
         [UseBarrageFire:true]
         [UseTurrets:false]
-        [ChangeTurretSettings:true]
-        [TurretRange:2000]
         [IdealMaxSpeed:70]
         [UseVanillaCollisionAvoidance:false]
         [UseVelocityCollisionEvasion:true]

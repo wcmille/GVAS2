@@ -5,7 +5,7 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
           <TypeId>Inventory</TypeId>
-          <SubtypeId>GVA-ScoutTattleTrigger</SubtypeId>
+          <SubtypeId>GVA-Trigger-ScoutTattle</SubtypeId>
       </Id>
       <Description>
         [RivalAI Trigger]
@@ -13,7 +13,7 @@
         [Type:AcquiredTarget]
         [MinCooldownMs:140000]
         [MaxCooldownMs:900000]
-        [StartsReady:false]
+        [StartsReady:true]
         [MaxActions:1]
         [Actions:GVA-Action-CallReinforcements]
       </Description>

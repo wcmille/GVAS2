@@ -8,7 +8,6 @@
         <SubtypeId>Common-Target-Main-A</SubtypeId>
       </Id>
       <Description>
-
         [RivalAI Target]
 
         [UseCustomTargeting:true]
@@ -20,7 +19,6 @@
         [TimeUntilNextEvaluation:3]
 
         [MatchAllFilters:OutsideOfSafezone]
-        [MatchAllFilters:Owner]
         [MatchAllFilters:Relation]
         [MatchAllFilters:Powered]
 

@@ -8,13 +8,13 @@
 			</Id>
 			<Description>
         [Modular Encounters SpawnGroup]
+        [UseRivalAi:true]
+        [RivalAiReplaceRemoteControl:true]
         [ManipulationProfiles:GVA-Manipulation-StdBlue]
         [ManipulationProfiles:GVA-Manipulation-Blue-InterceptorName]
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
         [SpawnConditionsProfiles:Blue-SouthAlienRegion-Default-Spawns]
-        [UseRivalAi:true]
-        [RivalAiReplaceRemoteControl:true]
         [FactionOwner:JAGH]
       </Description>
 			<IsPirate>true</IsPirate>
@@ -38,13 +38,13 @@
 			</Id>
 			<Description>
         [Modular Encounters SpawnGroup]
+        [UseRivalAi:true]
+        [RivalAiReplaceRemoteControl:true]
         [ManipulationProfiles:GVA-Manipulation-StdBlue]
         [ManipulationProfiles:GVA-Manipulation-Blue-FrigateName]
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
         [SpawnConditionsProfiles:Blue-SouthAlienRegion-Default-Spawns]
-        [UseRivalAi:true]
-        [RivalAiReplaceRemoteControl:true]
         [FactionOwner:JAGH]
       </Description>
 			<IsPirate>true</IsPirate>

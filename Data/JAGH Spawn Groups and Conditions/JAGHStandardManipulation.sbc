@@ -16,6 +16,9 @@
 
         [ShiftBlockColorsHue:false]
         [RandomHueShift:false]
+        
+        [ChangeTurretSettings:true]
+        [TurretRange:2000]
 
         [ConfigureSpecialNpcThrusters:true]
         [NpcHydroThrustForceMultiply:1.4]

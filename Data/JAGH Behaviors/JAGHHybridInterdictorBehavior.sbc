@@ -9,7 +9,7 @@
       </Id>
       <Description>
         [RivalAI Behavior]
-        [BehaviorName:Horsefighter]
+        [BehaviorName:HorseFighter]
 
         [OffsetPlanetMinDistFromTarget:1200]
         [OffsetPlanetMaxDistFromTarget:1950]
@@ -21,8 +21,6 @@
         [UseTurrets:false]
         [UseStaticGuns:true]
         [IdealMaxSpeed:70]
-        [ChangeTurretSettings:true]
-        [TurretRange:2000]
         [UseVanillaCollisionAvoidance:false]
         [UseVelocityCollisionEvasion:true]
         [CollisionEvasionWaypointDistance:600]
