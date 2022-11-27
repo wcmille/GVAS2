@@ -44,7 +44,7 @@
         [ManipulationProfiles:GVA-Manipulation-Blue-FrigateName]
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
-        [SpawnConditionsProfiles:Blue-SouthAlienRegion-Default-Spawns]
+        [SpawnConditionsProfiles:Blue-SouthAlienRegion-Orbital-Spawns]
         [FactionOwner:JAGH]
       </Description>
 			<IsPirate>true</IsPirate>

@@ -11,9 +11,22 @@
         [FactionOwner:JAGH]
         [ZoneConditions:MES-ZoneConditionProfile-SouthAlienRegion]
         [AtmosphericCargoShip:true]
-        [GravityCargoShip:true]
         [CustomPathStartAltitude:1000]
         [CustomPathEndAltitude:1000]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Blue-SouthAlienRegion-Orbital-Spawns</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+        [FactionOwner:JAGH]
+        [ZoneConditions:MES-ZoneConditionProfile-SouthAlienRegion]
+        [AtmosphericCargoShip:true]
+        [GravityCargoShip:true]
+        [SkipAirDensityCheck:true]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">

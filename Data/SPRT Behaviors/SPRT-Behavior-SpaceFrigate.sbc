@@ -34,9 +34,11 @@
 
         [TargetData:Common-Target-Main-A]
         [OverrideTargetData:Common-Target-Main-A]
-        
+
         [EngageOnTargetLineOfSight:true]
         [EngageOnWeaponActivation:true]
+
+        [Triggers:GVA-Trigger-StandardCompromised]
       </Description>
     </EntityComponent>
   </EntityComponents>

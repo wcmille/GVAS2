@@ -31,6 +31,7 @@
         [OverrideTargetData:Common-Target-Main-A]
 
         [Triggers:GVA-Trigger-ScoutTattle]
+        [Triggers:GVA-Trigger-StandardCompromised]
 
         [EngageOnTargetLineOfSight:true]
         [EngageOnWeaponActivation:true]

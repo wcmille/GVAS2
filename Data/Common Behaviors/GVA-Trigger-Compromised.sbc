@@ -23,8 +23,8 @@
       <Description>
         [RivalAI Action]
         [TerminateBehavior:true]
-        [RandomThrustDirection:true]
-        [RandomGyroRotation:true]
+        [StopAllRotation:true]
+        [StopAllThrust:Value]
       </Description>
     </EntityComponent>
   </EntityComponents>
