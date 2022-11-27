@@ -12,7 +12,6 @@
         [ZoneConditions:MES-ZoneConditionProfile-SouthAlienRegion]
         [AtmosphericCargoShip:true]
         [GravityCargoShip:true]
-        [SpaceCargoShip:true]
         [CustomPathStartAltitude:1000]
         [CustomPathEndAltitude:1000]
       </Description>
@@ -20,17 +19,13 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Blue-SouthAlienRegion-Discovered-Spawns</SubtypeId>
+        <SubtypeId>Black-SouthAlienRegion-Space-Spawns</SubtypeId>
       </Id>
       <Description>
         [MES Spawn Conditions]
-        [FactionOwner:JAGH]
-        [ZoneConditions:MES-ZoneConditionProfile-SouthAlienRegion]
-        [AtmosphericCargoShip:true]
-        [UseKnownPlayerLocations:true]
-        [KnownPlayerLocationMustMatchFaction:true]
-        [CustomPathStartAltitude:1000]
-        [CustomPathEndAltitude:1000]
+        [FactionOwner:SPRT]
+        [ZoneConditions:MES-ZoneConditionProfile-SouthAlienRegionSpace]
+        [SpaceCargoShip:true]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
@@ -43,8 +38,6 @@
         [FactionOwner:JAGH]
         [ZoneConditions:MES-ZoneConditionProfile-SouthAlienRegion]
         [PlanetaryInstallation:true]
-        [CustomPathStartAltitude:1000]
-        [CustomPathEndAltitude:1000]
       </Description>
     </EntityComponent>
   </EntityComponents>

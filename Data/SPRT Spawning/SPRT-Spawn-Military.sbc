@@ -4,7 +4,7 @@
 		<SpawnGroup>
 			<Id>
 				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
-				<SubtypeId>GVA-Black-Frigate-PCS</SubtypeId> 
+				<SubtypeId>GVA-Black-Frigate-SCS</SubtypeId> 
 			</Id>
 			<Description>
         [Modular Encounters SpawnGroup]
@@ -14,7 +14,7 @@
         [ManipulationProfiles:GVA-Manipulation-Black-FrigateName]
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
-        [SpawnConditionsProfiles:Blue-SouthAlienRegion-Default-Spawns]
+        [SpawnConditionsProfiles:Black-SouthAlienRegion-Space-Spawns]
         [FactionOwner:SPRT]
       </Description>
 			<IsPirate>true</IsPirate>

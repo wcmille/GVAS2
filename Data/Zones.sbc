@@ -34,5 +34,16 @@
         [MaxDistanceFromZoneCenter:125000]
       </Description>
     </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>MES-ZoneConditionProfile-SouthAlienRegionSpace</SubtypeId>
+      </Id>
+      <Description>
+        [MES Zone Conditions]
+        [ZoneName:SouthAlienRegion]
+        [MaxDistanceFromZoneCenter:125000]
+      </Description>
+    </EntityComponent>
   </EntityComponents>
 </Definitions>
