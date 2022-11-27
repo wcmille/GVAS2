@@ -35,6 +35,9 @@
 
         [EngageOnTargetLineOfSight:true]
         [EngageOnWeaponActivation:true]
+        
+        [LimitRotationSpeed:true]
+        [MaxRotationMagnitude:0.75]
       </Description>
     </EntityComponent>
   </EntityComponents>
