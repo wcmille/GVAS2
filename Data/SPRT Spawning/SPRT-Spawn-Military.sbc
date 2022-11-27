@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<SpawnGroups>
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>GVA-Black-Frigate-PCS</SubtypeId> 
+			</Id>
+			<Description>
+        [Modular Encounters SpawnGroup]
+        [UseRivalAi:true]
+        [RivalAiReplaceRemoteControl:true]
+        [ManipulationProfiles:GVA-Manipulation-Std]
+        [ManipulationProfiles:GVA-Manipulation-Black-FrigateName]
+        [IgnoreCleanupRules:false]
+        [ReplenishSystems:true]
+        [SpawnConditionsProfiles:Blue-SouthAlienRegion-Default-Spawns]
+        [FactionOwner:SPRT]
+      </Description>
+			<IsPirate>true</IsPirate>
+			<Frequency>5.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="Enforcer">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>50</Speed>
+					<Behaviour>GVA-SPRT-Behavior-SpaceFrigate</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+	</SpawnGroups>
+</Definitions>

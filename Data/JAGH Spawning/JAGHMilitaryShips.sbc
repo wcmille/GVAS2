@@ -20,7 +20,7 @@
 			<IsPirate>true</IsPirate>
 			<Frequency>300.0</Frequency>
 			<Prefabs>
-				<Prefab SubtypeId="Huginn Interceptor">
+				<Prefab SubtypeId="Huginn Interceptor - Atmospheric">
 					<Position>
 						<X>0.0</X>
 						<Y>0.0</Y>

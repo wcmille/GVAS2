@@ -5,10 +5,9 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>RAI-Behavior-PirateDagger</SubtypeId>
+        <SubtypeId>GVA-SPRT-Behavior-SpaceFrigate</SubtypeId>
       </Id>
       <Description>
-
         [RivalAI Behavior]
         [BehaviorName:Hunter]
 
@@ -36,8 +35,6 @@
         [TargetData:Common-Target-Main-A]
         [OverrideTargetData:Common-Target-Main-A]
         
-        [Triggers:GVA-ScoutTattleTrigger]
-
         [EngageOnTargetLineOfSight:true]
         [EngageOnWeaponActivation:true]
       </Description>
