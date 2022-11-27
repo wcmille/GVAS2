@@ -15,6 +15,8 @@
         [SpawnConditionsProfiles:Blue-SouthAlienRegion-Fixed-Spawns]
         [UseRivalAi:true]
         [RivalAiReplaceRemoteControl:true]
+        [UseTerrainTypeValidation:true]
+        [AllowedTerrainTypes:Snow]
         [FactionOwner:JAGH]
       </Description>
 			<IsPirate>true</IsPirate>
@@ -31,5 +33,34 @@
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>
-	</SpawnGroups>
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <!--Do Not Edit-->
+        <SubtypeId>GVA-Blue-CivilianScene00-PI</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+        [ManipulationProfiles:GVA-Manipulation-StdBlue]
+        [IgnoreCleanupRules:false]
+        [ReplenishSystems:true]
+        [SpawnConditionsProfiles:Blue-SouthAlienRegion-Fixed-Spawns]
+        [UseTerrainTypeValidation:true]
+        [FactionOwner:JAGH]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>15.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="Santa's Village">
+          <Position>
+            <X>0.0</X>
+            <Y>-7.1</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>50</Speed>
+          <Behaviour>GVA-Behavior-StandardCivilian</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+  </SpawnGroups>
 </Definitions>

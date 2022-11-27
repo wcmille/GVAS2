@@ -32,6 +32,23 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
+        <SubtypeId>Blue-SouthAlienRegion-FFO-Spawns</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+        [FactionOwner:JAGH]
+        [ZoneConditions:MES-ZoneConditionProfile-SouthAlienRegion]
+        [AtmosphericCargoShip:true]
+        [GravityCargoShip:true]
+        [SkipAirDensityCheck:true]
+        [UseSandboxCounterCosts:true]
+        [SandboxCounterCostNames:BlueMilitary]
+        [SandboxCounterCostAmounts:1]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
         <SubtypeId>Black-SouthAlienRegion-Space-Spawns</SubtypeId>
       </Id>
       <Description>

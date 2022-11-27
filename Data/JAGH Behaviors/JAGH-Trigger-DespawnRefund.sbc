@@ -22,6 +22,9 @@
       </Id>
       <Description>
         [RivalAI Action]
+        [IncreaseSandboxCounters:BlueMilitary]
+        [IncreaseSandboxCountersAmount:1]
+        
         [UseChatBroadcast:true]
         [ChatData:GVA-JAGH-Chat-DespawnChat]
       </Description>
@@ -67,6 +70,9 @@
       </Id>
       <Description>
         [RivalAI Action]
+        [IncreaseSandboxCounters:BlueMilitary]
+        [IncreaseSandboxCountersAmount:1]
+        
         [UseChatBroadcast:true]
         [ChatData:GVA-JAGH-Chat-DespawnChatMES]
       </Description>
