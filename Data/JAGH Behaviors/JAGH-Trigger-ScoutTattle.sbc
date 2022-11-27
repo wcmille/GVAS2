@@ -10,10 +10,11 @@
       <Description>
         [RivalAI Trigger]
         [UseTrigger:true]
-        [Type:AcquiredTarget]
+        [Type:PlayerNear]
+        [TargetDistance:4000]
         [MinCooldownMs:140000]
-        [MaxCooldownMs:900000]
-        [StartsReady:true]
+        [MaxCooldownMs:900000]       
+        [StartsReady:false]
         [MaxActions:1]
         [Actions:GVA-Action-CallReinforcements]
       </Description>

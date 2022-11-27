@@ -4,11 +4,11 @@
     "\\Data",
     "\\Data\\Common Behaviors",
     "\\Data\\JAGH Behaviors",
-    "\\Data\\JAGH Prefabs",
     "\\Data\\JAGH Spawning",
     "\\Data\\SPRT Behaviors",
+    "\\Data\\SPRT Spawning",
     "\\MESConfig"
   ],
-  "SelectedNode": "\\Data\\SPRT Behaviors\\BehaviorFighterAttack.sbc",
+  "SelectedNode": "\\MESConfig\\Config-Combat.xml",
   "PreviewInSolutionExplorer": false
 }

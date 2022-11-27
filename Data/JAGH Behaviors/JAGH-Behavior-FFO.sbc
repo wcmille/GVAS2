@@ -32,10 +32,12 @@
 
         [Triggers:GVA-Trigger-ScoutTattle]
         [Triggers:GVA-Trigger-StandardCompromised]
+        [Triggers:GVA-Trigger-Despawn]
+        [Triggers:GVA-Trigger-DespawnMES]
 
         [EngageOnTargetLineOfSight:true]
         [EngageOnWeaponActivation:true]
-        
+
         [LimitRotationSpeed:true]
         [MaxRotationMagnitude:0.75]
       </Description>
