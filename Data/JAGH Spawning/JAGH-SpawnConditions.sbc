@@ -70,5 +70,31 @@
         [PlanetaryInstallation:true]
       </Description>
     </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Blue-SouthAlienRegion-Fixed-Civ-2-Spawns</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+        [FactionOwner:JAGH]
+        [ZoneConditions:MES-ZoneConditionProfile-SouthAlienRegion]
+        [PlanetaryInstallation:true]
+        [UseSandboxCounterCosts:true]
+        [SandboxCounterCostNames:BlueCivilian]
+        [SandboxCounterCostAmounts:2]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Blue-Brokk</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+        [UseTerrainTypeValidation:true]
+        [AllowedTerrainTypes:Snow]
+      </Description>
+    </EntityComponent>
   </EntityComponents>
 </Definitions>
