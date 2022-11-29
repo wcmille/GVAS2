@@ -2,13 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\Data",
-    "\\Data\\Common Behaviors",
     "\\Data\\JAGH Behaviors",
     "\\Data\\JAGH Spawning",
+    "\\Data\\Scripts",
     "\\Data\\SPRT Behaviors",
-    "\\Data\\SPRT Spawning",
-    "\\MESConfig"
+    "\\Data\\SPRT Prefabs",
+    "\\Data\\SPRT Spawning"
   ],
-  "SelectedNode": "\\MESConfig\\Config-Combat.xml",
+  "SelectedNode": "\\MESConfig",
   "PreviewInSolutionExplorer": false
 }
