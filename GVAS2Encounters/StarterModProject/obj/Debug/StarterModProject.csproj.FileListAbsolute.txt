@@ -1,0 +1,8 @@
+C:\Users\wayne\source\repos\SpaceEngineers\StarterModProject\bin\Debug\StarterModProject.dll
+C:\Users\wayne\source\repos\SpaceEngineers\StarterModProject\bin\Debug\StarterModProject.pdb
+C:\Users\wayne\source\repos\SpaceEngineers\StarterModProject\bin\Debug\netstandard.dll
+C:\Users\wayne\source\repos\SpaceEngineers\StarterModProject\obj\Debug\StarterModProject.csproj.AssemblyReference.cache
+C:\Users\wayne\source\repos\SpaceEngineers\StarterModProject\obj\Debug\StarterModProject.csproj.CoreCompileInputs.cache
+C:\Users\wayne\source\repos\SpaceEngineers\StarterModProject\obj\Debug\StarterModProject.csproj.CopyComplete
+C:\Users\wayne\source\repos\SpaceEngineers\StarterModProject\obj\Debug\StarterModProject.dll
+C:\Users\wayne\source\repos\SpaceEngineers\StarterModProject\obj\Debug\StarterModProject.pdb
