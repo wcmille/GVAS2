@@ -223,5 +223,59 @@ namespace StarterModProject
         {
             MyAPIGateway.Utilities.ShowMissionScreen("Faction Report",null, null, "01:03:22 11/10/22 Fought 2 Cruisers\n11:03:22 11/09/22 Delivered shipment.");
         }
+
+        private static void Time()
+        {
+            int civ, mil;
+            double uu;
+            string faction = "Blue";
+            string Civilian = "Civilian";
+            string Military = "Military";
+            string Credits = "Credits";
+            MyAPIGateway.Utilities.GetVariable($"{faction}{Civilian}", out civ);
+            MyAPIGateway.Utilities.GetVariable($"{faction}{Military}", out mil);
+            MyAPIGateway.Utilities.GetVariable($"{faction}{Credits}", out uu);
+
+            Accounting acct = new Accounting(civ, mil, uu);
+            acct.TimePeriod();
+
+        }
+
+        public struct Accounting
+        {
+            const double militaryCosts = 0.2;
+            const double timePeriodConst = 0.333333;
+            const double pirateFactor = 0.006667;
+            const double corruption = 0.9;
+
+            public Accounting(int c, int m, double uu)
+            {
+                Civilian = c;
+                Military = m;
+                UnspentUnits = uu;
+            }
+
+            public int Civilian { get; private set; }
+            public int Military { get; private set; }
+            public double UnspentUnits { get; private set; }
+
+            public void TimePeriod()
+            {
+                double grossIncome = Civilian * timePeriodConst - Civilian * Civilian * pirateFactor;
+                double expenses = Military * militaryCosts;
+                double netIncome = grossIncome - expenses;
+
+                UnspentUnits += netIncome;
+                if (UnspentUnits < 0.0)
+                {
+                    int balance = (int)Math.Ceiling(-UnspentUnits);
+                    Military -= balance;
+                }
+                if (UnspentUnits > 50.0)
+                {
+                    UnspentUnits *= corruption;
+                }
+            }
+        }
     }
 }

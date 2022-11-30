@@ -8,17 +8,17 @@
 			</Id>
 			<Description>
         [Modular Encounters SpawnGroup]
-        [UseRivalAi:true]
-        [RivalAiReplaceRemoteControl:true]
-        [ManipulationProfiles:GVA-Manipulation-StdBlue]
+
+				[ManipulationProfiles:GVA-Manipulation-StdBlue]
         [ManipulationProfiles:GVA-Manipulation-Blue-InterceptorName]
-        [IgnoreCleanupRules:false]
+
+				[IgnoreCleanupRules:false]
         [ReplenishSystems:true]
-        [SpawnConditionsProfiles:Blue-SouthAlienRegion-Default-Spawns]
-        [FactionOwner:JAGH]
+
+				[SpawnConditionsProfiles:Blue-SouthAlienRegion-Default-Spawns]
       </Description>
 			<IsPirate>true</IsPirate>
-			<Frequency>300.0</Frequency>
+			<Frequency>90.0</Frequency>
 			<Prefabs>
 				<Prefab SubtypeId="Huginn Interceptor - Atmospheric">
 					<Position>
@@ -38,14 +38,14 @@
 			</Id>
 			<Description>
         [Modular Encounters SpawnGroup]
-        [UseRivalAi:true]
-        [RivalAiReplaceRemoteControl:true]
+        
         [ManipulationProfiles:GVA-Manipulation-StdBlue]
         [ManipulationProfiles:GVA-Manipulation-Blue-FrigateName]
+        
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
+        
         [SpawnConditionsProfiles:Blue-SouthAlienRegion-FFO-Spawns]
-        [FactionOwner:JAGH]
       </Description>
 			<IsPirate>true</IsPirate>
 			<Frequency>5.0</Frequency>

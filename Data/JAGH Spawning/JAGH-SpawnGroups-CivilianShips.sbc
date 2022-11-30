@@ -9,16 +9,14 @@
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]
+
         [ManipulationProfiles:GVA-Manipulation-StdBlue]
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
         [SpawnConditionsProfiles:Blue-SouthAlienRegion-Default-Spawns]
-        [UseRivalAi:true]
-        [RivalAiReplaceRemoteControl:true]
-        [FactionOwner:JAGH]
       </Description>
       <IsPirate>true</IsPirate>
-      <Frequency>5.0</Frequency>
+      <Frequency>1.0</Frequency>
       <Prefabs>
         <Prefab SubtypeId="ISL - Aquila-AV 125 Bomber">
           <Position>
@@ -39,16 +37,14 @@
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]
+        
         [ManipulationProfiles:GVA-Manipulation-StdBlue]
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
         [SpawnConditionsProfiles:Blue-SouthAlienRegion-Default-Spawns]
-        [UseRivalAi:true]
-        [RivalAiReplaceRemoteControl:true]
-        [FactionOwner:JAGH]
       </Description>
       <IsPirate>true</IsPirate>
-      <Frequency>5.0</Frequency>
+      <Frequency>1.0</Frequency>
       <Prefabs>
         <Prefab SubtypeId="SPS-350 Dagger">
           <Position>

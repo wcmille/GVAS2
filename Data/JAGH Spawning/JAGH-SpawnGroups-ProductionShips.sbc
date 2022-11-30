@@ -8,15 +8,15 @@
 			</Id>
 			<Description>
         [Modular Encounters SpawnGroup]
+        
         [ManipulationProfiles:GVA-Manipulation-StdBlue]
         [ManipulationProfiles:GVA-Manipulation-Blue-ProductionName]
+        
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
+        
         [SpawnConditionsProfiles:Blue-SouthAlienRegion-Fixed-Civ-2-Spawns]
         [PersistentConditions:Blue-Brokk]
-        [UseRivalAi:true]
-        [RivalAiReplaceRemoteControl:true]
-        [FactionOwner:JAGH]
       </Description>
 			<IsPirate>true</IsPirate>
 			<Frequency>5.0</Frequency>
@@ -40,12 +40,15 @@
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]
+        
         [ManipulationProfiles:GVA-Manipulation-StdBlue]
+        
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
+        
         [SpawnConditionsProfiles:Blue-SouthAlienRegion-Fixed-Spawns]
+        
         [UseTerrainTypeValidation:true]
-        [FactionOwner:JAGH]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>15.0</Frequency>

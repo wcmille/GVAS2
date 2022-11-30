@@ -9,6 +9,9 @@
       <Description>
         [MES Manipulation]
 
+        [UseRivalAi:true]
+        [RivalAiReplaceRemoteControl:true]
+
         [OverrideBlockDamageModifier:false]
         [BlockDamageModifier:100]
         [GridsAreDestructable:true]
@@ -16,7 +19,7 @@
 
         [ShiftBlockColorsHue:false]
         [RandomHueShift:false]
-        
+
         [ChangeTurretSettings:true]
         [TurretRange:2000]
 

@@ -11,10 +11,11 @@
         [RivalAI Behavior]
         [BehaviorName:HorseFighter]
 
-        [OffsetPlanetMinDistFromTarget:1200]
-        [OffsetPlanetMaxDistFromTarget:1950]
-        [OffsetPlanetMinTargetAltitude:-100]
-        [OffsetPlanetMaxTargetAltitude:0]
+        [OffsetPlanetMinDistFromTarget:600]
+        [OffsetPlanetMaxDistFromTarget:800]
+        [OffsetPlanetMinTargetAltitude:500]
+        [OffsetPlanetMaxTargetAltitude:4000]
+        [IdealPlanetAltitude:1000]
 
         [UseProjectileLeadPrediction:true]
         [UseBarrageFire:true]
