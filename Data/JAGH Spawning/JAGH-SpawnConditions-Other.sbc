@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Blue-SouthAlienRegion-Default-Spawns</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+        [FactionOwner:JAGH]
+        [ZoneConditions:MES-ZoneConditionProfile-SouthAlienRegion]
+        [AtmosphericCargoShip:true]
+        [CustomPathStartAltitude:1000]
+        [CustomPathEndAltitude:1000]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Blue-SouthAlienRegion-Orbital-Spawns</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+        [FactionOwner:JAGH]
+        [ZoneConditions:MES-ZoneConditionProfile-SouthAlienRegion]
+        [AtmosphericCargoShip:true]
+        [GravityCargoShip:true]
+        [SkipAirDensityCheck:true]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Blue-SouthAlienRegion-FFO-Spawns</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+        [FactionOwner:JAGH]
+        [ZoneConditions:MES-ZoneConditionProfile-SouthAlienRegion]
+        [AtmosphericCargoShip:true]
+        [GravityCargoShip:true]
+        [SkipAirDensityCheck:true]
+        [UseSandboxCounterCosts:true]
+        [SandboxCounterCostNames:BlueMilitary]
+        [SandboxCounterCostAmounts:1]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Black-SouthAlienRegion-Space-Spawns</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+        [FactionOwner:SPRT]
+        [ZoneConditions:MES-ZoneConditionProfile-SouthAlienRegionSpace]
+        [SpaceCargoShip:true]
+      </Description>
+    </EntityComponent>
+  </EntityComponents>
+</Definitions>

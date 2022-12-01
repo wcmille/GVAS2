@@ -4,63 +4,6 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Blue-SouthAlienRegion-Default-Spawns</SubtypeId>
-      </Id>
-      <Description>
-        [MES Spawn Conditions]
-        [FactionOwner:JAGH]
-        [ZoneConditions:MES-ZoneConditionProfile-SouthAlienRegion]
-        [AtmosphericCargoShip:true]
-        [CustomPathStartAltitude:1000]
-        [CustomPathEndAltitude:1000]
-      </Description>
-    </EntityComponent>
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
-        <TypeId>Inventory</TypeId>
-        <SubtypeId>Blue-SouthAlienRegion-Orbital-Spawns</SubtypeId>
-      </Id>
-      <Description>
-        [MES Spawn Conditions]
-        [FactionOwner:JAGH]
-        [ZoneConditions:MES-ZoneConditionProfile-SouthAlienRegion]
-        [AtmosphericCargoShip:true]
-        [GravityCargoShip:true]
-        [SkipAirDensityCheck:true]
-      </Description>
-    </EntityComponent>
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
-        <TypeId>Inventory</TypeId>
-        <SubtypeId>Blue-SouthAlienRegion-FFO-Spawns</SubtypeId>
-      </Id>
-      <Description>
-        [MES Spawn Conditions]
-        [FactionOwner:JAGH]
-        [ZoneConditions:MES-ZoneConditionProfile-SouthAlienRegion]
-        [AtmosphericCargoShip:true]
-        [GravityCargoShip:true]
-        [SkipAirDensityCheck:true]
-        [UseSandboxCounterCosts:true]
-        [SandboxCounterCostNames:BlueMilitary]
-        [SandboxCounterCostAmounts:1]
-      </Description>
-    </EntityComponent>
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
-        <TypeId>Inventory</TypeId>
-        <SubtypeId>Black-SouthAlienRegion-Space-Spawns</SubtypeId>
-      </Id>
-      <Description>
-        [MES Spawn Conditions]
-        [FactionOwner:SPRT]
-        [ZoneConditions:MES-ZoneConditionProfile-SouthAlienRegionSpace]
-        [SpaceCargoShip:true]
-      </Description>
-    </EntityComponent>
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
-        <TypeId>Inventory</TypeId>
         <SubtypeId>Blue-SouthAlienRegion-Fixed-Spawns</SubtypeId>
       </Id>
       <Description>
@@ -68,6 +11,17 @@
         [FactionOwner:JAGH]
         [ZoneConditions:MES-ZoneConditionProfile-SouthAlienRegion]
         [PlanetaryInstallation:true]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Blue-Brokk</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+        [UseTerrainTypeValidation:true]
+        [AllowedTerrainTypes:Snow]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
@@ -88,12 +42,61 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Blue-Brokk</SubtypeId>
+        <SubtypeId>Blue-SouthAlienRegion-Fixed-Civ-5-Refund-Spawns</SubtypeId>
       </Id>
       <Description>
         [MES Spawn Conditions]
-        [UseTerrainTypeValidation:true]
-        [AllowedTerrainTypes:Snow]
+        [FactionOwner:JAGH]
+        [ZoneConditions:MES-ZoneConditionProfile-SouthAlienRegion]
+        [PlanetaryInstallation:true]
+        [UseSandboxCounterCosts:true]
+        [SandboxCounterCostNames:BlueCivilian]
+        [SandboxCounterCostAmounts:5]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Blue-SouthAlienRegion-Fixed-Civ-10-Refund-Spawns</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+        [FactionOwner:JAGH]
+        [ZoneConditions:MES-ZoneConditionProfile-SouthAlienRegion]
+        [PlanetaryInstallation:true]
+        [UseSandboxCounterCosts:true]
+        [SandboxCounterCostNames:BlueCivilian]
+        [SandboxCounterCostAmounts:10]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Blue-SouthAlienRegion-Fixed-Civ-20-Refund-Spawns</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+        [FactionOwner:JAGH]
+        [ZoneConditions:MES-ZoneConditionProfile-SouthAlienRegion]
+        [PlanetaryInstallation:true]
+        [UseSandboxCounterCosts:true]
+        [SandboxCounterCostNames:BlueCivilian]
+        [SandboxCounterCostAmounts:20]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Blue-SouthAlienRegion-Fixed-Civ-40-Refund-Spawns</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+        [FactionOwner:JAGH]
+        [ZoneConditions:MES-ZoneConditionProfile-SouthAlienRegion]
+        [PlanetaryInstallation:true]
+        [UseSandboxCounterCosts:true]
+        [SandboxCounterCostNames:BlueCivilian]
+        [SandboxCounterCostAmounts:40]
       </Description>
     </EntityComponent>
   </EntityComponents>

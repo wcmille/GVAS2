@@ -1,37 +1,161 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	<SpawnGroups>
-		<SpawnGroup>
-			<Id>
-				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
-				<SubtypeId>GVA-Blue-ProductionShip-PI</SubtypeId> 
-			</Id>
-			<Description>
+  <SpawnGroups>
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <SubtypeId>GVA-Blue-ProductionShip-PI</SubtypeId>
+      </Id>
+      <Description>
         [Modular Encounters SpawnGroup]
-        
+
         [ManipulationProfiles:GVA-Manipulation-StdBlue]
         [ManipulationProfiles:GVA-Manipulation-Blue-ProductionName]
-        
+
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
-        
+
         [SpawnConditionsProfiles:Blue-SouthAlienRegion-Fixed-Civ-2-Spawns]
         [PersistentConditions:Blue-Brokk]
       </Description>
-			<IsPirate>true</IsPirate>
-			<Frequency>5.0</Frequency>
-			<Prefabs>
-				<Prefab SubtypeId="Brokk Mobile Refinery">
-					<Position>
-						<X>0.0</X>
-						<Y>15.00</Y>
-						<Z>0.0</Z>
-					</Position>
-					<Speed>50</Speed>                    
+      <IsPirate>true</IsPirate>
+      <Frequency>1.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="Brokk Mobile Refinery">
+          <Position>
+            <X>0.0</X>
+            <Y>15.00</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>50</Speed>
           <Behaviour>JAGH-Behavior-Civilian-Brokk</Behaviour>
-				</Prefab>
-			</Prefabs>
-		</SpawnGroup>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <SubtypeId>GVA-Blue-ProductionShip-5-Refund-PI</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+
+        [ManipulationProfiles:GVA-Manipulation-StdBlue]
+        [ManipulationProfiles:GVA-Manipulation-Blue-ProductionName]
+
+        [IgnoreCleanupRules:false]
+        [ReplenishSystems:true]
+
+        [SpawnConditionsProfiles:Blue-SouthAlienRegion-Fixed-Civ-5-Refund-Spawns]
+        [PersistentConditions:Blue-Brokk]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>5.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="Brokk Mobile Refinery">
+          <Position>
+            <X>0.0</X>
+            <Y>15.00</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>50</Speed>
+          <Behaviour>JAGH-Behavior-Civilian-Brokk-5</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <SubtypeId>GVA-Blue-ProductionShip-10-Refund-PI</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+
+        [ManipulationProfiles:GVA-Manipulation-StdBlue]
+        [ManipulationProfiles:GVA-Manipulation-Blue-ProductionName]
+
+        [IgnoreCleanupRules:false]
+        [ReplenishSystems:true]
+
+        [SpawnConditionsProfiles:Blue-SouthAlienRegion-Fixed-Civ-10-Refund-Spawns]
+        [PersistentConditions:Blue-Brokk]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>6.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="Brokk Mobile Refinery">
+          <Position>
+            <X>0.0</X>
+            <Y>15.00</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>50</Speed>
+          <Behaviour>JAGH-Behavior-Civilian-Brokk-10</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <SubtypeId>GVA-Blue-ProductionShip-20-Refund-PI</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+
+        [ManipulationProfiles:GVA-Manipulation-StdBlue]
+        [ManipulationProfiles:GVA-Manipulation-Blue-ProductionName]
+
+        [IgnoreCleanupRules:false]
+        [ReplenishSystems:true]
+
+        [SpawnConditionsProfiles:Blue-SouthAlienRegion-Fixed-Civ-20-Refund-Spawns]
+        [PersistentConditions:Blue-Brokk]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>20.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="Brokk Mobile Refinery">
+          <Position>
+            <X>0.0</X>
+            <Y>15.00</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>50</Speed>
+          <Behaviour>JAGH-Behavior-Civilian-Brokk-20</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <SubtypeId>GVA-Blue-ProductionShip-40-Refund-PI</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+
+        [ManipulationProfiles:GVA-Manipulation-StdBlue]
+        [ManipulationProfiles:GVA-Manipulation-Blue-ProductionName]
+
+        [IgnoreCleanupRules:false]
+        [ReplenishSystems:true]
+
+        [SpawnConditionsProfiles:Blue-SouthAlienRegion-Fixed-Civ-40-Refund-Spawns]
+        [PersistentConditions:Blue-Brokk]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>168.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="Brokk Mobile Refinery">
+          <Position>
+            <X>0.0</X>
+            <Y>15.00</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>50</Speed>
+          <Behaviour>JAGH-Behavior-Civilian-Brokk-40</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
@@ -40,18 +164,18 @@
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]
-        
+
         [ManipulationProfiles:GVA-Manipulation-StdBlue]
-        
+
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
-        
+
         [SpawnConditionsProfiles:Blue-SouthAlienRegion-Fixed-Spawns]
-        
+
         [UseTerrainTypeValidation:true]
       </Description>
       <IsPirate>true</IsPirate>
-      <Frequency>15.0</Frequency>
+      <Frequency>49.0</Frequency>
       <Prefabs>
         <Prefab SubtypeId="Santa's Village">
           <Position>

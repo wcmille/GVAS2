@@ -47,5 +47,105 @@
         [Triggers:GVA-Trigger-DespawnMES-Civ-2]
       </Description>
     </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>JAGH-Behavior-Civilian-Brokk-5</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Behavior]
+        [BehaviorName:CargoShip]
+
+        [UseProjectileLeadPrediction:true]
+        [UseBarrageFire:true]
+        [UseTurrets:false]
+        [IdealMaxSpeed:70]
+        [UseVanillaCollisionAvoidance:false]
+        [UseVelocityCollisionEvasion:true]
+        [CollisionEvasionWaypointDistance:600]
+        [CollisionEvasionResumeDistance:300]
+        [CollisionEvasionResumeTime:10]
+
+        [Triggers:GVA-Refund-Civ-3]
+        [Triggers:GVA-Trigger-ScoutTattle]
+        [Triggers:GVA-Trigger-Despawn-Civ-2]
+        [Triggers:GVA-Trigger-DespawnMES-Civ-2]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>JAGH-Behavior-Civilian-Brokk-10</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Behavior]
+        [BehaviorName:CargoShip]
+
+        [UseProjectileLeadPrediction:true]
+        [UseBarrageFire:true]
+        [UseTurrets:false]
+        [IdealMaxSpeed:70]
+        [UseVanillaCollisionAvoidance:false]
+        [UseVelocityCollisionEvasion:true]
+        [CollisionEvasionWaypointDistance:600]
+        [CollisionEvasionResumeDistance:300]
+        [CollisionEvasionResumeTime:10]
+
+        [Triggers:GVA-Refund-Civ-8]
+        [Triggers:GVA-Trigger-ScoutTattle]
+        [Triggers:GVA-Trigger-Despawn-Civ-2]
+        [Triggers:GVA-Trigger-DespawnMES-Civ-2]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>JAGH-Behavior-Civilian-Brokk-20</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Behavior]
+        [BehaviorName:CargoShip]
+
+        [UseProjectileLeadPrediction:true]
+        [UseBarrageFire:true]
+        [UseTurrets:false]
+        [IdealMaxSpeed:70]
+        [UseVanillaCollisionAvoidance:false]
+        [UseVelocityCollisionEvasion:true]
+        [CollisionEvasionWaypointDistance:600]
+        [CollisionEvasionResumeDistance:300]
+        [CollisionEvasionResumeTime:10]
+
+        [Triggers:GVA-Refund-Civ-18]
+        [Triggers:GVA-Trigger-ScoutTattle]
+        [Triggers:GVA-Trigger-Despawn-Civ-2]
+        [Triggers:GVA-Trigger-DespawnMES-Civ-2]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>JAGH-Behavior-Civilian-Brokk-40</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Behavior]
+        [BehaviorName:CargoShip]
+
+        [UseProjectileLeadPrediction:true]
+        [UseBarrageFire:true]
+        [UseTurrets:false]
+        [IdealMaxSpeed:70]
+        [UseVanillaCollisionAvoidance:false]
+        [UseVelocityCollisionEvasion:true]
+        [CollisionEvasionWaypointDistance:600]
+        [CollisionEvasionResumeDistance:300]
+        [CollisionEvasionResumeTime:10]
+
+        [Triggers:GVA-Refund-Civ-38]
+        [Triggers:GVA-Trigger-ScoutTattle]
+        [Triggers:GVA-Trigger-Despawn-Civ-2]
+        [Triggers:GVA-Trigger-DespawnMES-Civ-2]
+      </Description>
+    </EntityComponent>
   </EntityComponents>
 </Definitions>
