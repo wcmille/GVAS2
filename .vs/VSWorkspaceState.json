@@ -2,14 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\Data",
-    "\\Data\\Common Behaviors",
-    "\\Data\\JAGH Behaviors",
     "\\Data\\JAGH Spawning",
-    "\\Data\\Scripts",
-    "\\Data\\SPRT Behaviors",
-    "\\Data\\SPRT Prefabs",
-    "\\Data\\SPRT Spawning"
+    "\\MESConfig"
   ],
-  "SelectedNode": "\\GVAS2Encounters.sln",
+  "SelectedNode": "\\Data\\JAGH Spawning\\JAGH-SpawnGroups-CivilianShips.Clones.sbc",
   "PreviewInSolutionExplorer": false
 }
