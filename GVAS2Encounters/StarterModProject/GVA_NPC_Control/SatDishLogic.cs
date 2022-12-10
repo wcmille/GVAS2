@@ -44,7 +44,7 @@ using VRage.ModAPI;
 using VRage.ObjectBuilders;
 using VRage.Utils;
 
-namespace StarterModProject
+namespace GVA.NPCControl
 {
     [MyEntityComponentDescriptor(typeof(MyObjectBuilder_RadioAntenna), false, "LargeBlockRadioAntennaDish")]
     public class SatDishLogic : MyGameLogicComponent
@@ -57,7 +57,6 @@ namespace StarterModProject
         private static IMyFaction redFaction;
         private static readonly HashSet<IMyEntity> names = new HashSet<IMyEntity>(1);
         private static MyCubeGrid jaghFactionBlock;
-
         public override void Init(MyObjectBuilder_EntityBase objectBuilder)
         {
             base.Init(objectBuilder);
@@ -167,14 +166,14 @@ namespace StarterModProject
             //Label: Supported NPC Faction
             AddLabel("Fleet Commands");
             AddButton("Buy NPC Unit (20M SC)", BuyCredits, true);
-            AddButton("Commission Military", x=>IncreaseNPC(x, "Blue","Military"));
-            AddButton("Commission Civilian", x=>IncreaseNPC(x, "Blue", "Civilian"));
-            AddButton("Commission Production", x => IncreaseNPC(x, "Blue", "Production"));
+            AddButton("Commission Military", x=>IncreaseNPCAndNotify(x, "Blue","Military"));
+            AddButton("Commission Civilian", x=>IncreaseNPCAndNotify(x, "Blue", "Civilian"));
+            //AddButton("Commission Production", x => IncreaseNPC(x, "Blue", "Production"));
             AddSeparator("FleetCommandSeparator");
-            AddLabel("Fleet Reports");
-            AddButton("Read Log", DishActivate);
-            AddButton("Clear Log", DishActivate);
-            AddSeparator("ReportingSeparator");
+            //AddLabel("Fleet Reports");
+            //AddButton("Read Log", DishActivate);
+            //AddButton("Clear Log", DishActivate);
+            //AddSeparator("ReportingSeparator");
         }
 
         private static void BuyCredits(IMyTerminalBlock block)
@@ -195,19 +194,22 @@ namespace StarterModProject
             }
         }
 
-        private static void IncreaseNPC(IMyTerminalBlock block, string faction, string shipType)
+        private static void IncreaseNPCAndNotify(IMyTerminalBlock block, string faction, string shipType)
         {
-            int sandboxCounter;
-            int credits;
+            IncreaseNPC(faction, shipType);
+            UpdateInfo(block);
+        }
 
-            MyAPIGateway.Utilities.GetVariable<int>("BlueCredits", out credits);
-
-            if (credits > 0)
+        public static void IncreaseNPC(string faction, string shipType)
+        {
+            double credits;
+            MyAPIGateway.Utilities.GetVariable("BlueCredits", out credits);
+            if (credits >= 1.0)
             {
-                MyAPIGateway.Utilities.GetVariable<int>($"{faction}{shipType}", out sandboxCounter);
-                MyAPIGateway.Utilities.SetVariable<int>($"{faction}{shipType}", sandboxCounter + 1);
-                MyAPIGateway.Utilities.SetVariable<int>($"BlueCredits", credits - 1);
-                UpdateInfo(block);
+                int sandboxCounter;
+                MyAPIGateway.Utilities.GetVariable($"{faction}{shipType}", out sandboxCounter);
+                MyAPIGateway.Utilities.SetVariable($"{faction}{shipType}", sandboxCounter + 1);
+                MyAPIGateway.Utilities.SetVariable($"BlueCredits", credits - 1.0);
             }
         }
 
@@ -222,60 +224,6 @@ namespace StarterModProject
         private static void DishActivate(IMyTerminalBlock block)
         {
             MyAPIGateway.Utilities.ShowMissionScreen("Faction Report",null, null, "01:03:22 11/10/22 Fought 2 Cruisers\n11:03:22 11/09/22 Delivered shipment.");
-        }
-
-        private static void Time()
-        {
-            int civ, mil;
-            double uu;
-            string faction = "Blue";
-            string Civilian = "Civilian";
-            string Military = "Military";
-            string Credits = "Credits";
-            MyAPIGateway.Utilities.GetVariable($"{faction}{Civilian}", out civ);
-            MyAPIGateway.Utilities.GetVariable($"{faction}{Military}", out mil);
-            MyAPIGateway.Utilities.GetVariable($"{faction}{Credits}", out uu);
-
-            Accounting acct = new Accounting(civ, mil, uu);
-            acct.TimePeriod();
-
-        }
-
-        public struct Accounting
-        {
-            const double militaryCosts = 0.2;
-            const double timePeriodConst = 0.333333;
-            const double pirateFactor = 0.006667;
-            const double corruption = 0.9;
-
-            public Accounting(int c, int m, double uu)
-            {
-                Civilian = c;
-                Military = m;
-                UnspentUnits = uu;
-            }
-
-            public int Civilian { get; private set; }
-            public int Military { get; private set; }
-            public double UnspentUnits { get; private set; }
-
-            public void TimePeriod()
-            {
-                double grossIncome = Civilian * timePeriodConst - Civilian * Civilian * pirateFactor;
-                double expenses = Military * militaryCosts;
-                double netIncome = grossIncome - expenses;
-
-                UnspentUnits += netIncome;
-                if (UnspentUnits < 0.0)
-                {
-                    int balance = (int)Math.Ceiling(-UnspentUnits);
-                    Military -= balance;
-                }
-                if (UnspentUnits > 50.0)
-                {
-                    UnspentUnits *= corruption;
-                }
-            }
         }
     }
 }

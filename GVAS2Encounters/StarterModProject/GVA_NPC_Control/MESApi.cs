@@ -7,13 +7,11 @@ using VRage.Utils;
 using VRageMath;
 
 //Change namespace to your mod's namespace
-namespace StarterModProject
+namespace GVA.NPCControl
 {
 	public class MESApi
 	{
-
 		public bool MESApiReady;
-
 		private const long _mesModId = 1521905890;
 		private Action<Vector3D, string, double, int, int, int> _addKnownPlayerLocation;
 		private Action<bool, Action<IMyRemoteControl, string, string, IMyEntity, Vector3D>> _behaviorTriggerActivationWatcher; //TODO: Complete This

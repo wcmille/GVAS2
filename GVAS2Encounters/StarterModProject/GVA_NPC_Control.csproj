@@ -111,8 +111,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GVA_NPC_Control\ChatListener.cs" />
+    <Compile Include="GVA_NPC_Control\Accounting.cs" />
+    <Compile Include="GVA_NPC_Control\CommandPacket.cs" />
+    <Compile Include="GVA_NPC_Control\ServerCommands.cs" />
+    <Compile Include="GVA_NPC_Control\Session.cs" />
     <Compile Include="GVA_NPC_Control\MESApi.cs" />
+    <Compile Include="GVA_NPC_Control\nNetworking.cs" />
+    <Compile Include="GVA_NPC_Control\nPacketBase.cs" />
+    <Compile Include="GVA_NPC_Control\FactionValuesPacket.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GVA_NPC_Control\SatDishLogic.cs" />
   </ItemGroup>

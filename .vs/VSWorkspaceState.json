@@ -2,9 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\Data",
-    "\\Data\\JAGH Spawning",
+    "\\GVAS2Encounters",
     "\\MESConfig"
   ],
-  "SelectedNode": "\\Data\\JAGH Spawning\\JAGH-SpawnGroups-CivilianShips.Clones.sbc",
+  "SelectedNode": "\\MESConfig\\Config-Combat.xml",
   "PreviewInSolutionExplorer": false
 }

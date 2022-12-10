@@ -1,16 +1,33 @@
-﻿using Sandbox.Game;
+﻿using Digi.Example_NetworkProtobuf;
+using Sandbox.Game;
 using Sandbox.ModAPI;
 using VRage.Game.Components;
 using VRage.Game.ModAPI;
 
-namespace StarterModProject
+namespace GVA.NPCControl
 {
     [MySessionComponentDescriptor(MyUpdateOrder.AfterSimulation)]
-    public class ChatListener : MySessionComponentBase
+    public class Session : MySessionComponentBase
     {
+        static readonly string Civilian = "Civilian";
+        static readonly string Military = "Military";
+        static readonly string Credits = "Credits";
+        const ushort modLast4 = 7481;
+        readonly ServerCommands serverCommands;
+
+        public Networking Networking;
+
+        public Session()
+        {
+            serverCommands = new ServerCommands();
+            Networking = new Networking(modLast4, serverCommands);
+        }
+
         public override void BeforeStart()
         {
             MyAPIGateway.Utilities.MessageEnteredSender += MessageEntered;
+            Networking.Register();
+            Time();
         }
 
         private void MessageEntered(ulong sender, string messageText, ref bool sendToOthers)
@@ -47,6 +64,40 @@ namespace StarterModProject
             }
         }
 
+        private void Time()
+        {
+            int civ, mil;
+            double uu;
+            string faction = "Blue";
+            Read(faction, out civ, out mil, out uu);
+
+            Accounting acct = new Accounting(faction, civ, mil, uu);
+            acct.TimePeriod();
+
+            Write(acct);
+            WriteToClient(acct);
+        }
+
+        private static void Read(string faction, out int civ, out int mil, out double uu)
+        {
+            MyAPIGateway.Utilities.GetVariable($"{faction}{Civilian}", out civ);
+            MyAPIGateway.Utilities.GetVariable($"{faction}{Military}", out mil);
+            MyAPIGateway.Utilities.GetVariable($"{faction}{Credits}", out uu);
+        }
+
+        public static void Write(Accounting acct)
+        {
+            MyAPIGateway.Utilities.SetVariable($"{acct.Faction}{Civilian}", acct.Civilian);
+            MyAPIGateway.Utilities.SetVariable($"{acct.Faction}{Military}", acct.Military);
+            MyAPIGateway.Utilities.SetVariable($"{acct.Faction}{Credits}", acct.UnspentUnits);
+        }
+
+        private void WriteToClient(Accounting acct)
+        {
+            FactionValuesPacket packet = new FactionValuesPacket(acct.Faction, acct.Civilian, acct.Military, acct.UnspentUnits);
+            Networking.RelayToClients(packet);
+        }
+
         private static void IncrementUnits(string typeStr)
         {
             int value;
@@ -59,6 +110,8 @@ namespace StarterModProject
         protected override void UnloadData()
         {
             MyAPIGateway.Utilities.MessageEnteredSender -= MessageEntered;
+            Networking?.Unregister();
+            Networking = null;
         }
     }
 }
