@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using GVA.NPCControl;
+﻿using GVA.NPCControl;
 using Sandbox.ModAPI;
+using System;
+using System.Collections.Generic;
 using VRage.Game;
 using VRage.Game.ModAPI;
 using VRage.Utils;
@@ -22,17 +22,18 @@ namespace Digi.Example_NetworkProtobuf
     public class Networking
     {
         public readonly ushort ChannelId;
-        IServerCommands server;
+        public const ushort ModLast4 = 7481;
+        readonly IPacketReceiver ipr;
 
         private List<IMyPlayer> tempPlayers = null;
 
         /// <summary>
         /// <paramref name="channelId"/> must be unique from all other mods that also use network packets.
         /// </summary>
-        public Networking(ushort channelId, IServerCommands server)
+        public Networking(ushort channelId, IPacketReceiver ipr)
         {
-            this.server = server;
             ChannelId = channelId;
+            this.ipr = ipr;
         }
 
         /// <summary>
@@ -73,10 +74,9 @@ namespace Digi.Example_NetworkProtobuf
 
         private void HandlePacket(PacketBase packet, byte[] rawData = null)
         {
-            var relay = packet.Received(server);
-
-            if (relay)
-                RelayToClients(packet, rawData);
+            ipr.Received(packet);
+            //var relay = ipr.Received(packet);
+            //if (relay) RelayToClients(packet, rawData);
         }
 
         /// <summary>

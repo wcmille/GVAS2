@@ -30,6 +30,7 @@
 //Red - Blue
 //Green - Blue
 
+using Digi.Example_NetworkProtobuf;
 using Sandbox.Common.ObjectBuilders;
 using Sandbox.Game.Entities;
 using Sandbox.Game.Entities.Cube;
@@ -44,7 +45,7 @@ using VRage.ModAPI;
 using VRage.ObjectBuilders;
 using VRage.Utils;
 
-namespace GVA.NPCControl
+namespace GVA.NPCControl.Client
 {
     [MyEntityComponentDescriptor(typeof(MyObjectBuilder_RadioAntenna), false, "LargeBlockRadioAntennaDish")]
     public class SatDishLogic : MyGameLogicComponent
@@ -53,10 +54,11 @@ namespace GVA.NPCControl
         //private IMyFaction supportedfaction;
         private static IMyFaction blueFaction;
         private static IMyFaction pirateFaction;
-        private static IMyFaction greenFaction;
-        private static IMyFaction redFaction;
+        //private static IMyFaction greenFaction;
+        //private static IMyFaction redFaction;
         private static readonly HashSet<IMyEntity> names = new HashSet<IMyEntity>(1);
         private static MyCubeGrid jaghFactionBlock;
+
         public override void Init(MyObjectBuilder_EntityBase objectBuilder)
         {
             base.Init(objectBuilder);
@@ -66,33 +68,38 @@ namespace GVA.NPCControl
         public override void UpdateOnceBeforeFrame()
         {
             base.UpdateOnceBeforeFrame();
-            if (!controlsInit)
+            if (!MyAPIGateway.Utilities.IsDedicated)
             {
-                MyLog.Default.WriteLine("SATDISH: UpdateOnceStart");
-                blueFaction = MyAPIGateway.Session.Factions.TryGetFactionByTag("JAGH");
-                pirateFaction = MyAPIGateway.Session.Factions.TryGetFactionByTag("SPRT");
-                names.Clear();
-                MyAPIGateway.Entities.GetEntities(names, x => x != null && x.DisplayName != null && x.DisplayName.Contains("Faction Territory Claim"));
-                if (names.Count == 0) MyLog.Default.WriteLine("SATDISH: No Territory Grids Found.");
-                else
+                if (!controlsInit)
                 {
-                    MyLog.Default.WriteLine("SATDISH: Territory Grid Found.");
-                    foreach (var item in names)
+                    MyLog.Default.WriteLine("SATDISH: UpdateOnceStart");
+                    blueFaction = MyAPIGateway.Session.Factions.TryGetFactionByTag("JAGH");
+                    pirateFaction = MyAPIGateway.Session.Factions.TryGetFactionByTag("SPRT");
+                    names.Clear();
+                    MyAPIGateway.Entities.GetEntities(names, x => x != null && x.DisplayName != null && x.DisplayName.Contains("Faction Territory Claim"));
+                    if (names.Count == 0) MyLog.Default.WriteLine("SATDISH: No Territory Grids Found.");
+                    else
                     {
-                        var beaconBlock = item as MyCubeGrid;
-                        var beacons = ((IMyCubeGrid)beaconBlock).GetFatBlocks<IMyBeacon>();
-                        if (beacons.Count() > 1) continue;
-                        var beacon = beacons.First();
-                        jaghFactionBlock = (MyCubeGrid)names.FirstElement();
+                        MyLog.Default.WriteLine("SATDISH: Territory Grid Found.");
+                        foreach (var item in names)
+                        {
+                            var beaconBlock = item as MyCubeGrid;
+                            var beacons = ((IMyCubeGrid)beaconBlock).GetFatBlocks<IMyBeacon>();
+                            if (beacons.Count() > 1) continue;
+                            var beacon = beacons.First();
+                            jaghFactionBlock = (MyCubeGrid)names.FirstElement();
+                        }
                     }
+                    CreateControls();
+                    var dish = Entity as IMyRadioAntenna;
+                    dish.AppendingCustomInfo += Dish_AppendingCustomInfo;
+                    controlsInit = true;
+                    MyLog.Default.WriteLine("SATDISH: UpdateOnceFinish");
                 }
-                CreateControls();
-                var dish = Entity as IMyRadioAntenna;
-                dish.AppendingCustomInfo += Dish_AppendingCustomInfo;
-                controlsInit = true;
-                MyLog.Default.WriteLine("SATDISH: UpdateOnceFinish");
             }
         }
+
+        #region Private Methods
 
         private void Dish_AppendingCustomInfo(IMyTerminalBlock block, System.Text.StringBuilder builder)
         {
@@ -126,9 +133,16 @@ namespace GVA.NPCControl
 
         private IMyFaction SupportedFaction()
         {
-            var owner = jaghFactionBlock.BigOwners.First();
-            var supportedfaction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(owner);
-            return supportedfaction;
+            if (jaghFactionBlock == null)
+            {
+                return MyAPIGateway.Session.Factions.TryGetFactionByTag("SPRT");
+            }
+            else
+            {
+                var owner = jaghFactionBlock.BigOwners.First();
+                var supportedfaction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(owner);
+                return supportedfaction;
+            }
         }
 
         private static void AddLabel(string labelText)
@@ -191,6 +205,14 @@ namespace GVA.NPCControl
                     MyAPIGateway.Utilities.SetVariable<int>($"BlueCredits", units + 1);
                     UpdateInfo(block);
                 }
+                else
+                {
+                    //Send error message (Can't afford it)
+                }
+            }
+            else
+            { 
+                //Send error message (Can't find owning faction)
             }
         }
 
@@ -200,16 +222,13 @@ namespace GVA.NPCControl
             UpdateInfo(block);
         }
 
-        public static void IncreaseNPC(string faction, string shipType)
+        private static void IncreaseNPC(string faction, string shipType)
         {
             double credits;
             MyAPIGateway.Utilities.GetVariable("BlueCredits", out credits);
             if (credits >= 1.0)
             {
-                int sandboxCounter;
-                MyAPIGateway.Utilities.GetVariable($"{faction}{shipType}", out sandboxCounter);
-                MyAPIGateway.Utilities.SetVariable($"{faction}{shipType}", sandboxCounter + 1);
-                MyAPIGateway.Utilities.SetVariable($"BlueCredits", credits - 1.0);
+                ClientSession.client.Send(new CommandPacket());
             }
         }
 
@@ -225,5 +244,6 @@ namespace GVA.NPCControl
         {
             MyAPIGateway.Utilities.ShowMissionScreen("Faction Report",null, null, "01:03:22 11/10/22 Fought 2 Cruisers\n11:03:22 11/09/22 Delivered shipment.");
         }
+        #endregion
     }
 }

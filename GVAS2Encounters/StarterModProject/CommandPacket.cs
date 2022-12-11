@@ -5,7 +5,7 @@ using VRage.Utils;
 
 namespace GVA.NPCControl
 {
-    // An example packet extending another packet.
+    // This packet is always sent from the Client to the server.
     // Note that it must be ProtoIncluded in PacketBase for it to work.
     [ProtoContract]
     public class CommandPacket : PacketBase
@@ -21,15 +21,30 @@ namespace GVA.NPCControl
             Command = command;
         }
 
-        public override bool Received(IServerCommands server)
+        public override void Execute(IWorld world)
         {
             var msg = $"PacketSimpleExample received: {Command}";
             MyLog.Default.WriteLineAndConsole(msg);
             MyAPIGateway.Utilities.ShowNotification(msg);
 
-            server.Execute(Command);
+            //Determine color.
+            string faction = "Blue";
+            Accounting acct = world.GetAccountDetails(faction);
+            string command = "Civilian";
 
-            return false; // relay packet to other clients (only works if server receives it)
+            if (acct.Faction != "")
+            {
+                //Determine command.
+                if (command == "Civilian")
+                {
+                    acct.BuyCivilian();
+                }
+            }
+        }
+
+        public override void Execute()
+        {
+            //ERROR:
         }
     }
 }

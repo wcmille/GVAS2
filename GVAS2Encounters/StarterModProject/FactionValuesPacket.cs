@@ -5,6 +5,8 @@ using VRage.Utils;
 
 namespace GVA.NPCControl
 {
+    //This packet is always sent from the server to the client to correct a faction's values.
+
     // An example packet extending another packet.
     // Note that it must be ProtoIncluded in PacketBase for it to work.
     [ProtoContract]
@@ -41,16 +43,19 @@ namespace GVA.NPCControl
             Faction = faction;
         }
 
-        public override bool Received(IServerCommands server)
+        public override void Execute()
         {
             var msg = $"PacketSimpleExample received: Civilian={Civilian}; Military={Military}; Unspent={Unspent}";
             MyLog.Default.WriteLineAndConsole(msg);
             MyAPIGateway.Utilities.ShowNotification(msg);
 
             var acct = new Accounting(Faction, Civilian, Military, Unspent);
-            GVA.NPCControl.Session.Write(acct);
+            acct.Write();
+        }
 
-            return true; // relay packet to other clients (only works if server receives it)
+        public override void Execute(IWorld world)
+        {
+            //ERROR:
         }
     }
 }
