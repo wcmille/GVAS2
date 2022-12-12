@@ -63,13 +63,13 @@ namespace GVA.NPCControl.Client
         public override void UpdateOnceBeforeFrame()
         {
             base.UpdateOnceBeforeFrame();
-            if (!MyAPIGateway.Utilities.IsDedicated)
+            if (!controlsInit)
             {
-                if (!controlsInit)
+                if (!MyAPIGateway.Utilities.IsDedicated)
                 {
-                    MyLog.Default.WriteLine("SATDISH: UpdateOnceStart");
+                    MyLog.Default.WriteLine("SATDISH: UpdateOnceStart - !IsDedicated");
                     blueFaction = MyAPIGateway.Session.Factions.TryGetFactionByTag("JAGH");
-                    pirateFaction = MyAPIGateway.Session.Factions.TryGetFactionByTag("SPRT");
+                    pirateFaction = MyAPIGateway.Session.Factions.TryGetFactionByTag(SharedConstants.BlackFactionTag);
                     names.Clear();
                     MyAPIGateway.Entities.GetEntities(names, x => x != null && x.DisplayName != null && x.DisplayName.Contains("Faction Territory Claim"));
                     if (names.Count == 0) MyLog.Default.WriteLine("SATDISH: No Territory Grids Found.");
@@ -88,9 +88,13 @@ namespace GVA.NPCControl.Client
                     CreateControls();
                     var dish = Entity as IMyRadioAntenna;
                     dish.AppendingCustomInfo += Dish_AppendingCustomInfo;
-                    controlsInit = true;
-                    MyLog.Default.WriteLine("SATDISH: UpdateOnceFinish");
                 }
+                else
+                {
+                    MyLog.Default.WriteLine("SATDISH: UpdateOnceStart - IsDedicated");
+                }
+                controlsInit = true;
+                MyLog.Default.WriteLine("SATDISH: UpdateOnceFinish");
             }
         }
 
@@ -99,31 +103,26 @@ namespace GVA.NPCControl.Client
         private void Dish_AppendingCustomInfo(IMyTerminalBlock block, System.Text.StringBuilder builder)
         {
             var supportedfaction = SupportedFaction();
-            //builder.AppendLine($"Supporting: {supportedfaction?.Name}");
-            if (supportedfaction == null || supportedfaction.Tag == "SPRT")
+            if (supportedfaction == null || supportedfaction.Tag == SharedConstants.BlackFactionTag)
             {
                 MyLog.Default.WriteLine("SATDISH: No Faction Found.");
-                supportedfaction = MyAPIGateway.Session.Factions.TryGetFactionByTag("SPRT");
+                supportedfaction = MyAPIGateway.Session.Factions.TryGetFactionByTag(SharedConstants.BlackFactionTag);
                 builder.AppendLine($"Supporting: {supportedfaction.Name}");
             }
-
-            else if (supportedfaction != null && supportedfaction.Tag != "SPRT" && supportedfaction.Tag == block.GetOwnerFactionTag())
+            else if (supportedfaction != null && supportedfaction.Tag != SharedConstants.BlackFactionTag && supportedfaction.Tag == block.GetOwnerFactionTag())
             {
                 builder.AppendLine($"Supporting: {blueFaction.Name}");
-                int military, civilian, production;
+                int military, civilian;
                 double credits;
-                MyAPIGateway.Utilities.GetVariable("BlueMilitary", out military);
-                MyAPIGateway.Utilities.GetVariable("BlueCivilian", out civilian);
-                MyAPIGateway.Utilities.GetVariable("BlueProduction", out production);
-                MyAPIGateway.Utilities.GetVariable("BlueCredits", out credits);
+                MyAPIGateway.Utilities.GetVariable($"{SharedConstants.BlueFactionColor}{SharedConstants.MilitaryStr}", out military);
+                MyAPIGateway.Utilities.GetVariable($"{SharedConstants.BlueFactionColor}{SharedConstants.CivilianStr}", out civilian);
+                MyAPIGateway.Utilities.GetVariable($"{SharedConstants.BlueFactionColor}{SharedConstants.CreditsStr}", out credits);
 
                 builder.AppendLine($"{military} Military Units");
                 builder.AppendLine($"{civilian} Civilian Units");
-                builder.AppendLine($"{production} Production Units");
 
                 builder.AppendLine();
                 builder.AppendLine($"{credits} Unspent NPC Units");
-                builder.AppendLine("Next profit in 10 days");
             }
         }
 
@@ -131,7 +130,7 @@ namespace GVA.NPCControl.Client
         {
             if (jaghFactionBlock == null)
             {
-                return MyAPIGateway.Session.Factions.TryGetFactionByTag("SPRT");
+                return MyAPIGateway.Session.Factions.TryGetFactionByTag(SharedConstants.BlackFactionTag);
             }
             else
             {
@@ -154,7 +153,7 @@ namespace GVA.NPCControl.Client
         private static void AddButton(string buttonText, Action<IMyTerminalBlock> action, bool unconditional = false)
         {
             var activate = MyAPIGateway.TerminalControls.CreateControl<IMyTerminalControlButton, IMyRadioAntenna>(buttonText);
-            activate.Enabled = x => unconditional || x?.GameLogic?.GetAs<SatDishLogic>().SupportedFaction().Tag != "SPRT";
+            activate.Enabled = x => unconditional || x?.GameLogic?.GetAs<SatDishLogic>().SupportedFaction().Tag != SharedConstants.BlackFactionTag;
             activate.SupportsMultipleBlocks = false;
             activate.Visible = x => (x?.GameLogic?.GetAs<SatDishLogic>() != null);
             activate.Title = MyStringId.GetOrCompute(buttonText);
@@ -176,14 +175,9 @@ namespace GVA.NPCControl.Client
             //Label: Supported NPC Faction
             AddLabel("Fleet Commands");
             AddButton("Buy NPC Unit (20M SC)", BuyCredits, true);
-            AddButton("Commission Military", x=>IncreaseNPCAndNotify(x, "Blue","Military"));
-            AddButton("Commission Civilian", x=>IncreaseNPCAndNotify(x, "Blue", "Civilian"));
-            //AddButton("Commission Production", x => IncreaseNPC(x, "Blue", "Production"));
+            AddButton("Commission Military", x => IncreaseNPCAndNotify(x, SharedConstants.BlueFactionColor, SharedConstants.MilitaryStr));
+            AddButton("Commission Civilian", x => IncreaseNPCAndNotify(x, SharedConstants.BlueFactionColor, SharedConstants.CivilianStr));
             AddSeparator("FleetCommandSeparator");
-            //AddLabel("Fleet Reports");
-            //AddButton("Read Log", DishActivate);
-            //AddButton("Clear Log", DishActivate);
-            //AddSeparator("ReportingSeparator");
         }
 
         private static void BuyCredits(IMyTerminalBlock block)
@@ -196,10 +190,10 @@ namespace GVA.NPCControl.Client
                 if (owningFaction.TryGetBalanceInfo(out credits) && credits >= SharedConstants.tokenPrice)
                 {
                     //owningFaction.RequestChangeBalance(-tokenPrice);
-                    MyAPIGateway.Utilities.GetVariable<int>("BlueCredits", out units);
-                    MyAPIGateway.Utilities.SetVariable<int>($"BlueCredits", units + 1);
+                    MyAPIGateway.Utilities.GetVariable($"{SharedConstants.BlueFactionColor}{SharedConstants.CreditsStr}", out units);
+                    MyAPIGateway.Utilities.SetVariable($"{SharedConstants.BlueFactionColor}{SharedConstants.CreditsStr}", units + 1);
                     UpdateInfo(block);
-                    ClientSession.client.Send(new CommandPacket(SharedConstants.CreditsStr));
+                    ClientSession.client.Send(new CommandPacket("BMC", SharedConstants.BlueFactionColor, SharedConstants.CreditsStr));
                 }
                 else
                 {
@@ -207,24 +201,24 @@ namespace GVA.NPCControl.Client
                 }
             }
             else
-            { 
+            {
                 //Send error message (Can't find owning faction)
             }
         }
 
-        private static void IncreaseNPCAndNotify(IMyTerminalBlock block, string faction, string shipType)
+        private static void IncreaseNPCAndNotify(IMyTerminalBlock block, string factionColor, string shipType)
         {
-            IncreaseNPC(faction, shipType);
+            IncreaseNPC(factionColor, shipType);
             UpdateInfo(block);
         }
 
-        private static void IncreaseNPC(string faction, string shipType)
+        private static void IncreaseNPC(string factionColor, string shipType)
         {
             double credits;
-            MyAPIGateway.Utilities.GetVariable("BlueCredits", out credits);
+            MyAPIGateway.Utilities.GetVariable($"{SharedConstants.BlueFactionColor}{SharedConstants.CreditsStr}", out credits);
             if (credits >= 1.0)
             {
-                ClientSession.client.Send(new CommandPacket(SharedConstants.CreditsStr));
+                ClientSession.client.Send(new CommandPacket("BMC", factionColor, shipType));
             }
         }
 

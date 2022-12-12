@@ -32,7 +32,7 @@ namespace GVA.NPCControl
             Civilian = acct.Civilian;
             Military = acct.Military;
             Unspent = acct.UnspentUnits;
-            Faction = acct.Faction;
+            Faction = acct.ColorFaction;
         }
 
         public FactionValuesPacket(string faction, int civ, int mil, double unspent)

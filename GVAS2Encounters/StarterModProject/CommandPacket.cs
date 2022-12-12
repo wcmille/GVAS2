@@ -14,41 +14,51 @@ namespace GVA.NPCControl
         [ProtoMember(1)]
         public string Command;
 
+        [ProtoMember(2)]
+        public string ColorFaction;
+
+        [ProtoMember(3)]
+        public string PlayerFactionTag;
         public CommandPacket() { } // Empty constructor required for deserialization
 
-        public CommandPacket(string command)
+        public CommandPacket(string pcFaction, string colorFaction, string command)
         {
             Command = command;
+            PlayerFactionTag = pcFaction;
+            ColorFaction = colorFaction;
         }
 
         public override void Execute(IWorld world)
         {
-            var msg = $"PacketSimpleExample received: {Command}";
+            var msg = $"PacketSimpleExample received: {ColorFaction} {PlayerFactionTag} {Command}";
             MyLog.Default.WriteLineAndConsole(msg);
             MyAPIGateway.Utilities.ShowNotification(msg);
 
             //Determine color.
-            string factionColor = "Blue";
-            Accounting acct = world.GetAccountDetails(factionColor);
-            string command = SharedConstants.CreditsStr;
+            Accounting acct = world.GetAccountDetails(ColorFaction);
+            acct.Read();
 
-            if (acct.Faction != "")
+            if (acct.ColorFaction != "")
             {
                 //Determine command.
-                if (command == SharedConstants.CivilianStr)
+                if (Command == SharedConstants.CivilianStr)
                 {
-                    acct.BuyCivilian();
+                    if (acct.BuyCivilian()) world.Write(acct);
                 }
-                else if (command == SharedConstants.CreditsStr)
+                else if (Command == SharedConstants.MilitaryStr)
                 {
-                    string tag = "BMC";
-                    var owningFaction = MyAPIGateway.Session.Factions.TryGetFactionByTag(tag);
+                    if (acct.BuyMilitary()) world.Write(acct);
+                }
+                else if (Command == SharedConstants.CreditsStr)
+                {
+                    var owningFaction = MyAPIGateway.Session.Factions.TryGetFactionByTag(PlayerFactionTag);
                     long balance;
                     owningFaction.TryGetBalanceInfo(out balance);
                     if (balance >= SharedConstants.tokenPrice)
                     {
                         owningFaction.RequestChangeBalance(-SharedConstants.tokenPrice);
                         acct.AddUnspent();
+                        world.Write(acct);
                     }
                 }
             }
