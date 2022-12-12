@@ -30,10 +30,8 @@
 //Red - Blue
 //Green - Blue
 
-using Digi.Example_NetworkProtobuf;
 using Sandbox.Common.ObjectBuilders;
 using Sandbox.Game.Entities;
-using Sandbox.Game.Entities.Cube;
 using Sandbox.ModAPI;
 using Sandbox.ModAPI.Interfaces.Terminal;
 using System;
@@ -51,11 +49,8 @@ namespace GVA.NPCControl.Client
     public class SatDishLogic : MyGameLogicComponent
     {
         private static bool controlsInit;
-        //private IMyFaction supportedfaction;
         private static IMyFaction blueFaction;
         private static IMyFaction pirateFaction;
-        //private static IMyFaction greenFaction;
-        //private static IMyFaction redFaction;
         private static readonly HashSet<IMyEntity> names = new HashSet<IMyEntity>(1);
         private static MyCubeGrid jaghFactionBlock;
 
@@ -194,16 +189,16 @@ namespace GVA.NPCControl.Client
         {
             long credits;
             int units;
-            const long tokenPrice = 20000000;
             var owningFaction = MyAPIGateway.Session.Factions.TryGetFactionByTag(block.GetOwnerFactionTag());
             if (owningFaction != null)
             {
-                if (owningFaction.TryGetBalanceInfo(out credits) && credits >= tokenPrice)
+                if (owningFaction.TryGetBalanceInfo(out credits) && credits >= SharedConstants.tokenPrice)
                 {
-                    owningFaction.RequestChangeBalance(-tokenPrice);
+                    //owningFaction.RequestChangeBalance(-tokenPrice);
                     MyAPIGateway.Utilities.GetVariable<int>("BlueCredits", out units);
                     MyAPIGateway.Utilities.SetVariable<int>($"BlueCredits", units + 1);
                     UpdateInfo(block);
+                    ClientSession.client.Send(new CommandPacket(SharedConstants.CreditsStr));
                 }
                 else
                 {
@@ -228,7 +223,7 @@ namespace GVA.NPCControl.Client
             MyAPIGateway.Utilities.GetVariable("BlueCredits", out credits);
             if (credits >= 1.0)
             {
-                ClientSession.client.Send(new CommandPacket());
+                ClientSession.client.Send(new CommandPacket(SharedConstants.CreditsStr));
             }
         }
 
@@ -238,11 +233,6 @@ namespace GVA.NPCControl.Client
             var remember = block.ShowInToolbarConfig;
             block.ShowInToolbarConfig = !remember;
             block.ShowInToolbarConfig = remember;
-        }
-
-        private static void DishActivate(IMyTerminalBlock block)
-        {
-            MyAPIGateway.Utilities.ShowMissionScreen("Faction Report",null, null, "01:03:22 11/10/22 Fought 2 Cruisers\n11:03:22 11/09/22 Delivered shipment.");
         }
         #endregion
     }

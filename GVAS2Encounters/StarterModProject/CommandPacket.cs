@@ -28,16 +28,28 @@ namespace GVA.NPCControl
             MyAPIGateway.Utilities.ShowNotification(msg);
 
             //Determine color.
-            string faction = "Blue";
-            Accounting acct = world.GetAccountDetails(faction);
-            string command = "Civilian";
+            string factionColor = "Blue";
+            Accounting acct = world.GetAccountDetails(factionColor);
+            string command = SharedConstants.CreditsStr;
 
             if (acct.Faction != "")
             {
                 //Determine command.
-                if (command == "Civilian")
+                if (command == SharedConstants.CivilianStr)
                 {
                     acct.BuyCivilian();
+                }
+                else if (command == SharedConstants.CreditsStr)
+                {
+                    string tag = "BMC";
+                    var owningFaction = MyAPIGateway.Session.Factions.TryGetFactionByTag(tag);
+                    long balance;
+                    owningFaction.TryGetBalanceInfo(out balance);
+                    if (balance >= SharedConstants.tokenPrice)
+                    {
+                        owningFaction.RequestChangeBalance(-SharedConstants.tokenPrice);
+                        acct.AddUnspent();
+                    }
                 }
             }
         }

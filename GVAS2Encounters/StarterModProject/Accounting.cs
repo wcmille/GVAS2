@@ -1,5 +1,6 @@
 ﻿using Sandbox.ModAPI;
 using System;
+using VRage.Game.ModAPI;
 
 namespace GVA.NPCControl
 {
@@ -9,18 +10,15 @@ namespace GVA.NPCControl
         const double timePeriodConst = 0.333333;
         const double pirateFactor = 0.006667;
         const double corruption = 0.9;
-        static readonly string CivilianStr = "Civilian";
-        static readonly string MilitaryStr = "Military";
-        static readonly string CreditsStr = "Credits";
 
         public Accounting(string faction)
         {
             int civ, mil;
             double uu;
 
-            MyAPIGateway.Utilities.GetVariable($"{faction}{CivilianStr}", out civ);
-            MyAPIGateway.Utilities.GetVariable($"{faction}{MilitaryStr}", out mil);
-            MyAPIGateway.Utilities.GetVariable($"{faction}{CreditsStr}", out uu);
+            MyAPIGateway.Utilities.GetVariable($"{faction}{SharedConstants.CivilianStr}", out civ);
+            MyAPIGateway.Utilities.GetVariable($"{faction}{SharedConstants.MilitaryStr}", out mil);
+            MyAPIGateway.Utilities.GetVariable($"{faction}{SharedConstants.CreditsStr}", out uu);
 
             Faction = faction;
             Civilian = civ;
@@ -59,6 +57,11 @@ namespace GVA.NPCControl
             }
         }
 
+        public void AddUnspent()
+        {
+            UnspentUnits += 1.0;
+        }
+
         public bool BuyCivilian(int amt = 1)
         {
             if (UnspentUnits >= amt)
@@ -83,9 +86,9 @@ namespace GVA.NPCControl
 
         public void Write()
         {
-            MyAPIGateway.Utilities.SetVariable($"{Faction}{CivilianStr}", Civilian);
-            MyAPIGateway.Utilities.SetVariable($"{Faction}{MilitaryStr}", Military);
-            MyAPIGateway.Utilities.SetVariable($"{Faction}{CreditsStr}", UnspentUnits);
+            MyAPIGateway.Utilities.SetVariable($"{Faction}{SharedConstants.CivilianStr}", Civilian);
+            MyAPIGateway.Utilities.SetVariable($"{Faction}{SharedConstants.MilitaryStr}", Military);
+            MyAPIGateway.Utilities.SetVariable($"{Faction}{SharedConstants.CreditsStr}", UnspentUnits);
         }
     }
 }

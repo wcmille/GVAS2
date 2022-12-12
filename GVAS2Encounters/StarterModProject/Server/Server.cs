@@ -9,7 +9,7 @@ namespace GVA.NPCControl.Server
 
         public World()
         {
-            list.Add(new Accounting("JAGH"));
+            list.Add(new Accounting("Blue"));
         }
 
         public Accounting GetAccountDetails(string color)

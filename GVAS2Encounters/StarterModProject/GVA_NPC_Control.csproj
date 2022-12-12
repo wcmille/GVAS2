@@ -126,6 +126,7 @@
     <Compile Include="FactionValuesPacket.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Client\SatDishLogic.cs" />
+    <Compile Include="SharedConstants.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
