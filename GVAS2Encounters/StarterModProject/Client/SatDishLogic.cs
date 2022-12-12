@@ -110,11 +110,12 @@ namespace GVA.NPCControl.Client
             else if (supportedfaction != null && supportedfaction.Tag != "SPRT" && supportedfaction.Tag == block.GetOwnerFactionTag())
             {
                 builder.AppendLine($"Supporting: {blueFaction.Name}");
-                int military, civilian, production, credits;
-                MyAPIGateway.Utilities.GetVariable<int>("BlueMilitary", out military);
-                MyAPIGateway.Utilities.GetVariable<int>("BlueCivilian", out civilian);
-                MyAPIGateway.Utilities.GetVariable<int>("BlueProduction", out production);
-                MyAPIGateway.Utilities.GetVariable<int>("BlueCredits", out credits);
+                int military, civilian, production;
+                double credits;
+                MyAPIGateway.Utilities.GetVariable("BlueMilitary", out military);
+                MyAPIGateway.Utilities.GetVariable("BlueCivilian", out civilian);
+                MyAPIGateway.Utilities.GetVariable("BlueProduction", out production);
+                MyAPIGateway.Utilities.GetVariable("BlueCredits", out credits);
 
                 builder.AppendLine($"{military} Military Units");
                 builder.AppendLine($"{civilian} Civilian Units");
