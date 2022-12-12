@@ -189,11 +189,10 @@ namespace GVA.NPCControl.Client
             {
                 if (owningFaction.TryGetBalanceInfo(out credits) && credits >= SharedConstants.tokenPrice)
                 {
-                    //owningFaction.RequestChangeBalance(-tokenPrice);
                     MyAPIGateway.Utilities.GetVariable($"{SharedConstants.BlueFactionColor}{SharedConstants.CreditsStr}", out units);
                     MyAPIGateway.Utilities.SetVariable($"{SharedConstants.BlueFactionColor}{SharedConstants.CreditsStr}", units + 1);
                     UpdateInfo(block);
-                    ClientSession.client.Send(new CommandPacket(SharedConstants.SampleFaction, SharedConstants.BlueFactionColor, SharedConstants.CreditsStr));
+                    ClientSession.client.Send(new CommandPacket(owningFaction.Tag, SharedConstants.BlueFactionColor, SharedConstants.CreditsStr));
                 }
                 else
                 {
@@ -209,7 +208,14 @@ namespace GVA.NPCControl.Client
         private static void IncreaseNPCAndNotify(IMyTerminalBlock block, string factionColor, string shipType)
         {
             int amt;
-            IncreaseNPC(factionColor, shipType);
+            {
+                double credits;
+                MyAPIGateway.Utilities.GetVariable($"{factionColor}{SharedConstants.CreditsStr}", out credits);
+                if (credits >= 1.0)
+                {
+                    ClientSession.client.Send(new CommandPacket(block.GetOwnerFactionTag(), factionColor, shipType));
+                }
+            }
             MyAPIGateway.Utilities.GetVariable($"{factionColor}{shipType}", out amt);
             MyAPIGateway.Utilities.SetVariable($"{factionColor}{shipType}", amt+1);
 
@@ -217,16 +223,6 @@ namespace GVA.NPCControl.Client
             MyAPIGateway.Utilities.GetVariable($"{factionColor}{SharedConstants.CreditsStr}", out units);
             MyAPIGateway.Utilities.SetVariable($"{factionColor}{SharedConstants.CreditsStr}", units - 1);
             UpdateInfo(block);
-        }
-
-        private static void IncreaseNPC(string factionColor, string shipType)
-        {
-            double credits;
-            MyAPIGateway.Utilities.GetVariable($"{SharedConstants.BlueFactionColor}{SharedConstants.CreditsStr}", out credits);
-            if (credits >= 1.0)
-            {
-                ClientSession.client.Send(new CommandPacket(SharedConstants.SampleFaction, factionColor, shipType));
-            }
         }
 
         private static void UpdateInfo(IMyTerminalBlock block)
