@@ -31,7 +31,6 @@
 //Green - Blue
 
 using Sandbox.Common.ObjectBuilders;
-using Sandbox.Game.Entities;
 using Sandbox.ModAPI;
 using Sandbox.ModAPI.Interfaces.Terminal;
 using System;
@@ -48,7 +47,6 @@ namespace GVA.NPCControl.Client
     {
         private static bool controlsInit;
         private static readonly HashSet<IMyEntity> names = new HashSet<IMyEntity>(1);
-        private static MyCubeGrid jaghFactionBlock;
 
         public override void Init(MyObjectBuilder_EntityBase objectBuilder)
         {
@@ -63,26 +61,6 @@ namespace GVA.NPCControl.Client
             {
                 if (!MyAPIGateway.Utilities.IsDedicated)
                 {
-                    //MyLog.Default.WriteLine("SATDISH: UpdateOnceStart - !IsDedicated");
-                    //names.Clear();
-                    //MyAPIGateway.Entities.GetEntities(names, x => x is IMyCubeGrid && x.DisplayName != null);
-                    //if (names.Select(x => x.DisplayName.Contains("Faction Territory Blue")).Count() == 0)
-                    //{
-                    //    MyLog.Default.WriteLine("SATDISH: No Territory Grids Found.");
-                    //}
-                    //else
-                    //{
-                    //    MyLog.Default.WriteLine("SATDISH: Territory Grid Found.");
-                    //    foreach (var item in names)
-                    //    {
-                    //        if (!item.DisplayName.Contains("Faction Territory Blue")) continue;
-                    //        var beaconBlock = item as MyCubeGrid;
-                    //        var beacons = ((IMyCubeGrid)beaconBlock).GetFatBlocks<IMyBeacon>();
-                    //        if (beacons.Count() != 1) continue;
-                    //        var beacon = beacons.First();
-                    //        jaghFactionBlock = (MyCubeGrid)item;
-                    //    }
-                    //}
                     CreateControls();
                 }
                 else
@@ -90,7 +68,7 @@ namespace GVA.NPCControl.Client
                     MyLog.Default.WriteLine("SATDISH: UpdateOnceStart - IsDedicated");
                 }
                 controlsInit = true;
-                MyLog.Default.WriteLine($"SATDISH: UpdateOnceFinish {jaghFactionBlock != null}");
+                MyLog.Default.WriteLine($"SATDISH: UpdateOnceFinish");
             }
             var dish = Entity as IMyRadioAntenna;
             dish.AppendingCustomInfo += Dish_AppendingCustomInfo;
@@ -136,16 +114,6 @@ namespace GVA.NPCControl.Client
         private Accounting AccountOwningTerritory(string myFactionTag)
         {
             return ClientSession.client.World.GetTerritoryOwner(myFactionTag);
-            //if (jaghFactionBlock == null)
-            //{
-            //    return MyAPIGateway.Session.Factions.TryGetFactionByTag(SharedConstants.BlackFactionTag);
-            //}
-            //else
-            //{
-            //    var owner = jaghFactionBlock.BigOwners.First();
-            //    var supportedfaction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(owner);
-            //    return supportedfaction;
-            //}
         }
 
         private static void AddLabel(string labelText)
@@ -190,17 +158,18 @@ namespace GVA.NPCControl.Client
 
         private static void BuyCredits(IMyTerminalBlock block)
         {
-            long credits;
-            int units;
             var owningFaction = MyAPIGateway.Session.Factions.TryGetFactionByTag(block.GetOwnerFactionTag());
             if (owningFaction != null)
             {
+                long credits;
                 if (owningFaction.TryGetBalanceInfo(out credits) && credits >= SharedConstants.tokenPrice)
                 {
+                    double units;
+                    ClientSession.client.Send(new CommandPacket(owningFaction.Tag, SharedConstants.BlueFactionColor, SharedConstants.CreditsStr));
+
                     MyAPIGateway.Utilities.GetVariable($"{SharedConstants.BlueFactionColor}{SharedConstants.CreditsStr}", out units);
                     MyAPIGateway.Utilities.SetVariable($"{SharedConstants.BlueFactionColor}{SharedConstants.CreditsStr}", units + 1);
                     UpdateInfo(block);
-                    ClientSession.client.Send(new CommandPacket(owningFaction.Tag, SharedConstants.BlueFactionColor, SharedConstants.CreditsStr));
                 }
                 else
                 {
