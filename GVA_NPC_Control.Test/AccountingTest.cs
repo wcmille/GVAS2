@@ -16,5 +16,12 @@ namespace GVA_NPC_Control.Test
             Assert.AreEqual(10, acct.Military);
             Assert.AreEqual(0.666, acct.UnspentUnits, 0.001);
         }
+
+        [TestMethod]
+        public void CheckContains()
+        {
+            string thing = "Faction Territory Blue[NPC - IGNORE]";
+            Assert.IsTrue(thing.Contains("Faction Territory Blue"));
+        }
     }
 }

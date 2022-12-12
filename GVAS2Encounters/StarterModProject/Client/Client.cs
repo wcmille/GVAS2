@@ -6,16 +6,19 @@ namespace GVA.NPCControl.Client
     public class Client : IPacketReceiver
     {
         Networking networking;
+        public IWorld World { get; set; }
 
         public Client(ushort channel)
         {
+            World = new ClientWorld();
+
             networking = new Networking(channel, this);
             networking.Register();
         }
 
         public void Received(PacketBase packet)
         {
-            packet.Execute();
+            packet.Execute(World);
         }
 
         internal void Unload()

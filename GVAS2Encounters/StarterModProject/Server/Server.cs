@@ -1,31 +1,7 @@
 ﻿using Digi.Example_NetworkProtobuf;
-using System.Collections.Generic;
 
 namespace GVA.NPCControl.Server
 {
-    public class World : IWorld
-    {
-        List<Accounting> list = new List<Accounting>();
-        Server server;
-
-        public World(Server server)
-        {
-            this.server = server;
-            list.Add(new Accounting("Blue"));
-        }
-
-        public Accounting GetAccountDetails(string color)
-        {
-            return list[0];
-        }
-
-        public void Write(Accounting acct)
-        {
-            acct.Write();
-            server.WriteToClient(acct);
-        }
-    }
-
     public class Server : IPacketReceiver
     {
         Networking networking;
@@ -35,7 +11,7 @@ namespace GVA.NPCControl.Server
         {
             networking = new Networking(channel, this);
             networking.Register();
-            world = new World(this);
+            world = new ServerWorld(this);
         }
 
         internal void Unload()
@@ -47,7 +23,7 @@ namespace GVA.NPCControl.Server
 
         public void WriteToClient(Accounting acct)
         {
-            FactionValuesPacket packet = new FactionValuesPacket(acct.ColorFaction, acct.Civilian, acct.Military, acct.UnspentUnits);
+            FactionValuesPacket packet = new FactionValuesPacket(acct.OwningPCTag, acct.ColorFaction, acct.Civilian, acct.Military, acct.UnspentUnits);
             networking.RelayToClients(packet);
         }
 

@@ -36,9 +36,7 @@ using Sandbox.ModAPI;
 using Sandbox.ModAPI.Interfaces.Terminal;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using VRage.Game.Components;
-using VRage.Game.ModAPI;
 using VRage.ModAPI;
 using VRage.ObjectBuilders;
 using VRage.Utils;
@@ -49,8 +47,6 @@ namespace GVA.NPCControl.Client
     public class SatDishLogic : MyGameLogicComponent
     {
         private static bool controlsInit;
-        private static IMyFaction blueFaction;
-        private static IMyFaction pirateFaction;
         private static readonly HashSet<IMyEntity> names = new HashSet<IMyEntity>(1);
         private static MyCubeGrid jaghFactionBlock;
 
@@ -67,51 +63,62 @@ namespace GVA.NPCControl.Client
             {
                 if (!MyAPIGateway.Utilities.IsDedicated)
                 {
-                    MyLog.Default.WriteLine("SATDISH: UpdateOnceStart - !IsDedicated");
-                    blueFaction = MyAPIGateway.Session.Factions.TryGetFactionByTag(SharedConstants.BlueFactionTag);
-                    pirateFaction = MyAPIGateway.Session.Factions.TryGetFactionByTag(SharedConstants.BlackFactionTag);
-                    names.Clear();
-                    MyAPIGateway.Entities.GetEntities(names, x => x != null && x.DisplayName != null && x.DisplayName.Contains("Faction Territory Claim"));
-                    if (names.Count == 0) MyLog.Default.WriteLine("SATDISH: No Territory Grids Found.");
-                    else
-                    {
-                        MyLog.Default.WriteLine("SATDISH: Territory Grid Found.");
-                        foreach (var item in names)
-                        {
-                            var beaconBlock = item as MyCubeGrid;
-                            var beacons = ((IMyCubeGrid)beaconBlock).GetFatBlocks<IMyBeacon>();
-                            if (beacons.Count() > 1) continue;
-                            var beacon = beacons.First();
-                            jaghFactionBlock = (MyCubeGrid)names.FirstElement();
-                        }
-                    }
+                    //MyLog.Default.WriteLine("SATDISH: UpdateOnceStart - !IsDedicated");
+                    //names.Clear();
+                    //MyAPIGateway.Entities.GetEntities(names, x => x is IMyCubeGrid && x.DisplayName != null);
+                    //if (names.Select(x => x.DisplayName.Contains("Faction Territory Blue")).Count() == 0)
+                    //{
+                    //    MyLog.Default.WriteLine("SATDISH: No Territory Grids Found.");
+                    //}
+                    //else
+                    //{
+                    //    MyLog.Default.WriteLine("SATDISH: Territory Grid Found.");
+                    //    foreach (var item in names)
+                    //    {
+                    //        if (!item.DisplayName.Contains("Faction Territory Blue")) continue;
+                    //        var beaconBlock = item as MyCubeGrid;
+                    //        var beacons = ((IMyCubeGrid)beaconBlock).GetFatBlocks<IMyBeacon>();
+                    //        if (beacons.Count() != 1) continue;
+                    //        var beacon = beacons.First();
+                    //        jaghFactionBlock = (MyCubeGrid)item;
+                    //    }
+                    //}
                     CreateControls();
-                    var dish = Entity as IMyRadioAntenna;
-                    dish.AppendingCustomInfo += Dish_AppendingCustomInfo;
                 }
                 else
                 {
                     MyLog.Default.WriteLine("SATDISH: UpdateOnceStart - IsDedicated");
                 }
                 controlsInit = true;
-                MyLog.Default.WriteLine("SATDISH: UpdateOnceFinish");
+                MyLog.Default.WriteLine($"SATDISH: UpdateOnceFinish {jaghFactionBlock != null}");
             }
+            var dish = Entity as IMyRadioAntenna;
+            dish.AppendingCustomInfo += Dish_AppendingCustomInfo;
+        }
+
+        public override void Close()
+        {
+            var dish = Entity as IMyRadioAntenna;
+            dish.AppendingCustomInfo -= Dish_AppendingCustomInfo;
+            base.Close();
         }
 
         #region Private Methods
 
         private void Dish_AppendingCustomInfo(IMyTerminalBlock block, System.Text.StringBuilder builder)
         {
-            var supportedfaction = SupportedFaction();
-            if (supportedfaction == null || supportedfaction.Tag == SharedConstants.BlackFactionTag)
+            var factionOwningTerritory = AccountOwningTerritory(block.GetOwnerFactionTag());
+            if (factionOwningTerritory == null) MyLog.Default.WriteLine("SATDISH: SupportedFaction: Null Faction");
+            else MyLog.Default.WriteLine($"SATDISH: SupportedFaction: {factionOwningTerritory.OwningNPCTag}");
+            if (factionOwningTerritory == null || factionOwningTerritory.OwningNPCTag == SharedConstants.BlackFactionTag)
             {
                 MyLog.Default.WriteLine("SATDISH: No Faction Found.");
-                supportedfaction = MyAPIGateway.Session.Factions.TryGetFactionByTag(SharedConstants.BlackFactionTag);
-                builder.AppendLine($"Supporting: {supportedfaction.Name}");
+                var supportedFaction = MyAPIGateway.Session.Factions.TryGetFactionByTag(SharedConstants.BlackFactionTag);
+                builder.AppendLine($"Supporting: {supportedFaction.Name}");
             }
-            else if (supportedfaction != null && supportedfaction.Tag != SharedConstants.BlackFactionTag && supportedfaction.Tag == block.GetOwnerFactionTag())
+            else if (factionOwningTerritory != null && factionOwningTerritory.OwningNPCTag != SharedConstants.BlackFactionTag && factionOwningTerritory.OwningPCTag == block.GetOwnerFactionTag())
             {
-                builder.AppendLine($"Supporting: {blueFaction.Name}");
+                builder.AppendLine($"Supporting: {factionOwningTerritory.OwningNPCTag}");
                 int military, civilian;
                 double credits;
                 MyAPIGateway.Utilities.GetVariable($"{SharedConstants.BlueFactionColor}{SharedConstants.MilitaryStr}", out military);
@@ -126,18 +133,19 @@ namespace GVA.NPCControl.Client
             }
         }
 
-        private IMyFaction SupportedFaction()
+        private Accounting AccountOwningTerritory(string myFactionTag)
         {
-            if (jaghFactionBlock == null)
-            {
-                return MyAPIGateway.Session.Factions.TryGetFactionByTag(SharedConstants.BlackFactionTag);
-            }
-            else
-            {
-                var owner = jaghFactionBlock.BigOwners.First();
-                var supportedfaction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(owner);
-                return supportedfaction;
-            }
+            return ClientSession.client.World.GetTerritoryOwner(myFactionTag);
+            //if (jaghFactionBlock == null)
+            //{
+            //    return MyAPIGateway.Session.Factions.TryGetFactionByTag(SharedConstants.BlackFactionTag);
+            //}
+            //else
+            //{
+            //    var owner = jaghFactionBlock.BigOwners.First();
+            //    var supportedfaction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(owner);
+            //    return supportedfaction;
+            //}
         }
 
         private static void AddLabel(string labelText)
@@ -153,7 +161,7 @@ namespace GVA.NPCControl.Client
         private static void AddButton(string buttonText, Action<IMyTerminalBlock> action, bool unconditional = false)
         {
             var activate = MyAPIGateway.TerminalControls.CreateControl<IMyTerminalControlButton, IMyRadioAntenna>(buttonText);
-            activate.Enabled = x => unconditional || x?.GameLogic?.GetAs<SatDishLogic>().SupportedFaction().Tag != SharedConstants.BlackFactionTag;
+            activate.Enabled = x => unconditional || x?.GameLogic?.GetAs<SatDishLogic>().AccountOwningTerritory(x.GetOwnerFactionTag()).OwningNPCTag != SharedConstants.BlackFactionTag;
             activate.SupportsMultipleBlocks = false;
             activate.Visible = x => (x?.GameLogic?.GetAs<SatDishLogic>() != null);
             activate.Title = MyStringId.GetOrCompute(buttonText);
@@ -214,15 +222,16 @@ namespace GVA.NPCControl.Client
                 if (credits >= 1.0)
                 {
                     ClientSession.client.Send(new CommandPacket(block.GetOwnerFactionTag(), factionColor, shipType));
+
+                    MyAPIGateway.Utilities.GetVariable($"{factionColor}{shipType}", out amt);
+                    MyAPIGateway.Utilities.SetVariable($"{factionColor}{shipType}", amt + 1);
+
+                    double units;
+                    MyAPIGateway.Utilities.GetVariable($"{factionColor}{SharedConstants.CreditsStr}", out units);
+                    MyAPIGateway.Utilities.SetVariable($"{factionColor}{SharedConstants.CreditsStr}", units - 1);
+                    UpdateInfo(block);
                 }
             }
-            MyAPIGateway.Utilities.GetVariable($"{factionColor}{shipType}", out amt);
-            MyAPIGateway.Utilities.SetVariable($"{factionColor}{shipType}", amt+1);
-
-            double units;
-            MyAPIGateway.Utilities.GetVariable($"{factionColor}{SharedConstants.CreditsStr}", out units);
-            MyAPIGateway.Utilities.SetVariable($"{factionColor}{SharedConstants.CreditsStr}", units - 1);
-            UpdateInfo(block);
         }
 
         private static void UpdateInfo(IMyTerminalBlock block)

@@ -25,6 +25,5 @@ namespace Digi.Example_NetworkProtobuf
         /// </summary>
         /// <returns>Return true if you want the packet to be sent to other clients (only works server side)</returns>
         public abstract void Execute(IWorld world);
-        public abstract void Execute();
     }
 }

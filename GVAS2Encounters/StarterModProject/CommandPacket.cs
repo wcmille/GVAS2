@@ -63,10 +63,5 @@ namespace GVA.NPCControl
                 }
             }
         }
-
-        public override void Execute()
-        {
-            //ERROR:
-        }
     }
 }

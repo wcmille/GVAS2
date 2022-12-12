@@ -19,7 +19,6 @@ namespace GVA.NPCControl.Client
 
         protected override void UnloadData()
         {
-            //MyAPIGateway.Utilities.MessageEnteredSender -= MessageEntered;
             if (client != null) client.Unload();
             client = null;
         }

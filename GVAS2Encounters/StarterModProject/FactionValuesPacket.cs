@@ -25,6 +25,12 @@ namespace GVA.NPCControl
         [ProtoMember(4)]
         public string Faction;
 
+        [ProtoMember(5)]
+        public string Owner;
+
+        [ProtoMember(6)]
+        public string NPCOwner;
+
         public FactionValuesPacket() { } // Empty constructor required for deserialization
 
         public FactionValuesPacket(Accounting acct)
@@ -33,29 +39,26 @@ namespace GVA.NPCControl
             Military = acct.Military;
             Unspent = acct.UnspentUnits;
             Faction = acct.ColorFaction;
+            Owner = acct.OwningPCTag;
         }
 
-        public FactionValuesPacket(string faction, int civ, int mil, double unspent)
+        public FactionValuesPacket(string owner, string faction, int civ, int mil, double unspent)
         {
             Civilian = civ;
             Military = mil;
             Unspent = unspent;
             Faction = faction;
-        }
-
-        public override void Execute()
-        {
-            var msg = $"PacketSimpleExample received: Civilian={Civilian}; Military={Military}; Unspent={Unspent}";
-            MyLog.Default.WriteLineAndConsole(msg);
-            MyAPIGateway.Utilities.ShowNotification(msg);
-
-            var acct = new Accounting(Faction, Civilian, Military, Unspent);
-            acct.Write();
+            Owner = owner;
         }
 
         public override void Execute(IWorld world)
         {
-            //ERROR:
+            var msg = $"PacketSimpleExample received: {Owner} {NPCOwner} {Faction} Civilian={Civilian}; Military={Military}; Unspent={Unspent}";
+            MyLog.Default.WriteLineAndConsole(msg);
+            MyAPIGateway.Utilities.ShowNotification(msg);
+
+            var acct = new Accounting(Owner, NPCOwner, Faction, Civilian, Military, Unspent);
+            world.Write(acct);
         }
     }
 }
