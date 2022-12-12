@@ -68,7 +68,7 @@ namespace GVA.NPCControl.Client
                 if (!MyAPIGateway.Utilities.IsDedicated)
                 {
                     MyLog.Default.WriteLine("SATDISH: UpdateOnceStart - !IsDedicated");
-                    blueFaction = MyAPIGateway.Session.Factions.TryGetFactionByTag("JAGH");
+                    blueFaction = MyAPIGateway.Session.Factions.TryGetFactionByTag(SharedConstants.BlueFactionTag);
                     pirateFaction = MyAPIGateway.Session.Factions.TryGetFactionByTag(SharedConstants.BlackFactionTag);
                     names.Clear();
                     MyAPIGateway.Entities.GetEntities(names, x => x != null && x.DisplayName != null && x.DisplayName.Contains("Faction Territory Claim"));
@@ -122,7 +122,7 @@ namespace GVA.NPCControl.Client
                 builder.AppendLine($"{civilian} Civilian Units");
 
                 builder.AppendLine();
-                builder.AppendLine($"{credits} Unspent NPC Units");
+                builder.AppendLine($"{credits:F2} Unspent NPC Units");
             }
         }
 
@@ -193,7 +193,7 @@ namespace GVA.NPCControl.Client
                     MyAPIGateway.Utilities.GetVariable($"{SharedConstants.BlueFactionColor}{SharedConstants.CreditsStr}", out units);
                     MyAPIGateway.Utilities.SetVariable($"{SharedConstants.BlueFactionColor}{SharedConstants.CreditsStr}", units + 1);
                     UpdateInfo(block);
-                    ClientSession.client.Send(new CommandPacket("BMC", SharedConstants.BlueFactionColor, SharedConstants.CreditsStr));
+                    ClientSession.client.Send(new CommandPacket(SharedConstants.SampleFaction, SharedConstants.BlueFactionColor, SharedConstants.CreditsStr));
                 }
                 else
                 {
@@ -208,7 +208,14 @@ namespace GVA.NPCControl.Client
 
         private static void IncreaseNPCAndNotify(IMyTerminalBlock block, string factionColor, string shipType)
         {
+            int amt;
             IncreaseNPC(factionColor, shipType);
+            MyAPIGateway.Utilities.GetVariable($"{factionColor}{shipType}", out amt);
+            MyAPIGateway.Utilities.SetVariable($"{factionColor}{shipType}", amt+1);
+
+            double units;
+            MyAPIGateway.Utilities.GetVariable($"{factionColor}{SharedConstants.CreditsStr}", out units);
+            MyAPIGateway.Utilities.SetVariable($"{factionColor}{SharedConstants.CreditsStr}", units - 1);
             UpdateInfo(block);
         }
 
@@ -218,7 +225,7 @@ namespace GVA.NPCControl.Client
             MyAPIGateway.Utilities.GetVariable($"{SharedConstants.BlueFactionColor}{SharedConstants.CreditsStr}", out credits);
             if (credits >= 1.0)
             {
-                ClientSession.client.Send(new CommandPacket("BMC", factionColor, shipType));
+                ClientSession.client.Send(new CommandPacket(SharedConstants.SampleFaction, factionColor, shipType));
             }
         }
 
