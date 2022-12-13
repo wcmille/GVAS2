@@ -1,6 +1,5 @@
 ﻿using Sandbox.ModAPI;
 using System;
-using VRage.Game.ModAPI;
 
 namespace GVA.NPCControl
 {

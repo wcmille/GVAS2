@@ -46,7 +46,6 @@ namespace GVA.NPCControl.Client
     public class SatDishLogic : MyGameLogicComponent
     {
         private static bool controlsInit;
-        private static readonly HashSet<IMyEntity> names = new HashSet<IMyEntity>(1);
 
         public override void Init(MyObjectBuilder_EntityBase objectBuilder)
         {
@@ -88,7 +87,7 @@ namespace GVA.NPCControl.Client
             var factionOwningTerritory = AccountOwningTerritory(block.GetOwnerFactionTag());
             if (factionOwningTerritory == null) MyLog.Default.WriteLine("SATDISH: SupportedFaction: Null Faction");
             else MyLog.Default.WriteLine($"SATDISH: SupportedFaction: {factionOwningTerritory.OwningNPCTag}");
-            if (factionOwningTerritory == null || factionOwningTerritory.OwningNPCTag == SharedConstants.BlackFactionTag)
+            if (factionOwningTerritory == null || factionOwningTerritory.OwningPCTag == SharedConstants.BlackFactionTag)
             {
                 MyLog.Default.WriteLine("SATDISH: No Faction Found.");
                 var supportedFaction = MyAPIGateway.Session.Factions.TryGetFactionByTag(SharedConstants.BlackFactionTag);
@@ -113,7 +112,7 @@ namespace GVA.NPCControl.Client
 
         private Accounting AccountOwningTerritory(string myFactionTag)
         {
-            return ClientSession.client.World.GetTerritoryOwner(myFactionTag);
+            return ClientSession.client.World.GetAccountByPCOwner(myFactionTag);
         }
 
         private static void AddLabel(string labelText)
@@ -129,7 +128,7 @@ namespace GVA.NPCControl.Client
         private static void AddButton(string buttonText, Action<IMyTerminalBlock> action, bool unconditional = false)
         {
             var activate = MyAPIGateway.TerminalControls.CreateControl<IMyTerminalControlButton, IMyRadioAntenna>(buttonText);
-            activate.Enabled = x => unconditional || x?.GameLogic?.GetAs<SatDishLogic>().AccountOwningTerritory(x.GetOwnerFactionTag()).OwningNPCTag != SharedConstants.BlackFactionTag;
+            activate.Enabled = x => unconditional || x?.GameLogic?.GetAs<SatDishLogic>().AccountOwningTerritory(x.GetOwnerFactionTag()) != null;
             activate.SupportsMultipleBlocks = false;
             activate.Visible = x => (x?.GameLogic?.GetAs<SatDishLogic>() != null);
             activate.Title = MyStringId.GetOrCompute(buttonText);

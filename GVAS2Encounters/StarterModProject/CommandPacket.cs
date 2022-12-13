@@ -35,7 +35,7 @@ namespace GVA.NPCControl
             MyAPIGateway.Utilities.ShowNotification(msg);
 
             //Determine color.
-            Accounting acct = world.GetAccountDetails(ColorFaction);
+            Accounting acct = world.GetAccountByColor(ColorFaction);
             acct.Read();
 
             if (acct.ColorFaction != "")
