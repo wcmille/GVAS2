@@ -53,9 +53,9 @@ namespace GVA.NPCControl
 
         public override void Execute(IWorld world)
         {
-            var msg = $"PacketSimpleExample received: {Owner} {NPCOwner} {Faction} Civilian={Civilian}; Military={Military}; Unspent={Unspent}";
-            MyLog.Default.WriteLineAndConsole(msg);
-            MyAPIGateway.Utilities.ShowNotification(msg);
+            //var msg = $"PacketSimpleExample received: {Owner} {NPCOwner} {Faction} Civilian={Civilian}; Military={Military}; Unspent={Unspent}";
+            //MyLog.Default.WriteLineAndConsole(msg);
+            //MyAPIGateway.Utilities.ShowNotification(msg);
 
             var acct = new Accounting(Owner, NPCOwner, Faction, Civilian, Military, Unspent);
             world.Write(acct);

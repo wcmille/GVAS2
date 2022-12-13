@@ -10,7 +10,7 @@ namespace GVA.NPCControl
         Accounting GetAccountByPCOwner(string factionTag);
     }
 
-    public abstract class SharedWorld : IWorld
+    public class SharedWorld : IWorld
     {
         protected readonly List<Accounting> list = new List<Accounting>();
 
@@ -38,6 +38,19 @@ namespace GVA.NPCControl
             return null;
         }
 
-        public abstract void Write(Accounting acct);
+        public virtual void Write(Accounting acct)
+        {
+            if (acct == null) return;
+            acct.Write();
+            foreach (var a in list)
+            {
+                if (a == acct) break; //No need to copy.
+                if (a.ColorFaction == acct.ColorFaction)
+                {
+                    a.Read();
+                    break;
+                }
+            }
+        }
     }
 }

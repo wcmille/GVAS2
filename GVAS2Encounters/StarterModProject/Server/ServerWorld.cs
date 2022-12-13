@@ -1,5 +1,4 @@
 ﻿using Sandbox.ModAPI;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using VRage.Game.ModAPI;
@@ -24,11 +23,27 @@ namespace GVA.NPCControl.Server
             if (blueClaimBlock == null) MyLog.Default.WriteLine("SATDISH: {color} Territory Grid Not Found.");
             else
             {
-                var ownerID = blueClaimBlock.BigOwners.First();
-                var blueFaction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(ownerID);
-                var blueTag = blueFaction.Tag;
-                MyAPIGateway.Utilities.SetVariable($"{color}{SharedConstants.OwnerStr}", blueTag);
+                WriteOwner(color);
+                blueClaimBlock.OnBlockOwnershipChanged += BlueClaimBlock_OnBlockOwnershipChanged;
             }
+        }
+
+        private void WriteOwner(string color)
+        {
+            var ownerID = blueClaimBlock.BigOwners.First();
+            var blueFaction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(ownerID);
+            var blueTag = blueFaction.Tag;
+            //MyLog.Default.WriteLineAndConsole($"SATDISH: Owners: {ownerID} {blueFaction.Name} {blueTag}");
+            MyAPIGateway.Utilities.SetVariable($"{color}{SharedConstants.OwnerStr}", blueTag);
+        }
+
+        private void BlueClaimBlock_OnBlockOwnershipChanged(IMyCubeGrid obj)
+        {
+            //MyLog.Default.WriteLine($"SATDISH: Owner Changed. {obj.CustomName}");
+            WriteOwner(SharedConstants.BlueFactionColor);
+            var acct = GetAccountByColor(SharedConstants.BlueFactionColor);
+            acct.Read();
+            Write(acct);
         }
 
         private void FetchClaimBlocks()
@@ -63,43 +78,10 @@ namespace GVA.NPCControl.Server
             }
         }
 
-        //MyLog.Default.WriteLine("SATDISH: UpdateOnceStart - !IsDedicated");
-        //names.Clear();
-        //MyAPIGateway.Entities.GetEntities(names, x => x is IMyCubeGrid && x.DisplayName != null);
-        //if (names.Select(x => x.DisplayName.Contains("Faction Territory Blue")).Count() == 0)
-        //{
-        //    MyLog.Default.WriteLine("SATDISH: No Territory Grids Found.");
-        //}
-        //else
-        //{
-        //    MyLog.Default.WriteLine("SATDISH: Territory Grid Found.");
-        //    foreach (var item in names)
-        //    {
-        //        if (!item.DisplayName.Contains("Faction Territory Blue")) continue;
-        //        var beaconBlock = item as MyCubeGrid;
-        //        var beacons = ((IMyCubeGrid)beaconBlock).GetFatBlocks<IMyBeacon>();
-        //        if (beacons.Count() != 1) continue;
-        //        var beacon = beacons.First();
-        //        jaghFactionBlock = (MyCubeGrid)item;
-        //    }
-        //}
-
-
-        //if (jaghFactionBlock == null)
-        //{
-        //    return MyAPIGateway.Session.Factions.TryGetFactionByTag(SharedConstants.BlackFactionTag);
-        //}
-        //else
-        //{
-        //    var owner = jaghFactionBlock.BigOwners.First();
-        //    var supportedfaction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(owner);
-        //    return supportedfaction;
-        //}
-
-
         public override void Write(Accounting acct)
         {
-            acct.Write();
+            if (acct == null) return;
+            base.Write(acct);            
             server.WriteToClient(acct);
         }
     }

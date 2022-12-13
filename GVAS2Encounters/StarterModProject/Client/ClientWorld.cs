@@ -7,10 +7,5 @@ namespace GVA.NPCControl.Client
         public ClientWorld()
         {
         }
-
-        public override void Write(Accounting acct)
-        {
-            acct.Write();
-        }
     }
 }
