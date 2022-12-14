@@ -19,6 +19,10 @@
         
         [ChangeTurretSettings:true]
         [TurretRange:2000]
+        
+        [UseBlockReplacerProfile:true]
+        [IgnoreGlobalBlockReplacer:true]
+        [BlockReplacerProfileNames:MES-NpcThrusters-Hydro]
 
         [ConfigureSpecialNpcThrusters:true]
         [NpcHydroThrustForceMultiply:1.4]

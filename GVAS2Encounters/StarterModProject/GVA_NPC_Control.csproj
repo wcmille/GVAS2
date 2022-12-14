@@ -133,9 +133,10 @@
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>del "C:\Users\wayne\AppData\Roaming\SpaceEngineers\Mods\GVAS2Encounters\Data\Scripts\GVA_NPC_Control\*.cs"
+    <PostBuildEvent>rd "C:\Users\wayne\AppData\Roaming\SpaceEngineers\Mods\GVAS2Encounters\Data\" /s /q
 xcopy $(ProjectDir)*.cs "C:\Users\wayne\AppData\Roaming\SpaceEngineers\Mods\GVAS2Encounters\Data\Scripts\GVA_NPC_Control\" /y
 xcopy $(ProjectDir)Client\*.cs "C:\Users\wayne\AppData\Roaming\SpaceEngineers\Mods\GVAS2Encounters\Data\Scripts\GVA_NPC_Control\" /y
-xcopy $(ProjectDir)Server\*.cs "C:\Users\wayne\AppData\Roaming\SpaceEngineers\Mods\GVAS2Encounters\Data\Scripts\GVA_NPC_Control\" /y</PostBuildEvent>
+xcopy $(ProjectDir)Server\*.cs "C:\Users\wayne\AppData\Roaming\SpaceEngineers\Mods\GVAS2Encounters\Data\Scripts\GVA_NPC_Control\" /y
+xcopy $(SolutionDir)Data "C:\Users\wayne\AppData\Roaming\SpaceEngineers\Mods\GVAS2Encounters\Data\" /y /s</PostBuildEvent>
   </PropertyGroup>
 </Project>

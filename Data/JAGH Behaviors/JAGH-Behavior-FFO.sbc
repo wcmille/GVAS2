@@ -10,37 +10,69 @@
       <Description>
         [RivalAI Behavior]
         [BehaviorName:HorseFighter]
-
-        [OffsetPlanetMinDistFromTarget:600]
-        [OffsetPlanetMaxDistFromTarget:800]
-        [OffsetPlanetMinTargetAltitude:500]
-        [OffsetPlanetMaxTargetAltitude:4000]
-        [IdealPlanetAltitude:1000]
-
-        [UseProjectileLeadPrediction:true]
-        [UseBarrageFire:true]
-        [UseTurrets:false]
-        [UseStaticGuns:true]
-        [IdealMaxSpeed:70]
-        [UseVanillaCollisionAvoidance:false]
-        [UseVelocityCollisionEvasion:true]
-        [CollisionEvasionWaypointDistance:600]
-        [CollisionEvasionResumeDistance:300]
-        [CollisionEvasionResumeTime:10]
+        [AutopilotData:GVA-Autopilot-FFO]
 
         [TargetData:Common-Target-Main-A]
         [OverrideTargetData:Common-Target-Main-A]
+        
+        [WeaponSystem:GVA-Weapons-FFO]
 
         [Triggers:GVA-Trigger-ScoutTattle]
         [Triggers:GVA-Trigger-StandardCompromised]
         [Triggers:GVA-Trigger-Despawn]
         [Triggers:GVA-Trigger-DespawnMES]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Weapons-FFO</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Weapons]
+        
+        [UseProjectileLeadPrediction:true]
+        [UseBarrageFire:true]
+        [UseTurrets:false]
+        [UseStaticGuns:true]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Autopilot-FFO</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Autopilot]
 
-        [EngageOnTargetLineOfSight:true]
-        [EngageOnWeaponActivation:true]
+        [SlowDownOnWaypointApproach:true]
+        [ExtraSlowDownDistance:250]
+        [FlyLevelWithGravity:true]
+
+        [IdealMinSpeed:18]
+        [IdealMaxSpeed:70]
+        [MaxSpeedTolerance:5]
+
+        [MinimumPlanetAltitude:500]
+        [IdealPlanetAltitude:600]
+
+        [WaypointTolerance:50]
+
+        [WaypointWaitTimeTrigger:8]
+
+        [AllowStrafing:true]
+        [StrafeMaxDurationMs:3000]
+        [StrafeSpeedCutOff:20]
+
+        [OffsetSpaceMinDistFromTarget:300]
+        [OffsetSpaceMaxDistFromTarget:600]
+        [OffsetPlanetMinDistFromTarget:300]
+        [OffsetPlanetMaxDistFromTarget:600]
+        [OffsetPlanetMinTargetAltitude:500]
+        [OffsetPlanetMaxTargetAltitude:600]
 
         [LimitRotationSpeed:true]
-        [MaxRotationMagnitude:0.75]
+        [MaxRotationMagnitude:0.4]
       </Description>
     </EntityComponent>
   </EntityComponents>

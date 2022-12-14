@@ -23,8 +23,13 @@
         [ChangeTurretSettings:true]
         [TurretRange:2000]
 
+        [UseBlockReplacerProfile:true]
+        [IgnoreGlobalBlockReplacer:true]
+        [BlockReplacerProfileNames:MES-NpcThrusters-Hydro]
+
         [ConfigureSpecialNpcThrusters:true]
-        [NpcHydroThrustForceMultiply:1.4]
+        [NpcHydroThrustForceMultiply:5]
+        [NpcHydroThrustPowerMultiply:0.0001]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">

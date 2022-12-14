@@ -53,10 +53,10 @@
       <IsPirate>true</IsPirate>
       <Frequency>49.0</Frequency>
       <Prefabs>
-        <Prefab SubtypeId="Santa's Village">
+        <Prefab SubtypeId="[NPC] Buried Beacon">
           <Position>
             <X>0.0</X>
-            <Y>-7.1</Y>
+            <Y>-30.0</Y>
             <Z>0.0</Z>
           </Position>
           <Speed>50</Speed>
