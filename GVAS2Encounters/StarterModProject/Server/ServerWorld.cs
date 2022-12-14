@@ -40,8 +40,9 @@ namespace GVA.NPCControl.Server
         private void BlueClaimBlock_OnBlockOwnershipChanged(IMyCubeGrid obj)
         {
             //MyLog.Default.WriteLine($"SATDISH: Owner Changed. {obj.CustomName}");
-            WriteOwner(SharedConstants.BlueFactionColor);
-            var acct = GetAccountByColor(SharedConstants.BlueFactionColor);
+            var color = SharedConstants.BlueFactionColor;
+            WriteOwner(color);
+            var acct = GetAccountByColor(color);
             acct.Read();
             Write(acct);
         }

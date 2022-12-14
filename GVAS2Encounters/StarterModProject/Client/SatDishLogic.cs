@@ -95,17 +95,12 @@ namespace GVA.NPCControl.Client
             else if (factionOwningTerritory != null && factionOwningTerritory.OwningNPCTag != SharedConstants.BlackFactionTag && factionOwningTerritory.OwningPCTag == block.GetOwnerFactionTag())
             {
                 builder.AppendLine($"Supporting: {factionOwningTerritory.OwningNPCTag}");
-                int military, civilian;
-                double credits;
-                MyAPIGateway.Utilities.GetVariable($"{SharedConstants.BlueFactionColor}{SharedConstants.MilitaryStr}", out military);
-                MyAPIGateway.Utilities.GetVariable($"{SharedConstants.BlueFactionColor}{SharedConstants.CivilianStr}", out civilian);
-                MyAPIGateway.Utilities.GetVariable($"{SharedConstants.BlueFactionColor}{SharedConstants.CreditsStr}", out credits);
 
-                builder.AppendLine($"{military} Military Units");
-                builder.AppendLine($"{civilian} Civilian Units");
+                builder.AppendLine($"{factionOwningTerritory.Military} Military Units");
+                builder.AppendLine($"{factionOwningTerritory.Civilian} Civilian Units");
 
                 builder.AppendLine();
-                builder.AppendLine($"{credits:F2} Unspent NPC Units");
+                builder.AppendLine($"{factionOwningTerritory.UnspentUnits:F2} Unspent NPC Units");
             }
         }
 
@@ -147,10 +142,11 @@ namespace GVA.NPCControl.Client
         private static void CreateControls()
         {
             //Label: Supported NPC Faction
+            var color = SharedConstants.BlueFactionColor;
             AddLabel("Fleet Commands");
             AddButton("Buy NPC Unit (20M SC)", BuyCredits, true);
-            AddButton("Commission Military", x => IncreaseNPCAndNotify(x, SharedConstants.BlueFactionColor, SharedConstants.MilitaryStr));
-            AddButton("Commission Civilian", x => IncreaseNPCAndNotify(x, SharedConstants.BlueFactionColor, SharedConstants.CivilianStr));
+            AddButton("Commission Military", x => IncreaseNPCAndNotify(x, color, SharedConstants.MilitaryStr));
+            AddButton("Commission Civilian", x => IncreaseNPCAndNotify(x, color, SharedConstants.CivilianStr));
             AddSeparator("FleetCommandSeparator");
         }
 
@@ -163,10 +159,11 @@ namespace GVA.NPCControl.Client
                 if (owningFaction.TryGetBalanceInfo(out credits) && credits >= SharedConstants.tokenPrice)
                 {
                     double units;
-                    ClientSession.client.Send(new CommandPacket(owningFaction.Tag, SharedConstants.BlueFactionColor, SharedConstants.CreditsStr));
+                    var color = SharedConstants.BlueFactionColor;
+                    ClientSession.client.Send(new CommandPacket(owningFaction.Tag, color, SharedConstants.CreditsStr));
 
-                    MyAPIGateway.Utilities.GetVariable($"{SharedConstants.BlueFactionColor}{SharedConstants.CreditsStr}", out units);
-                    MyAPIGateway.Utilities.SetVariable($"{SharedConstants.BlueFactionColor}{SharedConstants.CreditsStr}", units + 1);
+                    MyAPIGateway.Utilities.GetVariable($"{color}{SharedConstants.CreditsStr}", out units);
+                    MyAPIGateway.Utilities.SetVariable($"{color}{SharedConstants.CreditsStr}", units + 1);
                     UpdateInfo(block);
                 }
                 else
