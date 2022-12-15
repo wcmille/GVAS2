@@ -14,7 +14,7 @@
         [ManipulationProfiles:GVA-Manipulation-Black-FrigateName]
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
-        [SpawnConditionsProfiles:Black-SouthAlienRegion-Space-Spawns]
+        [SpawnConditionsProfiles:Black-BlueAlienRegion-Space-Spawns]
         [FactionOwner:SPRT]
       </Description>
 			<IsPirate>true</IsPirate>

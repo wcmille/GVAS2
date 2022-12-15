@@ -5,44 +5,44 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>MES-Zone-SouthAlienRegion</SubtypeId>
+        <SubtypeId>MES-Zone-BlueAlienRegion</SubtypeId>
       </Id>
       <Description>
         [MES Zone]
 
-        [PublicName:SouthAlienRegion]
+        [PublicName:BlueAlienRegion]
 
         [Active:true]
         [Persistent:true]
         [Strict:false]
         [UseZoneAnnounce:true]
-        [ZoneEnterAnnounce:Entering: South Region]
-        [ZoneLeaveAnnounce:Leaving: South Region]
-        [Coordinates:{X:131072.5 Y:21072.5 Z:5731072.5}]
-        [Radius:125000]
+        [ZoneEnterAnnounce:Entering: Blue Zone]
+        [ZoneLeaveAnnounce:Leaving: Blue Zone]
+        [Coordinates:{X:97825.9 Y:79558.68 Z:5725255.17}]
+        [Radius:50000]
       </Description>
     </EntityComponent>
 
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>MES-ZoneConditionProfile-SouthAlienRegion</SubtypeId>
+        <SubtypeId>MES-ZoneConditionProfile-BlueAlienRegion</SubtypeId>
       </Id>
       <Description>
         [MES Zone Conditions]
-        [ZoneName:SouthAlienRegion]
-        [MaxDistanceFromZoneCenter:125000]
+        [ZoneName:BlueAlienRegion]
+        [MaxDistanceFromZoneCenter:50000]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>MES-ZoneConditionProfile-SouthAlienRegionSpace</SubtypeId>
+        <SubtypeId>MES-ZoneConditionProfile-BlueAlienRegionSpace</SubtypeId>
       </Id>
       <Description>
         [MES Zone Conditions]
-        [ZoneName:SouthAlienRegion]
-        [MaxDistanceFromZoneCenter:125000]
+        [ZoneName:BlueAlienRegion]
+        [MaxDistanceFromZoneCenter:50000]
       </Description>
     </EntityComponent>
   </EntityComponents>

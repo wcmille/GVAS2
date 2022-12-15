@@ -15,7 +15,7 @@
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
 
-        [SpawnConditionsProfiles:Blue-SouthAlienRegion-Fixed-Civ-2-Spawns]
+        [SpawnConditionsProfiles:Blue-BlueAlienRegion-Fixed-Civ-2-Spawns]
         [PersistentConditions:Blue-Brokk]
       </Description>
       <IsPirate>true</IsPirate>
@@ -46,7 +46,7 @@
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
 
-        [SpawnConditionsProfiles:Blue-SouthAlienRegion-Fixed-Spawns]
+        [SpawnConditionsProfiles:Blue-BlueAlienRegion-Fixed-Spawns]
 
         [UseTerrainTypeValidation:true]
       </Description>

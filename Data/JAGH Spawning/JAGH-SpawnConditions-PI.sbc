@@ -4,12 +4,12 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Blue-SouthAlienRegion-Fixed-Spawns</SubtypeId>
+        <SubtypeId>Blue-BlueAlienRegion-Fixed-Spawns</SubtypeId>
       </Id>
       <Description>
         [MES Spawn Conditions]
         [FactionOwner:JAGH]
-        [ZoneConditions:MES-ZoneConditionProfile-SouthAlienRegion]
+        [ZoneConditions:MES-ZoneConditionProfile-BlueAlienRegion]
         [PlanetaryInstallation:true]
       </Description>
     </EntityComponent>
@@ -27,12 +27,12 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Blue-SouthAlienRegion-Fixed-Civ-2-Spawns</SubtypeId>
+        <SubtypeId>Blue-BlueAlienRegion-Fixed-Civ-2-Spawns</SubtypeId>
       </Id>
       <Description>
         [MES Spawn Conditions]
         [FactionOwner:JAGH]
-        [ZoneConditions:MES-ZoneConditionProfile-SouthAlienRegion]
+        [ZoneConditions:MES-ZoneConditionProfile-BlueAlienRegion]
         [PlanetaryInstallation:true]
         [UseSandboxCounterCosts:true]
         [SandboxCounterCostNames:BlueCivilian]
@@ -42,12 +42,12 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Blue-SouthAlienRegion-Fixed-Civ-5-Refund-Spawns</SubtypeId>
+        <SubtypeId>Blue-BlueAlienRegion-Fixed-Civ-5-Refund-Spawns</SubtypeId>
       </Id>
       <Description>
         [MES Spawn Conditions]
         [FactionOwner:JAGH]
-        [ZoneConditions:MES-ZoneConditionProfile-SouthAlienRegion]
+        [ZoneConditions:MES-ZoneConditionProfile-BlueAlienRegion]
         [PlanetaryInstallation:true]
         [UseSandboxCounterCosts:true]
         [SandboxCounterCostNames:BlueCivilian]
@@ -57,12 +57,12 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Blue-SouthAlienRegion-Fixed-Civ-10-Refund-Spawns</SubtypeId>
+        <SubtypeId>Blue-BlueAlienRegion-Fixed-Civ-10-Refund-Spawns</SubtypeId>
       </Id>
       <Description>
         [MES Spawn Conditions]
         [FactionOwner:JAGH]
-        [ZoneConditions:MES-ZoneConditionProfile-SouthAlienRegion]
+        [ZoneConditions:MES-ZoneConditionProfile-BlueAlienRegion]
         [PlanetaryInstallation:true]
         [UseSandboxCounterCosts:true]
         [SandboxCounterCostNames:BlueCivilian]
@@ -72,12 +72,12 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Blue-SouthAlienRegion-Fixed-Civ-20-Refund-Spawns</SubtypeId>
+        <SubtypeId>Blue-BlueAlienRegion-Fixed-Civ-20-Refund-Spawns</SubtypeId>
       </Id>
       <Description>
         [MES Spawn Conditions]
         [FactionOwner:JAGH]
-        [ZoneConditions:MES-ZoneConditionProfile-SouthAlienRegion]
+        [ZoneConditions:MES-ZoneConditionProfile-BlueAlienRegion]
         [PlanetaryInstallation:true]
         [UseSandboxCounterCosts:true]
         [SandboxCounterCostNames:BlueCivilian]
@@ -87,12 +87,12 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Blue-SouthAlienRegion-Fixed-Civ-40-Refund-Spawns</SubtypeId>
+        <SubtypeId>Blue-BlueAlienRegion-Fixed-Civ-40-Refund-Spawns</SubtypeId>
       </Id>
       <Description>
         [MES Spawn Conditions]
         [FactionOwner:JAGH]
-        [ZoneConditions:MES-ZoneConditionProfile-SouthAlienRegion]
+        [ZoneConditions:MES-ZoneConditionProfile-BlueAlienRegion]
         [PlanetaryInstallation:true]
         [UseSandboxCounterCosts:true]
         [SandboxCounterCostNames:BlueCivilian]

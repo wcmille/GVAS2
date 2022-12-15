@@ -15,7 +15,7 @@
 				[IgnoreCleanupRules:false]
         [ReplenishSystems:true]
 
-				[SpawnConditionsProfiles:Blue-SouthAlienRegion-Default-Spawns]
+				[SpawnConditionsProfiles:Blue-BlueAlienRegion-Default-Spawns]
       </Description>
 			<IsPirate>true</IsPirate>
 			<Frequency>90.0</Frequency>
@@ -45,7 +45,7 @@
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
         
-        [SpawnConditionsProfiles:Blue-SouthAlienRegion-FFO-Spawns]
+        [SpawnConditionsProfiles:Blue-BlueAlienRegion-FFO-Spawns]
       </Description>
 			<IsPirate>true</IsPirate>
 			<Frequency>5.0</Frequency>

@@ -13,7 +13,7 @@
         [ManipulationProfiles:GVA-Manipulation-StdBlue]
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
-        [SpawnConditionsProfiles:Blue-SouthAlienRegion-Default-Spawns]
+        [SpawnConditionsProfiles:Blue-BlueAlienRegion-Default-Spawns]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>1.0</Frequency>
@@ -41,7 +41,7 @@
         [ManipulationProfiles:GVA-Manipulation-StdBlue]
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
-        [SpawnConditionsProfiles:Blue-SouthAlienRegion-Default-Spawns]
+        [SpawnConditionsProfiles:Blue-BlueAlienRegion-Default-Spawns]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>1.0</Frequency>

@@ -4,12 +4,12 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Blue-SouthAlienRegion-Default-Spawns</SubtypeId>
+        <SubtypeId>Blue-BlueAlienRegion-Default-Spawns</SubtypeId>
       </Id>
       <Description>
         [MES Spawn Conditions]
         [FactionOwner:JAGH]
-        [ZoneConditions:MES-ZoneConditionProfile-SouthAlienRegion]
+        [ZoneConditions:MES-ZoneConditionProfile-BlueAlienRegion]
         [AtmosphericCargoShip:true]
         [CustomPathStartAltitude:1000]
         [CustomPathEndAltitude:1000]
@@ -18,12 +18,12 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Blue-SouthAlienRegion-Orbital-Spawns</SubtypeId>
+        <SubtypeId>Blue-BlueAlienRegion-Orbital-Spawns</SubtypeId>
       </Id>
       <Description>
         [MES Spawn Conditions]
         [FactionOwner:JAGH]
-        [ZoneConditions:MES-ZoneConditionProfile-SouthAlienRegion]
+        [ZoneConditions:MES-ZoneConditionProfile-BlueAlienRegion]
         [AtmosphericCargoShip:true]
         [GravityCargoShip:true]
         [SkipAirDensityCheck:true]
@@ -32,12 +32,12 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Blue-SouthAlienRegion-FFO-Spawns</SubtypeId>
+        <SubtypeId>Blue-BlueAlienRegion-FFO-Spawns</SubtypeId>
       </Id>
       <Description>
         [MES Spawn Conditions]
         [FactionOwner:JAGH]
-        [ZoneConditions:MES-ZoneConditionProfile-SouthAlienRegion]
+        [ZoneConditions:MES-ZoneConditionProfile-BlueAlienRegion]
         [AtmosphericCargoShip:true]
         [GravityCargoShip:true]
         [SkipAirDensityCheck:true]
@@ -49,12 +49,12 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Black-SouthAlienRegion-Space-Spawns</SubtypeId>
+        <SubtypeId>Black-BlueAlienRegion-Space-Spawns</SubtypeId>
       </Id>
       <Description>
         [MES Spawn Conditions]
         [FactionOwner:SPRT]
-        [ZoneConditions:MES-ZoneConditionProfile-SouthAlienRegionSpace]
+        [ZoneConditions:MES-ZoneConditionProfile-BlueAlienRegionSpace]
         [SpaceCargoShip:true]
       </Description>
     </EntityComponent>
