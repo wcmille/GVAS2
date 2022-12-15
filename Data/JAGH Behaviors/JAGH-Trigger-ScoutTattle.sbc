@@ -50,7 +50,7 @@
         [StartsReady:true]
         [MaxSpawns:1]
 
-        [SpawnGroups:GVA-Blue-Patrol-PCS]
+        [SpawnGroups:GVA-Blue-FFO]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">

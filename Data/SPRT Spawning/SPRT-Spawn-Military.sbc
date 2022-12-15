@@ -4,7 +4,7 @@
 		<SpawnGroup>
 			<Id>
 				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
-				<SubtypeId>GVA-Black-Frigate-SCS</SubtypeId> 
+				<SubtypeId>GVA-Black-Frigate</SubtypeId> 
 			</Id>
 			<Description>
         [Modular Encounters SpawnGroup]

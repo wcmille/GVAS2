@@ -4,7 +4,7 @@
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
-        <SubtypeId>GVA-Blue-ProductionShip-PI</SubtypeId>
+        <SubtypeId>GVA-Blue-Civilian-Refinery</SubtypeId>
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]

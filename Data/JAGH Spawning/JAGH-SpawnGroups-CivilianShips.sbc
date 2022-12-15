@@ -4,7 +4,6 @@
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
-        <!--Do Not Edit-->
         <SubtypeId>GVA-Blue-Miner-PCS</SubtypeId>
       </Id>
       <Description>
@@ -32,8 +31,7 @@
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
-        <!--Do Not Edit-->
-        <SubtypeId>GVA-Blue-UnescortedCivilian-PCS</SubtypeId>
+        <SubtypeId>GVA-Blue-UnescortedCivilian</SubtypeId>
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]

@@ -36,11 +36,15 @@
       </Id>
       <Description>
         [MES Spawn Conditions]
+        [SpaceCargoShip:true]
+
+        [AtmosphericCargoShip:true]
+        [SkipAirDensityCheck:true]
+
+        [GravityCargoShip:true]
+
         [FactionOwner:JAGH]
         [ZoneConditions:MES-ZoneConditionProfile-BlueAlienRegion]
-        [AtmosphericCargoShip:true]
-        [GravityCargoShip:true]
-        [SkipAirDensityCheck:true]
         [UseSandboxCounterCosts:true]
         [SandboxCounterCostNames:BlueMilitary]
         [SandboxCounterCostAmounts:1]

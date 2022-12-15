@@ -4,7 +4,7 @@
 		<SpawnGroup>
 			<Id>
 				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
-				<SubtypeId>GVA-Blue-Scout-PCS</SubtypeId> 
+				<SubtypeId>GVA-Blue-Scout</SubtypeId> 
 			</Id>
 			<Description>
         [Modular Encounters SpawnGroup]
@@ -34,7 +34,7 @@
 		<SpawnGroup>
 			<Id>
 				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
-				<SubtypeId>GVA-Blue-Patrol-PCS</SubtypeId> 
+				<SubtypeId>GVA-Blue-FFO</SubtypeId> 
 			</Id>
 			<Description>
         [Modular Encounters SpawnGroup]
