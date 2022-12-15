@@ -26,9 +26,11 @@
         [UseBlockReplacerProfile:true]
         [IgnoreGlobalBlockReplacer:true]
         [BlockReplacerProfileNames:MES-NpcThrusters-Hydro]
+        [BlockReplacerProfileNames:MES-NpcThrusters-Atmo]
 
         [ConfigureSpecialNpcThrusters:true]
-        [NpcHydroThrustForceMultiply:5]
+        [NpcAtmoThrustForceMultiply:1.4]
+        [NpcHydroThrustForceMultiply:2]
         [NpcHydroThrustPowerMultiply:0.0001]
       </Description>
     </EntityComponent>

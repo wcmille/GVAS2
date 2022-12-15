@@ -26,6 +26,23 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Behavior-PassiveCivilian</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Behavior]
+        [BehaviorName:CargoShip]
+
+        [UseTurrets:false]
+        [UseVanillaCollisionAvoidance:false]
+        [UseVelocityCollisionEvasion:true]
+        [CollisionEvasionWaypointDistance:600]
+        [CollisionEvasionResumeDistance:300]
+        [CollisionEvasionResumeTime:10]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
         <SubtypeId>JAGH-Behavior-Civilian-Brokk</SubtypeId>
       </Id>
       <Description>

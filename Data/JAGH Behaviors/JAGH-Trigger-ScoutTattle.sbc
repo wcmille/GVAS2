@@ -10,8 +10,7 @@
       <Description>
         [RivalAI Trigger]
         [UseTrigger:true]
-        [Type:PlayerNear]
-        [TargetDistance:4000]
+        [Type:HasTarget]
         [MinCooldownMs:140000]
         [MaxCooldownMs:900000]       
         [StartsReady:false]
@@ -66,9 +65,16 @@
         [StartsReady:true]
         [MaxChats:5]
         [BroadcastRandomly:true]
-        [Author:JAGH]
-        [Color:Blue]
-        [ChatMessages:Reinforcements inbound.]
+        [Author:{AntennaName}]
+        [Color:Red]
+
+        [ChatMessages:Enemy hostiles. Request reinforcements.]
+        [BroadcastChatType:Chat]
+
+        [ChatMessages:Tangos in our AO. Sending their location.]
+        [BroadcastChatType:Chat]
+
+        [ChatMessages:Confirmed enemies. Need assistance.]
         [BroadcastChatType:Chat]
       </Description>
     </EntityComponent>

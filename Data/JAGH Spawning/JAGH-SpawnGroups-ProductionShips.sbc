@@ -44,7 +44,6 @@
         [ManipulationProfiles:GVA-Manipulation-StdBlue]
 
         [IgnoreCleanupRules:false]
-        [ReplenishSystems:true]
 
         [SpawnConditionsProfiles:Blue-BlueAlienRegion-Fixed-Spawns]
 
@@ -60,7 +59,7 @@
             <Z>0.0</Z>
           </Position>
           <Speed>50</Speed>
-          <Behaviour>GVA-Behavior-StandardCivilian</Behaviour>
+          <Behaviour>GVA-Behavior-PassiveCivilian</Behaviour>
         </Prefab>
       </Prefabs>
     </SpawnGroup>

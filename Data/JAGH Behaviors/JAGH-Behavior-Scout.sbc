@@ -10,7 +10,6 @@
       <Description>
         [RivalAI Behavior]
         [BehaviorName:Horsefly]
-
         [AutopilotData:GVA-Autopilot-Scout]
 
         [TargetData:Common-Target-Main-A]
@@ -18,6 +17,7 @@
 
         [Triggers:GVA-Trigger-ScoutTattle]
         [Triggers:GVA-Trigger-StandardCompromised]
+        [Triggers:GVA-Trigger-ScoutToFighter]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
@@ -34,7 +34,49 @@
         [IdealMaxSpeed:130]
 
         [MinimumPlanetAltitude:500]
-        [IdealPlanetAltitude:600]
+        [IdealPlanetAltitude:800]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Weapons-Scout</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Weapons]
+
+        [UseStaticGuns:true]
+        [UseProjectileLeadPrediction:true]
+        [UseBarrageFire:true]
+        [UseTurrets:false]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Trigger-ScoutToFighter</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Trigger]
+        [UseTrigger:true]
+        [Type:TargetNear]
+        [TargetDistance:800]
+        [MinCooldownMs:1000]
+        [MaxCooldownMs:3000]
+        [StartsReady:true]
+        [MaxActions:1]
+        [Actions:GVA-Action-ScoutToFighter]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Action-ScoutToFighter</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Action]
+        [ChangeBehaviorSubclass:true]
+        [NewBehaviorSubclass:Fighter]
       </Description>
     </EntityComponent>
   </EntityComponents>
