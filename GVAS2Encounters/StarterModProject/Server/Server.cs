@@ -5,7 +5,7 @@ namespace GVA.NPCControl.Server
     public class Server : IPacketReceiver
     {
         Networking networking;
-        IWorld world;
+        ServerWorld world;
 
         public Server(ushort channel)
         {
@@ -18,6 +18,7 @@ namespace GVA.NPCControl.Server
         {
             networking?.Unregister();
             networking = null;
+            world.Dispose();
             world = null;
         }
 

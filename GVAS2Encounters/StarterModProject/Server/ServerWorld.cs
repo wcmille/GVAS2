@@ -1,4 +1,5 @@
 ﻿using Sandbox.ModAPI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using VRage.Game.ModAPI;
@@ -7,11 +8,11 @@ using VRage.Utils;
 
 namespace GVA.NPCControl.Server
 {
-    public class ServerWorld : SharedWorld
+    public class ServerWorld : SharedWorld, IDisposable
     {
         readonly Server server;
         readonly IMyCubeGrid blueClaimBlock;
-        readonly IMyCubeGrid redClaimBlock;
+        //readonly IMyCubeGrid redClaimBlock;
         readonly HashSet<IMyEntity> names = new HashSet<IMyEntity>(1);
 
         public ServerWorld(Server server)
@@ -26,6 +27,11 @@ namespace GVA.NPCControl.Server
                 WriteOwner(color);
                 blueClaimBlock.OnBlockOwnershipChanged += BlueClaimBlock_OnBlockOwnershipChanged;
             }
+        }
+
+        public void Dispose()
+        {
+            blueClaimBlock.OnBlockOwnershipChanged -= BlueClaimBlock_OnBlockOwnershipChanged;
         }
 
         private void WriteOwner(string color)
@@ -72,11 +78,31 @@ namespace GVA.NPCControl.Server
 
         internal void Time()
         {
-            foreach (var acct in list)
+            DateTime lastRun = ReadTime();
+            var diff = DateTime.Now - lastRun;
+            if (diff.Hours > SharedConstants.TimeDeltaHours)
             {
-                acct.TimePeriod();
-                Write(acct);
+                foreach (var acct in list)
+                {
+                    acct.TimePeriod();
+                    Write(acct);
+                }
+                var newTime = lastRun.AddHours(SharedConstants.TimeDeltaHours);
+                WriteTime(newTime);
             }
+        }
+
+        private void WriteTime(DateTime newTime)
+        {
+            MyAPIGateway.Utilities.SetVariable($"{SharedConstants.TimeStr}", newTime);
+        }
+
+        private DateTime ReadTime()
+        {
+            DateTime time;
+            MyAPIGateway.Utilities.GetVariable($"{SharedConstants.TimeStr}", out time);
+            if (time == DateTime.MinValue) time = DateTime.Now;
+            return time;
         }
 
         public override void Write(Accounting acct)
