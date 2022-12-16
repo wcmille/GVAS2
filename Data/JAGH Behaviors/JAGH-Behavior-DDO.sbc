@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Behavior-HybridInterdictor</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Behavior]
+        [BehaviorName:HorseFighter]
+        [AutopilotData:GVA-Autopilot-DDO]
+
+        [TargetData:Common-Target-Main-A]
+        [OverrideTargetData:Common-Target-Main-A]
+        
+        [WeaponSystem:GVA-Weapons-FFO]
+
+        [Triggers:GVA-Trigger-ScoutTattle]
+        [Triggers:GVA-Trigger-StandardCompromised]
+        [Triggers:GVA-Trigger-Despawn3]
+        [Triggers:GVA-Trigger-DespawnMES3]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Autopilot-DDO</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Autopilot]
+
+        [SlowDownOnWaypointApproach:true]
+        [ExtraSlowDownDistance:250]
+        [FlyLevelWithGravity:true]
+
+        [IdealMinSpeed:18]
+        [IdealMaxSpeed:70]
+        [MaxSpeedTolerance:5]
+
+        [MinimumPlanetAltitude:1000]
+        [IdealPlanetAltitude:1500]
+
+        [WaypointTolerance:50]
+
+        [WaypointWaitTimeTrigger:8]
+
+        [AllowStrafing:true]
+        [StrafeMaxDurationMs:3000]
+        [StrafeSpeedCutOff:20]
+
+        [OffsetSpaceMinDistFromTarget:600]
+        [OffsetSpaceMaxDistFromTarget:1500]
+        [OffsetPlanetMinDistFromTarget:600]
+        [OffsetPlanetMaxDistFromTarget:1500]
+        [OffsetPlanetMinTargetAltitude:200]
+        [OffsetPlanetMaxTargetAltitude:1000]
+
+        [LimitRotationSpeed:true]
+        [MaxRotationMagnitude:0.4]
+      </Description>
+    </EntityComponent>
+  </EntityComponents>
+</Definitions>

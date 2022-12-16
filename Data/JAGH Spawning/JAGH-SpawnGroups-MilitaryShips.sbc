@@ -61,5 +61,36 @@
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>
-	</SpawnGroups>
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <!--Do Not Edit-->
+        <SubtypeId>GVA-Blue-DDO</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+
+        [ManipulationProfiles:GVA-Manipulation-StdBlue]
+        [ManipulationProfiles:GVA-Manipulation-Blue-DestroyerName]
+
+        [IgnoreCleanupRules:false]
+        [ReplenishSystems:true]
+
+        [SpawnConditionsProfiles:Blue-BlueAlienRegion-DDO-Spawns]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>5.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="Valkyrie-class Frigate">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>50</Speed>
+          <Behaviour>GVA-Behavior-HybridInterdictor</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+  </SpawnGroups>
 </Definitions>

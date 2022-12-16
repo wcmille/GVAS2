@@ -53,6 +53,27 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
+        <SubtypeId>Blue-BlueAlienRegion-DDO-Spawns</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+        [SpaceCargoShip:true]
+
+        [AtmosphericCargoShip:true]
+        [SkipAirDensityCheck:true]
+
+        [GravityCargoShip:true]
+
+        [FactionOwner:JAGH]
+        [ZoneConditions:MES-ZoneConditionProfile-BlueAlienRegion]
+        [UseSandboxCounterCosts:true]
+        [SandboxCounterCostNames:BlueMilitary]
+        [SandboxCounterCostAmounts:3]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
         <SubtypeId>Black-BlueAlienRegion-Space-Spawns</SubtypeId>
       </Id>
       <Description>

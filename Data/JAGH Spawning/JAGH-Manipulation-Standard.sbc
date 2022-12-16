@@ -37,6 +37,19 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Manipulation-Blue-DestroyerName</SubtypeId>
+      </Id>
+      <Description>
+        [MES Manipulation]
+        [UseRandomNameGenerator:true]
+        [RandomGridNamePattern:DDO ExplorerNoun]
+        [RandomGridNamePrefix:[NPC] ]
+        [ReplaceAntennaNameWithRandomizedName:Main Antenna]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
         <SubtypeId>GVA-Manipulation-Blue-FrigateName</SubtypeId>
       </Id>
       <Description>
@@ -44,7 +57,7 @@
         [UseRandomNameGenerator:true]
         [RandomGridNamePattern:FFO NeutralAdjective AuthorityNoun]
         [RandomGridNamePrefix:[NPC] ]
-        [ReplaceAntennaNameWithRandomizedName:Antenna 2]
+        [ReplaceAntennaNameWithRandomizedName:Main Antenna]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
@@ -57,7 +70,7 @@
         [UseRandomNameGenerator:true]
         [RandomGridNamePattern:F2-RandomNumberRandomNumberRandomNumber]
         [RandomGridNamePrefix:[NPC] ]
-        [ReplaceAntennaNameWithRandomizedName:Antenna]
+        [ReplaceAntennaNameWithRandomizedName:Main Antenna]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
@@ -70,7 +83,7 @@
         [UseRandomNameGenerator:true]
         [RandomGridNamePattern:MNR-GoodNoun NeutralNoun]
         [RandomGridNamePrefix:[NPC] ]
-        [ReplaceAntennaNameWithRandomizedName:Antenna]
+        [ReplaceAntennaNameWithRandomizedName:Main Antenna]
       </Description>
     </EntityComponent>
   </EntityComponents>
