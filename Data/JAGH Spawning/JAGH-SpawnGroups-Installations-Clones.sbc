@@ -4,7 +4,7 @@
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
-        <SubtypeId>GVA-Blue-ProductionShip-5-Refund-PI</SubtypeId>
+        <SubtypeId>GVA-Blue-Civilian-Refinery-5</SubtypeId>
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]
@@ -15,7 +15,7 @@
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
 
-        [SpawnConditionsProfiles:Blue-BlueAlienRegion-Fixed-Civ-5-Refund-Spawns]
+        [SpawnConditionsProfiles:Blue-BlueAlienRegion-Fixed-Civ-5-Spawns]
         [PersistentConditions:Blue-Brokk]
       </Description>
       <IsPirate>true</IsPirate>
@@ -35,7 +35,7 @@
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
-        <SubtypeId>GVA-Blue-ProductionShip-10-Refund-PI</SubtypeId>
+        <SubtypeId>GVA-Blue-Civilian-Refinery-10</SubtypeId>
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]
@@ -46,7 +46,7 @@
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
 
-        [SpawnConditionsProfiles:Blue-BlueAlienRegion-Fixed-Civ-10-Refund-Spawns]
+        [SpawnConditionsProfiles:Blue-BlueAlienRegion-Fixed-Civ-10-Spawns]
         [PersistentConditions:Blue-Brokk]
       </Description>
       <IsPirate>true</IsPirate>
@@ -66,7 +66,7 @@
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
-        <SubtypeId>GVA-Blue-ProductionShip-20-Refund-PI</SubtypeId>
+        <SubtypeId>GVA-Blue-Civilian-Refinery-20</SubtypeId>
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]
@@ -77,7 +77,7 @@
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
 
-        [SpawnConditionsProfiles:Blue-BlueAlienRegion-Fixed-Civ-20-Refund-Spawns]
+        [SpawnConditionsProfiles:Blue-BlueAlienRegion-Fixed-Civ-20-Spawns]
         [PersistentConditions:Blue-Brokk]
       </Description>
       <IsPirate>true</IsPirate>
@@ -97,7 +97,7 @@
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
-        <SubtypeId>GVA-Blue-ProductionShip-40-Refund-PI</SubtypeId>
+        <SubtypeId>GVA-Blue-Civilian-Refinery-40</SubtypeId>
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]
@@ -108,7 +108,7 @@
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
 
-        [SpawnConditionsProfiles:Blue-BlueAlienRegion-Fixed-Civ-40-Refund-Spawns]
+        [SpawnConditionsProfiles:Blue-BlueAlienRegion-Fixed-Civ-40-Spawns]
         [PersistentConditions:Blue-Brokk]
       </Description>
       <IsPirate>true</IsPirate>
