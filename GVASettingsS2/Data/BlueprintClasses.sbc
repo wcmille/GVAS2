@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<BlueprintClassEntries>
+		<Entry Class="Components" BlueprintSubtypeId="ZoneChip"/>
+		<Entry Class="Components" BlueprintSubtypeId="GVK_SmallCaliber_Tech"/>
+		<Entry Class="Components" BlueprintSubtypeId="GVK_LargeCaliber_Tech"/>
+		<Entry Class="Components" BlueprintSubtypeId="GVK_Missile_Tech"/>
+		<Entry Class="Components" BlueprintSubtypeId="GVK_Laser_Tech"/>
+		<Entry Class="Components" BlueprintSubtypeId="GVK_Data_Core"/>	
+		<Entry Class="EliteTools" BlueprintSubtypeId="MedkitCraft"/>
+		<Entry Class="EliteTools" BlueprintSubtypeId="PowerkitCraft"/>
+	</BlueprintClassEntries>
+</Definitions>
