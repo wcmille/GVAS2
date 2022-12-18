@@ -45,12 +45,30 @@ namespace GVA.NPCControl.Server
 
         private void BlueClaimBlock_OnBlockOwnershipChanged(IMyCubeGrid obj)
         {
-            //MyLog.Default.WriteLine($"SATDISH: Owner Changed. {obj.CustomName}");
             var color = SharedConstants.BlueFactionColor;
             WriteOwner(color);
             var acct = GetAccountByColor(color);
             acct.Read();
             Write(acct);
+
+            var faction = MyAPIGateway.Session.Factions.TryGetFactionByTag(acct.OwningNPCTag);
+
+            var identities = new List<IMyIdentity>();
+            int defaultRep = 0;
+            MyAPIGateway.Players.GetAllIdentites(identities);
+
+            foreach (var identity in identities)
+            {
+                defaultRep = 0;
+                ulong steamId = MyAPIGateway.Players.TryGetSteamId(identity.IdentityId);
+
+                if (steamId > 0)
+                {
+                    var playerFaction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(identity.IdentityId);
+                    if (playerFaction != null && playerFaction.Tag == acct.OwningPCTag) defaultRep = SharedConstants.AlliedRep;
+                    MyAPIGateway.Session.Factions.SetReputationBetweenPlayerAndFaction(identity.IdentityId, faction.FactionId, defaultRep);
+                }
+            }
         }
 
         private void FetchClaimBlocks()

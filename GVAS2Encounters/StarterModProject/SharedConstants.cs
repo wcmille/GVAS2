@@ -16,5 +16,7 @@
         public const long tokenPrice = 20000000;
 
         public const int TimeDeltaHours = 8;
+
+        public const int AlliedRep = 1000;
     }
 }
