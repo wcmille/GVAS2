@@ -12,41 +12,57 @@ namespace GVA.NPCControl.Server
     {
         readonly Server server;
         readonly IMyCubeGrid blueClaimBlock;
-        //readonly IMyCubeGrid redClaimBlock;
+        readonly IMyCubeGrid redClaimBlock;
         readonly HashSet<IMyEntity> names = new HashSet<IMyEntity>(1);
 
         public ServerWorld(Server server)
         {
             this.server = server;
             FetchClaimBlocks();
-            var color = SharedConstants.BlueFactionColor;
-            blueClaimBlock = GetClaimBlock(color);
-            if (blueClaimBlock == null) MyLog.Default.WriteLine("SATDISH: {color} Territory Grid Not Found.");
+            blueClaimBlock = GetClaimBlockByColor(SharedConstants.BlueFactionColor);
+            redClaimBlock = GetClaimBlockByColor(SharedConstants.RedFactionColor);
+        }
+
+        private IMyCubeGrid GetClaimBlockByColor(string color)
+        {
+            var claimBlockGrid = GetClaimBlockGrid(color);
+            if (claimBlockGrid == null) MyLog.Default.WriteLine("SATDISH: {color} Territory Grid Not Found.");
             else
             {
-                WriteOwner(color);
-                blueClaimBlock.OnBlockOwnershipChanged += BlueClaimBlock_OnBlockOwnershipChanged;
+                WriteOwner(claimBlockGrid, color);
+                claimBlockGrid.OnBlockOwnershipChanged += ClaimBlock_OnBlockOwnershipChanged;
             }
+
+            return claimBlockGrid;
         }
 
         public void Dispose()
         {
-            blueClaimBlock.OnBlockOwnershipChanged -= BlueClaimBlock_OnBlockOwnershipChanged;
+            blueClaimBlock.OnBlockOwnershipChanged -= ClaimBlock_OnBlockOwnershipChanged;
+            redClaimBlock.OnBlockOwnershipChanged -= ClaimBlock_OnBlockOwnershipChanged;
         }
 
-        private void WriteOwner(string color)
+        private void WriteOwner(IMyCubeGrid claimBlockGrid, string color)
         {
-            var ownerID = blueClaimBlock.BigOwners.First();
-            var blueFaction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(ownerID);
-            var blueTag = blueFaction.Tag;
+            var ownerID = claimBlockGrid.BigOwners.First();
+            var faction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(ownerID);
+            var tag = faction.Tag;
             //MyLog.Default.WriteLineAndConsole($"SATDISH: Owners: {ownerID} {blueFaction.Name} {blueTag}");
-            MyAPIGateway.Utilities.SetVariable($"{color}{SharedConstants.OwnerStr}", blueTag);
+            MyAPIGateway.Utilities.SetVariable($"{color}{SharedConstants.OwnerStr}", tag);
         }
 
-        private void BlueClaimBlock_OnBlockOwnershipChanged(IMyCubeGrid obj)
+        private void ClaimBlock_OnBlockOwnershipChanged(IMyCubeGrid obj)
         {
-            var color = SharedConstants.BlueFactionColor;
-            WriteOwner(color);
+            string color;
+            if (obj.CustomName.Contains(SharedConstants.BlueFactionColor)) color = SharedConstants.BlueFactionColor;
+            else if (obj.CustomName.Contains(SharedConstants.RedFactionColor)) color = SharedConstants.RedFactionColor;
+            else
+            {
+                MyLog.Default.WriteLine($"SATDISH: Couldn't determine color of territory marker.");
+                return;
+            }
+
+            WriteOwner(obj, color);
             var acct = GetAccountByColor(color);
             acct.Read();
             Write(acct);
@@ -82,7 +98,7 @@ namespace GVA.NPCControl.Server
             }
         }
 
-        private IMyCubeGrid GetClaimBlock(string color)
+        private IMyCubeGrid GetClaimBlockGrid(string color)
         {
             foreach (var e in names)
             {

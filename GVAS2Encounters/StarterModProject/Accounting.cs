@@ -106,6 +106,12 @@ namespace GVA.NPCControl
             MyAPIGateway.Utilities.GetVariable($"{ColorFaction}{SharedConstants.MilitaryStr}", out mil);
             MyAPIGateway.Utilities.GetVariable($"{ColorFaction}{SharedConstants.CreditsStr}", out uu);
 
+            if (owningNPCTag == null)
+            {
+                if (ColorFaction == SharedConstants.BlueFactionColor) owningNPCTag = SharedConstants.BlueFactionTag;
+                else if (ColorFaction == SharedConstants.RedFactionColor) owningNPCTag = SharedConstants.RedFactionTag;
+            }
+
             Civilian = civ;
             Military = mil;
             UnspentUnits = uu;

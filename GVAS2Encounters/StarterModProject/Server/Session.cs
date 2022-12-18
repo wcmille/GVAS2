@@ -29,16 +29,20 @@ namespace GVA.NPCControl.Server
                 world.Time();
             }
 
-            MyLog.Default.WriteLine($"Blue Registration {mes.MESApiReady}");
+            //MyLog.Default.WriteLine($"Blue Registration {mes.MESApiReady}");
             mes.RegisterCustomSpawnCondition(true, "BlueCivMoreThan5", BlueCivMoreThan5);
             mes.RegisterCustomSpawnCondition(true, "BlueCivMoreThan10", BlueCivMoreThan10);
             mes.RegisterCustomSpawnCondition(true, "BlueCivMoreThan20", BlueCivMoreThan20);
             mes.RegisterCustomSpawnCondition(true, "BlueCivMoreThan40", BlueCivMoreThan40);
+
+            mes.RegisterCustomSpawnCondition(true, "RedCivMoreThan5", RedCivMoreThan5);
+            mes.RegisterCustomSpawnCondition(true, "RedCivMoreThan10", RedCivMoreThan10);
+            mes.RegisterCustomSpawnCondition(true, "RedCivMoreThan20", RedCivMoreThan20);
+            mes.RegisterCustomSpawnCondition(true, "RedCivMoreThan40", RedCivMoreThan40);
         }
 
         private bool BlueCivMoreThan5(string spawnGroupSubId, string SpawnConditionProfile, string typeOfSpawn, Vector3D location)
         {
-            MyLog.Default.WriteLine("Blue 5");
             int civ;
             MyAPIGateway.Utilities.GetVariable($"{SharedConstants.BlueFactionColor}{SharedConstants.CivilianStr}", out civ);
             return civ >= 5;
@@ -48,13 +52,11 @@ namespace GVA.NPCControl.Server
         {
             int civ;
             MyAPIGateway.Utilities.GetVariable($"{SharedConstants.BlueFactionColor}{SharedConstants.CivilianStr}", out civ);
-            MyLog.Default.WriteLine($"Blue 10 is {civ}");
             return civ >= 10;
         }
 
         private bool BlueCivMoreThan20(string spawnGroupSubId, string SpawnConditionProfile, string typeOfSpawn, Vector3D location)
         {
-            MyLog.Default.WriteLine("Blue 20");
             int civ;
             MyAPIGateway.Utilities.GetVariable($"{SharedConstants.BlueFactionColor}{SharedConstants.CivilianStr}", out civ);
             return civ >= 20;
@@ -62,9 +64,36 @@ namespace GVA.NPCControl.Server
 
         private bool BlueCivMoreThan40(string spawnGroupSubId, string SpawnConditionProfile, string typeOfSpawn, Vector3D location)
         {
-            MyLog.Default.WriteLine("Blue 40");
             int civ;
             MyAPIGateway.Utilities.GetVariable($"{SharedConstants.BlueFactionColor}{SharedConstants.CivilianStr}", out civ);
+            return civ >= 40;
+        }
+
+        private bool RedCivMoreThan5(string spawnGroupSubId, string SpawnConditionProfile, string typeOfSpawn, Vector3D location)
+        {
+            int civ;
+            MyAPIGateway.Utilities.GetVariable($"{SharedConstants.RedFactionColor}{SharedConstants.CivilianStr}", out civ);
+            return civ >= 5;
+        }
+
+        private bool RedCivMoreThan10(string spawnGroupSubId, string SpawnConditionProfile, string typeOfSpawn, Vector3D location)
+        {
+            int civ;
+            MyAPIGateway.Utilities.GetVariable($"{SharedConstants.RedFactionColor}{SharedConstants.CivilianStr}", out civ);
+            return civ >= 10;
+        }
+
+        private bool RedCivMoreThan20(string spawnGroupSubId, string SpawnConditionProfile, string typeOfSpawn, Vector3D location)
+        {
+            int civ;
+            MyAPIGateway.Utilities.GetVariable($"{SharedConstants.RedFactionColor}{SharedConstants.CivilianStr}", out civ);
+            return civ >= 20;
+        }
+
+        private bool RedCivMoreThan40(string spawnGroupSubId, string SpawnConditionProfile, string typeOfSpawn, Vector3D location)
+        {
+            int civ;
+            MyAPIGateway.Utilities.GetVariable($"{SharedConstants.RedFactionColor}{SharedConstants.CivilianStr}", out civ);
             return civ >= 40;
         }
 

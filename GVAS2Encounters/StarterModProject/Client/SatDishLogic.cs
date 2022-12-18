@@ -104,9 +104,9 @@ namespace GVA.NPCControl.Client
             }
         }
 
-        private Accounting AccountOwningTerritory(string myFactionTag)
+        private static Accounting AccountOwningTerritory(string pcFactionTag)
         {
-            return ClientSession.client.World.GetAccountByPCOwner(myFactionTag);
+            return ClientSession.client.World.GetAccountByPCOwner(pcFactionTag);
         }
 
         private static void AddLabel(string labelText)
@@ -122,7 +122,7 @@ namespace GVA.NPCControl.Client
         private static void AddButton(string buttonText, Action<IMyTerminalBlock> action, bool unconditional = false)
         {
             var activate = MyAPIGateway.TerminalControls.CreateControl<IMyTerminalControlButton, IMyRadioAntenna>(buttonText);
-            activate.Enabled = x => unconditional || x?.GameLogic?.GetAs<SatDishLogic>().AccountOwningTerritory(x.GetOwnerFactionTag()) != null;
+            activate.Enabled = x => unconditional || AccountOwningTerritory(x.GetOwnerFactionTag()) != null;
             activate.SupportsMultipleBlocks = false;
             activate.Visible = x => (x?.GameLogic?.GetAs<SatDishLogic>() != null);
             activate.Title = MyStringId.GetOrCompute(buttonText);
@@ -142,28 +142,29 @@ namespace GVA.NPCControl.Client
         private static void CreateControls()
         {
             //Label: Supported NPC Faction
-            var color = SharedConstants.BlueFactionColor;
+            //var color = SharedConstants.BlueFactionColor;
             AddLabel("Fleet Commands");
             AddButton("Buy NPC Unit (20M SC)", BuyCredits, true);
-            AddButton("Commission Military", x => IncreaseNPCAndNotify(x, color, SharedConstants.MilitaryStr));
-            AddButton("Commission Civilian", x => IncreaseNPCAndNotify(x, color, SharedConstants.CivilianStr));
+            AddButton("Commission Military", x => IncreaseNPCAndNotify(x, SharedConstants.MilitaryStr));
+            AddButton("Commission Civilian", x => IncreaseNPCAndNotify(x, SharedConstants.CivilianStr));
             AddSeparator("FleetCommandSeparator");
         }
 
         private static void BuyCredits(IMyTerminalBlock block)
         {
-            var owningFaction = MyAPIGateway.Session.Factions.TryGetFactionByTag(block.GetOwnerFactionTag());
+            var pcFactionTag = block.GetOwnerFactionTag();
+            var owningFaction = MyAPIGateway.Session.Factions.TryGetFactionByTag(pcFactionTag);
             if (owningFaction != null)
             {
                 long credits;
                 if (owningFaction.TryGetBalanceInfo(out credits) && credits >= SharedConstants.tokenPrice)
                 {
                     double units;
-                    var color = SharedConstants.BlueFactionColor;
-                    ClientSession.client.Send(new CommandPacket(owningFaction.Tag, color, SharedConstants.CreditsStr));
+                    var acct = AccountOwningTerritory(pcFactionTag);
+                    ClientSession.client.Send(new CommandPacket(owningFaction.Tag, acct.ColorFaction, SharedConstants.CreditsStr));
 
-                    MyAPIGateway.Utilities.GetVariable($"{color}{SharedConstants.CreditsStr}", out units);
-                    MyAPIGateway.Utilities.SetVariable($"{color}{SharedConstants.CreditsStr}", units + 1);
+                    MyAPIGateway.Utilities.GetVariable($"{acct.ColorFaction}{SharedConstants.CreditsStr}", out units);
+                    MyAPIGateway.Utilities.SetVariable($"{acct.ColorFaction}{SharedConstants.CreditsStr}", units + 1);
                     UpdateInfo(block);
                 }
                 else
@@ -177,8 +178,11 @@ namespace GVA.NPCControl.Client
             }
         }
 
-        private static void IncreaseNPCAndNotify(IMyTerminalBlock block, string factionColor, string shipType)
+        private static void IncreaseNPCAndNotify(IMyTerminalBlock block, string shipType)
         {
+            var pcFactionTag = block.GetOwnerFactionTag();
+            var acct = AccountOwningTerritory(pcFactionTag);
+            string factionColor = acct.ColorFaction;
             int amt;
             {
                 double credits;

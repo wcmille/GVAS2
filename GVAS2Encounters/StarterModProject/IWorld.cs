@@ -18,6 +18,8 @@ namespace GVA.NPCControl
         {
             var blue = new Accounting(SharedConstants.BlueFactionColor);
             list.Add(blue);
+            var red = new Accounting(SharedConstants.RedFactionColor);
+            list.Add(red);
         }
 
         public Accounting GetAccountByColor(string color)
