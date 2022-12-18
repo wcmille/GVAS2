@@ -120,6 +120,7 @@
     <Compile Include="Accounting.cs" />
     <Compile Include="CommandPacket.cs" />
     <Compile Include="IWorld.cs" />
+    <Compile Include="MESApi.cs" />
     <Compile Include="Server\Server.cs" />
     <Compile Include="Server\ServerWorld.cs" />
     <Compile Include="Server\Session.cs" />

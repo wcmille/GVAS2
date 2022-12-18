@@ -28,7 +28,7 @@
             <Z>0.0</Z>
           </Position>
           <Speed>50</Speed>
-          <Behaviour>JAGH-Behavior-Civilian-Brokk-5</Behaviour>
+          <Behaviour>JAGH-Behavior-Civilian-Brokk</Behaviour>
         </Prefab>
       </Prefabs>
     </SpawnGroup>
@@ -59,7 +59,7 @@
             <Z>0.0</Z>
           </Position>
           <Speed>50</Speed>
-          <Behaviour>JAGH-Behavior-Civilian-Brokk-10</Behaviour>
+          <Behaviour>JAGH-Behavior-Civilian-Brokk</Behaviour>
         </Prefab>
       </Prefabs>
     </SpawnGroup>
@@ -90,7 +90,7 @@
             <Z>0.0</Z>
           </Position>
           <Speed>50</Speed>
-          <Behaviour>JAGH-Behavior-Civilian-Brokk-20</Behaviour>
+          <Behaviour>JAGH-Behavior-Civilian-Brokk</Behaviour>
         </Prefab>
       </Prefabs>
     </SpawnGroup>
@@ -121,7 +121,7 @@
             <Z>0.0</Z>
           </Position>
           <Speed>50</Speed>
-          <Behaviour>JAGH-Behavior-Civilian-Brokk-40</Behaviour>
+          <Behaviour>JAGH-Behavior-Civilian-Brokk</Behaviour>
         </Prefab>
       </Prefabs>
     </SpawnGroup>

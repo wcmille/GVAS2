@@ -51,7 +51,8 @@
         [PlanetaryInstallation:true]
         [UseSandboxCounterCosts:true]
         [SandboxCounterCostNames:BlueCivilian]
-        [SandboxCounterCostAmounts:5]
+        [SandboxCounterCostAmounts:2]
+        [CustomApiConditions:BlueCivMoreThan5]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
@@ -66,7 +67,8 @@
         [PlanetaryInstallation:true]
         [UseSandboxCounterCosts:true]
         [SandboxCounterCostNames:BlueCivilian]
-        [SandboxCounterCostAmounts:10]
+        [SandboxCounterCostAmounts:2]
+        [CustomApiConditions:BlueCivMoreThan10]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
@@ -81,7 +83,8 @@
         [PlanetaryInstallation:true]
         [UseSandboxCounterCosts:true]
         [SandboxCounterCostNames:BlueCivilian]
-        [SandboxCounterCostAmounts:20]
+        [SandboxCounterCostAmounts:2]
+        [CustomApiConditions:BlueCivMoreThan20]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
@@ -96,7 +99,8 @@
         [PlanetaryInstallation:true]
         [UseSandboxCounterCosts:true]
         [SandboxCounterCostNames:BlueCivilian]
-        [SandboxCounterCostAmounts:40]
+        [SandboxCounterCostAmounts:2]
+        [CustomApiConditions:BlueCivMoreThan40]
       </Description>
     </EntityComponent>
   </EntityComponents>
