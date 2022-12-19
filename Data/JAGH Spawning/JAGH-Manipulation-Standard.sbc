@@ -28,6 +28,9 @@
         [BlockReplacerProfileNames:MES-NpcThrusters-Hydro]
         [BlockReplacerProfileNames:MES-NpcThrusters-Atmo]
 
+        [UseLootProfiles:true]
+        [LootProfiles:GVA-Loot-Small]
+
         [ConfigureSpecialNpcThrusters:true]
         [NpcAtmoThrustForceMultiply:1.4]
         [NpcHydroThrustForceMultiply:2]
