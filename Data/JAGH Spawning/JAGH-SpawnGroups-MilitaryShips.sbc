@@ -50,7 +50,7 @@
 			<IsPirate>true</IsPirate>
 			<Frequency>5.0</Frequency>
 			<Prefabs>
-				<Prefab SubtypeId="Fenrir-class Interdictor - Vanilla">
+				<Prefab SubtypeId="Fenrir-class Interdictor">
 					<Position>
 						<X>0.0</X>
 						<Y>0.0</Y>
@@ -81,7 +81,7 @@
       <IsPirate>true</IsPirate>
       <Frequency>5.0</Frequency>
       <Prefabs>
-        <Prefab SubtypeId="Valkyrie-class Frigate">
+        <Prefab SubtypeId="Valkyrie-class Destroyer">
           <Position>
             <X>0.0</X>
             <Y>0.0</Y>
