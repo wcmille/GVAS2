@@ -11,8 +11,8 @@ namespace GVA.NPCControl.Server
     public class ServerWorld : SharedWorld, IDisposable
     {
         readonly Server server;
-        readonly IMyCubeGrid blueClaimBlock;
-        readonly IMyCubeGrid redClaimBlock;
+        IMyCubeGrid blueClaimBlock;
+        IMyCubeGrid redClaimBlock;
         readonly HashSet<IMyEntity> names = new HashSet<IMyEntity>(1);
 
         public ServerWorld(Server server)
@@ -38,8 +38,16 @@ namespace GVA.NPCControl.Server
 
         public void Dispose()
         {
-            blueClaimBlock.OnBlockOwnershipChanged -= ClaimBlock_OnBlockOwnershipChanged;
-            redClaimBlock.OnBlockOwnershipChanged -= ClaimBlock_OnBlockOwnershipChanged;
+            if (blueClaimBlock != null)
+            {
+                blueClaimBlock.OnBlockOwnershipChanged -= ClaimBlock_OnBlockOwnershipChanged;
+                blueClaimBlock = null;
+            }
+            if (redClaimBlock != null)
+            {
+                redClaimBlock.OnBlockOwnershipChanged -= ClaimBlock_OnBlockOwnershipChanged;
+                redClaimBlock = null;
+            }
         }
 
         private void WriteOwner(IMyCubeGrid claimBlockGrid, string color)
