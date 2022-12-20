@@ -9,13 +9,14 @@
 			<Description>
         [Modular Encounters SpawnGroup]
 
-				[ManipulationProfiles:GVA-Manipulation-StdRed]
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
         [ManipulationProfiles:GVA-Manipulation-Red-FrigateName]
 
-				[IgnoreCleanupRules:false]
+        [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
 
-				[SpawnConditionsProfiles:Red-RedAlienRegion-FFO-Spawns]
+        [SpawnConditionsProfiles:Red-RedAlienRegion-FFO-Spawns]
       </Description>
 			<IsPirate>true</IsPirate>
 			<Frequency>5.0</Frequency>

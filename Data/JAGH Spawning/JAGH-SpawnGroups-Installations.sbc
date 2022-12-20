@@ -9,7 +9,8 @@
       <Description>
         [Modular Encounters SpawnGroup]
 
-        [ManipulationProfiles:GVA-Manipulation-StdBlue]
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ManipulationProfiles:GVA-JAGH-Manipulation-Std]
         [ManipulationProfiles:GVA-Manipulation-Blue-ProductionName]
 
         [IgnoreCleanupRules:false]
@@ -41,7 +42,8 @@
       <Description>
         [Modular Encounters SpawnGroup]
 
-        [ManipulationProfiles:GVA-Manipulation-StdBlue]
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ManipulationProfiles:GVA-JAGH-Manipulation-Std]
 
         [IgnoreCleanupRules:false]
 

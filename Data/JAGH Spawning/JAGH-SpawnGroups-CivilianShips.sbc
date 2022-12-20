@@ -9,7 +9,8 @@
       <Description>
         [Modular Encounters SpawnGroup]
 
-        [ManipulationProfiles:GVA-Manipulation-StdBlue]
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ManipulationProfiles:GVA-JAGH-Manipulation-Std]
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
         [SpawnConditionsProfiles:Blue-BlueAlienRegion-Default-Spawns]
@@ -35,8 +36,9 @@
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]
-        
-        [ManipulationProfiles:GVA-Manipulation-StdBlue]
+
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ManipulationProfiles:GVA-JAGH-Manipulation-Std]
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
         [SpawnConditionsProfiles:Blue-BlueAlienRegion-Default-Spawns]
