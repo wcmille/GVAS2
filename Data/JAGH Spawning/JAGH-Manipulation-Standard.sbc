@@ -20,21 +20,18 @@
         [ShiftBlockColorsHue:false]
         [RandomHueShift:false]
 
-        [ChangeTurretSettings:true]
-        [TurretRange:2000]
-
         [UseBlockReplacerProfile:true]
         [IgnoreGlobalBlockReplacer:true]
         [BlockReplacerProfileNames:MES-NpcThrusters-Hydro]
         [BlockReplacerProfileNames:MES-NpcThrusters-Atmo]
 
-        [UseLootProfiles:true]
-        [LootProfiles:GVA-Loot-Small]
-
         [ConfigureSpecialNpcThrusters:true]
         [NpcAtmoThrustForceMultiply:1.4]
         [NpcHydroThrustForceMultiply:2]
         [NpcHydroThrustPowerMultiply:0.0001]
+
+        [UseLootProfiles:true]
+        [LootProfiles:GVA-Loot-Small]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">

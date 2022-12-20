@@ -8,12 +8,12 @@
 			</Id>
 			<Description>
         [Modular Encounters SpawnGroup]
-        [UseRivalAi:true]
-        [RivalAiReplaceRemoteControl:true]
         [ManipulationProfiles:GVA-Manipulation-Std]
         [ManipulationProfiles:GVA-Manipulation-Black-FrigateName]
+        
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
+        
         [SpawnConditionsProfiles:Black-BlueAlienRegion-Space-Spawns]
         [FactionOwner:SPRT]
       </Description>
