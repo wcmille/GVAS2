@@ -4,7 +4,7 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
           <TypeId>Inventory</TypeId>
-          <SubtypeId>GVA-Trigger-Despawn3</SubtypeId>
+          <SubtypeId>GVA-JAGH-Trigger-Despawn3</SubtypeId>
       </Id>
       <Description>
         [RivalAI Trigger]
@@ -33,7 +33,7 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-Trigger-DespawnMES3</SubtypeId>
+        <SubtypeId>GVA-JAGH-Trigger-DespawnMES3</SubtypeId>
       </Id>
       <Description>
         [RivalAI Trigger]

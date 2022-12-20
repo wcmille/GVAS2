@@ -19,8 +19,8 @@
 
         [Triggers:GVA-Trigger-ScoutTattle]
         [Triggers:GVA-Trigger-StandardCompromised]
-        [Triggers:GVA-Trigger-Despawn3]
-        [Triggers:GVA-Trigger-DespawnMES3]
+        [Triggers:GVA-JAGH-Trigger-Despawn3]
+        [Triggers:GVA-JAGH-Trigger-DespawnMES3]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">

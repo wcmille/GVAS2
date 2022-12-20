@@ -60,8 +60,8 @@
         [CollisionEvasionResumeTime:10]
 
         [Triggers:GVA-Trigger-ScoutTattle]
-        [Triggers:GVA-Trigger-Despawn-Civ-2]
-        [Triggers:GVA-Trigger-DespawnMES-Civ-2]
+        [Triggers:GVA-JAGH-Trigger-Despawn-Civ-2]
+        [Triggers:GVA-JAGH-Trigger-DespawnMES-Civ-2]
       </Description>
     </EntityComponent>
   </EntityComponents>
