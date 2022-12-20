@@ -5,7 +5,7 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-Behavior-HybridInterdictor</SubtypeId>
+        <SubtypeId>GVA-Behavior-DDO</SubtypeId>
       </Id>
       <Description>
         [RivalAI Behavior]

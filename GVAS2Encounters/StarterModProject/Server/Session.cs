@@ -99,10 +99,16 @@ namespace GVA.NPCControl.Server
 
         protected override void UnloadData()
         {
-            //mes.RegisterCustomSpawnCondition(false, "BlueCivMoreThan5", BlueCivMoreThan5);
-            //mes.RegisterCustomSpawnCondition(false, "BlueCivMoreThan10", BlueCivMoreThan10);
-            //mes.RegisterCustomSpawnCondition(false, "BlueCivMoreThan20", BlueCivMoreThan20);
-            //mes.RegisterCustomSpawnCondition(false, "BlueCivMoreThan40", BlueCivMoreThan40);
+            mes.RegisterCustomSpawnCondition(false, "BlueCivMoreThan5", BlueCivMoreThan5);
+            mes.RegisterCustomSpawnCondition(false, "BlueCivMoreThan10", BlueCivMoreThan10);
+            mes.RegisterCustomSpawnCondition(false, "BlueCivMoreThan20", BlueCivMoreThan20);
+            mes.RegisterCustomSpawnCondition(false, "BlueCivMoreThan40", BlueCivMoreThan40);
+
+            mes.RegisterCustomSpawnCondition(false, "RedCivMoreThan5", RedCivMoreThan5);
+            mes.RegisterCustomSpawnCondition(false, "RedCivMoreThan10", RedCivMoreThan10);
+            mes.RegisterCustomSpawnCondition(false, "RedCivMoreThan20", RedCivMoreThan20);
+            mes.RegisterCustomSpawnCondition(false, "RedCivMoreThan40", RedCivMoreThan40);
+
             if (server != null) server.Unload();
         }
     }
