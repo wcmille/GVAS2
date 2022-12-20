@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Common-Weapons-FFO</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Weapons]
+        
+        [UseProjectileLeadPrediction:true]
+        [UseBarrageFire:true]
+        [UseTurrets:false]
+        [UseStaticGuns:true]
+      </Description>
+    </EntityComponent>
+   </EntityComponents>
+</Definitions>

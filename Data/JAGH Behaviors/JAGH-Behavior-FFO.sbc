@@ -10,12 +10,12 @@
       <Description>
         [RivalAI Behavior]
         [BehaviorName:HorseFighter]
-        [AutopilotData:GVA-Autopilot-FFO]
+        [AutopilotData:GVA-JAGH-Autopilot-FFO]
 
         [TargetData:Common-Target-Main-A]
         [OverrideTargetData:Common-Target-Main-A]
         
-        [WeaponSystem:GVA-Weapons-FFO]
+        [WeaponSystem:GVA-Common-Weapons-FFO]
 
         [Triggers:GVA-Trigger-ScoutTattle]
         [Triggers:GVA-Trigger-StandardCompromised]
@@ -26,21 +26,7 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-Weapons-FFO</SubtypeId>
-      </Id>
-      <Description>
-        [RivalAI Weapons]
-        
-        [UseProjectileLeadPrediction:true]
-        [UseBarrageFire:true]
-        [UseTurrets:false]
-        [UseStaticGuns:true]
-      </Description>
-    </EntityComponent>
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
-        <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-Autopilot-FFO</SubtypeId>
+        <SubtypeId>GVA-JAGH-Autopilot-FFO</SubtypeId>
       </Id>
       <Description>
         [RivalAI Autopilot]

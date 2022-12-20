@@ -26,29 +26,12 @@
         [IncreaseSandboxCountersAmount:1]
         
         [UseChatBroadcast:true]
-        [ChatData:GVA-JAGH-Chat-DespawnChat]
+        [ChatData:GVA-Common-Chat-DespawnChat]
       </Description>
     </EntityComponent>
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
-        <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-JAGH-Chat-DespawnChat</SubtypeId>
-      </Id>
-      <Description>
-        [RivalAI Chat]
-
-        [UseChat:true]
-        [StartsReady:true]
-        [MaxChats:50]
-        [BroadcastRandomly:true]
-        [Author:RivalAI]
-        [Color:Yellow]
-        [Chance:100]
-        [ChatMessages:{GridName} Despawned.]
-        [BroadcastChatType:Chat]
-        [SendToAllOnlinePlayers:true]
-      </Description>
-    </EntityComponent>
+    
+    
+    
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
@@ -72,29 +55,9 @@
         [RivalAI Action]
         [IncreaseSandboxCounters:BlueMilitary]
         [IncreaseSandboxCountersAmount:1]
-        
-        [UseChatBroadcast:true]
-        [ChatData:GVA-JAGH-Chat-DespawnChatMES]
-      </Description>
-    </EntityComponent>
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
-        <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-JAGH-Chat-DespawnChatMES</SubtypeId>
-      </Id>
-      <Description>
-        [RivalAI Chat]
 
-        [UseChat:true]
-        [StartsReady:true]
-        [MaxChats:50]
-        [BroadcastRandomly:true]
-        [Author:MES]
-        [Color:Green]
-        [Chance:100]
-        [ChatMessages:{GridName} despawned MES.]
-        [BroadcastChatType:Chat]
-        [SendToAllOnlinePlayers:true]
+        [UseChatBroadcast:true]
+        [ChatData:GVA-Common-Chat-DespawnChatMES]
       </Description>
     </EntityComponent>
   </EntityComponents>

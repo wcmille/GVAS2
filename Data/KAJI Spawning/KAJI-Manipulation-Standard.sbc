@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Manipulation-StdRed</SubtypeId>
+      </Id>
+      <Description>
+        [MES Manipulation]
+
+        [UseRivalAi:true]
+        [RivalAiReplaceRemoteControl:true]
+
+        [OverrideBlockDamageModifier:false]
+        [BlockDamageModifier:100]
+        [GridsAreDestructable:true]
+        [GridsAreEditable:true]
+
+        [ShiftBlockColorsHue:false]
+        [RandomHueShift:false]
+
+        [UseBlockReplacerProfile:true]
+        [IgnoreGlobalBlockReplacer:true]
+        [BlockReplacerProfileNames:MES-NpcThrusters-Hydro]
+        [BlockReplacerProfileNames:MES-NpcThrusters-Atmo]
+
+        [ConfigureSpecialNpcThrusters:true]
+        [NpcAtmoThrustForceMultiply:1.4]
+        [NpcHydroThrustForceMultiply:2]
+        [NpcHydroThrustPowerMultiply:0.0001]
+
+        [UseLootProfiles:true]
+        [LootProfiles:GVA-Loot-Small]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Manipulation-Red-DestroyerName</SubtypeId>
+      </Id>
+      <Description>
+        [MES Manipulation]
+        [UseRandomNameGenerator:true]
+        [RandomGridNamePattern:DDO GoodNoun]
+        [RandomGridNamePrefix:[NPC] ]
+        [ReplaceAntennaNameWithRandomizedName:Main Antenna]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Manipulation-Red-FrigateName</SubtypeId>
+      </Id>
+      <Description>
+        [MES Manipulation]
+        [UseRandomNameGenerator:true]
+        [RandomGridNamePattern:FFO FishNoun GreekLetter]
+        [RandomGridNamePrefix:[NPC] ]
+        [ReplaceAntennaNameWithRandomizedName:Main Antenna]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Manipulation-Red-InterceptorName</SubtypeId>
+      </Id>
+      <Description>
+        [MES Manipulation]
+        [UseRandomNameGenerator:true]
+        [RandomGridNamePattern:Mi41-RandomColorRandomNumber]
+        [RandomGridNamePrefix:[NPC] ]
+        [ReplaceAntennaNameWithRandomizedName:Main Antenna]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Manipulation-Red-ProductionName</SubtypeId>
+      </Id>
+      <Description>
+        [MES Manipulation]
+        [UseRandomNameGenerator:true]
+        [RandomGridNamePattern:MNR-GoodNoun AnimalNoun]
+        [RandomGridNamePrefix:[NPC] ]
+        [ReplaceAntennaNameWithRandomizedName:Main Antenna]
+      </Description>
+    </EntityComponent>
+  </EntityComponents>
+</Definitions>

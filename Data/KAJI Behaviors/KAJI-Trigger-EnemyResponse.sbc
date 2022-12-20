@@ -5,7 +5,7 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
           <TypeId>Inventory</TypeId>
-          <SubtypeId>GVA-Trigger-ScoutTattle</SubtypeId>
+          <SubtypeId>GVA-KAJI-Trigger-EnemyResponse</SubtypeId>
       </Id>
       <Description>
         [RivalAI Trigger]
@@ -15,21 +15,21 @@
         [MaxCooldownMs:900000]       
         [StartsReady:false]
         [MaxActions:1]
-        [Actions:GVA-JAGH-Action-CallReinforcements]
+        [Actions:GVA-KAJI-Action-CallReinforcements]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-JAGH-Action-CallReinforcements</SubtypeId>
+        <SubtypeId>GVA-KAJI-Action-CallReinforcements</SubtypeId>
       </Id>
       <Description>
         [RivalAI Action]
         [SpawnEncounter:true]
-        [Spawner:GVA-JAGH-Spawn-CallReinforcements-Hybrid]
+        [Spawner:GVA-KAJI-Spawn-CallReinforcements]
 
         [UseChatBroadcast:true]
-        [ChatData:GVA-JAGH-Chat-CallReinforcements]
+        [ChatData:GVA-KAJI-Chat-CallReinforcements]
 
         [CreateKnownPlayerArea:true]
         [KnownPlayerAreaRadius:8000]
@@ -39,7 +39,7 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-JAGH-Spawn-CallReinforcements-Hybrid</SubtypeId>
+        <SubtypeId>GVA-KAJI-Spawn-CallReinforcements</SubtypeId>
       </Id>
       <Description>
         [RivalAI Spawn]
@@ -50,13 +50,13 @@
         [StartsReady:true]
         [MaxSpawns:1]
 
-        [SpawnGroups:GVA-Blue-FFO]
+        [SpawnGroups:GVA-Red-FFO]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-JAGH-Chat-CallReinforcements</SubtypeId>
+        <SubtypeId>GVA-KAJI-Chat-CallReinforcements</SubtypeId>
       </Id>
       <Description>
         [RivalAI Chat]
@@ -68,13 +68,7 @@
         [Author:{AntennaName}]
         [Color:Red]
 
-        [ChatMessages:Enemy hostiles. Request reinforcements.]
-        [BroadcastChatType:Chat]
-
-        [ChatMessages:Tangos in our AO. Sending their location.]
-        [BroadcastChatType:Chat]
-
-        [ChatMessages:Confirmed enemies. Need assistance.]
+        [ChatMessages:Enemy located. Move in.]
         [BroadcastChatType:Chat]
       </Description>
     </EntityComponent>

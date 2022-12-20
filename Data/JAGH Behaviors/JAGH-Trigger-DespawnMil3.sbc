@@ -26,7 +26,7 @@
         [IncreaseSandboxCountersAmount:3]
         
         [UseChatBroadcast:true]
-        [ChatData:GVA-JAGH-Chat-DespawnChat]
+        [ChatData:GVA-Common-Chat-DespawnChat]
       </Description>
     </EntityComponent>
 
@@ -53,9 +53,9 @@
         [RivalAI Action]
         [IncreaseSandboxCounters:BlueMilitary]
         [IncreaseSandboxCountersAmount:3]
-        
+
         [UseChatBroadcast:true]
-        [ChatData:GVA-JAGH-Chat-DespawnChatMES]
+        [ChatData:GVA-Common-Chat-DespawnChatMES]
       </Description>
     </EntityComponent>
   </EntityComponents>

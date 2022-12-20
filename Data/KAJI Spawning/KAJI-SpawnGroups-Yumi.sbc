@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<SpawnGroups>
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>GVA-Red-FFO</SubtypeId> 
+			</Id>
+			<Description>
+        [Modular Encounters SpawnGroup]
+
+				[ManipulationProfiles:GVA-Manipulation-StdRed]
+        [ManipulationProfiles:GVA-Manipulation-Red-FrigateName]
+
+				[IgnoreCleanupRules:false]
+        [ReplenishSystems:true]
+
+				[SpawnConditionsProfiles:Red-RedAlienRegion-FFO-Spawns]
+      </Description>
+			<IsPirate>true</IsPirate>
+			<Frequency>5.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="Yumi-class Frigate">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>50</Speed>
+					<Behaviour>GVA-KAJI-Behavior-Yumi</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+  </SpawnGroups>
+</Definitions>

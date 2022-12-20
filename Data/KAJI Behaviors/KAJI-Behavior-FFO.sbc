@@ -5,28 +5,28 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-Behavior-HybridInterdictor</SubtypeId>
+        <SubtypeId>GVA-KAJI-Behavior-Yumi</SubtypeId>
       </Id>
       <Description>
         [RivalAI Behavior]
         [BehaviorName:HorseFighter]
-        [AutopilotData:GVA-Autopilot-DDO]
+        [AutopilotData:GVA-KAJI-Autopilot-FFO]
 
         [TargetData:Common-Target-Main-A]
         [OverrideTargetData:Common-Target-Main-A]
         
         [WeaponSystem:GVA-Common-Weapons-FFO]
 
-        [Triggers:GVA-Trigger-ScoutTattle]
+        [Triggers:GVA-KAJI-Trigger-EnemyResponse]
         [Triggers:GVA-Trigger-StandardCompromised]
-        [Triggers:GVA-Trigger-Despawn3]
-        [Triggers:GVA-Trigger-DespawnMES3]
+        [Triggers:GVA-Red-Trigger-Despawn]
+        [Triggers:GVA-Red-Trigger-DespawnMES]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-Autopilot-DDO</SubtypeId>
+        <SubtypeId>GVA-KAJI-Autopilot-FFO</SubtypeId>
       </Id>
       <Description>
         [RivalAI Autopilot]
@@ -39,8 +39,8 @@
         [IdealMaxSpeed:70]
         [MaxSpeedTolerance:5]
 
-        [MinimumPlanetAltitude:1000]
-        [IdealPlanetAltitude:1500]
+        [MinimumPlanetAltitude:500]
+        [IdealPlanetAltitude:600]
 
         [WaypointTolerance:50]
 
@@ -50,12 +50,12 @@
         [StrafeMaxDurationMs:3000]
         [StrafeSpeedCutOff:20]
 
-        [OffsetSpaceMinDistFromTarget:600]
-        [OffsetSpaceMaxDistFromTarget:1500]
-        [OffsetPlanetMinDistFromTarget:600]
-        [OffsetPlanetMaxDistFromTarget:1500]
-        [OffsetPlanetMinTargetAltitude:200]
-        [OffsetPlanetMaxTargetAltitude:1000]
+        [OffsetSpaceMinDistFromTarget:300]
+        [OffsetSpaceMaxDistFromTarget:600]
+        [OffsetPlanetMinDistFromTarget:300]
+        [OffsetPlanetMaxDistFromTarget:600]
+        [OffsetPlanetMinTargetAltitude:500]
+        [OffsetPlanetMaxTargetAltitude:600]
 
         [LimitRotationSpeed:true]
         [MaxRotationMagnitude:0.4]
