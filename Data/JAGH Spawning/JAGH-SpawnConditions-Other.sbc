@@ -9,7 +9,7 @@
       <Description>
         [MES Spawn Conditions]
         [FactionOwner:JAGH]
-        [ZoneConditions:MES-ZoneConditionProfile-BlueAlienRegion]
+        [ZoneConditions:GVA-ZoneConditionProfile-BlueAlienRegion]
         [AtmosphericCargoShip:true]
         [CustomPathStartAltitude:1000]
         [CustomPathEndAltitude:1000]
@@ -23,7 +23,7 @@
       <Description>
         [MES Spawn Conditions]
         [FactionOwner:JAGH]
-        [ZoneConditions:MES-ZoneConditionProfile-BlueAlienRegion]
+        [ZoneConditions:GVA-ZoneConditionProfile-BlueAlienRegion]
         [AtmosphericCargoShip:true]
         [GravityCargoShip:true]
         [SkipAirDensityCheck:true]
@@ -44,7 +44,7 @@
         [GravityCargoShip:true]
 
         [FactionOwner:JAGH]
-        [ZoneConditions:MES-ZoneConditionProfile-BlueAlienRegion]
+        [ZoneConditions:GVA-ZoneConditionProfile-BlueAlienRegion]
         [UseSandboxCounterCosts:true]
         [SandboxCounterCostNames:BlueMilitary]
         [SandboxCounterCostAmounts:1]
@@ -65,7 +65,7 @@
         [GravityCargoShip:true]
 
         [FactionOwner:JAGH]
-        [ZoneConditions:MES-ZoneConditionProfile-BlueAlienRegion]
+        [ZoneConditions:GVA-ZoneConditionProfile-BlueAlienRegion]
         [UseSandboxCounterCosts:true]
         [SandboxCounterCostNames:BlueMilitary]
         [SandboxCounterCostAmounts:3]

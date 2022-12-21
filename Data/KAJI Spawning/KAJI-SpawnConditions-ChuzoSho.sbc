@@ -11,7 +11,7 @@
         [PlanetaryInstallation:true]
 
         [FactionOwner:KAJI]
-        [ZoneConditions:MES-ZoneConditionProfile-RedAlienRegion]
+        [ZoneConditions:GVA-ZoneConditionProfile-RedAlienRegion]
 
         [UseSandboxCounterCosts:true]
         [SandboxCounterCostNames:RedCivilian]

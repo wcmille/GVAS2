@@ -16,7 +16,7 @@
         [GravityCargoShip:true]
 
         [FactionOwner:KAJI]
-        [ZoneConditions:MES-ZoneConditionProfile-RedAlienRegion]
+        [ZoneConditions:GVA-ZoneConditionProfile-RedAlienRegion]
       </Description>
     </EntityComponent>
   </EntityComponents>

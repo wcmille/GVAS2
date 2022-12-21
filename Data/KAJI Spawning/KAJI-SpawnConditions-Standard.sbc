@@ -9,7 +9,7 @@
       <Description>
         [MES Spawn Conditions]
         [FactionOwner:KAJI]
-        [ZoneConditions:MES-ZoneConditionProfile-BlueAlienRegion]
+        [ZoneConditions:GVA-ZoneConditionProfile-BlueAlienRegion]
         [PlanetaryInstallation:true]
       </Description>
     </EntityComponent>
