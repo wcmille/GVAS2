@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Red-RedAlienRegion-Interceptor-Spawns</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+        [SpaceCargoShip:true]
+
+        [AtmosphericCargoShip:true]
+        [SkipAirDensityCheck:true]
+
+        [GravityCargoShip:true]
+
+        [FactionOwner:KAJI]
+        [ZoneConditions:MES-ZoneConditionProfile-RedAlienRegion]
+      </Description>
+    </EntityComponent>
+  </EntityComponents>
+</Definitions>

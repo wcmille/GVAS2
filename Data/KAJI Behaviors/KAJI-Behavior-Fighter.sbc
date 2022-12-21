@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-KAJI-Behavior-Kunai</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Behavior]
+        [BehaviorName:Horsefly]
+        [AutopilotData:GVA-Autopilot-Scout]
+
+        [TargetData:Common-Target-Main-A]
+        [OverrideTargetData:Common-Target-Main-A]
+
+        [WeaponSystem:GVA-Common-Weapons-FFO]
+
+        [Triggers:GVA-KAJI-Trigger-EnemyResponse]
+        [Triggers:GVA-Trigger-StandardCompromised]
+        [Triggers:GVA-Red-Trigger-Despawn]
+        [Triggers:GVA-Red-Trigger-DespawnMES]
+      </Description>
+    </EntityComponent>
+  </EntityComponents>
+</Definitions>

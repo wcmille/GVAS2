@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Trigger-ScoutToFighter</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Trigger]
+        [UseTrigger:true]
+        [Type:TargetNear]
+        [TargetDistance:800]
+        [MinCooldownMs:1000]
+        [MaxCooldownMs:3000]
+        [StartsReady:true]
+        [MaxActions:1]
+        [Actions:GVA-Action-ScoutToFighter]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Action-ScoutToFighter</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Action]
+        [ChangeBehaviorSubclass:true]
+        [NewBehaviorSubclass:Fighter]
+      </Description>
+    </EntityComponent>
+  </EntityComponents>
+</Definitions>

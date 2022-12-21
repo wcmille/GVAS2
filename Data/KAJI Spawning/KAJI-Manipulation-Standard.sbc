@@ -42,12 +42,12 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-Manipulation-Red-InterceptorName</SubtypeId>
+        <SubtypeId>GVA-Manipulation-Red-FighterName</SubtypeId>
       </Id>
       <Description>
         [MES Manipulation]
         [UseRandomNameGenerator:true]
-        [RandomGridNamePattern:Mi41-RandomColorRandomNumber]
+        [RandomGridNamePattern:Mi41-ColorAdjective RandomNumber]
         [RandomGridNamePrefix:[NPC] ]
         [ReplaceAntennaNameWithRandomizedName:Main Antenna]
       </Description>
