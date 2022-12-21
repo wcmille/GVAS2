@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SpawnGroups>
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <SubtypeId>GVA-Red-CivilianScene00-PI</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
+
+        [IgnoreCleanupRules:false]
+
+        [SpawnConditionsProfiles:Red-RedAlienRegion-Fixed-Spawns]
+        [UseTerrainTypeValidation:true]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>49.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="Survival Shelter">
+          <Position>
+            <X>0.0</X>
+            <Y>10.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Behaviour>GVA-Behavior-PassiveCivilian</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+  </SpawnGroups>
+</Definitions>

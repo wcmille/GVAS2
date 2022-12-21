@@ -53,10 +53,10 @@
       <IsPirate>true</IsPirate>
       <Frequency>49.0</Frequency>
       <Prefabs>
-        <Prefab SubtypeId="[NPC] Buried Beacon">
+        <Prefab SubtypeId="Survival Shelter">
           <Position>
             <X>0.0</X>
-            <Y>-30.0</Y>
+            <Y>10.0</Y>
             <Z>0.0</Z>
           </Position>
           <Behaviour>GVA-Behavior-PassiveCivilian</Behaviour>

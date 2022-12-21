@@ -25,7 +25,7 @@
 				<Prefab SubtypeId="Chuzo-sho Mobile Refinery">
 					<Position>
 						<X>0.0</X>
-						<Y>15.0</Y>
+						<Y>-5.0</Y>
 						<Z>0.0</Z>
 					</Position>
 					<Behaviour>KAJI-Behavior-Fixed-Civ1</Behaviour>
