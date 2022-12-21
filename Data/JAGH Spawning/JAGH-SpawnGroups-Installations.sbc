@@ -43,7 +43,7 @@
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ManipulationProfiles:GVA-JAGH-Manipulation-Std]
-
+        [ManipulationProfiles:GVA-Common-Manipulation-NPCPrefix]
         [IgnoreCleanupRules:false]
 
         [SpawnConditionsProfiles:Blue-BlueAlienRegion-Fixed-Spawns]

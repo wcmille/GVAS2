@@ -11,6 +11,7 @@
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
+        [ManipulationProfiles:GVA-Common-Manipulation-NPCPrefix]
 
         [IgnoreCleanupRules:false]
 

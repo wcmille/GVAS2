@@ -71,17 +71,5 @@
         [SandboxCounterCostAmounts:3]
       </Description>
     </EntityComponent>
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
-        <TypeId>Inventory</TypeId>
-        <SubtypeId>Black-BlueAlienRegion-Space-Spawns</SubtypeId>
-      </Id>
-      <Description>
-        [MES Spawn Conditions]
-        [FactionOwner:SPRT]
-        [ZoneConditions:MES-ZoneConditionProfile-BlueAlienRegionSpace]
-        [SpaceCargoShip:true]
-      </Description>
-    </EntityComponent>
   </EntityComponents>
 </Definitions>

@@ -31,5 +31,17 @@
         [NpcHydroThrustPowerMultiply:0.0001]
       </Description>
     </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Common-Manipulation-NPCPrefix</SubtypeId>
+      </Id>
+      <Description>
+        [MES Manipulation]
+        [RandomGridNamePrefix:[NPC] ]
+        [ReplaceAntennaNameWithRandomizedName:Main Antenna]
+      </Description>
+    </EntityComponent>
   </EntityComponents>
 </Definitions>

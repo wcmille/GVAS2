@@ -4,14 +4,40 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Manipulation-Black-FighterName</SubtypeId>
+      </Id>
+      <Description>
+        [MES Manipulation]
+        [UseRandomNameGenerator:true]
+        [RandomGridNamePattern:InsectNoun RandomCharRandomChar]
+        [RandomGridNamePrefix:[NPC] ]
+        [ReplaceAntennaNameWithRandomizedName:Main Antenna]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
         <SubtypeId>GVA-Manipulation-Black-FrigateName</SubtypeId>
       </Id>
       <Description>
         [MES Manipulation]
         [UseRandomNameGenerator:true]
-        [RandomGridNamePattern:DD ColorAdjective BaddieNoun]
+        [RandomGridNamePattern:FF ColorAdjective BaddieNoun]
         [RandomGridNamePrefix:[NPC] ]
-        [ReplaceAntennaNameWithRandomizedName:Antenna]
+        [ReplaceAntennaNameWithRandomizedName:Main Antenna]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Manipulation-Black-DestroyerName</SubtypeId>
+      </Id>
+      <Description>
+        [MES Manipulation]
+        [UseRandomNameGenerator:true]
+        [RandomGridNamePattern:DD BadAdjective]
+        [RandomGridNamePrefix:[NPC] ]
+        [ReplaceAntennaNameWithRandomizedName:Main Antenna]
       </Description>
     </EntityComponent>
   </EntityComponents>
