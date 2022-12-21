@@ -13,6 +13,10 @@ namespace GVA.NPCControl.Server
         private ServerWorld world = null;
         MESApi mes = null;
 
+        //delegate bool CustomMESCondition(string spawnGroupSubId, string SpawnConditionProfile, string typeOfSpawn, Vector3D location);
+        System.Func<string, string, string, Vector3D, bool> bc5, bc10, bc20, bc40;
+        System.Func<string, string, string, Vector3D, bool> rc5, rc10, rc20, rc40;
+
         public override void LoadData()
         {
             base.LoadData();
@@ -30,84 +34,43 @@ namespace GVA.NPCControl.Server
             }
 
             //MyLog.Default.WriteLine($"Blue Registration {mes.MESApiReady}");
-            mes.RegisterCustomSpawnCondition(true, "BlueCivMoreThan5", BlueCivMoreThan5);
-            mes.RegisterCustomSpawnCondition(true, "BlueCivMoreThan10", BlueCivMoreThan10);
-            mes.RegisterCustomSpawnCondition(true, "BlueCivMoreThan20", BlueCivMoreThan20);
-            mes.RegisterCustomSpawnCondition(true, "BlueCivMoreThan40", BlueCivMoreThan40);
+            bc5 = (a, b, c, d) => CountersMoreThan(SharedConstants.BlueFactionColor, SharedConstants.CivilianStr, 5);
+            bc10 = (a, b, c, d) => CountersMoreThan(SharedConstants.BlueFactionColor, SharedConstants.CivilianStr, 10);
+            bc20 = (a, b, c, d) => CountersMoreThan(SharedConstants.BlueFactionColor, SharedConstants.CivilianStr, 20);
+            bc40 = (a, b, c, d) => CountersMoreThan(SharedConstants.BlueFactionColor, SharedConstants.CivilianStr, 40);
+            mes.RegisterCustomSpawnCondition(true, "BlueCivMoreThan5", bc5);
+            mes.RegisterCustomSpawnCondition(true, "BlueCivMoreThan10", bc10);
+            mes.RegisterCustomSpawnCondition(true, "BlueCivMoreThan20", bc20);
+            mes.RegisterCustomSpawnCondition(true, "BlueCivMoreThan40", bc40);
 
-            mes.RegisterCustomSpawnCondition(true, "RedCivMoreThan5", RedCivMoreThan5);
-            mes.RegisterCustomSpawnCondition(true, "RedCivMoreThan10", RedCivMoreThan10);
-            mes.RegisterCustomSpawnCondition(true, "RedCivMoreThan20", RedCivMoreThan20);
-            mes.RegisterCustomSpawnCondition(true, "RedCivMoreThan40", RedCivMoreThan40);
+            rc5 = (a, b, c, d) => CountersMoreThan(SharedConstants.RedFactionColor, SharedConstants.CivilianStr, 5);
+            rc10 = (a, b, c, d) => CountersMoreThan(SharedConstants.RedFactionColor, SharedConstants.CivilianStr, 10);
+            rc20 = (a, b, c, d) => CountersMoreThan(SharedConstants.RedFactionColor, SharedConstants.CivilianStr, 20);
+            rc40 = (a, b, c, d) => CountersMoreThan(SharedConstants.RedFactionColor, SharedConstants.CivilianStr, 40);
+            mes.RegisterCustomSpawnCondition(true, "RedCivMoreThan5", rc5);
+            mes.RegisterCustomSpawnCondition(true, "RedCivMoreThan10", rc10);
+            mes.RegisterCustomSpawnCondition(true, "RedCivMoreThan20", rc20);
+            mes.RegisterCustomSpawnCondition(true, "RedCivMoreThan40", rc40);
         }
 
-        private bool BlueCivMoreThan5(string spawnGroupSubId, string SpawnConditionProfile, string typeOfSpawn, Vector3D location)
+        private bool CountersMoreThan(string color, string counterType, int limit)
         {
             int civ;
-            MyAPIGateway.Utilities.GetVariable($"{SharedConstants.BlueFactionColor}{SharedConstants.CivilianStr}", out civ);
-            return civ >= 5;
-        }
-
-        private bool BlueCivMoreThan10(string spawnGroupSubId, string SpawnConditionProfile, string typeOfSpawn, Vector3D location)
-        {
-            int civ;
-            MyAPIGateway.Utilities.GetVariable($"{SharedConstants.BlueFactionColor}{SharedConstants.CivilianStr}", out civ);
-            return civ >= 10;
-        }
-
-        private bool BlueCivMoreThan20(string spawnGroupSubId, string SpawnConditionProfile, string typeOfSpawn, Vector3D location)
-        {
-            int civ;
-            MyAPIGateway.Utilities.GetVariable($"{SharedConstants.BlueFactionColor}{SharedConstants.CivilianStr}", out civ);
-            return civ >= 20;
-        }
-
-        private bool BlueCivMoreThan40(string spawnGroupSubId, string SpawnConditionProfile, string typeOfSpawn, Vector3D location)
-        {
-            int civ;
-            MyAPIGateway.Utilities.GetVariable($"{SharedConstants.BlueFactionColor}{SharedConstants.CivilianStr}", out civ);
-            return civ >= 40;
-        }
-
-        private bool RedCivMoreThan5(string spawnGroupSubId, string SpawnConditionProfile, string typeOfSpawn, Vector3D location)
-        {
-            int civ;
-            MyAPIGateway.Utilities.GetVariable($"{SharedConstants.RedFactionColor}{SharedConstants.CivilianStr}", out civ);
-            return civ >= 5;
-        }
-
-        private bool RedCivMoreThan10(string spawnGroupSubId, string SpawnConditionProfile, string typeOfSpawn, Vector3D location)
-        {
-            int civ;
-            MyAPIGateway.Utilities.GetVariable($"{SharedConstants.RedFactionColor}{SharedConstants.CivilianStr}", out civ);
-            return civ >= 10;
-        }
-
-        private bool RedCivMoreThan20(string spawnGroupSubId, string SpawnConditionProfile, string typeOfSpawn, Vector3D location)
-        {
-            int civ;
-            MyAPIGateway.Utilities.GetVariable($"{SharedConstants.RedFactionColor}{SharedConstants.CivilianStr}", out civ);
-            return civ >= 20;
-        }
-
-        private bool RedCivMoreThan40(string spawnGroupSubId, string SpawnConditionProfile, string typeOfSpawn, Vector3D location)
-        {
-            int civ;
-            MyAPIGateway.Utilities.GetVariable($"{SharedConstants.RedFactionColor}{SharedConstants.CivilianStr}", out civ);
-            return civ >= 40;
+            MyAPIGateway.Utilities.GetVariable($"{color}{counterType}", out civ);
+            return civ >= limit;
         }
 
         protected override void UnloadData()
         {
-            mes.RegisterCustomSpawnCondition(false, "BlueCivMoreThan5", BlueCivMoreThan5);
-            mes.RegisterCustomSpawnCondition(false, "BlueCivMoreThan10", BlueCivMoreThan10);
-            mes.RegisterCustomSpawnCondition(false, "BlueCivMoreThan20", BlueCivMoreThan20);
-            mes.RegisterCustomSpawnCondition(false, "BlueCivMoreThan40", BlueCivMoreThan40);
+            mes.RegisterCustomSpawnCondition(false, "BlueCivMoreThan5", bc5);
+            mes.RegisterCustomSpawnCondition(false, "BlueCivMoreThan10", bc10);
+            mes.RegisterCustomSpawnCondition(false, "BlueCivMoreThan20", bc20);
+            mes.RegisterCustomSpawnCondition(false, "BlueCivMoreThan40", bc40);
 
-            mes.RegisterCustomSpawnCondition(false, "RedCivMoreThan5", RedCivMoreThan5);
-            mes.RegisterCustomSpawnCondition(false, "RedCivMoreThan10", RedCivMoreThan10);
-            mes.RegisterCustomSpawnCondition(false, "RedCivMoreThan20", RedCivMoreThan20);
-            mes.RegisterCustomSpawnCondition(false, "RedCivMoreThan40", RedCivMoreThan40);
+            mes.RegisterCustomSpawnCondition(false, "RedCivMoreThan5", rc5);
+            mes.RegisterCustomSpawnCondition(false, "RedCivMoreThan10", rc10);
+            mes.RegisterCustomSpawnCondition(false, "RedCivMoreThan20", rc20);
+            mes.RegisterCustomSpawnCondition(false, "RedCivMoreThan40", rc40);
 
             if (server != null) server.Unload();
         }
