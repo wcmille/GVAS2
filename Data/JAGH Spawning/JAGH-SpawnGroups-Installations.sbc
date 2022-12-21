@@ -28,7 +28,6 @@
             <Y>15.00</Y>
             <Z>0.0</Z>
           </Position>
-          <Speed>50</Speed>
           <Behaviour>JAGH-Behavior-Civilian-Brokk</Behaviour>
         </Prefab>
       </Prefabs>
@@ -60,7 +59,6 @@
             <Y>-30.0</Y>
             <Z>0.0</Z>
           </Position>
-          <Speed>50</Speed>
           <Behaviour>GVA-Behavior-PassiveCivilian</Behaviour>
         </Prefab>
       </Prefabs>

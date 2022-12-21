@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>GVA-KAJI-Trigger-Despawn-Civ-1</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Trigger]
+        [UseTrigger:true]
+        [Type:Despawn]
+        [StartsReady:true]
+        [MaxActions:1]
+        [Actions:GVA-KAJI-Action-DespawnRivalAi-Civ-1]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-KAJI-Action-DespawnRivalAi-Civ-1</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Action]
+        [IncreaseSandboxCounters:RedCivilian]
+        [IncreaseSandboxCountersAmount:1]
+
+        [UseChatBroadcast:true]
+        [ChatData:GVA-Common-Chat-DespawnChat]
+      </Description>
+    </EntityComponent>
+     
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-KAJI-Trigger-DespawnMES-Civ-1</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Trigger]
+        [UseTrigger:true]
+        [Type:DespawnMES]
+        [StartsReady:true]
+        [MaxActions:1]
+        [Actions:GVA-KAJI-Action-DespawnSpawner-Civ-1]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-KAJI-Action-DespawnSpawner-Civ-1</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Action]
+        [IncreaseSandboxCounters:RedCivilian]
+        [IncreaseSandboxCountersAmount:1]
+
+        [UseChatBroadcast:true]
+        [ChatData:GVA-Common-Chat-DespawnChatMES]
+      </Description>
+    </EntityComponent>
+  </EntityComponents>
+</Definitions>

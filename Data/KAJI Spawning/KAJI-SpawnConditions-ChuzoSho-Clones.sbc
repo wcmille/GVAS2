@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Red-RedAlienRegion-PI-Spawns-Civ1-5</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+        [PlanetaryInstallation:true]
+
+        [FactionOwner:KAJI]
+        [ZoneConditions:MES-ZoneConditionProfile-RedAlienRegion]
+
+        [UseSandboxCounterCosts:true]
+        [SandboxCounterCostNames:RedCivilian]
+        [SandboxCounterCostAmounts:1]
+        [CustomApiConditions:RedCivMoreThan5]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Red-RedAlienRegion-PI-Spawns-Civ1-10</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+        [PlanetaryInstallation:true]
+
+        [FactionOwner:KAJI]
+        [ZoneConditions:MES-ZoneConditionProfile-RedAlienRegion]
+
+        [UseSandboxCounterCosts:true]
+        [SandboxCounterCostNames:RedCivilian]
+        [SandboxCounterCostAmounts:1]
+        [CustomApiConditions:RedCivMoreThan10]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Red-RedAlienRegion-PI-Spawns-Civ1-20</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+        [PlanetaryInstallation:true]
+
+        [FactionOwner:KAJI]
+        [ZoneConditions:MES-ZoneConditionProfile-RedAlienRegion]
+
+        [UseSandboxCounterCosts:true]
+        [SandboxCounterCostNames:RedCivilian]
+        [SandboxCounterCostAmounts:1]
+        [CustomApiConditions:RedCivMoreThan20]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Red-RedAlienRegion-PI-Spawns-Civ1-40</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+        [PlanetaryInstallation:true]
+
+        [FactionOwner:KAJI]
+        [ZoneConditions:MES-ZoneConditionProfile-RedAlienRegion]
+
+        [UseSandboxCounterCosts:true]
+        [SandboxCounterCostNames:RedCivilian]
+        [SandboxCounterCostAmounts:1]
+        [CustomApiConditions:RedCivMoreThan40]
+      </Description>
+    </EntityComponent>
+  </EntityComponents>
+</Definitions>

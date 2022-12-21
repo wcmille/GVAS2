@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>KAJI-Behavior-Fixed-Civ1</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Behavior]
+        [BehaviorName:CargoShip]
+
+        [UseProjectileLeadPrediction:true]
+        [UseBarrageFire:true]
+        [UseTurrets:false]
+
+        [Triggers:GVA-KAJI-Trigger-Despawn-Civ-1]
+        [Triggers:GVA-KAJI-Trigger-DespawnMES-Civ-1]
+      </Description>
+    </EntityComponent>
+  </EntityComponents>
+</Definitions>
