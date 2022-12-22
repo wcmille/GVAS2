@@ -122,11 +122,11 @@ namespace GVA.NPCControl.Client
 
         private static void AddButton(string buttonText, Action<IMyTerminalBlock> action, bool unconditional = false)
         {
-            var control = MyAPIGateway.TerminalControls.CreateControl<IMyTerminalControlButton, IMyRadioAntenna>(buttonText);
-            control.Enabled = x => unconditional || AccountOwningTerritory(x.GetOwnerFactionTag()) != null;
+            var control = MyAPIGateway.TerminalControls.CreateControl<IMyTerminalControlButton, IMyRadioAntenna>("GVA.SatDishLogic.BuyCredits.Button");
+            control.Enabled = x => unconditional || AccountOwningTerritory(x.GetOwnerFactionTag()) is IZoneFaction;
             control.SupportsMultipleBlocks = false;
             control.Visible = x => (x?.GameLogic?.GetAs<SatDishLogic>() != null);
-            control.Title = MyStringId.GetOrCompute("GVA.SatDishLogic.BuyCredits.Button");
+            control.Title = MyStringId.GetOrCompute(buttonText);
             control.Action = action;
             MyAPIGateway.TerminalControls.AddControl<IMyRadioAntenna>(control);
 
@@ -135,7 +135,7 @@ namespace GVA.NPCControl.Client
             myAction.Name = builder;
             myAction.ValidForGroups = false;
             myAction.Action = action;
-            myAction.Enabled = x => unconditional || AccountOwningTerritory(x.GetOwnerFactionTag()) != null; 
+            myAction.Enabled = x => unconditional || AccountOwningTerritory(x.GetOwnerFactionTag()) is IZoneFaction; 
             MyAPIGateway.TerminalControls.AddAction<IMyRadioAntenna>(myAction);
         }
 
@@ -193,6 +193,7 @@ namespace GVA.NPCControl.Client
             var acct = AccountOwningTerritory(pcFactionTag);
             string factionColor = acct.ColorFaction;
             int amt;
+            if (acct is IZoneFaction)
             {
                 double credits;
                 MyAPIGateway.Utilities.GetVariable($"{factionColor}{SharedConstants.CreditsStr}", out credits);

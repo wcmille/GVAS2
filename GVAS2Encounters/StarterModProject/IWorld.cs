@@ -13,6 +13,7 @@ namespace GVA.NPCControl
     public class SharedWorld : IWorld
     {
         protected readonly List<IAccount> list = new List<IAccount>();
+        IAccount black;
 
         public SharedWorld()
         {
@@ -20,7 +21,7 @@ namespace GVA.NPCControl
             list.Add(blue);
             var red = new Accounting(SharedConstants.RedFactionColor);
             list.Add(red);
-            var black = new PirateAccount();
+            black = new PirateAccount();
             list.Add(black);
         }
 
@@ -39,7 +40,7 @@ namespace GVA.NPCControl
             {
                 if (f.OwningPCTag == factionTag) return f;
             }
-            return null;
+            return black;
         }
 
         public virtual void Write(IAccount acct)
