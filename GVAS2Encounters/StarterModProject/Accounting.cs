@@ -3,7 +3,7 @@ using System;
 
 namespace GVA.NPCControl
 {
-    public class Accounting
+    public class Accounting : IAccount, IZoneFaction
     {
         const double militaryCosts = 0.2;
         const double timePeriodConst = 0.333333;

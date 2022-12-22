@@ -22,7 +22,7 @@ namespace GVA.NPCControl.Server
             world = null;
         }
 
-        public void WriteToClient(Accounting acct)
+        public void WriteToClient(IAccount acct)
         {
             FactionValuesPacket packet = new FactionValuesPacket(acct.OwningPCTag, acct.ColorFaction, acct.Civilian, acct.Military, acct.UnspentUnits);
             networking.RelayToClients(packet);

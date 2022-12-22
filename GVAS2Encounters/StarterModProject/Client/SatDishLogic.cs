@@ -34,6 +34,7 @@ using Sandbox.Common.ObjectBuilders;
 using Sandbox.ModAPI;
 using Sandbox.ModAPI.Interfaces.Terminal;
 using System;
+using System.Text;
 using VRage.Game.Components;
 using VRage.ModAPI;
 using VRage.ObjectBuilders;
@@ -86,7 +87,7 @@ namespace GVA.NPCControl.Client
             var factionOwningTerritory = AccountOwningTerritory(block.GetOwnerFactionTag());
             if (factionOwningTerritory == null) MyLog.Default.WriteLine("SATDISH: SupportedFaction: Null Faction");
             else MyLog.Default.WriteLine($"SATDISH: SupportedFaction: {factionOwningTerritory.OwningNPCTag}");
-            if (factionOwningTerritory == null || factionOwningTerritory.OwningPCTag == SharedConstants.BlackFactionTag)
+            if (factionOwningTerritory == null || factionOwningTerritory.OwningNPCTag == SharedConstants.BlackFactionTag)
             {
                 MyLog.Default.WriteLine("SATDISH: No Faction Found.");
                 var supportedFaction = MyAPIGateway.Session.Factions.TryGetFactionByTag(SharedConstants.BlackFactionTag);
@@ -104,7 +105,7 @@ namespace GVA.NPCControl.Client
             }
         }
 
-        private static Accounting AccountOwningTerritory(string pcFactionTag)
+        private static IAccount AccountOwningTerritory(string pcFactionTag)
         {
             return ClientSession.client.World.GetAccountByPCOwner(pcFactionTag);
         }
@@ -121,13 +122,21 @@ namespace GVA.NPCControl.Client
 
         private static void AddButton(string buttonText, Action<IMyTerminalBlock> action, bool unconditional = false)
         {
-            var activate = MyAPIGateway.TerminalControls.CreateControl<IMyTerminalControlButton, IMyRadioAntenna>(buttonText);
-            activate.Enabled = x => unconditional || AccountOwningTerritory(x.GetOwnerFactionTag()) != null;
-            activate.SupportsMultipleBlocks = false;
-            activate.Visible = x => (x?.GameLogic?.GetAs<SatDishLogic>() != null);
-            activate.Title = MyStringId.GetOrCompute(buttonText);
-            activate.Action = action;
-            MyAPIGateway.TerminalControls.AddControl<IMyRadioAntenna>(activate);
+            var control = MyAPIGateway.TerminalControls.CreateControl<IMyTerminalControlButton, IMyRadioAntenna>(buttonText);
+            control.Enabled = x => unconditional || AccountOwningTerritory(x.GetOwnerFactionTag()) != null;
+            control.SupportsMultipleBlocks = false;
+            control.Visible = x => (x?.GameLogic?.GetAs<SatDishLogic>() != null);
+            control.Title = MyStringId.GetOrCompute("GVA.SatDishLogic.BuyCredits.Button");
+            control.Action = action;
+            MyAPIGateway.TerminalControls.AddControl<IMyRadioAntenna>(control);
+
+            StringBuilder builder = new StringBuilder(buttonText);
+            var myAction = MyAPIGateway.TerminalControls.CreateAction<IMyRadioAntenna>("GVA.SatDishLogic.BuyCredits.Action");
+            myAction.Name = builder;
+            myAction.ValidForGroups = false;
+            myAction.Action = action;
+            myAction.Enabled = x => unconditional || AccountOwningTerritory(x.GetOwnerFactionTag()) != null; 
+            MyAPIGateway.TerminalControls.AddAction<IMyRadioAntenna>(myAction);
         }
 
         private static void AddSeparator(string id)

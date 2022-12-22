@@ -9,12 +9,14 @@
         public static readonly string NPCStr = "NPCOwner";
         public static readonly string TimeStr = "LastRunTime";
 
-        public static readonly string BlackFactionTag = "SPRT";
-
         public static readonly string BlueFactionColor = "Blue";
-        public static readonly string RedFactionColor = "Red";
         public static readonly string BlueFactionTag = "JAGH";
+
+        public static readonly string RedFactionColor = "Red";
         public static readonly string RedFactionTag = "KAJI";
+
+        public static readonly string BlackFactionColor = "Black";
+        public static readonly string BlackFactionTag = "SPRT";
         public const long tokenPrice = 20000000;
 
         public const int TimeDeltaHours = 8;

@@ -4,15 +4,15 @@ namespace GVA.NPCControl
 {
     public interface IWorld
     {
-        Accounting GetAccountByColor(string color);
-        void Write(Accounting acct);
+        IAccount GetAccountByColor(string color);
+        void Write(IAccount acct);
 
-        Accounting GetAccountByPCOwner(string factionTag);
+        IAccount GetAccountByPCOwner(string factionTag);
     }
 
     public class SharedWorld : IWorld
     {
-        protected readonly List<Accounting> list = new List<Accounting>();
+        protected readonly List<IAccount> list = new List<IAccount>();
 
         public SharedWorld()
         {
@@ -20,9 +20,11 @@ namespace GVA.NPCControl
             list.Add(blue);
             var red = new Accounting(SharedConstants.RedFactionColor);
             list.Add(red);
+            var black = new PirateAccount();
+            list.Add(black);
         }
 
-        public Accounting GetAccountByColor(string color)
+        public IAccount GetAccountByColor(string color)
         {
             foreach (var f in list)
             {
@@ -31,7 +33,7 @@ namespace GVA.NPCControl
             return null;
         }
 
-        public Accounting GetAccountByPCOwner(string factionTag)
+        public IAccount GetAccountByPCOwner(string factionTag)
         {
             foreach (var f in list)
             {
@@ -40,7 +42,7 @@ namespace GVA.NPCControl
             return null;
         }
 
-        public virtual void Write(Accounting acct)
+        public virtual void Write(IAccount acct)
         {
             if (acct == null) return;
             acct.Write();

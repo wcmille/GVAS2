@@ -147,7 +147,7 @@ namespace GVA.NPCControl.Server
             return time;
         }
 
-        public override void Write(Accounting acct)
+        public override void Write(IAccount acct)
         {
             if (acct == null) return;
             base.Write(acct);            
