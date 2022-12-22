@@ -21,21 +21,6 @@
             <Color x="0.575" y="0.15" z="0.2" />
             <Color x="0.1222" y="0.05" z="0.46" />
         </BackgroundColorRanges>
-        <Icon>Textures\FactionLogo\\GVA\Emblem_1.1.png</Icon>
-        <Icon>Textures\FactionLogo\\GVA\Emblem_3.3.png</Icon>
-        <Icon>Textures\FactionLogo\\GVA\Emblem_4.6.png</Icon>
-        <Icon>Textures\FactionLogo\\GVA\Emblem_5.2.png</Icon>
-        <Icon>Textures\FactionLogo\\GVA\Emblem_6.2.png</Icon>
-        <Icon>Textures\FactionLogo\\GVA\Emblem_7.2.png</Icon>
-        <Icon>Textures\FactionLogo\\GVA\Emblem_7.8.png</Icon>
-        <Icon>Textures\FactionLogo\\GVA\Emblem_8.5.png</Icon>
-        <Icon>Textures\FactionLogo\\GVA\Emblem_8.7.png</Icon>
-        <Icon>Textures\FactionLogo\\GVA\Emblem_8.9.png</Icon>
-        <Icon>Textures\FactionLogo\\GVA\Emblem_9.8.png</Icon>
-        <Icon>Textures\FactionLogo\\GVA\Emblem_10.10.png</Icon>
-
-        <Icon>Textures\FactionLogo\\GVA\icon_badge_246.png</Icon>
-        <Icon>Textures\FactionLogo\\GVA\icon_defence_205.png</Icon>
         <Icon>Textures\FactionLogo\\GVA\Jagdhund.png</Icon>
         <Icon>Textures\FactionLogo\\GVA\Kajiya.png</Icon>
         <Icon>Textures\FactionLogo\\GVA\Kaplan-Moore.png</Icon>
