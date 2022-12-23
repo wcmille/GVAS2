@@ -71,6 +71,7 @@ namespace GVA.NPCControl.Server
 
         internal ServerLog FetchLogs(IAccount ac)
         {
+            if (ac == null) throw new ArgumentNullException("ac");
             ServerLog log = null;
             if (ac.ColorFaction == SharedConstants.BlueFactionColor) log = blueLog;
             else if (ac.ColorFaction == SharedConstants.RedFactionColor) log = redLog;

@@ -63,13 +63,20 @@ namespace GVA.NPCControl.Server
 
         private void LogSpawn(IMyCubeGrid grid)
         {
-            var owner = grid.BigOwners.FirstOrDefault();
-            var faction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(owner);
-            var acct = world.GetAccountByNPCOwner(faction.Tag);
-            var log = world.FetchLogs(acct);
-            if (log != null)
+            try
             {
-                log.Log(grid);
+                var owner = grid.BigOwners.FirstOrDefault();
+                var faction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(owner);
+                var acct = world.GetAccountByNPCOwner(faction.Tag);
+                var log = world.FetchLogs(acct);
+                if (log != null)
+                {
+                    log.Log(grid);
+                }
+            }
+            catch (Exception ex)
+            {
+                MyLog.Default.WriteLineAndConsole($"GVA_NPC_Control: ERROR - {ex.Message}");
             }
         }
 
