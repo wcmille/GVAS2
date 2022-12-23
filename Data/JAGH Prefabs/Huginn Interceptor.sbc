@@ -1582,7 +1582,7 @@
               <ShowInToolbarConfig>true</ShowInToolbarConfig>
               <ShowInInventory>true</ShowInInventory>
               <NumberInGrid>1</NumberInGrid>
-              <Enabled>true</Enabled>
+              <Enabled>false</Enabled>
               <BroadcastRadius>20000</BroadcastRadius>
               <HudText />
             </MyObjectBuilder_CubeBlock>

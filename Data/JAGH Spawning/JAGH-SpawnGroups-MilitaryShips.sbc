@@ -16,12 +16,12 @@
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
 
-        [SpawnConditionsProfiles:Blue-BlueAlienRegion-Default-Spawns]
+        [SpawnConditionsProfiles:Blue-BlueAlienRegion-Orbital-Spawns]
       </Description>
 			<IsPirate>true</IsPirate>
 			<Frequency>90.0</Frequency>
 			<Prefabs>
-				<Prefab SubtypeId="Huginn Interceptor - Atmospheric">
+				<Prefab SubtypeId="Huginn Interceptor">
 					<Position>
 						<X>0.0</X>
 						<Y>0.0</Y>
