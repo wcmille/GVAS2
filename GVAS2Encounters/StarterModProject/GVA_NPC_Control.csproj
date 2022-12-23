@@ -114,6 +114,7 @@
     <Compile Include="Client\Client.cs" />
     <Compile Include="Client\ClientSession.cs" />
     <Compile Include="Client\ClientWorld.cs" />
+    <Compile Include="DialogResponsePacket.cs" />
     <Compile Include="IAccount.cs" />
     <Compile Include="IClientCommands.cs" />
     <Compile Include="IPacketReceiver.cs" />
@@ -124,6 +125,7 @@
     <Compile Include="MESApi.cs" />
     <Compile Include="PirateAccount.cs" />
     <Compile Include="Server\Server.cs" />
+    <Compile Include="Server\ServerLog.cs" />
     <Compile Include="Server\ServerWorld.cs" />
     <Compile Include="Server\Session.cs" />
     <Compile Include="nNetworking.cs" />

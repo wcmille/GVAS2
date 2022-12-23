@@ -22,6 +22,12 @@ namespace GVA.NPCControl.Server
             world = null;
         }
 
+        public void WriteToClient(ulong client, ServerLog log)
+        {
+            var packet = new DialogResponsePacket(log.LogText);
+            networking.SendToPlayer(packet, client);
+        }
+
         public void WriteToClient(IAccount acct)
         {
             FactionValuesPacket packet = new FactionValuesPacket(acct.OwningPCTag, acct.ColorFaction, acct.Civilian, acct.Military, acct.UnspentUnits);

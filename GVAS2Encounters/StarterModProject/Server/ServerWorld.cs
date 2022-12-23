@@ -13,6 +13,8 @@ namespace GVA.NPCControl.Server
         readonly Server server;
         IMyCubeGrid blueClaimBlock;
         IMyCubeGrid redClaimBlock;
+        private readonly ServerLog blueLog;
+        private readonly ServerLog redLog;
         readonly HashSet<IMyEntity> names = new HashSet<IMyEntity>(1);
 
         public ServerWorld(Server server)
@@ -21,6 +23,10 @@ namespace GVA.NPCControl.Server
             FetchClaimBlocks();
             blueClaimBlock = GetClaimBlockByColor(SharedConstants.BlueFactionColor);
             redClaimBlock = GetClaimBlockByColor(SharedConstants.RedFactionColor);
+            blueLog = new ServerLog(SharedConstants.BlueFactionColor);
+            redLog = new ServerLog(SharedConstants.RedFactionColor);
+            blueLog.Read();
+            redLog.Read();
         }
 
         private IMyCubeGrid GetClaimBlockByColor(string color)
@@ -49,6 +55,29 @@ namespace GVA.NPCControl.Server
                 redClaimBlock = null;
             }
         }
+
+        public override void Write(IAccount acct)
+        {
+            if (acct == null) return;
+            base.Write(acct);
+            server.WriteToClient(acct);
+        }
+
+        public override void RequestReport(ulong requestor, IAccount ac)
+        {
+            ServerLog log = FetchLogs(ac);
+            if (log != null) server.WriteToClient(requestor, log);
+        }
+
+        internal ServerLog FetchLogs(IAccount ac)
+        {
+            ServerLog log = null;
+            if (ac.ColorFaction == SharedConstants.BlueFactionColor) log = blueLog;
+            else if (ac.ColorFaction == SharedConstants.RedFactionColor) log = redLog;
+            return log;
+        }
+
+        #region Private Methods
 
         private void WriteOwner(IMyCubeGrid claimBlockGrid, string color)
         {
@@ -146,12 +175,6 @@ namespace GVA.NPCControl.Server
             if (time == DateTime.MinValue) time = DateTime.Now;
             return time;
         }
-
-        public override void Write(IAccount acct)
-        {
-            if (acct == null) return;
-            base.Write(acct);            
-            server.WriteToClient(acct);
-        }
+        #endregion
     }
 }

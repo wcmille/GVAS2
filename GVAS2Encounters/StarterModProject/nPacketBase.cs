@@ -7,6 +7,7 @@ namespace Digi.Example_NetworkProtobuf
     // tag numbers in ProtoInclude collide with numbers from ProtoMember in the same class, therefore they must be unique.
     [ProtoInclude(2122, typeof(CommandPacket))]
     [ProtoInclude(2123, typeof(FactionValuesPacket))]
+    [ProtoInclude(2124, typeof(DialogResponsePacket))]
     [ProtoContract]
     public abstract class PacketBase
     {

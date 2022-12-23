@@ -1,4 +1,5 @@
-﻿using Sandbox.ModAPI;
+﻿using GVA.NPCControl.Server;
+using Sandbox.ModAPI;
 using System;
 
 namespace GVA.NPCControl
@@ -9,6 +10,7 @@ namespace GVA.NPCControl
         const double timePeriodConst = 0.333333;
         const double pirateFactor = 0.006667;
         const double corruption = 0.9;
+        //ServerLog log;
 
         public Accounting(string color)
         {
@@ -29,6 +31,9 @@ namespace GVA.NPCControl
             UnspentUnits = uu;
             OwningPCTag = owningPCTag;
             OwningNPCTag = owningNPCTag;
+
+            //log = new ServerLog(color);
+            //log.Read();
         }
 
         public Accounting(string owner, string npc, string f, int c, int m, double uu)
@@ -39,6 +44,9 @@ namespace GVA.NPCControl
             UnspentUnits = uu;
             OwningPCTag = owner;
             OwningNPCTag = npc;
+
+            //log = new ServerLog(f);
+            //log.Read();
         }
 
         public int Civilian { get; private set; }

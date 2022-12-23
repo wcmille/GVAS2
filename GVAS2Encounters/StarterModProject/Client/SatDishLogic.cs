@@ -85,11 +85,11 @@ namespace GVA.NPCControl.Client
         private void Dish_AppendingCustomInfo(IMyTerminalBlock block, System.Text.StringBuilder builder)
         {
             var factionOwningTerritory = AccountOwningTerritory(block.GetOwnerFactionTag());
-            if (factionOwningTerritory == null) MyLog.Default.WriteLine("SATDISH: SupportedFaction: Null Faction");
-            else MyLog.Default.WriteLine($"SATDISH: SupportedFaction: {factionOwningTerritory.OwningNPCTag}");
+            //if (factionOwningTerritory == null) MyLog.Default.WriteLine("SATDISH: SupportedFaction: Null Faction");
+            //else MyLog.Default.WriteLine($"SATDISH: SupportedFaction: {factionOwningTerritory.OwningNPCTag}");
             if (factionOwningTerritory == null || factionOwningTerritory.OwningNPCTag == SharedConstants.BlackFactionTag)
             {
-                MyLog.Default.WriteLine("SATDISH: No Faction Found.");
+                //MyLog.Default.WriteLine("SATDISH: No Faction Found.");
                 var supportedFaction = MyAPIGateway.Session.Factions.TryGetFactionByTag(SharedConstants.BlackFactionTag);
                 builder.AppendLine($"Supporting: {supportedFaction.Name}");
             }
@@ -157,6 +157,19 @@ namespace GVA.NPCControl.Client
             AddButton("Commission Military", x => IncreaseNPCAndNotify(x, SharedConstants.MilitaryStr));
             AddButton("Commission Civilian", x => IncreaseNPCAndNotify(x, SharedConstants.CivilianStr));
             AddSeparator("FleetCommandSeparator");
+            AddButton("Read Log", RequestLog);
+            AddSeparator("LogGroupSeparator");
+        }
+
+        private static void RequestLog(IMyTerminalBlock block)
+        {
+            var pcFactionTag = block.GetOwnerFactionTag();
+            var acct = AccountOwningTerritory(pcFactionTag);
+            //var owningFaction = MyAPIGateway.Session.Factions.TryGetFactionByTag(pcFactionTag);
+            if (acct is IZoneFaction)
+            {
+                ClientSession.client.World.RequestReport(MyAPIGateway.Multiplayer.MyId, acct);
+            }
         }
 
         private static void BuyCredits(IMyTerminalBlock block)

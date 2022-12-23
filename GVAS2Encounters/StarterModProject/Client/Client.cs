@@ -10,7 +10,7 @@ namespace GVA.NPCControl.Client
 
         public Client(ushort channel)
         {
-            World = new ClientWorld();
+            World = new ClientWorld(this);
 
             networking = new Networking(channel, this);
             networking.Register();

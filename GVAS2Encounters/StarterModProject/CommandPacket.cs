@@ -47,7 +47,11 @@ namespace GVA.NPCControl
             if (acct.ColorFaction != "")
             {
                 //Determine command.
-                if (acct is IZoneFaction)
+                if (Command == SharedConstants.CreditsStr)
+                {
+                    AddCredits(world, acct);
+                }
+                else if (acct is IZoneFaction)
                 {
                     var ac = acct as IZoneFaction;
                     if (Command == SharedConstants.CivilianStr)
@@ -58,10 +62,10 @@ namespace GVA.NPCControl
                     {
                         if (ac.BuyMilitary()) world.Write(acct);
                     }
-                }
-                else if (Command == SharedConstants.CreditsStr)
-                {
-                    AddCredits(world, acct);
+                    else if (Command == SharedConstants.ReportCommand)
+                    {
+                        world.RequestReport(this.SenderId, acct);
+                    }
                 }
             }
         }

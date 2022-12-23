@@ -8,9 +8,10 @@ namespace GVA.NPCControl
         void Write(IAccount acct);
 
         IAccount GetAccountByPCOwner(string factionTag);
+        void RequestReport(ulong requestor, IAccount ac);
     }
 
-    public class SharedWorld : IWorld
+    public abstract class SharedWorld : IWorld
     {
         protected readonly List<IAccount> list = new List<IAccount>();
         IAccount black;
@@ -42,6 +43,17 @@ namespace GVA.NPCControl
             }
             return black;
         }
+
+        public IAccount GetAccountByNPCOwner(string factionTag)
+        {
+            foreach (var f in list)
+            {
+                if (f.OwningNPCTag == factionTag) return f;
+            }
+            return null;
+        }
+
+        public abstract void RequestReport(ulong requestor, IAccount ac);
 
         public virtual void Write(IAccount acct)
         {
