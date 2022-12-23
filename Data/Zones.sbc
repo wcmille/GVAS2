@@ -19,7 +19,7 @@
         [ZoneEnterAnnounce:Entering: Blue Zone]
         [ZoneLeaveAnnounce:Leaving: Blue Zone]
         [Coordinates:{X:97825.9 Y:79558.68 Z:5725255.17}]
-        [Radius:500000]
+        [Radius:50000]
       </Description>
     </EntityComponent>
 
@@ -31,7 +31,7 @@
       <Description>
         [MES Zone Conditions]
         [ZoneName:BlueAlienRegion]
-        [MaxDistanceFromZoneCenter:500000]
+        [MaxDistanceFromZoneCenter:50000]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
@@ -42,7 +42,7 @@
       <Description>
         [MES Zone Conditions]
         [ZoneName:BlueAlienRegion]
-        [MaxDistanceFromZoneCenter:500000]
+        [MaxDistanceFromZoneCenter:50000]
       </Description>
     </EntityComponent>  
     
@@ -63,7 +63,7 @@
         [ZoneEnterAnnounce:Entering: Red Zone]
         [ZoneLeaveAnnounce:Leaving: Red Zone]
         [Coordinates:{X:124468.67 Y:191328.8 Z:5742379.16}]
-        [Radius:500000]
+        [Radius:50000]
       </Description>
     </EntityComponent>
 
@@ -75,7 +75,7 @@
       <Description>
         [MES Zone Conditions]
         [ZoneName:RedAlienRegion]
-        [MaxDistanceFromZoneCenter:500000]
+        [MaxDistanceFromZoneCenter:50000]
       </Description>
     </EntityComponent>
   </EntityComponents>
