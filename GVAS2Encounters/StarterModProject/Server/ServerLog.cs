@@ -21,7 +21,11 @@ namespace GVA.NPCControl.Server
         public void Log(IMyCubeGrid grid)
         {
             var pos = grid.GetPosition();
-            Sandbox.ModAPI.Ingame.MyWaypointInfo mp = new Sandbox.ModAPI.Ingame.MyWaypointInfo(grid.CustomName, pos);
+            pos.X = Math.Round(pos.X);
+            pos.Y = Math.Round(pos.Y);
+            pos.Z = Math.Round(pos.Z);
+            string name = grid.CustomName.Remove(0, 6);
+            Sandbox.ModAPI.Ingame.MyWaypointInfo mp = new Sandbox.ModAPI.Ingame.MyWaypointInfo(name, pos);
             LogText += $"{DateTime.UtcNow},{mp}\n";
             Write();
         }

@@ -10,7 +10,7 @@ using VRageMath;
 namespace GVA.NPCControl.Server
 {
     [MySessionComponentDescriptor(MyUpdateOrder.AfterSimulation)]
-    public class Session : MySessionComponentBase
+    public class Session : MySessionComponentBase, IPacketReceiver
     {
         private Server server = null;
         private ServerWorld world = null;
@@ -34,7 +34,7 @@ namespace GVA.NPCControl.Server
             base.BeforeStart();
             if (MyAPIGateway.Multiplayer.IsServer)
             {
-                server = new Server(Networking.ModLast4);
+                server = new Server(Networking.ModLast4, this);
                 world = new ServerWorld(server);
                 world.Time();
 
@@ -98,6 +98,13 @@ namespace GVA.NPCControl.Server
             }
 
             if (server != null) server.Unload();
+            server = null;
+            world = null;
+        }
+
+        public void Received(PacketBase packet)
+        {
+            packet.Execute(world);
         }
     }
 }

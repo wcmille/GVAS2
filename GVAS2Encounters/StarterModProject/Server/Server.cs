@@ -2,24 +2,21 @@
 
 namespace GVA.NPCControl.Server
 {
-    public class Server : IPacketReceiver
+    public class Server
     {
         Networking networking;
-        ServerWorld world;
 
-        public Server(ushort channel)
+        public Server(ushort channel, IPacketReceiver receiver)
         {
-            networking = new Networking(channel, this);
+            networking = new Networking(channel, receiver);
             networking.Register();
-            world = new ServerWorld(this);
         }
 
         internal void Unload()
         {
             networking?.Unregister();
             networking = null;
-            world.Dispose();
-            world = null;
+            //world = null;
         }
 
         public void WriteToClient(ulong client, ServerLog log)
@@ -32,11 +29,6 @@ namespace GVA.NPCControl.Server
         {
             FactionValuesPacket packet = new FactionValuesPacket(acct.OwningPCTag, acct.ColorFaction, acct.Civilian, acct.Military, acct.UnspentUnits);
             networking.RelayToClients(packet);
-        }
-
-        public void Received(PacketBase packet)
-        {
-            packet.Execute(world);
         }
     }
 }
