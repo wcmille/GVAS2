@@ -9,12 +9,13 @@
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]
-        [ManipulationProfiles:GVA-Manipulation-MinerDerelict]
         [IgnoreCleanupRules:false]
         [ReplenishSystems:false]
         [SpawnConditionsProfiles:GVA-Admin-SRE]
 
         [ClearGridInventories:true]
+        [ManipulationProfiles:GVA-Manipulation-MinerDerelict]
+        [ManipulationProfiles:GVA-Manipulation-RepaintFrozen]
       </Description>
       <Icon>Textures\GUI\Icons\Fake.dds</Icon>
       <!--Do Not Edit-->

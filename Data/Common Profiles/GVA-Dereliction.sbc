@@ -1,8 +1,5 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-
-	<!--Dereliction Profiles-->
-	
 	<EntityComponents>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
@@ -12,22 +9,12 @@
       <Description>
         [MES Manipulation]
 
-        [OverrideBlockDamageModifier:false]
-        [BlockDamageModifier:100]
-        [GridsAreDestructable:true]
-        [GridsAreEditable:true]
-
-        [ShiftBlockColorsHue:false]
-        [RandomHueShift:false]
-
-        [UseGridDereliction:true]
-        [DerelictionProfiles:GVA-Dereliction-Armor-DamageOnly]
-        [DerelictionProfiles:GVA-Dereliction-NonArmor-DamageOnly]
-        [DerelictionProfiles:GVA-Dereliction-DerelictTurrets]
-        [ManipulationProfiles:GVA-Manipulation-RepaintFrozen]
-
         [UseRandomNameGenerator:true]
         [RandomGridNamePattern:[==] Derelict Pod]
+
+				[UseGridDereliction:true]
+        [DerelictionProfiles:GVA-Dereliction-Armor-DamageOnly]
+        [DerelictionProfiles:GVA-Dereliction-NonArmor-DamageOnly]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
@@ -36,109 +23,61 @@
 				<SubtypeId>GVA-Dereliction-Armor-DamageOnly</SubtypeId>
 			</Id>
 			<Description>
-			[MES Dereliction]
+        [MES Dereliction]
+        [Chance:33]
 
-			[Blocks:MyObjectBuilder_CubeBlock/(null)]
-			[MatchOnlyTypeId:true]
-
-			[Chance:25]
-
-			[MinPercentage:10]
-			[MaxPercentage:70]
-
-			</Description>
+        [Blocks:MyObjectBuilder_CubeBlock/(null)]
+        [MatchOnlyTypeId:true]
+        [UseSeparatePercentages:true]
+        [MinIntegrityPercentage:5]
+        [MaxIntegrityPercentage:70]
+        [MinBuildPercentage:50]
+        [MaxBuildPercentage:70]
+      </Description>
 		</EntityComponent>
-		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-			<Id>
-				<TypeId>Inventory</TypeId>
-				<SubtypeId>GVA-Dereliction-NonArmor-DamageOnly-Normal</SubtypeId>
-			</Id>
-			<Description>
-			[MES Dereliction]
-
-			[Blocks:MyObjectBuilder_Thrust/(null)]
-			[Blocks:MyObjectBuilder_Refinery/(null)]
-			[Blocks:MyObjectBuilder_OxygenGenerator/(null)]
-			[Blocks:MyObjectBuilder_UpgradeModule/(null)]
-			[Blocks:MyObjectBuilder_BatteryBlock/(null)]
-			[Blocks:MyObjectBuilder_HydrogenEngine/(null)]
-			[Blocks:MyObjectBuilder_Reactor/(null)]
-			[Blocks:MyObjectBuilder_Drill/(null)]
-			[Blocks:MyObjectBuilder_ShipGrinder/(null)]
-			[Blocks:MyObjectBuilder_ShipWelder/(null)]
-			[Blocks:MyObjectBuilder_Gyro/(null)]
-			[Blocks:MyObjectBuilder_OxygenTank/(null)]
-			[Blocks:MyObjectBuilder_Assembler/(null)]
-			[Blocks:MyObjectBuilder_Projector/(null)]
-			[Blocks:MyObjectBuilder_Gyro/(null)]
-			[Blocks:MyObjectBuilder_LargeTurretBase/(null)]
-			[MatchOnlyTypeId:true]
-
-			[Chance:95]
-
-			[MinPercentage:5]
-			[MaxPercentage:75]
-
-			</Description>
-		</EntityComponent>
-
 		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 			<Id>
 				<TypeId>Inventory</TypeId>
 				<SubtypeId>GVA-Dereliction-NonArmor-DamageOnly</SubtypeId>
 			</Id>
 			<Description>
-			[MES Dereliction]
+        [MES Dereliction]
 
-			[Blocks:MyObjectBuilder_Thrust/(null)]
-			[Blocks:MyObjectBuilder_Refinery/(null)]
-			[Blocks:MyObjectBuilder_OxygenGenerator/(null)]
-			[Blocks:MyObjectBuilder_UpgradeModule/(null)]
-			[Blocks:MyObjectBuilder_BatteryBlock/(null)]
-			[Blocks:MyObjectBuilder_HydrogenEngine/(null)]
-			[Blocks:MyObjectBuilder_Reactor/(null)]
-			[Blocks:MyObjectBuilder_Drill/(null)]
-			[Blocks:MyObjectBuilder_ShipGrinder/(null)]
-			[Blocks:MyObjectBuilder_ShipWelder/(null)]
-			[Blocks:MyObjectBuilder_Gyro/(null)]
-			[Blocks:MyObjectBuilder_OxygenTank/(null)]
-			[Blocks:MyObjectBuilder_Assembler/(null)]
-			[Blocks:MyObjectBuilder_Projector/(null)]
-			[Blocks:MyObjectBuilder_Gyro/(null)]
-			[MatchOnlyTypeId:true]
+        [Blocks:MyObjectBuilder_AirVent/(null)]
+        [Blocks:MyObjectBuilder_Assembler/(null)]
+        [Blocks:MyObjectBuilder_BatteryBlock/(null)]
+        [Blocks:MyObjectBuilder_CargoContainer/(null)]
+        [Blocks:MyObjectBuilder_Cockpit/(null)]
+        [Blocks:MyObjectBuilder_CryoChamber/(null)]
+        [Blocks:MyObjectBuilder_Door/(null)]
+        [Blocks:MyObjectBuilder_Drill/(null)]
+        [Blocks:MyObjectBuilder_HeatVentBlock/(null)]
+        [Blocks:MyObjectBuilder_HydrogenEngine/(null)]
+        [Blocks:MyObjectBuilder_Gyro/(null)]
+        [Blocks:MyObjectBuilder_JumpDrive/(null)]
+        [Blocks:MyObjectBuilder_LargeBlockBeacon/(null)]
+        [Blocks:MyObjectBuilder_LargeOreDetector/(null)]
+        [Blocks:MyObjectBuilder_LargeTurretBase/(null)]
+        [Blocks:MyObjectBuilder_OxygenGenerator/(null)]
+        [Blocks:MyObjectBuilder_OxygenTank/(null)]
+        [Blocks:MyObjectBuilder_Projector/(null)]
+        [Blocks:MyObjectBuilder_RadioAntenna/(null)]
+        [Blocks:MyObjectBuilder_Reactor/(null)]
+        [Blocks:MyObjectBuilder_Refinery/(null)]
+        [Blocks:MyObjectBuilder_ShipConnector/(null)]
+        [Blocks:MyObjectBuilder_ShipGrinder/(null)]
+        [Blocks:MyObjectBuilder_ShipWelder/(null)]
+        [Blocks:MyObjectBuilder_Thrust/(null)]
+        [Blocks:MyObjectBuilder_UpgradeModule/(null)]
+        [MatchOnlyTypeId:true]
 
-			[Chance:60]
-			[UseSeparatePercentages:true]
-			[MinIntegrityPercentage:20]
-			[MaxIntegrityPercentage:70]
-			[MinBuildPercentage:100]
-			[MaxBuildPercentage:100]
-			</Description>
-		</EntityComponent>
-
-		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-			<Id>
-				<TypeId>Inventory</TypeId>
-				<SubtypeId>GVE-Dereliction-DerelictTurrets</SubtypeId>
-			</Id>
-			<Description>
-
-			[MES Dereliction]
-
-			[Blocks:MyObjectBuilder_LargeGatlingTurret/(null)]
-			[Blocks:MyObjectBuilder_LargeGatlingTurret/SmallGatlingTurret]
-			[Blocks:MyObjectBuilder_LargeMissileTurret/(null)]
-			[Blocks:MyObjectBuilder_LargeMissileTurret/SmallMissileTurret]
-			[Blocks:MyObjectBuilder_InteriorTurret/LargeInteriorTurret]
-			[MatchOnlyTypeId:true]
-
-			[Chance:100]
-			[UseSeparatePercentages:true]
-			[MinIntegrityPercentage:1]
-			[MaxIntegrityPercentage:90]
-			[MinBuildPercentage:100]
-			[MaxBuildPercentage:100]
-			</Description>
+        [Chance:99]
+        [UseSeparatePercentages:true]
+        [MinIntegrityPercentage:1]
+        [MaxIntegrityPercentage:70]
+        [MinBuildPercentage:100]
+        [MaxBuildPercentage:100]
+      </Description>
 		</EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
@@ -147,18 +86,14 @@
       </Id>
       <Description>
         [MES Manipulation]
+        [RecolorGrid:true]
+        [RecolorOld:{x:0.61944443 y:-0.27 z:-0.18]
+        [RecolorNew:{x:0 y:-0.5 z:-0.4}]
 
         [SkinRandomBlocks:true]
-        [MinPercentageSkinRandomBlocks:15]
-        [MaxPercentageSkinRandomBlocks:40]
+        [MinPercentageSkinRandomBlocks:30]
+        [MaxPercentageSkinRandomBlocks:50]
         [SkinRandomBlocksTextures:Frozen_Armor]
-        [SkinRandomBlocksTextures:Heavy_Rust_Armor]
-
-        [ReduceBlockBuildStates:true]
-        [MinimumBlocksPercent:5]
-        [MaximumBlocksPercent:15]
-        [MinimumBuildPercent:10]
-        [MaximumBuildPercent:75]
       </Description>
     </EntityComponent>
 	</EntityComponents>
