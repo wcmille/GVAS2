@@ -5,24 +5,29 @@
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
         <!--Do Not Edit-->
-        <SubtypeId>GVA-Gray-Wreck</SubtypeId>
+        <SubtypeId>GVA-White-Farpoint</SubtypeId>
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]
-        [IgnoreCleanupRules:false]
-        [ReplenishSystems:false]
-        [SpawnConditionsProfiles:GVA-Admin-SRE]
+        [IgnoreCleanupRules:true]
+        [ReplenishSystems:true]
+        [ManipulationProfiles:GVA-Common-Manipulation-Permanent]
+        [ManipulationProfiles:GVA-Common-Manipulation-NPCPrefix]
 
-        [ClearGridInventories:true]
-        [ManipulationProfiles:GVA-Manipulation-MinerDerelict]
-        [ManipulationProfiles:GVA-Manipulation-RepaintFrozen]
+        [StaticEncounter:true]
+        [StaticEncounterCoords:{X:-1854042 Y:131072 Z:9040780}]
+        [StaticEncounterForward:{X:0 Y:0 Z:1}]
+        [StaticEncounterUp:{X:0 Y:1 Z:0}]
+        [TriggerCoords:{X:-1854042 Y:131072 Z:9040780}]
+        [TriggerRadius:70000]
+        [FactionOwner:SLVG]
       </Description>
       <Icon>Textures\GUI\Icons\Fake.dds</Icon>
       <!--Do Not Edit-->
       <IsPirate>true</IsPirate>
-      <Frequency>2.0</Frequency>
+      <Frequency>1.0</Frequency>
       <Prefabs>
-        <Prefab SubtypeId="Olvaldi Freighter">
+        <Prefab SubtypeId="Farpoint Station">
           <Position>
             <X>0.0</X>
             <Y>0.0</Y>
@@ -34,16 +39,4 @@
     </SpawnGroup>
     <!--Do Not Edit Below Here-->
   </SpawnGroups>
-  <EntityComponents>
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
-        <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-Admin-SRE</SubtypeId>
-      </Id>
-      <Description>
-        [MES Spawn Conditions]
-        [SpaceRandomEncounter:true]
-      </Description>
-    </EntityComponent>
-  </EntityComponents>
 </Definitions>

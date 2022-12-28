@@ -43,6 +43,26 @@
       <FactionIcon>Textures\FactionLogo\Others\OtherIcon_1.dds</FactionIcon>
       <!--Game or Mod Path For Texture File-->
     </Faction>
+    <Faction Tag="SLVG" Founder="Lance Winters CEO">
+      <Id>
+        <TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+        <!--Do Not Edit-->
+        <SubtypeId>WHITEFactionSubID</SubtypeId>
+        <!--Must Be Unique-->
+      </Id>
+      <DisplayName>Silverbranch Group</DisplayName>
+      <IsDefault>true</IsDefault>
+      <DefaultRelation>Neutral</DefaultRelation>
+      <!--Enemies, Neutral, Friends-->
+      <AcceptHumans>false</AcceptHumans>
+      <AutoAcceptMember>false</AutoAcceptMember>
+      <StartingBalance>10000</StartingBalance>
+      <Type>None</Type>
+      <!--None, Miner, Trader, Builder-->
+      <DiscoveredByDefault>true</DiscoveredByDefault>
+      <FactionIcon>Textures\FactionLogo\Others\OtherIcon_1.dds</FactionIcon>
+      <!--Game or Mod Path For Texture File-->
+    </Faction>
     <!--Copy To This Line And Paste Directly Below-->
     <!--Do Not Edit Below Here-->
   </Factions>
