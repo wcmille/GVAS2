@@ -60,7 +60,7 @@ namespace GVA.NPCControl.Server
         {
             if (acct == null) return;
             base.Write(acct);
-            server.WriteToClient(acct);
+            if (acct is Accounting) server.WriteToClient(acct as Accounting);
         }
 
         public override void RequestReport(ulong requestor, IAccount ac)

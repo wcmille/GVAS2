@@ -1,21 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
 namespace GVA.NPCControl
 {
     public interface IAccount
     {
         void AddUnspent();
+        void Display(StringBuilder builder);
         void Read();
         void Write();
         void TimePeriod();
 
-        int Civilian { get; }
-        int Military { get; }
-        double UnspentUnits { get; }
+        string Log();
+
         string ColorFaction { get; }
         string OwningPCTag { get; }
         string OwningNPCTag { get; }

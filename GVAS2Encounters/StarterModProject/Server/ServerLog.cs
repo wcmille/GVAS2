@@ -32,7 +32,7 @@ namespace GVA.NPCControl.Server
 
         public void Log(IAccount acct)
         {
-            LogText += $"{DateTime.UtcNow},Civ: {acct.Civilian} Mil: {acct.Military} Unspent: {acct.UnspentUnits:F2}";
+            LogText += $"{DateTime.UtcNow}, {acct.Log()}";
             Write();
         }
 

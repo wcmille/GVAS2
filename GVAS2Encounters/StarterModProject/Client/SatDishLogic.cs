@@ -1,36 +1,4 @@
-﻿//Done
-//Correct player is charged.
-//Units cost 20M to buy.
-//Pirates only let you buy.
-
-//MES CHANGES**********************************
-//Charge & Refund cleanup.
-//Put in Red Faction
-//Put in Green Faction
-//Design Blue Faction
-
-//MOD CHANGES**********************************
-//Faction is detected based on territory ownership.
-//Handle Updates at specified intervals.
-//When territory lost, reset all relationships
-//When territory won, ally with NPCs
-//Put in Red Faction
-//Put in Green Faction
-
-//OTHER CHANGES********************************
-//Fix NPC economy
-//Update Modlist
-//Fix Ore Map
-
-//NPC conflict occurs:
-//Pirate - Red 
-//Pirate - Green
-//Pirate - Blue
-//Red - Green
-//Red - Blue
-//Green - Blue
-
-using Sandbox.Common.ObjectBuilders;
+﻿using Sandbox.Common.ObjectBuilders;
 using Sandbox.ModAPI;
 using Sandbox.ModAPI.Interfaces.Terminal;
 using System;
@@ -85,24 +53,7 @@ namespace GVA.NPCControl.Client
         private void Dish_AppendingCustomInfo(IMyTerminalBlock block, System.Text.StringBuilder builder)
         {
             var factionOwningTerritory = AccountOwningTerritory(block.GetOwnerFactionTag());
-            //if (factionOwningTerritory == null) MyLog.Default.WriteLine("SATDISH: SupportedFaction: Null Faction");
-            //else MyLog.Default.WriteLine($"SATDISH: SupportedFaction: {factionOwningTerritory.OwningNPCTag}");
-            if (factionOwningTerritory == null || factionOwningTerritory.OwningNPCTag == SharedConstants.BlackFactionTag)
-            {
-                //MyLog.Default.WriteLine("SATDISH: No Faction Found.");
-                var supportedFaction = MyAPIGateway.Session.Factions.TryGetFactionByTag(SharedConstants.BlackFactionTag);
-                builder.AppendLine($"Supporting: {supportedFaction.Name}");
-            }
-            else if (factionOwningTerritory != null && factionOwningTerritory.OwningNPCTag != SharedConstants.BlackFactionTag && factionOwningTerritory.OwningPCTag == block.GetOwnerFactionTag())
-            {
-                builder.AppendLine($"Supporting: {factionOwningTerritory.OwningNPCTag}");
-
-                builder.AppendLine($"{factionOwningTerritory.Military} Military Units");
-                builder.AppendLine($"{factionOwningTerritory.Civilian} Civilian Units");
-
-                builder.AppendLine();
-                builder.AppendLine($"{factionOwningTerritory.UnspentUnits:F2} Unspent NPC Units");
-            }
+            factionOwningTerritory?.Display(builder);
         }
 
         private static IAccount AccountOwningTerritory(string pcFactionTag)
@@ -181,10 +132,9 @@ namespace GVA.NPCControl.Client
                 long credits;
                 if (owningFaction.TryGetBalanceInfo(out credits) && credits >= SharedConstants.tokenPrice)
                 {
-                    double units;
+                    //double units;
                     var acct = AccountOwningTerritory(pcFactionTag);
-                    MyAPIGateway.Utilities.GetVariable($"{acct.ColorFaction}{SharedConstants.CreditsStr}", out units);
-                    MyAPIGateway.Utilities.SetVariable($"{acct.ColorFaction}{SharedConstants.CreditsStr}", units + 1);
+                    acct.AddUnspent();
                     UpdateInfo(block);
                     Client.client.Send(new CommandPacket(owningFaction.Tag, acct.ColorFaction, SharedConstants.CreditsStr));
                 }
@@ -204,22 +154,17 @@ namespace GVA.NPCControl.Client
             var pcFactionTag = block.GetOwnerFactionTag();
             var acct = AccountOwningTerritory(pcFactionTag);
             string factionColor = acct.ColorFaction;
-            int amt;
             if (acct is IZoneFaction)
             {
+                IZoneFaction zf = acct as IZoneFaction;
                 double credits;
                 MyAPIGateway.Utilities.GetVariable($"{factionColor}{SharedConstants.CreditsStr}", out credits);
                 if (credits >= 1.0)
                 {
-                    Client.client.Send(new CommandPacket(block.GetOwnerFactionTag(), factionColor, shipType));
-
-                    MyAPIGateway.Utilities.GetVariable($"{factionColor}{shipType}", out amt);
-                    MyAPIGateway.Utilities.SetVariable($"{factionColor}{shipType}", amt + 1);
-
-                    double units;
-                    MyAPIGateway.Utilities.GetVariable($"{factionColor}{SharedConstants.CreditsStr}", out units);
-                    MyAPIGateway.Utilities.SetVariable($"{factionColor}{SharedConstants.CreditsStr}", units - 1);
+                    if (shipType == SharedConstants.CivilianStr) zf.BuyCivilian();
+                    else if (shipType == SharedConstants.MilitaryStr) zf.BuyMilitary();
                     UpdateInfo(block);
+                    Client.client.Send(new CommandPacket(block.GetOwnerFactionTag(), factionColor, shipType));
                 }
             }
         }

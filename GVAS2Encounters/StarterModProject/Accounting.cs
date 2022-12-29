@@ -1,5 +1,6 @@
 ﻿using Sandbox.ModAPI;
 using System;
+using System.Text;
 
 namespace GVA.NPCControl
 {
@@ -94,6 +95,17 @@ namespace GVA.NPCControl
             else return false;
         }
 
+        public void Display(StringBuilder builder)
+        {
+            builder.AppendLine($"Supporting: {OwningNPCTag}");
+
+            builder.AppendLine($"{Military} Military Units");
+            builder.AppendLine($"{Civilian} Civilian Units");
+
+            builder.AppendLine();
+            builder.AppendLine($"{UnspentUnits:F2} Unspent NPC Units");
+        }
+
         public void Read()
         {
             int civ, mil;
@@ -126,6 +138,11 @@ namespace GVA.NPCControl
             MyAPIGateway.Utilities.SetVariable($"{ColorFaction}{SharedConstants.CreditsStr}", UnspentUnits);
             MyAPIGateway.Utilities.SetVariable($"{ColorFaction}{SharedConstants.OwnerStr}", OwningPCTag);
             MyAPIGateway.Utilities.SetVariable($"{ColorFaction}{SharedConstants.NPCStr}", OwningNPCTag);
+        }
+
+        public string Log()
+        {
+            return $"Civ: { Civilian} Mil: { Military} Unspent: { UnspentUnits:F2}";
         }
     }
 }

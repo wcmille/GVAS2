@@ -1,4 +1,5 @@
 ﻿using Sandbox.ModAPI;
+using System.Text;
 
 namespace GVA.NPCControl
 {
@@ -9,10 +10,6 @@ namespace GVA.NPCControl
             OwningNPCTag = SharedConstants.BlackFactionTag;
             ColorFaction = SharedConstants.BlackFactionColor;
         }
-        public int Civilian { get; private set; }
-
-        public int Military { get; private set; }
-
         public double UnspentUnits { get; private set; }
 
         public string ColorFaction { get; private set; }
@@ -34,23 +31,25 @@ namespace GVA.NPCControl
 
         public void Read()
         {
-            int civ, mil;
             double uu;
 
-            MyAPIGateway.Utilities.GetVariable($"{ColorFaction}{SharedConstants.CivilianStr}", out civ);
-            MyAPIGateway.Utilities.GetVariable($"{ColorFaction}{SharedConstants.MilitaryStr}", out mil);
             MyAPIGateway.Utilities.GetVariable($"{ColorFaction}{SharedConstants.CreditsStr}", out uu);
-
-            Civilian = civ;
-            Military = mil;
             UnspentUnits = uu;
         }
 
         public void Write()
         {
-            MyAPIGateway.Utilities.SetVariable($"{ColorFaction}{SharedConstants.CivilianStr}", Civilian);
-            MyAPIGateway.Utilities.SetVariable($"{ColorFaction}{SharedConstants.MilitaryStr}", Military);
             MyAPIGateway.Utilities.SetVariable($"{ColorFaction}{SharedConstants.CreditsStr}", UnspentUnits);
+        }
+
+        public void Display(StringBuilder builder)
+        {
+            builder.AppendLine($"Supporting: {OwningNPCTag}");
+        }
+
+        public string Log()
+        {
+            return "--";
         }
     }
 }

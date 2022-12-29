@@ -24,7 +24,7 @@ namespace GVA.NPCControl.Server
             networking.SendToPlayer(packet, client);
         }
 
-        public void WriteToClient(IAccount acct)
+        public void WriteToClient(Accounting acct)
         {
             FactionValuesPacket packet = new FactionValuesPacket(acct.OwningPCTag, acct.ColorFaction, acct.Civilian, acct.Military, acct.UnspentUnits);
             networking.RelayToClients(packet);
