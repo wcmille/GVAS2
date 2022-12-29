@@ -4,11 +4,11 @@ namespace GVA.NPCControl.Server
 {
     public class Server
     {
-        Networking networking;
+        INetworking networking;
 
-        public Server(ushort channel, IPacketReceiver receiver)
+        public Server(INetworking networking)
         {
-            networking = new Networking(channel, receiver);
+            this.networking = networking;
             networking.Register();
         }
 
@@ -16,7 +16,6 @@ namespace GVA.NPCControl.Server
         {
             networking?.Unregister();
             networking = null;
-            //world = null;
         }
 
         public void WriteToClient(ulong client, ServerLog log)

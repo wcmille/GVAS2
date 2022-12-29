@@ -8,6 +8,15 @@ using VRage.Utils;
 
 namespace Digi.Example_NetworkProtobuf
 {
+    public interface INetworking
+    {
+        void Register();
+        void Unregister();
+        void SendToServer(PacketBase packet);
+        void SendToPlayer(PacketBase packet, ulong steamId);
+        void RelayToClients(PacketBase packet, byte[] rawData = null);
+    }
+
     /// <summary>
     /// Simple network communication example.
     /// 
@@ -19,18 +28,18 @@ namespace Digi.Example_NetworkProtobuf
     ///  If you need senderId to be secure, a more complicated process is required involving sending
     ///   every player a unique random ID and they sending that ID would confirm their identity.
     /// </summary>
-    public class Networking
+    public class Networking : INetworking
     {
         public readonly ushort ChannelId;
         public const ushort ModLast4 = 7481;
-        readonly IPacketReceiver ipr;
+        readonly Action<PacketBase> ipr;
 
         private List<IMyPlayer> tempPlayers = null;
 
         /// <summary>
         /// <paramref name="channelId"/> must be unique from all other mods that also use network packets.
         /// </summary>
-        public Networking(ushort channelId, IPacketReceiver ipr)
+        public Networking(ushort channelId, Action<PacketBase> ipr)
         {
             ChannelId = channelId;
             this.ipr = ipr;
@@ -74,7 +83,7 @@ namespace Digi.Example_NetworkProtobuf
 
         private void HandlePacket(PacketBase packet, byte[] rawData = null)
         {
-            ipr.Received(packet);
+            ipr(packet);
             //var relay = ipr.Received(packet);
             //if (relay) RelayToClients(packet, rawData);
         }

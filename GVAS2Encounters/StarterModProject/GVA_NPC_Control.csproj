@@ -112,12 +112,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Client\Client.cs" />
-    <Compile Include="Client\ClientSession.cs" />
     <Compile Include="Client\ClientWorld.cs" />
     <Compile Include="DialogResponsePacket.cs" />
     <Compile Include="IAccount.cs" />
     <Compile Include="IClientCommands.cs" />
-    <Compile Include="IPacketReceiver.cs" />
     <Compile Include="IServerCommands.cs" />
     <Compile Include="Accounting.cs" />
     <Compile Include="CommandPacket.cs" />
@@ -127,13 +125,15 @@
     <Compile Include="Server\Server.cs" />
     <Compile Include="Server\ServerLog.cs" />
     <Compile Include="Server\ServerWorld.cs" />
-    <Compile Include="Server\Session.cs" />
+    <Compile Include="Server\ServerSession.cs" />
     <Compile Include="nNetworking.cs" />
     <Compile Include="nPacketBase.cs" />
     <Compile Include="FactionValuesPacket.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Client\SatDishLogic.cs" />
+    <Compile Include="SE\Session.cs" />
     <Compile Include="SharedConstants.cs" />
+    <Compile Include="SinglePlayer\SPNetwork.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
@@ -143,6 +143,8 @@ rd "C:\Users\wayne\AppData\Roaming\SpaceEngineers\Mods\GVAS2Encounters\Textures\
 xcopy $(ProjectDir)*.cs "C:\Users\wayne\AppData\Roaming\SpaceEngineers\Mods\GVAS2Encounters\Data\Scripts\GVA_NPC_Control\" /y
 xcopy $(ProjectDir)Client\*.cs "C:\Users\wayne\AppData\Roaming\SpaceEngineers\Mods\GVAS2Encounters\Data\Scripts\GVA_NPC_Control\" /y
 xcopy $(ProjectDir)Server\*.cs "C:\Users\wayne\AppData\Roaming\SpaceEngineers\Mods\GVAS2Encounters\Data\Scripts\GVA_NPC_Control\" /y
+xcopy $(ProjectDir)SE\*.cs "C:\Users\wayne\AppData\Roaming\SpaceEngineers\Mods\GVAS2Encounters\Data\Scripts\GVA_NPC_Control\" /y
+xcopy $(ProjectDir)SinglePlayer\*.cs "C:\Users\wayne\AppData\Roaming\SpaceEngineers\Mods\GVAS2Encounters\Data\Scripts\GVA_NPC_Control\" /y
 xcopy $(SolutionDir)Data "C:\Users\wayne\AppData\Roaming\SpaceEngineers\Mods\GVAS2Encounters\Data\" /y /s
 xcopy $(SolutionDir)Textures "C:\Users\wayne\AppData\Roaming\SpaceEngineers\Mods\GVAS2Encounters\Textures\" /y /s</PostBuildEvent>
   </PropertyGroup>

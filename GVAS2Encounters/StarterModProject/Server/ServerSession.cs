@@ -2,39 +2,56 @@
 using Sandbox.ModAPI;
 using System;
 using System.Linq;
-using VRage.Game.Components;
 using VRage.Game.ModAPI;
 using VRage.Utils;
 using VRageMath;
 
 namespace GVA.NPCControl.Server
 {
-    [MySessionComponentDescriptor(MyUpdateOrder.AfterSimulation)]
-    public class Session : MySessionComponentBase, IPacketReceiver
+    public class ServerSession
     {
         private Server server = null;
         private ServerWorld world = null;
-        MESApi mes = null;
+        readonly MESApi mes = null;
 
         //delegate bool CustomMESCondition(string spawnGroupSubId, string SpawnConditionProfile, string typeOfSpawn, Vector3D location);
         System.Func<string, string, string, Vector3D, bool> bc5, bc10, bc20, bc40;
         System.Func<string, string, string, Vector3D, bool> rc5, rc10, rc20, rc40;
 
-        public override void LoadData()
+        public ServerSession()
         {
-            base.LoadData();
             if (MyAPIGateway.Multiplayer.IsServer)
             {
                 mes = new MESApi();
             }
         }
-
-        public override void BeforeStart()
+        public void UnloadData()
         {
-            base.BeforeStart();
             if (MyAPIGateway.Multiplayer.IsServer)
             {
-                server = new Server(Networking.ModLast4, this);
+                mes.RegisterCustomSpawnCondition(false, "BlueCivMoreThan5", bc5);
+                mes.RegisterCustomSpawnCondition(false, "BlueCivMoreThan10", bc10);
+                mes.RegisterCustomSpawnCondition(false, "BlueCivMoreThan20", bc20);
+                mes.RegisterCustomSpawnCondition(false, "BlueCivMoreThan40", bc40);
+
+                mes.RegisterCustomSpawnCondition(false, "RedCivMoreThan5", rc5);
+                mes.RegisterCustomSpawnCondition(false, "RedCivMoreThan10", rc10);
+                mes.RegisterCustomSpawnCondition(false, "RedCivMoreThan20", rc20);
+                mes.RegisterCustomSpawnCondition(false, "RedCivMoreThan40", rc40);
+
+                mes.RegisterSuccessfulSpawnAction(LogSpawn, false);
+            }
+
+            if (server != null) server.Unload();
+            server = null;
+            world = null;
+        }
+
+        public void BeforeStart(INetworking networking)
+        {
+            if (MyAPIGateway.Multiplayer.IsServer)
+            {
+                server = new Server(networking);
                 world = new ServerWorld(server);
                 world.Time();
 
@@ -85,28 +102,6 @@ namespace GVA.NPCControl.Server
             int civ;
             MyAPIGateway.Utilities.GetVariable($"{color}{counterType}", out civ);
             return civ >= limit;
-        }
-
-        protected override void UnloadData()
-        {
-            if (MyAPIGateway.Multiplayer.IsServer)
-            {
-                mes.RegisterCustomSpawnCondition(false, "BlueCivMoreThan5", bc5);
-                mes.RegisterCustomSpawnCondition(false, "BlueCivMoreThan10", bc10);
-                mes.RegisterCustomSpawnCondition(false, "BlueCivMoreThan20", bc20);
-                mes.RegisterCustomSpawnCondition(false, "BlueCivMoreThan40", bc40);
-
-                mes.RegisterCustomSpawnCondition(false, "RedCivMoreThan5", rc5);
-                mes.RegisterCustomSpawnCondition(false, "RedCivMoreThan10", rc10);
-                mes.RegisterCustomSpawnCondition(false, "RedCivMoreThan20", rc20);
-                mes.RegisterCustomSpawnCondition(false, "RedCivMoreThan40", rc40);
-
-                mes.RegisterSuccessfulSpawnAction(LogSpawn, false);
-            }
-
-            if (server != null) server.Unload();
-            server = null;
-            world = null;
         }
 
         public void Received(PacketBase packet)

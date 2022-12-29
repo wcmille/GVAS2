@@ -107,7 +107,7 @@ namespace GVA.NPCControl.Client
 
         private static IAccount AccountOwningTerritory(string pcFactionTag)
         {
-            return ClientSession.client.World.GetAccountByPCOwner(pcFactionTag);
+            return Client.client.World.GetAccountByPCOwner(pcFactionTag);
         }
 
         private static void AddLabel(string labelText)
@@ -168,7 +168,7 @@ namespace GVA.NPCControl.Client
             //var owningFaction = MyAPIGateway.Session.Factions.TryGetFactionByTag(pcFactionTag);
             if (acct is IZoneFaction)
             {
-                ClientSession.client.World.RequestReport(MyAPIGateway.Multiplayer.MyId, acct);
+                Client.client.World.RequestReport(MyAPIGateway.Multiplayer.MyId, acct);
             }
         }
 
@@ -183,7 +183,7 @@ namespace GVA.NPCControl.Client
                 {
                     double units;
                     var acct = AccountOwningTerritory(pcFactionTag);
-                    ClientSession.client.Send(new CommandPacket(owningFaction.Tag, acct.ColorFaction, SharedConstants.CreditsStr));
+                    Client.client.Send(new CommandPacket(owningFaction.Tag, acct.ColorFaction, SharedConstants.CreditsStr));
 
                     MyAPIGateway.Utilities.GetVariable($"{acct.ColorFaction}{SharedConstants.CreditsStr}", out units);
                     MyAPIGateway.Utilities.SetVariable($"{acct.ColorFaction}{SharedConstants.CreditsStr}", units + 1);
@@ -212,7 +212,7 @@ namespace GVA.NPCControl.Client
                 MyAPIGateway.Utilities.GetVariable($"{factionColor}{SharedConstants.CreditsStr}", out credits);
                 if (credits >= 1.0)
                 {
-                    ClientSession.client.Send(new CommandPacket(block.GetOwnerFactionTag(), factionColor, shipType));
+                    Client.client.Send(new CommandPacket(block.GetOwnerFactionTag(), factionColor, shipType));
 
                     MyAPIGateway.Utilities.GetVariable($"{factionColor}{shipType}", out amt);
                     MyAPIGateway.Utilities.SetVariable($"{factionColor}{shipType}", amt + 1);
