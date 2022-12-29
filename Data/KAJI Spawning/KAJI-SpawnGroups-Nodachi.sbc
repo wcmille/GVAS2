@@ -4,31 +4,31 @@
 		<SpawnGroup>
 			<Id>
 				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
-				<SubtypeId>GVA-Red-Interceptor</SubtypeId> 
+				<SubtypeId>GVA-Red-DDO</SubtypeId> 
 			</Id>
 			<Description>
         [Modular Encounters SpawnGroup]
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
-        [ManipulationProfiles:GVA-Manipulation-Red-FighterName]
+        [ManipulationProfiles:GVA-Manipulation-Red-DestroyerName]
 
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
 
-        [SpawnConditionsProfiles:Red-Spawns-RO]
+        [SpawnConditionsProfiles:Red-Spawns-RM3O]
       </Description>
 			<IsPirate>true</IsPirate>
-			<Frequency>95.0</Frequency>
+			<Frequency>2.0</Frequency>
 			<Prefabs>
-				<Prefab SubtypeId="Kunai Interceptor">
+				<Prefab SubtypeId="Nodachi-class Destroyer">
 					<Position>
 						<X>0.0</X>
 						<Y>0.0</Y>
 						<Z>0.0</Z>
 					</Position>
 					<Speed>50</Speed>
-					<Behaviour>GVA-KAJI-Behavior-Kunai</Behaviour>
+					<Behaviour>GVA-KAJI-Behavior-Nodachi</Behaviour>
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>

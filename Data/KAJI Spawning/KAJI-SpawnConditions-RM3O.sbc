@@ -4,13 +4,22 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Red-RedAlienRegion-Fixed-Spawns</SubtypeId>
+        <SubtypeId>Red-Spawns-RM3O</SubtypeId>
       </Id>
       <Description>
         [MES Spawn Conditions]
+        [SpaceCargoShip:true]
+
+        [AtmosphericCargoShip:true]
+        [SkipAirDensityCheck:true]
+
+        [GravityCargoShip:true]
+
         [FactionOwner:KAJI]
         [ZoneConditions:GVA-ZoneConditionProfile-RedAlienRegion]
-        [PlanetaryInstallation:true]
+        [UseSandboxCounterCosts:true]
+        [SandboxCounterCostNames:RedMilitary]
+        [SandboxCounterCostAmounts:3]
       </Description>
     </EntityComponent>
   </EntityComponents>

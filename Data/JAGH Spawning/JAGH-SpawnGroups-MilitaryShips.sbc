@@ -82,7 +82,7 @@
         [SpawnConditionsProfiles:Blue-BlueAlienRegion-DDO-Spawns]
       </Description>
       <IsPirate>true</IsPirate>
-      <Frequency>5.0</Frequency>
+      <Frequency>2.0</Frequency>
       <Prefabs>
         <Prefab SubtypeId="Valkyrie-class Destroyer">
           <Position>

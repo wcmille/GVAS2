@@ -4,7 +4,7 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Red-RedAlienRegion-Interceptor-Spawns</SubtypeId>
+        <SubtypeId>Red-Spawns-RM1O</SubtypeId>
       </Id>
       <Description>
         [MES Spawn Conditions]
@@ -17,6 +17,9 @@
 
         [FactionOwner:KAJI]
         [ZoneConditions:GVA-ZoneConditionProfile-RedAlienRegion]
+        [UseSandboxCounterCosts:true]
+        [SandboxCounterCostNames:RedMilitary]
+        [SandboxCounterCostAmounts:1]
       </Description>
     </EntityComponent>
   </EntityComponents>

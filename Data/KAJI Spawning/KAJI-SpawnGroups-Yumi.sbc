@@ -16,7 +16,7 @@
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
 
-        [SpawnConditionsProfiles:Red-RedAlienRegion-FFO-Spawns]
+        [SpawnConditionsProfiles:Red-Spawns-RM1O]
       </Description>
 			<IsPirate>true</IsPirate>
 			<Frequency>5.0</Frequency>
