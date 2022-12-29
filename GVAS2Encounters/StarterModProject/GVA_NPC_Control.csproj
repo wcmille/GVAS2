@@ -115,8 +115,6 @@
     <Compile Include="Client\ClientWorld.cs" />
     <Compile Include="DialogResponsePacket.cs" />
     <Compile Include="IAccount.cs" />
-    <Compile Include="IClientCommands.cs" />
-    <Compile Include="IServerCommands.cs" />
     <Compile Include="Accounting.cs" />
     <Compile Include="CommandPacket.cs" />
     <Compile Include="IWorld.cs" />
@@ -133,6 +131,7 @@
     <Compile Include="Client\SatDishLogic.cs" />
     <Compile Include="SE\Session.cs" />
     <Compile Include="SharedConstants.cs" />
+    <Compile Include="SharedWorld.cs" />
     <Compile Include="SinglePlayer\SPNetwork.cs" />
   </ItemGroup>
   <ItemGroup />

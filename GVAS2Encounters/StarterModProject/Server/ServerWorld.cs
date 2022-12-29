@@ -156,8 +156,12 @@ namespace GVA.NPCControl.Server
             {
                 foreach (var acct in list)
                 {
+                    if (acct.ColorFaction == SharedConstants.BlueFactionColor) blueLog.Log(acct);
+                    else if (acct.ColorFaction == SharedConstants.RedFactionColor) redLog.Log(acct);
                     acct.TimePeriod();
                     Write(acct);
+                    if (acct.ColorFaction == SharedConstants.BlueFactionColor) blueLog.Log(acct);
+                    else if (acct.ColorFaction == SharedConstants.RedFactionColor) redLog.Log(acct);
                 }
                 var newTime = lastRun.AddHours(SharedConstants.TimeDeltaHours);
                 WriteTime(newTime);

@@ -183,11 +183,10 @@ namespace GVA.NPCControl.Client
                 {
                     double units;
                     var acct = AccountOwningTerritory(pcFactionTag);
-                    Client.client.Send(new CommandPacket(owningFaction.Tag, acct.ColorFaction, SharedConstants.CreditsStr));
-
                     MyAPIGateway.Utilities.GetVariable($"{acct.ColorFaction}{SharedConstants.CreditsStr}", out units);
                     MyAPIGateway.Utilities.SetVariable($"{acct.ColorFaction}{SharedConstants.CreditsStr}", units + 1);
                     UpdateInfo(block);
+                    Client.client.Send(new CommandPacket(owningFaction.Tag, acct.ColorFaction, SharedConstants.CreditsStr));
                 }
                 else
                 {

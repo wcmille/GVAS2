@@ -30,6 +30,12 @@ namespace GVA.NPCControl.Server
             Write();
         }
 
+        public void Log(IAccount acct)
+        {
+            LogText += $"{DateTime.UtcNow},Civ: {acct.Civilian} Mil: {acct.Military} Unspent: {acct.UnspentUnits:F2}";
+            Write();
+        }
+
         /// <summary>
         /// Read the log from disk.
         /// </summary>
