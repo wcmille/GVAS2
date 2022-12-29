@@ -2,6 +2,7 @@
 using Sandbox.ModAPI;
 using Sandbox.ModAPI.Interfaces.Terminal;
 using System;
+using System.Collections.Generic;
 using System.Text;
 using VRage.Game.Components;
 using VRage.ModAPI;
@@ -14,6 +15,7 @@ namespace GVA.NPCControl.Client
     public class SatDishLogic : MyGameLogicComponent
     {
         private static bool controlsInit;
+        readonly List<IAccount> owned = new List<IAccount>();
 
         public override void Init(MyObjectBuilder_EntityBase objectBuilder)
         {
@@ -52,13 +54,17 @@ namespace GVA.NPCControl.Client
 
         private void Dish_AppendingCustomInfo(IMyTerminalBlock block, System.Text.StringBuilder builder)
         {
-            var factionOwningTerritory = AccountOwningTerritory(block.GetOwnerFactionTag());
-            factionOwningTerritory?.Display(builder);
+            
+            AccountOwningTerritory(block.GetOwnerFactionTag(), owned);
+            if (owned.Count == 1)
+            {
+                owned[0].Display(builder);
+            }
         }
 
-        private static IAccount AccountOwningTerritory(string pcFactionTag)
+        private static void AccountOwningTerritory(string pcFactionTag, List<IAccount> owned)
         {
-            return Client.client.World.GetAccountByPCOwner(pcFactionTag);
+            Client.client.World.GetAccountByPCOwner(pcFactionTag, owned);
         }
 
         private static void AddLabel(string labelText)
@@ -73,8 +79,8 @@ namespace GVA.NPCControl.Client
 
         private static void AddButton(string buttonText, Action<IMyTerminalBlock> action, bool unconditional = false)
         {
-            var control = MyAPIGateway.TerminalControls.CreateControl<IMyTerminalControlButton, IMyRadioAntenna>("GVA.SatDishLogic.BuyCredits.Button");
-            control.Enabled = x => unconditional || AccountOwningTerritory(x.GetOwnerFactionTag()) is IZoneFaction;
+            var control = MyAPIGateway.TerminalControls.CreateControl<IMyTerminalControlButton, IMyRadioAntenna>($"GVA.SatDishLogic.Button.{buttonText}");
+            control.Enabled = x => unconditional || OneIZone(x);
             control.SupportsMultipleBlocks = false;
             control.Visible = x => (x?.GameLogic?.GetAs<SatDishLogic>() != null);
             control.Title = MyStringId.GetOrCompute(buttonText);
@@ -82,12 +88,19 @@ namespace GVA.NPCControl.Client
             MyAPIGateway.TerminalControls.AddControl<IMyRadioAntenna>(control);
 
             StringBuilder builder = new StringBuilder(buttonText);
-            var myAction = MyAPIGateway.TerminalControls.CreateAction<IMyRadioAntenna>("GVA.SatDishLogic.BuyCredits.Action");
+            var myAction = MyAPIGateway.TerminalControls.CreateAction<IMyRadioAntenna>($"GVA.SatDishLogic.Action.{buttonText}");
             myAction.Name = builder;
             myAction.ValidForGroups = false;
             myAction.Action = action;
-            myAction.Enabled = x => unconditional || AccountOwningTerritory(x.GetOwnerFactionTag()) is IZoneFaction; 
+            myAction.Enabled = x => unconditional || OneIZone(x);
             MyAPIGateway.TerminalControls.AddAction<IMyRadioAntenna>(myAction);
+        }
+
+        private static bool OneIZone(IMyTerminalBlock x)
+        {
+            List<IAccount> owned = new List<IAccount>();
+            AccountOwningTerritory(x.GetOwnerFactionTag(), owned);
+            return (owned.Count == 1 && owned[0] is IZoneFaction);
         }
 
         private static void AddSeparator(string id)
@@ -107,19 +120,23 @@ namespace GVA.NPCControl.Client
             AddButton("Buy NPC Unit (20M SC)", BuyCredits, true);
             AddButton("Commission Military", x => IncreaseNPCAndNotify(x, SharedConstants.MilitaryStr));
             AddButton("Commission Civilian", x => IncreaseNPCAndNotify(x, SharedConstants.CivilianStr));
-            AddSeparator("FleetCommandSeparator");
+            AddSeparator("GVA.SatDishLogic.FleetCommandSeparator");
             AddButton("Read Log", RequestLog);
-            AddSeparator("LogGroupSeparator");
+            AddSeparator("GVA.SatDishLogic.LogGroupSeparator");
         }
 
         private static void RequestLog(IMyTerminalBlock block)
         {
             var pcFactionTag = block.GetOwnerFactionTag();
-            var acct = AccountOwningTerritory(pcFactionTag);
-            //var owningFaction = MyAPIGateway.Session.Factions.TryGetFactionByTag(pcFactionTag);
-            if (acct is IZoneFaction)
+            List<IAccount> owned = new List<IAccount>();
+            AccountOwningTerritory(pcFactionTag, owned);
+            if (owned.Count == 1)
             {
-                Client.client.World.RequestReport(MyAPIGateway.Multiplayer.MyId, acct);
+                var acct = owned[0];
+                if (acct is IZoneFaction)
+                {
+                    Client.client.World.RequestReport(MyAPIGateway.Multiplayer.MyId, acct);
+                }
             }
         }
 
@@ -133,10 +150,15 @@ namespace GVA.NPCControl.Client
                 if (owningFaction.TryGetBalanceInfo(out credits) && credits >= SharedConstants.tokenPrice)
                 {
                     //double units;
-                    var acct = AccountOwningTerritory(pcFactionTag);
-                    acct.AddUnspent();
-                    UpdateInfo(block);
-                    Client.client.Send(new CommandPacket(owningFaction.Tag, acct.ColorFaction, SharedConstants.CreditsStr));
+                    List<IAccount> owned = new List<IAccount>();
+                    AccountOwningTerritory(pcFactionTag, owned);
+                    if (owned.Count == 1)
+                    {
+                        var acct = owned[0];
+                        acct.AddUnspent();
+                        UpdateInfo(block);
+                        Client.client.Send(new CommandPacket(owningFaction.Tag, acct.ColorFaction, SharedConstants.CreditsStr));
+                    }
                 }
                 else
                 {
@@ -152,19 +174,25 @@ namespace GVA.NPCControl.Client
         private static void IncreaseNPCAndNotify(IMyTerminalBlock block, string shipType)
         {
             var pcFactionTag = block.GetOwnerFactionTag();
-            var acct = AccountOwningTerritory(pcFactionTag);
-            string factionColor = acct.ColorFaction;
-            if (acct is IZoneFaction)
+            List<IAccount> owned = new List<IAccount>();
+            AccountOwningTerritory(pcFactionTag, owned);
+            if (owned.Count == 1)
             {
-                IZoneFaction zf = acct as IZoneFaction;
-                double credits;
-                MyAPIGateway.Utilities.GetVariable($"{factionColor}{SharedConstants.CreditsStr}", out credits);
-                if (credits >= 1.0)
+                var acct = owned[0];
+
+                string factionColor = acct.ColorFaction;
+                if (acct is IZoneFaction)
                 {
-                    if (shipType == SharedConstants.CivilianStr) zf.BuyCivilian();
-                    else if (shipType == SharedConstants.MilitaryStr) zf.BuyMilitary();
-                    UpdateInfo(block);
-                    Client.client.Send(new CommandPacket(block.GetOwnerFactionTag(), factionColor, shipType));
+                    IZoneFaction zf = acct as IZoneFaction;
+                    double credits;
+                    MyAPIGateway.Utilities.GetVariable($"{factionColor}{SharedConstants.CreditsStr}", out credits);
+                    if (credits >= 1.0)
+                    {
+                        if (shipType == SharedConstants.CivilianStr) zf.BuyCivilian();
+                        else if (shipType == SharedConstants.MilitaryStr) zf.BuyMilitary();
+                        UpdateInfo(block);
+                        Client.client.Send(new CommandPacket(block.GetOwnerFactionTag(), factionColor, shipType));
+                    }
                 }
             }
         }

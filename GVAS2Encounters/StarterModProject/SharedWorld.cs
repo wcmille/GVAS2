@@ -26,13 +26,14 @@ namespace GVA.NPCControl
             return null;
         }
 
-        public IAccount GetAccountByPCOwner(string factionTag)
+        public void GetAccountByPCOwner(string factionTag, List<IAccount> accounts)
         {
+            accounts.Clear();
             foreach (var f in list)
             {
-                if (f.OwningPCTag == factionTag) return f;
+                if (f.OwningPCTag == factionTag) accounts.Add(f);
             }
-            return black;
+            if (accounts.Count == 0) accounts.Add(black);
         }
 
         public IAccount GetAccountByNPCOwner(string factionTag)

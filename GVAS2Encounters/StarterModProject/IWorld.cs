@@ -7,7 +7,7 @@ namespace GVA.NPCControl
         IAccount GetAccountByColor(string color);
         void Write(IAccount acct);
 
-        IAccount GetAccountByPCOwner(string factionTag);
+        void GetAccountByPCOwner(string factionTag, List<IAccount> accounts);
         void RequestReport(ulong requestor, IAccount ac);
     }
 }
