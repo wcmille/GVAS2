@@ -170,14 +170,18 @@ namespace GVA.NPCControl.Server
 
         private void WriteTime(DateTime newTime)
         {
-            MyAPIGateway.Utilities.SetVariable($"{SharedConstants.TimeStr}", newTime);
+            MyAPIGateway.Utilities.SetVariable($"{SharedConstants.ModNamespace}.{SharedConstants.TimeStr}", newTime);
         }
 
         private DateTime ReadTime()
         {
             DateTime time;
-            MyAPIGateway.Utilities.GetVariable($"{SharedConstants.TimeStr}", out time);
-            if (time == DateTime.MinValue) time = DateTime.Now;
+            MyAPIGateway.Utilities.GetVariable($"{SharedConstants.ModNamespace}.{SharedConstants.TimeStr}", out time);
+            if (time == DateTime.MinValue)
+            {
+                time = DateTime.Now;
+                WriteTime(time);
+            }
             return time;
         }
         #endregion

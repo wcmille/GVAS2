@@ -24,5 +24,7 @@
         public const int AlliedRep = 1000;
 
         public static readonly string ReportCommand = "Report";
+
+        public static readonly string ModNamespace = "GVA.NPCControl";
     }
 }
