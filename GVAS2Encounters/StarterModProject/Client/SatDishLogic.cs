@@ -69,7 +69,7 @@ namespace GVA.NPCControl.Client
 
         private static void AddLabel(string labelText)
         {
-            var label = MyAPIGateway.TerminalControls.CreateControl<IMyTerminalControlLabel, IMyRadioAntenna>(labelText);
+            var label = MyAPIGateway.TerminalControls.CreateControl<IMyTerminalControlLabel, IMyRadioAntenna>($"{SharedConstants.ModNamespace}.Label.{labelText}");
             label.Enabled = x => true;
             label.SupportsMultipleBlocks = false;
             label.Visible = x => (x?.GameLogic?.GetAs<SatDishLogic>() != null);
@@ -79,7 +79,7 @@ namespace GVA.NPCControl.Client
 
         private static void AddButton(string buttonText, Action<IMyTerminalBlock> action, bool unconditional = false)
         {
-            var control = MyAPIGateway.TerminalControls.CreateControl<IMyTerminalControlButton, IMyRadioAntenna>($"GVA.SatDishLogic.Button.{buttonText}");
+            var control = MyAPIGateway.TerminalControls.CreateControl<IMyTerminalControlButton, IMyRadioAntenna>($"{SharedConstants.ModNamespace}.Button.{buttonText}");
             control.Enabled = x => unconditional || OneIZone(x);
             control.SupportsMultipleBlocks = false;
             control.Visible = x => (x?.GameLogic?.GetAs<SatDishLogic>() != null);
@@ -88,7 +88,7 @@ namespace GVA.NPCControl.Client
             MyAPIGateway.TerminalControls.AddControl<IMyRadioAntenna>(control);
 
             StringBuilder builder = new StringBuilder(buttonText);
-            var myAction = MyAPIGateway.TerminalControls.CreateAction<IMyRadioAntenna>($"GVA.SatDishLogic.Action.{buttonText}");
+            var myAction = MyAPIGateway.TerminalControls.CreateAction<IMyRadioAntenna>($"{SharedConstants.ModNamespace}.Action.{buttonText}");
             myAction.Name = builder;
             myAction.ValidForGroups = false;
             myAction.Action = action;
@@ -105,7 +105,7 @@ namespace GVA.NPCControl.Client
 
         private static void AddSeparator(string id)
         {
-            var activate = MyAPIGateway.TerminalControls.CreateControl<IMyTerminalControlSeparator, IMyRadioAntenna>(id);
+            var activate = MyAPIGateway.TerminalControls.CreateControl<IMyTerminalControlSeparator, IMyRadioAntenna>($"{SharedConstants.ModNamespace}.Separator.{id}");
             activate.Enabled = x => true;
             activate.SupportsMultipleBlocks = false;
             activate.Visible = x => (x?.GameLogic?.GetAs<SatDishLogic>() != null);
@@ -120,9 +120,9 @@ namespace GVA.NPCControl.Client
             AddButton("Buy NPC Unit (20M SC)", BuyCredits, true);
             AddButton("Commission Military", x => IncreaseNPCAndNotify(x, SharedConstants.MilitaryStr));
             AddButton("Commission Civilian", x => IncreaseNPCAndNotify(x, SharedConstants.CivilianStr));
-            AddSeparator("GVA.SatDishLogic.FleetCommandSeparator");
+            AddSeparator("FleetCommandSeparator");
             AddButton("Read Log", RequestLog);
-            AddSeparator("GVA.SatDishLogic.LogGroupSeparator");
+            AddSeparator("LogGroupSeparator");
         }
 
         private static void RequestLog(IMyTerminalBlock block)
