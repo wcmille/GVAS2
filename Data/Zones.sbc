@@ -78,5 +78,38 @@
         [MaxDistanceFromZoneCenter:50000]
       </Description>
     </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Zone-PirateZone</SubtypeId>
+      </Id>
+      <Description>
+        [MES Zone]
+
+        [PublicName:Pirate Zone]
+
+        [Active:true]
+        [Persistent:true]
+        [Strict:false]
+        [UseZoneAnnounce:true]
+        [ZoneEnterAnnounce:Entering: Pirate Zone]
+        [ZoneLeaveAnnounce:Leaving: Pirate Zone]
+        [Coordinates:{X:666666 Y:666666 Z:6666666}]
+        [Radius:50000]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-ZoneConditionProfile-PirateZone</SubtypeId>
+      </Id>
+      <Description>
+        [MES Zone Conditions]
+        [ZoneName:Pirate Zone]
+        [MaxDistanceFromZoneCenter:50000]
+      </Description>
+    </EntityComponent>
   </EntityComponents>
 </Definitions>

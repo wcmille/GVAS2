@@ -32,7 +32,7 @@ namespace GVA.NPCControl.Server
 
         public void Log(IAccount acct)
         {
-            LogText += $"{DateTime.UtcNow}, {acct.Log()}";
+            LogText += $"{DateTime.UtcNow}, {acct.Log()}\n";
             Write();
         }
 
@@ -61,6 +61,7 @@ namespace GVA.NPCControl.Server
         /// </summary>
         public void Write()
         {
+            CutTimes();
             using (var file = MyAPIGateway.Utilities.WriteFileInWorldStorage(filename, typeof(ServerLog)))
             {
                 file.Write(LogText);

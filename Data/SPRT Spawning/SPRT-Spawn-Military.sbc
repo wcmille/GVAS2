@@ -10,11 +10,12 @@
         [Modular Encounters SpawnGroup]
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ManipulationProfiles:GVA-Manipulation-Black-DestroyerName]
-        
+
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
-        
+
         [SpawnConditionsProfiles:Black-BlueAlienRegion-Space-Spawns]
+        [SpawnConditionsProfiles:GVA-Black-PirateZone]
         [FactionOwner:SPRT]
       </Description>
 			<IsPirate>true</IsPirate>

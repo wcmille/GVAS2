@@ -13,5 +13,17 @@
         [SpaceCargoShip:true]
       </Description>
     </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Black-PirateZone</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+        [FactionOwner:SPRT]
+        [ZoneConditions:GVA-ZoneConditionProfile-PirateZone]
+        [SpaceCargoShip:true]
+      </Description>
+    </EntityComponent>
   </EntityComponents>
 </Definitions>
