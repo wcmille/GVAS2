@@ -15,8 +15,6 @@ namespace GVA.NPCControl.Server
         readonly MESApi mes = null;
 
         //delegate bool CustomMESCondition(string spawnGroupSubId, string SpawnConditionProfile, string typeOfSpawn, Vector3D location);
-        System.Func<string, string, string, Vector3D, bool> bc5, bc10, bc20, bc40;
-        System.Func<string, string, string, Vector3D, bool> rc5, rc10, rc20, rc40;
 
         public ServerSession()
         {
@@ -29,15 +27,15 @@ namespace GVA.NPCControl.Server
         {
             if (MyAPIGateway.Multiplayer.IsServer)
             {
-                mes.RegisterCustomSpawnCondition(false, "BlueCivMoreThan5", bc5);
-                mes.RegisterCustomSpawnCondition(false, "BlueCivMoreThan10", bc10);
-                mes.RegisterCustomSpawnCondition(false, "BlueCivMoreThan20", bc20);
-                mes.RegisterCustomSpawnCondition(false, "BlueCivMoreThan40", bc40);
+                mes.RegisterCustomSpawnCondition(false, "BlueCivMoreThan5", null);
+                mes.RegisterCustomSpawnCondition(false, "BlueCivMoreThan10", null);
+                mes.RegisterCustomSpawnCondition(false, "BlueCivMoreThan20", null);
+                mes.RegisterCustomSpawnCondition(false, "BlueCivMoreThan40", null);
 
-                mes.RegisterCustomSpawnCondition(false, "RedCivMoreThan5", rc5);
-                mes.RegisterCustomSpawnCondition(false, "RedCivMoreThan10", rc10);
-                mes.RegisterCustomSpawnCondition(false, "RedCivMoreThan20", rc20);
-                mes.RegisterCustomSpawnCondition(false, "RedCivMoreThan40", rc40);
+                mes.RegisterCustomSpawnCondition(false, "RedCivMoreThan5", null);
+                mes.RegisterCustomSpawnCondition(false, "RedCivMoreThan10", null);
+                mes.RegisterCustomSpawnCondition(false, "RedCivMoreThan20", null);
+                mes.RegisterCustomSpawnCondition(false, "RedCivMoreThan40", null);
 
                 mes.RegisterSuccessfulSpawnAction(LogSpawn, false);
             }
@@ -54,6 +52,9 @@ namespace GVA.NPCControl.Server
                 server = new Server(networking);
                 world = new ServerWorld(server);
                 world.Time();
+
+                Func<string, string, string, Vector3D, bool> bc5, bc10, bc20, bc40;
+                Func<string, string, string, Vector3D, bool> rc5, rc10, rc20, rc40;
 
                 //MyLog.Default.WriteLine($"Blue Registration {mes.MESApiReady}");
                 bc5 = (a, b, c, d) => CountersMoreThan(SharedConstants.BlueFactionColor, SharedConstants.CivilianStr, 5);
