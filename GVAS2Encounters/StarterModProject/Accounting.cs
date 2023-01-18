@@ -60,11 +60,28 @@ namespace GVA.NPCControl
             if (UnspentUnits < 0.0)
             {
                 int balance = (int)Math.Ceiling(-UnspentUnits);
-                Military -= balance;
+                if (Military >= balance)
+                {
+                    Military -= balance;
+                    UnspentUnits = 0.0;
+                }
+                else
+                {
+                    Military = 0;
+                    Civilian--;
+                    UnspentUnits = 1.0;
+                }
+
             }
             if (UnspentUnits > 50.0)
             {
                 UnspentUnits *= corruption;
+            }
+            if (OwningPCTag == "SPRT")
+            {
+                Military /= 2;
+                Civilian /= 2;
+                UnspentUnits /= 2;
             }
         }
 

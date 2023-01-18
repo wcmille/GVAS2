@@ -18,6 +18,17 @@ namespace GVA_NPC_Control.Test
         }
 
         [TestMethod]
+        public void TestMethod10_10_0_Unowned()
+        {
+            Accounting acct = new Accounting("SPRT", null, "Blue", 10, 10, 0);
+            acct.TimePeriod();
+
+            Assert.AreEqual(5, acct.Civilian);
+            Assert.AreEqual(5, acct.Military);
+            Assert.AreEqual(0.333, acct.UnspentUnits, 0.001);
+        }
+
+        [TestMethod]
         public void TestMethod30_10_0()
         {
             Accounting acct = new Accounting(null, null, "Blue", 30, 10, 0);
@@ -34,9 +45,9 @@ namespace GVA_NPC_Control.Test
             Accounting acct = new Accounting(null, null, "Blue", 50, 0, 0);
             acct.TimePeriod();
 
-            Assert.AreEqual(50, acct.Civilian, "Civilian");
+            Assert.AreEqual(49, acct.Civilian, "Civilian");
+            Assert.AreEqual(1, acct.UnspentUnits, 0.001, "Unspent");
             Assert.AreEqual(0, acct.Military, "Military");
-            Assert.AreEqual(2, acct.UnspentUnits, 0.001, "Unspent");
         }
 
         [TestMethod]
