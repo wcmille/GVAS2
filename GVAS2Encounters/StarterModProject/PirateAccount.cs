@@ -20,13 +20,21 @@ namespace GVA.NPCControl
         public void AddUnspent(/*PC Faction*/)
         {
             UnspentUnits += 1.0;
-            //Increase everyone's rep in the PC faction.
+            //For each person in faction:
+            //  Rep = (500 + rep) / 2
+        }
+
+        public bool RemoveUnspent()
+        {
+            return false;
         }
 
         public void TimePeriod()
         {
             //Decay everyone's rep.
-            //Military goes up.
+                //For each player in the roster...
+                //If rep > -1000
+                    //rep -= 25
         }
 
         public void Read()

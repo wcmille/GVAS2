@@ -5,6 +5,7 @@
         public static readonly string CivilianStr = "Civilian";
         public static readonly string MilitaryStr = "Military";
         public static readonly string CreditsStr = "Credits";
+        public static readonly string SellCreditsStr = "Sell";
         public static readonly string OwnerStr = "Owner";
         public static readonly string NPCStr = "NPCOwner";
         public static readonly string TimeStr = "LastRunTime";
@@ -18,6 +19,7 @@
         public static readonly string BlackFactionColor = "Black";
         public static readonly string BlackFactionTag = "SPRT";
         public const long tokenPrice = 20000000;
+        public const double refundFactor = 0.2;
 
         public const int TimeDeltaHours = 8;
 

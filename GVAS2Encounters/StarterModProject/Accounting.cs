@@ -89,6 +89,16 @@ namespace GVA.NPCControl
         {
             UnspentUnits += 1.0;
         }
+        public bool RemoveUnspent()
+        {
+            if (UnspentUnits >= 1.0)
+            {
+                UnspentUnits -= 1.0;
+                return true;
+            }
+            return false;
+        }
+
 
         public bool BuyCivilian(int amt = 1)
         {

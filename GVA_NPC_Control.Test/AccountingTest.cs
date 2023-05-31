@@ -7,6 +7,17 @@ namespace GVA_NPC_Control.Test
     public class AccountingTest
     {
         [TestMethod]
+        public void TestMethodx1()
+        {
+            Accounting acct = new Accounting(null, null, "Blue", 0, 13, 0);
+            acct.TimePeriod();
+
+            Assert.AreEqual(0, acct.Civilian, "Civilian");
+            Assert.AreEqual(10, acct.Military, "Military");
+            Assert.AreEqual(0.0, acct.UnspentUnits, 0.001);
+        }
+
+        [TestMethod]
         public void TestMethod10_10_0()
         {
             Accounting acct = new Accounting(null,null,"Blue", 10, 10, 0);

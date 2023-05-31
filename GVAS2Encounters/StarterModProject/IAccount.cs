@@ -5,6 +5,7 @@ namespace GVA.NPCControl
     public interface IAccount
     {
         void AddUnspent();
+        bool RemoveUnspent();
         void Display(StringBuilder builder);
         void Read();
         void Write();

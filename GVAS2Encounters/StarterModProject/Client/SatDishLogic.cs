@@ -117,9 +117,13 @@ namespace GVA.NPCControl.Client
             //Label: Supported NPC Faction
             //var color = SharedConstants.BlueFactionColor;
             AddLabel("Fleet Commands");
-            AddButton("Buy NPC Unit (20M SC)", BuyCredits, true);
+
+            AddButton("Give Support", BuyCredits, true);
+            AddButton("Receive Support", SellCredits);
+
             AddButton("Commission Military", x => IncreaseNPCAndNotify(x, SharedConstants.MilitaryStr));
             AddButton("Commission Civilian", x => IncreaseNPCAndNotify(x, SharedConstants.CivilianStr));
+
             AddSeparator("FleetCommandSeparator");
             AddButton("Read Log", RequestLog);
             AddSeparator("LogGroupSeparator");
@@ -136,6 +140,26 @@ namespace GVA.NPCControl.Client
                 if (acct is IZoneFaction)
                 {
                     Client.client.World.RequestReport(MyAPIGateway.Multiplayer.MyId, acct);
+                }
+            }
+        }
+
+        private static void SellCredits(IMyTerminalBlock block)
+        {
+            var pcFactionTag = block.GetOwnerFactionTag();
+            var owningFaction = MyAPIGateway.Session.Factions.TryGetFactionByTag(pcFactionTag);
+            if (owningFaction != null)
+            {
+                List<IAccount> owned = new List<IAccount>();
+                AccountOwningTerritory(pcFactionTag, owned);
+                if (owned.Count == 1)
+                {
+                    var acct = owned[0];
+                    if (acct.RemoveUnspent())
+                    {
+                        UpdateInfo(block);
+                        Client.client.Send(new CommandPacket(owningFaction.Tag, acct.ColorFaction, SharedConstants.SellCreditsStr));
+                    }
                 }
             }
         }

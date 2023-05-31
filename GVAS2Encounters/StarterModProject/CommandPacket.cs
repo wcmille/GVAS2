@@ -1,6 +1,7 @@
 ﻿using Digi.Example_NetworkProtobuf;
 using ProtoBuf;
 using Sandbox.ModAPI;
+using System;
 using VRage.Utils;
 
 namespace GVA.NPCControl
@@ -51,6 +52,10 @@ namespace GVA.NPCControl
                 {
                     AddCredits(world, acct);
                 }
+                else if (Command == SharedConstants.SellCreditsStr)
+                {
+                    RemoveCredits(world, acct);
+                }
                 else if (acct is IZoneFaction)
                 {
                     var ac = acct as IZoneFaction;
@@ -67,6 +72,16 @@ namespace GVA.NPCControl
                         world.RequestReport(this.SenderId, acct);
                     }
                 }
+            }
+        }
+
+        private void RemoveCredits(IWorld world, IAccount acct)
+        {
+            var owningFaction = MyAPIGateway.Session.Factions.TryGetFactionByTag(PlayerFactionTag);
+            if (acct.RemoveUnspent())
+            {
+                owningFaction.RequestChangeBalance((long) (SharedConstants.tokenPrice * SharedConstants.refundFactor));
+                world.Write(acct);
             }
         }
 
