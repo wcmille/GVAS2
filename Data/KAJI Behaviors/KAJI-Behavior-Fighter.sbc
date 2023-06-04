@@ -19,8 +19,6 @@
 
         [Triggers:GVA-KAJI-Trigger-EnemyResponse]
         [Triggers:GVA-Trigger-StandardCompromised]
-        [Triggers:GVA-Red-Trigger-Despawn]
-        [Triggers:GVA-Red-Trigger-DespawnMES]
       </Description>
     </EntityComponent>
   </EntityComponents>
