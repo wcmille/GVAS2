@@ -159,12 +159,13 @@ namespace GVA.NPCControl.Server
             {
                 foreach (var acct in list)
                 {
-                    if (acct.ColorFaction == SharedConstants.BlueFactionColor) blueLog.Log(acct);
-                    else if (acct.ColorFaction == SharedConstants.RedFactionColor) redLog.Log(acct);
+                    ServerLog factionLog = null;
+                    if (acct.ColorFaction == SharedConstants.BlueFactionColor) factionLog = blueLog;
+                    else if (acct.ColorFaction == SharedConstants.RedFactionColor) factionLog = redLog;
+                    factionLog?.Log(acct);
                     acct.TimePeriod((IAntagonist) black);
                     Write(acct);
-                    if (acct.ColorFaction == SharedConstants.BlueFactionColor) blueLog.Log(acct);
-                    else if (acct.ColorFaction == SharedConstants.RedFactionColor) redLog.Log(acct);
+                    factionLog?.Log(acct);
                 }
                 var newTime = lastRun.AddHours(SharedConstants.TimeDeltaHours);
                 WriteTime(newTime);

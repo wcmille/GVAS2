@@ -87,9 +87,7 @@ namespace GVA.NPCControl
 
         private void ResolveEconomy()
         {
-            double grossIncome = Civilian * timePeriodConst - Civilian * Civilian * pirateFactor;
-            double expenses = Military * militaryCosts;
-            double netIncome = grossIncome - expenses;
+            double netIncome = CalcNetIncome();
 
             UnspentUnits += netIncome;
             if (UnspentUnits < 0.0)
@@ -118,6 +116,14 @@ namespace GVA.NPCControl
                 Civilian /= 2;
                 UnspentUnits /= 2;
             }
+        }
+
+        private double CalcNetIncome()
+        {
+            double grossIncome = Civilian * timePeriodConst - Civilian * Civilian * pirateFactor;
+            double expenses = Military * militaryCosts;
+            double netIncome = grossIncome - expenses;
+            return netIncome;
         }
 
         public void AddUnspent()
@@ -166,6 +172,9 @@ namespace GVA.NPCControl
 
             builder.AppendLine();
             builder.AppendLine($"{UnspentUnits:F2} Unspent NPC Units");
+
+            builder.AppendLine();
+            builder.AppendLine($"{CalcNetIncome():F2} Net Income");
         }
 
         public void Read()
