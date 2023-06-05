@@ -5,7 +5,7 @@ namespace GVA.NPCControl
     public abstract class SharedWorld : IWorld
     {
         protected readonly List<IAccount> list = new List<IAccount>();
-        readonly IAccount black;
+        readonly protected IAccount black;
 
         public SharedWorld()
         {

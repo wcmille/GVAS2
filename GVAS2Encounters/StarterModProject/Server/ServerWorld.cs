@@ -148,6 +148,9 @@ namespace GVA.NPCControl.Server
             return null;
         }
 
+        /// <summary>
+        /// Run each restart.
+        /// </summary>
         internal void Time()
         {
             DateTime lastRun = ReadTime();
@@ -158,7 +161,7 @@ namespace GVA.NPCControl.Server
                 {
                     if (acct.ColorFaction == SharedConstants.BlueFactionColor) blueLog.Log(acct);
                     else if (acct.ColorFaction == SharedConstants.RedFactionColor) redLog.Log(acct);
-                    acct.TimePeriod();
+                    acct.TimePeriod((IAntagonist) black);
                     Write(acct);
                     if (acct.ColorFaction == SharedConstants.BlueFactionColor) blueLog.Log(acct);
                     else if (acct.ColorFaction == SharedConstants.RedFactionColor) redLog.Log(acct);

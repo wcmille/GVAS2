@@ -1,12 +1,16 @@
 ﻿using Sandbox.ModAPI;
+using System;
 using System.Text;
 
 namespace GVA.NPCControl
 {
-    public class PirateAccount : IAccount
+    public class PirateAccount : IAccount, IAntagonist
     {
-        public PirateAccount()
+        readonly Random r;
+        public PirateAccount(int seed = 0)
         {
+            if (seed !=  0) { r = new Random(seed); }
+            else r = new Random(); 
             OwningNPCTag = SharedConstants.BlackFactionTag;
             ColorFaction = SharedConstants.BlackFactionColor;
         }
@@ -16,6 +20,8 @@ namespace GVA.NPCControl
 
         public string OwningNPCTag { get; private set; }
         public string OwningPCTag { get { return null; } }
+
+        public int Military { get; private set; }
 
         public void AddUnspent(/*PC Faction*/)
         {
@@ -29,8 +35,12 @@ namespace GVA.NPCControl
             return false;
         }
 
-        public void TimePeriod()
+        public void TimePeriod(IAntagonist pirates)
         {
+            if (Military < 75)
+            {
+                Military = Math.Max((75 - Military) / 10, 1);
+            }           
             //Decay everyone's rep.
                 //For each player in the roster...
                 //If rep > -1000
@@ -39,15 +49,19 @@ namespace GVA.NPCControl
 
         public void Read()
         {
+            int mil;
             double uu;
 
             MyAPIGateway.Utilities.GetVariable($"{ColorFaction}{SharedConstants.CreditsStr}", out uu);
+            MyAPIGateway.Utilities.GetVariable($"{ColorFaction}{SharedConstants.MilitaryStr}", out mil);
             UnspentUnits = uu;
+            Military = mil;
         }
 
         public void Write()
         {
             MyAPIGateway.Utilities.SetVariable($"{ColorFaction}{SharedConstants.CreditsStr}", UnspentUnits);
+            MyAPIGateway.Utilities.SetVariable($"{ColorFaction}{SharedConstants.MilitaryStr}", Military);
         }
 
         public void Display(StringBuilder builder)
@@ -58,6 +72,14 @@ namespace GVA.NPCControl
         public string Log()
         {
             return "--";
+        }
+
+        public bool Fight()
+        {
+            int result = r.Next(4);
+            if (result <= 1) return true; //opponent lost.
+            if (result == 3) Military--;
+            return false;
         }
     }
 }

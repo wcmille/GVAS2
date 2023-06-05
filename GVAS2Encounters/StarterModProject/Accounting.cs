@@ -13,7 +13,7 @@ namespace GVA.NPCControl
 
         public Accounting(string color)
         {
-            int civ, mil;
+            int civ, mil, incur;
             double uu;
             string owningPCTag;
             string owningNPCTag;
@@ -22,11 +22,13 @@ namespace GVA.NPCControl
             MyAPIGateway.Utilities.GetVariable($"{color}{SharedConstants.NPCStr}", out owningNPCTag);
             MyAPIGateway.Utilities.GetVariable($"{color}{SharedConstants.CivilianStr}", out civ);
             MyAPIGateway.Utilities.GetVariable($"{color}{SharedConstants.MilitaryStr}", out mil);
+            MyAPIGateway.Utilities.GetVariable($"{color}{SharedConstants.IncursionsStr}", out incur);
             MyAPIGateway.Utilities.GetVariable($"{color}{SharedConstants.CreditsStr}", out uu);
 
             ColorFaction = color;
             Civilian = civ;
             Military = mil;
+            Incursions = incur;
             UnspentUnits = uu;
             OwningPCTag = owningPCTag;
             OwningNPCTag = owningNPCTag;
@@ -44,13 +46,46 @@ namespace GVA.NPCControl
 
         public int Civilian { get; private set; }
         public int Military { get; private set; }
+        public int Incursions { get; private set; }
         public double UnspentUnits { get; private set; }
         public string ColorFaction { get; private set; }
 
         public string OwningPCTag { get; private set; }
         public string OwningNPCTag { get; private set; }
 
-        public void TimePeriod()
+        public void TimePeriod(IAntagonist pirates = null)
+        {
+            if (pirates != null)
+            {
+                ResolveIncursions(pirates);
+            }
+            ResolveEconomy();
+        }
+
+        private void ResolveIncursions(IAntagonist pirates)
+        {
+            //Resolve Incursions from the last period.
+            for(int i = 0; i < Incursions; ++i)
+            {
+                if (pirates.Fight())
+                {
+                    Civilian--;
+                    //TODO:Log the fight.
+                }
+                else
+                { 
+                    //TODO:Log the fight.
+                }
+            }
+            //Resolve Incursions from the new period.
+            {
+                Incursions = (pirates.Military - Military) / 3;
+                Incursions = Math.Min(Civilian / 2, Incursions);
+                Incursions = Math.Max(0,Incursions);
+            }
+        }
+
+        private void ResolveEconomy()
         {
             double grossIncome = Civilian * timePeriodConst - Civilian * Civilian * pirateFactor;
             double expenses = Military * militaryCosts;
@@ -135,7 +170,7 @@ namespace GVA.NPCControl
 
         public void Read()
         {
-            int civ, mil;
+            int civ, mil, incur;
             double uu;
             string owningPCTag, owningNPCTag;
 
@@ -143,6 +178,7 @@ namespace GVA.NPCControl
             MyAPIGateway.Utilities.GetVariable($"{ColorFaction}{SharedConstants.NPCStr}", out owningNPCTag);
             MyAPIGateway.Utilities.GetVariable($"{ColorFaction}{SharedConstants.CivilianStr}", out civ);
             MyAPIGateway.Utilities.GetVariable($"{ColorFaction}{SharedConstants.MilitaryStr}", out mil);
+            MyAPIGateway.Utilities.GetVariable($"{ColorFaction}{SharedConstants.IncursionsStr}", out incur);
             MyAPIGateway.Utilities.GetVariable($"{ColorFaction}{SharedConstants.CreditsStr}", out uu);
 
             if (owningNPCTag == null)
@@ -151,6 +187,7 @@ namespace GVA.NPCControl
                 else if (ColorFaction == SharedConstants.RedFactionColor) owningNPCTag = SharedConstants.RedFactionTag;
             }
 
+            Incursions = incur;
             Civilian = civ;
             Military = mil;
             UnspentUnits = uu;
@@ -162,6 +199,7 @@ namespace GVA.NPCControl
         {
             MyAPIGateway.Utilities.SetVariable($"{ColorFaction}{SharedConstants.CivilianStr}", Civilian);
             MyAPIGateway.Utilities.SetVariable($"{ColorFaction}{SharedConstants.MilitaryStr}", Military);
+            MyAPIGateway.Utilities.SetVariable($"{ColorFaction}{SharedConstants.IncursionsStr}", Incursions);
             MyAPIGateway.Utilities.SetVariable($"{ColorFaction}{SharedConstants.CreditsStr}", UnspentUnits);
             MyAPIGateway.Utilities.SetVariable($"{ColorFaction}{SharedConstants.OwnerStr}", OwningPCTag);
             MyAPIGateway.Utilities.SetVariable($"{ColorFaction}{SharedConstants.NPCStr}", OwningNPCTag);

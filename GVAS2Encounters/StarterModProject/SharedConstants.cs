@@ -5,6 +5,7 @@
         public static readonly string CivilianStr = "Civilian";
         public static readonly string MilitaryStr = "Military";
         public static readonly string CreditsStr = "Credits";
+        public static readonly string IncursionsStr = "Incursions";
         public static readonly string SellCreditsStr = "Sell";
         public static readonly string OwnerStr = "Owner";
         public static readonly string NPCStr = "NPCOwner";

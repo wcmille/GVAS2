@@ -2,6 +2,20 @@
 
 namespace GVA.NPCControl
 {
+    public interface IAntagonist
+    { 
+        int Military { get; }
+
+        /// <summary>
+        /// Fight the other account.
+        /// </summary>
+        /// <returns>
+        /// true is fight was lost
+        /// </returns>
+        /// <param name="account"></param>
+        bool Fight();
+    }
+
     public interface IAccount
     {
         void AddUnspent();
@@ -9,7 +23,7 @@ namespace GVA.NPCControl
         void Display(StringBuilder builder);
         void Read();
         void Write();
-        void TimePeriod();
+        void TimePeriod(IAntagonist pirates);
 
         string Log();
 
