@@ -51,12 +51,58 @@
         [UseTerrainTypeValidation:true]
       </Description>
       <IsPirate>true</IsPirate>
-      <Frequency>49.0</Frequency>
+      <Frequency>24.0</Frequency>
       <Prefabs>
         <Prefab SubtypeId="Survival Shelter">
           <Position>
             <X>0.0</X>
             <Y>10.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Behaviour>GVA-Behavior-PassiveCivilian</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <SubtypeId>GVA-Blue-CivilianTown00-PI</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ManipulationProfiles:GVA-JAGH-Manipulation-Std]
+        [ManipulationProfiles:GVA-Common-Manipulation-NPCPrefix]
+
+        [IgnoreCleanupRules:false]
+
+        [SpawnConditionsProfiles:Blue-BlueAlienRegion-Fixed-Spawns]
+        [UseTerrainTypeValidation:true]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>25.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="Greenhouse">
+          <Position>
+            <X>25.0</X>
+            <Y>0.0</Y>
+            <Z>25.0</Z>
+          </Position>
+          <Behaviour>GVA-Behavior-PassiveCivilian</Behaviour>
+        </Prefab>
+        <Prefab SubtypeId="Snow Outpost">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Behaviour>GVA-Behavior-PassiveCivilian</Behaviour>
+        </Prefab>
+        <Prefab SubtypeId="Snow SAM Battery">
+          <Position>
+            <X>-50.0</X>
+            <Y>0.0</Y>
             <Z>0.0</Z>
           </Position>
           <Behaviour>GVA-Behavior-PassiveCivilian</Behaviour>
