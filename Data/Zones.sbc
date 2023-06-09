@@ -111,5 +111,39 @@
         [MaxDistanceFromZoneCenter:50000]
       </Description>
     </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Zone-FarpointZone</SubtypeId>
+      </Id>
+      <Description>
+        [MES Zone]
+
+        [PublicName:Farpoint Zone]
+
+        [Active:true]
+        [Persistent:true]
+        [Strict:false]
+        [UseZoneAnnounce:false]
+        [ZoneEnterAnnounce:Entering: Farpoint Zone]
+        [ZoneLeaveAnnounce:Leaving: Farpoint Zone]
+        [Coordinates:{X:-1854042 Y:131072 Z:9040780}]
+        [Radius:200000]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-ZoneConditionProfile-FarpointZone</SubtypeId>
+      </Id>
+      <Description>
+        [MES Zone Conditions]
+        [ZoneName:Farpoint Zone]
+        [MaxDistanceFromZoneCenter:200000]
+      </Description>
+    </EntityComponent>
+
   </EntityComponents>
 </Definitions>
