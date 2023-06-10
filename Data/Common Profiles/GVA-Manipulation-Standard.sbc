@@ -38,6 +38,9 @@
       </Id>
       <Description>
         [MES Manipulation]
+        
+        [UseRandomNameGenerator:true]
+        [RandomGridNamePattern:Civil Structure]
         [RandomGridNamePrefix:[NPC] ]
         [ReplaceAntennaNameWithRandomizedName:Main Antenna]
       </Description>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Common-Manipulation-ShipyardSetup</SubtypeId>
+      </Id>
+      <Description>
+        [MES Manipulation]
+
+        [ShipyardSetup:true]
+        [ShipyardConsoleBlockNames:{Any}]
+        [ShipyardProfileNames:GVA-Shipyard-MainProfile]
+
+        [SetStoresAnyoneCanUse:true]
+        [SetConnectorsTradeMode:true]
+      </Description>
+    </EntityComponent>
+    
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Shipyard-MainProfile</SubtypeId>
+      </Id>
+      <Description>
+        [MES Shipyard]
+
+        [AllowBlueprintBuilding:false] //This feature isn't even built yet, so don't get any ideas.
+        [AllowScrapPurchasing:true]
+        [AllowRepairAndConstruction:true]
+        [AllowGridTakeover:true]
+      </Description>
+    </EntityComponent>    
+  </EntityComponents>
+</Definitions>
