@@ -4,16 +4,15 @@
 		<SpawnGroup>
 			<Id>
 				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
-				<SubtypeId>GVA-Black-Frigate</SubtypeId> 
+				<SubtypeId>GVA-Black-RandomSpaceBoss</SubtypeId> 
 			</Id>
 			<Description>
         [Modular Encounters SpawnGroup]
-
+        
+        [BossEncounterSpace:true]
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
-
-        [SpawnConditionsProfiles:Black-BlueAlienRegion-Space-Spawns]
-        [SpawnConditionsProfiles:GVA-Black-PirateZone]
+        
         [FactionOwner:SPRT]
       </Description>
 			<IsPirate>true</IsPirate>
