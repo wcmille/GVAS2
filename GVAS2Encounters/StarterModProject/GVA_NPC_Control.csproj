@@ -111,6 +111,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Client\BaseManagementTSS.cs" />
     <Compile Include="Client\Client.cs" />
     <Compile Include="Client\ClientWorld.cs" />
     <Compile Include="DialogResponsePacket.cs" />
