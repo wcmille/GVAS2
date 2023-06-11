@@ -30,5 +30,37 @@
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>
-	</SpawnGroups>
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <!--Do Not Edit-->
+        <SubtypeId>GVA-Black-CTIncursion</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+
+        [BossEncounterPlanet:true]
+        [IgnoreCleanupRules:false]
+        [ReplenishSystems:true]
+
+        [SpawnConditionsProfiles:GVA-Black-RedIncursions0]
+        [SpawnConditionsProfiles:GVA-Black-BlueIncursions0]
+
+        [FactionOwner:SPRT]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>5.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="SPS-350 Dagger">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>50</Speed>
+          <Behaviour>GVA-SPRT-Behavior-SpaceDestroyer</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+  </SpawnGroups>
 </Definitions>

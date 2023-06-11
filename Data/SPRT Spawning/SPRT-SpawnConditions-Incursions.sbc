@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Black-BlueIncursions0</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+        [FactionOwner:SPRT]
+        [ZoneConditions:GVA-ZoneConditionProfile-BlueAlienRegion]
+        [BossEncounterSpace:true]
+        [BossEncounterAtmo:true]
+        [CustomPathStartAltitude:3000]
+        [CustomPathEndAltitude:3000]
+
+        [UseSandboxCounterCosts:true]
+        [SandboxCounterCostNames:BlueIncursions]
+        [SandboxCounterCostAmounts:1]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Black-RedIncursions0</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+        [FactionOwner:SPRT]
+        [ZoneConditions:GVA-ZoneConditionProfile-RedAlienRegion]
+        [BossEncounterSpace:true]
+        [BossEncounterAtmo:true]
+        [CustomPathStartAltitude:3000]
+        [CustomPathEndAltitude:3000]
+
+        [UseSandboxCounterCosts:true]
+        [SandboxCounterCostNames:RedIncursions]
+        [SandboxCounterCostAmounts:1]
+      </Description>
+    </EntityComponent>
+  </EntityComponents>
+</Definitions>

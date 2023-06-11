@@ -37,6 +37,8 @@ namespace GVA.NPCControl
 
         public void TimePeriod(IAntagonist pirates)
         {
+            Military += (int)Math.Truncate(UnspentUnits);
+            UnspentUnits -= Math.Truncate(UnspentUnits);
             if (Military < 75)
             {
                 Military = Math.Max((75 - Military) / 10, 1);
