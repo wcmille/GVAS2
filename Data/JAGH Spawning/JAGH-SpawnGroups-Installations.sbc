@@ -73,7 +73,6 @@
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ManipulationProfiles:GVA-JAGH-Manipulation-Std]
-        [ManipulationProfiles:GVA-Common-Manipulation-NPCPrefix]
 
         [IgnoreCleanupRules:false]
 
@@ -83,28 +82,31 @@
       <IsPirate>true</IsPirate>
       <Frequency>25.0</Frequency>
       <Prefabs>
-        <Prefab SubtypeId="Greenhouse">
+        <Prefab SubtypeId="[NPC] Greenhouse">
           <Position>
             <X>25.0</X>
             <Y>0.0</Y>
             <Z>25.0</Z>
           </Position>
+          <BeaconText>Greenhouse</BeaconText>
           <Behaviour>GVA-Behavior-PassiveCivilian</Behaviour>
         </Prefab>
-        <Prefab SubtypeId="Snow Outpost">
+        <Prefab SubtypeId="[NPC] Snow Outpost">
           <Position>
             <X>0.0</X>
             <Y>0.0</Y>
             <Z>0.0</Z>
           </Position>
+          <BeaconText>Outpost</BeaconText>
           <Behaviour>GVA-Behavior-PassiveCivilian</Behaviour>
         </Prefab>
-        <Prefab SubtypeId="Snow SAM Battery">
+        <Prefab SubtypeId="[NPC] Snow SAM Battery">
           <Position>
             <X>-50.0</X>
             <Y>0.0</Y>
             <Z>0.0</Z>
           </Position>
+          <BeaconText>SAM</BeaconText>
           <Behaviour>GVA-Behavior-PassiveCivilian</Behaviour>
         </Prefab>
       </Prefabs>

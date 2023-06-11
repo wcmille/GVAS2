@@ -12,6 +12,7 @@
         [ZoneConditions:GVA-ZoneConditionProfile-BlueAlienRegion]
         [BossEncounterSpace:true]
         [BossEncounterAtmo:true]
+        [BossCustomGPSLabel:Incursion]
         [CustomPathStartAltitude:3000]
         [CustomPathEndAltitude:3000]
 
@@ -31,6 +32,7 @@
         [ZoneConditions:GVA-ZoneConditionProfile-RedAlienRegion]
         [BossEncounterSpace:true]
         [BossEncounterAtmo:true]
+        [BossCustomGPSLabel:Incursion]
         [CustomPathStartAltitude:3000]
         [CustomPathEndAltitude:3000]
 

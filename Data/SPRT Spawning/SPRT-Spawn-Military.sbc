@@ -39,7 +39,6 @@
       <Description>
         [Modular Encounters SpawnGroup]
 
-        [BossEncounterPlanet:true]
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
 

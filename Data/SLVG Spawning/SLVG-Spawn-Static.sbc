@@ -12,7 +12,6 @@
         [IgnoreCleanupRules:true]
         [ReplenishSystems:true]
         [ManipulationProfiles:GVA-Common-Manipulation-Permanent]
-        [ManipulationProfiles:GVA-Common-Manipulation-NPCPrefix]
         [ManipulationProfiles:GVA-Common-Manipulation-ShipyardSetup]
 
         [StaticEncounter:true]
