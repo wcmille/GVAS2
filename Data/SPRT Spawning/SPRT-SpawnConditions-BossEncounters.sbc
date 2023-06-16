@@ -8,11 +8,12 @@
 			</Id>
 			<Description>
         [Modular Encounters SpawnGroup]
-        
+
         [BossEncounterSpace:true]
+        [BossCustomGPSLabel:Pirate Activity]
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
-        
+
         [FactionOwner:SPRT]
       </Description>
 			<IsPirate>true</IsPirate>

@@ -93,10 +93,10 @@
         [Persistent:true]
         [Strict:false]
         [UseZoneAnnounce:true]
-        [ZoneEnterAnnounce:Entering: Pirate Zone]
-        [ZoneLeaveAnnounce:Leaving: Pirate Zone]
-        [Coordinates:{X:666666 Y:666666 Z:6666666}]
-        [Radius:50000]
+        [ZoneEnterAnnounce:Entering: The Pirate Marches]
+        [ZoneLeaveAnnounce:Leaving: The Pirate Marches]
+        [Coordinates:{X:124592 Y:191349 Z:5742403}]
+        [Radius:400000]
       </Description>
     </EntityComponent>
 

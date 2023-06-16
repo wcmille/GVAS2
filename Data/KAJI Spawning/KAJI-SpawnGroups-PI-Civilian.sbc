@@ -34,6 +34,38 @@
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
+        <SubtypeId>GVA-Red-CivilianTown01-PI</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
+        [ManipulationProfiles:GVA-Common-Manipulation-NPCPrefix]
+        [ManipulationProfiles:GVA-Common-Manipulation-MinorShipyardSetup]
+
+        [IgnoreCleanupRules:false]
+
+        [SpawnConditionsProfiles:Red-RedAlienRegion-Fixed-Spawns]
+
+        [UseTerrainTypeValidation:true]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>24.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="[NPC] Shipyard">
+          <Position>
+            <X>0.0</X>
+            <Y>16.5</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Behaviour>GVA-Behavior-PassiveCivilian</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
         <SubtypeId>GVA-Red-CivilianTown00-PI</SubtypeId>
       </Id>
       <Description>
