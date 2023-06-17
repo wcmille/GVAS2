@@ -80,8 +80,8 @@ namespace GVA.NPCControl
             //Resolve Incursions from the new period.
             {
                 Incursions = (pirates.Military - Military) / 3;
-                Incursions = Math.Min(Civilian / 2, Incursions);
-                Incursions = Math.Max(0,Incursions);
+                Incursions = Math.Max(Civilian / 2, Incursions);
+                Incursions = Math.Min(0,Incursions);
             }
         }
 

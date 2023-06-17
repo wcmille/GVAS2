@@ -41,7 +41,7 @@ namespace GVA.NPCControl
             UnspentUnits -= Math.Truncate(UnspentUnits);
             if (Military < 75)
             {
-                Military = Math.Max((75 - Military) / 10, 1);
+                Military += 1;
             }           
             //Decay everyone's rep.
                 //For each player in the roster...
