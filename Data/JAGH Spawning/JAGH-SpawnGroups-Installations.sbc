@@ -43,7 +43,6 @@
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ManipulationProfiles:GVA-JAGH-Manipulation-Std]
-        [ManipulationProfiles:GVA-Common-Manipulation-NPCPrefix]
         [IgnoreCleanupRules:false]
 
         [SpawnConditionsProfiles:Blue-BlueAlienRegion-Fixed-Spawns]
@@ -121,7 +120,6 @@
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ManipulationProfiles:GVA-JAGH-Manipulation-Std]
-        [ManipulationProfiles:GVA-Common-Manipulation-NPCPrefix]
         [ManipulationProfiles:GVA-Common-Manipulation-MinorShipyardSetup]
 
         [IgnoreCleanupRules:false]
