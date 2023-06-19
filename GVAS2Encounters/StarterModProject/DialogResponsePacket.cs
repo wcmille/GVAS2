@@ -23,6 +23,7 @@ namespace GVA.NPCControl
         public override void Execute(IWorld world)
         {
             MyAPIGateway.Utilities.ShowMissionScreen("Faction Report", null, null, ReportText);
+            MyClipboardHelper.SetClipboard(ReportText);
         }
     }
 }

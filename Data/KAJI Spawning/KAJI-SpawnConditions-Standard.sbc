@@ -13,5 +13,17 @@
         [PlanetaryInstallation:true]
       </Description>
     </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Red-RedAlienRegion-FixedSpace-Spawns</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+        [FactionOwner:KAJI]
+        [ZoneConditions:GVA-ZoneConditionProfile-RedAlienRegion]
+        [SpaceRandomEncounter:true]
+      </Description>
+    </EntityComponent>
   </EntityComponents>
 </Definitions>
