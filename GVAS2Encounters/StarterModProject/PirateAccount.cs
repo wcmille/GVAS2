@@ -1,6 +1,7 @@
 ﻿using Sandbox.ModAPI;
 using System;
 using System.Text;
+using VRageMath;
 
 namespace GVA.NPCControl
 {
@@ -13,6 +14,15 @@ namespace GVA.NPCControl
             else r = new Random(); 
             OwningNPCTag = SharedConstants.BlackFactionTag;
             ColorFaction = SharedConstants.BlackFactionColor;
+
+            int mil;
+            double uu;
+
+            MyAPIGateway.Utilities.GetVariable($"{ColorFaction}{SharedConstants.MilitaryStr}", out mil);
+            MyAPIGateway.Utilities.GetVariable($"{ColorFaction}{SharedConstants.CreditsStr}", out uu);
+
+            Military = mil;
+            UnspentUnits = uu;
         }
         public double UnspentUnits { get; private set; }
 

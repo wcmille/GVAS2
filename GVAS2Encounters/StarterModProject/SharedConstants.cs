@@ -20,7 +20,7 @@
         public static readonly string BlackFactionColor = "Black";
         public static readonly string BlackFactionTag = "SPRT";
         public const long tokenPrice = 20000000;
-        public const double refundFactor = 0.2;
+        public const double refundFactor = 0.75;
 
         public const int TimeDeltaHours = 8;
 
