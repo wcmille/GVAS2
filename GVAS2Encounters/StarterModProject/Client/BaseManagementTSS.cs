@@ -21,12 +21,22 @@ namespace GVA.NPCControl.Client
 
         private void Dish_AppendingCustomInfo()
         {
-
             AccountOwningTerritory(TerminalBlock.GetOwnerFactionTag(), owned);
             if (owned.Count == 1)
             {
-                builder.Clear();
-                owned[0].Display(builder);
+                {
+                    //If owned by a PC:
+                    builder.Clear();
+                    owned[0].Display(builder);
+                }
+                {
+                    //If owned by Pirates
+                    //Show pirate strength.
+                }
+                {
+                    //If owned by an NPC
+                    //Show their own strengths
+                }
             }
         }
 

@@ -49,7 +49,7 @@ namespace GVA.NPCControl
         {
             Military += (int)Math.Truncate(UnspentUnits);
             UnspentUnits -= Math.Truncate(UnspentUnits);
-            if (Military < 75)
+            if (Military < 25)
             {
                 Military += 1;
             }           

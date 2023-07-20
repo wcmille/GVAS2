@@ -83,9 +83,9 @@
       <Prefabs>
         <Prefab SubtypeId="[NPC] Greenhouse">
           <Position>
-            <X>25.0</X>
-            <Y>0.0</Y>
-            <Z>25.0</Z>
+            <X>75.0</X>
+            <Y>10.0</Y>
+            <Z>75.0</Z>
           </Position>
           <BeaconText>Greenhouse</BeaconText>
           <Behaviour>GVA-Behavior-PassiveCivilian</Behaviour>
@@ -93,7 +93,7 @@
         <Prefab SubtypeId="[NPC] Snow Outpost">
           <Position>
             <X>0.0</X>
-            <Y>0.0</Y>
+            <Y>-5.0</Y>
             <Z>0.0</Z>
           </Position>
           <BeaconText>Outpost</BeaconText>
@@ -101,8 +101,8 @@
         </Prefab>
         <Prefab SubtypeId="[NPC] Snow SAM Battery">
           <Position>
-            <X>-50.0</X>
-            <Y>0.0</Y>
+            <X>-150.0</X>
+            <Y>-10.0</Y>
             <Z>0.0</Z>
           </Position>
           <BeaconText>SAM</BeaconText>
@@ -137,6 +137,7 @@
             <Y>16.5</Y>
             <Z>0.0</Z>
           </Position>
+          <BeaconText>Shipyard</BeaconText>
           <Behaviour>GVA-Behavior-PassiveCivilian</Behaviour>
         </Prefab>
       </Prefabs>

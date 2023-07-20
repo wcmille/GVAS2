@@ -4,12 +4,39 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
+        <SubtypeId>Black-Planet-All</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+        [FactionOwner:SPRT]
+        [AtmosphericCargoShip:true]
+        [SkipAirDensityCheck:true]
+        [GravityCargoShip:true]
+        [SpaceCargoShip:true]
+        [LunarCargoShip:true]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
         <SubtypeId>Black-BlueAlienRegion-Space-Spawns</SubtypeId>
       </Id>
       <Description>
         [MES Spawn Conditions]
         [FactionOwner:SPRT]
-        [ZoneConditions:GVA-ZoneConditionProfile-BlueAlienRegionSpace]
+        [ZoneConditions:GVA-ZoneConditionProfile-BlueAlienRegion]
+        [SpaceCargoShip:true]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Black-RedAlienRegion-Space-Spawns</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+        [FactionOwner:SPRT]
+        [ZoneConditions:GVA-ZoneConditionProfile-RedAlienRegion]
         [SpaceCargoShip:true]
       </Description>
     </EntityComponent>

@@ -1,7 +1,36 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<SpawnGroups>
-		<SpawnGroup>
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <!--Do Not Edit-->
+        <SubtypeId>GVA-Black-Destroyer</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+
+        [IgnoreCleanupRules:false]
+        [ReplenishSystems:true]
+
+        [SpawnConditionsProfiles:GVA-Black-PirateZone]
+        [FactionOwner:SPRT]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>1.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="Tempest Class Cruiser Block IV">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>50</Speed>
+          <Behaviour>GVA-SPRT-Behavior-SpaceDestroyer</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+    <SpawnGroup>
 			<Id>
 				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
 				<SubtypeId>GVA-Black-Frigate</SubtypeId> 
@@ -13,11 +42,12 @@
         [ReplenishSystems:true]
 
         [SpawnConditionsProfiles:Black-BlueAlienRegion-Space-Spawns]
+        [SpawnConditionsProfiles:Black-RedAlienRegion-Space-Spawns]
         [SpawnConditionsProfiles:GVA-Black-PirateZone]
         [FactionOwner:SPRT]
       </Description>
 			<IsPirate>true</IsPirate>
-			<Frequency>5.0</Frequency>
+			<Frequency>3.0</Frequency>
 			<Prefabs>
 				<Prefab SubtypeId="Enforcer">
 					<Position>
@@ -34,7 +64,7 @@
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
         <!--Do Not Edit-->
-        <SubtypeId>GVA-Black-CTIncursion</SubtypeId>
+        <SubtypeId>GVA-Black-CT</SubtypeId>
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]
@@ -44,6 +74,7 @@
 
         [SpawnConditionsProfiles:GVA-Black-RedIncursions0]
         [SpawnConditionsProfiles:GVA-Black-BlueIncursions0]
+        [SpawnConditionsProfiles:GVA-Black-PirateZone]
 
         [FactionOwner:SPRT]
       </Description>
@@ -51,6 +82,41 @@
       <Frequency>5.0</Frequency>
       <Prefabs>
         <Prefab SubtypeId="SPS-350 Dagger">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>50</Speed>
+          <Behaviour>GVA-SPRT-Behavior-SpaceDestroyer</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <!--Do Not Edit-->
+        <SubtypeId>GVA-Black-Interceptor</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+
+        [IgnoreCleanupRules:false]
+        [ReplenishSystems:true]
+
+        [SpawnConditionsProfiles:GVA-Black-RedIncursions0]
+        [SpawnConditionsProfiles:GVA-Black-BlueIncursions0]
+        [SpawnConditionsProfiles:Black-BlueAlienRegion-Space-Spawns]
+        [SpawnConditionsProfiles:Black-RedAlienRegion-Space-Spawns]
+        [SpawnConditionsProfiles:GVA-Black-PirateZone]
+        [SpawnConditionsProfiles:Black-Planet-All]
+
+        [FactionOwner:SPRT]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>25.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="Rocketeer MKI Pirate Attacker">
           <Position>
             <X>0.0</X>
             <Y>0.0</Y>

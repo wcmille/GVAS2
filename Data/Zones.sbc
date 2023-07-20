@@ -22,7 +22,6 @@
         [Radius:50000]
       </Description>
     </EntityComponent>
-
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
@@ -34,17 +33,7 @@
         [MaxDistanceFromZoneCenter:50000]
       </Description>
     </EntityComponent>
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
-        <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-ZoneConditionProfile-BlueAlienRegionSpace</SubtypeId>
-      </Id>
-      <Description>
-        [MES Zone Conditions]
-        [ZoneName:BlueAlienRegion]
-        [MaxDistanceFromZoneCenter:50000]
-      </Description>
-    </EntityComponent>  
+
     
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
@@ -66,7 +55,6 @@
         [Radius:50000]
       </Description>
     </EntityComponent>
-
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
@@ -78,6 +66,40 @@
         [MaxDistanceFromZoneCenter:50000]
       </Description>
     </EntityComponent>
+
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Zone-GreenAlienRegion</SubtypeId>
+      </Id>
+      <Description>
+        [MES Zone]
+
+        [PublicName:GreenAlienRegion]
+
+        [Active:true]
+        [Persistent:true]
+        [Strict:false]
+        [UseZoneAnnounce:true]
+        [ZoneEnterAnnounce:Entering: Green Zone]
+        [ZoneLeaveAnnounce:Leaving: Green Zone]
+        [Coordinates:{X:99168.12 Y:143116.24 Z:5636492.9}]
+        [Radius:50000]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-ZoneConditionProfile-GreenAlienRegion</SubtypeId>
+      </Id>
+      <Description>
+        [MES Zone Conditions]
+        [ZoneName:GreenAlienRegion]
+        [MaxDistanceFromZoneCenter:50000]
+      </Description>
+    </EntityComponent>
+
 
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
@@ -93,13 +115,12 @@
         [Persistent:true]
         [Strict:false]
         [UseZoneAnnounce:true]
-        [ZoneEnterAnnounce:Entering: The Pirate Marches]
+        [ZoneEnterAnnounce:Danger: The Pirate Marches]
         [ZoneLeaveAnnounce:Leaving: The Pirate Marches]
-        [Coordinates:{X:124592 Y:191349 Z:5742403}]
+        [Coordinates:{X:-870575 Y:131504 Z:7356867}]
         [Radius:400000]
       </Description>
     </EntityComponent>
-
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
@@ -126,13 +147,12 @@
         [Persistent:true]
         [Strict:false]
         [UseZoneAnnounce:false]
-        [ZoneEnterAnnounce:Entering: Farpoint Zone]
-        [ZoneLeaveAnnounce:Leaving: Farpoint Zone]
+        [ZoneEnterAnnounce:Entering: Farpoint Station]
+        [ZoneLeaveAnnounce:Leaving: Farpoint Station]
         [Coordinates:{X:-1854042 Y:131072 Z:9040780}]
         [Radius:200000]
       </Description>
     </EntityComponent>
-
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
@@ -144,6 +164,41 @@
         [MaxDistanceFromZoneCenter:200000]
       </Description>
     </EntityComponent>
+
+
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Zone-Orange</SubtypeId>
+      </Id>
+      <Description>
+        [MES Zone]
+
+        [PublicName:Orange Zone]
+
+        [Active:true]
+        [Persistent:true]
+        [Strict:false]
+        [UseZoneAnnounce:false]
+        [ZoneEnterAnnounce:Entering: Orange Zone]
+        [ZoneLeaveAnnounce:Leaving: Orange Zone]
+        [Coordinates:{X:168772.2 Y:129826.85 Z:5778906.73}]
+        [Radius:50000]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-ZoneConditionProfile-OrangeZone</SubtypeId>
+      </Id>
+      <Description>
+        [MES Zone Conditions]
+        [ZoneName:Orange Zone]
+        [MaxDistanceFromZoneCenter:50000]
+      </Description>
+    </EntityComponent>
+
 
   </EntityComponents>
 </Definitions>

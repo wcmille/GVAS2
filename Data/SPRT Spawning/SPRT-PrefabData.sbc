@@ -5,14 +5,53 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
           <TypeId>Inventory</TypeId>
-          <SubtypeId>MES-PrefabData-Example</SubtypeId>
+          <SubtypeId>GVA-PrefabData-Black-DD</SubtypeId>
+      </Id>
+      <Description>
+        [MES Prefab Data]
+
+        [Prefabs:Tempest Class Cruiser Block IV]
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ManipulationProfiles:GVA-Manipulation-Black-DestroyerName]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-PrefabData-Black-FF</SubtypeId>
       </Id>
       <Description>
         [MES Prefab Data]
 
         [Prefabs:Enforcer]
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
-        [ManipulationProfiles:GVA-Manipulation-Black-DestroyerName]
+        [ManipulationProfiles:GVA-Manipulation-Black-FrigateName]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-PrefabData-Black-CT</SubtypeId>
+      </Id>
+      <Description>
+        [MES Prefab Data]
+
+        [Prefabs:SPS-350 Dagger]
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ManipulationProfiles:GVA-Manipulation-Black-FrigateName]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-PrefabData-Black-Int</SubtypeId>
+      </Id>
+      <Description>
+        [MES Prefab Data]
+
+        [Prefabs:Enforcer]
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ManipulationProfiles:GVA-Manipulation-Black-FighterName]
       </Description>
     </EntityComponent>
   </EntityComponents>
