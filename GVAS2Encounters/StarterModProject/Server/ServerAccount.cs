@@ -21,7 +21,6 @@ namespace GVA.NPCControl.Server
 
     public interface IServerAccount : IAccount
     {
-        string Log();
         void TimePeriod(IAntagonist pirates = null);
     }
 
@@ -44,7 +43,7 @@ namespace GVA.NPCControl.Server
 
         public int Incursions { get; private set; }
 
-        public string Log()
+        private string Log()
         {
             return $"Civ: {Civilian} Mil: {Military} Unspent: {UnspentUnits:F2}";
         }
@@ -90,11 +89,11 @@ namespace GVA.NPCControl.Server
                 if (pirates.Fight())
                 {
                     Civilian--;
-                    //TODO:Log the fight.
+                    AccountLog.Log("Lost civilian building to pirates.");
                 }
                 else
                 {
-                    //TODO:Log the fight.
+                    AccountLog.Log("Defended area against pirates.");
                 }
             }
             //Resolve Incursions from the new period.
@@ -116,6 +115,7 @@ namespace GVA.NPCControl.Server
                 MyLog.Default.WriteLine("SATDISH: Error Null Pirates");
             }
             ResolveEconomy();
+            AccountLog.Log(Log());
         }
 
         public override void Read()

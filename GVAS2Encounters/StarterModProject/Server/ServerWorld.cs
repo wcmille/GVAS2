@@ -166,7 +166,6 @@ namespace GVA.NPCControl.Server
                     //factionLog?.Log(acct);
                     acct.TimePeriod(black);
                     Write(acct);
-                    acct.Log();
                 }
                 var newTime = lastRun.AddHours(SharedConstants.TimeDeltaHours);
                 WriteTime(newTime);

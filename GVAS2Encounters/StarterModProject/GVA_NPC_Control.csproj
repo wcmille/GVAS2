@@ -121,7 +121,7 @@
     <Compile Include="CommandPacket.cs" />
     <Compile Include="IWorld.cs" />
     <Compile Include="MESApi.cs" />
-    <Compile Include="PirateAccount.cs" />
+    <Compile Include="Server\PirateAccount.cs" />
     <Compile Include="Server\Server.cs" />
     <Compile Include="Server\ServerAccount.cs" />
     <Compile Include="Server\ServerLog.cs" />
