@@ -1,17 +1,15 @@
 ﻿using Sandbox.ModAPI;
 using System;
-using System.Text;
-using VRageMath;
 
-namespace GVA.NPCControl
+namespace GVA.NPCControl.Server
 {
-    public class PirateAccount : IAccount, IAntagonist
+    public class PirateAccount : IServerAccount, IAntagonist
     {
         readonly Random r;
         public PirateAccount(int seed = 0)
         {
-            if (seed !=  0) { r = new Random(seed); }
-            else r = new Random(); 
+            if (seed != 0) { r = new Random(seed); }
+            else r = new Random();
             OwningNPCTag = SharedConstants.BlackFactionTag;
             ColorFaction = SharedConstants.BlackFactionColor;
 
@@ -52,11 +50,11 @@ namespace GVA.NPCControl
             if (Military < 25)
             {
                 Military += 1;
-            }           
+            }
             //Decay everyone's rep.
-                //For each player in the roster...
-                //If rep > -1000
-                    //rep -= 25
+            //For each player in the roster...
+            //If rep > -1000
+            //rep -= 25
         }
 
         public void Read()
@@ -74,11 +72,6 @@ namespace GVA.NPCControl
         {
             MyAPIGateway.Utilities.SetVariable($"{ColorFaction}{SharedConstants.CreditsStr}", UnspentUnits);
             MyAPIGateway.Utilities.SetVariable($"{ColorFaction}{SharedConstants.MilitaryStr}", Military);
-        }
-
-        public void Display(StringBuilder builder)
-        {
-            builder.AppendLine($"Supporting: {OwningNPCTag}");
         }
 
         public string Log()

@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Sandbox.Game.GameSystems.TextSurfaceScripts;
+using Sandbox.ModAPI;
+using System;
 using System.Collections.Generic;
 using System.Text;
-using Sandbox.Game.GameSystems.TextSurfaceScripts;
-using Sandbox.ModAPI;
 using VRage.Game;
 using VRage.Game.GUI.TextPanel;
 using VRage.Game.ModAPI;
@@ -16,7 +16,7 @@ namespace GVA.NPCControl.Client
     public class BaseManagementTSS : MyTSSCommon
     {
         #region Copied From SatdishLogic
-        readonly List<IAccount> owned = new List<IAccount>();
+        readonly List<IClientAccount> owned = new List<IClientAccount>();
         readonly StringBuilder builder = new StringBuilder();
 
         private void Dish_AppendingCustomInfo()
@@ -40,7 +40,7 @@ namespace GVA.NPCControl.Client
             }
         }
 
-        private static void AccountOwningTerritory(string pcFactionTag, List<IAccount> owned)
+        private static void AccountOwningTerritory(string pcFactionTag, List<IClientAccount> owned)
         {
             Client.client.World.GetAccountByPCOwner(pcFactionTag, owned);
         }

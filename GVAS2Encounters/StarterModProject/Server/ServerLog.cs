@@ -30,7 +30,7 @@ namespace GVA.NPCControl.Server
             Write();
         }
 
-        public void Log(IAccount acct)
+        public void Log(IServerAccount acct)
         {
             LogText += $"{DateTime.UtcNow}, {acct.Log()}\n";
             Write();

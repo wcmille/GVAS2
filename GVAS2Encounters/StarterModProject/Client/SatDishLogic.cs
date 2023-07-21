@@ -15,7 +15,7 @@ namespace GVA.NPCControl.Client
     public class SatDishLogic : MyGameLogicComponent
     {
         private static bool controlsInit;
-        readonly List<IAccount> owned = new List<IAccount>();
+        readonly List<IClientAccount> owned = new List<IClientAccount>();
 
         public override void Init(MyObjectBuilder_EntityBase objectBuilder)
         {
@@ -54,7 +54,7 @@ namespace GVA.NPCControl.Client
 
         private void Dish_AppendingCustomInfo(IMyTerminalBlock block, System.Text.StringBuilder builder)
         {
-            
+
             AccountOwningTerritory(block.GetOwnerFactionTag(), owned);
             if (owned.Count == 1)
             {
@@ -62,7 +62,7 @@ namespace GVA.NPCControl.Client
             }
         }
 
-        private static void AccountOwningTerritory(string pcFactionTag, List<IAccount> owned)
+        private static void AccountOwningTerritory(string pcFactionTag, List<IClientAccount> owned)
         {
             Client.client.World.GetAccountByPCOwner(pcFactionTag, owned);
         }
@@ -98,7 +98,7 @@ namespace GVA.NPCControl.Client
 
         private static bool OneIZone(IMyTerminalBlock x)
         {
-            List<IAccount> owned = new List<IAccount>();
+            List<IClientAccount> owned = new List<IClientAccount>();
             AccountOwningTerritory(x.GetOwnerFactionTag(), owned);
             return (owned.Count == 1 && owned[0] is IZoneFaction);
         }
@@ -132,7 +132,7 @@ namespace GVA.NPCControl.Client
         private static void RequestLog(IMyTerminalBlock block)
         {
             var pcFactionTag = block.GetOwnerFactionTag();
-            List<IAccount> owned = new List<IAccount>();
+            List<IClientAccount> owned = new List<IClientAccount>();
             AccountOwningTerritory(pcFactionTag, owned);
             if (owned.Count == 1)
             {
@@ -150,7 +150,7 @@ namespace GVA.NPCControl.Client
             var owningFaction = MyAPIGateway.Session.Factions.TryGetFactionByTag(pcFactionTag);
             if (owningFaction != null)
             {
-                List<IAccount> owned = new List<IAccount>();
+                List<IClientAccount> owned = new List<IClientAccount>();
                 AccountOwningTerritory(pcFactionTag, owned);
                 if (owned.Count == 1)
                 {
@@ -174,7 +174,7 @@ namespace GVA.NPCControl.Client
                 if (owningFaction.TryGetBalanceInfo(out credits) && credits >= SharedConstants.tokenPrice)
                 {
                     //double units;
-                    List<IAccount> owned = new List<IAccount>();
+                    List<IClientAccount> owned = new List<IClientAccount>();
                     AccountOwningTerritory(pcFactionTag, owned);
                     if (owned.Count == 1)
                     {
@@ -198,7 +198,7 @@ namespace GVA.NPCControl.Client
         private static void IncreaseNPCAndNotify(IMyTerminalBlock block, string shipType)
         {
             var pcFactionTag = block.GetOwnerFactionTag();
-            List<IAccount> owned = new List<IAccount>();
+            List<IClientAccount> owned = new List<IClientAccount>();
             AccountOwningTerritory(pcFactionTag, owned);
             if (owned.Count == 1)
             {

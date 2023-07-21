@@ -16,17 +16,26 @@ namespace GVA.NPCControl.Server
         private readonly ServerLog blueLog;
         private readonly ServerLog redLog;
         readonly HashSet<IMyEntity> names = new HashSet<IMyEntity>(1);
+        readonly PirateAccount black;
 
         public ServerWorld(Server server)
         {
-            this.server = server;
-            FetchClaimBlocks();
-            blueClaimBlock = GetClaimBlockByColor(SharedConstants.BlueFactionColor);
-            redClaimBlock = GetClaimBlockByColor(SharedConstants.RedFactionColor);
             blueLog = new ServerLog(SharedConstants.BlueFactionColor);
             redLog = new ServerLog(SharedConstants.RedFactionColor);
             blueLog.Read();
             redLog.Read();
+
+            var blue = new ServerAccount(SharedConstants.BlueFactionColor, blueLog);
+            list.Add(blue);
+            var red = new ServerAccount(SharedConstants.RedFactionColor, redLog);
+            list.Add(red);
+            black = new PirateAccount();
+            list.Add(black);
+
+            this.server = server;
+            FetchClaimBlocks();
+            blueClaimBlock = GetClaimBlockByColor(SharedConstants.BlueFactionColor);
+            redClaimBlock = GetClaimBlockByColor(SharedConstants.RedFactionColor);
         }
 
         private IMyCubeGrid GetClaimBlockByColor(string color)
@@ -65,17 +74,9 @@ namespace GVA.NPCControl.Server
 
         public override void RequestReport(ulong requestor, IAccount ac)
         {
-            ServerLog log = FetchLogs(ac);
+            var sa = ac as ServerAccount;
+            var log = sa?.AccountLog;
             if (log != null) server.WriteToClient(requestor, log);
-        }
-
-        internal ServerLog FetchLogs(IAccount ac)
-        {
-            if (ac == null) throw new ArgumentNullException("ac");
-            ServerLog log = null;
-            if (ac.ColorFaction == SharedConstants.BlueFactionColor) log = blueLog;
-            else if (ac.ColorFaction == SharedConstants.RedFactionColor) log = redLog;
-            return log;
         }
 
         #region Private Methods
@@ -157,15 +158,15 @@ namespace GVA.NPCControl.Server
             var diff = DateTime.Now - lastRun;
             if (diff.Hours > SharedConstants.TimeDeltaHours)
             {
-                foreach (var acct in list)
+                foreach (IServerAccount acct in list)
                 {
-                    ServerLog factionLog = null;
-                    if (acct.ColorFaction == SharedConstants.BlueFactionColor) factionLog = blueLog;
-                    else if (acct.ColorFaction == SharedConstants.RedFactionColor) factionLog = redLog;
-                    factionLog?.Log(acct);
-                    acct.TimePeriod((IAntagonist) black);
+                    //ServerLog factionLog = null;
+                    //if (acct.ColorFaction == SharedConstants.BlueFactionColor) factionLog = blueLog;
+                    //else if (acct.ColorFaction == SharedConstants.RedFactionColor) factionLog = redLog;
+                    //factionLog?.Log(acct);
+                    acct.TimePeriod(black);
                     Write(acct);
-                    factionLog?.Log(acct);
+                    acct.Log();
                 }
                 var newTime = lastRun.AddHours(SharedConstants.TimeDeltaHours);
                 WriteTime(newTime);

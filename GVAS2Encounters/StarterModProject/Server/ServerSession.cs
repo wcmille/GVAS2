@@ -85,12 +85,8 @@ namespace GVA.NPCControl.Server
             {
                 var owner = grid.BigOwners.FirstOrDefault();
                 var faction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(owner);
-                var acct = world.GetAccountByNPCOwner(faction.Tag);
-                var log = world.FetchLogs(acct);
-                if (log != null)
-                {
-                    log.Log(grid);
-                }
+                var acct = world.GetAccountByNPCOwner(faction.Tag) as ServerAccount;
+                acct?.LogSpawn(grid);
             }
             catch (Exception ex)
             {

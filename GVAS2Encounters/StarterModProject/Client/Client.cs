@@ -7,7 +7,7 @@ namespace GVA.NPCControl.Client
         public static Client client = null;
 
         INetworking networking;
-        public IWorld World { get; set; }
+        public ClientWorld World { get; set; }
 
         public Client()
         {
