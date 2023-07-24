@@ -44,7 +44,6 @@
         [Author:RivalAI]
         [Color:Yellow]
         [Chance:100]
-        [ChatMessages:{GridName} Despawned.]
         [BroadcastChatType:Chat]
         [SendToAllOnlinePlayers:true]
       </Description>
@@ -95,7 +94,6 @@
         [Author:MES]
         [Color:Green]
         [Chance:100]
-        [ChatMessages:{GridName} despawned MES.]
         [BroadcastChatType:Chat]
         [SendToAllOnlinePlayers:true]
       </Description>

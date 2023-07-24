@@ -4,16 +4,20 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Black-Planet-All</SubtypeId>
+        <SubtypeId>Black-Planet-All-01p</SubtypeId>
       </Id>
       <Description>
         [MES Spawn Conditions]
         [FactionOwner:SPRT]
-        [AtmosphericCargoShip:true]
         [SkipAirDensityCheck:true]
+        [AtmosphericCargoShip:true]
+        [AtmosphericCargoShipChance:1]
         [GravityCargoShip:true]
-        [SpaceCargoShip:true]
+        [GravityCargoShipChance:1]
         [LunarCargoShip:true]
+        [LunarCargoShipChance:1]
+        [SpaceCargoShip:true]
+        [SpaceCargoShipChance:1]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">

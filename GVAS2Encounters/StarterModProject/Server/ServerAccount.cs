@@ -24,7 +24,7 @@ namespace GVA.NPCControl.Server
         void TimePeriod(IAntagonist pirates = null);
     }
 
-    public class ServerAccount : Accounting
+    public class ServerAccount : Accounting, IServerAccount
     {
         const double corruption = 0.9;
         public ServerLog AccountLog { get; private set; }

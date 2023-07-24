@@ -705,6 +705,7 @@
             <MinedOre>Uranium</MinedOre>
             <MinedOreRatio>0.3</MinedOreRatio>
             <CanBeHarvested>true</CanBeHarvested>
+            <SpawnsInAsteroids>false</SpawnsInAsteroids>
             <IsRare>true</IsRare>
 
 

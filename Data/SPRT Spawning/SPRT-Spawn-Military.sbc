@@ -96,7 +96,7 @@
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
         <!--Do Not Edit-->
-        <SubtypeId>GVA-Black-Interceptor</SubtypeId>
+        <SubtypeId>GVA-Black-ScoutParty</SubtypeId>
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]
@@ -109,8 +109,7 @@
         [SpawnConditionsProfiles:Black-BlueAlienRegion-Space-Spawns]
         [SpawnConditionsProfiles:Black-RedAlienRegion-Space-Spawns]
         [SpawnConditionsProfiles:GVA-Black-PirateZone]
-        [SpawnConditionsProfiles:Black-Planet-All]
-
+        [SpawnConditionsProfiles:Black-Planet-All-01p]
         [FactionOwner:SPRT]
       </Description>
       <IsPirate>true</IsPirate>
