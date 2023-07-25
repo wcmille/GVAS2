@@ -4,20 +4,73 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Black-Planet-All-01p</SubtypeId>
+        <SubtypeId>Black-Planet-All-Weak</SubtypeId>
       </Id>
       <Description>
         [MES Spawn Conditions]
         [FactionOwner:SPRT]
         [SkipAirDensityCheck:true]
         [AtmosphericCargoShip:true]
-        [AtmosphericCargoShipChance:1]
+        [AtmosphericCargoShipChance:10]
         [GravityCargoShip:true]
-        [GravityCargoShipChance:1]
+        [GravityCargoShipChance:5]
         [LunarCargoShip:true]
-        [LunarCargoShipChance:1]
+        [LunarCargoShipChance:10]
         [SpaceCargoShip:true]
         [SpaceCargoShipChance:1]
+
+        [UseThreatLevelCheck:true]
+        [ThreatScoreMinimum:200]
+
+        [CustomApiConditions:BlackIsWeak]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Black-Planet-All-Normal</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+        [FactionOwner:SPRT]
+        [SkipAirDensityCheck:true]
+        [AtmosphericCargoShip:true]
+        [AtmosphericCargoShipChance:30]
+        [GravityCargoShip:true]
+        [GravityCargoShipChance:10]
+        [LunarCargoShip:true]
+        [LunarCargoShipChance:30]
+        [SpaceCargoShip:true]
+        [SpaceCargoShipChance:10]
+
+        [UseThreatLevelCheck:true]
+        [ThreatScoreMinimum:200]
+
+        [CustomApiConditions:BlackIsNormal]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Black-Planet-All-Strong</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+        [FactionOwner:SPRT]
+        [SkipAirDensityCheck:true]
+        [AtmosphericCargoShip:true]
+        [AtmosphericCargoShipChance:75]
+        [GravityCargoShip:true]
+        [GravityCargoShipChance:50]
+        [LunarCargoShip:true]
+        [LunarCargoShipChance:75]
+        [SpaceCargoShip:true]
+        [SpaceCargoShipChance:25]
+
+        [UseThreatLevelCheck:true]
+        [ThreatScoreMinimum:200]
+
+        [CustomApiConditions:BlackIsStrong]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">

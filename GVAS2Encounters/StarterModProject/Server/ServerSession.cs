@@ -37,6 +37,10 @@ namespace GVA.NPCControl.Server
                 mes.RegisterCustomSpawnCondition(false, "RedCivMoreThan20", null);
                 mes.RegisterCustomSpawnCondition(false, "RedCivMoreThan40", null);
 
+                mes.RegisterCustomSpawnCondition(false, "BlackIsWeak", null);
+                mes.RegisterCustomSpawnCondition(false, "BlackIsNormal", null);
+                mes.RegisterCustomSpawnCondition(false, "BlackIsStrong", null);
+
                 mes.RegisterSuccessfulSpawnAction(LogSpawn, false);
             }
 
@@ -74,6 +78,14 @@ namespace GVA.NPCControl.Server
                 mes.RegisterCustomSpawnCondition(true, "RedCivMoreThan10", rc10);
                 mes.RegisterCustomSpawnCondition(true, "RedCivMoreThan20", rc20);
                 mes.RegisterCustomSpawnCondition(true, "RedCivMoreThan40", rc40);
+
+                Func<string, string, string, Vector3D, bool> biw, bin, bis;
+                biw = (a, b, c, d) => CountersMoreThan(SharedConstants.BlackFactionColor, SharedConstants.MilitaryStr, 3);
+                bin = (a, b, c, d) => CountersMoreThan(SharedConstants.BlackFactionColor, SharedConstants.MilitaryStr, 10);
+                bis = (a, b, c, d) => CountersMoreThan(SharedConstants.BlackFactionColor, SharedConstants.MilitaryStr, 20);
+                mes.RegisterCustomSpawnCondition(false, "BlackIsWeak", biw);
+                mes.RegisterCustomSpawnCondition(false, "BlackIsNormal", bin);
+                mes.RegisterCustomSpawnCondition(false, "BlackIsStrong", bis);
 
                 mes.RegisterSuccessfulSpawnAction(LogSpawn, true);
             }

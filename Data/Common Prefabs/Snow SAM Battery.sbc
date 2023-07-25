@@ -6,18 +6,18 @@
       <CubeGrids>
         <CubeGrid>
           <SubtypeName />
-          <EntityId>135669656378652420</EntityId>
+          <EntityId>139572717777145002</EntityId>
           <PersistentFlags>CastShadows InScene</PersistentFlags>
-          <Name>135669656378652420</Name>
+          <Name>139572717777145002</Name>
           <PositionAndOrientation>
             <Position x="0" y="0" z="0" />
-            <Forward x="0.9889681" y="0.144645169" z="-0.03193688" />
-            <Up x="0.145592138" y="-0.988900959" z="0.0296282526" />
+            <Forward x="-0.8753259" y="-0.0144818071" z="-0.483316422" />
+            <Up x="-0.127813742" y="0.9709286" z="0.202388912" />
             <Orientation>
-              <X>-0.6945623</X>
-              <Y>-0.0401839353</Y>
-              <Z>0.715565264</Z>
-              <W>-0.06272779</W>
+              <X>0.054976698</X>
+              <Y>0.505291343</Y>
+              <Z>0.107299834</Z>
+              <W>0.8544852</W>
             </Orientation>
           </PositionAndOrientation>
           <LocalPositionAndOrientation xsi:nil="true" />
@@ -32,6 +32,14 @@
                         <Key>29ffd684-13d7-4045-bf76-cd48bf80e36a</Key>
                         <Value>CAAQABiAgAEiACgAMAA6AEIASgBVAAAAAFobCQAAAAAAAAAAIQAAAAAAAAAAOQAAAAAAAAAAYhsJAAAAAAAAAAAhAAAAAAAAAAA5AAAAAAAAAABqCgjwi/fF+ssBEARyAHgAgAEAiAEBkAEAmQEAAAAAAAAAAKgBALABALoBGwkAAAAAAAAAACEAAAAAAAAAADkAAAAAAADwv8IBGwkAAAAAAAAAACEAAAAAAADwPzkAAAAAAAAAAMoBCgjwi/fF+ssBEATSAU4IABAAGAAgACgAMAE4AEAASABQAFgAYABoAHAAeACAAQCIAQCQAQCYAQCgAQCoAQCwAQC4AQDAAQDIAQDQAQDYAQDgAQDoAQDwAQD4AQDaAU4IABAAGAAgACgAMAA4AEAASABQAFgAYABoAHAAeACAAQCIAQCQAQCYAQCgAQCoAQGwAQG4AQHAAQHIAQHQAQDYAQDgAQDoAQDwAQD4AQDiAQCAAgCKAgCSAgCYAgA=</Value>
                       </item>
+                      <item>
+                        <Key>75bbb4f5-4fb9-4230-beef-bb79c9811502</Key>
+                        <Value>GAA=</Value>
+                      </item>
+                      <item>
+                        <Key>75bbb4f5-4fb9-4230-beef-bb79c9811503</Key>
+                        <Value>Eg0IABAAIAAtAAAAADAA</Value>
+                      </item>
                     </dictionary>
                   </Storage>
                 </Component>
@@ -40,35 +48,6 @@
           </ComponentContainer>
           <GridSizeEnum>Large</GridSizeEnum>
           <CubeBlocks>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorBlock</SubtypeName>
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorBlock</SubtypeName>
-              <Min x="1" y="0" z="0" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorBlock</SubtypeName>
-              <Min x="2" y="0" z="0" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorBlock</SubtypeName>
-              <Min x="3" y="0" z="0" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorBlock</SubtypeName>
-              <Min x="-1" y="0" z="0" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeHeavyBlockArmorBlock</SubtypeName>
               <Min x="-2" y="0" z="-1" />
@@ -94,44 +73,49 @@
               <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorBlock</SubtypeName>
-              <Min x="-1" y="0" z="-6" />
+              <SubtypeName>LargeBlockArmorBlock</SubtypeName>
+              <Min x="0" y="0" z="-4" />
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
               <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorBlock</SubtypeName>
-              <Min x="0" y="0" z="-6" />
+              <SubtypeName>LargeBlockArmorBlock</SubtypeName>
+              <Min x="-1" y="0" z="-4" />
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
               <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorBlock</SubtypeName>
-              <Min x="1" y="0" z="-6" />
+              <SubtypeName>LargeHeavyBlockArmorSlope2Base</SubtypeName>
+              <Min x="0" y="1" z="-2" />
+              <BlockOrientation Forward="Right" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
               <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorBlock</SubtypeName>
-              <Min x="2" y="0" z="-6" />
+              <SubtypeName>LargeHeavyBlockArmorSlope2Base</SubtypeName>
+              <Min x="0" y="1" z="-4" />
+              <BlockOrientation Forward="Right" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
               <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorBlock</SubtypeName>
-              <Min x="3" y="0" z="-6" />
+              <SubtypeName>LargeHeavyBlockArmorSlope2Base</SubtypeName>
+              <Min x="0" y="1" z="-3" />
+              <BlockOrientation Forward="Right" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
               <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorBlock</SubtypeName>
-              <Min x="4" y="0" z="-5" />
+              <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
+              <Min x="2" y="1" z="-2" />
+              <BlockOrientation Forward="Forward" Up="Right" />
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
               <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorBlock</SubtypeName>
-              <Min x="4" y="0" z="-4" />
+              <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
+              <Min x="-1" y="1" z="-1" />
+              <BlockOrientation Forward="Forward" Up="Right" />
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
               <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
@@ -141,175 +125,11 @@
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
               <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorBlock</SubtypeName>
-              <Min x="4" y="0" z="-2" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorBlock</SubtypeName>
-              <Min x="4" y="0" z="-1" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
-              <Min x="5" y="0" z="-1" />
-              <BlockOrientation Forward="Down" Up="Right" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
-              <Min x="5" y="0" z="-2" />
-              <BlockOrientation Forward="Down" Up="Right" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
-              <Min x="5" y="0" z="-3" />
-              <BlockOrientation Forward="Down" Up="Right" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
-              <Min x="5" y="0" z="-4" />
-              <BlockOrientation Forward="Down" Up="Right" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
-              <Min x="5" y="0" z="-5" />
-              <BlockOrientation Forward="Down" Up="Right" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
-              <Min x="3" y="0" z="-7" />
-              <BlockOrientation Forward="Down" Up="Forward" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
-              <Min x="2" y="0" z="-7" />
-              <BlockOrientation Forward="Down" Up="Forward" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
-              <Min x="1" y="0" z="-7" />
-              <BlockOrientation Forward="Down" Up="Forward" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
-              <Min x="0" y="0" z="-7" />
-              <BlockOrientation Forward="Down" Up="Forward" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
-              <Min x="-1" y="0" z="-7" />
-              <BlockOrientation Forward="Down" Up="Forward" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorBlock</SubtypeName>
-              <Min x="-3" y="0" z="-5" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_BatteryBlock">
-              <SubtypeName>LargeBlockBatteryBlock</SubtypeName>
-              <EntityId>130506976168105369</EntityId>
-              <Min x="-3" y="0" z="-4" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-              <ShareMode>Faction</ShareMode>
-              <ShowOnHUD>false</ShowOnHUD>
-              <ShowInTerminal>true</ShowInTerminal>
-              <ShowInToolbarConfig>true</ShowInToolbarConfig>
-              <ShowInInventory>true</ShowInInventory>
-              <NumberInGrid>2</NumberInGrid>
-              <Enabled>true</Enabled>
-              <CurrentStoredPower>0.2826987</CurrentStoredPower>
-              <ProducerEnabled>true</ProducerEnabled>
-              <MaxStoredPower>0</MaxStoredPower>
-              <SemiautoEnabled>false</SemiautoEnabled>
-              <OnlyDischargeEnabled>false</OnlyDischargeEnabled>
-              <ChargeMode>0</ChargeMode>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_BatteryBlock">
-              <SubtypeName>LargeBlockBatteryBlock</SubtypeName>
-              <EntityId>133200974038302677</EntityId>
-              <Min x="-3" y="0" z="-2" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-              <ShareMode>Faction</ShareMode>
-              <ShowOnHUD>false</ShowOnHUD>
-              <ShowInTerminal>true</ShowInTerminal>
-              <ShowInToolbarConfig>true</ShowInToolbarConfig>
-              <ShowInInventory>true</ShowInInventory>
-              <NumberInGrid>3</NumberInGrid>
-              <Enabled>true</Enabled>
-              <CurrentStoredPower>0.282693774</CurrentStoredPower>
-              <ProducerEnabled>true</ProducerEnabled>
-              <MaxStoredPower>0</MaxStoredPower>
-              <SemiautoEnabled>false</SemiautoEnabled>
-              <OnlyDischargeEnabled>false</OnlyDischargeEnabled>
-              <ChargeMode>0</ChargeMode>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorBlock</SubtypeName>
-              <Min x="-4" y="1" z="-1" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
-              <Min x="-1" y="0" z="1" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
-              <Min x="0" y="0" z="1" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
-              <Min x="1" y="0" z="1" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
-              <Min x="2" y="0" z="1" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
-              <Min x="3" y="0" z="1" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_InteriorTurret">
               <SubtypeName>LargeInteriorTurret</SubtypeName>
-              <EntityId>97633955104511294</EntityId>
-              <Min x="4" y="1" z="0" />
-              <BlockOrientation Forward="Backward" Up="Up" />
+              <EntityId>83362087984260492</EntityId>
+              <Min x="4" y="2" z="-3" />
+              <BlockOrientation Forward="Right" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
               <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
               <ShareMode>Faction</ShareMode>
@@ -319,8 +139,8 @@
                     <TypeId>MyInventoryBase</TypeId>
                     <Component xsi:type="MyObjectBuilder_Inventory">
                       <Items />
-                      <nextItemId>1</nextItemId>
-                      <Volume>0.384</Volume>
+                      <nextItemId>0</nextItemId>
+                      <Volume>0.6</Volume>
                       <Mass>9223372036854.775807</Mass>
                       <MaxItemCount>2147483647</MaxItemCount>
                       <Size xsi:nil="true" />
@@ -342,13 +162,26 @@
                       <IsSessionUpdateEnabled>false</IsSessionUpdateEnabled>
                     </Component>
                   </ComponentData>
+                  <ComponentData>
+                    <TypeId>MyModStorageComponentBase</TypeId>
+                    <Component xsi:type="MyObjectBuilder_ModStorageComponent">
+                      <Storage>
+                        <dictionary>
+                          <item>
+                            <Key>75bbb4f5-4fb9-4230-beef-bb79c9811501</Key>
+                            <Value>+nzJAQoJCAAQAB0AAAAAErsBCAASPC0AAC9EMjUIABAAGAAgACgAMABIAFgAcAB4AIABAJABAKABALABAMABANABANgBAOgBAPABAPgBAZACABo6EgkNAAAAABAAIFkYADAAOABAAEgAUiMaGwkAAAAAAAAAACEAAAAAAAAAADkAAAAAAAAAACAAKAAwACIrCAAQACAAKgYgvfz//wcyGwkAAAAAAAAAACEAAAAAAAAAADkAAAAAAAAAACoQCAAgASgAMAA4AEAASABQAAgi</Value>
+                          </item>
+                        </dictionary>
+                      </Storage>
+                    </Component>
+                  </ComponentData>
                 </Components>
               </ComponentContainer>
               <ShowOnHUD>false</ShowOnHUD>
               <ShowInTerminal>true</ShowInTerminal>
               <ShowInToolbarConfig>true</ShowInToolbarConfig>
               <ShowInInventory>true</ShowInInventory>
-              <NumberInGrid>1</NumberInGrid>
+              <NumberInGrid>4</NumberInGrid>
               <Enabled>true</Enabled>
               <IsShooting>false</IsShooting>
               <IsShootingFromTerminal>false</IsShootingFromTerminal>
@@ -376,45 +209,166 @@
               </Flags>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorCorner</SubtypeName>
-              <Min x="4" y="0" z="1" />
+              <SubtypeName>LargeHeavyBlockArmorBlock</SubtypeName>
+              <Min x="4" y="1" z="-3" />
+              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
+              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
+            </MyObjectBuilder_CubeBlock>
+            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+              <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
+              <Min x="2" y="0" z="-2" />
+              <BlockOrientation Forward="Forward" Up="Right" />
+              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
+              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
+            </MyObjectBuilder_CubeBlock>
+            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+              <SubtypeName>LargeBlockArmorBlock</SubtypeName>
+              <Min x="1" y="0" z="-2" />
+              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
+              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
+            </MyObjectBuilder_CubeBlock>
+            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+              <SubtypeName>LargeBlockArmorBlock</SubtypeName>
+              <Min x="0" y="0" z="-2" />
+              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
+              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
+            </MyObjectBuilder_CubeBlock>
+            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+              <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
+              <Min x="3" y="1" z="-3" />
+              <BlockOrientation Forward="Down" Up="Right" />
+              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
+              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
+            </MyObjectBuilder_CubeBlock>
+            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+              <SubtypeName>LargeHeavyBlockArmorBlock</SubtypeName>
+              <Min x="1" y="1" z="-4" />
+              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
+              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
+            </MyObjectBuilder_CubeBlock>
+            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+              <SubtypeName>LargeHeavyBlockArmorSlope2Base</SubtypeName>
+              <Min x="-1" y="1" z="-4" />
+              <BlockOrientation Forward="Left" Up="Up" />
+              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
+              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
+            </MyObjectBuilder_CubeBlock>
+            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+              <SubtypeName>LargeHeavyBlockArmorSlope2Base</SubtypeName>
+              <Min x="-1" y="1" z="-2" />
+              <BlockOrientation Forward="Left" Up="Up" />
+              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
+              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
+            </MyObjectBuilder_CubeBlock>
+            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_ConveyorConnector">
+              <SubtypeName>ConveyorTubeDuct</SubtypeName>
+              <EntityId>79414027216126328</EntityId>
+              <Min x="1" y="1" z="-3" />
               <BlockOrientation Forward="Forward" Up="Right" />
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
               <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeHeavyBlockArmorBlock</SubtypeName>
-              <Min x="4" y="0" z="0" />
+              <Min x="-3" y="0" z="-5" />
+              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
+              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
+            </MyObjectBuilder_CubeBlock>
+            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_BatteryBlock">
+              <SubtypeName>LargeBlockBatteryBlock</SubtypeName>
+              <EntityId>83129864336427492</EntityId>
+              <Min x="-3" y="0" z="-4" />
+              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
+              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
+              <ShareMode>Faction</ShareMode>
+              <ShowOnHUD>false</ShowOnHUD>
+              <ShowInTerminal>true</ShowInTerminal>
+              <ShowInToolbarConfig>true</ShowInToolbarConfig>
+              <ShowInInventory>true</ShowInInventory>
+              <NumberInGrid>2</NumberInGrid>
+              <Enabled>true</Enabled>
+              <CurrentStoredPower>0.2812542</CurrentStoredPower>
+              <ProducerEnabled>true</ProducerEnabled>
+              <MaxStoredPower>0</MaxStoredPower>
+              <SemiautoEnabled>false</SemiautoEnabled>
+              <OnlyDischargeEnabled>false</OnlyDischargeEnabled>
+              <ChargeMode>0</ChargeMode>
+            </MyObjectBuilder_CubeBlock>
+            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_BatteryBlock">
+              <SubtypeName>LargeBlockBatteryBlock</SubtypeName>
+              <EntityId>142574499146054296</EntityId>
+              <Min x="-3" y="0" z="-2" />
+              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
+              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
+              <ShareMode>Faction</ShareMode>
+              <ShowOnHUD>false</ShowOnHUD>
+              <ShowInTerminal>true</ShowInTerminal>
+              <ShowInToolbarConfig>true</ShowInToolbarConfig>
+              <ShowInInventory>true</ShowInInventory>
+              <NumberInGrid>3</NumberInGrid>
+              <Enabled>true</Enabled>
+              <CurrentStoredPower>0.281249166</CurrentStoredPower>
+              <ProducerEnabled>true</ProducerEnabled>
+              <MaxStoredPower>0</MaxStoredPower>
+              <SemiautoEnabled>false</SemiautoEnabled>
+              <OnlyDischargeEnabled>false</OnlyDischargeEnabled>
+              <ChargeMode>0</ChargeMode>
+            </MyObjectBuilder_CubeBlock>
+            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+              <SubtypeName>LargeHeavyBlockArmorBlock</SubtypeName>
+              <Min x="-4" y="1" z="-1" />
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
               <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeBlockArmorCornerInv</SubtypeName>
-              <Min x="4" y="0" z="-6" />
-              <BlockOrientation Forward="Up" Up="Backward" />
+              <SubtypeName>LargeBlockArmorBlock</SubtypeName>
+              <Min x="-1" y="0" z="-2" />
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
               <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeBlockArmorCorner</SubtypeName>
-              <Min x="5" y="0" z="-6" />
-              <BlockOrientation Forward="Down" Up="Right" />
+              <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
+              <Min x="-1" y="1" z="-5" />
+              <BlockOrientation Forward="Backward" Up="Right" />
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
               <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeBlockArmorCorner</SubtypeName>
-              <Min x="4" y="0" z="-7" />
-              <BlockOrientation Forward="Down" Up="Right" />
+              <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
+              <Min x="2" y="0" z="-4" />
+              <BlockOrientation Forward="Backward" Up="Right" />
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
               <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeBlockArmorCorner</SubtypeName>
-              <Min x="-2" y="0" z="-7" />
-              <BlockOrientation Forward="Down" Up="Forward" />
+            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CargoContainer">
+              <SubtypeName>LargeBlockSmallContainer</SubtypeName>
+              <EntityId>121842081494491898</EntityId>
+              <Min x="0" y="0" z="-3" />
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
               <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
+              <ShareMode>Faction</ShareMode>
+              <ComponentContainer>
+                <Components>
+                  <ComponentData>
+                    <TypeId>MyInventoryBase</TypeId>
+                    <Component xsi:type="MyObjectBuilder_Inventory">
+                      <Items />
+                      <nextItemId>0</nextItemId>
+                      <Volume>15.625</Volume>
+                      <Mass>9223372036854.775807</Mass>
+                      <MaxItemCount>2147483647</MaxItemCount>
+                      <Size xsi:nil="true" />
+                      <InventoryFlags>CanReceive CanSend</InventoryFlags>
+                      <RemoveEntityOnEmpty>false</RemoveEntityOnEmpty>
+                    </Component>
+                  </ComponentData>
+                </Components>
+              </ComponentContainer>
+              <ShowOnHUD>false</ShowOnHUD>
+              <ShowInTerminal>true</ShowInTerminal>
+              <ShowInToolbarConfig>true</ShowInToolbarConfig>
+              <ShowInInventory>true</ShowInInventory>
+              <NumberInGrid>5</NumberInGrid>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeHeavyBlockArmorBlock</SubtypeName>
@@ -422,35 +376,17 @@
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
               <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeBlockArmorCornerInv</SubtypeName>
-              <Min x="-2" y="0" z="-6" />
-              <BlockOrientation Forward="Up" Up="Right" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeBlockArmorCornerInv</SubtypeName>
-              <Min x="-2" y="0" z="0" />
-              <BlockOrientation Forward="Backward" Up="Right" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeBlockArmorCorner</SubtypeName>
-              <Min x="-3" y="0" z="0" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeBlockArmorCorner</SubtypeName>
-              <Min x="-2" y="0" z="1" />
+            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_ConveyorConnector">
+              <SubtypeName>ConveyorTubeDuctCurved</SubtypeName>
+              <EntityId>137302819240250160</EntityId>
+              <Min x="1" y="0" z="-3" />
+              <BlockOrientation Forward="Forward" Up="Down" />
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
               <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CargoContainer">
               <SubtypeName>LargeBlockSmallContainer</SubtypeName>
-              <EntityId>101380598105205482</EntityId>
+              <EntityId>102771200934261810</EntityId>
               <Min x="-2" y="0" z="-3" />
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
               <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
@@ -480,7 +416,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CargoContainer">
               <SubtypeName>LargeBlockSmallContainer</SubtypeName>
-              <EntityId>112795637781456012</EntityId>
+              <EntityId>72551859495220285</EntityId>
               <Min x="-3" y="0" z="-3" />
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
               <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
@@ -510,7 +446,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Beacon">
               <SubtypeName>LargeBlockBeacon</SubtypeName>
-              <EntityId>132209587646628450</EntityId>
+              <EntityId>72859091845267590</EntityId>
               <Min x="-5" y="0" z="-2" />
               <BlockOrientation Forward="Forward" Up="Left" />
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
@@ -521,13 +457,13 @@
               <ShowInToolbarConfig>true</ShowInToolbarConfig>
               <ShowInInventory>true</ShowInInventory>
               <NumberInGrid>1</NumberInGrid>
-              <Enabled>true</Enabled>
+              <Enabled>false</Enabled>
               <BroadcastRadius>200</BroadcastRadius>
               <HudText />
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CargoContainer">
               <SubtypeName>LargeBlockSmallContainer</SubtypeName>
-              <EntityId>124487773782309341</EntityId>
+              <EntityId>82578668863476505</EntityId>
               <Min x="-4" y="0" z="-3" />
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
               <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
@@ -557,7 +493,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_ShipConnector">
               <SubtypeName>Connector</SubtypeName>
-              <EntityId>119598801724448123</EntityId>
+              <EntityId>92639021673748819</EntityId>
               <Min x="-4" y="1" z="-3" />
               <BlockOrientation Forward="Up" Up="Forward" />
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
@@ -588,7 +524,7 @@
                       <TimerEnabled>true</TimerEnabled>
                       <RemoveEntityOnTimer>false</RemoveEntityOnTimer>
                       <TimerType>Frame10</TimerType>
-                      <FramesFromLastTrigger>60</FramesFromLastTrigger>
+                      <FramesFromLastTrigger>10</FramesFromLastTrigger>
                       <TimerTickInFrames>80</TimerTickInFrames>
                       <IsSessionUpdateEnabled>false</IsSessionUpdateEnabled>
                     </Component>
@@ -610,17 +546,17 @@
               <IsParkingEnabled>true</IsParkingEnabled>
               <IsPowerTransferOverrideEnabled>false</IsPowerTransferOverrideEnabled>
             </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>ArmorCenter</SubtypeName>
-              <EntityId>125509304655042967</EntityId>
+            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_ConveyorConnector">
+              <SubtypeName>ConveyorTubeDuct</SubtypeName>
+              <EntityId>118372172111869685</EntityId>
               <Min x="-2" y="1" z="-3" />
-              <BlockOrientation Forward="Up" Up="Right" />
+              <BlockOrientation Forward="Forward" Up="Right" />
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
               <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>ArmorCenter</SubtypeName>
-              <EntityId>84713288775620293</EntityId>
+              <EntityId>113336232381024137</EntityId>
               <Min x="-3" y="1" z="-3" />
               <BlockOrientation Forward="Up" Up="Right" />
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
@@ -628,7 +564,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>ArmorCenter</SubtypeName>
-              <EntityId>142118482006991764</EntityId>
+              <EntityId>97334795293609393</EntityId>
               <Min x="-2" y="1" z="-4" />
               <BlockOrientation Forward="Up" Up="Right" />
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
@@ -636,7 +572,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>ArmorCenter</SubtypeName>
-              <EntityId>123166613577363881</EntityId>
+              <EntityId>89780125625889934</EntityId>
               <Min x="-3" y="1" z="-4" />
               <BlockOrientation Forward="Up" Up="Right" />
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
@@ -644,7 +580,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>ArmorCenter</SubtypeName>
-              <EntityId>125720060358356058</EntityId>
+              <EntityId>83593481029368823</EntityId>
               <Min x="-2" y="1" z="-2" />
               <BlockOrientation Forward="Up" Up="Right" />
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
@@ -652,7 +588,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>ArmorCenter</SubtypeName>
-              <EntityId>104194167705086396</EntityId>
+              <EntityId>79153976638321198</EntityId>
               <Min x="-3" y="1" z="-2" />
               <BlockOrientation Forward="Up" Up="Right" />
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
@@ -694,132 +630,187 @@
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
               <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
-              <Min x="4" y="1" z="-2" />
-              <BlockOrientation Forward="Down" Up="Right" />
+            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_RadioAntenna">
+              <SubtypeName>LargeBlockRadioAntenna</SubtypeName>
+              <EntityId>99430330701306502</EntityId>
+              <Min x="-3" y="1" z="-11" />
+              <BlockOrientation Forward="Left" Up="Forward" />
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
               <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
+              <ShareMode>Faction</ShareMode>
+              <CustomName>Main Antenna</CustomName>
+              <ShowOnHUD>false</ShowOnHUD>
+              <ShowInTerminal>true</ShowInTerminal>
+              <ShowInToolbarConfig>true</ShowInToolbarConfig>
+              <ShowInInventory>true</ShowInInventory>
+              <NumberInGrid>2</NumberInGrid>
+              <Enabled>false</Enabled>
+              <BroadcastRadius>5000</BroadcastRadius>
+              <ShowShipName>false</ShowShipName>
+              <EnableBroadcasting>true</EnableBroadcasting>
+              <AttachedPB>0</AttachedPB>
+              <IgnoreAllied>false</IgnoreAllied>
+              <IgnoreOther>true</IgnoreOther>
+              <HudText />
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
-              <Min x="4" y="1" z="-1" />
-              <BlockOrientation Forward="Down" Up="Right" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
-              <Min x="4" y="1" z="-3" />
-              <BlockOrientation Forward="Down" Up="Right" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
-              <Min x="4" y="1" z="-4" />
-              <BlockOrientation Forward="Down" Up="Right" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
-              <Min x="4" y="1" z="-5" />
-              <BlockOrientation Forward="Down" Up="Right" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
-              <Min x="2" y="1" z="-6" />
-              <BlockOrientation Forward="Down" Up="Forward" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
-              <Min x="1" y="1" z="-6" />
-              <BlockOrientation Forward="Down" Up="Forward" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
-              <Min x="0" y="1" z="-6" />
-              <BlockOrientation Forward="Down" Up="Forward" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
-              <Min x="-1" y="1" z="0" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
-              <Min x="0" y="1" z="0" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
-              <Min x="1" y="1" z="0" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
-              <Min x="2" y="1" z="0" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
-              <Min x="3" y="1" z="0" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorCorner</SubtypeName>
-              <Min x="5" y="0" z="0" />
+              <Min x="-1" y="0" z="-1" />
               <BlockOrientation Forward="Forward" Up="Right" />
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
               <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorCorner</SubtypeName>
-              <Min x="4" y="1" z="-6" />
-              <BlockOrientation Forward="Down" Up="Right" />
+              <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
+              <Min x="-1" y="0" z="-5" />
+              <BlockOrientation Forward="Backward" Up="Right" />
+              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
+              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
+            </MyObjectBuilder_CubeBlock>
+            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+              <SubtypeName>LargeHeavyBlockArmorBlock</SubtypeName>
+              <Min x="1" y="1" z="-2" />
+              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
+              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
+            </MyObjectBuilder_CubeBlock>
+            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+              <SubtypeName>LargeHeavyBlockArmorSlope2Base</SubtypeName>
+              <Min x="-1" y="1" z="-3" />
+              <BlockOrientation Forward="Left" Up="Up" />
+              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
+              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
+            </MyObjectBuilder_CubeBlock>
+            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+              <SubtypeName>LargeHeavyBlockArmorBlock</SubtypeName>
+              <Min x="3" y="0" z="-3" />
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
               <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
-              <Min x="3" y="1" z="-6" />
-              <BlockOrientation Forward="Down" Up="Forward" />
+              <Min x="2" y="1" z="-4" />
+              <BlockOrientation Forward="Backward" Up="Right" />
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
               <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
+            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_LargeMissileTurret">
+              <SubtypeName />
+              <EntityId>136011480967947932</EntityId>
+              <Min x="0" y="2" z="-4" />
+              <BlockOrientation Forward="Backward" Up="Up" />
+              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
+              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
+              <ShareMode>Faction</ShareMode>
+              <ComponentContainer>
+                <Components>
+                  <ComponentData>
+                    <TypeId>MyInventoryBase</TypeId>
+                    <Component xsi:type="MyObjectBuilder_Inventory">
+                      <Items />
+                      <nextItemId>0</nextItemId>
+                      <Volume>1.04</Volume>
+                      <Mass>9223372036854.775807</Mass>
+                      <MaxItemCount>2147483647</MaxItemCount>
+                      <Size xsi:nil="true" />
+                      <InventoryFlags>CanReceive</InventoryFlags>
+                      <RemoveEntityOnEmpty>false</RemoveEntityOnEmpty>
+                    </Component>
+                  </ComponentData>
+                  <ComponentData>
+                    <TypeId>MyTimerComponent</TypeId>
+                    <Component xsi:type="MyObjectBuilder_TimerComponent">
+                      <Repeat>true</Repeat>
+                      <TimeToEvent>0</TimeToEvent>
+                      <SetTimeMinutes>0</SetTimeMinutes>
+                      <TimerEnabled>true</TimerEnabled>
+                      <RemoveEntityOnTimer>false</RemoveEntityOnTimer>
+                      <TimerType>Frame10</TimerType>
+                      <FramesFromLastTrigger>0</FramesFromLastTrigger>
+                      <TimerTickInFrames>10</TimerTickInFrames>
+                      <IsSessionUpdateEnabled>false</IsSessionUpdateEnabled>
+                    </Component>
+                  </ComponentData>
+                  <ComponentData>
+                    <TypeId>MyModStorageComponentBase</TypeId>
+                    <Component xsi:type="MyObjectBuilder_ModStorageComponent">
+                      <Storage>
+                        <dictionary>
+                          <item>
+                            <Key>75bbb4f5-4fb9-4230-beef-bb79c9811501</Key>
+                            <Value>+nzTAQoJCAAQAB0AAAAAEsUBCAASPC0AAC9EMjUIABAAGAAgACgAMABIAFAAWAB4AIABAJABAKABALABAMABANABANgBAOgBAPABAPgBAZACABpEEgkNAAAAABAAIFcYACCZgICAgICAgAIwADgAQABIAFIjGhsJAAAAAAAAAAAhAAAAAAAAAAA5AAAAAAAAAAAgACgAMAAiKwgAEAAgACoGIMf8//8HMhsJAAAAAAAAAAAhAAAAAAAAAAA5AAAAAAAAAAAqEAgAIAEoADABOABAAEgAUAAIIg==</Value>
+                          </item>
+                        </dictionary>
+                      </Storage>
+                    </Component>
+                  </ComponentData>
+                </Components>
+              </ComponentContainer>
+              <ShowOnHUD>false</ShowOnHUD>
+              <ShowInTerminal>true</ShowInTerminal>
+              <ShowInToolbarConfig>true</ShowInToolbarConfig>
+              <ShowInInventory>true</ShowInInventory>
+              <NumberInGrid>2</NumberInGrid>
+              <Enabled>true</Enabled>
+              <IsShooting>false</IsShooting>
+              <IsShootingFromTerminal>false</IsShootingFromTerminal>
+              <IsLargeTurret>true</IsLargeTurret>
+              <MinFov>0.1</MinFov>
+              <MaxFov>1.04719758</MaxFov>
+              <Range>0.1</Range>
+              <RemainingAmmo>0</RemainingAmmo>
+              <Target>0</Target>
+              <IsPotentialTarget>false</IsPotentialTarget>
+              <PreviousControlledEntityId xsi:nil="true" />
+              <Rotation>0</Rotation>
+              <Elevation>0</Elevation>
+              <GunBase>
+                <CurrentAmmoMagazineName>Energy</CurrentAmmoMagazineName>
+                <RemainingAmmosList />
+                <LastShootTime>0</LastShootTime>
+              </GunBase>
+              <EnableIdleRotation>false</EnableIdleRotation>
+              <PreviousIdleRotationState>true</PreviousIdleRotationState>
+              <TargetCharacters>false</TargetCharacters>
+              <TargetingGroup />
+              <Flags>
+                <TargetCharacters>true</TargetCharacters>
+              </Flags>
+            </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
-              <Min x="-1" y="1" z="-6" />
-              <BlockOrientation Forward="Down" Up="Forward" />
+              <SubtypeName>LargeBlockArmorBlock</SubtypeName>
+              <Min x="1" y="0" z="-4" />
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
               <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorCorner</SubtypeName>
-              <Min x="-2" y="1" z="-6" />
-              <BlockOrientation Forward="Down" Up="Forward" />
+            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CargoContainer">
+              <SubtypeName>LargeBlockSmallContainer</SubtypeName>
+              <EntityId>109938361509664840</EntityId>
+              <Min x="-1" y="0" z="-3" />
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
               <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorCorner</SubtypeName>
-              <Min x="-2" y="1" z="0" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
+              <ShareMode>Faction</ShareMode>
+              <ComponentContainer>
+                <Components>
+                  <ComponentData>
+                    <TypeId>MyInventoryBase</TypeId>
+                    <Component xsi:type="MyObjectBuilder_Inventory">
+                      <Items />
+                      <nextItemId>0</nextItemId>
+                      <Volume>15.625</Volume>
+                      <Mass>9223372036854.775807</Mass>
+                      <MaxItemCount>2147483647</MaxItemCount>
+                      <Size xsi:nil="true" />
+                      <InventoryFlags>CanReceive CanSend</InventoryFlags>
+                      <RemoveEntityOnEmpty>false</RemoveEntityOnEmpty>
+                    </Component>
+                  </ComponentData>
+                </Components>
+              </ComponentContainer>
+              <ShowOnHUD>false</ShowOnHUD>
+              <ShowInTerminal>true</ShowInTerminal>
+              <ShowInToolbarConfig>true</ShowInToolbarConfig>
+              <ShowInInventory>true</ShowInInventory>
+              <NumberInGrid>4</NumberInGrid>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeHeavyBlockArmorBlock</SubtypeName>
@@ -876,7 +867,7 @@
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_RemoteControl">
               <SubtypeName>LargeBlockRemoteControl</SubtypeName>
-              <EntityId>118787774897201905</EntityId>
+              <EntityId>125544124389143716</EntityId>
               <Min x="-4" y="0" z="-4" />
               <BlockOrientation Forward="Right" Up="Up" />
               <ShareMode>Faction</ShareMode>
@@ -995,39 +986,11 @@
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
               <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_RadioAntenna">
-              <SubtypeName>LargeBlockRadioAntenna</SubtypeName>
-              <EntityId>81577645045100640</EntityId>
-              <Min x="-4" y="2" z="-1" />
-              <BlockOrientation Forward="Left" Up="Up" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-              <ShareMode>Faction</ShareMode>
-              <CustomName>Main Antenna</CustomName>
-              <ShowOnHUD>false</ShowOnHUD>
-              <ShowInTerminal>true</ShowInTerminal>
-              <ShowInToolbarConfig>true</ShowInToolbarConfig>
-              <ShowInInventory>true</ShowInInventory>
-              <NumberInGrid>1</NumberInGrid>
-              <Enabled>false</Enabled>
-              <BroadcastRadius>5000</BroadcastRadius>
-              <ShowShipName>false</ShowShipName>
-              <EnableBroadcasting>true</EnableBroadcasting>
-              <AttachedPB>0</AttachedPB>
-              <IgnoreAllied>false</IgnoreAllied>
-              <IgnoreOther>true</IgnoreOther>
-              <HudText />
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
-              <SubtypeName>LargeHeavyBlockArmorBlock</SubtypeName>
-              <Min x="-4" y="0" z="-6" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-            </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_InteriorTurret">
-              <SubtypeName>LargeInteriorTurret</SubtypeName>
-              <EntityId>107129997893025057</EntityId>
-              <Min x="-4" y="1" z="-6" />
+            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_LargeMissileTurret">
+              <SubtypeName />
+              <EntityId>75533823293007131</EntityId>
+              <Min x="-3" y="2" z="-4" />
+              <BlockOrientation Forward="Backward" Up="Up" />
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
               <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
               <ShareMode>Faction</ShareMode>
@@ -1038,7 +1001,7 @@
                     <Component xsi:type="MyObjectBuilder_Inventory">
                       <Items />
                       <nextItemId>0</nextItemId>
-                      <Volume>0.384</Volume>
+                      <Volume>1.04</Volume>
                       <Mass>9223372036854.775807</Mass>
                       <MaxItemCount>2147483647</MaxItemCount>
                       <Size xsi:nil="true" />
@@ -1060,13 +1023,26 @@
                       <IsSessionUpdateEnabled>false</IsSessionUpdateEnabled>
                     </Component>
                   </ComponentData>
+                  <ComponentData>
+                    <TypeId>MyModStorageComponentBase</TypeId>
+                    <Component xsi:type="MyObjectBuilder_ModStorageComponent">
+                      <Storage>
+                        <dictionary>
+                          <item>
+                            <Key>75bbb4f5-4fb9-4230-beef-bb79c9811501</Key>
+                            <Value>+nzTAQoJCAAQAB0AAAAAEsUBCAASPC0AAC9EMjUIABAAGAAgACgAMABIAFAAWAB4AIABAJABAKABALABAMABANABANgBAOgBAPABAPgBAZACABpEEgkNAAAAABAAIFYYACCZgICAgICAgAIwADgAQABIAFIjGhsJAAAAAAAAAAAhAAAAAAAAAAA5AAAAAAAAAAAgACgAMAAiKwgAEAAgACoGIMz8//8HMhsJAAAAAAAAAAAhAAAAAAAAAAA5AAAAAAAAAAAqEAgAIAEoADABOABAAEgAUAAIIg==</Value>
+                          </item>
+                        </dictionary>
+                      </Storage>
+                    </Component>
+                  </ComponentData>
                 </Components>
               </ComponentContainer>
               <ShowOnHUD>false</ShowOnHUD>
               <ShowInTerminal>true</ShowInTerminal>
               <ShowInToolbarConfig>true</ShowInToolbarConfig>
               <ShowInInventory>true</ShowInInventory>
-              <NumberInGrid>2</NumberInGrid>
+              <NumberInGrid>1</NumberInGrid>
               <Enabled>true</Enabled>
               <IsShooting>false</IsShooting>
               <IsShootingFromTerminal>false</IsShootingFromTerminal>
@@ -1087,11 +1063,23 @@
               </GunBase>
               <EnableIdleRotation>false</EnableIdleRotation>
               <PreviousIdleRotationState>true</PreviousIdleRotationState>
-              <TargetCharacters>true</TargetCharacters>
+              <TargetCharacters>false</TargetCharacters>
               <TargetingGroup />
               <Flags>
                 <TargetCharacters>true</TargetCharacters>
               </Flags>
+            </MyObjectBuilder_CubeBlock>
+            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+              <SubtypeName>LargeHeavyBlockArmorBlock</SubtypeName>
+              <Min x="2" y="1" z="-3" />
+              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
+              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
+            </MyObjectBuilder_CubeBlock>
+            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+              <SubtypeName>LargeHeavyBlockArmorBlock</SubtypeName>
+              <Min x="2" y="0" z="-3" />
+              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
+              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeHeavyBlockArmorSlope</SubtypeName>
@@ -1100,52 +1088,9 @@
               <ColorMaskHSV x="0" y="-0.8" z="0.55" />
               <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
-            <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_ConveyorSorter">
-              <SubtypeName>ARYXMissileBattery</SubtypeName>
-              <EntityId>89181587172234404</EntityId>
-              <Min x="-1" y="0" z="-5" />
-              <ColorMaskHSV x="0" y="-0.8" z="0.55" />
-              <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
-              <ShareMode>Faction</ShareMode>
-              <ComponentContainer>
-                <Components>
-                  <ComponentData>
-                    <TypeId>MyInventoryBase</TypeId>
-                    <Component xsi:type="MyObjectBuilder_Inventory">
-                      <Items />
-                      <nextItemId>0</nextItemId>
-                      <Volume>17.69</Volume>
-                      <Mass>9223372036854.775807</Mass>
-                      <MaxItemCount>2147483647</MaxItemCount>
-                      <Size xsi:nil="true" />
-                      <InventoryFlags>CanSend</InventoryFlags>
-                      <RemoveEntityOnEmpty>false</RemoveEntityOnEmpty>
-                    </Component>
-                  </ComponentData>
-                </Components>
-              </ComponentContainer>
-              <ShowOnHUD>false</ShowOnHUD>
-              <ShowInTerminal>true</ShowInTerminal>
-              <ShowInToolbarConfig>true</ShowInToolbarConfig>
-              <ShowInInventory>true</ShowInInventory>
-              <NumberInGrid>3</NumberInGrid>
-              <Enabled>true</Enabled>
-              <IsWhiteList>false</IsWhiteList>
-              <DefinitionIds />
-              <DefinitionTypes />
-              <DrainAll>false</DrainAll>
-            </MyObjectBuilder_CubeBlock>
           </CubeBlocks>
           <IsStatic>true</IsStatic>
           <ConveyorLines>
-            <MyObjectBuilder_ConveyorLine>
-              <StartPosition x="-2" y="0" z="-3" />
-              <StartDirection>Right</StartDirection>
-              <EndPosition x="-1" y="0" z="-3" />
-              <EndDirection>Left</EndDirection>
-              <Sections />
-              <ConveyorLineType>LARGE_LINE</ConveyorLineType>
-            </MyObjectBuilder_ConveyorLine>
             <MyObjectBuilder_ConveyorLine>
               <StartPosition x="-2" y="0" z="-3" />
               <StartDirection>Left</StartDirection>
@@ -1170,13 +1115,48 @@
               <Sections />
               <ConveyorLineType>LARGE_LINE</ConveyorLineType>
             </MyObjectBuilder_ConveyorLine>
+            <MyObjectBuilder_ConveyorLine>
+              <StartPosition x="-2" y="0" z="-3" />
+              <StartDirection>Up</StartDirection>
+              <EndPosition x="-2" y="2" z="-3" />
+              <EndDirection>Down</EndDirection>
+              <Sections />
+              <ConveyorLineType>LARGE_LINE</ConveyorLineType>
+            </MyObjectBuilder_ConveyorLine>
+            <MyObjectBuilder_ConveyorLine>
+              <StartPosition x="-2" y="0" z="-3" />
+              <StartDirection>Right</StartDirection>
+              <EndPosition x="-1" y="0" z="-3" />
+              <EndDirection>Left</EndDirection>
+              <Sections />
+              <ConveyorLineType>LARGE_LINE</ConveyorLineType>
+            </MyObjectBuilder_ConveyorLine>
+            <MyObjectBuilder_ConveyorLine>
+              <StartPosition x="-1" y="0" z="-3" />
+              <StartDirection>Right</StartDirection>
+              <EndPosition x="0" y="0" z="-3" />
+              <EndDirection>Left</EndDirection>
+              <Sections />
+              <ConveyorLineType>LARGE_LINE</ConveyorLineType>
+            </MyObjectBuilder_ConveyorLine>
+            <MyObjectBuilder_ConveyorLine>
+              <StartPosition x="0" y="0" z="-3" />
+              <StartDirection>Right</StartDirection>
+              <EndPosition x="1" y="2" z="-3" />
+              <EndDirection>Down</EndDirection>
+              <Sections>
+                <Section Direction="Right" Length="1" />
+                <Section Direction="Up" Length="2" />
+              </Sections>
+              <ConveyorLineType>LARGE_LINE</ConveyorLineType>
+            </MyObjectBuilder_ConveyorLine>
           </ConveyorLines>
           <DisplayName>[NPC] Snow SAM Battery</DisplayName>
           <DestructibleBlocks>true</DestructibleBlocks>
           <CreatePhysics>false</CreatePhysics>
           <EnableSmallToLargeConnections>false</EnableSmallToLargeConnections>
           <IsRespawnGrid>false</IsRespawnGrid>
-          <LocalCoordSys>36</LocalCoordSys>
+          <LocalCoordSys>107</LocalCoordSys>
           <TargetingTargets />
         </CubeGrid>
       </CubeGrids>
