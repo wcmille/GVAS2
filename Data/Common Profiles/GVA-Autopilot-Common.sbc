@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Autopilot-Common-Cruise</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Autopilot]
+
+        [SlowDownOnWaypointApproach:true]
+        [ExtraSlowDownDistance:250]
+        [FlyLevelWithGravity:true]
+
+        [IdealMinSpeed:18]
+        [IdealMaxSpeed:70]
+        [MaxSpeedTolerance:5]
+
+        [MinimumPlanetAltitude:500]
+        [IdealPlanetAltitude:600]
+
+        [WaypointTolerance:50]
+
+        [WaypointWaitTimeTrigger:8]
+
+        [AllowStrafing:true]
+        [StrafeMaxDurationMs:3000]
+        [StrafeSpeedCutOff:20]
+
+        [OffsetSpaceMinDistFromTarget:300]
+        [OffsetSpaceMaxDistFromTarget:600]
+        [OffsetPlanetMinDistFromTarget:300]
+        [OffsetPlanetMaxDistFromTarget:600]
+        [OffsetPlanetMinTargetAltitude:500]
+        [OffsetPlanetMaxTargetAltitude:600]
+
+        [LimitRotationSpeed:true]
+        [MaxRotationMagnitude:0.4]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Autopilot-Common-FastAttack</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Autopilot]
+
+        [SlowDownOnWaypointApproach:true]
+        [ExtraSlowDownDistance:250]
+        [FlyLevelWithGravity:true]
+
+        [IdealMinSpeed:18]
+        [IdealMaxSpeed:70]
+        [MaxSpeedTolerance:5]
+
+        [MinimumPlanetAltitude:500]
+        [IdealPlanetAltitude:600]
+
+        [WaypointTolerance:50]
+
+        [WaypointWaitTimeTrigger:8]
+
+        [AllowStrafing:true]
+        [StrafeMaxDurationMs:3000]
+        [StrafeSpeedCutOff:20]
+
+        [OffsetSpaceMinDistFromTarget:300]
+        [OffsetSpaceMaxDistFromTarget:600]
+        [OffsetPlanetMinDistFromTarget:300]
+        [OffsetPlanetMaxDistFromTarget:600]
+        [OffsetPlanetMinTargetAltitude:500]
+        [OffsetPlanetMaxTargetAltitude:600]
+
+        [LimitRotationSpeed:true]
+        [MaxRotationMagnitude:0.4]
+      </Description>
+    </EntityComponent>
+    
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Autopilot-Common-CapitalAttack</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Autopilot]
+
+        [SlowDownOnWaypointApproach:true]
+        [ExtraSlowDownDistance:250]
+        [FlyLevelWithGravity:true]
+
+        [IdealMinSpeed:18]
+        [IdealMaxSpeed:70]
+        [MaxSpeedTolerance:5]
+
+        [MinimumPlanetAltitude:500]
+        [IdealPlanetAltitude:600]
+
+        [WaypointTolerance:50]
+
+        [WaypointWaitTimeTrigger:8]
+
+        [AllowStrafing:true]
+        [StrafeMaxDurationMs:3000]
+        [StrafeSpeedCutOff:20]
+
+        [OffsetSpaceMinDistFromTarget:300]
+        [OffsetSpaceMaxDistFromTarget:600]
+        [OffsetPlanetMinDistFromTarget:300]
+        [OffsetPlanetMaxDistFromTarget:600]
+        [OffsetPlanetMinTargetAltitude:500]
+        [OffsetPlanetMaxTargetAltitude:600]
+
+        [LimitRotationSpeed:true]
+        [MaxRotationMagnitude:0.4]
+      </Description>
+    </EntityComponent>
+  </EntityComponents>
+</Definitions>

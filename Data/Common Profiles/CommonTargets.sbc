@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <EntityComponents>
-
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
@@ -19,6 +18,7 @@
         [TimeUntilNextEvaluation:3]
 
         [MatchAllFilters:OutsideOfSafezone]
+        [MatchAllFilters:Owner]
         [MatchAllFilters:Relation]
         [MatchAllFilters:Powered]
 
@@ -31,6 +31,36 @@
         [MaxMovementDetectableDistance:7000]
         [MaxLineOfSight:7000]
 
+        [Owners:Player]
+        [Owners:NPC]
+        [Relations:Enemy]
+
+        [GetTargetBy:ClosestDistance]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Common-Target-Main-Combat</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Target]
+
+        [UseCustomTargeting:true]
+        [Target:PlayerAndGrid]
+
+        [MaxDistance:10000]
+
+        [TimeUntilTargetAcquisition:10]
+        [TimeUntilNextEvaluation:3]
+
+        [MatchAllFilters:OutsideOfSafezone]
+        [MatchAllFilters:Owner]
+        [MatchAllFilters:Relation]
+        [MatchAllFilters:Powered]
+
+        [Owners:Player]
+        [Owners:NPC]
         [Relations:Enemy]
 
         [GetTargetBy:ClosestDistance]

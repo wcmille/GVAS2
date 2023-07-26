@@ -9,11 +9,18 @@
       </Id>
       <Description>
         [RivalAI Behavior]
-        [BehaviorName:Horsefly]
-        [AutopilotData:GVA-Autopilot-Scout]
+        [BehaviorName:Hunter]
+
+        [AutopilotData:GVA-Autopilot-Common-Cruise]
+        [SecondaryAutopilotData:GVA-Autopilot-Common-FastAttack]
 
         [TargetData:Common-Target-Main-A]
-        [OverrideTargetData:Common-Target-Main-A]
+        [OverrideTargetData:Common-Target-Main-Combat]
+
+        [EngageOnTargetLineOfSight:true]
+        [EngageOnWeaponActivation:true]
+
+        [WeaponSystem:GVA-Common-Weapons-FFO]
 
         [Triggers:GVA-Trigger-ScoutTattle]
         [Triggers:GVA-Trigger-StandardCompromised]

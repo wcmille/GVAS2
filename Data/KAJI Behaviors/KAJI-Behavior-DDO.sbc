@@ -9,16 +9,22 @@
       </Id>
       <Description>
         [RivalAI Behavior]
-        [BehaviorName:HorseFighter]
-        [AutopilotData:GVA-KAJI-Autopilot-FFO]
+        [BehaviorName:Hunter]
+
+        [AutopilotData:GVA-Autopilot-Common-Cruise]
+        [SecondaryAutopilotData:GVA-Autopilot-Common-CapitalAttack]
 
         [TargetData:Common-Target-Main-A]
-        [OverrideTargetData:Common-Target-Main-A]
-        
+        [OverrideTargetData:Common-Target-Main-Combat]
+
+        [EngageOnTargetLineOfSight:true]
+        [EngageOnWeaponActivation:true]
+
         [WeaponSystem:GVA-Common-Weapons-FFO]
 
         [Triggers:GVA-KAJI-Trigger-EnemyResponse]
         [Triggers:GVA-Trigger-StandardCompromised]
+        
         [Triggers:GVA-Red-Trigger-Despawn3]
         [Triggers:GVA-Red-Trigger-DespawnMES3]
       </Description>

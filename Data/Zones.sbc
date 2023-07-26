@@ -151,6 +151,10 @@
         [ZoneLeaveAnnounce:Leaving: Farpoint Station]
         [Coordinates:{X:-1854042 Y:131072 Z:9040780}]
         [Radius:200000]
+
+        [UseAllowedSpawnGroups:true]
+        [AllowedSpawnGroups:GVA-White-DD]
+        [AllowedSpawnGroups:GVA-White-Farpoint]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
