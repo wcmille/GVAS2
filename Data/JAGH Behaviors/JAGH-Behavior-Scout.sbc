@@ -5,7 +5,7 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-Behavior-HybridMilitaryTattler</SubtypeId>
+        <SubtypeId>JAGH-Behavior-Scout</SubtypeId>
       </Id>
       <Description>
         [RivalAI Behavior]
@@ -20,28 +20,11 @@
         [EngageOnTargetLineOfSight:true]
         [EngageOnWeaponActivation:true]
 
-        [WeaponSystem:GVA-Common-Weapons-FFO]
+        [WeaponSystem:GVA-Common-Weapons]
 
         [Triggers:GVA-Trigger-ScoutTattle]
         [Triggers:GVA-Trigger-StandardCompromised]
         [Triggers:GVA-Trigger-ScoutToFighter]
-      </Description>
-    </EntityComponent>
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
-        <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-Autopilot-Scout</SubtypeId>
-      </Id>
-      <Description>
-        [RivalAI Autopilot]
-
-        [OffsetPlanetMinDistFromTarget:3000]
-        [OffsetPlanetMaxDistFromTarget:4800]
-        [IdealMinSpeed:70]
-        [IdealMaxSpeed:130]
-
-        [MinimumPlanetAltitude:500]
-        [IdealPlanetAltitude:800]
       </Description>
     </EntityComponent>
   </EntityComponents>

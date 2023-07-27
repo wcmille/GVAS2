@@ -8,7 +8,7 @@
       </Id>
       <Description>
         [RivalAI Behavior]
-        [BehaviorName:CargoShip]
+        [BehaviorName:Passive]
 
         [UseProjectileLeadPrediction:true]
         [UseBarrageFire:true]
@@ -16,6 +16,18 @@
 
         [Triggers:GVA-Trigger-Despawn]
         [Triggers:GVA-Trigger-DespawnMES]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>KAJI-Behavior-PassiveCivilian</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Behavior]
+        [BehaviorName:Passive]
+
+        [UseTurrets:false]
       </Description>
     </EntityComponent>
   </EntityComponents>

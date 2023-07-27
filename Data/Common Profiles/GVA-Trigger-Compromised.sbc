@@ -25,8 +25,7 @@
         [StopAllRotation:true]
         [StopAllThrust:Value]
         [DisableTriggers:true]
-        [DisableTriggerNames:GVA-KAJI-Trigger-Despawn-Civ-1,GVA-KAJI-Trigger-DespawnMES-Civ-1,GVA-Red-Trigger-Despawn,GVA-Red-Trigger-DespawnMES,GVA-Red-Trigger-Despawn3,GVA-Red-Trigger-DespawnMES3]
-        [DisableTriggerNames:GVA-JAGH-Trigger-Despawn-Civ-2,GVA-JAGH-Trigger-DespawnMES-Civ-2,GVA-Blue-Trigger-Despawn,GVA-Blue-Trigger-DespawnMES,GVA-Blue-Trigger-Despawn3,GVA-Blue-Trigger-DespawnMES3]
+        [DisableTriggerNames:GVA-Trigger-Despawn,GVA-Trigger-DespawnMES]
       </Description>
     </EntityComponent>
   </EntityComponents>

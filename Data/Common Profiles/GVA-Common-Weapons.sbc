@@ -4,7 +4,7 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-Common-Weapons-FFO</SubtypeId>
+        <SubtypeId>GVA-Common-Weapons</SubtypeId>
       </Id>
       <Description>
         [RivalAI Weapons]

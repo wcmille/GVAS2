@@ -26,38 +26,15 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-Behavior-PassiveCivilian</SubtypeId>
+        <SubtypeId>JAGH-Behavior-PassiveCivilian</SubtypeId>
       </Id>
       <Description>
         [RivalAI Behavior]
-        [BehaviorName:CargoShip]
-
-        [UseTurrets:false]
-        [UseVanillaCollisionAvoidance:false]
-        [UseVelocityCollisionEvasion:true]
-        [CollisionEvasionWaypointDistance:600]
-        [CollisionEvasionResumeDistance:300]
-        [CollisionEvasionResumeTime:10]
-      </Description>
-    </EntityComponent>
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
-        <TypeId>Inventory</TypeId>
-        <SubtypeId>JAGH-Behavior-Civilian-Brokk</SubtypeId>
-      </Id>
-      <Description>
-        [RivalAI Behavior]
-        [BehaviorName:CargoShip]
+        [BehaviorName:Passive]
 
         [UseProjectileLeadPrediction:true]
         [UseBarrageFire:true]
         [UseTurrets:false]
-        [IdealMaxSpeed:70]
-        [UseVanillaCollisionAvoidance:false]
-        [UseVelocityCollisionEvasion:true]
-        [CollisionEvasionWaypointDistance:600]
-        [CollisionEvasionResumeDistance:300]
-        [CollisionEvasionResumeTime:10]
 
         [Triggers:GVA-Trigger-ScoutTattle]
         [Triggers:GVA-Trigger-Despawn]

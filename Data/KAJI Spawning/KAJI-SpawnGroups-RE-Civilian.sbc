@@ -26,7 +26,7 @@
             <Y>0.0</Y>
             <Z>0.0</Z>
           </Position>
-          <Behaviour>GVA-Behavior-PassiveCivilian</Behaviour>
+          <Behaviour>KAJI-Behavior-PassiveCivilian</Behaviour>
         </Prefab>
       </Prefabs>
     </SpawnGroup>

@@ -28,7 +28,7 @@
 						<Z>0.0</Z>
 					</Position>
 					<Speed>50</Speed>
-					<Behaviour>GVA-Behavior-HybridMilitaryTattler</Behaviour>
+					<Behaviour>JAGH-Behavior-Scout</Behaviour>
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>
@@ -59,7 +59,7 @@
 						<Z>0.0</Z>
 					</Position>
 					<Speed>50</Speed>
-					<Behaviour>GVA-Behavior-HybridInterdictor</Behaviour>
+					<Behaviour>JAGH-Behavior-FFO</Behaviour>
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>
@@ -91,7 +91,7 @@
             <Z>0.0</Z>
           </Position>
           <Speed>50</Speed>
-          <Behaviour>GVA-Behavior-DDO</Behaviour>
+          <Behaviour>JAGH-Behavior-FFO</Behaviour>
         </Prefab>
       </Prefabs>
     </SpawnGroup>

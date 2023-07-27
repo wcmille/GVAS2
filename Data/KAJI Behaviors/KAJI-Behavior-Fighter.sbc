@@ -20,7 +20,7 @@
         [EngageOnTargetLineOfSight:true]
         [EngageOnWeaponActivation:true]
 
-        [WeaponSystem:GVA-Common-Weapons-FFO]
+        [WeaponSystem:GVA-Common-Weapons]
 
         [Triggers:GVA-KAJI-Trigger-EnemyResponse]
         [Triggers:GVA-Trigger-StandardCompromised]

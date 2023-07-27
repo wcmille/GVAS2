@@ -26,7 +26,7 @@
             <Y>10.0</Y>
             <Z>0.0</Z>
           </Position>
-          <Behaviour>GVA-Behavior-PassiveCivilian</Behaviour>
+          <Behaviour>KAJI-Behavior-PassiveCivilian</Behaviour>
         </Prefab>
       </Prefabs>
     </SpawnGroup>
@@ -57,7 +57,7 @@
             <Y>16.5</Y>
             <Z>0.0</Z>
           </Position>
-          <Behaviour>GVA-Behavior-PassiveCivilian</Behaviour>
+          <Behaviour>KAJI-Behavior-PassiveCivilian</Behaviour>
           <BeaconText>Shipyard</BeaconText>
         </Prefab>
       </Prefabs>
@@ -89,7 +89,7 @@
             <Z>75.0</Z>
           </Position>
           <BeaconText>Greenhouse</BeaconText>
-          <Behaviour>GVA-Behavior-PassiveCivilian</Behaviour>
+          <Behaviour>KAJI-Behavior-PassiveCivilian</Behaviour>
         </Prefab>
         <Prefab SubtypeId="[NPC] Snow Outpost">
           <Position>
@@ -98,7 +98,7 @@
             <Z>0.0</Z>
           </Position>
           <BeaconText>Outpost</BeaconText>
-          <Behaviour>GVA-Behavior-PassiveCivilian</Behaviour>
+          <Behaviour>KAJI-Behavior-PassiveCivilian</Behaviour>
         </Prefab>
         <Prefab SubtypeId="[NPC] Snow SAM Battery">
           <Position>
@@ -107,7 +107,7 @@
             <Z>0.0</Z>
           </Position>
           <BeaconText>SAM</BeaconText>
-          <Behaviour>GVA-Behavior-PassiveCivilian</Behaviour>
+          <Behaviour>KAJI-Behavior-PassiveCivilian</Behaviour>
         </Prefab>
       </Prefabs>
     </SpawnGroup>

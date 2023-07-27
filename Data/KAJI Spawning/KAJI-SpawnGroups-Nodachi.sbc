@@ -28,7 +28,7 @@
 						<Z>0.0</Z>
 					</Position>
 					<Speed>50</Speed>
-					<Behaviour>GVA-KAJI-Behavior-Nodachi</Behaviour>
+					<Behaviour>KAJI-Behavior-FFO</Behaviour>
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>

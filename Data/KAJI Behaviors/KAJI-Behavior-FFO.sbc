@@ -5,7 +5,7 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-KAJI-Behavior-Yumi</SubtypeId>
+        <SubtypeId>KAJI-Behavior-FFO</SubtypeId>
       </Id>
       <Description>
         [RivalAI Behavior]
@@ -20,51 +20,13 @@
         [EngageOnTargetLineOfSight:true]
         [EngageOnWeaponActivation:true]
 
-        [WeaponSystem:GVA-Common-Weapons-FFO]
+        [WeaponSystem:GVA-Common-Weapons]
 
         [Triggers:GVA-KAJI-Trigger-EnemyResponse]
         [Triggers:GVA-Trigger-StandardCompromised]
 
         [Triggers:GVA-Trigger-Despawn]
         [Triggers:GVA-Trigger-DespawnMES]
-      </Description>
-    </EntityComponent>
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
-        <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-KAJI-Autopilot-FFO</SubtypeId>
-      </Id>
-      <Description>
-        [RivalAI Autopilot]
-
-        [SlowDownOnWaypointApproach:true]
-        [ExtraSlowDownDistance:250]
-        [FlyLevelWithGravity:true]
-
-        [IdealMinSpeed:18]
-        [IdealMaxSpeed:70]
-        [MaxSpeedTolerance:5]
-
-        [MinimumPlanetAltitude:500]
-        [IdealPlanetAltitude:600]
-
-        [WaypointTolerance:50]
-
-        [WaypointWaitTimeTrigger:8]
-
-        [AllowStrafing:true]
-        [StrafeMaxDurationMs:3000]
-        [StrafeSpeedCutOff:20]
-
-        [OffsetSpaceMinDistFromTarget:300]
-        [OffsetSpaceMaxDistFromTarget:600]
-        [OffsetPlanetMinDistFromTarget:300]
-        [OffsetPlanetMaxDistFromTarget:600]
-        [OffsetPlanetMinTargetAltitude:500]
-        [OffsetPlanetMaxTargetAltitude:600]
-
-        [LimitRotationSpeed:true]
-        [MaxRotationMagnitude:0.4]
       </Description>
     </EntityComponent>
   </EntityComponents>
