@@ -46,6 +46,8 @@ namespace GVA.NPCControl.Server
                 mes.RegisterCustomSpawnCondition(false, "BlackIsNormal", null);
                 mes.RegisterCustomSpawnCondition(false, "BlackIsStrong", null);
 
+                mes.BehaviorTriggerActivationWatcher(false, WatchTriggers);
+
                 mes.RegisterSuccessfulSpawnAction(LogSpawn, false);
             }
 
@@ -101,7 +103,6 @@ namespace GVA.NPCControl.Server
 
         private void WatchTriggers(IMyRemoteControl rc, string trigger, string action, IMyEntity target, Vector3D waypoint)
         {
-            //MyLog.Default.WriteLineAndConsole($"GVA_NPC_Control: ZZYY - {action}");
             if (action == "GVA-Action-DespawnSpawner")
             {
                 var owner = rc.OwnerId;
@@ -141,18 +142,6 @@ namespace GVA.NPCControl.Server
                 var faction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(owner);
                 var acct = world.GetAccountByNPCOwner(faction.Tag);
                 (acct as ServerAccount)?.LogSpawn(grid);
-
-                //get the beacon.
-                //if (acct != null)
-                //{
-                //    foreach (var b in grid.GetFatBlocks<IMyBeacon>())
-                //    {
-                //        else
-                //        {
-                //            MyLog.Default.WriteLineAndConsole($"GVA_NPC_Control: INFOMSG BEACON {b.CustomData}");
-                //        }
-                //    }
-                //}
             }
             catch (Exception ex)
             {
