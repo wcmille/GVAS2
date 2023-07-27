@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Trigger-SessionStart</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Trigger]
+        [UseTrigger:true]
+        [StartsReady:true]
+        [Type:Session]
+        [Actions:GVA-Action-SessionStart]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Action-SessionStart</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Action]
+        [ChangeBehaviorSubclass:true]
+        [NewBehaviorSubclass:Fighter]
+      </Description>
+    </EntityComponent>
+  </EntityComponents>
+</Definitions>

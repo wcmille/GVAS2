@@ -24,9 +24,9 @@
 
         [Triggers:GVA-KAJI-Trigger-EnemyResponse]
         [Triggers:GVA-Trigger-StandardCompromised]
-        
-        [Triggers:GVA-Red-Trigger-Despawn]
-        [Triggers:GVA-Red-Trigger-DespawnMES]
+
+        [Triggers:GVA-Trigger-Despawn]
+        [Triggers:GVA-Trigger-DespawnMES]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">

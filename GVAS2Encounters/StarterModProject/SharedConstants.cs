@@ -29,5 +29,7 @@
         public static readonly string ReportCommand = "Report";
 
         public static readonly string ModNamespace = "GVA.NPCControl";
+
+        public static readonly string PointCheck = "GVA.NPCControl.NPCPoints";
     }
 }

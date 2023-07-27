@@ -14,8 +14,8 @@
         [UseBarrageFire:true]
         [UseTurrets:false]
 
-        [Triggers:GVA-KAJI-Trigger-Despawn-Civ-1]
-        [Triggers:GVA-KAJI-Trigger-DespawnMES-Civ-1]
+        [Triggers:GVA-Trigger-Despawn]
+        [Triggers:GVA-Trigger-DespawnMES]
       </Description>
     </EntityComponent>
   </EntityComponents>

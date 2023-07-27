@@ -1,8 +1,12 @@
 ﻿using Digi.Example_NetworkProtobuf;
 using Sandbox.ModAPI;
 using System;
+using System.Collections.Generic;
 using System.Linq;
+using VRage;
 using VRage.Game.ModAPI;
+using VRage.Game.ModAPI.Ingame.Utilities;
+using VRage.ModAPI;
 using VRage.Utils;
 using VRageMath;
 
@@ -15,6 +19,7 @@ namespace GVA.NPCControl.Server
         readonly MESApi mes = null;
 
         //delegate bool CustomMESCondition(string spawnGroupSubId, string SpawnConditionProfile, string typeOfSpawn, Vector3D location);
+        readonly MyIni ini = new MyIni();
 
         public ServerSession()
         {
@@ -83,11 +88,48 @@ namespace GVA.NPCControl.Server
                 biw = (a, b, c, d) => CountersMoreThan(SharedConstants.BlackFactionColor, SharedConstants.MilitaryStr, 3);
                 bin = (a, b, c, d) => CountersMoreThan(SharedConstants.BlackFactionColor, SharedConstants.MilitaryStr, 10);
                 bis = (a, b, c, d) => CountersMoreThan(SharedConstants.BlackFactionColor, SharedConstants.MilitaryStr, 20);
-                mes.RegisterCustomSpawnCondition(false, "BlackIsWeak", biw);
-                mes.RegisterCustomSpawnCondition(false, "BlackIsNormal", bin);
-                mes.RegisterCustomSpawnCondition(false, "BlackIsStrong", bis);
+
+                mes.RegisterCustomSpawnCondition(true, "BlackIsWeak", biw);
+                mes.RegisterCustomSpawnCondition(true, "BlackIsNormal", bin);
+                mes.RegisterCustomSpawnCondition(true, "BlackIsStrong", bis);
+
+                mes.BehaviorTriggerActivationWatcher(true, WatchTriggers);
 
                 mes.RegisterSuccessfulSpawnAction(LogSpawn, true);
+            }
+        }
+
+        private void WatchTriggers(IMyRemoteControl rc, string trigger, string action, IMyEntity target, Vector3D waypoint)
+        {
+            //MyLog.Default.WriteLineAndConsole($"GVA_NPC_Control: ZZYY - {action}");
+            if (action == "GVA-Action-DespawnSpawner")
+            {
+                var owner = rc.OwnerId;
+                var faction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(owner);
+                var acct = world.GetAccountByNPCOwner(faction.Tag);
+                if (acct != null)
+                {
+                    foreach (var b in rc.CubeGrid.GetFatBlocks<IMyBeacon>())
+                    {
+                        if (ini.TryParse(b.CustomData))
+                        {
+                            if (ini.ContainsSection(SharedConstants.PointCheck))
+                            {
+                                var c = ini.Get(SharedConstants.PointCheck, SharedConstants.CivilianStr).ToInt32(0);
+                                var m = ini.Get(SharedConstants.PointCheck, SharedConstants.MilitaryStr).ToInt32(0);
+                                {
+                                    int currC, currM;
+                                    MyAPIGateway.Utilities.GetVariable($"{acct.ColorFaction}{SharedConstants.CivilianStr}", out currC);
+                                    MyAPIGateway.Utilities.GetVariable($"{acct.ColorFaction}{SharedConstants.MilitaryStr}", out currM);
+
+                                    MyAPIGateway.Utilities.SetVariable($"{acct.ColorFaction}{SharedConstants.CivilianStr}", currC + c);
+                                    MyAPIGateway.Utilities.SetVariable($"{acct.ColorFaction}{SharedConstants.MilitaryStr}", currM + m);
+                                }
+                                break;
+                            }
+                        }
+                    }
+                }
             }
         }
 
@@ -97,8 +139,20 @@ namespace GVA.NPCControl.Server
             {
                 var owner = grid.BigOwners.FirstOrDefault();
                 var faction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(owner);
-                var acct = world.GetAccountByNPCOwner(faction.Tag) as ServerAccount;
-                acct?.LogSpawn(grid);
+                var acct = world.GetAccountByNPCOwner(faction.Tag);
+                (acct as ServerAccount)?.LogSpawn(grid);
+
+                //get the beacon.
+                //if (acct != null)
+                //{
+                //    foreach (var b in grid.GetFatBlocks<IMyBeacon>())
+                //    {
+                //        else
+                //        {
+                //            MyLog.Default.WriteLineAndConsole($"GVA_NPC_Control: INFOMSG BEACON {b.CustomData}");
+                //        }
+                //    }
+                //}
             }
             catch (Exception ex)
             {

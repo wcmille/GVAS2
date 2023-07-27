@@ -169,8 +169,6 @@
       </Description>
     </EntityComponent>
 
-
-
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
@@ -202,7 +200,6 @@
         [MaxDistanceFromZoneCenter:50000]
       </Description>
     </EntityComponent>
-
 
   </EntityComponents>
 </Definitions>
