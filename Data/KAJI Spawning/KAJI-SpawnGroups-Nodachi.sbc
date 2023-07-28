@@ -13,7 +13,6 @@
         [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
         [ManipulationProfiles:GVA-Manipulation-Red-DestroyerName]
 
-        [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
 
         [SpawnConditionsProfiles:Red-Spawns-RM3O]

@@ -13,11 +13,10 @@
         [ManipulationProfiles:GVA-JAGH-Manipulation-Std]
         [ManipulationProfiles:GVA-Manipulation-Blue-ProductionName]
 
-        [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
 
         [SpawnConditionsProfiles:Blue-BlueAlienRegion-Fixed-Civ-2-Spawns]
-        [PersistentConditions:Blue-Brokk]
+        [PersistentConditions:GVA-SpawnConditions-Snow]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>1.0</Frequency>
@@ -43,11 +42,8 @@
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ManipulationProfiles:GVA-JAGH-Manipulation-Std]
-        [IgnoreCleanupRules:false]
 
         [SpawnConditionsProfiles:Blue-BlueAlienRegion-Fixed-Spawns]
-
-        [UseTerrainTypeValidation:true]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>24.0</Frequency>
@@ -73,10 +69,7 @@
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ManipulationProfiles:GVA-JAGH-Manipulation-Std]
 
-        [IgnoreCleanupRules:false]
-
         [SpawnConditionsProfiles:Blue-BlueAlienRegion-Fixed-Spawns]
-        [UseTerrainTypeValidation:true]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>25.0</Frequency>
@@ -125,8 +118,6 @@
         [IgnoreCleanupRules:false]
 
         [SpawnConditionsProfiles:Blue-BlueAlienRegion-Fixed-Spawns]
-
-        [UseTerrainTypeValidation:true]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>24.0</Frequency>

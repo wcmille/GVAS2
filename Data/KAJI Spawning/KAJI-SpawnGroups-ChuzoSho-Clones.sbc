@@ -14,11 +14,10 @@
         [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
         [ManipulationProfiles:GVA-Manipulation-Red-RefineryName]
 
-        [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
 
         [SpawnConditionsProfiles:Red-RedAlienRegion-PI-Spawns-Civ1-5]
-        [PersistentConditions:Blue-Brokk]
+        [PersistentConditions:GVA-SpawnConditions-Snow]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>5.0</Frequency>
@@ -34,7 +33,7 @@
       </Prefabs>
     </SpawnGroup>
 
-
+    
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
@@ -48,11 +47,10 @@
         [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
         [ManipulationProfiles:GVA-Manipulation-Red-RefineryName]
 
-        [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
 
         [SpawnConditionsProfiles:Red-RedAlienRegion-PI-Spawns-Civ1-10]
-        [PersistentConditions:Blue-Brokk]
+        [PersistentConditions:GVA-SpawnConditions-Snow]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>6.0</Frequency>
@@ -68,6 +66,7 @@
       </Prefabs>
     </SpawnGroup>
 
+    
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
@@ -81,11 +80,10 @@
         [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
         [ManipulationProfiles:GVA-Manipulation-Red-RefineryName]
 
-        [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
 
         [SpawnConditionsProfiles:Red-RedAlienRegion-PI-Spawns-Civ1-20]
-        [PersistentConditions:Blue-Brokk]
+        [PersistentConditions:GVA-SpawnConditions-Snow]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>20.0</Frequency>
@@ -101,6 +99,7 @@
       </Prefabs>
     </SpawnGroup>
 
+    
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
@@ -114,11 +113,10 @@
         [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
         [ManipulationProfiles:GVA-Manipulation-Red-RefineryName]
 
-        [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
 
         [SpawnConditionsProfiles:Red-RedAlienRegion-PI-Spawns-Civ1-40]
-        [PersistentConditions:Blue-Brokk]
+        [PersistentConditions:GVA-SpawnConditions-Snow]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>168.0</Frequency>

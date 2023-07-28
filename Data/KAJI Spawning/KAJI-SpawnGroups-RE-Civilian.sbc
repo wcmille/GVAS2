@@ -15,7 +15,6 @@
         [IgnoreCleanupRules:false]
 
         [SpawnConditionsProfiles:Red-RedAlienRegion-FixedSpace-Spawns]
-        [UseTerrainTypeValidation:true]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>5.0</Frequency>

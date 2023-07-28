@@ -4,19 +4,12 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Red-Spawns-RO</SubtypeId>
+        <SubtypeId>GVA-SpawnConditions-Snow</SubtypeId>
       </Id>
       <Description>
         [MES Spawn Conditions]
-        [SpaceCargoShip:true]
-
-        [AtmosphericCargoShip:true]
-        [SkipAirDensityCheck:true]
-
-        [GravityCargoShip:true]
-
-        [FactionOwner:KAJI]
-        [ZoneConditions:GVA-ZoneConditionProfile-RedAlienRegion]
+        [UseTerrainTypeValidation:true]
+        [AllowedTerrainTypes:Snow]
       </Description>
     </EntityComponent>
   </EntityComponents>

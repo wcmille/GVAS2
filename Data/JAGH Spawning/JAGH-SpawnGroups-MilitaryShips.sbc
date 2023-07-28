@@ -13,7 +13,6 @@
         [ManipulationProfiles:GVA-JAGH-Manipulation-Std]
         [ManipulationProfiles:GVA-Manipulation-Blue-InterceptorName]
 
-        [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
 
         [SpawnConditionsProfiles:Blue-BlueAlienRegion-Orbital-Spawns]
@@ -44,7 +43,6 @@
         [ManipulationProfiles:GVA-JAGH-Manipulation-Std]
         [ManipulationProfiles:GVA-Manipulation-Blue-FrigateName]
 
-        [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
 
         [SpawnConditionsProfiles:Blue-BlueAlienRegion-FFO-Spawns]
@@ -76,7 +74,6 @@
         [ManipulationProfiles:GVA-JAGH-Manipulation-Std]
         [ManipulationProfiles:GVA-Manipulation-Blue-DestroyerName]
 
-        [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
 
         [SpawnConditionsProfiles:Blue-BlueAlienRegion-DDO-Spawns]

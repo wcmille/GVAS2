@@ -17,7 +17,7 @@
         [ReplenishSystems:true]
 
         [SpawnConditionsProfiles:Red-RedAlienRegion-PI-Spawns-Civ1]
-        [PersistentConditions:Blue-Brokk]
+        [PersistentConditions:GVA-SpawnConditions-Snow]
       </Description>
 			<IsPirate>true</IsPirate>
 			<Frequency>1.0</Frequency>

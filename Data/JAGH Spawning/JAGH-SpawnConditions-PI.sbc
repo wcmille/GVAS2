@@ -16,7 +16,7 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Blue-Brokk</SubtypeId>
+        <SubtypeId>GVA-SpawnConditions-Snow</SubtypeId>
       </Id>
       <Description>
         [MES Spawn Conditions]

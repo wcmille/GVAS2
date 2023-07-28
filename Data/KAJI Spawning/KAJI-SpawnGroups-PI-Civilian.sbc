@@ -12,10 +12,7 @@
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
 
-        [IgnoreCleanupRules:false]
-
         [SpawnConditionsProfiles:Red-RedAlienRegion-Fixed-Spawns]
-        [UseTerrainTypeValidation:true]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>24.0</Frequency>
@@ -27,6 +24,7 @@
             <Z>0.0</Z>
           </Position>
           <Behaviour>KAJI-Behavior-PassiveCivilian</Behaviour>
+          <BeaconText>Survival Shelter</BeaconText>
         </Prefab>
       </Prefabs>
     </SpawnGroup>
@@ -40,13 +38,10 @@
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
+        
         [ManipulationProfiles:GVA-Common-Manipulation-MinorShipyardSetup]
 
-        [IgnoreCleanupRules:false]
-
         [SpawnConditionsProfiles:Red-RedAlienRegion-Fixed-Spawns]
-
-        [UseTerrainTypeValidation:true]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>24.0</Frequency>
@@ -72,12 +67,10 @@
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
+        
         [ManipulationProfiles:GVA-Common-Manipulation-NPCPrefix]
 
-        [IgnoreCleanupRules:false]
-
         [SpawnConditionsProfiles:Red-RedAlienRegion-Fixed-Spawns]
-        [UseTerrainTypeValidation:true]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>25.0</Frequency>

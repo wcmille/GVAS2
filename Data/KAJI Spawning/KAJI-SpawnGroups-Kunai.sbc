@@ -16,7 +16,7 @@
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
 
-        [SpawnConditionsProfiles:Red-Spawns-RO]
+        [SpawnConditionsProfiles:Red-Spawns-RMO]
       </Description>
 			<IsPirate>true</IsPirate>
 			<Frequency>95.0</Frequency>

@@ -3,12 +3,14 @@ using Sandbox.ModAPI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using VRage;
 using VRage.Game.ModAPI;
 using VRage.Game.ModAPI.Ingame.Utilities;
 using VRage.ModAPI;
 using VRage.Utils;
 using VRageMath;
+using static SharpDX.Toolkit.Graphics.PixelFormat;
 
 namespace GVA.NPCControl.Server
 {
@@ -30,25 +32,34 @@ namespace GVA.NPCControl.Server
         }
         public void UnloadData()
         {
+            const bool reg = false;
             if (MyAPIGateway.Multiplayer.IsServer)
             {
-                mes.RegisterCustomSpawnCondition(false, "BlueCivMoreThan5", null);
-                mes.RegisterCustomSpawnCondition(false, "BlueCivMoreThan10", null);
-                mes.RegisterCustomSpawnCondition(false, "BlueCivMoreThan20", null);
-                mes.RegisterCustomSpawnCondition(false, "BlueCivMoreThan40", null);
+                mes.RegisterCustomSpawnCondition(reg, "BlueMilMoreThan1", null);
+                mes.RegisterCustomSpawnCondition(reg, "BlueCivMoreThan5", null);
+                mes.RegisterCustomSpawnCondition(reg, "BlueCivMoreThan10", null);
+                mes.RegisterCustomSpawnCondition(reg, "BlueCivMoreThan20", null);
+                mes.RegisterCustomSpawnCondition(reg, "BlueCivMoreThan40", null);
 
-                mes.RegisterCustomSpawnCondition(false, "RedCivMoreThan5", null);
-                mes.RegisterCustomSpawnCondition(false, "RedCivMoreThan10", null);
-                mes.RegisterCustomSpawnCondition(false, "RedCivMoreThan20", null);
-                mes.RegisterCustomSpawnCondition(false, "RedCivMoreThan40", null);
+                mes.RegisterCustomSpawnCondition(reg, "RedCivMoreThan5", null);
+                mes.RegisterCustomSpawnCondition(reg, "RedCivMoreThan10", null);
+                mes.RegisterCustomSpawnCondition(reg, "RedCivMoreThan20", null);
+                mes.RegisterCustomSpawnCondition(reg, "RedCivMoreThan40", null);
 
-                mes.RegisterCustomSpawnCondition(false, "BlackIsWeak", null);
-                mes.RegisterCustomSpawnCondition(false, "BlackIsNormal", null);
-                mes.RegisterCustomSpawnCondition(false, "BlackIsStrong", null);
+                mes.RegisterCustomSpawnCondition(reg, "BlueMilMoreThan1", null);
+                mes.RegisterCustomSpawnCondition(reg, "RedMilMoreThan1", null);
+                mes.RegisterCustomSpawnCondition(reg, "BlueMilMoreThan2", null);
+                mes.RegisterCustomSpawnCondition(reg, "RedMilMoreThan2", null);
+                mes.RegisterCustomSpawnCondition(reg, "BlueIsStrong", null);
+                mes.RegisterCustomSpawnCondition(reg, "RedIsStrong", null);
 
-                mes.BehaviorTriggerActivationWatcher(false, WatchTriggers);
+                mes.RegisterCustomSpawnCondition(reg, "BlackIsWeak", null);
+                mes.RegisterCustomSpawnCondition(reg, "BlackIsNormal", null);
+                mes.RegisterCustomSpawnCondition(reg, "BlackIsStrong", null);
 
-                mes.RegisterSuccessfulSpawnAction(LogSpawn, false);
+                mes.BehaviorTriggerActivationWatcher(reg, WatchTriggers);
+
+                mes.RegisterSuccessfulSpawnAction(LogSpawn, reg);
             }
 
             if (server != null) server.Unload();
@@ -58,6 +69,8 @@ namespace GVA.NPCControl.Server
 
         public void BeforeStart(INetworking networking)
         {
+            const bool reg = true;
+
             if (MyAPIGateway.Multiplayer.IsServer)
             {
                 server = new Server(networking);
@@ -72,32 +85,47 @@ namespace GVA.NPCControl.Server
                 bc10 = (a, b, c, d) => CountersMoreThan(SharedConstants.BlueFactionColor, SharedConstants.CivilianStr, 10);
                 bc20 = (a, b, c, d) => CountersMoreThan(SharedConstants.BlueFactionColor, SharedConstants.CivilianStr, 20);
                 bc40 = (a, b, c, d) => CountersMoreThan(SharedConstants.BlueFactionColor, SharedConstants.CivilianStr, 40);
-                mes.RegisterCustomSpawnCondition(true, "BlueCivMoreThan5", bc5);
-                mes.RegisterCustomSpawnCondition(true, "BlueCivMoreThan10", bc10);
-                mes.RegisterCustomSpawnCondition(true, "BlueCivMoreThan20", bc20);
-                mes.RegisterCustomSpawnCondition(true, "BlueCivMoreThan40", bc40);
+                mes.RegisterCustomSpawnCondition(reg, "BlueCivMoreThan5", bc5);
+                mes.RegisterCustomSpawnCondition(reg, "BlueCivMoreThan10", bc10);
+                mes.RegisterCustomSpawnCondition(reg, "BlueCivMoreThan20", bc20);
+                mes.RegisterCustomSpawnCondition(reg, "BlueCivMoreThan40", bc40);
 
                 rc5 = (a, b, c, d) => CountersMoreThan(SharedConstants.RedFactionColor, SharedConstants.CivilianStr, 5);
                 rc10 = (a, b, c, d) => CountersMoreThan(SharedConstants.RedFactionColor, SharedConstants.CivilianStr, 10);
                 rc20 = (a, b, c, d) => CountersMoreThan(SharedConstants.RedFactionColor, SharedConstants.CivilianStr, 20);
                 rc40 = (a, b, c, d) => CountersMoreThan(SharedConstants.RedFactionColor, SharedConstants.CivilianStr, 40);
-                mes.RegisterCustomSpawnCondition(true, "RedCivMoreThan5", rc5);
-                mes.RegisterCustomSpawnCondition(true, "RedCivMoreThan10", rc10);
-                mes.RegisterCustomSpawnCondition(true, "RedCivMoreThan20", rc20);
-                mes.RegisterCustomSpawnCondition(true, "RedCivMoreThan40", rc40);
+                mes.RegisterCustomSpawnCondition(reg, "RedCivMoreThan5", rc5);
+                mes.RegisterCustomSpawnCondition(reg, "RedCivMoreThan10", rc10);
+                mes.RegisterCustomSpawnCondition(reg, "RedCivMoreThan20", rc20);
+                mes.RegisterCustomSpawnCondition(reg, "RedCivMoreThan40", rc40);
+
+                Func<string, string, string, Vector3D, bool> bm1, bm2, rm1, rm2, bm10, rm10;
+                bm1 = (a, b, c, d) => CountersMoreThan(SharedConstants.BlueFactionColor, SharedConstants.MilitaryStr, 1);
+                rm1 = (a, b, c, d) => CountersMoreThan(SharedConstants.RedFactionColor, SharedConstants.MilitaryStr, 1);
+                bm2 = (a, b, c, d) => CountersMoreThan(SharedConstants.BlueFactionColor, SharedConstants.MilitaryStr, 2);
+                rm2 = (a, b, c, d) => CountersMoreThan(SharedConstants.RedFactionColor, SharedConstants.MilitaryStr, 2);
+                bm10 = (a, b, c, d) => CountersMoreThan(SharedConstants.BlueFactionColor, SharedConstants.MilitaryStr, 10);
+                rm10 = (a, b, c, d) => CountersMoreThan(SharedConstants.RedFactionColor, SharedConstants.MilitaryStr, 10);
+                mes.RegisterCustomSpawnCondition(reg, "BlueMilMoreThan1", bm1);
+                mes.RegisterCustomSpawnCondition(reg, "RedMilMoreThan1", rm1);
+                mes.RegisterCustomSpawnCondition(reg, "BlueMilMoreThan2", bm2);
+                mes.RegisterCustomSpawnCondition(reg, "RedMilMoreThan2", rm2);
+                mes.RegisterCustomSpawnCondition(reg, "BlueIsStrong", bm10);
+                mes.RegisterCustomSpawnCondition(reg, "RedIsStrong", rm10);
+
 
                 Func<string, string, string, Vector3D, bool> biw, bin, bis;
                 biw = (a, b, c, d) => CountersMoreThan(SharedConstants.BlackFactionColor, SharedConstants.MilitaryStr, 3);
                 bin = (a, b, c, d) => CountersMoreThan(SharedConstants.BlackFactionColor, SharedConstants.MilitaryStr, 10);
                 bis = (a, b, c, d) => CountersMoreThan(SharedConstants.BlackFactionColor, SharedConstants.MilitaryStr, 20);
 
-                mes.RegisterCustomSpawnCondition(true, "BlackIsWeak", biw);
-                mes.RegisterCustomSpawnCondition(true, "BlackIsNormal", bin);
-                mes.RegisterCustomSpawnCondition(true, "BlackIsStrong", bis);
+                mes.RegisterCustomSpawnCondition(reg, "BlackIsWeak", biw);
+                mes.RegisterCustomSpawnCondition(reg, "BlackIsNormal", bin);
+                mes.RegisterCustomSpawnCondition(reg, "BlackIsStrong", bis);
 
-                mes.BehaviorTriggerActivationWatcher(true, WatchTriggers);
+                mes.BehaviorTriggerActivationWatcher(reg, WatchTriggers);
 
-                mes.RegisterSuccessfulSpawnAction(LogSpawn, true);
+                mes.RegisterSuccessfulSpawnAction(LogSpawn, reg);
             }
         }
 
