@@ -20,7 +20,26 @@
         [CollisionEvasionResumeDistance:300]
         [CollisionEvasionResumeTime:10]
 
+        [Triggers:Imber-Trigger-PathDeviation]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>JAGH-Behavior-FixedCiv</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Behavior]
+        [BehaviorName:Passive]
+
+        [UseProjectileLeadPrediction:true]
+        [UseBarrageFire:true]
+        [UseTurrets:false]
+
         [Triggers:GVA-Trigger-ScoutTattle]
+        [Triggers:GVA-Trigger-Despawn]
+        [Triggers:GVA-Trigger-DespawnMES]
+        [Triggers:Imber-Trigger-CallAtmoCargoShip]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
@@ -36,7 +55,6 @@
         [UseBarrageFire:true]
         [UseTurrets:false]
 
-        [Triggers:GVA-Trigger-ScoutTattle]
         [Triggers:GVA-Trigger-Despawn]
         [Triggers:GVA-Trigger-DespawnMES]
       </Description>

@@ -1,0 +1,84 @@
+﻿﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Imber-Trigger-CallAtmoCargoShip</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Trigger]
+
+        [UseTrigger:true]
+        [Type:Timer]
+
+        [MinCooldownMs:240000]
+        [MaxCooldownMs:360001]
+        [StartsReady:true]
+        
+        [MaxActions:-1]
+        [Actions:Imber-Action-CallAtmoCargoShip]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Imber-Action-CallAtmoCargoShip</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Action]
+
+        [BroadcastCommandProfiles:true]
+        [CommandProfileIds:Imber-Command-CallAtmoCargoShip]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Imber-Command-CallAtmoCargoShip</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Command]
+
+        [CommandCode:ImberPathDeviation]
+        [SingleRecipient:true]
+        [SendWaypoint:true]
+        [MatchSenderReceiverOwners:true]
+        [Waypoint:Imber-Waypoint-CallAtmoCargoShip]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Imber-Waypoint-CallAtmoCargoShip</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Waypoint]
+
+        [Waypoint:EntityRandom]
+        [RelativeEntity:Self]
+        [MinDistance:60]
+        [MaxDistance:101]
+        [MinAltitude:60]
+        [MaxAltitude:101]
+
+      </Description>
+
+    </EntityComponent>
+    
+  </EntityComponents>
+</Definitions>

@@ -27,7 +27,7 @@
             <Y>15.00</Y>
             <Z>0.0</Z>
           </Position>
-          <Behaviour>JAGH-Behavior-PassiveCivilian</Behaviour>
+          <Behaviour>JAGH-Behavior-FixedCiv</Behaviour>
         </Prefab>
       </Prefabs>
     </SpawnGroup>
