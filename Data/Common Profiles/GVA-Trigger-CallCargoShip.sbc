@@ -1,4 +1,4 @@
-﻿﻿<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <EntityComponents>
 
@@ -8,7 +8,6 @@
         <SubtypeId>Imber-Trigger-CallAtmoCargoShip</SubtypeId>
       </Id>
       <Description>
-
         [RivalAI Trigger]
 
         [UseTrigger:true]
@@ -20,7 +19,6 @@
         
         [MaxActions:-1]
         [Actions:Imber-Action-CallAtmoCargoShip]
-
       </Description>
 
     </EntityComponent>
@@ -31,12 +29,10 @@
         <SubtypeId>Imber-Action-CallAtmoCargoShip</SubtypeId>
       </Id>
       <Description>
-
         [RivalAI Action]
 
         [BroadcastCommandProfiles:true]
         [CommandProfileIds:Imber-Command-CallAtmoCargoShip]
-
       </Description>
 
     </EntityComponent>
@@ -79,6 +75,5 @@
       </Description>
 
     </EntityComponent>
-    
   </EntityComponents>
 </Definitions>

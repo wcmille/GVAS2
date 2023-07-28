@@ -10,15 +10,8 @@
         [RivalAI Behavior]
         [BehaviorName:CargoShip]
 
-        [UseProjectileLeadPrediction:true]
-        [UseBarrageFire:true]
-        [UseTurrets:false]
-        [IdealMaxSpeed:70]
-        [UseVanillaCollisionAvoidance:false]
-        [UseVelocityCollisionEvasion:true]
-        [CollisionEvasionWaypointDistance:600]
-        [CollisionEvasionResumeDistance:300]
-        [CollisionEvasionResumeTime:10]
+        [AutopilotData:GVA-Autopilot-Common-Cruise]
+        [SecondaryAutopilotData:GVA-AutoPilot-Common-Land]
 
         [Triggers:Imber-Trigger-PathDeviation]
       </Description>

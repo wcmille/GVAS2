@@ -1,4 +1,4 @@
-﻿﻿<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <EntityComponents>
 
@@ -8,7 +8,6 @@
         <SubtypeId>Imber-Trigger-PathDeviation</SubtypeId>
       </Id>
       <Description>
-
         [RivalAI Trigger]
 
         [UseTrigger:true]
@@ -20,7 +19,6 @@
         [StartsReady:true]
         [MaxActions:1]
         [Actions:Imber-Action-PathDeviation]
-
       </Description>
     </EntityComponent>
 
@@ -30,14 +28,10 @@
         <SubtypeId>Imber-Condition-PathDeviation</SubtypeId>
       </Id>
       <Description>
-
         [RivalAI Condition]
 
         [CommandGravityCheck:true]
-        [CommandGravityMatches:true]
-
       </Description>
-
     </EntityComponent>
 
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
@@ -46,7 +40,6 @@
         <SubtypeId>Imber-Action-PathDeviation</SubtypeId>
       </Id>
       <Description>
-
         [RivalAI Action]
 
         [AddWaypointFromCommand:true]
@@ -63,9 +56,7 @@
 
         [BlockTypesToToggle:MyObjectBuilder_Parachute/SmParachute]
         [BlockTypeToggles:Off]
-
       </Description>
-
     </EntityComponent>
 
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
@@ -74,7 +65,6 @@
         <SubtypeId>Imber-Chat-PathDeviation</SubtypeId>
       </Id>
       <Description>
-
         [RivalAI Chat]
 
         [UseChat:true]
@@ -91,7 +81,6 @@
         [ChatMessages:{AntennaName} approaching ground installation.]
         [ChatAudio:ArcHudGPSNotification1]
         [BroadcastChatType:Chat]
-
       </Description>
     </EntityComponent>
   </EntityComponents>

@@ -10,7 +10,6 @@ using VRage.Game.ModAPI.Ingame.Utilities;
 using VRage.ModAPI;
 using VRage.Utils;
 using VRageMath;
-using static SharpDX.Toolkit.Graphics.PixelFormat;
 
 namespace GVA.NPCControl.Server
 {
@@ -63,6 +62,7 @@ namespace GVA.NPCControl.Server
             }
 
             if (server != null) server.Unload();
+
             server = null;
             world = null;
         }
