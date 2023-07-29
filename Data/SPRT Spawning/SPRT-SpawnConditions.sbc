@@ -16,11 +16,9 @@
         [GravityCargoShipChance:5]
         [LunarCargoShip:true]
         [LunarCargoShipChance:10]
-        [SpaceCargoShip:true]
-        [SpaceCargoShipChance:1]
 
         [UseThreatLevelCheck:true]
-        [ThreatScoreMinimum:200]
+        [ThreatScoreMinimum:1000]
 
         [CustomApiConditions:BlackIsWeak]
       </Description>
@@ -41,10 +39,10 @@
         [LunarCargoShip:true]
         [LunarCargoShipChance:30]
         [SpaceCargoShip:true]
-        [SpaceCargoShipChance:10]
+        [SpaceCargoShipChance:1]
 
         [UseThreatLevelCheck:true]
-        [ThreatScoreMinimum:200]
+        [ThreatScoreMinimum:500]
 
         [CustomApiConditions:BlackIsNormal]
       </Description>
@@ -65,7 +63,7 @@
         [LunarCargoShip:true]
         [LunarCargoShipChance:75]
         [SpaceCargoShip:true]
-        [SpaceCargoShipChance:25]
+        [SpaceCargoShipChance:10]
 
         [UseThreatLevelCheck:true]
         [ThreatScoreMinimum:200]
@@ -76,7 +74,7 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Black-BlueAlienRegion-Space-Spawns</SubtypeId>
+        <SubtypeId>SPRT-SpawnCondition-BlueZoneSpace</SubtypeId>
       </Id>
       <Description>
         [MES Spawn Conditions]
@@ -88,7 +86,7 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Black-RedAlienRegion-Space-Spawns</SubtypeId>
+        <SubtypeId>SPRT-SpawnCondition-RedZoneSpace</SubtypeId>
       </Id>
       <Description>
         [MES Spawn Conditions]
@@ -100,7 +98,7 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-Black-PirateZone</SubtypeId>
+        <SubtypeId>SPRT-SpawnCondition-BlackZone</SubtypeId>
       </Id>
       <Description>
         [MES Spawn Conditions]

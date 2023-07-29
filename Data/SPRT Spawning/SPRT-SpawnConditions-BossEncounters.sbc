@@ -26,7 +26,7 @@
 						<Z>0.0</Z>
 					</Position>
 					<Speed>50</Speed>
-					<Behaviour>GVA-SPRT-Behavior-SpaceDestroyer</Behaviour>
+					<Behaviour>SPRT-Behavior-SpaceDestroyer</Behaviour>
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>

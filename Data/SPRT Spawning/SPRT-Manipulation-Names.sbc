@@ -40,5 +40,18 @@
         [ReplaceAntennaNameWithRandomizedName:Main Antenna]
       </Description>
     </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Manipulation-Black-ScoutName</SubtypeId>
+      </Id>
+      <Description>
+        [MES Manipulation]
+        [UseRandomNameGenerator:true]
+        [RandomGridNamePattern:RandomLetterRandomNumber-RandomLetterRandomNumber]
+        [RandomGridNamePrefix:[NPC] ]
+        [ReplaceAntennaNameWithRandomizedName:Main Antenna]
+      </Description>
+    </EntityComponent>
   </EntityComponents>
 </Definitions>

@@ -10,10 +10,11 @@
       <Description>
         [Modular Encounters SpawnGroup]
 
-        [IgnoreCleanupRules:false]
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        
         [ReplenishSystems:true]
 
-        [SpawnConditionsProfiles:GVA-Black-PirateZone]
+        [SpawnConditionsProfiles:SPRT-SpawnCondition-BlackZone]
         [FactionOwner:SPRT]
       </Description>
       <IsPirate>true</IsPirate>
@@ -26,7 +27,7 @@
             <Z>0.0</Z>
           </Position>
           <Speed>50</Speed>
-          <Behaviour>GVA-SPRT-Behavior-SpaceDestroyer</Behaviour>
+          <Behaviour>SPRT-Behavior-SpaceDestroyer</Behaviour>
         </Prefab>
       </Prefabs>
     </SpawnGroup>
@@ -38,15 +39,16 @@
 			<Description>
         [Modular Encounters SpawnGroup]
 
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ReplenishSystems:true]
 
-        [SpawnConditionsProfiles:Black-BlueAlienRegion-Space-Spawns]
-        [SpawnConditionsProfiles:Black-RedAlienRegion-Space-Spawns]
-        [SpawnConditionsProfiles:GVA-Black-PirateZone]
+        [SpawnConditionsProfiles:SPRT-SpawnCondition-BlueZoneSpace]
+        [SpawnConditionsProfiles:SPRT-SpawnCondition-RedZoneSpace]
+        [SpawnConditionsProfiles:SPRT-SpawnCondition-BlackZone]
         [FactionOwner:SPRT]
       </Description>
 			<IsPirate>true</IsPirate>
-			<Frequency>3.0</Frequency>
+			<Frequency>1.0</Frequency>
 			<Prefabs>
 				<Prefab SubtypeId="Enforcer">
 					<Position>
@@ -55,7 +57,7 @@
 						<Z>0.0</Z>
 					</Position>
 					<Speed>50</Speed>
-					<Behaviour>GVA-SPRT-Behavior-SpaceDestroyer</Behaviour>
+					<Behaviour>SPRT-Behavior-SpaceDestroyer</Behaviour>
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>
@@ -68,12 +70,12 @@
       <Description>
         [Modular Encounters SpawnGroup]
 
-        [IgnoreCleanupRules:false]
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ReplenishSystems:true]
 
         [SpawnConditionsProfiles:GVA-Black-RedIncursions0]
         [SpawnConditionsProfiles:GVA-Black-BlueIncursions0]
-        [SpawnConditionsProfiles:GVA-Black-PirateZone]
+        [SpawnConditionsProfiles:SPRT-SpawnCondition-BlackZone]
 
         [FactionOwner:SPRT]
       </Description>
@@ -87,7 +89,38 @@
             <Z>0.0</Z>
           </Position>
           <Speed>50</Speed>
-          <Behaviour>GVA-SPRT-Behavior-SpaceDestroyer</Behaviour>
+          <Behaviour>SPRT-Behavior-SpaceDestroyer</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <!--Do Not Edit-->
+        <SubtypeId>GVA-Black-ScoutDrone</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ReplenishSystems:true]
+
+        [SpawnConditionsProfiles:Black-Planet-All-Weak]
+        [SpawnConditionsProfiles:Black-Planet-All-Normal]
+        [SpawnConditionsProfiles:Black-Planet-All-Strong]
+        [FactionOwner:SPRT]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>125.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="Cartel Scout Drone">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>50</Speed>
+          <Behaviour>SPRT-Behavior-SpaceDestroyer</Behaviour>
         </Prefab>
       </Prefabs>
     </SpawnGroup>
@@ -100,14 +133,14 @@
       <Description>
         [Modular Encounters SpawnGroup]
 
-        [IgnoreCleanupRules:false]
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ReplenishSystems:true]
 
         [SpawnConditionsProfiles:GVA-Black-RedIncursions0]
         [SpawnConditionsProfiles:GVA-Black-BlueIncursions0]
-        [SpawnConditionsProfiles:Black-BlueAlienRegion-Space-Spawns]
-        [SpawnConditionsProfiles:Black-RedAlienRegion-Space-Spawns]
-        [SpawnConditionsProfiles:GVA-Black-PirateZone]
+        [SpawnConditionsProfiles:SPRT-SpawnCondition-BlueZoneSpace]
+        [SpawnConditionsProfiles:SPRT-SpawnCondition-RedZoneSpace]
+        [SpawnConditionsProfiles:SPRT-SpawnCondition-BlackZone]
         [SpawnConditionsProfiles:Black-Planet-All-Weak]
         [SpawnConditionsProfiles:Black-Planet-All-Normal]
         [SpawnConditionsProfiles:Black-Planet-All-Strong]
@@ -123,7 +156,7 @@
             <Z>0.0</Z>
           </Position>
           <Speed>50</Speed>
-          <Behaviour>GVA-SPRT-Behavior-SpaceDestroyer</Behaviour>
+          <Behaviour>SPRT-Behavior-SpaceDestroyer</Behaviour>
         </Prefab>
       </Prefabs>
     </SpawnGroup>

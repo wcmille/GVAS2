@@ -4,61 +4,60 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
           <TypeId>Inventory</TypeId>
-          <SubtypeId>GVA-Trigger-DoNotApproach</SubtypeId>
+          <SubtypeId>SPRT-Trigger-Attacked</SubtypeId>
       </Id>
       <Description>
         [RivalAI Trigger]
-
         [UseTrigger:true]
-        [Type:PlayerNear]
         [StartsReady:true]
-        [TargetDistance:500]
-        [MaxActions:-1]
-        [AllPlayersMustMatchReputation:true]
-        [MinPlayerReputation:-500]
-        [MaxPlayerReputation:400]
+        [Type:Damage]
+        [MaxActions:2]
+        [MinCooldownMs:30000]
         [MaxCooldownMs:40000]
-        [MinCooldownMs:20000]
-        [Actions:GVA-Action-DoNotApproach]
+        [Actions:GVA-Action-Attacked]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-Action-DoNotApproach</SubtypeId>
+        <SubtypeId>SPRT-Action-Attacked</SubtypeId>
       </Id>
       <Description>
         [RivalAI Action]
-        
-        [ChangeReputationWithPlayers:true]
-        [ReputationChangeRadius:500]
-        [ReputationChangeFactions:{Self}]
-        [ReputationChangeAmount:-200]
-        [ReputationChangesForAllRadiusPlayerFactionMembers:true]
+        [ChangeAttackerReputation:true]
+        [ChangeAttackerReputationFaction:{Self}]
+        [ChangeAttackerReputationAmount:-999]
+        [ReputationChangesForAllAttackPlayerFactionMembers:true]
+        [ReputationMinCap:-1000]
+
         [UseChatBroadcast:true]
-        [ChatData:GVA-Chat-DoNotApproach]
+        [ChatData:SPRT-Chat-Attacked]
       </Description>
     </EntityComponent>
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+        <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-Chat-DoNotApproach</SubtypeId>
+        <SubtypeId>SPRT-Chat-Attacked</SubtypeId>
       </Id>
       <Description>
         [RivalAI Chat]
 
         [UseChat:true]
         [StartsReady:true]
-        [MaxChats:50]
+        [MaxChats:2]
         [BroadcastRandomly:true]
         [Author:{AntennaName}]
-        [Color:Azure]
+        [Color:Red]
 
-        [ChatMessages: {AntennaName} to intruder. Increase your distance and do not approach.]
+        [ChatMessages:You have chosen death.]
         [ChatAudio:ArcHudGPSNotification1]
         [BroadcastChatType:Chat]
 
-        [ChatMessages:This is {AntennaName}. We are a military vessel. Move away or we will open fire.]
+        [ChatMessages:It's over now.]
+        [ChatAudio:ArcHudGPSNotification1]
+        [BroadcastChatType:Chat]
+
+        [ChatMessages:Let's end this.]
         [ChatAudio:ArcHudGPSNotification1]
         [BroadcastChatType:Chat]
       </Description>
