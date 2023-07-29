@@ -38,7 +38,6 @@
 			<Description>
         [Modular Encounters SpawnGroup]
 
-        [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
 
         [SpawnConditionsProfiles:Black-BlueAlienRegion-Space-Spawns]

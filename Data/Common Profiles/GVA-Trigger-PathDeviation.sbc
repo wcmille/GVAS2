@@ -5,27 +5,27 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Imber-Trigger-PathDeviation</SubtypeId>
+        <SubtypeId>GVA-Trigger-PathDeviation</SubtypeId>
       </Id>
       <Description>
         [RivalAI Trigger]
 
         [UseTrigger:true]
         [Type:CommandReceived]
-        [CommandReceiveCode:ImberPathDeviation]
+        [CommandReceiveCode:GVAPathDeviation]
 
-        [Conditions:Imber-Condition-PathDeviation]
+        [Conditions:GVA-Condition-PathDeviation]
 
         [StartsReady:true]
         [MaxActions:1]
-        [Actions:Imber-Action-PathDeviation]
+        [Actions:GVA-Action-PathDeviation]
       </Description>
     </EntityComponent>
 
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Imber-Condition-PathDeviation</SubtypeId>
+        <SubtypeId>GVA-Condition-PathDeviation</SubtypeId>
       </Id>
       <Description>
         [RivalAI Condition]
@@ -37,14 +37,14 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Imber-Action-PathDeviation</SubtypeId>
+        <SubtypeId>GVA-Action-PathDeviation</SubtypeId>
       </Id>
       <Description>
         [RivalAI Action]
 
         [AddWaypointFromCommand:true]
         [UseChatBroadcast:true]
-        [ChatData:Imber-Chat-PathDeviation]
+        [ChatData:GVA-Chat-PathDeviation]
 
         [ChangeAutopilotProfile:true]
         [AutopilotProfile:Secondary]
@@ -62,7 +62,7 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Imber-Chat-PathDeviation</SubtypeId>
+        <SubtypeId>GVA-Chat-PathDeviation</SubtypeId>
       </Id>
       <Description>
         [RivalAI Chat]
@@ -71,10 +71,10 @@
         [StartsReady:true]
         [MaxChats:1]
         [BroadcastRandomly:true]
-        [Author:Imber Pilot]
-        [Color:Red]
+        [Author:Pilot]
+        [Color:Azure]
 
-        [ChatMessages: This is {AntennaName} requesting clearance from ground installation for supply drop-off.]
+        [ChatMessages: This is {AntennaName} requesting clearance from ground installation for approach.]
         [ChatAudio:ArcHudGPSNotification1]
         [BroadcastChatType:Chat]
 

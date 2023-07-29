@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-KAJI-Manipulation-ISL2KAJI</SubtypeId>
+      </Id>
+      <Description>
+        [MES Manipulation]
+        [RecolorGrid:true]
+
+        [RecolorOld:{X:0.06944445 Y:0.2 Z:0.55}]
+        [RecolorNew:{X:0 Y:0.2 Z:-0.2}]
+        [ReskinTarget:{X:0 Y:0.2 Z:-0.2}]
+        [ReskinTexture:SciFi_Armor]
+
+        [RecolorOld:{X:0 Y:-0.8 Z:-0.35}]
+        [RecolorNew:{X:61944443 Y:-0.8 Z:-0.32}]
+        [ReskinTarget:{X:61944443 Y:-0.8 Z:-0.32}]
+        [ReskinTexture:Clean_Armor]
+      </Description>
+    </EntityComponent>
+  </EntityComponents>
+</Definitions>

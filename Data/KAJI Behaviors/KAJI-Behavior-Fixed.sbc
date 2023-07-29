@@ -17,7 +17,7 @@
         [Triggers:GVA-Trigger-Despawn]
         [Triggers:GVA-Trigger-DespawnMES]
 
-        [Triggers:Imber-Trigger-CallAtmoCargoShip]
+        [Triggers:GVA-Trigger-CallAtmoCargoShip]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">

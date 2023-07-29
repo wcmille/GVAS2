@@ -13,7 +13,7 @@
         [AutopilotData:GVA-Autopilot-Common-Cruise]
         [SecondaryAutopilotData:GVA-AutoPilot-Common-Land]
 
-        [Triggers:Imber-Trigger-PathDeviation]
+        [Triggers:GVA-Trigger-PathDeviation]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
@@ -32,7 +32,7 @@
         [Triggers:GVA-Trigger-ScoutTattle]
         [Triggers:GVA-Trigger-Despawn]
         [Triggers:GVA-Trigger-DespawnMES]
-        [Triggers:Imber-Trigger-CallAtmoCargoShip]
+        [Triggers:GVA-Trigger-CallAtmoCargoShip]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">

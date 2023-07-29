@@ -11,14 +11,16 @@
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ManipulationProfiles:GVA-JAGH-Manipulation-Std]
-        [IgnoreCleanupRules:false]
+        [ManipulationProfiles:GVA-JAGH-Manipulation-ISL2JAGH]
+
         [ReplenishSystems:true]
+
         [SpawnConditionsProfiles:Blue-BlueAlienRegion-Default-Spawns]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>1.0</Frequency>
       <Prefabs>
-        <Prefab SubtypeId="ISL - Aquila-AV 125 Bomber">
+        <Prefab SubtypeId="ISL - Myxini Quarry Miner MK2-AO 1400">
           <Position>
             <X>0.0</X>
             <Y>0.0</Y>
@@ -39,8 +41,9 @@
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ManipulationProfiles:GVA-JAGH-Manipulation-Std]
-        [IgnoreCleanupRules:false]
+
         [ReplenishSystems:true]
+        
         [SpawnConditionsProfiles:Blue-BlueAlienRegion-Default-Spawns]
       </Description>
       <IsPirate>true</IsPirate>

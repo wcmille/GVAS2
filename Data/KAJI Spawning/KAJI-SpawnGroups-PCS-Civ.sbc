@@ -11,15 +11,16 @@
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
+        [ManipulationProfiles:GVA-KAJI-Manipulation-ISL2KAJI]
 
         [ReplenishSystems:true]
 
-        [SpawnConditionsProfiles:Red-RedAlienRegion-Default-Spawns]
+        [SpawnConditionsProfiles:Red-Spawns-RCA]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>1.0</Frequency>
       <Prefabs>
-        <Prefab SubtypeId="ISL - Aquila-AV 125 Bomber">
+        <Prefab SubtypeId="ISL - Myxini Quarry Miner MK2-AO 1400">
           <Position>
             <X>0.0</X>
             <Y>0.0</Y>

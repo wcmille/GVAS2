@@ -4,6 +4,21 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
+        <SubtypeId>Red-Spawns-RCA</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+
+        [AtmosphericCargoShip:true]
+        [SkipAirDensityCheck:true]
+
+        [FactionOwner:KAJI]
+        [ZoneConditions:GVA-ZoneConditionProfile-RedAlienRegion]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
         <SubtypeId>Red-RedAlienRegion-PI-Spawns-Civ1</SubtypeId>
       </Id>
       <Description>
