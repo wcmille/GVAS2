@@ -9,7 +9,7 @@
       <Description>
         [MES Spawn Conditions]
         [FactionOwner:JAGH]
-        [ZoneConditions:GVA-ZoneConditionProfile-BlueAlienRegion]
+        [ZoneConditions:GVA-ZoneConditionProfile-BlueZone]
         [PlanetaryInstallation:true]
       </Description>
     </EntityComponent>
@@ -32,7 +32,7 @@
       <Description>
         [MES Spawn Conditions]
         [FactionOwner:JAGH]
-        [ZoneConditions:GVA-ZoneConditionProfile-BlueAlienRegion]
+        [ZoneConditions:GVA-ZoneConditionProfile-BlueZone]
         [PlanetaryInstallation:true]
         [UseSandboxCounterCosts:true]
         [SandboxCounterCostNames:BlueCivilian]
@@ -47,7 +47,7 @@
       <Description>
         [MES Spawn Conditions]
         [FactionOwner:JAGH]
-        [ZoneConditions:GVA-ZoneConditionProfile-BlueAlienRegion]
+        [ZoneConditions:GVA-ZoneConditionProfile-BlueZone]
         [PlanetaryInstallation:true]
         [UseSandboxCounterCosts:true]
         [SandboxCounterCostNames:BlueCivilian]
@@ -63,7 +63,7 @@
       <Description>
         [MES Spawn Conditions]
         [FactionOwner:JAGH]
-        [ZoneConditions:GVA-ZoneConditionProfile-BlueAlienRegion]
+        [ZoneConditions:GVA-ZoneConditionProfile-BlueZone]
         [PlanetaryInstallation:true]
         [UseSandboxCounterCosts:true]
         [SandboxCounterCostNames:BlueCivilian]
@@ -79,7 +79,7 @@
       <Description>
         [MES Spawn Conditions]
         [FactionOwner:JAGH]
-        [ZoneConditions:GVA-ZoneConditionProfile-BlueAlienRegion]
+        [ZoneConditions:GVA-ZoneConditionProfile-BlueZone]
         [PlanetaryInstallation:true]
         [UseSandboxCounterCosts:true]
         [SandboxCounterCostNames:BlueCivilian]
@@ -95,7 +95,7 @@
       <Description>
         [MES Spawn Conditions]
         [FactionOwner:JAGH]
-        [ZoneConditions:GVA-ZoneConditionProfile-BlueAlienRegion]
+        [ZoneConditions:GVA-ZoneConditionProfile-BlueZone]
         [PlanetaryInstallation:true]
         [UseSandboxCounterCosts:true]
         [SandboxCounterCostNames:BlueCivilian]

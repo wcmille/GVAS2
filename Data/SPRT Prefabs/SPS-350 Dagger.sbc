@@ -4520,12 +4520,13 @@
               <ColorMaskHSV x="0" y="0.2" z="-0.24" />
               <SkinSubtypeId>Neon_Colorable_Lights</SkinSubtypeId>
               <ShareMode>Faction</ShareMode>
+              <CustomName>Main Antenna</CustomName>
               <ShowOnHUD>false</ShowOnHUD>
               <ShowInTerminal>true</ShowInTerminal>
               <ShowInToolbarConfig>true</ShowInToolbarConfig>
               <ShowInInventory>true</ShowInInventory>
               <Enabled>true</Enabled>
-              <BroadcastRadius>50000</BroadcastRadius>
+              <BroadcastRadius>2000</BroadcastRadius>
               <ShowShipName>true</ShowShipName>
               <EnableBroadcasting>true</EnableBroadcasting>
               <AttachedPB>0</AttachedPB>

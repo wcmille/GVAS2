@@ -9,7 +9,7 @@
       <Description>
         [MES Spawn Conditions]
         [FactionOwner:KAJI]
-        [ZoneConditions:GVA-ZoneConditionProfile-RedAlienRegion]
+        [ZoneConditions:GVA-ZoneConditionProfile-RedZone]
         [PlanetaryInstallation:true]
       </Description>
     </EntityComponent>
@@ -21,7 +21,7 @@
       <Description>
         [MES Spawn Conditions]
         [FactionOwner:KAJI]
-        [ZoneConditions:GVA-ZoneConditionProfile-RedAlienRegion]
+        [ZoneConditions:GVA-ZoneConditionProfile-RedZone]
         [SpaceRandomEncounter:true]
       </Description>
     </EntityComponent>

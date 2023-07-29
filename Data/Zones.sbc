@@ -25,7 +25,7 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-ZoneConditionProfile-BlueAlienRegion</SubtypeId>
+        <SubtypeId>GVA-ZoneConditionProfile-BlueZone</SubtypeId>
       </Id>
       <Description>
         [MES Zone Conditions]
@@ -58,7 +58,7 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-ZoneConditionProfile-RedAlienRegion</SubtypeId>
+        <SubtypeId>GVA-ZoneConditionProfile-RedZone</SubtypeId>
       </Id>
       <Description>
         [MES Zone Conditions]

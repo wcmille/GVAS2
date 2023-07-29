@@ -13,7 +13,7 @@
         [SkipAirDensityCheck:true]
 
         [FactionOwner:KAJI]
-        [ZoneConditions:GVA-ZoneConditionProfile-RedAlienRegion]
+        [ZoneConditions:GVA-ZoneConditionProfile-RedZone]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
@@ -26,7 +26,7 @@
         [PlanetaryInstallation:true]
 
         [FactionOwner:KAJI]
-        [ZoneConditions:GVA-ZoneConditionProfile-RedAlienRegion]
+        [ZoneConditions:GVA-ZoneConditionProfile-RedZone]
 
         [UseSandboxCounterCosts:true]
         [SandboxCounterCostNames:RedCivilian]

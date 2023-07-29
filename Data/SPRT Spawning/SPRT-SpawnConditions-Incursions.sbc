@@ -9,7 +9,7 @@
       <Description>
         [MES Spawn Conditions]
         [FactionOwner:SPRT]
-        [ZoneConditions:GVA-ZoneConditionProfile-BlueAlienRegion]
+        [ZoneConditions:GVA-ZoneConditionProfile-BlueZone]
         [BossEncounterSpace:true]
         [BossEncounterAtmo:true]
         [BossCustomGPSLabel:Incursion]
@@ -29,7 +29,7 @@
       <Description>
         [MES Spawn Conditions]
         [FactionOwner:SPRT]
-        [ZoneConditions:GVA-ZoneConditionProfile-RedAlienRegion]
+        [ZoneConditions:GVA-ZoneConditionProfile-RedZone]
         [BossEncounterSpace:true]
         [BossEncounterAtmo:true]
         [BossCustomGPSLabel:Incursion]

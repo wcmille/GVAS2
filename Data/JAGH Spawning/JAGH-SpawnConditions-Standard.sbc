@@ -9,7 +9,7 @@
       <Description>
         [MES Spawn Conditions]
         [FactionOwner:JAGH]
-        [ZoneConditions:GVA-ZoneConditionProfile-BlueAlienRegion]
+        [ZoneConditions:GVA-ZoneConditionProfile-BlueZone]
         [SpaceRandomEncounter:true]
       </Description>
     </EntityComponent>

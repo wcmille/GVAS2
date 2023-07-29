@@ -79,7 +79,7 @@
       <Description>
         [MES Spawn Conditions]
         [FactionOwner:SPRT]
-        [ZoneConditions:GVA-ZoneConditionProfile-BlueAlienRegion]
+        [ZoneConditions:GVA-ZoneConditionProfile-BlueZone]
         [SpaceCargoShip:true]
       </Description>
     </EntityComponent>
@@ -91,7 +91,7 @@
       <Description>
         [MES Spawn Conditions]
         [FactionOwner:SPRT]
-        [ZoneConditions:GVA-ZoneConditionProfile-RedAlienRegion]
+        [ZoneConditions:GVA-ZoneConditionProfile-RedZone]
         [SpaceCargoShip:true]
       </Description>
     </EntityComponent>

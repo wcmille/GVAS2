@@ -16,7 +16,7 @@
         [GravityCargoShip:true]
 
         [FactionOwner:KAJI]
-        [ZoneConditions:GVA-ZoneConditionProfile-RedAlienRegion]
+        [ZoneConditions:GVA-ZoneConditionProfile-RedZone]
         [CustomApiConditions:RedMilMoreThan1]
       </Description>
     </EntityComponent>
@@ -35,7 +35,7 @@
         [GravityCargoShip:true]
 
         [FactionOwner:KAJI]
-        [ZoneConditions:GVA-ZoneConditionProfile-RedAlienRegion]
+        [ZoneConditions:GVA-ZoneConditionProfile-RedZone]
         [UseSandboxCounterCosts:true]
         [SandboxCounterCostNames:RedMilitary]
         [SandboxCounterCostAmounts:1]
@@ -57,7 +57,7 @@
         [GravityCargoShip:true]
 
         [FactionOwner:KAJI]
-        [ZoneConditions:GVA-ZoneConditionProfile-RedAlienRegion]
+        [ZoneConditions:GVA-ZoneConditionProfile-RedZone]
         [UseSandboxCounterCosts:true]
         [SandboxCounterCostNames:RedMilitary]
         [SandboxCounterCostAmounts:3]
