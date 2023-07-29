@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>GVA-Trigger-DoNotApproach</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Trigger]
+
+        [UseTrigger:true]
+        [Type:PlayerNear]
+        [StartsReady:true]
+        [TargetDistance:500]
+        [MaxActions:-1]
+        [AllPlayersMustMatchReputation:true]
+        [MinPlayerReputation:-500]
+        [MaxPlayerReputation:400]
+        [MaxCooldownMs:40000]
+        [MinCooldownMs:20000]
+        [Actions:GVA-Action-DoNotApproach]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Action-DoNotApproach</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Action]
+        
+        [ChangeReputationWithPlayers:true]
+        [ReputationChangeRadius:500]
+        [ReputationChangeFactions:{Self}]
+        [ReputationChangeAmount:-200]
+        [ReputationChangesForAllRadiusPlayerFactionMembers:true]
+        [UseChatBroadcast:true]
+        [ChatData:GVA-Chat-DoNotApproach]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Chat-DoNotApproach</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Chat]
+
+        [UseChat:true]
+        [StartsReady:true]
+        [MaxChats:50]
+        [BroadcastRandomly:true]
+        [Author:Pilot]
+        [Color:Azure]
+
+        [ChatMessages: {AntennaName} to intruder. Increase your distance and do not approach.]
+        [ChatAudio:ArcHudGPSNotification1]
+        [BroadcastChatType:Chat]
+
+        [ChatMessages:This is {AntennaName}. We are a military vessel. Move away or we will open fire.]
+        [ChatAudio:ArcHudGPSNotification1]
+        [BroadcastChatType:Chat]
+      </Description>
+    </EntityComponent>
+  </EntityComponents>
+</Definitions>

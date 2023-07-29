@@ -23,6 +23,7 @@
 
         [Triggers:GVA-Trigger-ScoutTattle]
         [Triggers:GVA-Trigger-StandardCompromised]
+        [Triggers:GVA-Trigger-DoNotApproach]
 
         [Triggers:GVA-Trigger-Despawn]
         [Triggers:GVA-Trigger-DespawnMES]

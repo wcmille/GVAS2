@@ -24,6 +24,7 @@
 
         [Triggers:GVA-KAJI-Trigger-EnemyResponse]
         [Triggers:GVA-Trigger-StandardCompromised]
+        [Triggers:GVA-Trigger-DoNotApproach]
       </Description>
     </EntityComponent>
   </EntityComponents>

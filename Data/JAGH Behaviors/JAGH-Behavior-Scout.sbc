@@ -25,6 +25,7 @@
         [Triggers:GVA-Trigger-ScoutTattle]
         [Triggers:GVA-Trigger-StandardCompromised]
         [Triggers:GVA-Trigger-ScoutToFighter]
+        [Triggers:GVA-Trigger-DoNotApproach]
       </Description>
     </EntityComponent>
   </EntityComponents>

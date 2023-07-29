@@ -5,7 +5,7 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>KAJI-Behavior-FFO</SubtypeId>
+        <SubtypeId>GVA-SLVG-Behavior-Military</SubtypeId>
       </Id>
       <Description>
         [RivalAI Behavior]
@@ -22,12 +22,10 @@
 
         [WeaponSystem:GVA-Common-Weapons]
 
-        [Triggers:GVA-KAJI-Trigger-EnemyResponse]
         [Triggers:GVA-Trigger-StandardCompromised]
-        [Triggers:GVA-Trigger-DoNotApproach]
-
         [Triggers:GVA-Trigger-Despawn]
         [Triggers:GVA-Trigger-DespawnMES]
+        [Triggers:GVA-Trigger-DoNotApproach]
       </Description>
     </EntityComponent>
   </EntityComponents>

@@ -9,6 +9,8 @@
 			<Description>
         [Modular Encounters SpawnGroup]
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ManipulationProfiles:SLVG-Manipulation-Std]
+        [ManipulationProfiles:SLVG-Manipulation-DDName]
 
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
@@ -26,7 +28,7 @@
 						<Z>0.0</Z>
 					</Position>
 					<Speed>50</Speed>
-					<Behaviour>GVA-SPRT-Behavior-SpaceDestroyer</Behaviour>
+					<Behaviour>GVA-SLVG-Behavior-Military</Behaviour>
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>
