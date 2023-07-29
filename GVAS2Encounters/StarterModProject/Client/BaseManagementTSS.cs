@@ -21,21 +21,23 @@ namespace GVA.NPCControl.Client
 
         private void Dish_AppendingCustomInfo()
         {
-            AccountOwningTerritory(TerminalBlock.GetOwnerFactionTag(), owned);
-            if (owned.Count == 1)
+            var faction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(TerminalBlock.OwnerId);
+            if (faction == null || faction.IsEveryoneNpc())
             {
+                builder.Clear();
+                builder.AppendLine("Please Login");
+                builder.AppendLine(">");
+            }
+            else
+            {
+                AccountOwningTerritory(TerminalBlock.GetOwnerFactionTag(), owned);
+                if (owned.Count == 1)
                 {
-                    //If owned by a PC:
-                    builder.Clear();
-                    owned[0].Display(builder);
-                }
-                {
-                    //If owned by Pirates
-                    //Show pirate strength.
-                }
-                {
-                    //If owned by an NPC
-                    //Show their own strengths
+                    {
+                        //If owned by a PC:
+                        builder.Clear();
+                        owned[0].Display(builder);
+                    }
                 }
             }
         }

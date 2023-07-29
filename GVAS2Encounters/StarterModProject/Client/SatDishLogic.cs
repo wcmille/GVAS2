@@ -1,4 +1,5 @@
 ﻿using Sandbox.Common.ObjectBuilders;
+using Sandbox.Game.Entities.Cube;
 using Sandbox.ModAPI;
 using Sandbox.ModAPI.Interfaces.Terminal;
 using System;
@@ -52,13 +53,22 @@ namespace GVA.NPCControl.Client
 
         #region Private Methods
 
-        private void Dish_AppendingCustomInfo(IMyTerminalBlock block, System.Text.StringBuilder builder)
+        private void Dish_AppendingCustomInfo(IMyTerminalBlock block, StringBuilder builder)
         {
-
-            AccountOwningTerritory(block.GetOwnerFactionTag(), owned);
-            if (owned.Count == 1)
+            var faction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(block.OwnerId);
+            if (faction == null || faction.IsEveryoneNpc())
             {
-                owned[0].Display(builder);
+                builder.Clear();
+                builder.AppendLine("Please Login");
+                builder.AppendLine(">");
+            }
+            else
+            {
+                AccountOwningTerritory(block.GetOwnerFactionTag(), owned);
+                if (owned.Count == 1)
+                {
+                    owned[0].Display(builder);
+                }
             }
         }
 
@@ -148,7 +158,7 @@ namespace GVA.NPCControl.Client
         {
             var pcFactionTag = block.GetOwnerFactionTag();
             var owningFaction = MyAPIGateway.Session.Factions.TryGetFactionByTag(pcFactionTag);
-            if (owningFaction != null)
+            if (owningFaction != null && !owningFaction.IsEveryoneNpc())
             {
                 List<IClientAccount> owned = new List<IClientAccount>();
                 AccountOwningTerritory(pcFactionTag, owned);
@@ -168,7 +178,7 @@ namespace GVA.NPCControl.Client
         {
             var pcFactionTag = block.GetOwnerFactionTag();
             var owningFaction = MyAPIGateway.Session.Factions.TryGetFactionByTag(pcFactionTag);
-            if (owningFaction != null)
+            if (owningFaction != null && !owningFaction.IsEveryoneNpc())
             {
                 long credits;
                 if (owningFaction.TryGetBalanceInfo(out credits) && credits >= SharedConstants.tokenPrice)
@@ -197,25 +207,30 @@ namespace GVA.NPCControl.Client
 
         private static void IncreaseNPCAndNotify(IMyTerminalBlock block, string shipType)
         {
-            var pcFactionTag = block.GetOwnerFactionTag();
-            List<IClientAccount> owned = new List<IClientAccount>();
-            AccountOwningTerritory(pcFactionTag, owned);
-            if (owned.Count == 1)
+            var owner = block.OwnerId;
+            var owningFaction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(owner);
+            if (owningFaction != null && !owningFaction.IsEveryoneNpc())
             {
-                var acct = owned[0];
-
-                string factionColor = acct.ColorFaction;
-                if (acct is IZoneFaction)
+                var pcFactionTag = block.GetOwnerFactionTag();
+                List<IClientAccount> owned = new List<IClientAccount>();
+                AccountOwningTerritory(pcFactionTag, owned);
+                if (owned.Count == 1)
                 {
-                    IZoneFaction zf = acct as IZoneFaction;
-                    double credits;
-                    MyAPIGateway.Utilities.GetVariable($"{factionColor}{SharedConstants.CreditsStr}", out credits);
-                    if (credits >= 1.0)
+                    var acct = owned[0];
+
+                    string factionColor = acct.ColorFaction;
+                    if (acct is IZoneFaction)
                     {
-                        if (shipType == SharedConstants.CivilianStr) zf.BuyCivilian();
-                        else if (shipType == SharedConstants.MilitaryStr) zf.BuyMilitary();
-                        UpdateInfo(block);
-                        Client.client.Send(new CommandPacket(block.GetOwnerFactionTag(), factionColor, shipType));
+                        IZoneFaction zf = acct as IZoneFaction;
+                        double credits;
+                        MyAPIGateway.Utilities.GetVariable($"{factionColor}{SharedConstants.CreditsStr}", out credits);
+                        if (credits >= 1.0)
+                        {
+                            if (shipType == SharedConstants.CivilianStr) zf.BuyCivilian();
+                            else if (shipType == SharedConstants.MilitaryStr) zf.BuyMilitary();
+                            UpdateInfo(block);
+                            Client.client.Send(new CommandPacket(block.GetOwnerFactionTag(), factionColor, shipType));
+                        }
                     }
                 }
             }
