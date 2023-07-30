@@ -23004,7 +23004,7 @@
                       <ConveyorLineType>LARGE_LINE</ConveyorLineType>
                     </MyObjectBuilder_ConveyorLine>
                   </ConveyorLines>
-                  <DisplayName>Highliner Superfreighter</DisplayName>
+                  <DisplayName>[NPC] Sovereign Carrier</DisplayName>
                   <DestructibleBlocks>true</DestructibleBlocks>
                   <CreatePhysics>false</CreatePhysics>
                   <EnableSmallToLargeConnections>false</EnableSmallToLargeConnections>

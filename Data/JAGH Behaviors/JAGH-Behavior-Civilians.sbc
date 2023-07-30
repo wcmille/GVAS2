@@ -13,6 +13,7 @@
         [AutopilotData:GVA-Autopilot-Common-Cruise]
         [SecondaryAutopilotData:GVA-AutoPilot-Common-Land]
 
+        [Triggers:GVA-Trigger-StandardCompromised]
         [Triggers:GVA-Trigger-PathDeviation]
       </Description>
     </EntityComponent>

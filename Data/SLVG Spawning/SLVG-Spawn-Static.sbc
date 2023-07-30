@@ -20,6 +20,7 @@
         [StaticEncounterUp:{X:0 Y:1 Z:0}]
         [TriggerCoords:{X:-1854042 Y:131072 Z:9040780}]
         [TriggerRadius:70000]
+        
         [FactionOwner:SLVG]
       </Description>
       <Icon>Textures\GUI\Icons\Fake.dds</Icon>
@@ -34,6 +35,7 @@
             <Z>0.0</Z>
           </Position>
           <Speed>0</Speed>
+          <Behaviour>GVA-SLVG-Behavior-Station</Behaviour>
         </Prefab>
       </Prefabs>
     </SpawnGroup>

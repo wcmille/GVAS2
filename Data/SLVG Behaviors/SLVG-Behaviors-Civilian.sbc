@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-SLVG-Behavior-Civilian</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Behavior]
+        [BehaviorName:CargoShip]
+
+        [AutopilotData:GVA-Autopilot-Common-Cruise]
+        [SecondaryAutopilotData:GVA-AutoPilot-Common-Land]
+
+        [Triggers:GVA-Trigger-PathDeviation]
+        [Triggers:GVA-Trigger-StandardCompromised]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-SLVG-Behavior-Station</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Behavior]
+        [BehaviorName:Passive]
+
+        [Triggers:GVA-Trigger-CallSpaceCargoShipSuper]
+      </Description>
+    </EntityComponent>
+  </EntityComponents>
+</Definitions>

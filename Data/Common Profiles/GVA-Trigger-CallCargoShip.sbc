@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <EntityComponents>
-
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
@@ -20,9 +19,9 @@
         [MaxActions:-1]
         [Actions:GVA-Action-CallAtmoCargoShip]
       </Description>
-
     </EntityComponent>
 
+  
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
@@ -34,7 +33,6 @@
         [BroadcastCommandProfiles:true]
         [CommandProfileIds:GVA-Command-CallAtmoCargoShip]
       </Description>
-
     </EntityComponent>
 
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
@@ -53,6 +51,7 @@
       </Description>
     </EntityComponent>
 
+    
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
@@ -69,5 +68,80 @@
         [MaxAltitude:101]
       </Description>
     </EntityComponent>
+  
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Trigger-CallSpaceCargoShipSuper</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Trigger]
+
+        [UseTrigger:true]
+        [Type:Timer]
+
+        [MinCooldownMs:2400]
+        [MaxCooldownMs:3601]
+        [StartsReady:true]
+        
+        [MaxActions:-1]
+        [Actions:GVA-Action-SpaceCargoShipSuper]
+      </Description>
+    </EntityComponent>
+
+  
+   <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Action-SpaceCargoShipSuper</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Action]
+
+        [BroadcastCommandProfiles:true]
+        [CommandProfileIds:GVA-Command-CallSpaceCargoShipSuper]
+        [UseChatBroadcast:true]
+        [ChatData:GVA-Chat-Debug]
+      </Description>
+    </EntityComponent>
+
+    
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Command-CallSpaceCargoShipSuper</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Command]
+
+        [CommandCode:GVAPathDeviation]
+        [SingleRecipient:true]
+        [SendWaypoint:true]
+        [MatchSenderReceiverOwners:true]
+        [Waypoint:GVA-Waypoint-CallAtmoCargoShip]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Chat-Debug</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Chat]
+
+        [UseChat:true]
+        [StartsReady:true]
+        [MaxChats:-1]
+        [BroadcastRandomly:true]
+        [Author:{AntennaName}]
+        [Color:Yellow]
+
+        [ChatMessages:Debug Triggered.]
+        [ChatAudio:ArcHudGPSNotification1]
+        [BroadcastChatType:Chat]
+      </Description>
+    </EntityComponent>
+
   </EntityComponents>
 </Definitions>

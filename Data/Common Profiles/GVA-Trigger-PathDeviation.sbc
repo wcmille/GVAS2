@@ -74,11 +74,11 @@
         [Author:Pilot]
         [Color:Azure]
 
-        [ChatMessages: This is {AntennaName} requesting clearance from ground installation for approach.]
+        [ChatMessages: This is {AntennaName} requesting clearance for approach.]
         [ChatAudio:ArcHudGPSNotification1]
         [BroadcastChatType:Chat]
 
-        [ChatMessages:{AntennaName} approaching ground installation.]
+        [ChatMessages:{AntennaName} approaching now. See you soon.]
         [ChatAudio:ArcHudGPSNotification1]
         [BroadcastChatType:Chat]
       </Description>

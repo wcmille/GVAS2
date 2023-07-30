@@ -95,17 +95,6 @@
 
         [ShiftBlockColorsHue:false]
         [RandomHueShift:false]
-
-        [UseBlockReplacerProfile:true]
-        [IgnoreGlobalBlockReplacer:true]
-        [BlockReplacerProfileNames:MES-NpcThrusters-Hydro]
-        [BlockReplacerProfileNames:MES-NpcThrusters-Atmo]
-        [BlockReplacerProfileNames:GVA-Replacement-NpcReactors]
-
-        [ConfigureSpecialNpcThrusters:true]
-        [NpcAtmoThrustForceMultiply:1.4]
-        [NpcHydroThrustForceMultiply:2]
-        [NpcHydroThrustPowerMultiply:0.0001]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
