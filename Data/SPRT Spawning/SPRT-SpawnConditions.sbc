@@ -107,5 +107,17 @@
         [SpaceCargoShip:true]
       </Description>
     </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>SPRT-SpawnCondition-BlackZoneWreck</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+        [FactionOwner:Nobody]
+        [ZoneConditions:GVA-ZoneConditionProfile-PirateZone]
+        [SpaceRandomEncounter:true]
+      </Description>
+    </EntityComponent>
   </EntityComponents>
 </Definitions>

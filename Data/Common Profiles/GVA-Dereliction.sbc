@@ -10,7 +10,7 @@
         [MES Manipulation]
 
         [UseRandomNameGenerator:true]
-        [RandomGridNamePattern:[==] Derelict Pod]
+        [RandomGridNamePattern:[NPC] Wreck]
 
 				[UseGridDereliction:true]
         [DerelictionProfiles:GVA-Dereliction-Armor-DamageOnly]

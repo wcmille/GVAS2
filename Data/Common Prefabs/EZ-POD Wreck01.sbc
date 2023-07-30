@@ -4350,7 +4350,7 @@ than dying!</Text>
               <ConveyorLineType>LARGE_LINE</ConveyorLineType>
             </MyObjectBuilder_ConveyorLine>
           </ConveyorLines>
-          <DisplayName>EZ-POD Wreck</DisplayName>
+          <DisplayName>[NPC] EZ-POD Wreck</DisplayName>
           <DestructibleBlocks>true</DestructibleBlocks>
           <CreatePhysics>false</CreatePhysics>
           <EnableSmallToLargeConnections>false</EnableSmallToLargeConnections>

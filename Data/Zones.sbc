@@ -33,8 +33,6 @@
         [MaxDistanceFromZoneCenter:50000]
       </Description>
     </EntityComponent>
-
-    
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
@@ -66,8 +64,6 @@
         [MaxDistanceFromZoneCenter:50000]
       </Description>
     </EntityComponent>
-
-
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
@@ -99,8 +95,6 @@
         [MaxDistanceFromZoneCenter:50000]
       </Description>
     </EntityComponent>
-
-
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
@@ -129,10 +123,8 @@
       <Description>
         [MES Zone Conditions]
         [ZoneName:Pirate Zone]
-        [MaxDistanceFromZoneCenter:50000]
       </Description>
     </EntityComponent>
-
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
@@ -168,7 +160,6 @@
         [MaxDistanceFromZoneCenter:200000]
       </Description>
     </EntityComponent>
-
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
@@ -200,6 +191,5 @@
         [MaxDistanceFromZoneCenter:50000]
       </Description>
     </EntityComponent>
-
   </EntityComponents>
 </Definitions>
