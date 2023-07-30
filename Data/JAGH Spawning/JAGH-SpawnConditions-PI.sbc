@@ -10,6 +10,7 @@
         [MES Spawn Conditions]
         [FactionOwner:JAGH]
         [ZoneConditions:GVA-ZoneConditionProfile-BlueZone]
+        [RotateInstallations:{X:0 Y:100 Z:0}]
         [PlanetaryInstallation:true]
       </Description>
     </EntityComponent>

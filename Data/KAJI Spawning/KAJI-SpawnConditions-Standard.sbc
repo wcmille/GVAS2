@@ -10,6 +10,7 @@
         [MES Spawn Conditions]
         [FactionOwner:KAJI]
         [ZoneConditions:GVA-ZoneConditionProfile-RedZone]
+        [RotateInstallations:{X:0 Y:100 Z:0}]
         [PlanetaryInstallation:true]
       </Description>
     </EntityComponent>

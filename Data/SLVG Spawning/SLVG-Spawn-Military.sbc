@@ -28,6 +28,7 @@
 					</Position>
 					<Speed>50</Speed>
 					<Behaviour>GVA-SLVG-Behavior-Military</Behaviour>
+          <BeaconText>Destroyer</BeaconText>
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>

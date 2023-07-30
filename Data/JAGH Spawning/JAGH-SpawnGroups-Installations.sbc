@@ -95,7 +95,7 @@
         <Prefab SubtypeId="[NPC] Snow SAM Battery">
           <Position>
             <X>-150.0</X>
-            <Y>-10.0</Y>
+            <Y>5.0</Y>
             <Z>0.0</Z>
           </Position>
           <BeaconText>SAM</BeaconText>
