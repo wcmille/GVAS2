@@ -97,37 +97,6 @@
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
         <!--Do Not Edit-->
-        <SubtypeId>GVA-Black-ScoutDrone</SubtypeId>
-      </Id>
-      <Description>
-        [Modular Encounters SpawnGroup]
-
-        [ManipulationProfiles:GVA-Common-Manipulation-Std]
-        [ReplenishSystems:true]
-
-        [SpawnConditionsProfiles:Black-Planet-All-Weak]
-        [SpawnConditionsProfiles:Black-Planet-All-Normal]
-        [SpawnConditionsProfiles:Black-Planet-All-Strong]
-        [FactionOwner:SPRT]
-      </Description>
-      <IsPirate>true</IsPirate>
-      <Frequency>125.0</Frequency>
-      <Prefabs>
-        <Prefab SubtypeId="Cartel Scout Drone">
-          <Position>
-            <X>0.0</X>
-            <Y>0.0</Y>
-            <Z>0.0</Z>
-          </Position>
-          <Speed>50</Speed>
-          <Behaviour>SPRT-Behavior-SpaceDestroyer</Behaviour>
-        </Prefab>
-      </Prefabs>
-    </SpawnGroup>
-    <SpawnGroup>
-      <Id>
-        <TypeId>SpawnGroupDefinition</TypeId>
-        <!--Do Not Edit-->
         <SubtypeId>GVA-Black-ScoutParty</SubtypeId>
       </Id>
       <Description>
@@ -147,9 +116,40 @@
         [FactionOwner:SPRT]
       </Description>
       <IsPirate>true</IsPirate>
-      <Frequency>25.0</Frequency>
+      <Frequency>20.0</Frequency>
       <Prefabs>
         <Prefab SubtypeId="Rocketeer MKI Pirate Attacker">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>50</Speed>
+          <Behaviour>SPRT-Behavior-SpaceDestroyer</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <!--Do Not Edit-->
+        <SubtypeId>GVA-Black-ScoutDrone</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ReplenishSystems:true]
+
+        [SpawnConditionsProfiles:Black-Planet-All-Weak]
+        [SpawnConditionsProfiles:Black-Planet-All-Normal]
+        [SpawnConditionsProfiles:Black-Planet-All-Strong]
+        [FactionOwner:SPRT]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>95.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="Cartel Scout Drone">
           <Position>
             <X>0.0</X>
             <Y>0.0</Y>
