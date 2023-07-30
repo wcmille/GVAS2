@@ -68,8 +68,6 @@
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
         
-        [ManipulationProfiles:GVA-Common-Manipulation-NPCPrefix]
-
         [SpawnConditionsProfiles:Red-RedAlienRegion-Fixed-Spawns]
       </Description>
       <IsPirate>true</IsPirate>

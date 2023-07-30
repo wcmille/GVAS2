@@ -5,7 +5,7 @@
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
         <!--Do Not Edit-->
-        <SubtypeId>GVA-Black-Destroyer</SubtypeId>
+        <SubtypeId>GVA-Black-DD</SubtypeId>
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]
@@ -34,7 +34,7 @@
     <SpawnGroup>
 			<Id>
 				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
-				<SubtypeId>GVA-Black-Frigate</SubtypeId> 
+				<SubtypeId>GVA-Black-FFO</SubtypeId> 
 			</Id>
 			<Description>
         [Modular Encounters SpawnGroup]
@@ -65,7 +65,7 @@
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
         <!--Do Not Edit-->
-        <SubtypeId>GVA-Black-CT</SubtypeId>
+        <SubtypeId>GVA-Black-CTO</SubtypeId>
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]
