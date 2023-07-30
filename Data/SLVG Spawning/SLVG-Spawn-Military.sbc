@@ -12,7 +12,6 @@
         [ManipulationProfiles:SLVG-Manipulation-Std]
         [ManipulationProfiles:SLVG-Manipulation-DDName]
 
-        [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
 
         [SpawnConditionsProfiles:GVA-White-FarpointZone]

@@ -80,8 +80,8 @@
         [UseTrigger:true]
         [Type:Timer]
 
-        [MinCooldownMs:2400]
-        [MaxCooldownMs:3601]
+        [MinCooldownMs:24000]
+        [MaxCooldownMs:36001]
         [StartsReady:true]
         
         [MaxActions:-1]
@@ -118,7 +118,9 @@
         [SingleRecipient:true]
         [SendWaypoint:true]
         [MatchSenderReceiverOwners:true]
-        [Waypoint:GVA-Waypoint-CallAtmoCargoShip]
+        [IgnoreAntennaRequirement:true]
+        [Radius:200000]
+        [Waypoint:GVA-Waypoint-CallSpaceCargoShip]
       </Description>
     </EntityComponent>
 
@@ -143,5 +145,19 @@
       </Description>
     </EntityComponent>
 
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Waypoint-CallSpaceCargoShip</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Waypoint]
+
+        [Waypoint:EntityRandom]
+        [RelativeEntity:Self]
+        [MinDistance:250]
+        [MaxDistance:400]
+      </Description>
+    </EntityComponent>
   </EntityComponents>
 </Definitions>

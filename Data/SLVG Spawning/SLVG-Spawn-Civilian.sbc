@@ -4,7 +4,6 @@
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
-        <!--Do Not Edit-->
         <SubtypeId>GVA-White-Cargo</SubtypeId>
       </Id>
       <Description>
@@ -12,10 +11,10 @@
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ManipulationProfiles:SLVG-Manipulation-Std]
 
+
         [ReplenishSystems:true]
 
         [SpawnConditionsProfiles:GVA-White-FarpointZone]
-        [FactionOwner:SLVG]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>5.0</Frequency>

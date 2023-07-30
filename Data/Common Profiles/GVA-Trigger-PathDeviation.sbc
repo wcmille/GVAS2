@@ -29,7 +29,8 @@
       </Id>
       <Description>
         [RivalAI Condition]
-
+        [MatchAnyCondition:true]
+        [CommandGravityMatches:true]
         [CommandGravityCheck:true]
       </Description>
     </EntityComponent>

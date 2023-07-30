@@ -145,8 +145,7 @@
         [Radius:200000]
 
         [UseAllowedSpawnGroups:true]
-        [AllowedSpawnGroups:GVA-White-DD]
-        [AllowedSpawnGroups:GVA-White-Farpoint]
+        [AllowedSpawnGroups:GVA-White-Cargo,GVA-White-DD,GVA-White-Farpoint]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
@@ -176,7 +175,7 @@
         [UseZoneAnnounce:false]
         [ZoneEnterAnnounce:Entering: Orange Zone]
         [ZoneLeaveAnnounce:Leaving: Orange Zone]
-        [Coordinates:{X:168772.2 Y:129826.85 Z:5778906.73}]
+        [Coordinates:{X:168772 Y:129826 Z:5778906}]
         [Radius:50000]
       </Description>
     </EntityComponent>

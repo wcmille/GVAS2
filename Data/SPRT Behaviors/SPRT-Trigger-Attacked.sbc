@@ -14,7 +14,7 @@
         [MaxActions:2]
         [MinCooldownMs:30000]
         [MaxCooldownMs:40000]
-        [Actions:GVA-Action-Attacked]
+        [Actions:SPRT-Action-Attacked]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
