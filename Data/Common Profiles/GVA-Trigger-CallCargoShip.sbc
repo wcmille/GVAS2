@@ -80,8 +80,8 @@
         [UseTrigger:true]
         [Type:Timer]
 
-        [MinCooldownMs:24000]
-        [MaxCooldownMs:36001]
+        [MinCooldownMs:240000]
+        [MaxCooldownMs:360001]
         [StartsReady:true]
         
         [MaxActions:-1]
@@ -100,7 +100,7 @@
 
         [BroadcastCommandProfiles:true]
         [CommandProfileIds:GVA-Command-CallSpaceCargoShipSuper]
-        [UseChatBroadcast:true]
+        [UseChatBroadcast:false]
         [ChatData:GVA-Chat-Debug]
       </Description>
     </EntityComponent>
