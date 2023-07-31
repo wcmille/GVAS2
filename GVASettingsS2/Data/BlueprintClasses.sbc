@@ -20,12 +20,6 @@
     <Entry Class="EliteConsumables" BlueprintSubtypeId="Missiles_Missile"/>
     <Entry Class="EliteConsumables" BlueprintSubtypeId="Missiles_Torpedo"/>
     <Entry Class="EliteConsumables" BlueprintSubtypeId="Missile200mm"/>
-    <Entry Class="EliteConsumables" BlueprintSubtypeId="AWEStormriderDroneBP"/>
-    <Entry Class="EliteConsumables" BlueprintSubtypeId="AWESidekickDroneBP"/>
-    <Entry Class="EliteConsumables" BlueprintSubtypeId="AWEFalconDroneBP"/>
-    <Entry Class="EliteConsumables" BlueprintSubtypeId="Missiles_Siege"/>
-    <Entry Class="EliteConsumables" BlueprintSubtypeId="Ballistics_HeavyCannon"/>
     <Entry Class="EliteConsumables" BlueprintSubtypeId="Missiles_HeavyMissile"/>
-    <Entry Class="EliteConsumables" BlueprintSubtypeId="Lasers_Plasma"/>
   </BlueprintClassEntries>
 </Definitions>
