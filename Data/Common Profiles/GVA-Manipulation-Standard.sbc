@@ -114,5 +114,41 @@
         [NewBlock:MyObjectBuilder_Reactor/ProprietaryLargeBlockLargeGenerator]
       </Description>
     </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Manipulation-MediumLoot</SubtypeId>
+      </Id>
+      <Description>
+        [MES Manipulation]
+
+        [UseLootProfiles:true]
+        [LootProfiles:GVA-Loot-Medium]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Manipulation-LargeLoot</SubtypeId>
+      </Id>
+      <Description>
+        [MES Manipulation]
+
+        [UseLootProfiles:true]
+        [LootProfiles:GVA-Loot-Large]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Manipulation-HugeLoot</SubtypeId>
+      </Id>
+      <Description>
+        [MES Manipulation]
+
+        [UseLootProfiles:true]
+        [LootProfiles:GVA-Loot-Huge]
+      </Description>
+    </EntityComponent>
   </EntityComponents>
 </Definitions>

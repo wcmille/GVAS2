@@ -213,7 +213,7 @@
 					</Id>
 				</Item>
 				<Item AmountMin="1" AmountMax="2">
-					<Frequency>0.5</Frequency> <!-- normally 0.1 -->
+					<Frequency>0.5</Frequency>  <!-- normally 0.1 -->
 					<Id>
 						<TypeId>Component</TypeId>
 						<SubtypeId>GVK_Laser_Tech</SubtypeId>
@@ -304,32 +304,11 @@
 						<SubtypeId>Missiles_Torpedo</SubtypeId>
 					</Id>
 				</Item>
-				<Item AmountMin="5" AmountMax="10">
-					<Frequency>0.1</Frequency>
-					<Id>
-						<TypeId>AmmoMagazine</TypeId>
-						<SubtypeId>Missiles_Siege</SubtypeId>
-					</Id>
-				</Item>
-				<Item AmountMin="5" AmountMax="15">
-					<Frequency>0.1</Frequency>
-					<Id>
-						<TypeId>AmmoMagazine</TypeId>
-						<SubtypeId>Lasers_Plasma</SubtypeId>
-					</Id>
-				</Item>
 				<Item AmountMin="10" AmountMax="20">
 					<Frequency>1</Frequency>
 					<Id>
 						<TypeId>AmmoMagazine</TypeId>
 						<SubtypeId>Missiles_HeavyMissile</SubtypeId>
-					</Id>
-				</Item>
-				<Item AmountMin="5" AmountMax="15">
-					<Frequency>1</Frequency>
-					<Id>
-						<TypeId>AmmoMagazine</TypeId>
-						<SubtypeId>Ballistics_HeavyCannon</SubtypeId>
 					</Id>
 				</Item>
 			</Items>
@@ -471,28 +450,7 @@
 					<Frequency>1</Frequency>
 					<Id>
 						<TypeId>AmmoMagazine</TypeId>
-						<SubtypeId>Missiles_Siege</SubtypeId>
-					</Id>
-				</Item>
-				<Item AmountMin="5" AmountMax="15">
-					<Frequency>1</Frequency>
-					<Id>
-						<TypeId>AmmoMagazine</TypeId>
-						<SubtypeId>Lasers_Plasma</SubtypeId>
-					</Id>
-				</Item>
-				<Item AmountMin="10" AmountMax="20">
-					<Frequency>1</Frequency>
-					<Id>
-						<TypeId>AmmoMagazine</TypeId>
 						<SubtypeId>Missiles_HeavyMissile</SubtypeId>
-					</Id>
-				</Item>
-				<Item AmountMin="5" AmountMax="15">
-					<Frequency>1</Frequency>
-					<Id>
-						<TypeId>AmmoMagazine</TypeId>
-						<SubtypeId>Ballistics_HeavyCannon</SubtypeId>
 					</Id>
 				</Item>
 			</Items>

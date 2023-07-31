@@ -8,7 +8,7 @@
 			</Id>
 			<Description>
         [Modular Encounters SpawnGroup]
-
+        [ManipulationProfiles:GVA-Manipulation-MediumLoot]
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
         [ManipulationProfiles:GVA-Manipulation-Red-FrigateName]
