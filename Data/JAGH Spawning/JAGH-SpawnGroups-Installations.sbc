@@ -76,9 +76,9 @@
       <Prefabs>
         <Prefab SubtypeId="[NPC] Greenhouse">
           <Position>
-            <X>75.0</X>
+            <X>0.0</X>
             <Y>10.0</Y>
-            <Z>75.0</Z>
+            <Z>-50.0</Z>
           </Position>
           <BeaconText>Greenhouse</BeaconText>
           <Behaviour>JAGH-Behavior-PassiveCivilian</Behaviour>
@@ -87,7 +87,7 @@
           <Position>
             <X>0.0</X>
             <Y>-5.0</Y>
-            <Z>0.0</Z>
+            <Z>50.0</Z>
           </Position>
           <BeaconText>Outpost</BeaconText>
           <Behaviour>JAGH-Behavior-PassiveCivilian</Behaviour>
@@ -96,6 +96,24 @@
           <Position>
             <X>-150.0</X>
             <Y>5.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <BeaconText>SAM</BeaconText>
+          <Behaviour>JAGH-Behavior-PassiveCivilian</Behaviour>
+        </Prefab>
+        <Prefab SubtypeId="Radio Tower">
+          <Position>
+            <X>50.0</X>
+            <Y>15.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <BeaconText>SAM</BeaconText>
+          <Behaviour>JAGH-Behavior-PassiveCivilian</Behaviour>
+        </Prefab>
+        <Prefab SubtypeId="Cabin wGarage">
+          <Position>
+            <X>0.0</X>
+            <Y>5.5</Y>
             <Z>0.0</Z>
           </Position>
           <BeaconText>SAM</BeaconText>

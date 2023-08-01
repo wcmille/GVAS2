@@ -12,9 +12,17 @@
         [ZoneConditions:GVA-ZoneConditionProfile-BlueZone]
         [RotateInstallations:{X:0 Y:100 Z:0}]
         [PlanetaryInstallation:true]
+        [PrefabSpawningMode:All]
       </Description>
     </EntityComponent>
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<!--
+        [PrefabFixedCount:5]
+        [PrefabOffsetOverrides:{X:50 Y:0 Z:0}]
+        [PrefabOffsetOverrides:{X:0 Y:0 Z:50}]
+        [PrefabOffsetOverrides:{X:-50 Y:0 Z:0}]
+        [PrefabOffsetOverrides:{X:0 Y:0 Z:-50}]
+
+-->    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
         <SubtypeId>GVA-SpawnConditions-Snow</SubtypeId>
