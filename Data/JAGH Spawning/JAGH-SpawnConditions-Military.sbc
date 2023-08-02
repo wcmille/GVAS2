@@ -32,7 +32,6 @@
         [FactionOwner:JAGH]
         [ZoneConditions:GVA-ZoneConditionProfile-BlueZone]
         [CustomApiConditions:BlueMilMoreThan1]
-
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
@@ -51,9 +50,6 @@
 
         [FactionOwner:JAGH]
         [ZoneConditions:GVA-ZoneConditionProfile-BlueZone]
-        [UseSandboxCounterCosts:true]
-        [SandboxCounterCostNames:BlueMilitary]
-        [SandboxCounterCostAmounts:1]
         [CustomApiConditions:BlueMilMoreThan2]
       </Description>
     </EntityComponent>
@@ -73,9 +69,6 @@
 
         [FactionOwner:JAGH]
         [ZoneConditions:GVA-ZoneConditionProfile-BlueZone]
-        [UseSandboxCounterCosts:true]
-        [SandboxCounterCostNames:BlueMilitary]
-        [SandboxCounterCostAmounts:3]
         [CustomApiConditions:BlueIsStrong]
       </Description>
     </EntityComponent>

@@ -36,9 +36,6 @@
 
         [FactionOwner:KAJI]
         [ZoneConditions:GVA-ZoneConditionProfile-RedZone]
-        [UseSandboxCounterCosts:true]
-        [SandboxCounterCostNames:RedMilitary]
-        [SandboxCounterCostAmounts:1]
         [CustomApiConditions:RedMilMoreThan2]
       </Description>
     </EntityComponent>
@@ -58,9 +55,6 @@
 
         [FactionOwner:KAJI]
         [ZoneConditions:GVA-ZoneConditionProfile-RedZone]
-        [UseSandboxCounterCosts:true]
-        [SandboxCounterCostNames:RedMilitary]
-        [SandboxCounterCostAmounts:3]
         [CustomApiConditions:RedIsStrong]
       </Description>
     </EntityComponent>

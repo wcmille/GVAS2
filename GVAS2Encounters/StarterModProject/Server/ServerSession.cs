@@ -1,10 +1,8 @@
 ﻿using Digi.Example_NetworkProtobuf;
+
 using Sandbox.ModAPI;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography;
-using VRage;
 using VRage.Game.ModAPI;
 using VRage.Game.ModAPI.Ingame.Utilities;
 using VRage.ModAPI;
@@ -34,12 +32,13 @@ namespace GVA.NPCControl.Server
             const bool reg = false;
             if (MyAPIGateway.Multiplayer.IsServer)
             {
-                mes.RegisterCustomSpawnCondition(reg, "BlueMilMoreThan1", null);
+                mes.RegisterCustomSpawnCondition(reg, "BlueCivMoreThan2", null);
                 mes.RegisterCustomSpawnCondition(reg, "BlueCivMoreThan5", null);
                 mes.RegisterCustomSpawnCondition(reg, "BlueCivMoreThan10", null);
                 mes.RegisterCustomSpawnCondition(reg, "BlueCivMoreThan20", null);
                 mes.RegisterCustomSpawnCondition(reg, "BlueCivMoreThan40", null);
 
+                mes.RegisterCustomSpawnCondition(reg, "RedCivMoreThan2", null);
                 mes.RegisterCustomSpawnCondition(reg, "RedCivMoreThan5", null);
                 mes.RegisterCustomSpawnCondition(reg, "RedCivMoreThan10", null);
                 mes.RegisterCustomSpawnCondition(reg, "RedCivMoreThan20", null);
@@ -61,7 +60,7 @@ namespace GVA.NPCControl.Server
                 mes.RegisterSuccessfulSpawnAction(LogSpawn, reg);
             }
 
-            if (server != null) server.Unload();
+            server?.Unload();
 
             server = null;
             world = null;
@@ -77,23 +76,27 @@ namespace GVA.NPCControl.Server
                 world = new ServerWorld(server);
                 world.Time();
 
-                Func<string, string, string, Vector3D, bool> bc5, bc10, bc20, bc40;
-                Func<string, string, string, Vector3D, bool> rc5, rc10, rc20, rc40;
+                Func<string, string, string, Vector3D, bool> bc2, bc5, bc10, bc20, bc40;
+                Func<string, string, string, Vector3D, bool> rc2, rc5, rc10, rc20, rc40;
 
                 //MyLog.Default.WriteLine($"Blue Registration {mes.MESApiReady}");
+                bc2 = (a, b, c, d) => CountersMoreThan(SharedConstants.BlueFactionColor, SharedConstants.CivilianStr, 2);
                 bc5 = (a, b, c, d) => CountersMoreThan(SharedConstants.BlueFactionColor, SharedConstants.CivilianStr, 5);
                 bc10 = (a, b, c, d) => CountersMoreThan(SharedConstants.BlueFactionColor, SharedConstants.CivilianStr, 10);
                 bc20 = (a, b, c, d) => CountersMoreThan(SharedConstants.BlueFactionColor, SharedConstants.CivilianStr, 20);
                 bc40 = (a, b, c, d) => CountersMoreThan(SharedConstants.BlueFactionColor, SharedConstants.CivilianStr, 40);
+                mes.RegisterCustomSpawnCondition(reg, "BlueCivMoreThan2", bc2);
                 mes.RegisterCustomSpawnCondition(reg, "BlueCivMoreThan5", bc5);
                 mes.RegisterCustomSpawnCondition(reg, "BlueCivMoreThan10", bc10);
                 mes.RegisterCustomSpawnCondition(reg, "BlueCivMoreThan20", bc20);
                 mes.RegisterCustomSpawnCondition(reg, "BlueCivMoreThan40", bc40);
 
+                rc2 = (a, b, c, d) => CountersMoreThan(SharedConstants.RedFactionColor, SharedConstants.CivilianStr, 2);
                 rc5 = (a, b, c, d) => CountersMoreThan(SharedConstants.RedFactionColor, SharedConstants.CivilianStr, 5);
                 rc10 = (a, b, c, d) => CountersMoreThan(SharedConstants.RedFactionColor, SharedConstants.CivilianStr, 10);
                 rc20 = (a, b, c, d) => CountersMoreThan(SharedConstants.RedFactionColor, SharedConstants.CivilianStr, 20);
                 rc40 = (a, b, c, d) => CountersMoreThan(SharedConstants.RedFactionColor, SharedConstants.CivilianStr, 40);
+                mes.RegisterCustomSpawnCondition(reg, "RedCivMoreThan2", rc2);
                 mes.RegisterCustomSpawnCondition(reg, "RedCivMoreThan5", rc5);
                 mes.RegisterCustomSpawnCondition(reg, "RedCivMoreThan10", rc10);
                 mes.RegisterCustomSpawnCondition(reg, "RedCivMoreThan20", rc20);
@@ -131,32 +134,72 @@ namespace GVA.NPCControl.Server
 
         private void WatchTriggers(IMyRemoteControl rc, string trigger, string action, IMyEntity target, Vector3D waypoint)
         {
-            if (action == "GVA-Action-DespawnSpawner")
+            if (action == "GVA-Action-API-Despawn")
             {
-                var owner = rc.OwnerId;
-                var faction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(owner);
-                var acct = world.GetAccountByNPCOwner(faction.Tag);
+                IAccount acct = GetAccountFromRC(rc);
                 if (acct != null)
                 {
-                    foreach (var b in rc.CubeGrid.GetFatBlocks<IMyBeacon>())
-                    {
-                        if (ini.TryParse(b.CustomData))
-                        {
-                            if (ini.ContainsSection(SharedConstants.PointCheck))
-                            {
-                                var c = ini.Get(SharedConstants.PointCheck, SharedConstants.CivilianStr).ToInt32(0);
-                                var m = ini.Get(SharedConstants.PointCheck, SharedConstants.MilitaryStr).ToInt32(0);
-                                {
-                                    int currC, currM;
-                                    MyAPIGateway.Utilities.GetVariable($"{acct.ColorFaction}{SharedConstants.CivilianStr}", out currC);
-                                    MyAPIGateway.Utilities.GetVariable($"{acct.ColorFaction}{SharedConstants.MilitaryStr}", out currM);
+                    int c = 0;
+                    int m = 0;
+                    DetermineCost(rc, ref c, ref m);
+                    Refund(acct, c, m);
+                }
+            }
+            else if (action == "GVA-Action-API-Spawn")
+            {
+                IAccount acct = GetAccountFromRC(rc);
+                if (acct != null)
+                {
+                    int c = 0;
+                    int m = 0;
+                    DetermineCost(rc, ref c, ref m);
+                    Pay(acct, c, m);
+                }
+            }
+        }
 
-                                    MyAPIGateway.Utilities.SetVariable($"{acct.ColorFaction}{SharedConstants.CivilianStr}", currC + c);
-                                    MyAPIGateway.Utilities.SetVariable($"{acct.ColorFaction}{SharedConstants.MilitaryStr}", currM + m);
-                                }
-                                break;
-                            }
-                        }
+        private IAccount GetAccountFromRC(IMyRemoteControl rc)
+        {
+            var owner = rc.OwnerId;
+            var faction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(owner);
+            var acct = world.GetAccountByNPCOwner(faction.Tag);
+            return acct;
+        }
+
+        private static void Pay(IAccount acct, int c, int m)
+        {
+            //Refund costs
+
+            int currC, currM;
+            MyAPIGateway.Utilities.GetVariable($"{acct.ColorFaction}{SharedConstants.CivilianStr}", out currC);
+            MyAPIGateway.Utilities.GetVariable($"{acct.ColorFaction}{SharedConstants.MilitaryStr}", out currM);
+
+            MyAPIGateway.Utilities.SetVariable($"{acct.ColorFaction}{SharedConstants.CivilianStr}", currC - c);
+            MyAPIGateway.Utilities.SetVariable($"{acct.ColorFaction}{SharedConstants.MilitaryStr}", currM - m);
+        }
+
+        private static void Refund(IAccount acct, int c, int m)
+        {
+            //Refund costs
+
+            int currC, currM;
+            MyAPIGateway.Utilities.GetVariable($"{acct.ColorFaction}{SharedConstants.CivilianStr}", out currC);
+            MyAPIGateway.Utilities.GetVariable($"{acct.ColorFaction}{SharedConstants.MilitaryStr}", out currM);
+
+            MyAPIGateway.Utilities.SetVariable($"{acct.ColorFaction}{SharedConstants.CivilianStr}", currC + c);
+            MyAPIGateway.Utilities.SetVariable($"{acct.ColorFaction}{SharedConstants.MilitaryStr}", currM + m);
+        }
+
+        private void DetermineCost(IMyRemoteControl rc, ref int c, ref int m)
+        {
+            foreach (var b in rc.CubeGrid.GetFatBlocks<IMyBeacon>())
+            {
+                if (ini.TryParse(b.CustomData))
+                {
+                    if (ini.ContainsSection(SharedConstants.PointCheck))
+                    {
+                        c = ini.Get(SharedConstants.PointCheck, SharedConstants.CivilianStr).ToInt32(0);
+                        m = ini.Get(SharedConstants.PointCheck, SharedConstants.MilitaryStr).ToInt32(0);
                     }
                 }
             }

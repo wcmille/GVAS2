@@ -43,9 +43,8 @@
         [FactionOwner:JAGH]
         [ZoneConditions:GVA-ZoneConditionProfile-BlueZone]
         [PlanetaryInstallation:true]
-        [UseSandboxCounterCosts:true]
-        [SandboxCounterCostNames:BlueCivilian]
-        [SandboxCounterCostAmounts:2]
+
+        [CustomApiConditions:BlueCivMoreThan2]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
@@ -58,9 +57,7 @@
         [FactionOwner:JAGH]
         [ZoneConditions:GVA-ZoneConditionProfile-BlueZone]
         [PlanetaryInstallation:true]
-        [UseSandboxCounterCosts:true]
-        [SandboxCounterCostNames:BlueCivilian]
-        [SandboxCounterCostAmounts:2]
+        
         [CustomApiConditions:BlueCivMoreThan5]
       </Description>
     </EntityComponent>
@@ -74,9 +71,7 @@
         [FactionOwner:JAGH]
         [ZoneConditions:GVA-ZoneConditionProfile-BlueZone]
         [PlanetaryInstallation:true]
-        [UseSandboxCounterCosts:true]
-        [SandboxCounterCostNames:BlueCivilian]
-        [SandboxCounterCostAmounts:2]
+
         [CustomApiConditions:BlueCivMoreThan10]
       </Description>
     </EntityComponent>
@@ -90,9 +85,7 @@
         [FactionOwner:JAGH]
         [ZoneConditions:GVA-ZoneConditionProfile-BlueZone]
         [PlanetaryInstallation:true]
-        [UseSandboxCounterCosts:true]
-        [SandboxCounterCostNames:BlueCivilian]
-        [SandboxCounterCostAmounts:2]
+        
         [CustomApiConditions:BlueCivMoreThan20]
       </Description>
     </EntityComponent>
@@ -106,9 +99,7 @@
         [FactionOwner:JAGH]
         [ZoneConditions:GVA-ZoneConditionProfile-BlueZone]
         [PlanetaryInstallation:true]
-        [UseSandboxCounterCosts:true]
-        [SandboxCounterCostNames:BlueCivilian]
-        [SandboxCounterCostAmounts:2]
+
         [CustomApiConditions:BlueCivMoreThan40]
       </Description>
     </EntityComponent>

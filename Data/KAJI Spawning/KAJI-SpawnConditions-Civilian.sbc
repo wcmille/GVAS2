@@ -27,10 +27,7 @@
 
         [FactionOwner:KAJI]
         [ZoneConditions:GVA-ZoneConditionProfile-RedZone]
-
-        [UseSandboxCounterCosts:true]
-        [SandboxCounterCostNames:RedCivilian]
-        [SandboxCounterCostAmounts:1]
+        [CustomApiConditions:RedCivMoreThan2]
       </Description>
     </EntityComponent>
   </EntityComponents>

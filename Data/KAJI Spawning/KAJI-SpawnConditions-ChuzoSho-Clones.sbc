@@ -13,9 +13,6 @@
         [FactionOwner:KAJI]
         [ZoneConditions:GVA-ZoneConditionProfile-RedZone]
 
-        [UseSandboxCounterCosts:true]
-        [SandboxCounterCostNames:RedCivilian]
-        [SandboxCounterCostAmounts:1]
         [CustomApiConditions:RedCivMoreThan5]
       </Description>
     </EntityComponent>
@@ -31,9 +28,6 @@
         [FactionOwner:KAJI]
         [ZoneConditions:GVA-ZoneConditionProfile-RedZone]
 
-        [UseSandboxCounterCosts:true]
-        [SandboxCounterCostNames:RedCivilian]
-        [SandboxCounterCostAmounts:1]
         [CustomApiConditions:RedCivMoreThan10]
       </Description>
     </EntityComponent>
@@ -49,9 +43,6 @@
         [FactionOwner:KAJI]
         [ZoneConditions:GVA-ZoneConditionProfile-RedZone]
 
-        [UseSandboxCounterCosts:true]
-        [SandboxCounterCostNames:RedCivilian]
-        [SandboxCounterCostAmounts:1]
         [CustomApiConditions:RedCivMoreThan20]
       </Description>
     </EntityComponent>
@@ -67,9 +58,6 @@
         [FactionOwner:KAJI]
         [ZoneConditions:GVA-ZoneConditionProfile-RedZone]
 
-        [UseSandboxCounterCosts:true]
-        [SandboxCounterCostNames:RedCivilian]
-        [SandboxCounterCostAmounts:1]
         [CustomApiConditions:RedCivMoreThan40]
       </Description>
     </EntityComponent>
