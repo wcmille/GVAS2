@@ -16,7 +16,7 @@ namespace GVA.NPCControl.Client
     public class BaseManagementTSS : MyTSSCommon
     {
         #region Copied From SatdishLogic
-        readonly List<IClientAccount> owned = new List<IClientAccount>();
+        readonly List<IAccount> owned = new List<IAccount>();
         readonly StringBuilder builder = new StringBuilder();
 
         private void Dish_AppendingCustomInfo()
@@ -36,13 +36,13 @@ namespace GVA.NPCControl.Client
                     {
                         //If owned by a PC:
                         builder.Clear();
-                        owned[0].Display(builder);
+                        ((IClientAccount)owned[0]).Display(builder);
                     }
                 }
             }
         }
 
-        private static void AccountOwningTerritory(string pcFactionTag, List<IClientAccount> owned)
+        private static void AccountOwningTerritory(string pcFactionTag, List<IAccount> owned)
         {
             Client.client.World.GetAccountByPCOwner(pcFactionTag, owned);
         }

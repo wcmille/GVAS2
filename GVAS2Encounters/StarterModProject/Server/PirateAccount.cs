@@ -1,13 +1,23 @@
 ﻿using Sandbox.ModAPI;
 using System;
+using System.Collections.Generic;
+using System.Runtime.InteropServices;
+using VRage.Game.ModAPI;
 
 namespace GVA.NPCControl.Server
 {
     public class PirateAccount : IServerAccount, IAntagonist
     {
         readonly Random r;
+        readonly IMyFaction faction;
+        const int pirateRepDrop = 25;
+        const int alliedBound = 500;
+        const int pirateRepThreshold = -750; //Natural Decay won't make your rep worse than this.
+
         public PirateAccount(int seed = 0)
         {
+            faction = MyAPIGateway.Session.Factions.TryGetFactionByTag("SPRT");
+
             if (seed != 0) { r = new Random(seed); }
             else r = new Random();
             OwningNPCTag = SharedConstants.BlackFactionTag;
@@ -31,11 +41,17 @@ namespace GVA.NPCControl.Server
 
         public int Military { get; private set; }
 
-        public void AddUnspent(/*PC Faction*/)
+        public void AddUnspent(IMyFaction donor)
         {
             UnspentUnits += 1.0;
-            //For each person in faction:
-            //  Rep = (500 + rep) / 2
+
+            int memberCount = donor.Members.Count;
+            foreach (var ply in donor.Members)
+            {
+                var playerId = ply.Value.PlayerId;
+                var rep = MyAPIGateway.Session.Factions.GetReputationBetweenPlayerAndFaction(playerId, faction.FactionId);
+                MyAPIGateway.Session.Factions.SetReputationBetweenPlayerAndFaction(playerId, faction.FactionId, rep + (alliedBound - rep) / (2* memberCount));
+            }
         }
 
         public bool RemoveUnspent()
@@ -51,10 +67,13 @@ namespace GVA.NPCControl.Server
             {
                 Military += 1;
             }
-            //Decay everyone's rep.
-            //For each player in the roster...
-            //If rep > -1000
-            //rep -= 25
+            var list = new List<IMyIdentity>();
+            MyAPIGateway.Players.GetAllIdentites(list, x => MyAPIGateway.Players.TryGetSteamId(x.IdentityId) != 0);
+            foreach (IMyIdentity identity in list) 
+            {
+                var rep = MyAPIGateway.Session.Factions.GetReputationBetweenPlayerAndFaction(identity.IdentityId, faction.FactionId);
+                if (rep > pirateRepThreshold) MyAPIGateway.Session.Factions.SetReputationBetweenPlayerAndFaction(identity.IdentityId, faction.FactionId, rep-pirateRepDrop);
+            }
         }
 
         public void Read()

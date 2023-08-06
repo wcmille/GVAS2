@@ -1,5 +1,6 @@
 ﻿using Sandbox.ModAPI;
 using System.Text;
+using VRage.Game.ModAPI;
 
 namespace GVA.NPCControl.Client
 {
@@ -37,8 +38,16 @@ namespace GVA.NPCControl.Client
         public int Military { get; private set; }
         public double UnspentUnits { get; private set; }
 
-        public void AddUnspent(/*PC Faction*/)
+        public ClientPirateAccount()
         {
+            ColorFaction = SharedConstants.BlackFactionColor;
+            OwningNPCTag = SharedConstants.BlackFactionTag;
+            Read();
+        }
+
+        public void AddUnspent(IMyFaction donor)
+        {
+            //Really, we may not need to do anything on the client.
             UnspentUnits += 1.0;
             //For each person in faction:
             //  Rep = (500 + rep) / 2

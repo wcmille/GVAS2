@@ -1,5 +1,4 @@
 ﻿using Sandbox.Common.ObjectBuilders;
-using Sandbox.Game.Entities.Cube;
 using Sandbox.ModAPI;
 using Sandbox.ModAPI.Interfaces.Terminal;
 using System;
@@ -16,7 +15,7 @@ namespace GVA.NPCControl.Client
     public class SatDishLogic : MyGameLogicComponent
     {
         private static bool controlsInit;
-        readonly List<IClientAccount> owned = new List<IClientAccount>();
+        readonly List<IAccount> owned = new List<IAccount>();
 
         public override void Init(MyObjectBuilder_EntityBase objectBuilder)
         {
@@ -67,12 +66,12 @@ namespace GVA.NPCControl.Client
                 AccountOwningTerritory(block.GetOwnerFactionTag(), owned);
                 if (owned.Count == 1)
                 {
-                    owned[0].Display(builder);
+                    ((IClientAccount)owned[0]).Display(builder);
                 }
             }
         }
 
-        private static void AccountOwningTerritory(string pcFactionTag, List<IClientAccount> owned)
+        private static void AccountOwningTerritory(string pcFactionTag, List<IAccount> owned)
         {
             Client.client.World.GetAccountByPCOwner(pcFactionTag, owned);
         }
@@ -108,7 +107,7 @@ namespace GVA.NPCControl.Client
 
         private static bool OneIZone(IMyTerminalBlock x)
         {
-            List<IClientAccount> owned = new List<IClientAccount>();
+            List<IAccount> owned = new List<IAccount>();
             AccountOwningTerritory(x.GetOwnerFactionTag(), owned);
             return (owned.Count == 1 && owned[0] is IZoneFaction);
         }
@@ -142,7 +141,7 @@ namespace GVA.NPCControl.Client
         private static void RequestLog(IMyTerminalBlock block)
         {
             var pcFactionTag = block.GetOwnerFactionTag();
-            List<IClientAccount> owned = new List<IClientAccount>();
+            List<IAccount> owned = new List<IAccount>();
             AccountOwningTerritory(pcFactionTag, owned);
             if (owned.Count == 1)
             {
@@ -160,7 +159,7 @@ namespace GVA.NPCControl.Client
             var owningFaction = MyAPIGateway.Session.Factions.TryGetFactionByTag(pcFactionTag);
             if (owningFaction != null && !owningFaction.IsEveryoneNpc())
             {
-                List<IClientAccount> owned = new List<IClientAccount>();
+                List<IAccount> owned = new List<IAccount>();
                 AccountOwningTerritory(pcFactionTag, owned);
                 if (owned.Count == 1)
                 {
@@ -184,12 +183,12 @@ namespace GVA.NPCControl.Client
                 if (owningFaction.TryGetBalanceInfo(out credits) && credits >= SharedConstants.tokenPrice)
                 {
                     //double units;
-                    List<IClientAccount> owned = new List<IClientAccount>();
+                    List<IAccount> owned = new List<IAccount>();
                     AccountOwningTerritory(pcFactionTag, owned);
                     if (owned.Count == 1)
                     {
                         var acct = owned[0];
-                        acct.AddUnspent();
+                        acct.AddUnspent(owningFaction);
                         UpdateInfo(block);
                         Client.client.Send(new CommandPacket(owningFaction.Tag, acct.ColorFaction, SharedConstants.CreditsStr));
                     }
@@ -212,7 +211,7 @@ namespace GVA.NPCControl.Client
             if (owningFaction != null && !owningFaction.IsEveryoneNpc())
             {
                 var pcFactionTag = block.GetOwnerFactionTag();
-                List<IClientAccount> owned = new List<IClientAccount>();
+                List<IAccount> owned = new List<IAccount>();
                 AccountOwningTerritory(pcFactionTag, owned);
                 if (owned.Count == 1)
                 {

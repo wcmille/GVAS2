@@ -1,8 +1,10 @@
-﻿namespace GVA.NPCControl
+﻿using VRage.Game.ModAPI;
+
+namespace GVA.NPCControl
 {
     public interface IAccount
     {
-        void AddUnspent();
+        void AddUnspent(IMyFaction donor);
         bool RemoveUnspent();
         void Read();
         void Write();

@@ -19,10 +19,10 @@ namespace GVA.NPCControl.Client
             this.client = client;
         }
 
-        public void GetAccountByPCOwner(string factionTag, List<IClientAccount> accounts)
+        public void GetAccountByPCOwner(string factionTag, List<IAccount> accounts)
         {
             accounts.Clear();
-            foreach (IClientAccount f in list)
+            foreach (IAccount f in list)
             {
                 if (f.OwningPCTag == factionTag) accounts.Add(f);
             }

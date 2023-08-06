@@ -1,4 +1,5 @@
 ﻿using Sandbox.ModAPI;
+using VRage.Game.ModAPI;
 
 namespace GVA.NPCControl
 {
@@ -61,7 +62,7 @@ namespace GVA.NPCControl
             return netIncome;
         }
 
-        public void AddUnspent()
+        public void AddUnspent(IMyFaction donor)
         {
             UnspentUnits += 1.0;
         }

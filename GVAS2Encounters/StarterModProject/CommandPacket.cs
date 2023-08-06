@@ -1,7 +1,6 @@
 ﻿using Digi.Example_NetworkProtobuf;
 using ProtoBuf;
 using Sandbox.ModAPI;
-using System;
 using VRage.Utils;
 
 namespace GVA.NPCControl
@@ -38,8 +37,8 @@ namespace GVA.NPCControl
         public override void Execute(IWorld world)
         {
             var msg = $"PacketSimpleExample received: {ColorFaction} {PlayerFactionTag} {Command}";
-            MyLog.Default.WriteLineAndConsole(msg);
-            MyAPIGateway.Utilities.ShowNotification(msg);
+            //MyLog.Default.WriteLineAndConsole(msg);
+            //MyAPIGateway.Utilities.ShowNotification(msg);
 
             //Determine color.
             IAccount acct = world.GetAccountByColor(ColorFaction);
@@ -93,7 +92,7 @@ namespace GVA.NPCControl
             if (balance >= SharedConstants.tokenPrice)
             {
                 owningFaction.RequestChangeBalance(-SharedConstants.tokenPrice);
-                acct.AddUnspent();
+                acct.AddUnspent(owningFaction);
                 world.Write(acct);
             }
         }
