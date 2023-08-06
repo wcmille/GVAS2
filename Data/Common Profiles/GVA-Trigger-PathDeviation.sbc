@@ -72,7 +72,7 @@
         [StartsReady:true]
         [MaxChats:1]
         [BroadcastRandomly:true]
-        [Author:Pilot]
+        [Author:{AntennaName}]
         [Color:Azure]
 
         [ChatMessages: This is {AntennaName} requesting clearance for approach.]

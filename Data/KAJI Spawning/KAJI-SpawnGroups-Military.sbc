@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<SpawnGroups>
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>        
+        <SubtypeId>GVA-Red-Interceptor</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+
+        [ManipulationProfiles:GVA-Common-Manipulation-SuperBuff]
+        [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
+        [ManipulationProfiles:GVA-Manipulation-Red-FighterName]
+
+        [IgnoreCleanupRules:false]
+        [ReplenishSystems:true]
+
+        [SpawnConditionsProfiles:Red-Spawns-RMO]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>95.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="Kunai Interceptor">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>50</Speed>
+          <Behaviour>GVA-KAJI-Behavior-Kunai</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId>
+				<SubtypeId>GVA-Red-FFO</SubtypeId> 
+			</Id>
+			<Description>
+        [Modular Encounters SpawnGroup]
+        [ManipulationProfiles:GVA-Manipulation-MediumLoot]
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
+        [ManipulationProfiles:GVA-Manipulation-Red-FrigateName]
+
+        [ReplenishSystems:true]
+
+        [SpawnConditionsProfiles:Red-Spawns-RM1O]
+      </Description>
+			<IsPirate>true</IsPirate>
+			<Frequency>5.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="Yumi-class Frigate">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>50</Speed>
+					<Behaviour>KAJI-Behavior-FFO</Behaviour>
+				</Prefab>
+			</Prefabs>
+		</SpawnGroup>
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <!--Do Not Edit-->
+        <SubtypeId>GVA-Red-DDO</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+        [ManipulationProfiles:GVA-Manipulation-MediumLoot]
+        [ManipulationProfiles:GVA-Common-Manipulation-SuperBuff]
+        [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
+        [ManipulationProfiles:GVA-Manipulation-Red-DestroyerName]
+
+        [ReplenishSystems:true]
+
+        [SpawnConditionsProfiles:Red-Spawns-RM3O]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>2.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="Nodachi-class Destroyer">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>50</Speed>
+          <Behaviour>KAJI-Behavior-FFO</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+  </SpawnGroups>
+</Definitions>
