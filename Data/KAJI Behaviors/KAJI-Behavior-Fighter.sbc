@@ -22,9 +22,7 @@
 
         [WeaponSystem:GVA-Common-Weapons]
 
-        [Triggers:GVA-KAJI-Trigger-EnemyResponse]
-        [Triggers:GVA-Trigger-StandardCompromised]
-        [Triggers:GVA-Trigger-DoNotApproach]
+        [TriggerGroups:KAJI-TriggerGroup-Warship]
       </Description>
     </EntityComponent>
   </EntityComponents>

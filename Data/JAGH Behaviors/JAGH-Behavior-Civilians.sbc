@@ -31,11 +31,9 @@
         [UseTurrets:false]
 
         [Triggers:GVA-Trigger-CallAtmoCargoShip]
-        [Triggers:GVA-Trigger-ScoutTattle]
-        
-        [Triggers:GVA-Trigger-Spawn]
-        [Triggers:GVA-Trigger-Despawn]
-        [Triggers:GVA-Trigger-DespawnMES]
+        [Triggers:JAGH-Trigger-ScoutTattle]
+
+        [TriggerGroups:GVA-TriggerGroup-SpawningCosts]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
@@ -51,9 +49,7 @@
         [UseBarrageFire:true]
         [UseTurrets:false]
 
-        [Triggers:GVA-Trigger-Spawn]
-        [Triggers:GVA-Trigger-Despawn]
-        [Triggers:GVA-Trigger-DespawnMES]
+        [TriggerGroups:GVA-TriggerGroup-SpawningCosts]
       </Description>
     </EntityComponent>
   </EntityComponents>
