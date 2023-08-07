@@ -23,7 +23,7 @@
         [WeaponSystem:GVA-Common-Weapons]
 
         [Triggers:GVA-Trigger-StandardCompromised]
-
+        [Triggers:GVA-Trigger-AggressiveJumper]
         [TriggerGroups:GVA-TriggerGroup-SpawningCosts]
       </Description>
     </EntityComponent>

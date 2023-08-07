@@ -10599,7 +10599,7 @@
                           <item>
                             <Key>74de02b3-27f9-4960-b1c4-27351f2b06d1</Key>
                             <Value>[GVA.NPCControl.NPCPoints]
-Military=1</Value>
+Military=3</Value>
                           </item>
                         </dictionary>
                       </Storage>
@@ -10613,7 +10613,7 @@ Military=1</Value>
               <ShowInInventory>true</ShowInInventory>
               <NumberInGrid>1</NumberInGrid>
               <Enabled>true</Enabled>
-              <BroadcastRadius>25000.002</BroadcastRadius>
+              <BroadcastRadius>1000.002</BroadcastRadius>
               <HudText />
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_BatteryBlock">

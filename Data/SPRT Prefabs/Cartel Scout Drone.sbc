@@ -960,8 +960,8 @@
               <ShowInToolbarConfig>true</ShowInToolbarConfig>
               <ShowInInventory>true</ShowInInventory>
               <NumberInGrid>2</NumberInGrid>
-              <Enabled>false</Enabled>
-              <BroadcastRadius>5000.002</BroadcastRadius>
+              <Enabled>true</Enabled>
+              <BroadcastRadius>1000.002</BroadcastRadius>
               <HudText />
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_RadioAntenna">
