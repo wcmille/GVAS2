@@ -3,6 +3,11 @@
   <Prefabs>
     <Prefab xsi:type="MyObjectBuilder_PrefabDefinition">
       <Id Type="MyObjectBuilder_PrefabDefinition" Subtype="Rhino-Heavy Jumptug" />
+      <DisplayName>Rhino-Heavy Jumptug</DisplayName>
+      <Description>Salvage stuff</Description>
+      <Icon>Textures\GUI\Prefabs\Rhino-Heavy Jumptug.dds</Icon>
+      <TooltipImage>Textures\GUI\Prefabs\Rhino-Heavy Jumptug.png</TooltipImage>
+      <EnvironmentType>None</EnvironmentType>
       <CubeGrids>
         <CubeGrid>
           <SubtypeName />
@@ -5871,7 +5876,6 @@
               <ConveyorLineType>LARGE_LINE</ConveyorLineType>
             </MyObjectBuilder_ConveyorLine>
           </ConveyorLines>
-          <DisplayName>Rhino-Heavy Jumptug</DisplayName>
           <DestructibleBlocks>true</DestructibleBlocks>
           <CreatePhysics>false</CreatePhysics>
           <EnableSmallToLargeConnections>false</EnableSmallToLargeConnections>
@@ -5924,7 +5928,6 @@
           </OxygenRooms>
         </CubeGrid>
       </CubeGrids>
-      <EnvironmentType>None</EnvironmentType>
     </Prefab>
   </Prefabs>
 </Definitions>

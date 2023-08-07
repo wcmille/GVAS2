@@ -3,6 +3,10 @@
   <Prefabs>
     <Prefab xsi:type="MyObjectBuilder_PrefabDefinition">
       <Id Type="MyObjectBuilder_PrefabDefinition" Subtype="Olvaldi Freighter" />
+      <DisplayName>Olvaldi Freighter</DisplayName>
+      <Description>Hauls junk</Description>
+      <Icon>Textures\GUI\Prefabs\OlvaldiFreighter.dds</Icon>
+      <TooltipImage>Textures\GUI\Prefabs\OlvaldiFreighter.png</TooltipImage>
       <CubeGrids>
         <CubeGrid>
           <SubtypeName />
@@ -12034,7 +12038,6 @@
               <ConveyorLineType>LARGE_LINE</ConveyorLineType>
             </MyObjectBuilder_ConveyorLine>
           </ConveyorLines>
-          <DisplayName>Olvaldi Freighter</DisplayName>
           <DestructibleBlocks>true</DestructibleBlocks>
           <CreatePhysics>false</CreatePhysics>
           <EnableSmallToLargeConnections>false</EnableSmallToLargeConnections>
@@ -12172,7 +12175,6 @@
           <GridPresenceTier>Tier1</GridPresenceTier>
         </CubeGrid>
       </CubeGrids>
-      <EnvironmentType>None</EnvironmentType>
     </Prefab>
   </Prefabs>
 </Definitions>

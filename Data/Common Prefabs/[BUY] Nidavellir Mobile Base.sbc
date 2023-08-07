@@ -3,6 +3,11 @@
   <Prefabs>
     <Prefab xsi:type="MyObjectBuilder_PrefabDefinition">
       <Id Type="MyObjectBuilder_PrefabDefinition" Subtype="Nidavellir Mobile Base" />
+      <DisplayName>Nidavellir Mobile Base</DisplayName>
+      <Description>Great to start life</Description>
+      <Icon>Textures\GUI\Prefabs\NidavellirMobileBase.dds</Icon>
+      <TooltipImage>Textures\GUI\Prefabs\NidavellirMobileBase.png</TooltipImage>
+      <EnvironmentType>All</EnvironmentType>
       <CubeGrids>
         <CubeGrid>
           <SubtypeName />
@@ -14034,7 +14039,6 @@
               <ConveyorLineType>LARGE_LINE</ConveyorLineType>
             </MyObjectBuilder_ConveyorLine>
           </ConveyorLines>
-          <DisplayName>Nidavellir Mobile Base</DisplayName>
           <DestructibleBlocks>true</DestructibleBlocks>
           <CreatePhysics>false</CreatePhysics>
           <EnableSmallToLargeConnections>false</EnableSmallToLargeConnections>
@@ -14185,7 +14189,6 @@
           </OxygenRooms>
         </CubeGrid>
       </CubeGrids>
-      <EnvironmentType>None</EnvironmentType>
     </Prefab>
   </Prefabs>
 </Definitions>

@@ -28,6 +28,8 @@
         [RivalAI Behavior]
         [BehaviorName:Passive]
 
+        [Triggers:GVA-Trigger-InitMerchantStores]
+        [Triggers:SLVG-Trigger-CreateSafeZone]
         [Triggers:GVA-Trigger-CallSpaceCargoShipSuper]
       </Description>
     </EntityComponent>
