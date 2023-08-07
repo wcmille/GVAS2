@@ -47,26 +47,22 @@
         <SubtypeId>SLVG-SafeZone-StoreSafeZone</SubtypeId>
       </Id>
       <Description>
-
         [MES SafeZone]
 
         [Shape:Sphere]
 
         [Radius:148]
-        [RadiusFromParentEntity:true]
+        [RadiusFromParentEntity:false]
 
         [Enabled:true]
         [LinkToParentEntity:true]
         [IsVisible:true]
-        [Color:{X:0 Y:128 Z:255}]
+        [Color:{X:238 Y:238 Z:85}]
 
-        [Texture:SafeZone_Texture_Aura]
+        [Texture:SafeZone_Texture_Hexagon]
 
         [AllowedActions:BuildingProjections]
-
       </Description>
-
     </EntityComponent>
-
   </EntityComponents>
 </Definitions>
