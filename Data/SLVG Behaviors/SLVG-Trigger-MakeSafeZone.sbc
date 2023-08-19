@@ -17,9 +17,7 @@
 
         [MaxActions:-1]
         [Actions:SLVG-Action-CreateSafeZone]
-
       </Description>
-
     </EntityComponent>
 
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
@@ -28,7 +26,6 @@
         <SubtypeId>SLVG-Action-CreateSafeZone</SubtypeId>
       </Id>
       <Description>
-
         [MES AI Action]
 
         [CreateSafeZone:true]
@@ -36,9 +33,7 @@
         [LinkSafeZoneToRemoteControl:true]
         [SafeZonePositionGridCenter:true]
         [SafeZonePositionTerrainSurface:true]
-
       </Description>
-
     </EntityComponent>
 
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
@@ -51,7 +46,7 @@
 
         [Shape:Sphere]
 
-        [Radius:148]
+        [Radius:130]
         [RadiusFromParentEntity:false]
 
         [Enabled:true]

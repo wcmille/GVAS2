@@ -24,7 +24,7 @@
       </Description>
     </EntityComponent>
 
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<!--    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
         <SubtypeId>TOC-StoreProfile-VendingToolsBasic</SubtypeId>
@@ -295,10 +295,7 @@
         [Orders:Ingot/Silver]
         [Orders:RandomCraftable/Component]
         [Orders:RandomCraftable/Ammo]
-
       </Description>
-
-    </EntityComponent>
-    
+    </EntityComponent>  --> 
   </EntityComponents>
 </Definitions>

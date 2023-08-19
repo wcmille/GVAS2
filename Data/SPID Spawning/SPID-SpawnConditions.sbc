@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-SpawnConditions-DesertSpider</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+
+        [CreatureSpawn:true]
+        [CreatureIds:Space_spider]
+        [AiEnabledModBots:true]
+        [AiEnabledRole:CREATURE]
+        [AiEnabledReady:true]
+        [MinCreatureCount:3]
+        [MaxCreatureCount:9]
+        [MinCreatureDistance:150]
+        [MaxCreatureDistance:200]
+
+        [UseDayOrNightOnly:true]
+        [SpawnOnlyAtNight:true]
+        [UseWeatherSpawning:true]
+        [AllowedWeatherSystems:SandStormLight,SandStormHeavy]
+        [UseTerrainTypeValidation:true]
+        [AllowedTerrainTypes:AlienSand,Sand]
+
+        [FactionOwner:SPID]
+      </Description>
+    </EntityComponent>
+  </EntityComponents>
+</Definitions>

@@ -2,11 +2,11 @@
 <Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Prefabs>
     <Prefab xsi:type="MyObjectBuilder_PrefabDefinition">
-      <Id Type="MyObjectBuilder_PrefabDefinition" Subtype="Rhino-Heavy Jumptug" />
-      <DisplayName>Rhino-Heavy Jumptug</DisplayName>
+      <Id Type="MyObjectBuilder_PrefabDefinition" Subtype="Rhino Jumptug" />
+      <DisplayName>Rhino Jumptug</DisplayName>
       <Description>Salvage stuff</Description>
-      <Icon>Textures\GUI\Prefabs\Rhino-Heavy Jumptug.dds</Icon>
-      <TooltipImage>Textures\GUI\Prefabs\Rhino-Heavy Jumptug.png</TooltipImage>
+      <Icon>Textures\GUI\Prefabs\RhinoHeavyJumptug.dds</Icon>
+      <TooltipImage>Textures\GUI\Prefabs\RhinoHeavyJumptug.png</TooltipImage>
       <EnvironmentType>None</EnvironmentType>
       <CubeGrids>
         <CubeGrid>

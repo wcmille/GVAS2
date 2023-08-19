@@ -5,7 +5,7 @@
       <Id Type="MyObjectBuilder_PrefabDefinition" Subtype="Sparrowhawk Corvette" />
       <DisplayName>Sparrowhawk Corvette</DisplayName>
       <Description>The Sparrowhawk is a bad mamba jamba</Description>
-      <Icon>Textures\GUI\Prefabs\Cursor.dds</Icon>
+      <Icon>Textures\GUI\Prefabs\SparrowhawkCorvette.dds</Icon>
       <TooltipImage>Textures\GUI\Prefabs\SparrowhawkCorvette.png</TooltipImage>
       <EnvironmentType>All</EnvironmentType>
       <CubeGrids>
