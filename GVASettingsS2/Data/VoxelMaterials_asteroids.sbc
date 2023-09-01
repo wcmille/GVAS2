@@ -560,6 +560,7 @@
             <MinedOre>Silver</MinedOre>
             <MinedOreRatio>1</MinedOreRatio>
             <CanBeHarvested>true</CanBeHarvested>
+            <SpawnsInAsteroids>false</SpawnsInAsteroids>
             <IsRare>true</IsRare>
             <AsteroidGeneratorSpawnProbabilityMultiplier>2</AsteroidGeneratorSpawnProbabilityMultiplier>
 
@@ -658,6 +659,7 @@
             <MinedOre>Platinum</MinedOre>
             <MinedOreRatio>1</MinedOreRatio>
             <CanBeHarvested>true</CanBeHarvested>
+            <SpawnsInAsteroids>false</SpawnsInAsteroids>
             <IsRare>true</IsRare>
 
             <VoxelHandPreview>Textures\Voxels\Platinum_01_Thumbnail.dds</VoxelHandPreview>
