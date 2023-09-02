@@ -24,7 +24,8 @@
 
         public const int TimeDeltaHours = 8;
 
-        public const int AlliedRep = 1000;
+        public const int AlliedRep = 501;
+        public const int DefaultRep = 0;
 
         public static readonly string ReportCommand = "Report";
 

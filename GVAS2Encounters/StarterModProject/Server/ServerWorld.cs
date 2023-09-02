@@ -109,12 +109,12 @@ namespace GVA.NPCControl.Server
             var faction = MyAPIGateway.Session.Factions.TryGetFactionByTag(acct.OwningNPCTag);
 
             var identities = new List<IMyIdentity>();
-            int defaultRep = 0;
+            int defaultRep = SharedConstants.DefaultRep;
             MyAPIGateway.Players.GetAllIdentites(identities);
 
             foreach (var identity in identities)
             {
-                defaultRep = 0;
+                defaultRep = SharedConstants.DefaultRep;
                 ulong steamId = MyAPIGateway.Players.TryGetSteamId(identity.IdentityId);
 
                 if (steamId > 0)

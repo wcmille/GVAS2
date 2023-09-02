@@ -27,9 +27,9 @@
       <DisplayName>DisplayName_Item_Powerkit</DisplayName>
       <Icon>Textures\GUI\Icons\Items\PowerKit.dds</Icon>
       <Prerequisites>
-        <Item Amount="0.05" TypeId="Ingot" SubtypeId="Gold"/>
         <Item Amount="0.05" TypeId="Ingot" SubtypeId="Iron"/>
         <Item Amount="0.05" TypeId="Ingot" SubtypeId="Nickel"/>
+        <Item Amount="0.05" TypeId="Ingot" SubtypeId="Silicon"/>
       </Prerequisites>
       <Results>
         <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Powerkit"/>
@@ -43,14 +43,14 @@
         <SubtypeId>ZoneChip</SubtypeId>
       </Id>
       <DisplayName>DisplayName_Item_ZoneChip</DisplayName>
-      <Description>The ZoneChip is a complex piece of equipment that has to be created slowly for it \nto be crafted to the highest quality. It is a sensetive subspace field calibration device with a built in computer, unfortunately due to their fragile nature, they will always burn out after prolonged use.</Description>
+      <Description>The ZoneChip is a complex piece of equipment that has to be created slowly for it \nto be crafted to the highest quality. It is a sensitive subspace field calibration device with a built in computer, unfortunately due to their fragile nature, they will always burn out after prolonged use.</Description>
       <Icon>Textures\GUI\Icons\Items\ZoneChip_Item.dds</Icon>
       <Prerequisites>
-        <Item Amount="5" TypeId="Ingot" SubtypeId="Iron"/>
-        <Item Amount="5" TypeId="Ingot" SubtypeId="Silicon"/>
-        <Item Amount="3" TypeId="Ingot" SubtypeId="Platinum"/>
-        <Item Amount="3" TypeId="Ingot" SubtypeId="Gold"/>
-        <Item Amount="15" TypeId="Ingot" SubtypeId="Silver"/>
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Iron"/>
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Silicon"/>
+        <Item Amount="2" TypeId="Ingot" SubtypeId="Platinum"/>
+        <Item Amount="2" TypeId="Ingot" SubtypeId="Gold"/>
+        <Item Amount="5" TypeId="Ingot" SubtypeId="Silver"/>
       </Prerequisites>
       <Result Amount="1" TypeId="Component" SubtypeId="ZoneChip"/>
       <BaseProductionTimeInSeconds>1125</BaseProductionTimeInSeconds>
@@ -59,7 +59,7 @@
       <!-- with 4 Speed Upgrade Modules, that brings it to 3600 seconds which is 60 minutes -->
       <!-- <IsPrimary>true</IsPrimary> -->
     </Blueprint>
-    <Blueprint>
+    <!-- <Blueprint>
       <Id>
         <TypeId>BlueprintDefinition</TypeId>
         <SubtypeId>GVK_SmallCaliber_Tech</SubtypeId>
@@ -105,23 +105,24 @@
       </Prerequisites>
       <Result Amount="1" TypeId="Component" SubtypeId="GVK_Missile_Tech"/>
       <BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
-    </Blueprint>
+    </Blueprint> -->
     <Blueprint>
       <Id>
         <TypeId>BlueprintDefinition</TypeId>
         <SubtypeId>GVK_Laser_Tech</SubtypeId>
       </Id>
-      <DisplayName>Laser Weapons Tech</DisplayName>
+      <DisplayName>Ultra Tech</DisplayName>
+      <Description>Advanced technology used to make higher end weapon systems.</Description>
       <Icon>Textures\GUI\Icons\Items\ZoneChip_Item.dds</Icon>
       <Icon>Textures\GUI\Icons\Items\GVK_TechWeapon.dds</Icon>
       <Icon>Textures\GUI\Icons\Items\Laser_Icon_Overlay.dds</Icon>
       <Prerequisites>
-        <Item Amount="1" TypeId="Component" SubtypeId="ZoneChip"/>
+        <Item Amount="2" TypeId="Component" SubtypeId="ZoneChip"/>
       </Prerequisites>
       <Result Amount="1" TypeId="Component" SubtypeId="GVK_Laser_Tech"/>
       <BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
     </Blueprint>
-    <Blueprint>
+    <!-- <Blueprint>
       <Id>
         <TypeId>BlueprintDefinition</TypeId>
         <SubtypeId>GVK_Data_Core</SubtypeId>
@@ -134,6 +135,6 @@
       </Prerequisites>
       <Result Amount="1" TypeId="Component" SubtypeId="GVK_Data_Core"/>
       <BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
-    </Blueprint>
+    </Blueprint> -->
   </Blueprints>
 </Definitions>
