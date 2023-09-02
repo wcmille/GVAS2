@@ -156,14 +156,19 @@ namespace GVA.NPCControl.Server
                     Pay(acct, c, m);
                 }
             }
-        }
-
-        private IAccount GetAccountFromRC(IMyRemoteControl rc)
-        {
-            var owner = rc.OwnerId;
-            var faction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(owner);
-            var acct = world.GetAccountByNPCOwner(faction.Tag);
-            return acct;
+            else if (action == "GVA-Action-API-ReportContact")
+            {
+                var acct = GetAccountFromRC(rc);
+                if (target is IMyCubeGrid)
+                {
+                    (acct as ServerAccount)?.LogSpawn(target as IMyCubeGrid);
+                }
+            }
+            else if (action == "GVA-Action-API-Mayday")
+            {
+                var acct = GetAccountFromRC(rc);
+                (acct as ServerAccount)?.Mayday(target as IMyCubeGrid);
+            }
         }
 
         private static void Pay(IAccount acct, int c, int m)
@@ -209,15 +214,29 @@ namespace GVA.NPCControl.Server
         {
             try
             {
-                var owner = grid.BigOwners.FirstOrDefault();
-                var faction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(owner);
-                var acct = world.GetAccountByNPCOwner(faction.Tag);
+                IAccount acct = GetAccountFromGrid(grid);
                 (acct as ServerAccount)?.LogSpawn(grid);
             }
             catch (Exception ex)
             {
                 MyLog.Default.WriteLineAndConsole($"GVA_NPC_Control: ERROR - {ex.Message}");
             }
+        }
+
+        private IAccount GetAccountFromGrid(IMyCubeGrid grid)
+        {
+            var owner = grid.BigOwners.FirstOrDefault();
+            var faction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(owner);
+            var acct = world.GetAccountByNPCOwner(faction.Tag);
+            return acct;
+        }
+
+        private IAccount GetAccountFromRC(IMyRemoteControl rc)
+        {
+            var owner = rc.OwnerId;
+            var faction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(owner);
+            var acct = world.GetAccountByNPCOwner(faction.Tag);
+            return acct;
         }
 
         private bool CountersMoreThan(string color, string counterType, int limit)

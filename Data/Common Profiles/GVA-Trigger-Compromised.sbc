@@ -11,6 +11,8 @@
         [UseTrigger:true]
         [Type:Compromised]
         [MaxActions:1]
+        [ActionExecution:All]
+        [Actions:GVA-Action-API-Mayday]
         [Actions:GVA-Action-Knockout]
       </Description>
     </EntityComponent>
@@ -26,6 +28,16 @@
         [StopAllThrust:Value]
         [DisableTriggers:true]
         [DisableTriggerNames:GVA-Trigger-Despawn,GVA-Trigger-DespawnMES]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Action-API-Mayday</SubtypeId>
+      </Id>
+      <!-- This action is empty because it's picked up by the API -->
+      <Description>
+        [RivalAI Action]       
       </Description>
     </EntityComponent>
   </EntityComponents>

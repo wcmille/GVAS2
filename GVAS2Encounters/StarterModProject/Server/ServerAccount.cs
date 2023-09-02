@@ -2,6 +2,7 @@
 using System;
 using VRage.Game.ModAPI;
 using VRage.Utils;
+using VRageMath;
 
 namespace GVA.NPCControl.Server
 {
@@ -134,7 +135,11 @@ namespace GVA.NPCControl.Server
 
         internal void LogSpawn(IMyCubeGrid grid)
         {
-            AccountLog.Log(grid);
+            AccountLog.Log(grid, Color.Red, "Contact ");
+        }
+        internal void Mayday(IMyCubeGrid grid)
+        {
+            AccountLog.Log(grid, Color.Green, "Mayday ");
         }
     }
 }

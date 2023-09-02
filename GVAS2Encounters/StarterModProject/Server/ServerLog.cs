@@ -2,6 +2,7 @@
 using System;
 using System.Linq;
 using VRage.Game.ModAPI;
+using VRageMath;
 
 namespace GVA.NPCControl.Server
 {
@@ -18,15 +19,16 @@ namespace GVA.NPCControl.Server
             LogText = "";
         }
 
-        public void Log(IMyCubeGrid grid)
+        public void Log(IMyCubeGrid grid, Color color, string formatter)
         {
             var pos = grid.GetPosition();
             pos.X = Math.Round(pos.X);
             pos.Y = Math.Round(pos.Y);
             pos.Z = Math.Round(pos.Z);
             string name = grid.CustomName.Remove(0, 6);
-            Sandbox.ModAPI.Ingame.MyWaypointInfo mp = new Sandbox.ModAPI.Ingame.MyWaypointInfo(name, pos);
-            LogText += $"{DateTime.UtcNow},{mp}\n";
+            Sandbox.ModAPI.Ingame.MyWaypointInfo mp = new Sandbox.ModAPI.Ingame.MyWaypointInfo($"{formatter}{name}", pos);
+            string hex = "#FF" + color.R.ToString("X2") + color.G.ToString("X2") + color.B.ToString("X2");
+            LogText += $"{DateTime.UtcNow},{mp}{hex}:\n";
             Write();
         }
 

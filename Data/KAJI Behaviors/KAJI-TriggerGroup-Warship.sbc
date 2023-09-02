@@ -12,6 +12,7 @@
         [Triggers:GVA-KAJI-Trigger-EnemyResponse]
         [Triggers:GVA-Trigger-StandardCompromised]
         [Triggers:GVA-Trigger-DoNotApproach]
+        [Triggers:GVA-Trigger-ReportContact]
       </Description>
     </EntityComponent>
   </EntityComponents>
