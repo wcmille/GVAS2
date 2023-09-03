@@ -6,20 +6,6 @@ using VRageMath;
 
 namespace GVA.NPCControl.Server
 {
-    public interface IAntagonist
-    {
-        int Military { get; }
-
-        /// <summary>
-        /// Fight the other account.
-        /// </summary>
-        /// <returns>
-        /// true is fight was lost
-        /// </returns>
-        /// <param name="account"></param>
-        bool Fight();
-    }
-
     public interface IServerAccount : IAccount
     {
         void TimePeriod(IAntagonist pirates = null);
@@ -49,9 +35,28 @@ namespace GVA.NPCControl.Server
             return $"Civ: {Civilian} Mil: {Military} Unspent: {UnspentUnits:F2}";
         }
 
-        private void ResolveEconomy(int civ, int mil)
+        private void ResolveReputation(int boostCiv, int boostMil)
+        { 
+            //Get players in faction
+
+            //For each player in faction...
+                //If you are on bad terms with Silverbranch, pay debt.
+                    //Write in log.
+                //If you are on bad terms with color account, pay debt.
+                    //Write in log.
+                //Calc minimum reputation.
+
+            //Reduce minimum reputation (multiply by 0.9)
+            //rep += Calculate boost from entities.
+            //rep += Calculate boost from unused civilian points.
+            //new rep = minRep + rep;
+            //For each player in faction...
+                //rep = max(currentRep, newRep)
+        }
+
+        private void ResolveEconomy(int boostCiv, int boostMil)
         {
-            double netIncome = CalcNetIncome(civ, mil);
+            double netIncome = CalcNetIncome(boostCiv, boostMil);
 
             UnspentUnits += netIncome;
             if (UnspentUnits < 0.0)

@@ -1,7 +1,6 @@
 ﻿using Digi.Example_NetworkProtobuf;
 using ProtoBuf;
 using Sandbox.ModAPI;
-using VRage.Utils;
 
 namespace GVA.NPCControl
 {

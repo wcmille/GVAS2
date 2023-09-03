@@ -1,11 +1,24 @@
 ﻿using Sandbox.ModAPI;
 using System;
 using System.Collections.Generic;
-using System.Runtime.InteropServices;
 using VRage.Game.ModAPI;
 
 namespace GVA.NPCControl.Server
 {
+    public interface IAntagonist
+    {
+        int Military { get; }
+
+        /// <summary>
+        /// Fight the other account.
+        /// </summary>
+        /// <returns>
+        /// true is fight was lost
+        /// </returns>
+        /// <param name="account"></param>
+        bool Fight();
+    }
+
     public class PirateAccount : IServerAccount, IAntagonist
     {
         readonly Random r;
