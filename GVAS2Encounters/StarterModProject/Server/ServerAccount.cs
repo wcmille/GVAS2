@@ -49,9 +49,9 @@ namespace GVA.NPCControl.Server
             return $"Civ: {Civilian} Mil: {Military} Unspent: {UnspentUnits:F2}";
         }
 
-        private void ResolveEconomy()
+        private void ResolveEconomy(int civ, int mil)
         {
-            double netIncome = CalcNetIncome();
+            double netIncome = CalcNetIncome(civ, mil);
 
             UnspentUnits += netIncome;
             if (UnspentUnits < 0.0)
@@ -107,16 +107,37 @@ namespace GVA.NPCControl.Server
 
         public void TimePeriod(IAntagonist pirates = null)
         {
+            CostDeterminer cd = new CostDeterminer();
+
+            var sphere = SharedConstants.NpcSphere;
+            var ents = MyAPIGateway.Entities?.GetTopMostEntitiesInSphere(ref sphere);
+
+            int boostC = 0, boostM = 0;
+
+            if (ents != null)
+            {
+                foreach (var ent in ents)
+                {
+                    int C = 0, M = 0;
+                    if (ent is IMyCubeGrid)
+                    {
+                        cd.DetermineCost(ent as IMyCubeGrid, ref C, ref M, this.OwningNPCTag);
+                    }
+                    boostC += C;
+                    boostM += M;
+                }
+            }
+
             if (pirates != null)
             {
                 ResolveIncursions(pirates);
             }
             else
             {
-                MyLog.Default.WriteLine("SATDISH: Error Null Pirates");
+                MyLog.Default?.WriteLine("SATDISH: Error Null Pirates");
             }
-            ResolveEconomy();
-            AccountLog.Log(Log());
+            ResolveEconomy(boostC, boostM);
+            AccountLog?.Log(Log());
         }
 
         public override void Read()

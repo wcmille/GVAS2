@@ -120,6 +120,10 @@
     <Compile Include="Accounting.cs" />
     <Compile Include="CommandPacket.cs" />
     <Compile Include="IWorld.cs" />
+    <Compile Include="LimitedProduction\LimitedProduction_Assembler.cs" />
+    <Compile Include="LimitedProduction\LimitedProduction_Refinery.cs" />
+    <Compile Include="LimitedProduction\LimitedProduction.cs" />
+    <Compile Include="LimitedProduction\LimitedProduction_SafeZone.cs" />
     <Compile Include="MESApi.cs" />
     <Compile Include="Server\PirateAccount.cs" />
     <Compile Include="Server\Server.cs" />
@@ -145,6 +149,7 @@ rd "C:\Users\wayne\AppData\Roaming\SpaceEngineers\Mods\GVAS2Encounters\Textures\
 xcopy $(ProjectDir)*.cs "C:\Users\wayne\AppData\Roaming\SpaceEngineers\Mods\GVAS2Encounters\Data\Scripts\GVA_NPC_Control\" /y
 xcopy $(ProjectDir)Client\*.cs "C:\Users\wayne\AppData\Roaming\SpaceEngineers\Mods\GVAS2Encounters\Data\Scripts\GVA_NPC_Control\" /y
 xcopy $(ProjectDir)Server\*.cs "C:\Users\wayne\AppData\Roaming\SpaceEngineers\Mods\GVAS2Encounters\Data\Scripts\GVA_NPC_Control\" /y
+xcopy $(ProjectDir)LimitedProduction\*.cs "C:\Users\wayne\AppData\Roaming\SpaceEngineers\Mods\GVAS2Encounters\Data\Scripts\GVA_NPC_Control\" /y
 xcopy $(ProjectDir)SE\*.cs "C:\Users\wayne\AppData\Roaming\SpaceEngineers\Mods\GVAS2Encounters\Data\Scripts\GVA_NPC_Control\" /y
 xcopy $(ProjectDir)SinglePlayer\*.cs "C:\Users\wayne\AppData\Roaming\SpaceEngineers\Mods\GVAS2Encounters\Data\Scripts\GVA_NPC_Control\" /y
 xcopy $(SolutionDir)Data "C:\Users\wayne\AppData\Roaming\SpaceEngineers\Mods\GVAS2Encounters\Data\" /y /s

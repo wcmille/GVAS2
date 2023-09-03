@@ -11,6 +11,26 @@ using VRageMath;
 
 namespace GVA.NPCControl.Server
 {
+    public class CostDeterminer
+    {
+        readonly MyIni ini = new MyIni();
+
+        public void DetermineCost(IMyCubeGrid cg, ref int c, ref int m, string factionTag)
+        {
+            foreach (var b in cg.GetFatBlocks<IMyBeacon>())
+            {
+                if (b.GetOwnerFactionTag() == factionTag && ini.TryParse(b.CustomData))
+                {
+                    if (ini.ContainsSection(SharedConstants.PointCheck))
+                    {
+                        c = ini.Get(SharedConstants.PointCheck, SharedConstants.CivilianStr).ToInt32(0);
+                        m = ini.Get(SharedConstants.PointCheck, SharedConstants.MilitaryStr).ToInt32(0);
+                    }
+                }
+            }
+        }
+    }
+
     public class ServerSession
     {
         private Server server = null;
@@ -18,7 +38,7 @@ namespace GVA.NPCControl.Server
         readonly MESApi mes = null;
 
         //delegate bool CustomMESCondition(string spawnGroupSubId, string SpawnConditionProfile, string typeOfSpawn, Vector3D location);
-        readonly MyIni ini = new MyIni();
+        readonly CostDeterminer cd = new CostDeterminer();
 
         public ServerSession()
         {
@@ -141,7 +161,7 @@ namespace GVA.NPCControl.Server
                 {
                     int c = 0;
                     int m = 0;
-                    DetermineCost(rc, ref c, ref m);
+                    cd.DetermineCost(rc.CubeGrid, ref c, ref m, rc.GetOwnerFactionTag());
                     Refund(acct, c, m);
                 }
             }
@@ -152,7 +172,7 @@ namespace GVA.NPCControl.Server
                 {
                     int c = 0;
                     int m = 0;
-                    DetermineCost(rc, ref c, ref m);
+                    cd.DetermineCost(rc.CubeGrid, ref c, ref m, rc.GetOwnerFactionTag());
                     Pay(acct, c, m);
                 }
             }
@@ -193,21 +213,6 @@ namespace GVA.NPCControl.Server
 
             MyAPIGateway.Utilities.SetVariable($"{acct.ColorFaction}{SharedConstants.CivilianStr}", currC + c);
             MyAPIGateway.Utilities.SetVariable($"{acct.ColorFaction}{SharedConstants.MilitaryStr}", currM + m);
-        }
-
-        private void DetermineCost(IMyRemoteControl rc, ref int c, ref int m)
-        {
-            foreach (var b in rc.CubeGrid.GetFatBlocks<IMyBeacon>())
-            {
-                if (ini.TryParse(b.CustomData))
-                {
-                    if (ini.ContainsSection(SharedConstants.PointCheck))
-                    {
-                        c = ini.Get(SharedConstants.PointCheck, SharedConstants.CivilianStr).ToInt32(0);
-                        m = ini.Get(SharedConstants.PointCheck, SharedConstants.MilitaryStr).ToInt32(0);
-                    }
-                }
-            }
         }
 
         private void LogSpawn(IMyCubeGrid grid)

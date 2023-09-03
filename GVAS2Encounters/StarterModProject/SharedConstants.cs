@@ -1,4 +1,6 @@
-﻿namespace GVA.NPCControl
+﻿using VRageMath;
+
+namespace GVA.NPCControl
 {
     internal class SharedConstants
     {
@@ -32,5 +34,8 @@
         public static readonly string ModNamespace = "GVA.NPCControl";
 
         public static readonly string PointCheck = "GVA.NPCControl.NPCPoints";
+
+        public static readonly Vector3D WorldCenter = new Vector3D(-870575, 131504, 7356867);
+        public static readonly BoundingSphereD NpcSphere = new BoundingSphereD(WorldCenter, 3000000.0);
     }
 }

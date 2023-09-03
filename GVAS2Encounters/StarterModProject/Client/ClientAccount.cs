@@ -26,7 +26,7 @@ namespace GVA.NPCControl.Client
             builder.AppendLine($"{UnspentUnits:F2} Unspent NPC Units");
 
             builder.AppendLine();
-            builder.AppendLine($"{CalcNetIncome():F2} Net Income");
+            builder.AppendLine($"{CalcNetIncome(0,0):F2} Net Income");
         }
     }
 

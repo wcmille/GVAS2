@@ -54,10 +54,13 @@ namespace GVA.NPCControl
         public string OwningPCTag { get; private set; }
         public string OwningNPCTag { get; private set; }
 
-        protected double CalcNetIncome()
+        protected double CalcNetIncome(int civ, int mil)
         {
-            double grossIncome = Civilian * timePeriodConst - Civilian * Civilian * pirateFactor;
-            double expenses = Military * militaryCosts;
+            civ += Civilian;
+            mil += Military;
+
+            double grossIncome = civ * timePeriodConst - civ * civ * pirateFactor;
+            double expenses = mil * militaryCosts;
             double netIncome = grossIncome - expenses;
             return netIncome;
         }

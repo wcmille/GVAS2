@@ -19,17 +19,22 @@ namespace GVA.NPCControl.Server
             LogText = "";
         }
 
-        public void Log(IMyCubeGrid grid, Color color, string formatter)
+        public void Log(IMyCubeGrid grid, Color gpsColor, string formatter)
         {
             var pos = grid.GetPosition();
+            string name = grid.CustomName.Remove(0, 6);
+            LogText += WriteLogLine(gpsColor, formatter+name, pos);
+            Write();
+        }
+
+        internal string WriteLogLine(Color color, string formatter, Vector3D pos)
+        {
             pos.X = Math.Round(pos.X);
             pos.Y = Math.Round(pos.Y);
             pos.Z = Math.Round(pos.Z);
-            string name = grid.CustomName.Remove(0, 6);
-            Sandbox.ModAPI.Ingame.MyWaypointInfo mp = new Sandbox.ModAPI.Ingame.MyWaypointInfo($"{formatter}{name}", pos);
-            string hex = "#FF" + color.R.ToString("X2") + color.G.ToString("X2") + color.B.ToString("X2");
-            LogText += $"{DateTime.UtcNow},{mp}{hex}:\n";
-            Write();
+            Sandbox.ModAPI.Ingame.MyWaypointInfo mp = new Sandbox.ModAPI.Ingame.MyWaypointInfo($"{formatter}", pos);
+            string hex = $"#FF{color.R:X2}{color.G:X2}{color.B:X2}";
+            return $"{DateTime.UtcNow},{mp}{hex}:\n";
         }
 
         public void Log(string text)
