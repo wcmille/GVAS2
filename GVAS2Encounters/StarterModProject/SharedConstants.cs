@@ -1,4 +1,5 @@
-﻿using VRageMath;
+﻿using System;
+using VRageMath;
 
 namespace GVA.NPCControl
 {
@@ -9,6 +10,9 @@ namespace GVA.NPCControl
         public static readonly string CreditsStr = "Credits";
         public static readonly string IncursionsStr = "Incursions";
         public static readonly string SellCreditsStr = "Sell";
+
+        public static readonly string OwnerId = "OwnerId";
+        [Obsolete]
         public static readonly string OwnerStr = "Owner";
         public static readonly string NPCStr = "NPCOwner";
         public static readonly string TimeStr = "LastRunTime";
@@ -28,6 +32,7 @@ namespace GVA.NPCControl
 
         public const int AlliedRep = 501;
         public const int DefaultRep = 0;
+        public const int EnemyRep = -1000;
 
         public static readonly string ReportCommand = "Report";
 

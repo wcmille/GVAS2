@@ -6,10 +6,18 @@ namespace GVA_NPC_Control.Test
     [TestClass]
     public class AccountingTest
     {
+        MockFaction faction;
+        [TestInitialize]
+        public void Setup()
+        { 
+            faction = new MockFaction();
+            faction.Tag = "BMC";
+        }
+
         [TestMethod]
         public void TestMethodx2()
         {
-            ServerAccount acct = new ServerAccount(null, null, "Blue", 4, 55, 0);
+            ServerAccount acct = new ServerAccount(faction, null, "Blue", 4, 55, 0);
             acct.TimePeriod();
 
             Assert.AreEqual(4, acct.Civilian, "Civilian");
@@ -20,7 +28,7 @@ namespace GVA_NPC_Control.Test
         [TestMethod]
         public void TestMethodx1()
         {
-            ServerAccount acct = new ServerAccount(null, null, "Blue", 0, 13, 0);
+            ServerAccount acct = new ServerAccount(faction, null, "Blue", 0, 13, 0);
             acct.TimePeriod();
 
             Assert.AreEqual(0, acct.Civilian, "Civilian");
@@ -31,7 +39,7 @@ namespace GVA_NPC_Control.Test
         [TestMethod]
         public void TestMethod10_10_0()
         {
-            ServerAccount acct = new ServerAccount(null, null, "Blue", 10, 10, 0);
+            ServerAccount acct = new ServerAccount(faction, null, "Blue", 10, 10, 0);
             acct.TimePeriod();
 
             Assert.AreEqual(10, acct.Civilian);
@@ -42,7 +50,7 @@ namespace GVA_NPC_Control.Test
         [TestMethod]
         public void TestMethod10_10_0_Unowned()
         {
-            ServerAccount acct = new ServerAccount("SPRT", null, "Blue", 10, 10, 0);
+            ServerAccount acct = new ServerAccount(null, null, "Blue", 10, 10, 0);
             acct.TimePeriod();
 
             Assert.AreEqual(5, acct.Civilian);
@@ -53,7 +61,7 @@ namespace GVA_NPC_Control.Test
         [TestMethod]
         public void TestMethod30_10_0()
         {
-            ServerAccount acct = new ServerAccount(null, null, "Blue", 30, 10, 0);
+            ServerAccount acct = new ServerAccount(faction, null, "Blue", 30, 10, 0);
             acct.TimePeriod();
 
             Assert.AreEqual(30, acct.Civilian);
@@ -64,7 +72,7 @@ namespace GVA_NPC_Control.Test
         [TestMethod]
         public void TestMethod50_0_0()
         {
-            ServerAccount acct = new ServerAccount(null, null, "Blue", 50, 0, 0);
+            ServerAccount acct = new ServerAccount(faction, null, "Blue", 50, 0, 0);
             acct.TimePeriod();
 
             Assert.AreEqual(49, acct.Civilian, "Civilian");

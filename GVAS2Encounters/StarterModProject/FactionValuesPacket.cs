@@ -1,5 +1,7 @@
 ﻿using Digi.Example_NetworkProtobuf;
 using ProtoBuf;
+using Sandbox.Game.Multiplayer;
+using Sandbox.ModAPI;
 
 namespace GVA.NPCControl
 {
@@ -24,7 +26,7 @@ namespace GVA.NPCControl
         public string Faction;
 
         [ProtoMember(5)]
-        public string Owner;
+        public long Owner;
 
         [ProtoMember(6)]
         public string NPCOwner;
@@ -37,10 +39,11 @@ namespace GVA.NPCControl
             Military = acct.Military;
             Unspent = acct.UnspentUnits;
             Faction = acct.ColorFaction;
-            Owner = acct.OwningPCTag;
+            var faction = MyAPIGateway.Session.Factions.TryGetFactionByTag(acct.OwningPCTag);
+            Owner = faction.FactionId;
         }
 
-        public FactionValuesPacket(string owner, string faction, int civ, int mil, double unspent)
+        public FactionValuesPacket(long owner, string faction, int civ, int mil, double unspent)
         {
             Civilian = civ;
             Military = mil;
@@ -55,7 +58,8 @@ namespace GVA.NPCControl
             //MyLog.Default.WriteLineAndConsole(msg);
             //MyAPIGateway.Utilities.ShowNotification(msg);
 
-            var acct = new Accounting(Owner, NPCOwner, Faction, Civilian, Military, Unspent);
+            var owner = MyAPIGateway.Session.Factions.TryGetFactionById(Owner);
+            var acct = new Accounting(owner, NPCOwner, Faction, Civilian, Military, Unspent);
             world.Write(acct);
         }
     }

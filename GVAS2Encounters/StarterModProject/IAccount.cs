@@ -10,6 +10,7 @@ namespace GVA.NPCControl
         void Write();
         string ColorFaction { get; }
         string OwningPCTag { get; }
+        IMyFaction OwningPCFaction { get; }
         string OwningNPCTag { get; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Digi.Example_NetworkProtobuf;
+using Sandbox.ModAPI;
 
 namespace GVA.NPCControl.Server
 {
@@ -26,7 +27,8 @@ namespace GVA.NPCControl.Server
 
         public void WriteToClient(Accounting acct)
         {
-            FactionValuesPacket packet = new FactionValuesPacket(acct.OwningPCTag, acct.ColorFaction, acct.Civilian, acct.Military, acct.UnspentUnits);
+            var faction = MyAPIGateway.Session.Factions.TryGetFactionByTag(acct.OwningPCTag);
+            FactionValuesPacket packet = new FactionValuesPacket(faction?.FactionId ?? 0, acct.ColorFaction, acct.Civilian, acct.Military, acct.UnspentUnits);
             networking.RelayToClients(packet);
         }
     }

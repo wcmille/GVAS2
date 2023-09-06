@@ -14,15 +14,16 @@ namespace GVA.NPCControl
         const double militaryCosts = 0.2;
         const double timePeriodConst = 0.333333;
         const double pirateFactor = 0.006667;
+        IMyFaction pcOwner;
 
         public Accounting(string color)
         {
             int civ, mil;
             double uu;
-            string owningPCTag;
             string owningNPCTag;
+            long owningPCFactionId;
 
-            MyAPIGateway.Utilities.GetVariable($"{color}{SharedConstants.OwnerStr}", out owningPCTag);
+            MyAPIGateway.Utilities.GetVariable($"{color}{SharedConstants.OwnerId}", out owningPCFactionId);
             MyAPIGateway.Utilities.GetVariable($"{color}{SharedConstants.NPCStr}", out owningNPCTag);
             MyAPIGateway.Utilities.GetVariable($"{color}{SharedConstants.CivilianStr}", out civ);
             MyAPIGateway.Utilities.GetVariable($"{color}{SharedConstants.MilitaryStr}", out mil);
@@ -32,17 +33,17 @@ namespace GVA.NPCControl
             Civilian = civ;
             Military = mil;
             UnspentUnits = uu;
-            OwningPCTag = owningPCTag;
+            pcOwner = MyAPIGateway.Session.Factions.TryGetFactionById(owningPCFactionId);
             OwningNPCTag = owningNPCTag;
         }
 
-        public Accounting(string owner, string npc, string color, int c, int m, double uu)
+        public Accounting(IMyFaction pcOwner, string npc, string color, int c, int m, double uu)
         {
+            this.pcOwner = pcOwner;
             ColorFaction = color;
             Civilian = c;
             Military = m;
             UnspentUnits = uu;
-            OwningPCTag = owner;
             OwningNPCTag = npc;
         }
 
@@ -51,8 +52,22 @@ namespace GVA.NPCControl
         public double UnspentUnits { get; protected set; }
         public string ColorFaction { get; private set; }
 
-        public string OwningPCTag { get; private set; }
+        public string OwningPCTag
+        {
+            get
+            {
+                return pcOwner?.Tag ?? "SPRT";
+            }
+        }
         public string OwningNPCTag { get; private set; }
+
+        public IMyFaction OwningPCFaction
+        {
+            get
+            {
+                return pcOwner;
+            }
+        }
 
         protected double CalcNetIncome(int civ, int mil)
         {
@@ -105,9 +120,10 @@ namespace GVA.NPCControl
         {
             int civ, mil;
             double uu;
-            string owningPCTag, owningNPCTag;
+            string owningNPCTag;
+            long owningPCId;
 
-            MyAPIGateway.Utilities.GetVariable($"{ColorFaction}{SharedConstants.OwnerStr}", out owningPCTag);
+            MyAPIGateway.Utilities.GetVariable($"{ColorFaction}{SharedConstants.OwnerId}", out owningPCId);
             MyAPIGateway.Utilities.GetVariable($"{ColorFaction}{SharedConstants.NPCStr}", out owningNPCTag);
             MyAPIGateway.Utilities.GetVariable($"{ColorFaction}{SharedConstants.CivilianStr}", out civ);
             MyAPIGateway.Utilities.GetVariable($"{ColorFaction}{SharedConstants.MilitaryStr}", out mil);
@@ -122,7 +138,7 @@ namespace GVA.NPCControl
             Civilian = civ;
             Military = mil;
             UnspentUnits = uu;
-            OwningPCTag = owningPCTag;
+            pcOwner = MyAPIGateway.Session.Factions.TryGetFactionById(owningPCId);
             OwningNPCTag = owningNPCTag;
         }
 
@@ -131,7 +147,7 @@ namespace GVA.NPCControl
             MyAPIGateway.Utilities.SetVariable($"{ColorFaction}{SharedConstants.CivilianStr}", Civilian);
             MyAPIGateway.Utilities.SetVariable($"{ColorFaction}{SharedConstants.MilitaryStr}", Military);
             MyAPIGateway.Utilities.SetVariable($"{ColorFaction}{SharedConstants.CreditsStr}", UnspentUnits);
-            MyAPIGateway.Utilities.SetVariable($"{ColorFaction}{SharedConstants.OwnerStr}", OwningPCTag);
+            MyAPIGateway.Utilities.SetVariable($"{ColorFaction}{SharedConstants.OwnerId}", pcOwner?.FactionId ?? 0);
             MyAPIGateway.Utilities.SetVariable($"{ColorFaction}{SharedConstants.NPCStr}", OwningNPCTag);
         }
     }

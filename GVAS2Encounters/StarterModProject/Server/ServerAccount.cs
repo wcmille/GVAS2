@@ -1,5 +1,6 @@
 ﻿using Sandbox.ModAPI;
 using System;
+using System.Collections.Generic;
 using VRage.Game.ModAPI;
 using VRage.Utils;
 using VRageMath;
@@ -15,6 +16,7 @@ namespace GVA.NPCControl.Server
     {
         const double corruption = 0.9;
         public ServerLog AccountLog { get; private set; }
+        readonly List<IMyIdentity> identities = new List<IMyIdentity>();
 
         public ServerAccount(string color, ServerLog myLog) : base(color)
         {
@@ -24,7 +26,7 @@ namespace GVA.NPCControl.Server
             Incursions = incur;
         }
 
-        public ServerAccount(string owner, string npc, string f, int c, int m, double uu) : base(owner, npc, f, c, m, uu)
+        public ServerAccount(IMyFaction owner, string npc, string f, int c, int m, double uu) : base(owner, npc, f, c, m, uu)
         {
         }
 
@@ -166,6 +168,65 @@ namespace GVA.NPCControl.Server
         internal void Mayday(IMyCubeGrid grid)
         {
             AccountLog.Log(grid, Color.Green, "Mayday ");
+        }
+
+        internal void PlayerJoined(long playerId, IMyFaction toFaction)
+        {
+            //This could be any faction.
+            //Get the relationship of the new faction's founder to the npc faction.
+            //Set the faction member to that category.
+            var npcFactionId = MyAPIGateway.Session.Factions.TryGetFactionByTag(OwningNPCTag).FactionId;
+            var founderRep = MyAPIGateway.Session.Factions.GetReputationBetweenPlayerAndFaction(toFaction.FounderId, npcFactionId);
+
+            var rep = SharedConstants.EnemyRep;
+            if (founderRep >= SharedConstants.AlliedRep) rep = SharedConstants.AlliedRep;
+            else if (founderRep >= SharedConstants.DefaultRep) rep = SharedConstants.DefaultRep;
+
+            MyAPIGateway.Session.Factions.SetReputationBetweenPlayerAndFaction(playerId, npcFactionId, rep);
+        }
+
+        internal void PlayerLeft(long playerId)
+        {
+            var npcId = MyAPIGateway.Session.Factions.TryGetFactionByTag(OwningNPCTag).FactionId;
+            MyAPIGateway.Session.Factions.SetReputationBetweenPlayerAndFaction(playerId, npcId, SharedConstants.DefaultRep);
+        }
+
+        internal void FactionLeft()
+        {
+            //Maybe I don't need this if it throws everyone out of the faction, or causes the territory to reset.
+            //PC faction = null
+        }
+
+        internal void Peace(long otherFaction)
+        {
+            var theOtherFaction = MyAPIGateway.Session.Factions.TryGetFactionById(otherFaction);
+            var npcFactionId = MyAPIGateway.Session.Factions.TryGetFactionByTag(OwningNPCTag).FactionId;
+
+            foreach (var identity in theOtherFaction.Members.Keys)
+            {
+                ulong steamId = MyAPIGateway.Players.TryGetSteamId(identity);
+
+                if (steamId > 0)
+                {
+                    MyAPIGateway.Session.Factions.SetReputationBetweenPlayerAndFaction(identity, npcFactionId, SharedConstants.DefaultRep);
+                }
+            }
+        }
+
+        internal void War(long otherFaction)
+        {
+            var theOtherFaction = MyAPIGateway.Session.Factions.TryGetFactionById(otherFaction);
+            var npcFactionId = MyAPIGateway.Session.Factions.TryGetFactionByTag(OwningNPCTag).FactionId;
+
+            foreach (var identity in theOtherFaction.Members.Keys)
+            {
+                ulong steamId = MyAPIGateway.Players.TryGetSteamId(identity);
+
+                if (steamId > 0)
+                {
+                    MyAPIGateway.Session.Factions.SetReputationBetweenPlayerAndFaction(identity, npcFactionId, SharedConstants.EnemyRep);
+                }
+            }
         }
     }
 }

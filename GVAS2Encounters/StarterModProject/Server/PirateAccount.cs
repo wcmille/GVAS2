@@ -54,6 +54,14 @@ namespace GVA.NPCControl.Server
 
         public int Military { get; private set; }
 
+        public IMyFaction OwningPCFaction
+        {
+            get
+            {
+                return null;
+            }
+        }
+
         public void AddUnspent(IMyFaction donor)
         {
             UnspentUnits += 1.0;

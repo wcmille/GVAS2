@@ -38,6 +38,14 @@ namespace GVA.NPCControl.Client
         public int Military { get; private set; }
         public double UnspentUnits { get; private set; }
 
+        public IMyFaction OwningPCFaction
+        {
+            get
+            {
+                return null;
+            }
+        }
+
         public ClientPirateAccount()
         {
             ColorFaction = SharedConstants.BlackFactionColor;

@@ -12,7 +12,7 @@ using VRageMath;
 
 namespace GVA.NPCControl.Client
 {
-    [MyTextSurfaceScript("NPCManagementTSS", "NPC Management")]
+    [MyTextSurfaceScript("TSS_NPCManagement", "GVA NPC Management")]
     public class BaseManagementTSS : MyTSSCommon
     {
         #region Copied From SatdishLogic

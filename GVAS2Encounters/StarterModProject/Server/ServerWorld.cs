@@ -36,6 +36,46 @@ namespace GVA.NPCControl.Server
             FetchClaimBlocks();
             blueClaimBlock = GetClaimBlockByColor(SharedConstants.BlueFactionColor);
             redClaimBlock = GetClaimBlockByColor(SharedConstants.RedFactionColor);
+
+            MyAPIGateway.Session.Factions.FactionStateChanged += Factions_FactionStateChanged;
+        }
+
+        internal void Factions_FactionStateChanged(MyFactionStateChange action, long fromFactionId, long toFactionId, long playerId, long senderId)
+        {
+            foreach (var faction in list)
+            {
+                ServerAccount sf = faction as ServerAccount;
+                if (sf != null && sf.OwningPCFaction != null)
+                {
+                    //Only get here if PlayerFaction, owned by a PC
+                    if (action == MyFactionStateChange.FactionMemberAcceptJoin)
+                    {
+                        var toFaction = MyAPIGateway.Session.Factions.TryGetFactionById(toFactionId);
+                        sf.PlayerJoined(playerId, toFaction);
+                    }
+                    //Here if the faction change includes one of the owning factions.
+                    else if (sf.OwningPCFaction.FactionId == fromFactionId || sf.OwningPCFaction.FactionId == toFactionId)
+                    {
+                        if (action == MyFactionStateChange.FactionMemberLeave || action == MyFactionStateChange.FactionMemberKick)
+                        {
+                            sf.PlayerLeft(playerId);
+                        }
+                        else if (action == MyFactionStateChange.RemoveFaction)
+                        {
+                            //Ask red and blue fact: Did PC faction just poof?
+                            sf.FactionLeft();
+                        }
+                        else if (action == MyFactionStateChange.AcceptPeace)
+                        {
+                            sf.Peace(fromFactionId ^ toFactionId ^ sf.OwningPCFaction.FactionId);
+                        }
+                        else if (action == MyFactionStateChange.DeclareWar)
+                        {
+                            sf.War(fromFactionId ^ toFactionId ^ sf.OwningPCFaction.FactionId);
+                        }
+                    }
+                }
+            }
         }
 
         private IMyCubeGrid GetClaimBlockByColor(string color)
@@ -53,6 +93,7 @@ namespace GVA.NPCControl.Server
 
         public void Dispose()
         {
+            MyAPIGateway.Session.Factions.FactionStateChanged -= Factions_FactionStateChanged;
             if (blueClaimBlock != null)
             {
                 blueClaimBlock.OnBlockOwnershipChanged -= ClaimBlock_OnBlockOwnershipChanged;
@@ -85,9 +126,9 @@ namespace GVA.NPCControl.Server
         {
             var ownerID = claimBlockGrid.BigOwners.First();
             var faction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(ownerID);
-            var tag = faction.Tag;
+            var factionId = faction.FactionId;
             //MyLog.Default.WriteLineAndConsole($"SATDISH: Owners: {ownerID} {blueFaction.Name} {blueTag}");
-            MyAPIGateway.Utilities.SetVariable($"{color}{SharedConstants.OwnerStr}", tag);
+            MyAPIGateway.Utilities.SetVariable($"{color}{SharedConstants.OwnerId}", factionId);
         }
 
         private void ClaimBlock_OnBlockOwnershipChanged(IMyCubeGrid obj)
