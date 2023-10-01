@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using VRage.Utils;
 
 namespace GVA.NPCControl.Client
 {
@@ -9,12 +11,39 @@ namespace GVA.NPCControl.Client
 
         public ClientWorld(Client client)
         {
-            var blue = new ClientAccount(SharedConstants.BlueFactionColor);
-            list.Add(blue);
-            var red = new ClientAccount(SharedConstants.RedFactionColor);
-            list.Add(red);
-            black = new ClientPirateAccount();
-            list.Add(black);
+            try
+            {
+                var blue = new ClientAccount(SharedConstants.BlueFactionColor);
+                list.Add(blue);
+            }
+            catch(Exception ex)
+            {
+                MyLog.Default.WriteLine("GVAS2: Failed to make blue.");
+                MyLog.Default.WriteLine(ex.Message);
+                MyLog.Default.WriteLine(ex.StackTrace);
+            }
+            try
+            {
+                var red = new ClientAccount(SharedConstants.RedFactionColor);
+                list.Add(red);
+            }
+            catch(Exception ex)
+            {
+                MyLog.Default.WriteLine("GVAS2: Failed to make red.");
+                MyLog.Default.WriteLine(ex.Message);
+                MyLog.Default.WriteLine(ex.StackTrace);
+            }
+            try
+            {
+                black = new ClientPirateAccount();
+                list.Add(black);
+            }
+            catch (Exception ex)
+            {
+                MyLog.Default.WriteLine("GVAS2: Failed to make pirate.");
+                MyLog.Default.WriteLine(ex.Message);
+                MyLog.Default.WriteLine(ex.StackTrace);
+            }
 
             this.client = client;
         }

@@ -21,6 +21,8 @@ namespace GVA.NPCControl.Server
 
         public void Log(IMyCubeGrid grid, Color gpsColor, string formatter)
         {
+            if (grid == null) throw new ArgumentNullException(nameof(grid));
+            if (formatter == null) throw new ArgumentNullException(nameof(formatter));
             var pos = grid.GetPosition();
             string name = grid.CustomName.Remove(0, 6);
             LogText += WriteLogLine(gpsColor, formatter+name, pos);

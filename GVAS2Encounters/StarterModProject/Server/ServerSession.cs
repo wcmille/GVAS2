@@ -187,7 +187,7 @@ namespace GVA.NPCControl.Server
             else if (action == "GVA-Action-API-Mayday")
             {
                 var acct = GetAccountFromRC(rc);
-                (acct as ServerAccount)?.Mayday(target as IMyCubeGrid);
+                (acct as ServerAccount)?.Mayday(rc.CubeGrid);
             }
         }
 

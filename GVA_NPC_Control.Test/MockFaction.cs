@@ -1,4 +1,5 @@
-﻿using VRage.Game;
+﻿using System.Collections.Generic;
+using VRage.Game;
 using VRage.Game.ModAPI;
 using VRageMath;
 
@@ -6,6 +7,10 @@ namespace GVA_NPC_Control.Test
 {
     public class MockFaction : IMyFaction
     {
+        public MockFaction() 
+        { 
+            Members = new Dictionary<long, MyFactionMember>();
+        }
         public long FactionId { get; set; }
 
         public string Tag { get; set; }

@@ -81,7 +81,7 @@ namespace GVA.NPCControl.Server
         private IMyCubeGrid GetClaimBlockByColor(string color)
         {
             var claimBlockGrid = GetClaimBlockGrid(color);
-            if (claimBlockGrid == null) MyLog.Default.WriteLine("SATDISH: {color} Territory Grid Not Found.");
+            if (claimBlockGrid == null) MyLog.Default.WriteLine($"SATDISH: {color} Territory Grid Not Found.");
             else
             {
                 WriteOwner(claimBlockGrid, color);

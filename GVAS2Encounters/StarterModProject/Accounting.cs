@@ -15,6 +15,7 @@ namespace GVA.NPCControl
         const double timePeriodConst = 0.333333;
         const double pirateFactor = 0.006667;
         IMyFaction pcOwner;
+        protected IMyFaction npcOwner;
 
         public Accounting(string color)
         {
@@ -34,17 +35,18 @@ namespace GVA.NPCControl
             Military = mil;
             UnspentUnits = uu;
             pcOwner = MyAPIGateway.Session.Factions.TryGetFactionById(owningPCFactionId);
-            OwningNPCTag = owningNPCTag;
+            npcOwner = MyAPIGateway.Session.Factions.TryGetFactionByTag(owningNPCTag);
+            //OwningNPCTag = owningNPCTag;
         }
 
-        public Accounting(IMyFaction pcOwner, string npc, string color, int c, int m, double uu)
+        public Accounting(IMyFaction pcOwner, IMyFaction npc, string color, int c, int m, double uu)
         {
             this.pcOwner = pcOwner;
             ColorFaction = color;
             Civilian = c;
             Military = m;
             UnspentUnits = uu;
-            OwningNPCTag = npc;
+            npcOwner = npc;
         }
 
         public int Civilian { get; protected set; }
@@ -59,7 +61,13 @@ namespace GVA.NPCControl
                 return pcOwner?.Tag ?? "SPRT";
             }
         }
-        public string OwningNPCTag { get; private set; }
+        public string OwningNPCTag
+        {
+            get 
+            {
+                return npcOwner?.Tag;
+            }
+        }
 
         public IMyFaction OwningPCFaction
         {
@@ -139,7 +147,7 @@ namespace GVA.NPCControl
             Military = mil;
             UnspentUnits = uu;
             pcOwner = MyAPIGateway.Session.Factions.TryGetFactionById(owningPCId);
-            OwningNPCTag = owningNPCTag;
+            npcOwner = MyAPIGateway.Session.Factions.TryGetFactionByTag(owningNPCTag);
         }
 
         public virtual void Write()

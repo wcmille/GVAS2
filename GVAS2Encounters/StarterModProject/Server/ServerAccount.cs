@@ -1,6 +1,5 @@
 ﻿using Sandbox.ModAPI;
 using System;
-using System.Collections.Generic;
 using VRage.Game.ModAPI;
 using VRage.Utils;
 using VRageMath;
@@ -16,7 +15,7 @@ namespace GVA.NPCControl.Server
     {
         const double corruption = 0.9;
         public ServerLog AccountLog { get; private set; }
-        readonly List<IMyIdentity> identities = new List<IMyIdentity>();
+        //readonly List<IMyIdentity> identities = new List<IMyIdentity>();
 
         public ServerAccount(string color, ServerLog myLog) : base(color)
         {
@@ -26,7 +25,7 @@ namespace GVA.NPCControl.Server
             Incursions = incur;
         }
 
-        public ServerAccount(IMyFaction owner, string npc, string f, int c, int m, double uu) : base(owner, npc, f, c, m, uu)
+        public ServerAccount(IMyFaction owner, IMyFaction npc, string f, int c, int m, double uu) : base(owner, npc, f, c, m, uu)
         {
         }
 
@@ -38,22 +37,31 @@ namespace GVA.NPCControl.Server
         }
 
         private void ResolveReputation(int boostCiv, int boostMil)
-        { 
-            //Get players in faction
-
-            //For each player in faction...
-                //If you are on bad terms with Silverbranch, pay debt.
+        {
+            if (OwningPCFaction != null)
+            {
+                int minRep = 1500;
+                foreach (var player in OwningPCFaction?.Members.Keys)
+                {
+                    //If you are on bad terms with Silverbranch, pay debt.
                     //Write in log.
-                //If you are on bad terms with color account, pay debt.
+                    //If you are on bad terms with color account, pay debt.
                     //Write in log.
-                //Calc minimum reputation.
+                    var rep = MyAPIGateway.Session.Factions.GetReputationBetweenPlayerAndFaction(player, npcOwner.FactionId);
+                    //AccountLog.Log($"{MyAPIGateway.Session.}");
+                    minRep = Math.Min(rep, minRep);
+                }
 
-            //Reduce minimum reputation (multiply by 0.9)
-            //rep += Calculate boost from entities.
-            //rep += Calculate boost from unused civilian points.
-            //new rep = minRep + rep;
-            //For each player in faction...
-                //rep = max(currentRep, newRep)
+                minRep *= 9;
+                minRep /= 10;
+
+                minRep = Math.Min(6 * (Civilian + boostCiv) + minRep, 1500);
+                foreach (var player in OwningPCFaction.Members.Keys)
+                {
+                    var rep = MyAPIGateway.Session.Factions.GetReputationBetweenPlayerAndFaction(player, npcOwner.FactionId);
+                    MyAPIGateway.Session.Factions.SetReputationBetweenPlayerAndFaction(player, npcOwner.FactionId, Math.Max(rep, minRep));
+                }
+            }
         }
 
         private void ResolveEconomy(int boostCiv, int boostMil)
@@ -143,6 +151,7 @@ namespace GVA.NPCControl.Server
             {
                 MyLog.Default?.WriteLine("SATDISH: Error Null Pirates");
             }
+            ResolveReputation(boostC, boostM);
             ResolveEconomy(boostC, boostM);
             AccountLog?.Log(Log());
         }

@@ -28,7 +28,7 @@ namespace GVA.NPCControl.Server
         public void WriteToClient(Accounting acct)
         {
             var faction = MyAPIGateway.Session.Factions.TryGetFactionByTag(acct.OwningPCTag);
-            FactionValuesPacket packet = new FactionValuesPacket(faction?.FactionId ?? 0, acct.ColorFaction, acct.Civilian, acct.Military, acct.UnspentUnits);
+            FactionValuesPacket packet = new FactionValuesPacket(acct);
             networking.RelayToClients(packet);
         }
     }
