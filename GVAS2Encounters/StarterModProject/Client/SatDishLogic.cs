@@ -34,10 +34,10 @@ namespace GVA.NPCControl.Client
                 }
                 else
                 {
-                    MyLog.Default.WriteLine("SATDISH: UpdateOnceStart - IsDedicated");
+                    MyLog.Default.WriteLine($"{SharedConstants.ModName}: UpdateOnceStart - IsDedicated");
                 }
                 controlsInit = true;
-                MyLog.Default.WriteLine($"SATDISH: UpdateOnceFinish");
+                MyLog.Default.WriteLine($"{SharedConstants.ModName}: UpdateOnceFinish");
             }
             var dish = Entity as IMyRadioAntenna;
             dish.AppendingCustomInfo += Dish_AppendingCustomInfo;

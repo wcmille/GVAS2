@@ -14,6 +14,7 @@ namespace GVA.NPCControl.Server
     public class ServerAccount : Accounting, IServerAccount
     {
         const double corruption = 0.9;
+        const int maxRep = 1500;
         public ServerLog AccountLog { get; private set; }
         //readonly List<IMyIdentity> identities = new List<IMyIdentity>();
 
@@ -38,9 +39,11 @@ namespace GVA.NPCControl.Server
 
         private void ResolveReputation(int boostCiv, int boostMil)
         {
+            const double friction = 0.95;
+            const int civMult = 2;
             if (OwningPCFaction != null)
             {
-                int minRep = 1500;
+                int minRep = maxRep;
                 foreach (var player in OwningPCFaction?.Members.Keys)
                 {
                     //If you are on bad terms with Silverbranch, pay debt.
@@ -52,10 +55,13 @@ namespace GVA.NPCControl.Server
                     minRep = Math.Min(rep, minRep);
                 }
 
-                minRep *= 9;
-                minRep /= 10;
+                //Pay Debts
+                { 
+                }
 
-                minRep = Math.Min(6 * (Civilian + boostCiv) + minRep, 1500);
+                minRep = (int)((minRep - SharedConstants.AlliedRep) * friction + SharedConstants.AlliedRep);
+
+                minRep = Math.Min(civMult * (Civilian + boostCiv) + minRep, maxRep);
                 foreach (var player in OwningPCFaction.Members.Keys)
                 {
                     var rep = MyAPIGateway.Session.Factions.GetReputationBetweenPlayerAndFaction(player, npcOwner.FactionId);
@@ -67,7 +73,6 @@ namespace GVA.NPCControl.Server
         private void ResolveEconomy(int boostCiv, int boostMil)
         {
             double netIncome = CalcNetIncome(boostCiv, boostMil);
-
             UnspentUnits += netIncome;
             if (UnspentUnits < 0.0)
             {
@@ -149,7 +154,7 @@ namespace GVA.NPCControl.Server
             }
             else
             {
-                MyLog.Default?.WriteLine("SATDISH: Error Null Pirates");
+                MyLog.Default?.WriteLine($"{SharedConstants.ModName}: Error Null Pirates");
             }
             ResolveReputation(boostC, boostM);
             ResolveEconomy(boostC, boostM);

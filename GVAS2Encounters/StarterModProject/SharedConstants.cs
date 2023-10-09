@@ -5,6 +5,8 @@ namespace GVA.NPCControl
 {
     internal class SharedConstants
     {
+        public static readonly string ModName = "GVAS2";
+
         public static readonly string CivilianStr = "Civilian";
         public static readonly string MilitaryStr = "Military";
         public static readonly string CreditsStr = "Credits";

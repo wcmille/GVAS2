@@ -81,7 +81,7 @@ namespace GVA.NPCControl.Server
         private IMyCubeGrid GetClaimBlockByColor(string color)
         {
             var claimBlockGrid = GetClaimBlockGrid(color);
-            if (claimBlockGrid == null) MyLog.Default.WriteLine($"SATDISH: {color} Territory Grid Not Found.");
+            if (claimBlockGrid == null) MyLog.Default.WriteLine($"{SharedConstants.ModName}: {color} Territory Grid Not Found.");
             else
             {
                 WriteOwner(claimBlockGrid, color);
@@ -127,7 +127,7 @@ namespace GVA.NPCControl.Server
             var ownerID = claimBlockGrid.BigOwners.First();
             var faction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(ownerID);
             var factionId = faction.FactionId;
-            //MyLog.Default.WriteLineAndConsole($"SATDISH: Owners: {ownerID} {blueFaction.Name} {blueTag}");
+            //MyLog.Default.WriteLineAndConsole($"{SharedConstants.ModName}: Owners: {ownerID} {blueFaction.Name} {blueTag}");
             MyAPIGateway.Utilities.SetVariable($"{color}{SharedConstants.OwnerId}", factionId);
         }
 
@@ -138,7 +138,7 @@ namespace GVA.NPCControl.Server
             else if (obj.CustomName.Contains(SharedConstants.RedFactionColor)) color = SharedConstants.RedFactionColor;
             else
             {
-                MyLog.Default.WriteLine($"SATDISH: Couldn't determine color of territory marker.");
+                MyLog.Default.WriteLine($"{SharedConstants.ModName}: Couldn't determine color of territory marker.");
                 return;
             }
 
@@ -174,7 +174,7 @@ namespace GVA.NPCControl.Server
 
             if (names.Count == 0)
             {
-                MyLog.Default.WriteLine("SATDISH: No Territory Grids Found.");
+                MyLog.Default.WriteLine("{SharedConstants.ModName}: No Territory Grids Found.");
             }
         }
 

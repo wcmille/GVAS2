@@ -122,7 +122,7 @@ namespace GVA.NPCControl.Server
         public bool Fight()
         {
             int result = r.Next(4);
-            if (result <= 1) return true; //opponent lost.
+            if (result == 0) return true; //opponent lost.
             if (result == 3) Military--;
             return false;
         }
