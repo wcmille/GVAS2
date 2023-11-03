@@ -78,6 +78,9 @@
       </Id>
       <Description>
         [RivalAI Action]
+
+        [DisableTriggers:true]
+        [DisableTriggerNames:GVA-Trigger-StandardCompromised]
       </Description>
     </EntityComponent>
   </EntityComponents>

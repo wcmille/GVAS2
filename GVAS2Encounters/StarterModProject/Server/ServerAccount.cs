@@ -32,6 +32,26 @@ namespace GVA.NPCControl.Server
 
         public int Incursions { get; private set; }
 
+        public override bool BuyCivilian(int amt = 1)
+        {
+            var result = base.BuyCivilian(amt);
+            if (result)
+            {
+                AccountLog.Log($"Bought {SharedConstants.CivilianStr} {amt}.");
+            }
+            return result;
+        }
+
+        public override bool BuyMilitary(int amt = 1)
+        {
+            var result = base.BuyMilitary(amt);
+            if (result)
+            {
+                AccountLog.Log($"Bought {SharedConstants.MilitaryStr} {amt}.");
+            }
+            return result;
+        }
+
         private string Log()
         {
             return $"Civ: {Civilian} Mil: {Military} Unspent: {UnspentUnits:F2}";
@@ -44,7 +64,7 @@ namespace GVA.NPCControl.Server
             if (OwningPCFaction != null)
             {
                 int minRep = maxRep;
-                foreach (var player in OwningPCFaction?.Members.Keys)
+                foreach (var player in OwningPCFaction.Members.Keys)
                 {
                     //If you are on bad terms with Silverbranch, pay debt.
                     //Write in log.
@@ -52,6 +72,7 @@ namespace GVA.NPCControl.Server
                     //Write in log.
                     var rep = MyAPIGateway.Session.Factions.GetReputationBetweenPlayerAndFaction(player, npcOwner.FactionId);
                     //AccountLog.Log($"{MyAPIGateway.Session.}");
+                    //MyLog.Default.WriteLineAndConsole($"{SharedConstants.ModName}: REZ - {player} {rep} {minRep}");
                     minRep = Math.Min(rep, minRep);
                 }
 
@@ -65,6 +86,7 @@ namespace GVA.NPCControl.Server
                 foreach (var player in OwningPCFaction.Members.Keys)
                 {
                     var rep = MyAPIGateway.Session.Factions.GetReputationBetweenPlayerAndFaction(player, npcOwner.FactionId);
+                    //MyLog.Default.WriteLineAndConsole($"{SharedConstants.ModName}: REZ2 - {player} {rep} {minRep}");
                     MyAPIGateway.Session.Factions.SetReputationBetweenPlayerAndFaction(player, npcOwner.FactionId, Math.Max(rep, minRep));
                 }
             }

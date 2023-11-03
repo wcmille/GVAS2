@@ -219,21 +219,13 @@ namespace GVA.NPCControl.Server
         {
             try
             {
-                IAccount acct = GetAccountFromGrid(grid);
-                (acct as ServerAccount)?.LogSpawn(grid);
+                //IAccount acct = GetAccountFromGrid(grid);
+                //(acct as ServerAccount)?.LogSpawn(grid);
             }
             catch (Exception ex)
             {
-                MyLog.Default.WriteLineAndConsole($"GVA_NPC_Control: ERROR - {ex.Message}");
+                MyLog.Default.WriteLineAndConsole($"{SharedConstants.ModName}: ERROR - {ex.Message}");
             }
-        }
-
-        private IAccount GetAccountFromGrid(IMyCubeGrid grid)
-        {
-            var owner = grid.BigOwners.FirstOrDefault();
-            var faction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(owner);
-            var acct = world.GetAccountByNPCOwner(faction.Tag);
-            return acct;
         }
 
         private IAccount GetAccountFromRC(IMyRemoteControl rc)

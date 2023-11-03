@@ -9,7 +9,7 @@ namespace GVA.NPCControl.Client
         void Display(StringBuilder builder);
     }
 
-    internal class ClientAccount : Accounting, IZoneFaction, IClientAccount
+    internal class ClientAccount : Accounting, IClientAccount
     {
         public ClientAccount(string color) : base(color)
         {

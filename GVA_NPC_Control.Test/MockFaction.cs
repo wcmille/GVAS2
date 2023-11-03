@@ -1,15 +1,16 @@
 ﻿using System.Collections.Generic;
 using VRage.Game;
 using VRage.Game.ModAPI;
+using VRage.GameServices;
 using VRageMath;
 
 namespace GVA_NPC_Control.Test
 {
     public class MockFaction : IMyFaction
     {
-        public MockFaction() 
-        { 
-            Members = new Dictionary<long, MyFactionMember>();
+        public MockFaction(Dictionary<long, MyFactionMember> members = null) 
+        {
+            Members = members ?? new Dictionary<long, MyFactionMember>();
         }
         public long FactionId { get; set; }
 

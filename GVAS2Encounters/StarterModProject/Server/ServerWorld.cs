@@ -131,8 +131,18 @@ namespace GVA.NPCControl.Server
             MyAPIGateway.Utilities.SetVariable($"{color}{SharedConstants.OwnerId}", factionId);
         }
 
+        private IMyFaction GetFactionFromGrid(IMyCubeGrid grid)
+        {
+            var owner = grid.BigOwners.FirstOrDefault();
+            var faction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(owner);
+            return faction;
+            //var acct = GetAccountByNPCOwner(faction.Tag);
+            //return acct;
+        }
+
         private void ClaimBlock_OnBlockOwnershipChanged(IMyCubeGrid obj)
         {
+            //MyLog.Default.WriteLine($"{SharedConstants.ModName}: Claim Block Owner changed.");
             string color;
             if (obj.CustomName.Contains(SharedConstants.BlueFactionColor)) color = SharedConstants.BlueFactionColor;
             else if (obj.CustomName.Contains(SharedConstants.RedFactionColor)) color = SharedConstants.RedFactionColor;
@@ -142,27 +152,32 @@ namespace GVA.NPCControl.Server
                 return;
             }
 
-            WriteOwner(obj, color);
-            var acct = GetAccountByColor(color);
-            acct.Read();
-            Write(acct);
-
-            var faction = MyAPIGateway.Session.Factions.TryGetFactionByTag(acct.OwningNPCTag);
-
-            var identities = new List<IMyIdentity>();
-            int defaultRep = SharedConstants.DefaultRep;
-            MyAPIGateway.Players.GetAllIdentites(identities);
-
-            foreach (var identity in identities)
+            //if the obj major grid owner faction id doesn't match the sandbox, it changed.
+            var oldAcct = GetAccountByColor(color);
+            if (oldAcct.OwningPCFaction != GetFactionFromGrid(obj))
             {
-                defaultRep = SharedConstants.DefaultRep;
-                ulong steamId = MyAPIGateway.Players.TryGetSteamId(identity.IdentityId);
+                WriteOwner(obj, color);
+                var acct = GetAccountByColor(color);
+                acct.Read();
+                Write(acct);
 
-                if (steamId > 0)
+                var faction = MyAPIGateway.Session.Factions.TryGetFactionByTag(acct.OwningNPCTag);
+
+                var identities = new List<IMyIdentity>();
+                int defaultRep = SharedConstants.DefaultRep;
+                MyAPIGateway.Players.GetAllIdentites(identities);
+
+                foreach (var identity in identities)
                 {
-                    var playerFaction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(identity.IdentityId);
-                    if (playerFaction != null && playerFaction.Tag == acct.OwningPCTag) defaultRep = SharedConstants.AlliedRep;
-                    MyAPIGateway.Session.Factions.SetReputationBetweenPlayerAndFaction(identity.IdentityId, faction.FactionId, defaultRep);
+                    defaultRep = SharedConstants.DefaultRep;
+                    ulong steamId = MyAPIGateway.Players.TryGetSteamId(identity.IdentityId);
+
+                    if (steamId > 0)
+                    {
+                        var playerFaction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(identity.IdentityId);
+                        if (playerFaction != null && playerFaction.Tag == acct.OwningPCTag) defaultRep = SharedConstants.AlliedRep;
+                        MyAPIGateway.Session.Factions.SetReputationBetweenPlayerAndFaction(identity.IdentityId, faction.FactionId, defaultRep);
+                    }
                 }
             }
         }

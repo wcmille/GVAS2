@@ -102,7 +102,7 @@ namespace GVA.NPCControl
             return false;
         }
 
-        public bool BuyCivilian(int amt = 1)
+        public virtual bool BuyCivilian(int amt = 1)
         {
             if (UnspentUnits >= amt)
             {
@@ -113,7 +113,7 @@ namespace GVA.NPCControl
             else return false;
         }
 
-        public bool BuyMilitary(int amt = 1)
+        public virtual bool BuyMilitary(int amt = 1)
         {
             if (UnspentUnits >= amt)
             {
