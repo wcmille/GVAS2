@@ -35,7 +35,8 @@ namespace GVA.NPCControl
             Military = mil;
             UnspentUnits = uu;
             pcOwner = MyAPIGateway.Session.Factions.TryGetFactionById(owningPCFactionId);
-            npcOwner = MyAPIGateway.Session.Factions.TryGetFactionByTag(owningNPCTag);
+            
+            npcOwner = owningNPCTag == null ? null : MyAPIGateway.Session.Factions.TryGetFactionByTag(owningNPCTag);
             //OwningNPCTag = owningNPCTag;
         }
 

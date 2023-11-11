@@ -25,6 +25,24 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
+        <SubtypeId>SLVG-Trigger-Merchant-RefreshStore</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Trigger]
+
+        [UseTrigger:true]
+        [Type:Timer]
+        [MinCooldownMs:600000]
+        [MaxCooldownMs:900000]
+        [StartsReady:true]
+
+        [Actions:GVA-Action-InitMerchantStores]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
         <SubtypeId>GVA-Action-InitMerchantStores</SubtypeId>
       </Id>
       <Description>

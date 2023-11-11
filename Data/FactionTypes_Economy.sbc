@@ -48,10 +48,7 @@
             <PrefabName>Rhino Jumptug</PrefabName>
             <PrefabName>Sparrowhawk Corvette</PrefabName>
         </GridsForSale>
-
         <MaxContractCount>15</MaxContractCount>
-
     </Definition>
-
 </Definitions>
 

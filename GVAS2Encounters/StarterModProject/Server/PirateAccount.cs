@@ -26,9 +26,11 @@ namespace GVA.NPCControl.Server
         const int pirateRepDrop = 25;
         const int alliedBound = 500;
         const int pirateRepThreshold = -750; //Natural Decay won't make your rep worse than this.
+        ServerLog log;
 
-        public PirateAccount(int seed = 0)
+        public PirateAccount(ServerLog pirateLog, int seed = 0)
         {
+            this.log = pirateLog;
             faction = MyAPIGateway.Session.Factions.TryGetFactionByTag("SPRT");
 
             if (seed != 0) { r = new Random(seed); }
@@ -73,6 +75,7 @@ namespace GVA.NPCControl.Server
                 var rep = MyAPIGateway.Session.Factions.GetReputationBetweenPlayerAndFaction(playerId, faction.FactionId);
                 MyAPIGateway.Session.Factions.SetReputationBetweenPlayerAndFaction(playerId, faction.FactionId, rep + (alliedBound - rep) / (2* memberCount));
             }
+            log?.Log($"{faction.Tag} funded pirates.");
         }
 
         public bool RemoveUnspent()
@@ -112,11 +115,6 @@ namespace GVA.NPCControl.Server
         {
             MyAPIGateway.Utilities.SetVariable($"{ColorFaction}{SharedConstants.CreditsStr}", UnspentUnits);
             MyAPIGateway.Utilities.SetVariable($"{ColorFaction}{SharedConstants.MilitaryStr}", Military);
-        }
-
-        public string Log()
-        {
-            return "--";
         }
 
         public bool Fight()

@@ -30,6 +30,7 @@
 
         [Triggers:GVA-Trigger-InitMerchantStores]
         [Triggers:SLVG-Trigger-CreateSafeZone]
+        [Triggers:SLVG-Trigger-Merchant-RefreshStore]
         [Triggers:GVA-Trigger-CallSpaceCargoShipSuper]
       </Description>
     </EntityComponent>

@@ -89,6 +89,7 @@ namespace GVA.NPCControl.Server
                     //MyLog.Default.WriteLineAndConsole($"{SharedConstants.ModName}: REZ2 - {player} {rep} {minRep}");
                     MyAPIGateway.Session.Factions.SetReputationBetweenPlayerAndFaction(player, npcOwner.FactionId, Math.Max(rep, minRep));
                 }
+                if (minRep >= maxRep) AccountLog.Log($"{OwningPCFaction.Tag} has won.");
             }
         }
 

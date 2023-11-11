@@ -38,8 +38,6 @@
         [GravityCargoShipChance:10]
         [LunarCargoShip:true]
         [LunarCargoShipChance:30]
-        [SpaceCargoShip:true]
-        [SpaceCargoShipChance:1]
 
         [UseThreatLevelCheck:true]
         [ThreatScoreMinimum:500]
@@ -62,8 +60,6 @@
         [GravityCargoShipChance:50]
         [LunarCargoShip:true]
         [LunarCargoShipChance:75]
-        [SpaceCargoShip:true]
-        [SpaceCargoShipChance:10]
 
         [UseThreatLevelCheck:true]
         [ThreatScoreMinimum:200]

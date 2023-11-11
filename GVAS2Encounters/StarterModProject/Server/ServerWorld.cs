@@ -29,7 +29,7 @@ namespace GVA.NPCControl.Server
             list.Add(blue);
             var red = new ServerAccount(SharedConstants.RedFactionColor, redLog);
             list.Add(red);
-            black = new PirateAccount();
+            black = new PirateAccount(new ServerLog(SharedConstants.BlackFactionColor));
             list.Add(black);
 
             this.server = server;

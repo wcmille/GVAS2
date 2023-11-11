@@ -18,7 +18,7 @@ namespace GVA.NPCControl.Client
             }
             catch(Exception ex)
             {
-                MyLog.Default.WriteLine("GVAS2: Failed to make blue.");
+                MyLog.Default.WriteLine($"{SharedConstants.ModName}: Failed to make {SharedConstants.BlueFactionColor}.");
                 MyLog.Default.WriteLine(ex.Message);
                 MyLog.Default.WriteLine(ex.StackTrace);
             }
@@ -29,7 +29,7 @@ namespace GVA.NPCControl.Client
             }
             catch(Exception ex)
             {
-                MyLog.Default.WriteLine("GVAS2: Failed to make red.");
+                MyLog.Default.WriteLine($"{SharedConstants.ModName}: Failed to make {SharedConstants.RedFactionColor}.");
                 MyLog.Default.WriteLine(ex.Message);
                 MyLog.Default.WriteLine(ex.StackTrace);
             }
@@ -40,7 +40,7 @@ namespace GVA.NPCControl.Client
             }
             catch (Exception ex)
             {
-                MyLog.Default.WriteLine("GVAS2: Failed to make pirate.");
+                MyLog.Default.WriteLine($"{SharedConstants.ModName}: Failed to make {SharedConstants.BlackFactionColor}.");
                 MyLog.Default.WriteLine(ex.Message);
                 MyLog.Default.WriteLine(ex.StackTrace);
             }
