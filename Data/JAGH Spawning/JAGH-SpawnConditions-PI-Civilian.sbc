@@ -36,7 +36,7 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Blue-BlueAlienRegion-Fixed-Civ-2-Spawns</SubtypeId>
+        <SubtypeId>Blue-BlueAlienRegion-PI-Spawns-Civ2</SubtypeId>
       </Id>
       <Description>
         [MES Spawn Conditions]
@@ -50,7 +50,7 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Blue-BlueAlienRegion-Fixed-Civ-5-Spawns</SubtypeId>
+        <SubtypeId>Blue-BlueAlienRegion-PI-Spawns-Civ5</SubtypeId>
       </Id>
       <Description>
         [MES Spawn Conditions]
@@ -64,7 +64,7 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Blue-BlueAlienRegion-Fixed-Civ-10-Spawns</SubtypeId>
+        <SubtypeId>Blue-BlueAlienRegion-PI-Spawns-Civ10</SubtypeId>
       </Id>
       <Description>
         [MES Spawn Conditions]
@@ -78,7 +78,7 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Blue-BlueAlienRegion-Fixed-Civ-20-Spawns</SubtypeId>
+        <SubtypeId>Blue-BlueAlienRegion-PI-Spawns-Civ20</SubtypeId>
       </Id>
       <Description>
         [MES Spawn Conditions]
@@ -92,7 +92,7 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Blue-BlueAlienRegion-Fixed-Civ-40-Spawns</SubtypeId>
+        <SubtypeId>Blue-BlueAlienRegion-PI-Spawns-Civ40</SubtypeId>
       </Id>
       <Description>
         [MES Spawn Conditions]

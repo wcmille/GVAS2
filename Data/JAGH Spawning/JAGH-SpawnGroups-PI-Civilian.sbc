@@ -11,9 +11,9 @@
         [Modular Encounters SpawnGroup]
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
-        [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
+        [ManipulationProfiles:GVA-JAGH-Manipulation-Std]
 
-        [SpawnConditionsProfiles:Red-RedAlienRegion-Fixed-Spawns]
+        [SpawnConditionsProfiles:Blue-BlueAlienRegion-Fixed-Spawns]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>20.0</Frequency>
@@ -24,7 +24,7 @@
             <Y>-10.0</Y>
             <Z>0.0</Z>
           </Position>
-          <Behaviour>KAJI-Behavior-PassiveCivilian</Behaviour>
+          <Behaviour>JAGH-Behavior-PassiveCivilian</Behaviour>
         </Prefab>
       </Prefabs>
     </SpawnGroup>
@@ -37,15 +37,15 @@
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
-        <SubtypeId>GVA-Red-PI-SurvivalShelter</SubtypeId>
+        <SubtypeId>GVA-Blue-PI-SurvivalShelter</SubtypeId>
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
-        [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
+        [ManipulationProfiles:GVA-JAGH-Manipulation-Std]
 
-        [SpawnConditionsProfiles:Red-RedAlienRegion-PI-Spawns-Civ1]
+        [SpawnConditionsProfiles:Blue-BlueAlienRegion-PI-Spawns-Civ1]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>5.0</Frequency>
@@ -56,7 +56,7 @@
             <Y>10.0</Y>
             <Z>0.0</Z>
           </Position>
-          <Behaviour>KAJI-Behavior-PassiveCivilian</Behaviour>
+          <Behaviour>JAGH-Behavior-PassiveCivilian</Behaviour>
           <BeaconText>Shelter</BeaconText>
         </Prefab>
       </Prefabs>
@@ -66,15 +66,15 @@
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
-        <SubtypeId>GVA-Red-PI-CountryHome</SubtypeId>
+        <SubtypeId>GVA-Blue-PI-CountryHome</SubtypeId>
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
-        [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
+        [ManipulationProfiles:GVA-JAGH-Manipulation-Std]
 
-        [SpawnConditionsProfiles:Red-RedAlienRegion-PI-Spawns-Civ1]
+        [SpawnConditionsProfiles:Blue-BlueAlienRegion-PI-Spawns-Civ1]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>5.0</Frequency>
@@ -85,7 +85,7 @@
             <Y>7.5</Y>
             <Z>0.0</Z>
           </Position>
-          <Behaviour>KAJI-Behavior-PassiveCivilian</Behaviour>
+          <Behaviour>JAGH-Behavior-PassiveCivilian</Behaviour>
           <BeaconText>Cabin</BeaconText>
         </Prefab>
       </Prefabs>
@@ -98,15 +98,15 @@
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
-        <SubtypeId>GVA-Red-PI-RadioTower</SubtypeId>
+        <SubtypeId>GVA-Blue-PI-RadioTower</SubtypeId>
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
-        [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
+        [ManipulationProfiles:GVA-JAGH-Manipulation-Std]
 
-        [SpawnConditionsProfiles:Red-RedAlienRegion-PI-Spawns-Civ5]
+        [SpawnConditionsProfiles:Blue-BlueAlienRegion-PI-Spawns-Civ5]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>5.0</Frequency>
@@ -117,7 +117,7 @@
             <Y>15.0</Y>
             <Z>0.0</Z>
           </Position>
-          <Behaviour>KAJI-Behavior-PassiveCivilian</Behaviour>
+          <Behaviour>JAGH-Behavior-PassiveCivilian</Behaviour>
           <BeaconText>Radio Tower</BeaconText>
         </Prefab>
       </Prefabs>
@@ -127,17 +127,17 @@
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
-        <SubtypeId>GVA-Red-PI-EconomicStations</SubtypeId>
+        <SubtypeId>GVA-Blue-PI-EconomicStations</SubtypeId>
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
-        [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
+        [ManipulationProfiles:GVA-JAGH-Manipulation-Std]
 
         [ManipulationProfiles:GVA-Common-Manipulation-MinorShipyardSetup]
 
-        [SpawnConditionsProfiles:Red-RedAlienRegion-PI-Spawns-Civ10]
+        [SpawnConditionsProfiles:Blue-BlueAlienRegion-PI-Spawns-Civ10]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>6.0</Frequency>
@@ -148,7 +148,7 @@
             <Y>16.5</Y>
             <Z>0.0</Z>
           </Position>
-          <Behaviour>KAJI-Behavior-PassiveCivilian</Behaviour>
+          <Behaviour>JAGH-Behavior-PassiveCivilian</Behaviour>
           <BeaconText>Shipyard</BeaconText>
         </Prefab>
       </Prefabs>
@@ -158,15 +158,15 @@
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
-        <SubtypeId>GVA-Red-PI-PermanentTown</SubtypeId>
+        <SubtypeId>GVA-Blue-PI-PermanentTown</SubtypeId>
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
-        [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
+        [ManipulationProfiles:GVA-JAGH-Manipulation-Std]
 
-        [SpawnConditionsProfiles:Red-RedAlienRegion-PI-Spawns-Civ20]
+        [SpawnConditionsProfiles:Blue-BlueAlienRegion-PI-Spawns-Civ20]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>20.0</Frequency>
@@ -178,7 +178,7 @@
             <Z>75.0</Z>
           </Position>
           <BeaconText>Greenhouse</BeaconText>
-          <Behaviour>KAJI-Behavior-PassiveCivilian</Behaviour>
+          <Behaviour>JAGH-Behavior-PassiveCivilian</Behaviour>
         </Prefab>
         <Prefab SubtypeId="[NPC] Snow Outpost">
           <Position>
@@ -187,7 +187,7 @@
             <Z>0.0</Z>
           </Position>
           <BeaconText>Outpost</BeaconText>
-          <Behaviour>KAJI-Behavior-PassiveCivilian</Behaviour>
+          <Behaviour>JAGH-Behavior-PassiveCivilian</Behaviour>
         </Prefab>
         <Prefab SubtypeId="[NPC] Snow SAM Battery">
           <Position>
@@ -196,7 +196,7 @@
             <Z>0.0</Z>
           </Position>
           <BeaconText>SAM</BeaconText>
-          <Behaviour>KAJI-Behavior-PassiveCivilian</Behaviour>
+          <Behaviour>JAGH-Behavior-PassiveCivilian</Behaviour>
         </Prefab>
       </Prefabs>
     </SpawnGroup>
@@ -205,15 +205,15 @@
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
-        <SubtypeId>GVA-Red-PI-PermanentCity</SubtypeId>
+        <SubtypeId>GVA-Blue-PI-PermanentCity</SubtypeId>
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
-        [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
+        [ManipulationProfiles:GVA-JAGH-Manipulation-Std]
 
-        [SpawnConditionsProfiles:Red-RedAlienRegion-PI-Spawns-Civ40]
+        [SpawnConditionsProfiles:Blue-BlueAlienRegion-PI-Spawns-Civ40]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>122.0</Frequency>
@@ -225,7 +225,7 @@
             <Z>0.0</Z>
           </Position>
           <BeaconText>City</BeaconText>
-          <Behaviour>KAJI-Behavior-PassiveCivilian</Behaviour>
+          <Behaviour>JAGH-Behavior-PassiveCivilian</Behaviour>
         </Prefab>
       </Prefabs>
     </SpawnGroup>

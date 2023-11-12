@@ -4,19 +4,6 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Red-RedAlienRegion-Fixed-Spawns</SubtypeId>
-      </Id>
-      <Description>
-        [MES Spawn Conditions]
-        [FactionOwner:KAJI]
-        [ZoneConditions:GVA-ZoneConditionProfile-RedZone]
-        [RotateInstallations:{X:0 Y:100 Z:0}]
-        [PlanetaryInstallation:true]
-      </Description>
-    </EntityComponent>
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
-        <TypeId>Inventory</TypeId>
         <SubtypeId>Red-RedAlienRegion-FixedSpace-Spawns</SubtypeId>
       </Id>
       <Description>

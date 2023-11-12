@@ -16,19 +16,5 @@
         [ZoneConditions:GVA-ZoneConditionProfile-RedZone]
       </Description>
     </EntityComponent>
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
-        <TypeId>Inventory</TypeId>
-        <SubtypeId>Red-RedAlienRegion-PI-Spawns-Civ1</SubtypeId>
-      </Id>
-      <Description>
-        [MES Spawn Conditions]
-        [PlanetaryInstallation:true]
-
-        [FactionOwner:KAJI]
-        [ZoneConditions:GVA-ZoneConditionProfile-RedZone]
-        [CustomApiConditions:RedCivMoreThan2]
-      </Description>
-    </EntityComponent>
   </EntityComponents>
 </Definitions>

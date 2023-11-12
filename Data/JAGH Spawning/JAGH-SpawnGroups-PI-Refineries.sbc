@@ -4,6 +4,36 @@
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
+        <SubtypeId>GVA-Blue-Civilian-Refinery</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ManipulationProfiles:GVA-JAGH-Manipulation-Std]
+        [ManipulationProfiles:GVA-Manipulation-Blue-ProductionName]
+
+        [ReplenishSystems:true]
+
+        [SpawnConditionsProfiles:Blue-BlueAlienRegion-PI-Spawns-Civ2]
+        [PersistentConditions:GVA-SpawnConditions-Snow]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>1.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="Brokk Mobile Refinery">
+          <Position>
+            <X>0.0</X>
+            <Y>15.00</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Behaviour>JAGH-Behavior-FixedCiv</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
         <SubtypeId>GVA-Blue-Civilian-Refinery-5</SubtypeId>
       </Id>
       <Description>
@@ -16,7 +46,7 @@
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
 
-        [SpawnConditionsProfiles:Blue-BlueAlienRegion-Fixed-Civ-5-Spawns]
+        [SpawnConditionsProfiles:Blue-BlueAlienRegion-PI-Spawns-Civ5]
         [PersistentConditions:GVA-SpawnConditions-Snow]
       </Description>
       <IsPirate>true</IsPirate>
@@ -48,7 +78,7 @@
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
 
-        [SpawnConditionsProfiles:Blue-BlueAlienRegion-Fixed-Civ-10-Spawns]
+        [SpawnConditionsProfiles:Blue-BlueAlienRegion-PI-Spawns-Civ10]
         [PersistentConditions:GVA-SpawnConditions-Snow]
       </Description>
       <IsPirate>true</IsPirate>
@@ -80,7 +110,7 @@
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
 
-        [SpawnConditionsProfiles:Blue-BlueAlienRegion-Fixed-Civ-20-Spawns]
+        [SpawnConditionsProfiles:Blue-BlueAlienRegion-PI-Spawns-Civ20]
         [PersistentConditions:GVA-SpawnConditions-Snow]
       </Description>
       <IsPirate>true</IsPirate>
@@ -112,7 +142,7 @@
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
 
-        [SpawnConditionsProfiles:Blue-BlueAlienRegion-Fixed-Civ-40-Spawns]
+        [SpawnConditionsProfiles:Blue-BlueAlienRegion-PI-Spawns-Civ40]
         [PersistentConditions:GVA-SpawnConditions-Snow]
       </Description>
       <IsPirate>true</IsPirate>

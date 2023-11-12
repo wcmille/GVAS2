@@ -57,12 +57,14 @@ namespace GVA.NPCControl.Server
                 mes.RegisterCustomSpawnCondition(reg, "BlueCivMoreThan10", null);
                 mes.RegisterCustomSpawnCondition(reg, "BlueCivMoreThan20", null);
                 mes.RegisterCustomSpawnCondition(reg, "BlueCivMoreThan40", null);
+                mes.RegisterCustomSpawnCondition(reg, "BlueCivMoreThan50", null);
 
                 mes.RegisterCustomSpawnCondition(reg, "RedCivMoreThan2", null);
                 mes.RegisterCustomSpawnCondition(reg, "RedCivMoreThan5", null);
                 mes.RegisterCustomSpawnCondition(reg, "RedCivMoreThan10", null);
                 mes.RegisterCustomSpawnCondition(reg, "RedCivMoreThan20", null);
                 mes.RegisterCustomSpawnCondition(reg, "RedCivMoreThan40", null);
+                mes.RegisterCustomSpawnCondition(reg, "RedCivMoreThan50", null);
 
                 mes.RegisterCustomSpawnCondition(reg, "BlueMilMoreThan1", null);
                 mes.RegisterCustomSpawnCondition(reg, "RedMilMoreThan1", null);
@@ -96,8 +98,8 @@ namespace GVA.NPCControl.Server
                 world = new ServerWorld(server);
                 world.Time();
 
-                Func<string, string, string, Vector3D, bool> bc2, bc5, bc10, bc20, bc40;
-                Func<string, string, string, Vector3D, bool> rc2, rc5, rc10, rc20, rc40;
+                Func<string, string, string, Vector3D, bool> bc2, bc5, bc10, bc20, bc40, bc50;
+                Func<string, string, string, Vector3D, bool> rc2, rc5, rc10, rc20, rc40, rc50;
 
                 //MyLog.Default.WriteLine($"Blue Registration {mes.MESApiReady}");
                 bc2 = (a, b, c, d) => CountersMoreThan(SharedConstants.BlueFactionColor, SharedConstants.CivilianStr, 2);
@@ -105,22 +107,26 @@ namespace GVA.NPCControl.Server
                 bc10 = (a, b, c, d) => CountersMoreThan(SharedConstants.BlueFactionColor, SharedConstants.CivilianStr, 10);
                 bc20 = (a, b, c, d) => CountersMoreThan(SharedConstants.BlueFactionColor, SharedConstants.CivilianStr, 20);
                 bc40 = (a, b, c, d) => CountersMoreThan(SharedConstants.BlueFactionColor, SharedConstants.CivilianStr, 40);
+                bc50 = (a, b, c, d) => CountersMoreThan(SharedConstants.BlueFactionColor, SharedConstants.CivilianStr, 50);
                 mes.RegisterCustomSpawnCondition(reg, "BlueCivMoreThan2", bc2);
                 mes.RegisterCustomSpawnCondition(reg, "BlueCivMoreThan5", bc5);
                 mes.RegisterCustomSpawnCondition(reg, "BlueCivMoreThan10", bc10);
                 mes.RegisterCustomSpawnCondition(reg, "BlueCivMoreThan20", bc20);
                 mes.RegisterCustomSpawnCondition(reg, "BlueCivMoreThan40", bc40);
+                mes.RegisterCustomSpawnCondition(reg, "BlueCivMoreThan50", bc50);
 
                 rc2 = (a, b, c, d) => CountersMoreThan(SharedConstants.RedFactionColor, SharedConstants.CivilianStr, 2);
                 rc5 = (a, b, c, d) => CountersMoreThan(SharedConstants.RedFactionColor, SharedConstants.CivilianStr, 5);
                 rc10 = (a, b, c, d) => CountersMoreThan(SharedConstants.RedFactionColor, SharedConstants.CivilianStr, 10);
                 rc20 = (a, b, c, d) => CountersMoreThan(SharedConstants.RedFactionColor, SharedConstants.CivilianStr, 20);
                 rc40 = (a, b, c, d) => CountersMoreThan(SharedConstants.RedFactionColor, SharedConstants.CivilianStr, 40);
+                rc50 = (a, b, c, d) => CountersMoreThan(SharedConstants.RedFactionColor, SharedConstants.CivilianStr, 50);
                 mes.RegisterCustomSpawnCondition(reg, "RedCivMoreThan2", rc2);
                 mes.RegisterCustomSpawnCondition(reg, "RedCivMoreThan5", rc5);
                 mes.RegisterCustomSpawnCondition(reg, "RedCivMoreThan10", rc10);
                 mes.RegisterCustomSpawnCondition(reg, "RedCivMoreThan20", rc20);
                 mes.RegisterCustomSpawnCondition(reg, "RedCivMoreThan40", rc40);
+                mes.RegisterCustomSpawnCondition(reg, "RedCivMoreThan50", rc50);
 
                 Func<string, string, string, Vector3D, bool> bm1, bm2, rm1, rm2, bm10, rm10;
                 bm1 = (a, b, c, d) => CountersMoreThan(SharedConstants.BlueFactionColor, SharedConstants.MilitaryStr, 1);
