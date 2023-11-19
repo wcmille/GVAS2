@@ -17,7 +17,7 @@
 
         [ReplenishSystems:true]
 
-        [SpawnConditionsProfiles:Blue-BlueAlienRegion-Orbital-Spawns]
+        [SpawnConditionsProfiles:Blue-Spawns-BM1]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>90.0</Frequency>
@@ -33,9 +33,9 @@
         </Prefab>
       </Prefabs>
     </SpawnGroup>
-    
+
     <!-- Strike Wing -->
-    
+
     <!-- Frigate -->
     <SpawnGroup>
       <Id>
@@ -52,7 +52,7 @@
 
         [ReplenishSystems:true]
 
-        [SpawnConditionsProfiles:Blue-BlueAlienRegion-FFO-Spawns]
+        [SpawnConditionsProfiles:Blue-Spawns-BM2]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>5.0</Frequency>
@@ -68,7 +68,7 @@
         </Prefab>
       </Prefabs>
     </SpawnGroup>
-    
+
     <!-- Destroyer -->
     <SpawnGroup>
       <Id>
@@ -86,7 +86,7 @@
 
         [ReplenishSystems:true]
 
-        [SpawnConditionsProfiles:Blue-BlueAlienRegion-DDO-Spawns]
+        [SpawnConditionsProfiles:Blue-Spawns-BM10]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>2.0</Frequency>
@@ -104,7 +104,118 @@
     </SpawnGroup>
 
     <!-- Cruiser -->
-    
+
+    <!-- Frigate Flotilla M10 -->
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <!--Do Not Edit-->
+        <SubtypeId>GVA-Blue-FFO-Flotilla</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+        [ManipulationProfiles:GVA-Manipulation-MediumLoot]
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ManipulationProfiles:GVA-JAGH-Manipulation-Std]
+        [ManipulationProfiles:GVA-Manipulation-Blue-FrigateName]
+
+        [ReplenishSystems:true]
+
+        [SpawnConditionsProfiles:Blue-Spawns-BM10]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>5.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="Fenrir-class Interdictor">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>50</Speed>
+          <Behaviour>JAGH-Behavior-FFO</Behaviour>
+        </Prefab>
+        <Prefab SubtypeId="Fenrir-class Interdictor">
+          <Position>
+            <X>500.0</X>
+            <Y>0.0</Y>
+            <Z>500.0</Z>
+          </Position>
+          <Speed>50</Speed>
+          <Behaviour>JAGH-Behavior-FFO</Behaviour>
+        </Prefab>
+        <Prefab SubtypeId="Fenrir-class Interdictor">
+          <Position>
+            <X>-500.0</X>
+            <Y>0.0</Y>
+            <Z>500.0</Z>
+          </Position>
+          <Speed>50</Speed>
+          <Behaviour>JAGH-Behavior-FFO</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+
+    <!-- Destroyer Squadron M20 -->
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <!--Do Not Edit-->
+        <SubtypeId>GVA-Blue-DDO-Squadron</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+        [ManipulationProfiles:GVA-Manipulation-MediumLoot]
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ManipulationProfiles:GVA-JAGH-Manipulation-Std]
+        [ManipulationProfiles:GVA-Manipulation-Blue-FrigateName]
+
+        [ReplenishSystems:true]
+
+        [SpawnConditionsProfiles:Blue-Spawns-BM20]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>5.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="Valkyrie-class Destroyer">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>50</Speed>
+          <Behaviour>JAGH-Behavior-DDO</Behaviour>
+        </Prefab>
+        <Prefab SubtypeId="Fenrir-class Interdictor">
+          <Position>
+            <X>500.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>50</Speed>
+          <Behaviour>JAGH-Behavior-FFO</Behaviour>
+        </Prefab>
+        <Prefab SubtypeId="Fenrir-class Interdictor">
+          <Position>
+            <X>-500.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>50</Speed>
+          <Behaviour>JAGH-Behavior-FFO</Behaviour>
+        </Prefab>
+        <Prefab SubtypeId="Fenrir-class Interdictor">
+          <Position>
+            <X>0.0</X>
+            <Y>100.0</Y>
+            <Z>-500.0</Z>
+          </Position>
+          <Speed>50</Speed>
+          <Behaviour>JAGH-Behavior-FFO</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+
     <!-- Small Miner -->
     <SpawnGroup>
       <Id>
@@ -120,10 +231,10 @@
 
         [ReplenishSystems:true]
 
-        [SpawnConditionsProfiles:Blue-BlueAlienRegion-Default-Spawns]
+        [SpawnConditionsProfiles:Blue-Spawns-BCA]
       </Description>
       <IsPirate>true</IsPirate>
-      <Frequency>1.0</Frequency>
+      <Frequency>90.0</Frequency>
       <Prefabs>
         <Prefab SubtypeId="ISL - Myxini Quarry Miner MK2-AO 1400">
           <Position>
@@ -136,8 +247,8 @@
         </Prefab>
       </Prefabs>
     </SpawnGroup>
-    
-    <!-- Aeriel Transport -->
+
+    <!-- Aerial Transport -->
 
     <!-- Jump Transport -->
   </SpawnGroups>

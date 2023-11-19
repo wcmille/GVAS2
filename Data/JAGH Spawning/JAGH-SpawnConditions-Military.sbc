@@ -4,7 +4,7 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Blue-BlueAlienRegion-Default-Spawns</SubtypeId>
+        <SubtypeId>Blue-Spawns-BCA</SubtypeId>
       </Id>
       <Description>
         [MES Spawn Conditions]
@@ -18,7 +18,7 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Blue-BlueAlienRegion-Orbital-Spawns</SubtypeId>
+        <SubtypeId>Blue-Spawns-BM1</SubtypeId>
       </Id>
       <Description>
         [MES Spawn Conditions]
@@ -37,7 +37,7 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Blue-BlueAlienRegion-FFO-Spawns</SubtypeId>
+        <SubtypeId>Blue-Spawns-BM2</SubtypeId>
       </Id>
       <Description>
         [MES Spawn Conditions]
@@ -56,7 +56,26 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Blue-BlueAlienRegion-DDO-Spawns</SubtypeId>
+        <SubtypeId>Blue-Spawns-BM10</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+        [SpaceCargoShip:true]
+
+        [AtmosphericCargoShip:true]
+        [SkipAirDensityCheck:true]
+
+        [GravityCargoShip:true]
+
+        [FactionOwner:JAGH]
+        [ZoneConditions:GVA-ZoneConditionProfile-BlueZone]
+        [CustomApiConditions:BlueIsNormal]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Blue-Spawns-BM20</SubtypeId>
       </Id>
       <Description>
         [MES Spawn Conditions]

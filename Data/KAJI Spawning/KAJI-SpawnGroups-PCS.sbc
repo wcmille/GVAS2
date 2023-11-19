@@ -17,10 +17,10 @@
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
 
-        [SpawnConditionsProfiles:Red-Spawns-RMO]
+        [SpawnConditionsProfiles:Red-Spawns-RM1]
       </Description>
       <IsPirate>true</IsPirate>
-      <Frequency>95.0</Frequency>
+      <Frequency>90.0</Frequency>
       <Prefabs>
         <Prefab SubtypeId="Kunai Interceptor">
           <Position>
@@ -84,7 +84,7 @@
 
         [ReplenishSystems:true]
 
-        [SpawnConditionsProfiles:Red-Spawns-RM3O]
+        [SpawnConditionsProfiles:Red-Spawns-RM2O]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>2.0</Frequency>
@@ -102,7 +102,118 @@
     </SpawnGroup>
 
     <!-- Cruiser -->
-    
+
+    <!-- Frigate Flotilla M10 -->
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <!--Do Not Edit-->
+        <SubtypeId>GVA-Red-FFO-Flotilla</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+        [ManipulationProfiles:GVA-Manipulation-MediumLoot]
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
+        [ManipulationProfiles:GVA-Manipulation-Red-FrigateName]
+
+        [ReplenishSystems:true]
+
+        [SpawnConditionsProfiles:Red-Spawns-RM10]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>5.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="Yumi-class Frigate">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>50</Speed>
+          <Behaviour>KAJI-Behavior-FFO</Behaviour>
+        </Prefab>
+        <Prefab SubtypeId="Yumi-class Frigate">
+          <Position>
+            <X>500.0</X>
+            <Y>0.0</Y>
+            <Z>500.0</Z>
+          </Position>
+          <Speed>50</Speed>
+          <Behaviour>KAJI-Behavior-FFO</Behaviour>
+        </Prefab>
+        <Prefab SubtypeId="Yumi-class Frigate">
+          <Position>
+            <X>-500.0</X>
+            <Y>0.0</Y>
+            <Z>500.0</Z>
+          </Position>
+          <Speed>50</Speed>
+          <Behaviour>KAJI-Behavior-FFO</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+
+    <!-- Destroyer Squadron M20 -->
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <!--Do Not Edit-->
+        <SubtypeId>GVA-Red-DDO-Squadron</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+        [ManipulationProfiles:GVA-Manipulation-MediumLoot]
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
+        [ManipulationProfiles:GVA-Manipulation-Red-FrigateName]
+
+        [ReplenishSystems:true]
+
+        [SpawnConditionsProfiles:Red-Spawns-RM20]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>5.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="Nodachi-class Destroyer">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>50</Speed>
+          <Behaviour>KAJI-Behavior-DDO</Behaviour>
+        </Prefab>
+        <Prefab SubtypeId="Yumi-class Frigate">
+          <Position>
+            <X>500.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>50</Speed>
+          <Behaviour>KAJI-Behavior-FFO</Behaviour>
+        </Prefab>
+        <Prefab SubtypeId="Yumi-class Frigate">
+          <Position>
+            <X>-500.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>50</Speed>
+          <Behaviour>KAJI-Behavior-FFO</Behaviour>
+        </Prefab>
+        <Prefab SubtypeId="Yumi-class Frigate">
+          <Position>
+            <X>0.0</X>
+            <Y>100.0</Y>
+            <Z>-500.0</Z>
+          </Position>
+          <Speed>50</Speed>
+          <Behaviour>KAJI-Behavior-FFO</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+
     <!-- Small Miner -->
     <SpawnGroup>
       <Id>
@@ -121,7 +232,7 @@
         [SpawnConditionsProfiles:Red-Spawns-RCA]
       </Description>
       <IsPirate>true</IsPirate>
-      <Frequency>1.0</Frequency>
+      <Frequency>90.0</Frequency>
       <Prefabs>
         <Prefab SubtypeId="ISL - Myxini Quarry Miner MK2-AO 1400">
           <Position>

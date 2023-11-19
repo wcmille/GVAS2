@@ -70,6 +70,8 @@ namespace GVA.NPCControl.Server
                 mes.RegisterCustomSpawnCondition(reg, "RedMilMoreThan1", null);
                 mes.RegisterCustomSpawnCondition(reg, "BlueMilMoreThan2", null);
                 mes.RegisterCustomSpawnCondition(reg, "RedMilMoreThan2", null);
+                mes.RegisterCustomSpawnCondition(reg, "BlueIsNormal", null);
+                mes.RegisterCustomSpawnCondition(reg, "RedIsNormal", null);
                 mes.RegisterCustomSpawnCondition(reg, "BlueIsStrong", null);
                 mes.RegisterCustomSpawnCondition(reg, "RedIsStrong", null);
 
@@ -128,19 +130,23 @@ namespace GVA.NPCControl.Server
                 mes.RegisterCustomSpawnCondition(reg, "RedCivMoreThan40", rc40);
                 mes.RegisterCustomSpawnCondition(reg, "RedCivMoreThan50", rc50);
 
-                Func<string, string, string, Vector3D, bool> bm1, bm2, rm1, rm2, bm10, rm10;
+                Func<string, string, string, Vector3D, bool> bm1, bm2, rm1, rm2, bm10, rm10, bm20, rm20;
                 bm1 = (a, b, c, d) => CountersMoreThan(SharedConstants.BlueFactionColor, SharedConstants.MilitaryStr, 1);
                 rm1 = (a, b, c, d) => CountersMoreThan(SharedConstants.RedFactionColor, SharedConstants.MilitaryStr, 1);
                 bm2 = (a, b, c, d) => CountersMoreThan(SharedConstants.BlueFactionColor, SharedConstants.MilitaryStr, 2);
                 rm2 = (a, b, c, d) => CountersMoreThan(SharedConstants.RedFactionColor, SharedConstants.MilitaryStr, 2);
                 bm10 = (a, b, c, d) => CountersMoreThan(SharedConstants.BlueFactionColor, SharedConstants.MilitaryStr, 10);
                 rm10 = (a, b, c, d) => CountersMoreThan(SharedConstants.RedFactionColor, SharedConstants.MilitaryStr, 10);
+                bm20 = (a, b, c, d) => CountersMoreThan(SharedConstants.BlueFactionColor, SharedConstants.MilitaryStr, 20);
+                rm20 = (a, b, c, d) => CountersMoreThan(SharedConstants.RedFactionColor, SharedConstants.MilitaryStr, 20);
                 mes.RegisterCustomSpawnCondition(reg, "BlueMilMoreThan1", bm1);
                 mes.RegisterCustomSpawnCondition(reg, "RedMilMoreThan1", rm1);
                 mes.RegisterCustomSpawnCondition(reg, "BlueMilMoreThan2", bm2);
                 mes.RegisterCustomSpawnCondition(reg, "RedMilMoreThan2", rm2);
-                mes.RegisterCustomSpawnCondition(reg, "BlueIsStrong", bm10);
-                mes.RegisterCustomSpawnCondition(reg, "RedIsStrong", rm10);
+                mes.RegisterCustomSpawnCondition(reg, "BlueIsNormal", bm10);
+                mes.RegisterCustomSpawnCondition(reg, "RedIsNormal", rm10);
+                mes.RegisterCustomSpawnCondition(reg, "BlueIsStrong", bm20);
+                mes.RegisterCustomSpawnCondition(reg, "RedIsStrong", rm20);
 
 
                 Func<string, string, string, Vector3D, bool> biw, bin, bis;
