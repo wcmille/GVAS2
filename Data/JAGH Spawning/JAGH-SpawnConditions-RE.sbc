@@ -13,5 +13,35 @@
         [SpaceRandomEncounter:true]
       </Description>
     </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Blue-BlueAlienRegion-RE-Spawns-Civ5</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+
+        [FactionOwner:JAGH]
+        [ZoneConditions:GVA-ZoneConditionProfile-BlueZone]
+        [SpaceRandomEncounter:true]
+
+        [CustomApiConditions:BlueCivMoreThan5]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Blue-BlueAlienRegion-RE-Spawns-Civ20</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+        
+        [FactionOwner:JAGH]
+        [ZoneConditions:GVA-ZoneConditionProfile-BlueZone]
+        [SpaceRandomEncounter:true]
+
+        [CustomApiConditions:BlueCivMoreThan20]
+      </Description>
+    </EntityComponent>
   </EntityComponents>
 </Definitions>

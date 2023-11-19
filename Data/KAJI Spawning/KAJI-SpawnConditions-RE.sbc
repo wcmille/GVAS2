@@ -13,5 +13,35 @@
         [SpaceRandomEncounter:true]
       </Description>
     </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Red-RedAlienRegion-RE-Spawns-Civ5</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+
+        [FactionOwner:KAJI]
+        [ZoneConditions:GVA-ZoneConditionProfile-RedZone]
+        [SpaceRandomEncounter:true]
+
+        [CustomApiConditions:RedCivMoreThan5]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Red-RedAlienRegion-RE-Spawns-Civ20</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+
+        [FactionOwner:KAJI]
+        [ZoneConditions:GVA-ZoneConditionProfile-RedZone]
+        [SpaceRandomEncounter:true]
+
+        [CustomApiConditions:RedCivMoreThan20]
+      </Description>
+    </EntityComponent>
   </EntityComponents>
 </Definitions>

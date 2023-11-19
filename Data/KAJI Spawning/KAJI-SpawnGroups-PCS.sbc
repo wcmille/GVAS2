@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<SpawnGroups>
+    <!-- Scout -->
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>        
@@ -32,6 +33,10 @@
         </Prefab>
       </Prefabs>
     </SpawnGroup>
+    
+    <!-- Strike Wing -->
+    
+    <!-- Frigate-->
 		<SpawnGroup>
 			<Id>
 				<TypeId>SpawnGroupDefinition</TypeId>
@@ -62,6 +67,8 @@
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>
+    
+    <!-- Destroyer -->
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
@@ -93,5 +100,43 @@
         </Prefab>
       </Prefabs>
     </SpawnGroup>
+
+    <!-- Cruiser -->
+    
+    <!-- Small Miner -->
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <SubtypeId>GVA-Red-Miner-PCS</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
+        [ManipulationProfiles:GVA-KAJI-Manipulation-ISL2KAJI]
+
+        [ReplenishSystems:true]
+
+        [SpawnConditionsProfiles:Red-Spawns-RCA]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>1.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="ISL - Myxini Quarry Miner MK2-AO 1400">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>50</Speed>
+          <Behaviour>GVA-Behavior-StandardCivilian</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+    
+    <!-- Aeriel Transport -->
+    
+    <!-- Jump Transport -->
   </SpawnGroups>
 </Definitions>

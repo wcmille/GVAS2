@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SpawnGroups>
+    <!-- Null Debris-->
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <SubtypeId>KAJI-RE-Null</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
+
+        [IgnoreCleanupRules:false]
+
+        [SpawnConditionsProfiles:Red-RedAlienRegion-FixedSpace-Spawns]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>20.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="[NPC] Debris">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Behaviour>KAJI-Behavior-PassiveCivilian</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+
+    <!-- Space Satellite -->
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <SubtypeId>KAJI-RE-Satelite</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
+
+        [IgnoreCleanupRules:false]
+
+        [SpawnConditionsProfiles:Red-RedAlienRegion-RE-Spawns-Civ5]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>5.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="[NPC] Communication Satellite">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Behaviour>KAJI-Behavior-PassiveCivilian</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+    
+    <!-- Orbital Station -->
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <SubtypeId>KAJI-RE-SpaceStation</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
+
+        [IgnoreCleanupRules:true]
+
+        [SpawnConditionsProfiles:Red-RedAlienRegion-RE-Spawns-Civ20]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>5.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="[NPC] Space Trade Station">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Behaviour>KAJI-Behavior-PassiveCivilian</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+  </SpawnGroups>
+</Definitions>
