@@ -138,6 +138,7 @@
         [ManipulationProfiles:GVA-Common-Manipulation-MinorShipyardSetup]
 
         [SpawnConditionsProfiles:Blue-BlueAlienRegion-PI-Spawns-Civ10]
+        [IgnoreCleanupRules:true]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>6.0</Frequency>
@@ -165,6 +166,8 @@
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ManipulationProfiles:GVA-JAGH-Manipulation-Std]
+
+        [IgnoreCleanupRules:true]
 
         [SpawnConditionsProfiles:Blue-BlueAlienRegion-PI-Spawns-Civ20]
       </Description>
@@ -212,6 +215,8 @@
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ManipulationProfiles:GVA-JAGH-Manipulation-Std]
+
+        [IgnoreCleanupRules:true]
 
         [SpawnConditionsProfiles:Blue-BlueAlienRegion-PI-Spawns-Civ40]
       </Description>

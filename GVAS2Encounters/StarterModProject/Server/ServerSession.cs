@@ -2,7 +2,6 @@
 
 using Sandbox.ModAPI;
 using System;
-using System.Linq;
 using VRage.Game.ModAPI;
 using VRage.Game.ModAPI.Ingame.Utilities;
 using VRage.ModAPI;

@@ -132,9 +132,10 @@
       <Description>
         [Modular Encounters SpawnGroup]
 
+        [IgnoreCleanupRules:true]
+
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
-
         [ManipulationProfiles:GVA-Common-Manipulation-MinorShipyardSetup]
 
         [SpawnConditionsProfiles:Red-RedAlienRegion-PI-Spawns-Civ10]
@@ -162,6 +163,8 @@
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]
+
+        [IgnoreCleanupRules:true]
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
@@ -209,6 +212,8 @@
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]
+
+        [IgnoreCleanupRules:true]
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
