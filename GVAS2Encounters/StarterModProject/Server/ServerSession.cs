@@ -5,7 +5,6 @@ using System;
 using VRage.Game.ModAPI;
 using VRage.Game.ModAPI.Ingame.Utilities;
 using VRage.ModAPI;
-using VRage.Utils;
 using VRageMath;
 
 namespace GVA.NPCControl.Server

@@ -25,11 +25,11 @@ namespace GVA.NPCControl.Server
             blueLog.Read();
             redLog.Read();
 
-            var blue = new ServerAccount(SharedConstants.BlueFactionColor, blueLog);
+            var blue = new ServerAccount(SharedConstants.BlueFactionColor, blueLog, server);
             list.Add(blue);
-            var red = new ServerAccount(SharedConstants.RedFactionColor, redLog);
+            var red = new ServerAccount(SharedConstants.RedFactionColor, redLog, server);
             list.Add(red);
-            black = new PirateAccount(new ServerLog(SharedConstants.BlackFactionColor));
+            black = new PirateAccount(new ServerLog(SharedConstants.BlackFactionColor), server);
             list.Add(black);
 
             this.server = server;
@@ -176,7 +176,8 @@ namespace GVA.NPCControl.Server
                     {
                         var playerFaction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(identity.IdentityId);
                         if (playerFaction != null && playerFaction.Tag == acct.OwningPCTag) defaultRep = SharedConstants.AlliedRep;
-                        MyAPIGateway.Session.Factions.SetReputationBetweenPlayerAndFaction(identity.IdentityId, faction.FactionId, defaultRep);
+                        server.SetReputation(identity.IdentityId, faction.FactionId, defaultRep);
+                        //MyAPIGateway.Session.Factions.SetReputationBetweenPlayerAndFaction(identity.IdentityId, faction.FactionId, defaultRep);
                     }
                 }
             }

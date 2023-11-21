@@ -6,8 +6,6 @@ namespace GVA.NPCControl
     {
         protected readonly List<IAccount> list = new List<IAccount>();
 
-
-
         public IAccount GetAccountByColor(string color)
         {
             foreach (var f in list)

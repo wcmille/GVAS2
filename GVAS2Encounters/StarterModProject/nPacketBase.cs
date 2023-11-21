@@ -8,6 +8,7 @@ namespace Digi.Example_NetworkProtobuf
     [ProtoInclude(2122, typeof(CommandPacket))]
     [ProtoInclude(2123, typeof(FactionValuesPacket))]
     [ProtoInclude(2124, typeof(DialogResponsePacket))]
+    [ProtoInclude(2125, typeof(ClientReputationChangePacket))]
     [ProtoContract]
     public abstract class PacketBase
     {

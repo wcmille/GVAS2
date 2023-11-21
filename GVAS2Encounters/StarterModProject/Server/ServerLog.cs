@@ -12,7 +12,7 @@ namespace GVA.NPCControl.Server
         readonly int maxLogCount = 50;
         public string LogText { get; private set; }
 
-        public ServerLog(string color, int maxLogCount = 50)
+        public ServerLog(string color, int maxLogCount = 100)
         {
             this.maxLogCount = maxLogCount;
             filename = $"{color}-MESLog.txt";
@@ -62,7 +62,7 @@ namespace GVA.NPCControl.Server
         private void CutTimes()
         {
             var split = LogText.Split('\n');
-            LogText = string.Join("\n", split.Skip(Math.Min(split.Count() - maxLogCount, 0)));
+            LogText = string.Join("\n", split.Skip(Math.Max(split.Count() - maxLogCount, 0)));
         }
 
         /// <summary>

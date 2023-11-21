@@ -15,11 +15,14 @@ namespace GVA.NPCControl.Server
     {
         const double corruption = 0.9;
         const int maxRep = 1500;
+        readonly IFactionsApi server;
+
         public ServerLog AccountLog { get; private set; }
         //readonly List<IMyIdentity> identities = new List<IMyIdentity>();
 
-        public ServerAccount(string color, ServerLog myLog) : base(color)
+        public ServerAccount(string color, ServerLog myLog, IFactionsApi server) : base(color)
         {
+            this.server = server;
             AccountLog = myLog;
             int incur;
             MyAPIGateway.Utilities.GetVariable($"{color}{SharedConstants.IncursionsStr}", out incur);
@@ -87,7 +90,8 @@ namespace GVA.NPCControl.Server
                 {
                     var rep = MyAPIGateway.Session.Factions.GetReputationBetweenPlayerAndFaction(player, npcOwner.FactionId);
                     //MyLog.Default.WriteLineAndConsole($"{SharedConstants.ModName}: REZ2 - {player} {rep} {minRep}");
-                    MyAPIGateway.Session.Factions.SetReputationBetweenPlayerAndFaction(player, npcOwner.FactionId, Math.Max(rep, minRep));
+                    server.SetReputation(player, npcOwner.FactionId, Math.Max(rep, minRep));
+                    //MyAPIGateway.Session.Factions.SetReputationBetweenPlayerAndFaction(player, npcOwner.FactionId, Math.Max(rep, minRep));
                 }
                 if (minRep >= maxRep) AccountLog.Log($"{OwningPCFaction.Tag} has won.");
             }
@@ -223,13 +227,15 @@ namespace GVA.NPCControl.Server
             if (founderRep >= SharedConstants.AlliedRep) rep = SharedConstants.AlliedRep;
             else if (founderRep >= SharedConstants.DefaultRep) rep = SharedConstants.DefaultRep;
 
-            MyAPIGateway.Session.Factions.SetReputationBetweenPlayerAndFaction(playerId, npcFactionId, rep);
+            server.SetReputation(playerId, npcFactionId, rep);
+            //MyAPIGateway.Session.Factions.SetReputationBetweenPlayerAndFaction(playerId, npcFactionId, rep);
         }
 
         internal void PlayerLeft(long playerId)
         {
             var npcId = MyAPIGateway.Session.Factions.TryGetFactionByTag(OwningNPCTag).FactionId;
-            MyAPIGateway.Session.Factions.SetReputationBetweenPlayerAndFaction(playerId, npcId, SharedConstants.DefaultRep);
+            server.SetReputation(playerId, npcId, SharedConstants.DefaultRep);
+            //MyAPIGateway.Session.Factions.SetReputationBetweenPlayerAndFaction(playerId, npcId, SharedConstants.DefaultRep);
         }
 
         internal void FactionLeft()
@@ -249,7 +255,8 @@ namespace GVA.NPCControl.Server
 
                 if (steamId > 0)
                 {
-                    MyAPIGateway.Session.Factions.SetReputationBetweenPlayerAndFaction(identity, npcFactionId, SharedConstants.DefaultRep);
+                    server.SetReputation(identity, npcFactionId, SharedConstants.DefaultRep);
+                    //MyAPIGateway.Session.Factions.SetReputationBetweenPlayerAndFaction(identity, npcFactionId, SharedConstants.DefaultRep);
                 }
             }
         }
@@ -265,7 +272,8 @@ namespace GVA.NPCControl.Server
 
                 if (steamId > 0)
                 {
-                    MyAPIGateway.Session.Factions.SetReputationBetweenPlayerAndFaction(identity, npcFactionId, SharedConstants.EnemyRep);
+                    server.SetReputation(identity, npcFactionId, SharedConstants.EnemyRep);
+                    //MyAPIGateway.Session.Factions.SetReputationBetweenPlayerAndFaction(identity, npcFactionId, SharedConstants.EnemyRep);
                 }
             }
         }

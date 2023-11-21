@@ -27,9 +27,11 @@ namespace GVA.NPCControl.Server
         const int alliedBound = 500;
         const int pirateRepThreshold = -750; //Natural Decay won't make your rep worse than this.
         readonly ServerLog log;
+        readonly IFactionsApi server;
 
-        public PirateAccount(ServerLog pirateLog, int seed = 0)
+        public PirateAccount(ServerLog pirateLog, IFactionsApi server, int seed = 0)
         {
+            this.server = server;
             this.log = pirateLog;
             faction = MyAPIGateway.Session.Factions.TryGetFactionByTag("SPRT");
 
@@ -76,7 +78,8 @@ namespace GVA.NPCControl.Server
                     //var playerId = ply.Value.PlayerId;
                     var rep = MyAPIGateway.Session.Factions.GetReputationBetweenPlayerAndFaction(playerId, faction.FactionId);
                     rep += (alliedBound - rep) / (2 * memberCount);
-                    MyAPIGateway.Session.Factions.SetReputationBetweenPlayerAndFaction(playerId, faction.FactionId, rep);
+                    server.SetReputation(playerId, faction.FactionId, rep);
+                    //MyAPIGateway.Session.Factions.SetReputationBetweenPlayerAndFaction(playerId, faction.FactionId, rep);
                 }
                 log?.Log($"{donor.Tag} funded pirates.");
             }
@@ -100,7 +103,8 @@ namespace GVA.NPCControl.Server
             foreach (IMyIdentity identity in list) 
             {
                 var rep = MyAPIGateway.Session.Factions.GetReputationBetweenPlayerAndFaction(identity.IdentityId, faction.FactionId);
-                if (rep > pirateRepThreshold) MyAPIGateway.Session.Factions.SetReputationBetweenPlayerAndFaction(identity.IdentityId, faction.FactionId, rep-pirateRepDrop);
+                if (rep > pirateRepThreshold) server.SetReputation(identity.IdentityId, faction.FactionId, rep-pirateRepDrop);
+                //if (rep > pirateRepThreshold) MyAPIGateway.Session.Factions.SetReputationBetweenPlayerAndFaction(identity.IdentityId, faction.FactionId, rep - pirateRepDrop);
             }
         }
 
