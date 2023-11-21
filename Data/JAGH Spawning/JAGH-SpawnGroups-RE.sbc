@@ -86,7 +86,7 @@
             <Y>0.0</Y>
             <Z>0.0</Z>
           </Position>
-          <Behaviour>JAGH-Behavior-PassiveCivilian</Behaviour>
+          <Behaviour>JAGH-Behavior-PassiveCivilian-R</Behaviour>
         </Prefab>
       </Prefabs>
     </SpawnGroup>

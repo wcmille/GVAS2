@@ -56,7 +56,7 @@
             <Y>0.0</Y>
             <Z>0.0</Z>
           </Position>
-          <Behaviour>KAJI-Behavior-PassiveCivilian</Behaviour>
+          <Behaviour>KAJI-Behavior-PassiveCivilian-R</Behaviour>
         </Prefab>
       </Prefabs>
     </SpawnGroup>

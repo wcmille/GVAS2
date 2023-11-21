@@ -198,6 +198,10 @@ namespace GVA.NPCControl.Server
             MyAPIGateway.Utilities.SetVariable($"{ColorFaction}{SharedConstants.IncursionsStr}", Incursions);
         }
 
+        internal void LogSpawn2(IMyCubeGrid grid)
+        {
+            AccountLog.Log(grid, Color.Green, "Site ");
+        }
         internal void LogSpawn(IMyCubeGrid grid)
         {
             AccountLog.Log(grid, Color.Red, "Contact ");

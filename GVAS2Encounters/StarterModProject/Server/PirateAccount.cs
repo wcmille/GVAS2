@@ -26,7 +26,7 @@ namespace GVA.NPCControl.Server
         const int pirateRepDrop = 25;
         const int alliedBound = 500;
         const int pirateRepThreshold = -750; //Natural Decay won't make your rep worse than this.
-        ServerLog log;
+        readonly ServerLog log;
 
         public PirateAccount(ServerLog pirateLog, int seed = 0)
         {
@@ -66,16 +66,20 @@ namespace GVA.NPCControl.Server
 
         public void AddUnspent(IMyFaction donor)
         {
-            UnspentUnits += 1.0;
-
-            int memberCount = donor.Members.Count;
-            foreach (var ply in donor.Members)
+            if (donor != null)
             {
-                var playerId = ply.Value.PlayerId;
-                var rep = MyAPIGateway.Session.Factions.GetReputationBetweenPlayerAndFaction(playerId, faction.FactionId);
-                MyAPIGateway.Session.Factions.SetReputationBetweenPlayerAndFaction(playerId, faction.FactionId, rep + (alliedBound - rep) / (2* memberCount));
+                UnspentUnits += 1.0;
+
+                int memberCount = donor.Members.Count;
+                foreach (var playerId in donor.Members.Keys)
+                {
+                    //var playerId = ply.Value.PlayerId;
+                    var rep = MyAPIGateway.Session.Factions.GetReputationBetweenPlayerAndFaction(playerId, faction.FactionId);
+                    rep += (alliedBound - rep) / (2 * memberCount);
+                    MyAPIGateway.Session.Factions.SetReputationBetweenPlayerAndFaction(playerId, faction.FactionId, rep);
+                }
+                log?.Log($"{donor.Tag} funded pirates.");
             }
-            log?.Log($"{faction.Tag} funded pirates.");
         }
 
         public bool RemoveUnspent()

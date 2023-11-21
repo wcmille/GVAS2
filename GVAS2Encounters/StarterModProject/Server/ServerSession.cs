@@ -80,7 +80,7 @@ namespace GVA.NPCControl.Server
 
                 mes.BehaviorTriggerActivationWatcher(reg, WatchTriggers);
 
-                mes.RegisterSuccessfulSpawnAction(LogSpawn, reg);
+                //mes.RegisterSuccessfulSpawnAction(LogSpawn, reg);
             }
 
             server?.Unload();
@@ -159,7 +159,7 @@ namespace GVA.NPCControl.Server
 
                 mes.BehaviorTriggerActivationWatcher(reg, WatchTriggers);
 
-                mes.RegisterSuccessfulSpawnAction(LogSpawn, reg);
+                //mes.RegisterSuccessfulSpawnAction(LogSpawn, reg);
             }
         }
 
@@ -185,6 +185,14 @@ namespace GVA.NPCControl.Server
                     int m = 0;
                     cd.DetermineCost(rc.CubeGrid, ref c, ref m, rc.GetOwnerFactionTag());
                     Pay(acct, c, m);
+                }
+            }
+            else if (action == "GVA-Action-API-ReportSpawn")
+            {
+                IAccount acct = GetAccountFromRC(rc);
+                if (acct != null)
+                {
+                    (acct as ServerAccount)?.LogSpawn2(rc.CubeGrid);
                 }
             }
             else if (action == "GVA-Action-API-ReportContact")
@@ -226,18 +234,18 @@ namespace GVA.NPCControl.Server
             MyAPIGateway.Utilities.SetVariable($"{acct.ColorFaction}{SharedConstants.MilitaryStr}", currM + m);
         }
 
-        private void LogSpawn(IMyCubeGrid grid)
-        {
-            try
-            {
-                //IAccount acct = GetAccountFromGrid(grid);
-                //(acct as ServerAccount)?.LogSpawn(grid);
-            }
-            catch (Exception ex)
-            {
-                MyLog.Default.WriteLineAndConsole($"{SharedConstants.ModName}: ERROR - {ex.Message}");
-            }
-        }
+        //private void LogSpawn(IMyCubeGrid grid)
+        //{
+        //    try
+        //    {
+        //        IAccount acct = GetAccountFromGrid(grid);
+        //        (acct as ServerAccount)?.LogSpawn(grid);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MyLog.Default.WriteLineAndConsole($"{SharedConstants.ModName}: ERROR - {ex.Message}");
+        //    }
+        //}
 
         private IAccount GetAccountFromRC(IMyRemoteControl rc)
         {
