@@ -89,11 +89,12 @@ namespace GVA.NPCControl
             return netIncome;
         }
 
-        public void AddUnspent(IMyFaction donor)
+        public virtual void AddUnspent(IMyFaction donor)
         {
             UnspentUnits += 1.0;
         }
-        public bool RemoveUnspent()
+
+        public virtual bool RemoveUnspent()
         {
             if (UnspentUnits >= 1.0)
             {

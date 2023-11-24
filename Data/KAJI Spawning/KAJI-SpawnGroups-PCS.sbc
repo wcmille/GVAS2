@@ -232,7 +232,7 @@
         [SpawnConditionsProfiles:Red-Spawns-RCA]
       </Description>
       <IsPirate>true</IsPirate>
-      <Frequency>90.0</Frequency>
+      <Frequency>60.0</Frequency>
       <Prefabs>
         <Prefab SubtypeId="ISL - Myxini Quarry Miner MK2-AO 1400">
           <Position>
@@ -247,7 +247,38 @@
     </SpawnGroup>
     
     <!-- Aeriel Transport -->
-    
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <SubtypeId>GVA-Red-Atmo-Cargo-PCS</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
+        [ManipulationProfiles:GVA-KAJI-Manipulation-ISL2KAJI]
+
+        [ReplenishSystems:true]
+
+        [SpawnConditionsProfiles:Red-Spawns-RCA]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>30.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="[NPC] Clydsedale">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>50</Speed>
+          <Behaviour>GVA-Behavior-StandardCivilian</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+
+
     <!-- Jump Transport -->
   </SpawnGroups>
 </Definitions>

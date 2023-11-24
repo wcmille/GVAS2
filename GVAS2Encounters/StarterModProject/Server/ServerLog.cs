@@ -9,10 +9,10 @@ namespace GVA.NPCControl.Server
     public class ServerLog
     {
         readonly string filename;
-        readonly int maxLogCount = 50;
+        readonly int maxLogCount = 500;
         public string LogText { get; private set; }
 
-        public ServerLog(string color, int maxLogCount = 100)
+        public ServerLog(string color, int maxLogCount = 500)
         {
             this.maxLogCount = maxLogCount;
             filename = $"{color}-MESLog.txt";

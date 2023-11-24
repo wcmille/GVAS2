@@ -40,7 +40,7 @@ namespace GVA.NPCControl.Server
             var result = base.BuyCivilian(amt);
             if (result)
             {
-                AccountLog.Log($"Bought {SharedConstants.CivilianStr} {amt}.");
+                AccountLog.Log($"Bought {amt} {SharedConstants.CivilianStr}.");
             }
             return result;
         }
@@ -50,8 +50,21 @@ namespace GVA.NPCControl.Server
             var result = base.BuyMilitary(amt);
             if (result)
             {
-                AccountLog.Log($"Bought {SharedConstants.MilitaryStr} {amt}.");
+                AccountLog.Log($"Bought {amt} {SharedConstants.MilitaryStr}.");
             }
+            return result;
+        }
+
+        public override void AddUnspent(IMyFaction donor)
+        {
+            base.AddUnspent(donor);
+            AccountLog.Log($"Added SC to NPC account.");
+        }
+
+        public override bool RemoveUnspent()
+        {
+            var result = base.RemoveUnspent();
+            if (result) AccountLog.Log($"Withdrew SC to NPC account.");
             return result;
         }
 

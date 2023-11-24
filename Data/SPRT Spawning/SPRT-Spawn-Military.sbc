@@ -28,6 +28,7 @@
           </Position>
           <Speed>50</Speed>
           <Behaviour>SPRT-Behavior-SpaceDestroyer</Behaviour>
+          <BeaconText>DD</BeaconText>
         </Prefab>
       </Prefabs>
     </SpawnGroup>
@@ -58,7 +59,8 @@
 					</Position>
 					<Speed>50</Speed>
 					<Behaviour>SPRT-Behavior-SpaceDestroyer</Behaviour>
-				</Prefab>
+          <BeaconText>FF</BeaconText>
+        </Prefab>
 			</Prefabs>
 		</SpawnGroup>
     <SpawnGroup>
@@ -90,6 +92,7 @@
           </Position>
           <Speed>50</Speed>
           <Behaviour>SPRT-Behavior-SpaceDestroyer</Behaviour>
+          <BeaconText>CT</BeaconText>
         </Prefab>
       </Prefabs>
     </SpawnGroup>
@@ -126,6 +129,7 @@
           </Position>
           <Speed>50</Speed>
           <Behaviour>SPRT-Behavior-SpaceDestroyer</Behaviour>
+          <BeaconText>Interceptor</BeaconText>
         </Prefab>
       </Prefabs>
     </SpawnGroup>
@@ -156,6 +160,7 @@
             <Z>0.0</Z>
           </Position>
           <Speed>50</Speed>
+          <BeaconText>Drone</BeaconText>
           <Behaviour>SPRT-Behavior-SpaceDestroyer</Behaviour>
         </Prefab>
       </Prefabs>

@@ -117,7 +117,10 @@
       <Icon>Textures\GUI\Icons\Items\GVK_TechWeapon.dds</Icon>
       <Icon>Textures\GUI\Icons\Items\Laser_Icon_Overlay.dds</Icon>
       <Prerequisites>
-        <Item Amount="2" TypeId="Component" SubtypeId="ZoneChip"/>
+        <Item Amount="12" TypeId="Component" SubtypeId="ZoneChip"/>
+        <Item Amount="1" TypeId="Component" SubtypeId="Display"/>
+        <Item Amount="1" TypeId="Component" SubtypeId="PowerCell"/>
+        <Item Amount="1" TypeId="Component" SubtypeId="Computer"/>
       </Prerequisites>
       <Result Amount="1" TypeId="Component" SubtypeId="GVK_Laser_Tech"/>
       <BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>GVA-Trigger-Bingo</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Trigger]
+
+        [UseTrigger:true]
+        [Type:Timer]
+        [StartsReady:false]
+        [MaxActions:-1]
+        [MinCooldownMs:900000]
+        [MaxCooldownMs:1800000]
+        [Actions:GVA-Action-Bingo]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Action-Bingo</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Action]
+        
+        [Retreat:true]
+      </Description>
+    </EntityComponent>
+  </EntityComponents>
+</Definitions>

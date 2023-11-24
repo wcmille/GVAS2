@@ -24,6 +24,7 @@
 
         [Triggers:GVA-Trigger-StandardCompromised]
         [Triggers:GVA-Trigger-AggressiveJumper]
+        [Triggers:GVA-Trigger-Bingo]
         [TriggerGroups:GVA-TriggerGroup-SpawningCosts]
       </Description>
     </EntityComponent>
