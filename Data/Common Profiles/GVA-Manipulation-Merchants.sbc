@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Manipulation-Shipyards</SubtypeId>
+      </Id>
+      <Description>
+        [MES Manipulation]
+
+        [GridsAreEditable:false]
+        
+        [UseLootProfiles:true]
+        [LootProfiles:GVA-Loot-Shipyard]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Manipulation-PlanetRefinery</SubtypeId>
+      </Id>
+      <Description>
+        [MES Manipulation]
+
+        [GridsAreEditable:false]
+        
+        [UseLootProfiles:true]
+        [LootProfiles:GVA-Loot-Refinery]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Manipulation-MinorTrade</SubtypeId>
+      </Id>
+      <Description>
+        [MES Manipulation]
+
+        [GridsAreEditable:false]
+
+        [UseLootProfiles:true]
+        [LootProfiles:GVA-Loot-MinorTrade]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Manipulation-MajorTrade</SubtypeId>
+      </Id>
+      <Description>
+        [MES Manipulation]
+
+        [GridsAreEditable:false]
+
+        [UseLootProfiles:true]
+        [LootProfiles:GVA-Loot-MajorTrade]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-LootGroup-Shipyard</SubtypeId>
+      </Id>
+      <Description>
+        [MES Loot Group]
+        [LootProfiles:GVA-Loot-Shipyard]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Loot-Shipyard</SubtypeId>
+      </Id>
+      <Description>
+        [MES Loot]
+        [ContainerBlockTypes:MyObjectBuilder_CargoContainer/LargeBlockSmallContainer]
+        [ContainerBlockTypes:MyObjectBuilder_CargoContainer/LargeBlockLargeIndustrialContainer]
+        [ContainerBlockTypes:MyObjectBuilder_CargoContainer/LargeBlockLargeContainer]
+        [ContainerTypes:MES-ContainerTypes-AdvancedComponents-4]
+        [ContainerTypes:MES-ContainerTypes-MixedIngots-3]
+        [ContainerTypes:MES-ContainerTypes-MixedAmmo-3]
+        [MinBlocks:3]
+        [MaxBlocks:20]
+        [AppendNameToBlock:true]
+        [AppendedName: (Loot)]
+        [Chance:100]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Loot-Refinery</SubtypeId>
+      </Id>
+      <Description>
+        [MES Loot]
+        [ContainerBlockTypes:MyObjectBuilder_CargoContainer/LargeBlockSmallContainer]
+        [ContainerBlockTypes:MyObjectBuilder_CargoContainer/LargeBlockLargeIndustrialContainer]
+        [ContainerBlockTypes:MyObjectBuilder_CargoContainer/LargeBlockLargeContainer]
+        [ContainerTypes:MES-ContainerTypes-BasicOres-1]
+        [ContainerTypes:MES-ContainerTypes-BasicOres-1]
+        [ContainerTypes:MES-ContainerTypes-BasicOres-1]
+        [ContainerTypes:MES-ContainerTypes-BasicOres-1]
+        [ContainerTypes:MES-ContainerTypes-BasicOres-1]
+        [ContainerTypes:MES-ContainerTypes-BasicOres-1]
+        [ContainerTypes:MES-ContainerTypes-BasicOres-2]
+        [ContainerTypes:MES-ContainerTypes-BasicOres-2]
+        [ContainerTypes:MES-ContainerTypes-BasicOres-2]
+        [ContainerTypes:MES-ContainerTypes-BasicOres-3]
+        [ContainerTypes:MES-ContainerTypes-AdvancedOre-1]
+        [ContainerTypes:MES-ContainerTypes-AdvancedOre-1]
+        [ContainerTypes:MES-ContainerTypes-AdvancedOre-2]
+        [ContainerTypes:MES-ContainerTypes-BasicIngots-1]
+        [ContainerTypes:MES-ContainerTypes-BasicIngots-1]
+        [ContainerTypes:MES-ContainerTypes-BasicIngots-1]
+        [ContainerTypes:MES-ContainerTypes-BasicIngots-1]
+        [ContainerTypes:MES-ContainerTypes-BasicIngots-1]
+        [ContainerTypes:MES-ContainerTypes-BasicIngots-1]
+        [ContainerTypes:MES-ContainerTypes-BasicIngots-2]
+        [ContainerTypes:MES-ContainerTypes-BasicIngots-2]
+        [ContainerTypes:MES-ContainerTypes-BasicIngots-2]
+        [ContainerTypes:MES-ContainerTypes-BasicIngots-3]
+        [ContainerTypes:MES-ContainerTypes-AdvancedIngots-1]
+        [ContainerTypes:MES-ContainerTypes-AdvancedIngots-1]
+        [ContainerTypes:MES-ContainerTypes-AdvancedIngots-2]
+        [MinBlocks:3]
+        [MaxBlocks:30]
+        [AppendNameToBlock:true]
+        [AppendedName: (Loot)]
+        [Chance:100]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Loot-MinorTrade</SubtypeId>
+      </Id>
+      <Description>
+        [MES Loot]
+        [ContainerBlockTypes:MyObjectBuilder_CargoContainer/LargeBlockSmallContainer]
+        [ContainerBlockTypes:MyObjectBuilder_CargoContainer/LargeBlockLargeIndustrialContainer]
+        [ContainerBlockTypes:MyObjectBuilder_CargoContainer/LargeBlockLargeContainer]
+        [ContainerTypes:MES-ContainerTypes-BasicComponents-3]
+        [ContainerTypes:MES-ContainerTypes-BasicComponents-4]
+        [ContainerTypes:MES-ContainerTypes-BasicIngots-2]
+        [ContainerTypes:MES-ContainerTypes-BasicIngots-3]
+        [MaxBlocks:20]
+        [AppendNameToBlock:true]
+        [AppendedName: (Loot)]
+        [Chance:100]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Loot-MajorTrade</SubtypeId>
+      </Id>
+      <Description>
+        [MES Loot]
+        [ContainerBlockTypes:MyObjectBuilder_CargoContainer/LargeBlockSmallContainer]
+        [ContainerBlockTypes:MyObjectBuilder_CargoContainer/LargeBlockLargeIndustrialContainer]
+        [ContainerBlockTypes:MyObjectBuilder_CargoContainer/LargeBlockLargeContainer]
+        [ContainerTypes:MES-ContainerTypes-BasicComponents-4]
+        [ContainerTypes:MES-ContainerTypes-AdvancedComponents-4]
+        [ContainerTypes:MES-ContainerTypes-MixedIngots-3]
+        [ContainerTypes:MES-ContainerTypes-AdvancedIngots-1]
+        [ContainerTypes:MES-ContainerTypes-MixedAmmo-3]
+        [MinBlocks:3]
+        [MaxBlocks:20]
+        [AppendNameToBlock:true]
+        [AppendedName: (Loot)]
+        [Chance:100]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Manipulation-OneRemote</SubtypeId>
+      </Id>
+      <Description>
+        [MES Manipulation]
+
+        [UseBlockReplacer:true]
+        [ReplaceBlockOld:MyObjectBuilder_ContractBlock/ContractBlock]
+        [ReplaceBlockNew:MyObjectBuilder_RemoteControl/LargeBlockRemoteControl]
+      </Description>
+    </EntityComponent>
+  </EntityComponents>
+</Definitions>

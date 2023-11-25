@@ -135,8 +135,11 @@
         [IgnoreCleanupRules:true]
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
-        [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
         [ManipulationProfiles:GVA-Common-Manipulation-MinorShipyardSetup]
+        [ManipulationProfiles:GVA-Manipulation-Shipyards]
+
+        [InitializeStoreBlocks:true]
+        [ContainerTypesForStoreOrders:MES-ContainerTypes-AdvancedIngots-3]
 
         [SpawnConditionsProfiles:Red-RedAlienRegion-PI-Spawns-Civ10]
       </Description>
@@ -167,7 +170,10 @@
         [IgnoreCleanupRules:true]
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
-        [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
+        [ManipulationProfiles:GVA-Manipulation-MinorTrade]
+
+        [InitializeStoreBlocks:true]
+        [ContainerTypesForStoreOrders:MES-ContainerTypes-AdvancedIngots-3]
 
         [SpawnConditionsProfiles:Red-RedAlienRegion-PI-Spawns-Civ20]
       </Description>
@@ -183,14 +189,14 @@
           <BeaconText>Greenhouse</BeaconText>
           <Behaviour>KAJI-Behavior-PassiveCivilian</Behaviour>
         </Prefab>
-        <Prefab SubtypeId="[NPC] Snow Outpost">
+        <Prefab SubtypeId="Economy_Outpost_7">
           <Position>
             <X>0.0</X>
-            <Y>-5.0</Y>
+            <Y>5.0</Y>
             <Z>0.0</Z>
           </Position>
           <BeaconText>Outpost</BeaconText>
-          <Behaviour>KAJI-Behavior-PassiveCivilian-R</Behaviour>
+          <Behaviour>KAJI-Behavior-PassiveCivilian-RC1</Behaviour>
         </Prefab>
         <Prefab SubtypeId="[NPC] Snow SAM Battery">
           <Position>
@@ -216,7 +222,11 @@
         [IgnoreCleanupRules:true]
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
-        [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
+        [ManipulationProfiles:GVA-Manipulation-MajorTrade]
+
+        [InitializeStoreBlocks:true]
+        [ContainerTypesForStoreOrders:MES-ContainerTypes-AdvancedIngots-3]
+
 
         [SpawnConditionsProfiles:Red-RedAlienRegion-PI-Spawns-Civ40]
       </Description>

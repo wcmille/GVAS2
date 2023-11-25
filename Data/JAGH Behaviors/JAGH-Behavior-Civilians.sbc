@@ -69,5 +69,23 @@
         [TriggerGroups:GVA-TriggerGroup-SpawningCosts]
       </Description>
     </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>JAGH-Behavior-PassiveCivilian-RC1</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Behavior]
+        [BehaviorName:Passive]
+
+        [UseProjectileLeadPrediction:true]
+        [UseBarrageFire:true]
+        [UseTurrets:false]
+
+        [Triggers:GVA-Trigger-Spawn-Report]
+        [Triggers:GVA-Trigger-Spawn-BeaconC1]
+        [TriggerGroups:GVA-TriggerGroup-SpawningCosts]
+      </Description>
+    </EntityComponent>
   </EntityComponents>
 </Definitions>

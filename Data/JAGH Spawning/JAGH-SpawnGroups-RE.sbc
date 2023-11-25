@@ -71,7 +71,10 @@
         [Modular Encounters SpawnGroup]
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
-        [ManipulationProfiles:GVA-JAGH-Manipulation-Std]
+        [ManipulationProfiles:GVA-Manipulation-MajorTrade]
+
+        [InitializeStoreBlocks:true]
+        [ContainerTypesForStoreOrders:MES-ContainerTypes-AdvancedIngots-3]
 
         [IgnoreCleanupRules:true]
 

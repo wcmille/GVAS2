@@ -10,7 +10,22 @@
         [MES Prefab Data]
 
         [Prefabs:Chuzo-sho Mobile Refinery]
-        [ManipulationProfiles:GVA-Manipulation-LargeLoot]
+        [ManipulationProfiles:GVA-Manipulation-PlanetRefinery]
+      </Description>
+    </EntityComponent>
+    
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>KAJI-Economy_Outpost_7</SubtypeId>
+      </Id>
+      <Description>
+        [MES Prefab Data]
+
+        [Prefabs:Economy_Outpost_7]
+        [ManipulationProfiles:GVA-Manipulation-MinorTrade]
+        [ManipulationProfiles:GVA-KAJI-Manipulation-KEEN2KAJI]
+        [ManipulationProfiles:GVA-Manipulation-OneRemote]
       </Description>
     </EntityComponent>
   </EntityComponents>

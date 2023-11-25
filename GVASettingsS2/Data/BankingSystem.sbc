@@ -6,7 +6,7 @@
         <Icon>Textures\GUI\Icons\SpaceCredits.dds</Icon>
         <CurrencyFullName>Space Credits</CurrencyFullName>
         <CurrencyShortName>SC</CurrencyShortName>
-        <StartingBalance>150000</StartingBalance>
+        <StartingBalance>1000000</StartingBalance>
         <AccountLogLen>25</AccountLogLen>
 
         <PhysicalItemId Type="MyObjectBuilder_PhysicalObject" Subtype="SpaceCredit" />

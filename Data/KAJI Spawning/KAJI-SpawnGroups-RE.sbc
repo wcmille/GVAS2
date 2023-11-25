@@ -56,7 +56,7 @@
             <Y>0.0</Y>
             <Z>0.0</Z>
           </Position>
-          <Behaviour>KAJI-Behavior-PassiveCivilian-R</Behaviour>
+          <Behaviour>KAJI-Behavior-PassiveCivilian</Behaviour>
         </Prefab>
       </Prefabs>
     </SpawnGroup>
@@ -71,7 +71,10 @@
         [Modular Encounters SpawnGroup]
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
-        [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
+        [ManipulationProfiles:GVA-Manipulation-MajorTrade]
+
+        [InitializeStoreBlocks:true]
+        [ContainerTypesForStoreOrders:MES-ContainerTypes-AdvancedIngots-3]
 
         [IgnoreCleanupRules:true]
 

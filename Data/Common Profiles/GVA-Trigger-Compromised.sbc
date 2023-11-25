@@ -28,6 +28,10 @@
         [StopAllThrust:Value]
         [DisableTriggers:true]
         [DisableTriggerNames:GVA-Trigger-Despawn,GVA-Trigger-DespawnMES]
+        [GridEditable:true]
+        [ToggleBlocksOfType:true]
+        [BlockTypesToToggle:MyObjectBuilder_StoreBlock/StoreBlock]
+        [BlockTypeToggles:Off]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">

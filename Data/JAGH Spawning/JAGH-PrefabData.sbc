@@ -3,14 +3,29 @@
   <EntityComponents>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
-          <TypeId>Inventory</TypeId>
-          <SubtypeId>JAGH-PrefabData-Refinery</SubtypeId>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>JAGH-PrefabData-Refinery</SubtypeId>
       </Id>
       <Description>
         [MES Prefab Data]
 
         [Prefabs:Brokk Mobile Refinery]
-        [ManipulationProfiles:GVA-Manipulation-LargeLoot]
+        [ManipulationProfiles:GVA-Manipulation-PlanetRefinery]
+      </Description>
+    </EntityComponent>
+    
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>JAGH-Economy_Outpost_4</SubtypeId>
+      </Id>
+      <Description>
+        [MES Prefab Data]
+
+        [Prefabs:Economy_Outpost_4]
+        [ManipulationProfiles:GVA-Manipulation-MinorTrade]
+        [ManipulationProfiles:GVA-JAGH-Manipulation-KEEN2JAGH]
+        [ManipulationProfiles:GVA-Manipulation-OneRemote]
       </Description>
     </EntityComponent>
   </EntityComponents>

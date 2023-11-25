@@ -164,10 +164,14 @@
       <Description>
         [Modular Encounters SpawnGroup]
 
-        [ManipulationProfiles:GVA-Common-Manipulation-Std]
-        [ManipulationProfiles:GVA-JAGH-Manipulation-Std]
-
         [IgnoreCleanupRules:true]
+
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ManipulationProfiles:GVA-Manipulation-MinorTrade]
+
+        [InitializeStoreBlocks:true]
+        [ContainerTypesForStoreOrders:MES-ContainerTypes-AdvancedIngots-3]
+
 
         [SpawnConditionsProfiles:Blue-BlueAlienRegion-PI-Spawns-Civ20]
       </Description>
@@ -183,14 +187,14 @@
           <BeaconText>Greenhouse</BeaconText>
           <Behaviour>JAGH-Behavior-PassiveCivilian</Behaviour>
         </Prefab>
-        <Prefab SubtypeId="[NPC] Snow Outpost">
+        <Prefab SubtypeId="Economy_Outpost_4">
           <Position>
             <X>0.0</X>
-            <Y>-5.0</Y>
+            <Y>37.5</Y>
             <Z>0.0</Z>
           </Position>
           <BeaconText>Outpost</BeaconText>
-          <Behaviour>JAGH-Behavior-PassiveCivilian-R</Behaviour>
+          <Behaviour>JAGH-Behavior-PassiveCivilian-RC1</Behaviour>
         </Prefab>
         <Prefab SubtypeId="[NPC] Snow SAM Battery">
           <Position>
@@ -214,7 +218,10 @@
         [Modular Encounters SpawnGroup]
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
-        [ManipulationProfiles:GVA-JAGH-Manipulation-Std]
+        [ManipulationProfiles:GVA-Manipulation-MajorTrade]
+
+        [InitializeStoreBlocks:true]
+        [ContainerTypesForStoreOrders:MES-ContainerTypes-AdvancedIngots-3]
 
         [IgnoreCleanupRules:true]
 

@@ -22,12 +22,14 @@
       </Id>
       <Description>
         [RivalAI Trigger]
-        
+
         [UseTrigger:true]
         [Type:Timer]
-        [StartsReady:true]
-        [MaxActions:1]    
-        
+        [StartsReady:false]
+        [MinCooldownMs:1000]
+        [MaxCooldownMs:1500]
+        [MaxActions:1]
+
         [Actions:GVA-Action-API-Spawn]
       </Description>
     </EntityComponent>
@@ -105,6 +107,37 @@
 
         [DisableTriggers:true]
         [DisableTriggerNames:GVA-Trigger-StandardCompromised]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Trigger-Spawn-BeaconC1</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Trigger]
+        [UseTrigger:true]
+        [Type:Timer]
+        [StartsReady:true]
+        [MaxActions:1]
+
+        [Actions:GVA-Action-Spawn-BeaconC1]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Action-Spawn-BeaconC1</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Action]
+
+        [AddCustomDataToBlocks:true]
+        [CustomDataBlockNames:Outpost]
+        [CustomDataFiles:BeaconCostC1.xml]
+        [CustomDataBlockNames:Beacon]
+        [CustomDataFiles:BeaconCostC1.xml]
+        [DebugMessage:Action Runs]
       </Description>
     </EntityComponent>
   </EntityComponents>
