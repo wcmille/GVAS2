@@ -139,7 +139,7 @@
         [ManipulationProfiles:GVA-Manipulation-Shipyards]
 
         [InitializeStoreBlocks:true]
-        [ContainerTypesForStoreOrders:MES-ContainerTypes-AdvancedIngots-3]
+        [ContainerTypesForStoreOrders:GVA-ContainerTypes-Purchase1]
 
         [SpawnConditionsProfiles:Red-RedAlienRegion-PI-Spawns-Civ10]
       </Description>
@@ -173,7 +173,7 @@
         [ManipulationProfiles:GVA-Manipulation-MinorTrade]
 
         [InitializeStoreBlocks:true]
-        [ContainerTypesForStoreOrders:MES-ContainerTypes-AdvancedIngots-3]
+        [ContainerTypesForStoreOrders:GVA-ContainerTypes-Purchase1]
 
         [SpawnConditionsProfiles:Red-RedAlienRegion-PI-Spawns-Civ20]
       </Description>
@@ -225,8 +225,7 @@
         [ManipulationProfiles:GVA-Manipulation-MajorTrade]
 
         [InitializeStoreBlocks:true]
-        [ContainerTypesForStoreOrders:MES-ContainerTypes-AdvancedIngots-3]
-
+        [ContainerTypesForStoreOrders:GVA-ContainerTypes-Purchase1]
 
         [SpawnConditionsProfiles:Red-RedAlienRegion-PI-Spawns-Civ40]
       </Description>

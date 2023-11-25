@@ -170,8 +170,7 @@
         [ManipulationProfiles:GVA-Manipulation-MinorTrade]
 
         [InitializeStoreBlocks:true]
-        [ContainerTypesForStoreOrders:MES-ContainerTypes-AdvancedIngots-3]
-
+        [ContainerTypesForStoreOrders:GVA-ContainerTypes-Purchase1]
 
         [SpawnConditionsProfiles:Blue-BlueAlienRegion-PI-Spawns-Civ20]
       </Description>
@@ -221,7 +220,7 @@
         [ManipulationProfiles:GVA-Manipulation-MajorTrade]
 
         [InitializeStoreBlocks:true]
-        [ContainerTypesForStoreOrders:MES-ContainerTypes-AdvancedIngots-3]
+        [ContainerTypesForStoreOrders:GVA-ContainerTypes-Purchase1]
 
         [IgnoreCleanupRules:true]
 
