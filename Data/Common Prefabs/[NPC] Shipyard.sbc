@@ -3257,6 +3257,7 @@ Civilian=1</Value>
               <ColorMaskHSV x="0" y="-0.8" z="-0.45" />
               <SkinSubtypeId>Frozen_Armor</SkinSubtypeId>
               <ShareMode>Faction</ShareMode>
+              <CustomName>Store Block</CustomName>
               <ComponentContainer>
                 <Components>
                   <ComponentData>

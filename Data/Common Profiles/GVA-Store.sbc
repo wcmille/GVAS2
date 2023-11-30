@@ -1,0 +1,263 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-StoreProfile-VendingToolsBasic</SubtypeId>
+      </Id>
+      <Description>
+        [MES Store]
+
+        [FileSource:GVA-MinorTrade.xml]
+
+        [MinOfferItems:2]
+        [MaxOfferItems:6]
+
+        [ItemsRequireInventory:false]
+        [AddedItemsCombineQuantity:true]
+        [AddedItemsAveragePrice:true]
+        
+        //Offers - Sell To Player
+
+        [Offers:Tool/HandDrill3Item]
+        [Offers:Tool/HandDrill4Item]
+        [Offers:Tool/AngleGrinder3Item]
+        [Offers:Tool/AngleGrinder4Item]
+        [Offers:Tool/Welder3Item]
+        [Offers:Tool/Welder4Item]
+        [Offers:Tool/ElitePistolItem]
+        [Offers:Tool/FullAutoPistolItem]
+        [Offers:Tool/UltimateAutomaticRifleItem]
+        [Offers:Tool/PreciseAutomaticRifleItem]
+        [Offers:Tool/RapidFireAutomaticRifleItem]
+        [Offers:Tool/BasicHandHeldLauncherItem]
+        [Offers:Tool/AdvancedHandHeldLauncherItem]
+      </Description>
+    </EntityComponent>
+    
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-StoreProfile-VendingConsumablesBasic</SubtypeId>
+      </Id>
+      <Description>
+        [MES Store]
+
+        [FileSource:GVA-MinorTrade.xml]
+
+        [MinOfferItems:2]
+        [MaxOfferItems:4]
+
+        [ItemsRequireInventory:false]
+        [AddedItemsCombineQuantity:true]
+        [AddedItemsAveragePrice:true]
+
+        //Offers - Sell To Player
+        
+        [RequiredOffers:Consumable/Medkit]
+        [RequiredOffers:Consumable/Powerkit]
+        [Offers:Consumable/ClangCola]
+        [Offers:Consumable/CosmicCoffee]
+        [Offers:Consumable/JetpackInhibitorBlocker]
+        [Offers:Consumable/DrillInhibitorBlocker]
+        [Offers:Consumable/PlayerInhibitorBlocker]
+        [Offers:Consumable/EnergyInhibitorBlocker]
+      </Description>
+    </EntityComponent>
+    
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-StoreProfile-BasicStation</SubtypeId>
+      </Id>
+      <Description>
+        [MES Store]
+
+        [FileSource:GVA-MinorTrade.xml]
+
+        [MinOfferItems:4]
+        [MaxOfferItems:12]
+        [MinOrderItems:9]
+        [MaxOrderItems:9]
+
+        [ItemsRequireInventory:true]
+        [AddedItemsCombineQuantity:true]
+        [AddedItemsAveragePrice:true]
+        [EqualizeOffersAndOrders:true]
+
+        //Offers - Sell To Player
+
+        [Offers:RandomCraftable/Component]
+
+        [RequiredOffers:HydrogenOffer]
+        [RequiredOffers:UraniumOffer]
+        [RequiredOffers:ZoneOffer]
+
+        //Orders - Buy From Player
+
+        [Orders:Ingot/Cobalt]
+        [Orders:Ingot/Magnesium]
+        [Orders:Ingot/Silver]
+        [Orders:Ingot/Uranium]
+        [Orders:Ingot/Platinum]
+        [Orders:Ingot/Gold]
+        [Orders:Component/Superconductor]
+        [Orders:Component/Thrust]
+        [Orders:Component/GravityGenerator]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-StoreProfile-VendingToolsEnhanced</SubtypeId>
+      </Id>
+      <Description>
+        [MES Store]
+
+        [FileSource:TOC-StoreItems-Enhanced.xml]
+
+        [MinOfferItems:8]
+        [MaxOfferItems:13]
+
+        [ItemsRequireInventory:false]
+        [AddedItemsCombineQuantity:true]
+        [AddedItemsAveragePrice:false]
+
+        //Offers - Sell To Player
+
+        [Offers:Tool/HandDrill3Item]
+        [Offers:Tool/HandDrill4Item]
+        [Offers:Tool/AngleGrinder3Item]
+        [Offers:Tool/AngleGrinder4Item]
+        [Offers:Tool/Welder3Item]
+        [Offers:Tool/Welder4Item]
+        [Offers:Tool/ElitePistolItem]
+        [Offers:Tool/FullAutoPistolItem]
+        [Offers:Tool/UltimateAutomaticRifleItem]
+        [Offers:Tool/PreciseAutomaticRifleItem]
+        [Offers:Tool/RapidFireAutomaticRifleItem]
+        [Offers:Tool/BasicHandHeldLauncherItem]
+        [Offers:Tool/AdvancedHandHeldLauncherItem]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-StoreProfile-VendingConsumablesEnhanced</SubtypeId>
+      </Id>
+      <Description>
+        [MES Store]
+
+        [FileSource:TOC-StoreItems-Enhanced.xml]
+
+        [MinOfferItems:5]
+        [MaxOfferItems:8]
+
+        [ItemsRequireInventory:false]
+        [AddedItemsCombineQuantity:true]
+        [AddedItemsAveragePrice:false]
+
+        //Offers - Sell To Player
+
+        [RequiredOffers:Consumable/Medkit]
+        [RequiredOffers:Consumable/Powerkit]
+        [Offers:Consumable/ClangCola]
+        [Offers:Consumable/CosmicCoffee]
+        [Offers:Consumable/JetpackInhibitorBlocker]
+        [Offers:Consumable/DrillInhibitorBlocker]
+        [Offers:Consumable/PlayerInhibitorBlocker]
+        [Offers:Consumable/EnergyInhibitorBlocker]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-StoreProfile-EnhancedStation</SubtypeId>
+      </Id>
+      <Description>
+        [MES Store]
+
+        [FileSource:TOC-StoreItems-Enhanced.xml]
+
+        [MinOfferItems:10]
+        [MaxOfferItems:20]
+        [MinOrderItems:4]
+        [MaxOrderItems:12]
+
+        [ItemsRequireInventory:false]
+        [AddedItemsCombineQuantity:true]
+        [AddedItemsAveragePrice:false]
+        [EqualizeOffersAndOrders:true]
+
+        [ItemsRequireInventory:false]
+
+        //Offers - Sell To Player
+
+        [Offers:RandomCraftable/Component]
+        [Offers:RandomCraftable/Component]
+        [Offers:RandomCraftable/Ammo]
+
+        [RequiredOffers:HydrogenOffer]
+        [RequiredOffers:OxygenOffer]
+        [RequiredOffers:UraniumOffer]
+        [RequiredOffers:ZoneOffer]
+
+        //Orders - Buy From Player
+
+        [Orders:Ingot/Iron]
+        [Orders:Ingot/Nickel]
+        [Orders:Ingot/Cobalt]
+        [Orders:Ingot/Magnesium]
+        [Orders:Ingot/Silicon]
+        [Orders:Ingot/Silver]
+        [Orders:RandomCraftable/Component]
+        [Orders:RandomCraftable/Ammo]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-StoreProfile-Merchant</SubtypeId>
+      </Id>
+      <Description>
+        [MES Store]
+
+        [FileSource:TOC-StoreItems-Merchant.xml]
+
+        [MinOfferItems:8]
+        [MaxOfferItems:15]
+        [MinOrderItems:4]
+        [MaxOrderItems:12]
+
+        [ItemsRequireInventory:false]
+        [AddedItemsCombineQuantity:false]
+        [AddedItemsAveragePrice:false]
+        [EqualizeOffersAndOrders:false]
+
+        [ItemsRequireInventory:false]
+
+        //Offers - Sell To Player
+
+        [RequiredOffers:UraniumOffer]
+        [Offers:RandomCraftable/Component]
+        [Offers:RandomCraftable/Component]
+        [Offers:RandomCraftable/Ammo]
+
+        //Orders - Buy From Player
+
+        [Orders:Ingot/Iron]
+        [Orders:Ingot/Nickel]
+        [Orders:Ingot/Cobalt]
+        [Orders:Ingot/Magnesium]
+        [Orders:Ingot/Silicon]
+        [Orders:Ingot/Silver]
+        [Orders:RandomCraftable/Component]
+        [Orders:RandomCraftable/Ammo]
+      </Description>
+    </EntityComponent>
+  </EntityComponents>
+</Definitions>

@@ -1,144 +1,161 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <EntityComponents>
+
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-TriggerGroup-SpawningCosts</SubtypeId>
+        <SubtypeId>GVA-Trigger-InitMinorTrade</SubtypeId>
       </Id>
       <Description>
-        [RivalAI TriggerGroup]
+        [MES AI Trigger]
 
-        [Triggers:GVA-Trigger-Spawn]
-        [Triggers:GVA-Trigger-Despawn]
-        [Triggers:GVA-Trigger-DespawnMES]
+        [UseTrigger:true]
+        [Type:Timer]
+
+        [MinCooldownMs:1]
+        [MaxCooldownMs:2]
+        [StartsReady:true]
+
+        [MaxActions:1]
+        [Actions:GVA-Action-InitMinorTrade]
       </Description>
     </EntityComponent>
 
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-Trigger-Spawn</SubtypeId>
+        <SubtypeId>GVA-Trigger-RefreshMinorTrade</SubtypeId>
       </Id>
       <Description>
         [RivalAI Trigger]
 
         [UseTrigger:true]
         [Type:Timer]
-        [StartsReady:false]
-        [MinCooldownMs:1000]
-        [MaxCooldownMs:1500]
-        [MaxActions:1]
+        [MinCooldownMs:600000]
+        [MaxCooldownMs:900000]
+        [StartsReady:true]
 
-        [Actions:GVA-Action-API-Spawn]
-      </Description>
-    </EntityComponent>
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
-        <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-Action-API-Spawn</SubtypeId>
-      </Id>
-      <Description>
-        [RivalAI Action]
+        [Actions:GVA-Action-InitMinorTrade]
       </Description>
     </EntityComponent>
 
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-Trigger-Spawn-Report</SubtypeId>
+        <SubtypeId>GVA-Action-InitMinorTrade</SubtypeId>
       </Id>
       <Description>
-        [RivalAI Trigger]
+        [MES AI Action]
+
+        [ApplyStoreProfiles:true]
+        [ClearStoreContentsFirst:true]
+
+        [StoreBlocks:Store Block]
+        [StoreProfiles:GVA-StoreProfile-BasicStation]
+      </Description>
+    </EntityComponent>
+
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Trigger-InitMajorTrade</SubtypeId>
+      </Id>
+      <Description>
+        [MES AI Trigger]
 
         [UseTrigger:true]
         [Type:Timer]
-        [StartsReady:true]
-        [MaxActions:1]
 
-        [Actions:GVA-Action-API-Spawn-Report]
-      </Description>
-    </EntityComponent>
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
-        <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-Action-API-Spawn-Report</SubtypeId>
-      </Id>
-      <Description>
-        [RivalAI Action]
+        [MinCooldownMs:1]
+        [MaxCooldownMs:2]
+        [StartsReady:true]
+
+        [MaxActions:1]
+        [Actions:GVA-Action-InitMajorTrade]
       </Description>
     </EntityComponent>
 
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
-          <TypeId>Inventory</TypeId>
-          <SubtypeId>GVA-Trigger-Despawn</SubtypeId>
-      </Id>
-      <Description>
-        [RivalAI Trigger]
-        [UseTrigger:true]
-        [Type:Despawn]
-        [StartsReady:true]
-        [MaxActions:1]
-        [Actions:GVA-Action-API-Despawn]
-      </Description>
-    </EntityComponent>
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-Trigger-DespawnMES</SubtypeId>
+        <SubtypeId>GVA-Action-InitMajorTrade</SubtypeId>
       </Id>
       <Description>
-        [RivalAI Trigger]
-        [UseTrigger:true]
-        [Type:DespawnMES]
-        [StartsReady:true]
-        [MaxActions:1]
-        [Actions:GVA-Action-API-Despawn]
-      </Description>
-    </EntityComponent>
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
-        <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-Action-API-Despawn</SubtypeId>
-      </Id>
-      <Description>
-        [RivalAI Action]
-
-        [DisableTriggers:true]
-        [DisableTriggerNames:GVA-Trigger-StandardCompromised]
-      </Description>
-    </EntityComponent>
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
-        <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-Trigger-Spawn-BeaconC1</SubtypeId>
-      </Id>
-      <Description>
-        [RivalAI Trigger]
-        [UseTrigger:true]
-        [Type:Timer]
-        [StartsReady:true]
-        [MaxActions:1]
-
-        [Actions:GVA-Action-Spawn-BeaconC1]
-      </Description>
-    </EntityComponent>
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
-        <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-Action-Spawn-BeaconC1</SubtypeId>
-      </Id>
-      <Description>
-        [RivalAI Action]
+        [MES AI Action]
 
         [AddCustomDataToBlocks:true]
-        [CustomDataBlockNames:Outpost]
-        [CustomDataFiles:BeaconCostC1.xml]
-        [CustomDataBlockNames:Beacon]
-        [CustomDataFiles:BeaconCostC1.xml]
         [CustomDataBlockNames:Store Block]
-        [CustomDataFiles:MinorTradeStore.xml]
+        [CustomDataFiles:MajorTradeStore.xml]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Trigger-InitRefineryTrade</SubtypeId>
+      </Id>
+      <Description>
+        [MES AI Trigger]
+
+        [UseTrigger:true]
+        [Type:Timer]
+
+        [MinCooldownMs:1]
+        [MaxCooldownMs:2]
+        [StartsReady:true]
+
+        [MaxActions:1]
+        [Actions:GVA-Action-InitRefineryTrade]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Action-InitRefineryTrade</SubtypeId>
+      </Id>
+      <Description>
+        [MES AI Action]
+
+        [AddCustomDataToBlocks:true]
+        [CustomDataBlockNames:Store Block]
+        [CustomDataFiles:RefineryTradeStore.xml]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Trigger-InitShipyardTrade</SubtypeId>
+      </Id>
+      <Description>
+        [MES AI Trigger]
+
+        [UseTrigger:true]
+        [Type:Timer]
+
+        [MinCooldownMs:1]
+        [MaxCooldownMs:2]
+        [StartsReady:true]
+
+        [MaxActions:1]
+        [Actions:GVA-Action-InitShipyardTrade]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Action-InitShipyardTrade</SubtypeId>
+      </Id>
+      <Description>
+        [MES AI Action]
+
+        [AddCustomDataToBlocks:true]
+        [CustomDataBlockNames:Store Block]
+        [CustomDataFiles:ShipyardTradeStore.xml]
       </Description>
     </EntityComponent>
   </EntityComponents>

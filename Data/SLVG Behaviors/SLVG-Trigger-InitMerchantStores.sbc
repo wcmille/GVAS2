@@ -5,7 +5,7 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-Trigger-InitMerchantStores</SubtypeId>
+        <SubtypeId>SLVG-Trigger-InitMerchantStores</SubtypeId>
       </Id>
       <Description>
         [MES AI Trigger]
@@ -18,7 +18,7 @@
         [StartsReady:true]
 
         [MaxActions:1]
-        [Actions:GVA-Action-InitMerchantStores]
+        [Actions:SLVG-Action-InitMerchantStores]
       </Description>
     </EntityComponent>
 
@@ -36,14 +36,14 @@
         [MaxCooldownMs:900000]
         [StartsReady:true]
 
-        [Actions:GVA-Action-InitMerchantStores]
+        [Actions:SLVG-Action-InitMerchantStores]
       </Description>
     </EntityComponent>
 
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-Action-InitMerchantStores</SubtypeId>
+        <SubtypeId>SLVG-Action-InitMerchantStores</SubtypeId>
       </Id>
       <Description>
         [MES AI Action]

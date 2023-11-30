@@ -32,7 +32,7 @@
 
         [Triggers:GVA-Trigger-CallAtmoCargoShip]
         [Triggers:JAGH-Trigger-ScoutTattle]
-
+        [Triggers:GVA-Trigger-InitRefineryTrade]
         [TriggerGroups:GVA-TriggerGroup-SpawningCosts]
       </Description>
     </EntityComponent>
@@ -72,7 +72,7 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>JAGH-Behavior-PassiveCivilian-RC1</SubtypeId>
+        <SubtypeId>GVA-Behavior-PassiveCivilian-RC1</SubtypeId>
       </Id>
       <Description>
         [RivalAI Behavior]
@@ -84,6 +84,7 @@
 
         [Triggers:GVA-Trigger-Spawn-Report]
         [Triggers:GVA-Trigger-Spawn-BeaconC1]
+        [Triggers:GVA-Trigger-InitMinorTrade]
         [TriggerGroups:GVA-TriggerGroup-SpawningCosts]
       </Description>
     </EntityComponent>
