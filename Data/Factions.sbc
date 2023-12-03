@@ -16,7 +16,7 @@
       <!--Enemies, Neutral, Friends-->
       <AcceptHumans>false</AcceptHumans>
       <AutoAcceptMember>false</AutoAcceptMember>
-      <StartingBalance>10000</StartingBalance>
+      <StartingBalance>10000000</StartingBalance>
       <Type>Builder</Type>
       <!--None, Miner, Trader, Builder-->
       <DiscoveredByDefault>true</DiscoveredByDefault>
@@ -36,7 +36,7 @@
       <!--Enemies, Neutral, Friends-->
       <AcceptHumans>false</AcceptHumans>
       <AutoAcceptMember>false</AutoAcceptMember>
-      <StartingBalance>10000</StartingBalance>
+      <StartingBalance>100000000</StartingBalance>
       <Type>None</Type>
       <!--None, Miner, Trader, Builder-->
       <DiscoveredByDefault>true</DiscoveredByDefault>
