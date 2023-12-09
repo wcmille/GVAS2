@@ -51,6 +51,9 @@
         [MaxSpawns:1]
 
         [SpawnGroups:GVA-Blue-FFO]
+        [SpawnGroups:GVA-Blue-DDO]
+        [SpawnGroups:GVA-Blue-FFO-Flotilla]
+        [SpawnGroups:GVA-Blue-DDO-Squadron]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
