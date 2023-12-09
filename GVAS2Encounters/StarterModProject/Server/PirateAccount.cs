@@ -48,6 +48,7 @@ namespace GVA.NPCControl.Server
 
             Military = mil;
             UnspentUnits = uu;
+            log.Read();
         }
         public double UnspentUnits { get; private set; }
 

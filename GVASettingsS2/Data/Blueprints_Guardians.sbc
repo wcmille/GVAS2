@@ -53,7 +53,7 @@
         <Item Amount="5" TypeId="Ingot" SubtypeId="Silver"/>
       </Prerequisites>
       <Result Amount="1" TypeId="Component" SubtypeId="ZoneChip"/>
-      <BaseProductionTimeInSeconds>1125</BaseProductionTimeInSeconds>
+      <BaseProductionTimeInSeconds>400</BaseProductionTimeInSeconds>
       <!--9000-->
       <!-- this is 5 hours on 1x game assembler speed setting with no Speed Upgrade Modules -->
       <!-- with 4 Speed Upgrade Modules, that brings it to 3600 seconds which is 60 minutes -->
@@ -118,12 +118,9 @@
       <Icon>Textures\GUI\Icons\Items\Laser_Icon_Overlay.dds</Icon>
       <Prerequisites>
         <Item Amount="12" TypeId="Component" SubtypeId="ZoneChip"/>
-        <Item Amount="1" TypeId="Component" SubtypeId="Display"/>
-        <Item Amount="1" TypeId="Component" SubtypeId="PowerCell"/>
-        <Item Amount="1" TypeId="Component" SubtypeId="Computer"/>
       </Prerequisites>
       <Result Amount="1" TypeId="Component" SubtypeId="GVK_Laser_Tech"/>
-      <BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
+      <BaseProductionTimeInSeconds>1200</BaseProductionTimeInSeconds>
     </Blueprint>
     <!-- <Blueprint>
       <Id>
