@@ -22,7 +22,7 @@
 				<Component Subtype="SteelPlate" Count="20"/>
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0"/>
-			<GeneralDamageMultiplier>0.1</GeneralDamageMultiplier>
+			<GeneralDamageMultiplier>0.4</GeneralDamageMultiplier>
 			<!-- Build stages must be removed so beacon is always functional -->
 			<!--<BuildProgressModels>
                 <Model BuildPercentUpperBound="0.50" File="Models\Cubes\Small\BeaconConstruction_1.mwm" />

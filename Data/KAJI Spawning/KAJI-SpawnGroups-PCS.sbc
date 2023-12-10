@@ -51,7 +51,7 @@
 
         [ReplenishSystems:true]
 
-        [SpawnConditionsProfiles:Red-Spawns-RM1O]
+        [SpawnConditionsProfiles:Red-Spawns-RM10]
       </Description>
 			<IsPirate>true</IsPirate>
 			<Frequency>5.0</Frequency>
