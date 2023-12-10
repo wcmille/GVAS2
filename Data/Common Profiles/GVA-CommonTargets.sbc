@@ -26,7 +26,7 @@
         [MatchAnyFilters:MovementScore]
         [MatchAnyFilters:LineOfSight]
 
-        [NonBroadcastVisualRange:3500]
+        [NonBroadcastVisualRange:5000]
         [MinMovementScore:1000]
         [MaxMovementDetectableDistance:7000]
         [MaxLineOfSight:7000]

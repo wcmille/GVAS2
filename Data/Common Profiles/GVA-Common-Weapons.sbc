@@ -11,7 +11,7 @@
         
         [UseProjectileLeadPrediction:true]
         [UseBarrageFire:true]
-        [UseTurrets:false]
+        [UseTurrets:true]
         [UseStaticGuns:true]
       </Description>
     </EntityComponent>

@@ -599,7 +599,7 @@ Civilian=1</Value>
               <ShowInInventory>true</ShowInInventory>
               <NumberInGrid>1</NumberInGrid>
               <Enabled>true</Enabled>
-              <AnyoneCanUse>false</AnyoneCanUse>
+              <AnyoneCanUse>true</AnyoneCanUse>
               <Opening>0</Opening>
               <OpenSound>ArcBlockDoorSmallOpen</OpenSound>
               <CloseSound>ArcBlockDoorSmallClose</CloseSound>
