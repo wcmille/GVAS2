@@ -13323,6 +13323,7 @@ Civilian=1</Value>
               <ColorMaskHSV x="0" y="-0.8" z="0" />
               <SkinSubtypeId>SciFi_Armor</SkinSubtypeId>
               <ShareMode>Faction</ShareMode>
+              <CustomName>Main Antenna</CustomName>
               <ShowOnHUD>false</ShowOnHUD>
               <ShowInTerminal>true</ShowInTerminal>
               <ShowInToolbarConfig>true</ShowInToolbarConfig>

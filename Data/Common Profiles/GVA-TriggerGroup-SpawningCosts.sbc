@@ -28,9 +28,22 @@
         [StartsReady:false]
         [MinCooldownMs:1000]
         [MaxCooldownMs:1500]
+        [ActionExecution:All]
         [MaxActions:1]
 
         [Actions:GVA-Action-API-Spawn]
+        [Actions:GVA-Action-ExtendRanges]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Action-ExtendRanges</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Action]
+
+        [SetWeaponsToMaxRange:true]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">

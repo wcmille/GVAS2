@@ -24,7 +24,7 @@ namespace GVA.NPCControl.Server
             if (grid == null) throw new ArgumentNullException(nameof(grid));
             if (formatter == null) throw new ArgumentNullException(nameof(formatter));
             var pos = grid.GetPosition();
-            string name = grid.CustomName.Remove(0, 6);
+            string name = grid.CustomName;
             LogText += WriteLogLine(gpsColor, formatter+name, pos);
             Write();
         }

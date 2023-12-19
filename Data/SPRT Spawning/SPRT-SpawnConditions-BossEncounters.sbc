@@ -30,5 +30,74 @@
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <!--Do Not Edit-->
+        <SubtypeId>GVA-Black-RandomSpaceBoss1</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+
+        [BossEncounterSpace:true]
+        [BossCustomGPSLabel:Heavy Pirate Activity]
+        [IgnoreCleanupRules:false]
+        [ReplenishSystems:true]
+
+        [FactionOwner:SPRT]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>5.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="Tempest Class Cruiser Block IV">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>50</Speed>
+          <Behaviour>SPRT-Behavior-SpaceDestroyer</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <!--Do Not Edit-->
+        <SubtypeId>GVA-Black-RandomSpaceBoss2</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+
+        [BossEncounterSpace:true]
+        [BossCustomGPSLabel:Heavy Pirate Activity]
+        [IgnoreCleanupRules:false]
+        [ReplenishSystems:true]
+
+        [FactionOwner:SPRT]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>5.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="Tempest Class Cruiser Block IV">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>50</Speed>
+          <Behaviour>SPRT-Behavior-SpaceDestroyer</Behaviour>
+        </Prefab>
+        <Prefab SubtypeId="Tempest Class Cruiser Block IV">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>800.0</Z>
+          </Position>
+          <Speed>50</Speed>
+          <Behaviour>SPRT-Behavior-SpaceDestroyer</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
   </SpawnGroups>
 </Definitions>

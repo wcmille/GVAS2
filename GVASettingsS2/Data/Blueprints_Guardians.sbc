@@ -59,53 +59,6 @@
       <!-- with 4 Speed Upgrade Modules, that brings it to 3600 seconds which is 60 minutes -->
       <!-- <IsPrimary>true</IsPrimary> -->
     </Blueprint>
-    <!-- <Blueprint>
-      <Id>
-        <TypeId>BlueprintDefinition</TypeId>
-        <SubtypeId>GVK_SmallCaliber_Tech</SubtypeId>
-      </Id>
-      <DisplayName>Ballistic Weapons Tech</DisplayName>
-      <Icon>Textures\GUI\Icons\Items\ZoneChip_Item.dds</Icon>
-      <Icon>Textures\GUI\Icons\Items\GVK_TechWeapon.dds</Icon>
-      <Icon>Textures\GUI\Icons\Items\SmallCaliber_Icon_Overlay.dds</Icon>
-      <Prerequisites>
-        <Item Amount="70" TypeId="Ingot" SubtypeId="Nickel"/>
-        <Item Amount="600" TypeId="Ingot" SubtypeId="Silver" />
-        <Item Amount="80" TypeId="Ingot" SubtypeId="Iron" />
-      </Prerequisites>
-      <Result Amount="1" TypeId="Component" SubtypeId="GVK_SmallCaliber_Tech"/>
-      <BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
-    </Blueprint>
-    <Blueprint>
-      <Id>
-        <TypeId>BlueprintDefinition</TypeId>
-        <SubtypeId>GVK_LargeCaliber_Tech</SubtypeId>
-      </Id>
-      <DisplayName>Ballistic Weapons Tech</DisplayName>
-      <Icon>Textures\GUI\Icons\Items\ZoneChip_Item.dds</Icon>
-      <Icon>Textures\GUI\Icons\Items\GVK_TechLargeCalWeapon.dds</Icon>
-      <Icon>Textures\GUI\Icons\Items\LargeCaliber_Icon_Overlay.dds</Icon>
-      <Prerequisites>
-        <Item Amount="1" TypeId="Component" SubtypeId="ZoneChip"/>
-      </Prerequisites>
-      <Result Amount="1" TypeId="Component" SubtypeId="GVK_LargeCaliber_Tech"/>
-      <BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
-    </Blueprint>
-    <Blueprint>
-      <Id>
-        <TypeId>BlueprintDefinition</TypeId>
-        <SubtypeId>GVK_Missile_Tech</SubtypeId>
-      </Id>
-      <DisplayName>Missile Weapons Tech</DisplayName>
-      <Icon>Textures\GUI\Icons\Items\ZoneChip_Item.dds</Icon>
-      <Icon>Textures\GUI\Icons\Items\GVK_TechMissile.dds</Icon>
-      <Icon>Textures\GUI\Icons\Items\Missile_Icon_Overlay.dds</Icon>
-      <Prerequisites>
-        <Item Amount="1" TypeId="Component" SubtypeId="ZoneChip"/>
-      </Prerequisites>
-      <Result Amount="1" TypeId="Component" SubtypeId="GVK_Missile_Tech"/>
-      <BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
-    </Blueprint> -->
     <Blueprint>
       <Id>
         <TypeId>BlueprintDefinition</TypeId>
@@ -122,19 +75,5 @@
       <Result Amount="1" TypeId="Component" SubtypeId="GVK_Laser_Tech"/>
       <BaseProductionTimeInSeconds>1200</BaseProductionTimeInSeconds>
     </Blueprint>
-    <!-- <Blueprint>
-      <Id>
-        <TypeId>BlueprintDefinition</TypeId>
-        <SubtypeId>GVK_Data_Core</SubtypeId>
-      </Id>
-      <DisplayName>Data Core</DisplayName>
-      <Icon>Textures\GUI\Icons\Items\ZoneChip_Item.dds</Icon>
-      <Icon>Textures\GUI\Icons\Items\GVK_TechDataCore.dds</Icon>
-      <Prerequisites>
-        <Item Amount="1" TypeId="Component" SubtypeId="ZoneChip"/>
-      </Prerequisites>
-      <Result Amount="1" TypeId="Component" SubtypeId="GVK_Data_Core"/>
-      <BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
-    </Blueprint> -->
   </Blueprints>
 </Definitions>
