@@ -207,6 +207,15 @@
           <BeaconText>SAM</BeaconText>
           <Behaviour>KAJI-Behavior-PassiveCivilian</Behaviour>
         </Prefab>
+        <Prefab SubtypeId="[NPC] Cafe">
+          <Position>
+            <X>0</X>
+            <Y>0</Y>
+            <Z>0</Z>
+          </Position>
+          <BeaconText>Cafe</BeaconText>
+          <Behaviour>KAJI-Behavior-PassiveCivilian</Behaviour>
+        </Prefab>
       </Prefabs>
     </SpawnGroup>
     
