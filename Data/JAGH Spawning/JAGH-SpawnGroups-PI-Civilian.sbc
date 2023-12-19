@@ -200,6 +200,15 @@
           <BeaconText>SAM</BeaconText>
           <Behaviour>JAGH-Behavior-PassiveCivilian</Behaviour>
         </Prefab>
+        <Prefab SubtypeId="[NPC] Cafe">
+          <Position>
+            <X>0</X>
+            <Y>0</Y>
+            <Z>9.0</Z>
+          </Position>
+          <BeaconText>Cafe</BeaconText>
+          <Behaviour>JAGH-Behavior-PassiveCivilian</Behaviour>
+        </Prefab>
       </Prefabs>
     </SpawnGroup>
     
