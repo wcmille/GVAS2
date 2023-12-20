@@ -72,10 +72,9 @@
         <TypeId>Component</TypeId>
         <SubtypeId>GVK_Laser_Tech</SubtypeId>
       </Id>
-      <DisplayName>[Tech] Laser Weapons</DisplayName>
+      <DisplayName>Elite Tech</DisplayName>
       <Icon>Textures\GUI\Icons\Items\ZoneChip_Item.dds</Icon>
-      <Icon>Textures\GUI\Icons\Items\GVK_TechWeapon.dds</Icon>
-      <Icon>Textures\GUI\Icons\Items\Laser_Icon_Overlay.dds</Icon>
+      <Icon>Textures\GUI\Icons\Items\Elite_Icon_Overlay.dds</Icon>
       <Size>
         <X>0.1</X>
         <Y>0.1</Y>

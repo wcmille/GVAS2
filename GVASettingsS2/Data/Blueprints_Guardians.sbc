@@ -64,11 +64,10 @@
         <TypeId>BlueprintDefinition</TypeId>
         <SubtypeId>GVK_Laser_Tech</SubtypeId>
       </Id>
-      <DisplayName>Ultra Tech</DisplayName>
+      <DisplayName>Elite Tech</DisplayName>
       <Description>Advanced technology used to make higher end weapon systems.</Description>
       <Icon>Textures\GUI\Icons\Items\ZoneChip_Item.dds</Icon>
-      <Icon>Textures\GUI\Icons\Items\GVK_TechWeapon.dds</Icon>
-      <Icon>Textures\GUI\Icons\Items\Laser_Icon_Overlay.dds</Icon>
+      <Icon>Textures\GUI\Icons\Items\Elite_Icon_Overlay.dds</Icon>
       <Prerequisites>
         <Item Amount="12" TypeId="Component" SubtypeId="ZoneChip"/>
       </Prerequisites>
