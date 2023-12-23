@@ -22,6 +22,7 @@
 
         [WeaponSystem:GVA-Common-Weapons]
 
+        [Triggers:GVA-Trigger-StandardCompromised]
         [TriggerGroups:KAJI-TriggerGroup-Warship]
         [TriggerGroups:GVA-TriggerGroup-SpawningCosts]
       </Description>

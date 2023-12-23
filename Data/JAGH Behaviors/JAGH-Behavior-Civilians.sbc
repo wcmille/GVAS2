@@ -30,9 +30,10 @@
         [UseBarrageFire:true]
         [UseTurrets:false]
 
+        [Triggers:GVA-Trigger-StandardCompromised]
         [Triggers:GVA-Trigger-CallAtmoCargoShip]
-        [Triggers:JAGH-Trigger-ScoutTattle]
         [Triggers:GVA-Trigger-InitRefineryTrade]
+        [Triggers:JAGH-Trigger-ScoutTattle]
         [TriggerGroups:GVA-TriggerGroup-SpawningCosts]
       </Description>
     </EntityComponent>
@@ -49,6 +50,7 @@
         [UseBarrageFire:true]
         [UseTurrets:false]
 
+        [Triggers:GVA-Trigger-StandardCompromised]
         [TriggerGroups:GVA-TriggerGroup-SpawningCosts]
       </Description>
     </EntityComponent>
@@ -66,6 +68,7 @@
         [UseTurrets:false]
 
         [Triggers:GVA-Trigger-Spawn-Report]
+        [Triggers:GVA-Trigger-StandardCompromised]
         [TriggerGroups:GVA-TriggerGroup-SpawningCosts]
       </Description>
     </EntityComponent>
@@ -85,6 +88,7 @@
         [Triggers:GVA-Trigger-Spawn-Report]
         [Triggers:GVA-Trigger-Spawn-BeaconC1]
         [Triggers:GVA-Trigger-InitMinorTrade]
+        [Triggers:GVA-Trigger-StandardCompromised]
         [TriggerGroups:GVA-TriggerGroup-SpawningCosts]
       </Description>
     </EntityComponent>

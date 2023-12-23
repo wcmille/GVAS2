@@ -16,6 +16,7 @@
 
         [Triggers:GVA-Trigger-InitShipyardTrade]
         [Triggers:GVA-Trigger-Spawn-Report]
+        [Triggers:GVA-Trigger-StandardCompromised]
         [TriggerGroups:GVA-TriggerGroup-SpawningCosts]
       </Description>
     </EntityComponent>
@@ -34,6 +35,7 @@
 
         [Triggers:GVA-Trigger-InitMajorTrade]
         [Triggers:GVA-Trigger-Spawn-Report]
+        [Triggers:GVA-Trigger-StandardCompromised]
         [TriggerGroups:GVA-TriggerGroup-SpawningCosts]
       </Description>
     </EntityComponent>
@@ -52,6 +54,7 @@
 
         [Triggers:GVA-Trigger-InitRefineryTrade]
         [Triggers:GVA-Trigger-Spawn-Report]
+        [Triggers:GVA-Trigger-StandardCompromised]
         [TriggerGroups:GVA-TriggerGroup-SpawningCosts]
       </Description>
     </EntityComponent>
