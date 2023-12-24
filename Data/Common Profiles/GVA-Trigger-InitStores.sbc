@@ -1,6 +1,40 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <EntityComponents>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Trigger-InitEnergySales</SubtypeId>
+      </Id>
+      <Description>
+        [MES AI Trigger]
+
+        [UseTrigger:true]
+        [Type:Timer]
+
+        [MinCooldownMs:1]
+        [MaxCooldownMs:2]
+        [StartsReady:true]
+
+        [MaxActions:1]
+        [Actions:GVA-Action-InitEnergySales]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Action-InitEnergySales</SubtypeId>
+      </Id>
+      <Description>
+        [MES AI Action]
+
+        [ApplyStoreProfiles:true]
+        [ClearStoreContentsFirst:true]
+
+        [StoreBlocks:Store]
+        [StoreProfiles:GVA-StoreProfile-EnergySales]
+      </Description>
+    </EntityComponent>
 
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>

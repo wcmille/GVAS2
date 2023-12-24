@@ -221,6 +221,33 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-StoreProfile-EnergySales</SubtypeId>
+      </Id>
+      <Description>
+        [MES Store]
+
+        [FileSource:GVA-EnergySales.xml]
+
+        [MinOfferItems:10]
+        [MaxOfferItems:20]
+        [MinOrderItems:4]
+        [MaxOrderItems:12]
+
+        [ItemsRequireInventory:false]
+        [AddedItemsCombineQuantity:true]
+        [AddedItemsAveragePrice:false]
+        [EqualizeOffersAndOrders:true]
+
+        //Offers - Sell To Player
+        [RequiredOffers:HydrogenOffer]
+        [RequiredOffers:OxygenOffer]
+        [RequiredOffers:IceOffer]
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
         <SubtypeId>GVA-StoreProfile-Merchant</SubtypeId>
       </Id>
       <Description>

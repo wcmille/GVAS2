@@ -218,7 +218,35 @@
         </Prefab>
       </Prefabs>
     </SpawnGroup>
-    
+
+    <!--Energy Center-->
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <SubtypeId>GVA-Red-PI-PermanentEnergyCenter</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+        [IgnoreCleanupRules:true]
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+
+        [SpawnConditionsProfiles:Red-RedAlienRegion-PI-Spawns-Civ20]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>5.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="[NPC] Fuel Depot">
+          <Position>
+            <X>0.0</X>
+            <Y>35.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <BeaconText>City</BeaconText>
+          <Behaviour>GVA-Behavior-PassiveCivilian-R-EnergySales</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+
     <!--Permanent City-->
     <SpawnGroup>
       <Id>

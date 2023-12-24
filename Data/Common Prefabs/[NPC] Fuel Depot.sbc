@@ -12,10 +12,10 @@
           <PositionAndOrientation>
             <Position x="0" y="0" z="0" />
             <Forward x="6.75585443E-06" y="-7.39904863E-05" z="-1" />
-            <Up x="2.898675E-06" y="1" z="-7.399047E-05" />
+            <Up x="-1" y="2.898675E-06" z="-7.399047E-05" />
             <Orientation>
-              <X>-3.699524E-05</X>
-              <Y>-3.37798087E-06</Y>
+              <X>-3.37798087E-06</X>
+              <Y>-3.699524E-05</Y>
               <Z>-1.4492125E-06</Z>
               <W>1</W>
             </Orientation>
@@ -9761,7 +9761,7 @@
               <SubtypeName>LargeBlockRemoteControl</SubtypeName>
               <EntityId>119319870166086234</EntityId>
               <Min x="1" y="11" z="-7" />
-              <BlockOrientation Forward="Left" Up="Up" />
+              <BlockOrientation Forward="Forward" Up="Left" />
               <ColorMaskHSV x="0.625" y="-0.77" z="-0.13" />
               <SkinSubtypeId>Concrete_Armor</SkinSubtypeId>
               <ShareMode>Faction</ShareMode>

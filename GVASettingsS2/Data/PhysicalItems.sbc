@@ -1163,7 +1163,7 @@
             <PhysicalMaterial>Stone</PhysicalMaterial>
             <IconSymbol>IconSymbol_Ice</IconSymbol>
 
-            <MinimalPricePerUnit>50</MinimalPricePerUnit>
+            <MinimalPricePerUnit>12</MinimalPricePerUnit>
             <MinimumOfferAmount>1000</MinimumOfferAmount>
             <MaximumOfferAmount>10000</MaximumOfferAmount>
             <MinimumOrderAmount>1000</MinimumOrderAmount>
