@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-SPRT-Manipulation-ISL</SubtypeId>
+      </Id>
+      <Description>
+        [MES Manipulation]
+        [RecolorGrid:true]
+
+        [RecolorOld:{X:0.06944445 Y:0.2 Z:0.55}]
+        [RecolorNew:{X:0.61944443 Y:-0.27 Z:-0.18}]
+        [ReskinTarget:{X:0.61944443 Y:-0.27 Z:-0.18}]
+        [ReskinTexture:Clean_Armor]
+
+        [RecolorOld:{X:0 Y:-0.8 Z:-0.35}]
+        [RecolorNew:{X:0 Y:-0.8 Z:-0.18}]
+        [ReskinTarget:{X:0 Y:-0.8 Z:-0.18}]
+        [ReskinTexture:SciFi_Armor]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-SPRT-Manipulation-KEEN</SubtypeId>
+      </Id>
+      <Description>
+        [MES Manipulation]
+        [RecolorGrid:true]
+
+        [RecolorOld:{X:1 Y:0.199999988 Z:0.55}]
+        [RecolorNew:{X:0.61944443 Y:-0.27 Z:-0.18}]
+        [RecolorOld:{X:1 Y:0.2 Z:0.55}]
+        [RecolorNew:{X:0.61944443 Y:-0.27 Z:-0.18}]
+        [ReskinTarget:{X:0.61944443 Y:-0.27 Z:-0.18}]
+        [ReskinTexture:Clean_Armor]
+
+        [RecolorOld:{X:0 Y:-0.8 Z:-0.4}]
+        [RecolorNew:{X:0 Y:-0.8 Z:-0.18}]
+        [ReskinTarget:{X:0 Y:-0.8 Z:-0.18}]
+        [ReskinTexture:SciFi_Armor]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-SPRT-Manipulation-NAGA</SubtypeId>
+      </Id>
+      <Description>
+        [MES Manipulation]
+        [RecolorGrid:true]
+
+        [RecolorOld:{X:0 Y:-0.8 Z:-0.04}]
+        [RecolorNew:{X:0 Y:-0.8 Z:-0.45}]
+        [RecolorOld:{X:0 Y:-0.8 Z:0}]
+        [RecolorNew:{X:0 Y:-0.8 Z:-0.45}]
+        [ReskinTarget:{X:0 Y:-0.8 Z:-0.45}]
+        [ReskinTexture:CarbonFibre_Armor]
+
+        [RecolorOld:{X:0 Y:-0.8 Z:-0.2}]
+        [RecolorNew:{X:0 Y:-0.8 Z:-0.3}]
+        [ReskinTarget:{X:0 Y:-0.8 Z:-0.3}]
+        [ReskinTexture:SciFi_Armor]
+
+        [RecolorOld:{X:0 Y:0 Z:0.05}]
+        [RecolorNew:{X:0.8111111 Y:0.2 Z:-0.36}]
+        [ReskinTarget:{X:0.8111111 Y:0.2 Z:-0.36}]
+        [ReskinTexture:Neon_Colorable_Lights]
+
+        [RecolorOld:{X:0 Y:0.15 Z:0.25}]
+        [RecolorNew:{X:0.8111111 Y:0.2 Z:-0.19}]
+        [ReskinTarget:{X:0.8111111 Y:0.2 Z:-0.19}]
+        [ReskinTexture:Neon_Colorable_Lights]
+      </Description>
+    </EntityComponent>
+  </EntityComponents>
+</Definitions>
