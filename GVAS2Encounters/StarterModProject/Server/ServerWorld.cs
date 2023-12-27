@@ -1,4 +1,5 @@
-﻿using Sandbox.ModAPI;
+﻿using GVA.NPCControl.Economy;
+using Sandbox.ModAPI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,6 +39,8 @@ namespace GVA.NPCControl.Server
             redClaimBlock = GetClaimBlockByColor(SharedConstants.RedFactionColor);
 
             MyAPIGateway.Session.Factions.FactionStateChanged += Factions_FactionStateChanged;
+
+            EconomyClass eco = new EconomyClass();
         }
 
         internal void Factions_FactionStateChanged(MyFactionStateChange action, long fromFactionId, long toFactionId, long playerId, long senderId)

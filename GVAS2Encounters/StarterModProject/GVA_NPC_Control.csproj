@@ -117,6 +117,7 @@
     <Compile Include="Client\ClientAccount.cs" />
     <Compile Include="Client\ClientWorld.cs" />
     <Compile Include="DialogResponsePacket.cs" />
+    <Compile Include="Economy\EconomyClass.cs" />
     <Compile Include="IAccount.cs" />
     <Compile Include="Accounting.cs" />
     <Compile Include="CommandPacket.cs" />
@@ -151,6 +152,7 @@ xcopy $(ProjectDir)*.cs "C:\Users\wayne\AppData\Roaming\SpaceEngineers\Mods\GVAS
 xcopy $(ProjectDir)Client\*.cs "C:\Users\wayne\AppData\Roaming\SpaceEngineers\Mods\GVAS2Encounters\Data\Scripts\GVA_NPC_Control\" /y
 xcopy $(ProjectDir)Server\*.cs "C:\Users\wayne\AppData\Roaming\SpaceEngineers\Mods\GVAS2Encounters\Data\Scripts\GVA_NPC_Control\" /y
 xcopy $(ProjectDir)LimitedProduction\*.cs "C:\Users\wayne\AppData\Roaming\SpaceEngineers\Mods\GVAS2Encounters\Data\Scripts\GVA_NPC_Control\" /y
+xcopy $(ProjectDir)Economy\*.cs "C:\Users\wayne\AppData\Roaming\SpaceEngineers\Mods\GVAS2Encounters\Data\Scripts\GVA_NPC_Control\" /y
 xcopy $(ProjectDir)SE\*.cs "C:\Users\wayne\AppData\Roaming\SpaceEngineers\Mods\GVAS2Encounters\Data\Scripts\GVA_NPC_Control\" /y
 xcopy $(ProjectDir)SinglePlayer\*.cs "C:\Users\wayne\AppData\Roaming\SpaceEngineers\Mods\GVAS2Encounters\Data\Scripts\GVA_NPC_Control\" /y
 xcopy $(SolutionDir)Data "C:\Users\wayne\AppData\Roaming\SpaceEngineers\Mods\GVAS2Encounters\Data\" /y /s
