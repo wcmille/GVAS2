@@ -211,7 +211,7 @@ namespace GVA.NPCControl.Server
 
         private static void Pay(IAccount acct, int c, int m)
         {
-            //Refund costs
+            //Pay costs
 
             int currC, currM;
             MyAPIGateway.Utilities.GetVariable($"{acct.ColorFaction}{SharedConstants.CivilianStr}", out currC);

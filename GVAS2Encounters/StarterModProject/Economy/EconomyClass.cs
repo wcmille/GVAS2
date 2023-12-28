@@ -3,6 +3,7 @@ using Sandbox.Game.Entities;
 using Sandbox.ModAPI;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using VRage.Game;
 using VRage.Game.ModAPI;
 
@@ -10,9 +11,8 @@ namespace GVA.NPCControl.Economy
 {
     public class EconomyClass
     {
-        public static Dictionary<MyDefinitionId, int> ComponentMinimumValues = new Dictionary<MyDefinitionId, int>();
-        public static Dictionary<MyDefinitionId, int> BlockMinimumValues = new Dictionary<MyDefinitionId, int>();
-        public static Dictionary<MyDefinitionId, double> MasterValues = new Dictionary<MyDefinitionId, double>();
+        private readonly Dictionary<MyDefinitionId, double> MasterValues = new Dictionary<MyDefinitionId, double>();
+        readonly List<IMySlimBlock> blocks = new List<IMySlimBlock>();
 
         public EconomyClass()
         {
@@ -37,13 +37,26 @@ namespace GVA.NPCControl.Economy
 
             using (var file = MyAPIGateway.Utilities.WriteFileInWorldStorage("TheThing.csv", typeof(EconomyClass)))
             {
+                file.WriteLine("Name,Type,Cost (SC)");
                 foreach (var definition in allDefinitions)
                 {
                     var val = MasterValues.ContainsKey(definition.Id) ? MasterValues[definition.Id] : -99;
-                    file.WriteLine($"{definition.DisplayNameText},{val}");
+                    string middle = "???";
+                    if (definition is MyPhysicalItemDefinition) middle = "Phys";
+                    else if (definition is MyCubeBlockDefinition) middle = (definition as MyCubeBlockDefinition).CubeSize.ToString();
+                    file.WriteLine($"{definition.DisplayNameText},{middle},{val}");
                 }
+
+                //WriteValue(file, "Yumi-class Frigate");
+                //WriteValue(file, "[NPC] Industry Tower");
+                WriteValue(file, "Farpoint Station");
             }
             //Loop through the blocks
+        }
+
+        private void WriteValue(TextWriter file, string name)
+        {
+            file.WriteLine($"{name},Ship,{CalculatePrefabCost(name)}");
         }
 
         private double GetPhysicalItemPrice(MyDefinitionId id)
@@ -111,7 +124,6 @@ namespace GVA.NPCControl.Economy
 
             foreach (var grid in prefab.CubeGrids)
             {
-
                 if (grid.CubeBlocks == null)
                     continue;
 
@@ -129,11 +141,22 @@ namespace GVA.NPCControl.Economy
             return price;
         }
 
+        public double CalculateRealShipCost(IMyCubeGrid grid)
+        {
+            blocks.Clear();
+            grid.GetBlocks(blocks);
+            double sum = 0.0;
+            foreach (var block in blocks)
+            { 
+                sum+=GetBlockRegularValue(block, null, true);
+            }
+            return sum;
+        }
+
         public double GetBlockRegularValue(IMySlimBlock block, Dictionary<string, int> missing, bool getInventoryValue)
         {
-            int result = 0;
-
-            if (!BlockMinimumValues.TryGetValue(block.BlockDefinition.Id, out result))
+            double result;
+            if (!MasterValues.TryGetValue(block.BlockDefinition.Id, out result))
                 return result;
 
             if (missing != null)
@@ -144,8 +167,8 @@ namespace GVA.NPCControl.Economy
                 foreach (var compName in missing)
                 {
                     var comp = new MyDefinitionId(typeof(MyObjectBuilder_Component), compName.Key);
-                    int compValue = 0;
-                    if (ComponentMinimumValues.TryGetValue(comp, out compValue))
+                    double compValue = 0;
+                    if (MasterValues.TryGetValue(comp, out compValue))
                         result -= compValue * compName.Value;
                 }
             }
@@ -163,9 +186,9 @@ namespace GVA.NPCControl.Economy
                     foreach (var item in inventory.GetItems())
                     {
 
-                        int itemValue = 0;
+                        double itemValue = 0;
 
-                        if (ComponentMinimumValues.TryGetValue(item.Content.GetId(), out itemValue))
+                        if (MasterValues.TryGetValue(item.Content.GetId(), out itemValue))
                             result += (int)Math.Floor(itemValue * (float)item.Amount);
                     }
                 }
