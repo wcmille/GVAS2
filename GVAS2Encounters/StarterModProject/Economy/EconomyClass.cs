@@ -49,9 +49,8 @@ namespace GVA.NPCControl.Economy
 
                 //WriteValue(file, "Yumi-class Frigate");
                 //WriteValue(file, "[NPC] Industry Tower");
-                WriteValue(file, "Farpoint Station");
+                //WriteValue(file, "Farpoint Station");
             }
-            //Loop through the blocks
         }
 
         private void WriteValue(TextWriter file, string name)

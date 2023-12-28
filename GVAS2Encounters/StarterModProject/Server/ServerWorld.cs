@@ -18,6 +18,7 @@ namespace GVA.NPCControl.Server
         private readonly ServerLog redLog;
         readonly HashSet<IMyEntity> names = new HashSet<IMyEntity>(1);
         readonly PirateAccount black;
+        readonly ChatManager mng;
 
         public ServerWorld(Server server)
         {
@@ -41,6 +42,7 @@ namespace GVA.NPCControl.Server
             MyAPIGateway.Session.Factions.FactionStateChanged += Factions_FactionStateChanged;
 
             EconomyClass eco = new EconomyClass();
+            mng = new ChatManager(eco);
         }
 
         internal void Factions_FactionStateChanged(MyFactionStateChange action, long fromFactionId, long toFactionId, long playerId, long senderId)
@@ -96,6 +98,7 @@ namespace GVA.NPCControl.Server
 
         public void Dispose()
         {
+            mng.Dispose();
             MyAPIGateway.Session.Factions.FactionStateChanged -= Factions_FactionStateChanged;
             if (blueClaimBlock != null)
             {
