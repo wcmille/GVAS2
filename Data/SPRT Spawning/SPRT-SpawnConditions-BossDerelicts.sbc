@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<SpawnGroups>
+    
+    <!-- Miner -->
+		<SpawnGroup>
+			<Id>
+				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+				<SubtypeId>GVA-Boss-Derelict-Miner</SubtypeId> 
+			</Id>
+			<Description>
+        [Modular Encounters SpawnGroup]
+        [ManipulationProfiles:GVA-Manipulation-MinerDerelict]
+        [ManipulationProfiles:GVA-Manipulation-RepaintWartorn]
+        [FactionOwner:Nobody]
+
+        [BossEncounterSpace:true]
+        [BossCustomGPSLabel:Salvage Contact]
+        [BossCustomGPSColor:{X:200 Y:200 Z:200}]
+      </Description>
+			<IsPirate>true</IsPirate>
+			<Frequency>50.0</Frequency>
+			<Prefabs>
+				<Prefab SubtypeId="EZPodUnwrecked">
+					<Position>
+						<X>0.0</X>
+						<Y>0.0</Y>
+						<Z>0.0</Z>
+					</Position>
+					<Speed>3</Speed>
+          <BeaconText>Distress</BeaconText>
+        </Prefab>
+			</Prefabs>
+		</SpawnGroup>
+
+    <!-- Life Pod -->
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <!--Do Not Edit-->
+        <SubtypeId>GVA-Boss-Derelict-Lifeboat</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+        [ManipulationProfiles:GVA-Manipulation-MinerDerelict]
+        [ManipulationProfiles:GVA-Manipulation-RepaintWartorn]
+        [FactionOwner:Nobody]
+
+        [BossEncounterSpace:true]
+        [BossCustomGPSLabel:Salvage Contact]
+        [BossCustomGPSColor:{X:200 Y:200 Z:200}]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>15.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="LifePod2">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>2</Speed>
+          <BeaconText>Distress</BeaconText>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+  </SpawnGroups>
+</Definitions>

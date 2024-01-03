@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<SpawnGroups>
+    
+    <!-- DD Encounter -->
 		<SpawnGroup>
 			<Id>
 				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
@@ -19,7 +21,7 @@
 			<IsPirate>true</IsPirate>
 			<Frequency>5.0</Frequency>
 			<Prefabs>
-				<Prefab SubtypeId="Enforcer">
+				<Prefab SubtypeId="Destroyer Tidehunter">
 					<Position>
 						<X>0.0</X>
 						<Y>0.0</Y>
@@ -30,6 +32,8 @@
 				</Prefab>
 			</Prefabs>
 		</SpawnGroup>
+    
+    <!-- CR Encounter -->    
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
@@ -47,9 +51,9 @@
         [FactionOwner:SPRT]
       </Description>
       <IsPirate>true</IsPirate>
-      <Frequency>5.0</Frequency>
+      <Frequency>2.0</Frequency>
       <Prefabs>
-        <Prefab SubtypeId="Tempest Class Cruiser Block IV">
+        <Prefab SubtypeId="Cruiser Nightcrawler">
           <Position>
             <X>0.0</X>
             <Y>0.0</Y>
@@ -60,6 +64,8 @@
         </Prefab>
       </Prefabs>
     </SpawnGroup>
+    
+    <!-- Carrier Group -->
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
@@ -70,16 +76,16 @@
         [Modular Encounters SpawnGroup]
 
         [BossEncounterSpace:true]
-        [BossCustomGPSLabel:Heavy Pirate Activity]
+        [BossCustomGPSLabel:Extreme Pirate Activity]
         [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
 
         [FactionOwner:SPRT]
       </Description>
       <IsPirate>true</IsPirate>
-      <Frequency>5.0</Frequency>
+      <Frequency>1.0</Frequency>
       <Prefabs>
-        <Prefab SubtypeId="Tempest Class Cruiser Block IV">
+        <Prefab SubtypeId="Carrier Oracle">
           <Position>
             <X>0.0</X>
             <Y>0.0</Y>
@@ -88,7 +94,7 @@
           <Speed>50</Speed>
           <Behaviour>SPRT-Behavior-SpaceDestroyer</Behaviour>
         </Prefab>
-        <Prefab SubtypeId="Tempest Class Cruiser Block IV">
+        <Prefab SubtypeId="Destroyer Tidehunter">
           <Position>
             <X>0.0</X>
             <Y>0.0</Y>

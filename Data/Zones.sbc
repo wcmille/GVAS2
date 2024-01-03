@@ -113,6 +113,10 @@
         [ZoneLeaveAnnounce:Leaving: The Pirate Marches]
         [Coordinates:{X:-870575 Y:131504 Z:7356867}]
         [Radius:400000]
+
+        [UseRestrictedSpawnGroups:true]
+        [RestrictedSpawnGroups:GVA-Boss-Derelict-Miner]
+        [RestrictedSpawnGroups:GVA-Boss-Derelict-Lifeboat]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">

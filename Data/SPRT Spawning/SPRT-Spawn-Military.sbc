@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<SpawnGroups>
+    <!-- DDO -->
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
@@ -20,7 +21,7 @@
       <IsPirate>true</IsPirate>
       <Frequency>1.0</Frequency>
       <Prefabs>
-        <Prefab SubtypeId="Tempest Class Cruiser Block IV">
+        <Prefab SubtypeId="Destroyer Tidehunter">
           <Position>
             <X>0.0</X>
             <Y>0.0</Y>
@@ -32,6 +33,8 @@
         </Prefab>
       </Prefabs>
     </SpawnGroup>
+    
+    <!-- FF -->
     <SpawnGroup>
 			<Id>
 				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
@@ -51,7 +54,7 @@
 			<IsPirate>true</IsPirate>
 			<Frequency>1.0</Frequency>
 			<Prefabs>
-				<Prefab SubtypeId="Enforcer">
+				<Prefab SubtypeId="Frigate Shorestriker">
 					<Position>
 						<X>0.0</X>
 						<Y>0.0</Y>
@@ -63,6 +66,8 @@
         </Prefab>
 			</Prefabs>
 		</SpawnGroup>
+    
+    <!-- CTO -->
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
@@ -97,6 +102,8 @@
         </Prefab>
       </Prefabs>
     </SpawnGroup>
+    
+    <!-- Scout Party -->
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
@@ -122,7 +129,7 @@
       <IsPirate>true</IsPirate>
       <Frequency>20.0</Frequency>
       <Prefabs>
-        <Prefab SubtypeId="Rocketeer MKI Pirate Attacker">
+        <Prefab SubtypeId="Scout">
           <Position>
             <X>0.0</X>
             <Y>0.0</Y>
@@ -134,6 +141,7 @@
         </Prefab>
       </Prefabs>
     </SpawnGroup>
+    
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>

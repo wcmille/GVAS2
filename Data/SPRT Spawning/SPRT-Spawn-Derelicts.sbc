@@ -10,10 +10,11 @@
       <Description>
         [Modular Encounters SpawnGroup]
 
-        [ManipulationProfiles:GVA-Manipulation-MinerDerelict]    
-        
+        [ManipulationProfiles:GVA-Manipulation-MinerDerelict]
+
         [SpawnConditionsProfiles:SPRT-SpawnCondition-BlackZoneWreck]
-     </Description>
+        [FactionOwner:Nobody]
+      </Description>
       <IsPirate>true</IsPirate>
       <Frequency>1.0</Frequency>
       <Prefabs>
@@ -40,6 +41,7 @@
         [ManipulationProfiles:GVA-Manipulation-MinerDerelict]
 
         [SpawnConditionsProfiles:SPRT-SpawnCondition-BlackZoneWreck]
+        [FactionOwner:Nobody]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>1.0</Frequency>
@@ -67,6 +69,7 @@
         [ManipulationProfiles:GVA-Manipulation-MinerDerelict]
 
         [SpawnConditionsProfiles:SPRT-SpawnCondition-BlackZoneWreck]
+        [FactionOwner:Nobody]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>1.0</Frequency>
@@ -94,6 +97,7 @@
         [ManipulationProfiles:GVA-Manipulation-MinerDerelict]
 
         [SpawnConditionsProfiles:SPRT-SpawnCondition-BlackZoneWreck]
+        [FactionOwner:Nobody]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>1.0</Frequency>

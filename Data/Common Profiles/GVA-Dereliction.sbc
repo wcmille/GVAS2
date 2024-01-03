@@ -9,10 +9,12 @@
       <Description>
         [MES Manipulation]
 
+        [FactionOwner:Nobody]
+
         [UseRandomNameGenerator:true]
         [RandomGridNamePattern:[NPC] Wreck]
 
-				[UseGridDereliction:true]
+        [UseGridDereliction:true]
         [DerelictionProfiles:GVA-Dereliction-Armor-DamageOnly]
         [DerelictionProfiles:GVA-Dereliction-NonArmor-DamageOnly]
       </Description>
@@ -96,5 +98,22 @@
         [SkinRandomBlocksTextures:Frozen_Armor]
       </Description>
     </EntityComponent>
-	</EntityComponents>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Manipulation-RepaintWartorn</SubtypeId>
+      </Id>
+      <Description>
+        [MES Manipulation]
+        [RecolorGrid:true]
+        [RecolorOld:{x:0.61944443 y:-0.27 z:-0.18]
+        [RecolorNew:{x:0 y:-0.5 z:-0.4}]
+
+        [SkinRandomBlocks:true]
+        [MinPercentageSkinRandomBlocks:30]
+        [MaxPercentageSkinRandomBlocks:50]
+        [SkinRandomBlocksTextures:Wartorn]
+      </Description>
+    </EntityComponent>
+  </EntityComponents>
 </Definitions>
