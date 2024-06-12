@@ -17,7 +17,7 @@
       <AcceptHumans>false</AcceptHumans>
       <AutoAcceptMember>false</AutoAcceptMember>
       <StartingBalance>10000000000</StartingBalance>
-      <Type>Builder</Type>
+      <Type>None</Type>
       <!--None, Miner, Trader, Builder-->
       <DiscoveredByDefault>true</DiscoveredByDefault>
       <FactionIcon>Textures\FactionLogo\Builders\BuilderIcon_15.dds</FactionIcon>

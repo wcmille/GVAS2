@@ -40,10 +40,27 @@ namespace GVA.NPCControl.Server
             redClaimBlock = GetClaimBlockByColor(SharedConstants.RedFactionColor);
 
             MyAPIGateway.Session.Factions.FactionStateChanged += Factions_FactionStateChanged;
+            //MyVisualScriptLogicProvider.PlayerConnected += PlayerConnected;
 
             EconomyClass eco = new EconomyClass();
             mng = new ChatManager(eco);
         }
+
+        //List<IMyIdentity> players = new List<IMyIdentity>();
+
+        //public void PlayerConnected(long playerId)
+        //{
+        //    players.Clear();
+        //    MyAPIGateway.Players.GetAllIdentites(players, x => x.IdentityId == playerId);
+        //    if (players.Count == 0)
+        //    {
+        //        //This is a new player.
+        //        foreach (var l in list)
+        //        {
+        //            (l as ServerAccount)?.NewPlayer(playerId);
+        //        }
+        //    }
+        //}
 
         internal void Factions_FactionStateChanged(MyFactionStateChange action, long fromFactionId, long toFactionId, long playerId, long senderId)
         {
@@ -99,6 +116,7 @@ namespace GVA.NPCControl.Server
         public void Dispose()
         {
             mng.Dispose();
+            //MyVisualScriptLogicProvider.PlayerConnected -= PlayerConnected;
             MyAPIGateway.Session.Factions.FactionStateChanged -= Factions_FactionStateChanged;
             if (blueClaimBlock != null)
             {

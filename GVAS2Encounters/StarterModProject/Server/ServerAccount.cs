@@ -228,27 +228,42 @@ namespace GVA.NPCControl.Server
             AccountLog.Log(grid, Color.Green, "Mayday ");
         }
 
+        //internal void NewPlayer(long playerId)
+        //{
+        //    if (OwningPCFaction != null)
+        //    {
+        //        //SharedConstants.EnemyRep
+        //        server.SetReputation(playerId, npcOwner.FactionId, 422);
+        //    }
+        //}
+
         internal void PlayerJoined(long playerId, IMyFaction toFaction)
         {
             //This could be any faction.
-            //Get the relationship of the new faction's founder to the npc faction.
-            //Set the faction member to that category.
-            var npcFactionId = MyAPIGateway.Session.Factions.TryGetFactionByTag(OwningNPCTag).FactionId;
-            var founderRep = MyAPIGateway.Session.Factions.GetReputationBetweenPlayerAndFaction(toFaction.FounderId, npcFactionId);
-
-            var rep = SharedConstants.EnemyRep;
-            if (founderRep >= SharedConstants.AlliedRep) rep = SharedConstants.AlliedRep;
-            else if (founderRep >= SharedConstants.DefaultRep) rep = SharedConstants.DefaultRep;
-
-            server.SetReputation(playerId, npcFactionId, rep);
-            //MyAPIGateway.Session.Factions.SetReputationBetweenPlayerAndFaction(playerId, npcFactionId, rep);
+        
+            if (toFaction.FounderId == playerId)
+            {
+                //Faction Created
+                if (OwningPCFaction != null)
+                {
+                    var rep = MyAPIGateway.Session.Factions.GetReputationBetweenFactions(toFaction.FactionId, OwningPCFaction.FactionId);
+                    server.SetReputation(playerId, npcOwner.FactionId, rep);
+                }
+                //Otherwise, just let the default happen.
+            }
+            else
+            {
+                var founderRep = MyAPIGateway.Session.Factions.GetReputationBetweenPlayerAndFaction(toFaction.FounderId, npcOwner.FactionId);
+                var rep = SharedConstants.EnemyRep;
+                if (founderRep >= SharedConstants.AlliedRep) rep = SharedConstants.AlliedRep;
+                else if (founderRep >= SharedConstants.DefaultRep) rep = SharedConstants.DefaultRep;
+                server.SetReputation(playerId, npcOwner.FactionId, rep);
+            }
         }
 
         internal void PlayerLeft(long playerId)
         {
-            var npcId = MyAPIGateway.Session.Factions.TryGetFactionByTag(OwningNPCTag).FactionId;
-            server.SetReputation(playerId, npcId, SharedConstants.DefaultRep);
-            //MyAPIGateway.Session.Factions.SetReputationBetweenPlayerAndFaction(playerId, npcId, SharedConstants.DefaultRep);
+            server.SetReputation(playerId, npcOwner.FactionId, SharedConstants.DefaultRep);
         }
 
         internal void FactionLeft()

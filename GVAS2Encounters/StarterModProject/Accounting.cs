@@ -62,6 +62,7 @@ namespace GVA.NPCControl
                 return pcOwner?.Tag ?? "SPRT";
             }
         }
+
         public string OwningNPCTag
         {
             get 
@@ -70,6 +71,7 @@ namespace GVA.NPCControl
             }
         }
 
+        /// Return null if unowned.
         public IMyFaction OwningPCFaction
         {
             get
