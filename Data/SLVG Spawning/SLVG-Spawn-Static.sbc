@@ -39,6 +39,72 @@
         </Prefab>
       </Prefabs>
     </SpawnGroup>
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <!--Do Not Edit-->
+        <SubtypeId>GVA-Blue-TerritoryMarker</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+        [IgnoreCleanupRules:true]
+        [StaticEncounter:true]
+        [ForceExactPositionAndOrientation:true]
+        [StaticEncounterCoords:{X:99752.6051147879 Y:78362.5521640414 Z:5723528.99379671}]
+        [StaticEncounterForward:{X:-0.367171490267608 Y:0.342044049979373 Z:-0.864980326139486}]
+        [StaticEncounterUp:{X:-0.506908604629709 Y:-0.853287648392113 Z:-0.122245063924146}]
+        
+        [TriggerCoords:{X:99752.6051147879 Y:78362.5521640414 Z:5723528.99379671}]
+        [TriggerRadius:70000]
+        [FactionOwner:SPRT]
+      </Description>
+      <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+      <!--Do Not Edit-->
+      <IsPirate>true</IsPirate>
+      <Frequency>1.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="Faction Territory Blue [NPC-IGNORE]">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+    
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <!--Do Not Edit-->
+        <SubtypeId>GVA-Red-TerritoryMarker</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+        [IgnoreCleanupRules:true]
+        [StaticEncounter:true]
+        [StaticEncounterCoords:{X:123837.724867747 Y:190728.67398435 Z:5744275.82803983}]
+        [StaticEncounterForward:{X:-0.598861576712836 Y:0.103243224596253 Z:-0.794169785695719}]
+        [StaticEncounterUp:{X:-0.117564559048219 Y:0.969578764523462 Z:0.214698844526362}]
+        
+        [TriggerCoords:{X:123837.724867747 Y:190728.67398435 Z:5744275.82803983}]
+        [TriggerRadius:70000]
+        [FactionOwner:SPRT]
+      </Description>
+      <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+      <!--Do Not Edit-->
+      <IsPirate>true</IsPirate>
+      <Frequency>1.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="Faction Territory Red [NPC-IGNORE]">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
     <!--Do Not Edit Below Here-->
   </SpawnGroups>
 </Definitions>
