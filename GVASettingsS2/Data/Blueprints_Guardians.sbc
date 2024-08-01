@@ -62,7 +62,7 @@
     <Blueprint>
       <Id>
         <TypeId>BlueprintDefinition</TypeId>
-        <SubtypeId>GVK_Laser_Tech</SubtypeId>
+        <SubtypeId>GV_Elite_Tech</SubtypeId>
       </Id>
       <DisplayName>Elite Tech</DisplayName>
       <Description>Advanced technology used to make higher end weapon systems.</Description>
@@ -71,7 +71,7 @@
       <Prerequisites>
         <Item Amount="12" TypeId="Component" SubtypeId="ZoneChip"/>
       </Prerequisites>
-      <Result Amount="1" TypeId="Component" SubtypeId="GVK_Laser_Tech"/>
+      <Result Amount="1" TypeId="Component" SubtypeId="GV_Elite_Tech"/>
       <BaseProductionTimeInSeconds>1200</BaseProductionTimeInSeconds>
     </Blueprint>
   </Blueprints>

@@ -236,7 +236,7 @@
 					<Frequency>0.1</Frequency>  <!-- normally 0.1 -->
 					<Id>
 						<TypeId>Component</TypeId>
-						<SubtypeId>GVK_Laser_Tech</SubtypeId>
+						<SubtypeId>GV_Elite_Tech</SubtypeId>
 					</Id>
 				</Item>
 				<Item AmountMin="10" AmountMax="20"> 
@@ -351,7 +351,7 @@
 					<Frequency>0.5</Frequency>
 					<Id>
 						<TypeId>Component</TypeId>
-						<SubtypeId>GVK_Laser_Tech</SubtypeId>
+						<SubtypeId>GV_Elite_Tech</SubtypeId>
 					</Id>
 				</Item>
 				<Item AmountMin="50" AmountMax="100"> 

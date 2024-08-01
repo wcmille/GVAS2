@@ -2,18 +2,6 @@
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <BlueprintClassEntries>
     <Entry Class="Components" BlueprintSubtypeId="ZoneChip"/>
-    <Entry Class="Components" BlueprintSubtypeId="GVK_Laser_Tech"/>
-
-    <!--<Entry Class="EliteConsumables" BlueprintSubtypeId="NATO_25x184mmMagazine"/>
-    <Entry Class="EliteConsumables" BlueprintSubtypeId="NATO_5p56x45mmMagazine"/>
-    <Entry Class="EliteConsumables" BlueprintSubtypeId="AutocannonClip"/>
-    <Entry Class="EliteConsumables" BlueprintSubtypeId="MediumCalibreAmmo"/>
-    <Entry Class="EliteConsumables" BlueprintSubtypeId="LargeCalibreAmmo"/>
-    <Entry Class="EliteConsumables" BlueprintSubtypeId="SmallRailgunAmmo"/>
-    <Entry Class="EliteConsumables" BlueprintSubtypeId="LargeRailgunAmmo"/>
-    <Entry Class="EliteConsumables" BlueprintSubtypeId="Missiles_Missile"/>
-    <Entry Class="EliteConsumables" BlueprintSubtypeId="Missiles_Torpedo"/>
-    <Entry Class="EliteConsumables" BlueprintSubtypeId="Missile200mm"/>
-    <Entry Class="EliteConsumables" BlueprintSubtypeId="Missiles_HeavyMissile"/> -->
+    <Entry Class="Components" BlueprintSubtypeId="GV_Elite_Tech"/>
   </BlueprintClassEntries>
 </Definitions>
