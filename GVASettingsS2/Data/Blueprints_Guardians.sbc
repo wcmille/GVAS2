@@ -69,7 +69,11 @@
       <Icon>Textures\GUI\Icons\Items\ZoneChip_Item.dds</Icon>
       <Icon>Textures\GUI\Icons\Items\Elite_Icon_Overlay.dds</Icon>
       <Prerequisites>
-        <Item Amount="12" TypeId="Component" SubtypeId="ZoneChip"/>
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Iron"/>
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Silicon"/>
+        <Item Amount="20" TypeId="Ingot" SubtypeId="Platinum"/>
+        <Item Amount="20" TypeId="Ingot" SubtypeId="Gold"/>
+        <Item Amount="60" TypeId="Ingot" SubtypeId="Silver"/>
       </Prerequisites>
       <Result Amount="1" TypeId="Component" SubtypeId="GV_Elite_Tech"/>
       <BaseProductionTimeInSeconds>1200</BaseProductionTimeInSeconds>

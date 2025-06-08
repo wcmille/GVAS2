@@ -880,7 +880,7 @@ Centrip. Max (fw) @ 100m/s: 2958m
               <ShowInInventory>true</ShowInInventory>
               <NumberInGrid>2</NumberInGrid>
               <Enabled>true</Enabled>
-              <BroadcastRadius>20000</BroadcastRadius>
+              <BroadcastRadius>7000</BroadcastRadius>
               <HudText />
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_RadioAntenna">
@@ -9591,7 +9591,7 @@ public class SensibleNamer
                       <ConveyorLineConductivity>BACKWARD</ConveyorLineConductivity>
                     </MyObjectBuilder_ConveyorLine>
                   </ConveyorLines>
-                  <DisplayName>Clydsedale</DisplayName>
+                  <DisplayName>[NPC] Clydesdale</DisplayName>
                   <DestructibleBlocks>false</DestructibleBlocks>
                   <CreatePhysics>false</CreatePhysics>
                   <EnableSmallToLargeConnections>false</EnableSmallToLargeConnections>

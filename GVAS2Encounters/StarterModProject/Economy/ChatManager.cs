@@ -30,7 +30,7 @@ namespace GVA.NPCControl.Economy
 
             bool isAdmin = false;
 
-            if (messageText.StartsWith("/Price"))
+            if (messageText.ToLower().StartsWith("/price"))
             {
                 sendToOthers = false;
 
