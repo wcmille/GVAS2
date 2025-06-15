@@ -1879,14 +1879,14 @@
               <ColorMaskHSV x="0" y="-0.8" z="0" />
               <SkinSubtypeId>Clean_Armor</SkinSubtypeId>
               <ShareMode>Faction</ShareMode>
-              <CustomName>Antenna 1</CustomName>
+              <CustomName>Main Antenna</CustomName>
               <ShowOnHUD>false</ShowOnHUD>
               <ShowInTerminal>true</ShowInTerminal>
               <ShowInToolbarConfig>true</ShowInToolbarConfig>
               <ShowInInventory>true</ShowInInventory>
               <NumberInGrid>3</NumberInGrid>
-              <Enabled>false</Enabled>
-              <BroadcastRadius>5000</BroadcastRadius>
+              <Enabled>true</Enabled>
+              <BroadcastRadius>25000</BroadcastRadius>
               <ShowShipName>false</ShowShipName>
               <EnableBroadcasting>false</EnableBroadcasting>
               <AttachedPB>0</AttachedPB>
