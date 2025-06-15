@@ -4409,6 +4409,7 @@
               <ColorMaskHSV x="0.625" y="-0.68" z="0.07" />
               <SkinSubtypeId>SciFi_Armor</SkinSubtypeId>
               <ShareMode>Faction</ShareMode>
+              <CustomName>NPC Beacon</CustomName>
               <ComponentContainer>
                 <Components>
                   <ComponentData>
@@ -4432,8 +4433,8 @@ Military=1</Value>
               <ShowInToolbarConfig>true</ShowInToolbarConfig>
               <ShowInInventory>true</ShowInInventory>
               <NumberInGrid>1</NumberInGrid>
-              <Enabled>false</Enabled>
-              <BroadcastRadius>20000</BroadcastRadius>
+              <Enabled>true</Enabled>
+              <BroadcastRadius>4000</BroadcastRadius>
               <HudText />
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Thrust">
@@ -7799,7 +7800,7 @@ Military=1</Value>
                       <ShowInToolbarConfig>true</ShowInToolbarConfig>
                       <ShowInInventory>true</ShowInInventory>
                       <NumberInGrid>2</NumberInGrid>
-                      <Enabled>true</Enabled>
+                      <Enabled>false</Enabled>
                       <State>0</State>
                       <targetEntityId xsi:nil="true" />
                       <gpsTarget xsi:nil="true" />
@@ -14327,6 +14328,8 @@ Military=1</Value>
                       <Min x="1" y="-2" z="-6" />
                       <BlockOrientation Forward="Up" Up="Right" />
                       <ColorMaskHSV x="0.625" y="-0.8" z="-0.17" />
+                      <ShareMode>Faction</ShareMode>
+                      <CustomName>Main Antenna</CustomName>
                       <SkinSubtypeId>Weldless</SkinSubtypeId>
                       <ShowOnHUD>false</ShowOnHUD>
                       <ShowInTerminal>true</ShowInTerminal>
@@ -14334,9 +14337,9 @@ Military=1</Value>
                       <ShowInInventory>true</ShowInInventory>
                       <NumberInGrid>2</NumberInGrid>
                       <Enabled>true</Enabled>
-                      <BroadcastRadius>14999.998</BroadcastRadius>
+                      <BroadcastRadius>25000</BroadcastRadius>
                       <ShowShipName>true</ShowShipName>
-                      <EnableBroadcasting>true</EnableBroadcasting>
+                      <EnableBroadcasting>false</EnableBroadcasting>
                       <AttachedPB>0</AttachedPB>
                       <IgnoreAllied>false</IgnoreAllied>
                       <IgnoreOther>true</IgnoreOther>
@@ -20613,16 +20616,15 @@ Military=1</Value>
               <ColorMaskHSV x="0.625" y="-0.8" z="-0.17" />
               <SkinSubtypeId>Weldless</SkinSubtypeId>
               <ShareMode>Faction</ShareMode>
-              <CustomName>Main Antenna</CustomName>
               <ShowOnHUD>false</ShowOnHUD>
               <ShowInTerminal>true</ShowInTerminal>
               <ShowInToolbarConfig>true</ShowInToolbarConfig>
               <ShowInInventory>true</ShowInInventory>
               <NumberInGrid>2</NumberInGrid>
               <Enabled>true</Enabled>
-              <BroadcastRadius>25000.0059</BroadcastRadius>
+              <BroadcastRadius>25000</BroadcastRadius>
               <ShowShipName>false</ShowShipName>
-              <EnableBroadcasting>true</EnableBroadcasting>
+              <EnableBroadcasting>false</EnableBroadcasting>
               <AttachedPB>0</AttachedPB>
               <IgnoreAllied>false</IgnoreAllied>
               <IgnoreOther>true</IgnoreOther>

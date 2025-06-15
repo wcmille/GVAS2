@@ -108,6 +108,7 @@
               <ColorMaskHSV x="0" y="0.2" z="-0.2" />
               <SkinSubtypeId>SciFi_Armor</SkinSubtypeId>
               <ShareMode>Faction</ShareMode>
+              <CustomName>NPC Beacon</CustomName>
               <ComponentContainer>
                 <Components>
                   <ComponentData>
@@ -131,8 +132,8 @@ Civilian=1</Value>
               <ShowInToolbarConfig>true</ShowInToolbarConfig>
               <ShowInInventory>true</ShowInInventory>
               <NumberInGrid>1</NumberInGrid>
-              <Enabled>false</Enabled>
-              <BroadcastRadius>20000</BroadcastRadius>
+              <Enabled>true</Enabled>
+              <BroadcastRadius>6000</BroadcastRadius>
               <HudText />
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
@@ -11672,7 +11673,7 @@ Civilian=1</Value>
               <ShowInInventory>true</ShowInInventory>
               <NumberInGrid>1</NumberInGrid>
               <Enabled>true</Enabled>
-              <BroadcastRadius>25000.0059</BroadcastRadius>
+              <BroadcastRadius>25000</BroadcastRadius>
               <ShowShipName>false</ShowShipName>
               <EnableBroadcasting>true</EnableBroadcasting>
               <AttachedPB>0</AttachedPB>
