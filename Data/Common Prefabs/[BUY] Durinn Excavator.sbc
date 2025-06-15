@@ -4,7 +4,7 @@
     <Prefab xsi:type="MyObjectBuilder_PrefabDefinition">
       <Id Type="MyObjectBuilder_PrefabDefinition" Subtype="Durinn Excavator" />
       <DisplayName>Durinn Excavator</DisplayName>
-      <Description>Good at mininig</Description>
+      <Description>Good at mining</Description>
       <Icon>Textures\GUI\Prefabs\DurinnExcavator.dds</Icon>
       <TooltipImage>Textures\GUI\Prefabs\DurinnExcavator.png</TooltipImage>
       <EnvironmentType>All</EnvironmentType>

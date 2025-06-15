@@ -4,7 +4,6 @@
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
-        <!--Do Not Edit-->
         <SubtypeId>GVA-Wreck-Miner</SubtypeId>
       </Id>
       <Description>
@@ -29,10 +28,9 @@
         </Prefab>
       </Prefabs>
     </SpawnGroup>
-    <SpawnGroup>
+    <!-- <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
-        <!--Do Not Edit-->
         <SubtypeId>GVA-Wreck-Durinn</SubtypeId>
       </Id>
       <Description>
@@ -56,7 +54,7 @@
           <BeaconText>Distress</BeaconText>
         </Prefab>
       </Prefabs>
-    </SpawnGroup>
+    </SpawnGroup> -->
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
