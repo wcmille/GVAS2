@@ -111,7 +111,7 @@
         [UseZoneAnnounce:true]
         [ZoneEnterAnnounce:Danger: The Pirate Marches]
         [ZoneLeaveAnnounce:Leaving: The Pirate Marches]
-        [Coordinates:{X:-870575 Y:131504 Z:7356867}]
+        [Coordinates:{X:-870575 Y:131504 Z:4105278}]
         [Radius:400000]
 
         [UseRestrictedSpawnGroups:true]
@@ -145,7 +145,7 @@
         [UseZoneAnnounce:false]
         [ZoneEnterAnnounce:Entering: Farpoint Station]
         [ZoneLeaveAnnounce:Leaving: Farpoint Station]
-        [Coordinates:{X:-1854042 Y:131072 Z:9040780}]
+        [Coordinates:{X:-1854042 Y:131072 Z:2421365}]
         [Radius:200000]
 
         [UseAllowedSpawnGroups:true]

@@ -15,10 +15,10 @@
         [ManipulationProfiles:GVA-Common-Manipulation-ShipyardSetup]
 
         [StaticEncounter:true]
-        [StaticEncounterCoords:{X:-1854042 Y:131072 Z:9040780}]
+        [StaticEncounterCoords:{X:-1854042 Y:131072 Z:2421365}]
         [StaticEncounterForward:{X:0 Y:0 Z:1}]
         [StaticEncounterUp:{X:0 Y:1 Z:0}]
-        [TriggerCoords:{X:-1854042 Y:131072 Z:9040780}]
+        [TriggerCoords:{X:-1854042 Y:131072 Z:2421365}]
         [TriggerRadius:70000]
         
         [FactionOwner:SLVG]
