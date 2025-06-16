@@ -37,46 +37,5 @@
       <BaseProductionTimeInSeconds>15</BaseProductionTimeInSeconds>
       <IsPrimary>true</IsPrimary>
     </Blueprint>
-    <Blueprint>
-      <Id>
-        <TypeId>BlueprintDefinition</TypeId>
-        <SubtypeId>ZoneChip</SubtypeId>
-      </Id>
-      <DisplayName>DisplayName_Item_ZoneChip</DisplayName>
-      <Description>The ZoneChip is a complex piece of equipment that has to be created slowly for it \nto be crafted to the highest quality. It is a sensitive subspace field calibration device with a built in computer, unfortunately due to their fragile nature, they will always burn out after prolonged use.</Description>
-      <Icon>Textures\GUI\Icons\Items\ZoneChip_Item.dds</Icon>
-      <Prerequisites>
-        <Item Amount="1" TypeId="Ingot" SubtypeId="Iron"/>
-        <Item Amount="1" TypeId="Ingot" SubtypeId="Silicon"/>
-        <Item Amount="2" TypeId="Ingot" SubtypeId="Platinum"/>
-        <Item Amount="2" TypeId="Ingot" SubtypeId="Gold"/>
-        <Item Amount="5" TypeId="Ingot" SubtypeId="Silver"/>
-      </Prerequisites>
-      <Result Amount="1" TypeId="Component" SubtypeId="ZoneChip"/>
-      <BaseProductionTimeInSeconds>400</BaseProductionTimeInSeconds>
-      <!--9000-->
-      <!-- this is 5 hours on 1x game assembler speed setting with no Speed Upgrade Modules -->
-      <!-- with 4 Speed Upgrade Modules, that brings it to 3600 seconds which is 60 minutes -->
-      <!-- <IsPrimary>true</IsPrimary> -->
-    </Blueprint>
-    <Blueprint>
-      <Id>
-        <TypeId>BlueprintDefinition</TypeId>
-        <SubtypeId>GV_Elite_Tech</SubtypeId>
-      </Id>
-      <DisplayName>Elite Tech</DisplayName>
-      <Description>Advanced technology used to make higher end weapon systems.</Description>
-      <Icon>Textures\GUI\Icons\Items\ZoneChip_Item.dds</Icon>
-      <Icon>Textures\GUI\Icons\Items\Elite_Icon_Overlay.dds</Icon>
-      <Prerequisites>
-        <Item Amount="1" TypeId="Ingot" SubtypeId="Iron"/>
-        <Item Amount="1" TypeId="Ingot" SubtypeId="Silicon"/>
-        <Item Amount="20" TypeId="Ingot" SubtypeId="Platinum"/>
-        <Item Amount="20" TypeId="Ingot" SubtypeId="Gold"/>
-        <Item Amount="60" TypeId="Ingot" SubtypeId="Silver"/>
-      </Prerequisites>
-      <Result Amount="1" TypeId="Component" SubtypeId="GV_Elite_Tech"/>
-      <BaseProductionTimeInSeconds>1200</BaseProductionTimeInSeconds>
-    </Blueprint>
   </Blueprints>
 </Definitions>

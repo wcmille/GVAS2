@@ -64,7 +64,7 @@
 				<Component Subtype="SteelPlate" Count="300"/>
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0"/>
-			<GeneralDamageMultiplier>0.1</GeneralDamageMultiplier>
+			<GeneralDamageMultiplier>0.4</GeneralDamageMultiplier>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="0.1" StartY="0.1" EndX="0.9" EndY="0.9" Default="true"/>
 				<MountPoint Side="Top" StartX="0.1" StartY="0.1" EndX="0.9" EndY="0.9"/>
@@ -96,7 +96,7 @@
 			<IsAirTight>false</IsAirTight>
 		</Definition>
 		<!-- Disable Beacon Reskin due to incompatibility with Beacon Limits Mod -->
-		<Definition xsi:type="MyObjectBuilder_BeaconDefinition" Enabled="false">
+		<Definition xsi:type="MyObjectBuilder_BeaconDefinition">
 			<Id>
 				<TypeId>Beacon</TypeId>
 				<SubtypeId>LargeBlockBeaconReskin</SubtypeId>
@@ -111,15 +111,12 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Cubes\Large\BeaconReskin.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="40"/>
-				<Component Subtype="Construction" Count="30"/>
-				<Component Subtype="LargeTube" Count="20"/>
-				<Component Subtype="Computer" Count="10"/>
-				<Component Subtype="RadioCommunication" Count="40"/>
-				<Component Subtype="SteelPlate" Count="40"/>
-			</Components>
+        <Component Subtype="Computer" Count="1"/>
+        <Component Subtype="SteelPlate" Count="300"/>
+      </Components>
 			<CriticalComponent Subtype="RadioCommunication" Index="0"/>
-			<MountPoints>
+      <GeneralDamageMultiplier>0.4</GeneralDamageMultiplier>
+      <MountPoints>
 				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
 				<MountPoint Side="Left" StartX="0.1" StartY="0" EndX="0.9" EndY="0.1"/>
 				<MountPoint Side="Right" StartX="0.1" StartY="0" EndX="0.9" EndY="0.1"/>
@@ -152,7 +149,7 @@
 			<IsAirTight>false</IsAirTight>
 			<DLC>DecorativeBlocks3</DLC>
 		</Definition>
-		<Definition xsi:type="MyObjectBuilder_BeaconDefinition" Enabled="false">
+		<Definition xsi:type="MyObjectBuilder_BeaconDefinition">
 			<Id>
 				<TypeId>Beacon</TypeId>
 				<SubtypeId>SmallBlockBeaconReskin</SubtypeId>
@@ -167,15 +164,13 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Cubes\Small\BeaconReskin.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="1"/>
-				<Component Subtype="Construction" Count="1"/>
-				<Component Subtype="SmallTube" Count="1"/>
-				<Component Subtype="Computer" Count="1"/>
-				<Component Subtype="RadioCommunication" Count="4"/>
-				<Component Subtype="SteelPlate" Count="1"/>
-			</Components>
+        <Component Subtype="Computer" Count="1"/>
+        <Component Subtype="Construction" Count="10"/>
+        <Component Subtype="SteelPlate" Count="20"/>
+      </Components>
 			<CriticalComponent Subtype="Computer" Index="0"/>
-			<MountPoints>
+      <GeneralDamageMultiplier>0.4</GeneralDamageMultiplier>
+      <MountPoints>
 				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
 				<MountPoint Side="Left" StartX="0.3" StartY="0.4" EndX="0.7" EndY="0.7"/>
 				<MountPoint Side="Front" StartX="0.4" StartY="0.9" EndX="0.6" EndY="1.2"/>
