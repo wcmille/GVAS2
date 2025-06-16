@@ -12,7 +12,7 @@
         [UseTrigger:true]
         [Type:TargetFar]
         [StartsReady:true]
-        [TargetDistance:4000]
+        [TargetDistance:6000]
         [MaxActions:-1]
         [MaxCooldownMs:40000]
         [MinCooldownMs:20000]
