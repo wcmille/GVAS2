@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Green-GreenAlienRegion-Fixed-Spawns</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+        [FactionOwner:KAMO]
+        [ZoneConditions:GVA-ZoneConditionProfile-GreenZone]
+        [RotateInstallations:{X:0 Y:100 Z:0}]
+        [PlanetaryInstallation:true]
+        [PrefabSpawningMode:All]
+      </Description>
+    </EntityComponent>
+  </EntityComponents>
+</Definitions>

@@ -17,7 +17,23 @@
 				[Chance:100]
 			</Description>
 		</EntityComponent>
-		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Loot-SmallTech</SubtypeId>
+      </Id>
+      <Description>
+        [MES Loot]
+        [ContainerBlockTypes:MyObjectBuilder_CargoContainer/LargeBlockSmallContainer]
+        [ContainerTypes:GVA_Loot_Small]
+        [MinBlocks:4]
+        [MaxBlocks:6]
+        [AppendNameToBlock:true]
+        [AppendedName: (Loot)]
+        [Chance:100]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 			<Id>
 				<TypeId>Inventory</TypeId>
 				<SubtypeId>GVA-Loot-Medium</SubtypeId>

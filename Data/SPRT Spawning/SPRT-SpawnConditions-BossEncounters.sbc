@@ -17,6 +17,8 @@
         [ReplenishSystems:true]
 
         [FactionOwner:SPRT]
+
+        [ZoneConditions:GVA-ZoneConditionProfile-PirateZone]
       </Description>
 			<IsPirate>true</IsPirate>
 			<Frequency>5.0</Frequency>
@@ -49,6 +51,8 @@
         [ReplenishSystems:true]
 
         [FactionOwner:SPRT]
+
+        [ZoneConditions:GVA-ZoneConditionProfile-PirateZone]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>2.0</Frequency>
@@ -81,6 +85,8 @@
         [ReplenishSystems:true]
 
         [FactionOwner:SPRT]
+
+        [ZoneConditions:GVA-ZoneConditionProfile-PirateZone]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>1.0</Frequency>

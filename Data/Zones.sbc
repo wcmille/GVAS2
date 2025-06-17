@@ -80,19 +80,19 @@
         [UseZoneAnnounce:true]
         [ZoneEnterAnnounce:Entering: Green Zone]
         [ZoneLeaveAnnounce:Leaving: Green Zone]
-        [Coordinates:{X:99168.12 Y:143116.24 Z:5636492.9}]
-        [Radius:50000]
+        [Coordinates:{X:111869 Y:136079 Z:5673610}]
+        [Radius:35000]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-ZoneConditionProfile-GreenAlienRegion</SubtypeId>
+        <SubtypeId>GVA-ZoneConditionProfile-GreenZone</SubtypeId>
       </Id>
       <Description>
         [MES Zone Conditions]
         [ZoneName:GreenAlienRegion]
-        [MaxDistanceFromZoneCenter:50000]
+        [MaxDistanceFromZoneCenter:35000]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">

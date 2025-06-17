@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SpawnGroups>
+    <!--Null Building-->
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <SubtypeId>GVA-Green-PI-NullBuilding</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ManipulationProfiles:GVA-KAMO-Manipulation-Std]
+
+        [SpawnConditionsProfiles:Green-GreenAlienRegion-Fixed-Spawns]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>2.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="[NPC] Debris">
+          <Position>
+            <X>0.0</X>
+            <Y>-10.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Behaviour>KAMO-Behavior-PI</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+   
+    <!--HighTech Outpost-->
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <SubtypeId>GVA-Green-PI-SmallInstallation</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ManipulationProfiles:GVA-KAMO-Manipulation-Std]
+
+        [SpawnConditionsProfiles:Green-GreenAlienRegion-Fixed-Spawns]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>5.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="[NPC] HighTech Outpost">
+          <Position>
+            <X>0.0</X>
+            <Y>-20.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Behaviour>KAMO-Behavior-PI</Behaviour>
+          <BeaconText>...</BeaconText>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>   
+  </SpawnGroups>
+</Definitions>
