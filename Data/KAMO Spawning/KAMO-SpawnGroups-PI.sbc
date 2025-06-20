@@ -86,5 +86,61 @@
         </Prefab>
       </Prefabs>
     </SpawnGroup>
+    <!-- Common Junk Spawn-->
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <SubtypeId>GVA-Green-PI-CommonJunk</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ManipulationProfiles:GVA-KAMO-Manipulation-Std]
+        [ManipulationProfiles:GVA-Manipulation-Crashed]
+
+        [SpawnConditionsProfiles:Green-GreenAlienRegion-RandomFixed-Spawns]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>50.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="[NPC] RustedColonyShip">
+          <Position>
+            <X>0.0</X>
+            <Y>10.0</Y>
+            <Z>-50.0</Z>
+          </Position>
+          <Behaviour>KAMO-Behavior-PI</Behaviour>
+          <BeaconText>...</BeaconText>
+        </Prefab>
+        <Prefab SubtypeId="[NPC] RustedExplorer">
+          <Position>
+            <X>0.0</X>
+            <Y>10.0</Y>
+            <Z>50.0</Z>
+          </Position>
+          <Behaviour>KAMO-Behavior-PI</Behaviour>
+          <BeaconText>...</BeaconText>
+        </Prefab>
+        <Prefab SubtypeId="[NPC] RustedRover">
+          <Position>
+            <X>-50.0</X>
+            <Y>5</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Behaviour>KAMO-Behavior-PI</Behaviour>
+          <BeaconText>...</BeaconText>
+        </Prefab>
+        <Prefab SubtypeId="[NPC] RustedShuttle">
+          <Position>
+            <X>50.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Behaviour>KAMO-Behavior-PI</Behaviour>
+          <BeaconText>...</BeaconText>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
   </SpawnGroups>
 </Definitions>

@@ -18,7 +18,7 @@
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
-        <SubtypeId>Green-GreenAlienRegion-Crashed-Spawns</SubtypeId>
+        <SubtypeId>Green-GreenAlienRegion-RandomFixed-Spawns</SubtypeId>
       </Id>
       <Description>
         [MES Spawn Conditions]
@@ -26,7 +26,7 @@
         [ZoneConditions:GVA-ZoneConditionProfile-GreenZone]
         [RotateInstallations:{X:0 Y:100 Z:0}]
         [PlanetaryInstallation:true]
-        [PrefabSpawningMode:All]
+        [PrefabSpawningMode:Random]
       </Description>
     </EntityComponent>
   </EntityComponents>
