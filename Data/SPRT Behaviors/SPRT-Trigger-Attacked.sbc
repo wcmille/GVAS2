@@ -11,6 +11,7 @@
         [UseTrigger:true]
         [StartsReady:true]
         [Type:Damage]
+        [DamageTypes:Any]
         [MaxActions:2]
         [MinCooldownMs:30000]
         [MaxCooldownMs:40000]
@@ -47,18 +48,20 @@
         [MaxChats:2]
         [BroadcastRandomly:true]
         [Author:{AntennaName}]
+        [IgnoreAntennaRequirement:true]
+        [IgnoredAntennaRangeOverride:6000]
         [Color:Red]
 
         [ChatMessages:You have chosen death.]
-        [ChatAudio:ArcHudGPSNotification1]
+        [ChatAudio:GVA-RadioSigs-Black]
         [BroadcastChatType:Chat]
 
         [ChatMessages:It's over now.]
-        [ChatAudio:ArcHudGPSNotification1]
+        [ChatAudio:GVA-RadioSigs-Black]
         [BroadcastChatType:Chat]
 
         [ChatMessages:Let's end this.]
-        [ChatAudio:ArcHudGPSNotification1]
+        [ChatAudio:GVA-RadioSigs-Black]
         [BroadcastChatType:Chat]
       </Description>
     </EntityComponent>

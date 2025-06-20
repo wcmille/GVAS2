@@ -26,7 +26,8 @@
       </Id>
       <Description>
         [RivalAI Action]
-        [JumpToTarget:true]
+        [JumpToWaypoint:true]
+        [JumpWaypoint:GVA-Waypoint-AggressiveJumper]
         [UseChatBroadcast:true]
         [ChatData:GVA-Chat-AggressiveJumper]
       </Description>
@@ -49,6 +50,19 @@
         [ChatMessages:Going somewhere?]
         [ChatAudio:ArcHudGPSNotification1]
         [BroadcastChatType:Chat]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Waypoint-AggressiveJumper</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Waypoint]
+
+        [Waypoint:RelativeOffset]
+        [RelativeEntity:Target]
+        [Offset{X:0:,Y:0,Z:-1500}]
       </Description>
     </EntityComponent>
   </EntityComponents>
