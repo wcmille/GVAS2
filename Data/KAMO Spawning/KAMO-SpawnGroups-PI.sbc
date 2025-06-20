@@ -16,7 +16,7 @@
         [SpawnConditionsProfiles:Green-GreenAlienRegion-Fixed-Spawns]
       </Description>
       <IsPirate>true</IsPirate>
-      <Frequency>2.0</Frequency>
+      <Frequency>50.0</Frequency>
       <Prefabs>
         <Prefab SubtypeId="[NPC] Debris">
           <Position>
@@ -33,7 +33,7 @@
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
-        <SubtypeId>GVA-Green-PI-SmallInstallation</SubtypeId>
+        <SubtypeId>GVA-Green-PI-AmbushInstallation</SubtypeId>
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]
@@ -44,7 +44,7 @@
         [SpawnConditionsProfiles:Green-GreenAlienRegion-Fixed-Spawns]
       </Description>
       <IsPirate>true</IsPirate>
-      <Frequency>5.0</Frequency>
+      <Frequency>1.0</Frequency>
       <Prefabs>
         <Prefab SubtypeId="[NPC] HighTech Outpost">
           <Position>
@@ -56,6 +56,35 @@
           <BeaconText>...</BeaconText>
         </Prefab>
       </Prefabs>
-    </SpawnGroup>   
+    </SpawnGroup>
+    <!-- Crashed Warship -->
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <SubtypeId>GVA-Green-PI-CrashedWarship</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ManipulationProfiles:GVA-KAMO-Manipulation-Std]
+        [ManipulationProfiles:GVA-Manipulation-Crashed]
+
+        [SpawnConditionsProfiles:Green-GreenAlienRegion-Fixed-Spawns]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>1.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="[NPC] KAMO Warship">
+          <Position>
+            <X>0.0</X>
+            <Y>10.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Behaviour>KAMO-Behavior-PI</Behaviour>
+          <BeaconText>...</BeaconText>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
   </SpawnGroups>
 </Definitions>

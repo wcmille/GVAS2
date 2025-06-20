@@ -115,5 +115,23 @@
         [SkinRandomBlocksTextures:Wartorn]
       </Description>
     </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Manipulation-Crashed</SubtypeId>
+      </Id>
+      <Description>
+        [MES Manipulation]
+
+        [DisableBlocksWithName:Thruster]
+        [AllowPartialNames:true]
+
+        [SkinRandomBlocks:true]
+        [MinPercentageSkinRandomBlocks:50]
+        [MaxPercentageSkinRandomBlocks:100]
+        [SkinRandomBlocksTextures:Rusty_Armor]
+        [SkinRandomBlocksTextures:Heavy_Rust_Armor]
+      </Description>
+    </EntityComponent>
   </EntityComponents>
 </Definitions>
