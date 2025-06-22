@@ -14,6 +14,7 @@
         [BossEncounterSpace:true]
         [BossCustomGPSLabel:Pirate Activity]
         [IgnoreCleanupRules:false]
+        [ManipulationProfiles:GVA-SPRT-Manipulation-NAGA]
         [ReplenishSystems:true]
 
         [FactionOwner:SPRT]
@@ -48,6 +49,7 @@
         [BossEncounterSpace:true]
         [BossCustomGPSLabel:Heavy Pirate Activity]
         [IgnoreCleanupRules:false]
+        [ManipulationProfiles:GVA-SPRT-Manipulation-NAGA]
         [ReplenishSystems:true]
 
         [FactionOwner:SPRT]
@@ -82,6 +84,7 @@
         [BossEncounterSpace:true]
         [BossCustomGPSLabel:Extreme Pirate Activity]
         [IgnoreCleanupRules:false]
+        [ManipulationProfiles:GVA-SPRT-Manipulation-NAGA]
         [ReplenishSystems:true]
 
         [FactionOwner:SPRT]
