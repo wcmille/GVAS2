@@ -52,8 +52,8 @@
       </Id>
       <DisplayName>Silverbranch Group</DisplayName>
       <IsDefault>true</IsDefault>
-      <DefaultRelation>Neutral</DefaultRelation>
-      <!--Enemies, Neutral, Friends-->
+      <StaticReputation>true</StaticReputation>
+      <StartingReputation>10</StartingReputation>
       <AcceptHumans>false</AcceptHumans>
       <AutoAcceptMember>false</AutoAcceptMember>
       <StartingBalance>100000000000</StartingBalance>

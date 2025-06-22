@@ -11,6 +11,9 @@
 
         [UseLootProfiles:true]
         [LootProfiles:GVA-Loot-Small]
+
+        [GridsAreEditable:false]
+        [GridsAreDestructable:false]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
