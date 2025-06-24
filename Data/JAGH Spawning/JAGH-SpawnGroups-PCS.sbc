@@ -30,6 +30,7 @@
           </Position>
           <Speed>50</Speed>
           <Behaviour>JAGH-Behavior-Scout</Behaviour>
+          <BeaconText>SO</BeaconText>
         </Prefab>
       </Prefabs>
     </SpawnGroup>
@@ -65,6 +66,7 @@
           </Position>
           <Speed>50</Speed>
           <Behaviour>JAGH-Behavior-FFO</Behaviour>
+          <BeaconText>FFO</BeaconText>
         </Prefab>
       </Prefabs>
     </SpawnGroup>
@@ -99,6 +101,7 @@
           </Position>
           <Speed>50</Speed>
           <Behaviour>JAGH-Behavior-FFO</Behaviour>
+          <BeaconText>DDO</BeaconText>
         </Prefab>
       </Prefabs>
     </SpawnGroup>
@@ -134,6 +137,7 @@
           </Position>
           <Speed>50</Speed>
           <Behaviour>JAGH-Behavior-FFO</Behaviour>
+          <BeaconText>FFO</BeaconText>
         </Prefab>
         <Prefab SubtypeId="Fenrir-class Interdictor">
           <Position>
@@ -143,6 +147,7 @@
           </Position>
           <Speed>50</Speed>
           <Behaviour>JAGH-Behavior-FFO</Behaviour>
+          <BeaconText>FFO</BeaconText>
         </Prefab>
         <Prefab SubtypeId="Fenrir-class Interdictor">
           <Position>
@@ -152,6 +157,7 @@
           </Position>
           <Speed>50</Speed>
           <Behaviour>JAGH-Behavior-FFO</Behaviour>
+          <BeaconText>FFO</BeaconText>
         </Prefab>
       </Prefabs>
     </SpawnGroup>
@@ -185,6 +191,7 @@
           </Position>
           <Speed>50</Speed>
           <Behaviour>JAGH-Behavior-DDO</Behaviour>
+          <BeaconText>DDO</BeaconText>
         </Prefab>
         <Prefab SubtypeId="Fenrir-class Interdictor">
           <Position>
@@ -194,6 +201,7 @@
           </Position>
           <Speed>50</Speed>
           <Behaviour>JAGH-Behavior-FFO</Behaviour>
+          <BeaconText>FFO</BeaconText>
         </Prefab>
         <Prefab SubtypeId="Fenrir-class Interdictor">
           <Position>
@@ -203,6 +211,7 @@
           </Position>
           <Speed>50</Speed>
           <Behaviour>JAGH-Behavior-FFO</Behaviour>
+          <BeaconText>FFO</BeaconText>
         </Prefab>
         <Prefab SubtypeId="Fenrir-class Interdictor">
           <Position>
@@ -212,6 +221,7 @@
           </Position>
           <Speed>50</Speed>
           <Behaviour>JAGH-Behavior-FFO</Behaviour>
+          <BeaconText>FFO</BeaconText>
         </Prefab>
       </Prefabs>
     </SpawnGroup>

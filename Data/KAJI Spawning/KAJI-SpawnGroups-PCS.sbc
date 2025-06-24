@@ -30,6 +30,7 @@
           </Position>
           <Speed>50</Speed>
           <Behaviour>GVA-KAJI-Behavior-Kunai</Behaviour>
+          <BeaconText>SO</BeaconText>
         </Prefab>
       </Prefabs>
     </SpawnGroup>
@@ -64,7 +65,8 @@
 					</Position>
 					<Speed>50</Speed>
 					<Behaviour>KAJI-Behavior-FFO</Behaviour>
-				</Prefab>
+          <BeaconText>FFO</BeaconText>
+        </Prefab>
 			</Prefabs>
 		</SpawnGroup>
     
@@ -97,6 +99,7 @@
           </Position>
           <Speed>50</Speed>
           <Behaviour>KAJI-Behavior-FFO</Behaviour>
+          <BeaconText>DDO</BeaconText>
         </Prefab>
       </Prefabs>
     </SpawnGroup>
@@ -132,6 +135,7 @@
           </Position>
           <Speed>50</Speed>
           <Behaviour>KAJI-Behavior-FFO</Behaviour>
+          <BeaconText>FFO</BeaconText>
         </Prefab>
         <Prefab SubtypeId="Yumi-class Frigate">
           <Position>
@@ -141,6 +145,7 @@
           </Position>
           <Speed>50</Speed>
           <Behaviour>KAJI-Behavior-FFO</Behaviour>
+          <BeaconText>FFO</BeaconText>
         </Prefab>
         <Prefab SubtypeId="Yumi-class Frigate">
           <Position>
@@ -150,6 +155,7 @@
           </Position>
           <Speed>50</Speed>
           <Behaviour>KAJI-Behavior-FFO</Behaviour>
+          <BeaconText>FFO</BeaconText>
         </Prefab>
       </Prefabs>
     </SpawnGroup>
@@ -183,6 +189,7 @@
           </Position>
           <Speed>50</Speed>
           <Behaviour>KAJI-Behavior-DDO</Behaviour>
+          <BeaconText>DDO</BeaconText>
         </Prefab>
         <Prefab SubtypeId="Yumi-class Frigate">
           <Position>
@@ -192,6 +199,7 @@
           </Position>
           <Speed>50</Speed>
           <Behaviour>KAJI-Behavior-FFO</Behaviour>
+          <BeaconText>FFO</BeaconText>
         </Prefab>
         <Prefab SubtypeId="Yumi-class Frigate">
           <Position>
@@ -201,6 +209,7 @@
           </Position>
           <Speed>50</Speed>
           <Behaviour>KAJI-Behavior-FFO</Behaviour>
+          <BeaconText>FFO</BeaconText>
         </Prefab>
         <Prefab SubtypeId="Yumi-class Frigate">
           <Position>
@@ -210,6 +219,7 @@
           </Position>
           <Speed>50</Speed>
           <Behaviour>KAJI-Behavior-FFO</Behaviour>
+          <BeaconText>FFO</BeaconText>
         </Prefab>
       </Prefabs>
     </SpawnGroup>
