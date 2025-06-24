@@ -67,7 +67,7 @@ namespace GVA.NPCControl.LimitedProduction
             }
             catch (Exception exc)
             {
-                MyLog.Default.WriteLineAndConsole($"GVAS2 Failed: {exc}");
+                MyLog.Default.WriteLineAndConsole($"{SharedConstants.ModName} Failed: {exc}");
             }
         }
 
@@ -113,7 +113,7 @@ namespace GVA.NPCControl.LimitedProduction
             catch (Exception exc)
             {
 
-                MyLog.Default.WriteLineAndConsole($"GVAS2 Failed to deregister event: {exc}");
+                MyLog.Default.WriteLineAndConsole($"{SharedConstants.ModName} Failed to deregister event: {exc}");
                 return;
             }
             //Unregister any handlers here

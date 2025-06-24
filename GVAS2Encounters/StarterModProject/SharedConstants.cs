@@ -5,7 +5,7 @@ namespace GVA.NPCControl
 {
     internal class SharedConstants
     {
-        public static readonly string ModName = "GVAS2";
+        public static readonly string ModName = "GVAS3";
 
         public static readonly string CivilianStr = "Civilian";
         public static readonly string MilitaryStr = "Military";
@@ -42,7 +42,7 @@ namespace GVA.NPCControl
 
         public static readonly string PointCheck = "GVA.NPCControl.NPCPoints";
 
-        public static readonly Vector3D WorldCenter = new Vector3D(-870575, 131504, 7356867);
+        public static readonly Vector3D WorldCenter = new Vector3D(-870575, 131504, 4105278);
         public static readonly BoundingSphereD NpcSphere = new BoundingSphereD(WorldCenter, 3000000.0);
     }
 }
