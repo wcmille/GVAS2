@@ -43,7 +43,14 @@ namespace GVA_NPC_Control.Test
 
         public VRage.Collections.DictionaryReader<long, MyFactionMember> JoinRequests => throw new System.NotImplementedException();
 
+        public MyFactionTypes FactionType => throw new System.NotImplementedException();
+
         public string GetBalanceShortString()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public bool HasLastMember()
         {
             throw new System.NotImplementedException();
         }

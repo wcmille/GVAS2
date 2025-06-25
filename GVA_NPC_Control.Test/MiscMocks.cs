@@ -75,6 +75,11 @@ namespace GVA_NPC_Control.Test
             throw new NotImplementedException();
         }
 
+        public IMyPlayer TryGetIdentityId(long identity)
+        {
+            throw new NotImplementedException();
+        }
+
         public ulong TryGetSteamId(long identityId)
         {
             return 1;
@@ -376,6 +381,7 @@ namespace GVA_NPC_Control.Test
         public event Action<long> FactionEdited;
         public event Action<long> FactionCreated;
         public event Action<MyFactionStateChange, long, long, long, long> FactionStateChanged;
+        public event Action<long, long, int, ReputationChangeReason> ReputationChanged;
 
         public void AcceptJoin(long factionId, long playerId)
         {
@@ -587,6 +593,16 @@ namespace GVA_NPC_Control.Test
         }
 
         public IMyFaction TryGetPlayerFaction(long playerId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void EditFaction(long factionId, string tag, string name, string desc, string privateInfo, string icon, Vector3 factionColor, Vector3 factionIconColor)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void CreateFactionNew(long founderId, string tag, string name, string desc, string privateInfo, string type)
         {
             throw new NotImplementedException();
         }
@@ -1112,7 +1128,8 @@ namespace GVA_NPC_Control.Test
 
         public TextWriter WriteFileInWorldStorage(string file, Type callingType)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            return new StringWriter();
         }
     }
 
