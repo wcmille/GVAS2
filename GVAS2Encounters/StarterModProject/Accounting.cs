@@ -11,7 +11,7 @@ namespace GVA.NPCControl
 
     public class Accounting : IAccount, IZoneFaction
     {
-        const double militaryCosts = 0.1;
+        const double militaryCosts = 0.2;
         const double timePeriodConst = 0.333333;
         const double pirateFactor = 0.006667;
         IMyFaction pcOwner;
@@ -85,7 +85,7 @@ namespace GVA.NPCControl
             civ += Civilian;
             mil += Military;
 
-            double grossIncome = civ * timePeriodConst;
+            double grossIncome = civ * timePeriodConst - civ * civ * pirateFactor;
             double expenses = mil * militaryCosts;
             double netIncome = grossIncome - expenses;
             return netIncome;

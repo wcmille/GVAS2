@@ -29,8 +29,9 @@ namespace GVA.NPCControl.Server
             Incursions = incur;
         }
 
-        public ServerAccount(IMyFaction owner, IMyFaction npc, string f, int c, int m, double uu) : base(owner, npc, f, c, m, uu)
+        public ServerAccount(IMyFaction owner, IMyFaction npc, string f, int c, int m, double uu, IFactionsApi server = null) : base(owner, npc, f, c, m, uu)
         {
+            this.server = server;
         }
 
         public int Incursions { get; private set; }
@@ -106,7 +107,7 @@ namespace GVA.NPCControl.Server
                     server.SetReputation(player, npcOwner.FactionId, Math.Max(rep, minRep));
                     //MyAPIGateway.Session.Factions.SetReputationBetweenPlayerAndFaction(player, npcOwner.FactionId, Math.Max(rep, minRep));
                 }
-                if (minRep >= maxRep) AccountLog.Log($"{OwningPCFaction.Tag} has won.");
+                if (minRep >= maxRep) AccountLog?.Log($"{OwningPCFaction.Tag} has won.");
             }
         }
 

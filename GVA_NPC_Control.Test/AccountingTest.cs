@@ -2,9 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Sandbox.ModAPI;
 using System.Collections.Generic;
-using VRage;
 using VRage.Game;
-using static VRage.Game.MyObjectBuilder_Checkpoint;
 
 namespace GVA_NPC_Control.Test
 {
@@ -12,16 +10,25 @@ namespace GVA_NPC_Control.Test
     public class AccountingTest
     {
         MockFaction faction;
+        readonly string facColor = "Blue";
+        MockServer server;
+        ServerLog serverLog;
+
         [TestInitialize]
         public void Setup()
-        { 
-            faction = new MockFaction();
-            faction.Tag = "BMC";
+        {
+            faction = new MockFaction
+            {
+                Tag = "BMC"
+            };
+            server = new MockServer();
+            serverLog = new ServerLog(facColor);
         }
 
         [TestMethod]
         public void TestMethodx2()
         {
+            //ServerAccount acct = new ServerAccount(facColor, serverLog, server);
             ServerAccount acct = new ServerAccount(faction, null, "Blue", 4, 55, 0);
             acct.TimePeriod();
 
@@ -107,16 +114,22 @@ namespace GVA_NPC_Control.Test
             {
                 { playerId, leader }
             };
-            faction = new MockFaction(members);
-            faction.FactionId = 100;
-            var npcFaction = new MockFaction();
-            npcFaction.FactionId = 200;
+            faction = new MockFaction(members)
+            {
+                FactionId = 100
+            };
+            var npcFaction = new MockFaction
+            {
+                FactionId = 200
+            };
             var mfc = new MockFactionCollection();
             mfc.Factions.Add(faction.FactionId, faction);
             mfc.Factions.Add(npcFaction.FactionId, npcFaction);
             ses.Factions = mfc;
+            MockServer ms = new MockServer();
+            ms.Mfc = mfc;
 
-            ServerAccount acct = new ServerAccount(faction, npcFaction, "Blue", 15, 0, 0);
+            ServerAccount acct = new ServerAccount(faction, npcFaction, "Blue", 15, 0, 0, ms);
 
             MyAPIGateway.Session.Factions.SetReputationBetweenPlayerAndFaction(playerId, npcFaction.FactionId, 501);
             acct.TimePeriod();

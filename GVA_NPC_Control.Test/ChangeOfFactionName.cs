@@ -86,6 +86,10 @@ namespace GVA_NPC_Control.Test
             MyLog.Default = new MyLog();
 
             MyAPIGateway.Players = new MockPlayerCollection();
+            
+            var mmp = new MockMultiPlayer();
+            mmp.MyId = 1; // Simulate the player being the server player
+            MyAPIGateway.Multiplayer = mmp;
 
             //Simulate Files
             factions.Factions.Add(bmcFaction.FactionId, bmcFaction);
@@ -103,7 +107,7 @@ namespace GVA_NPC_Control.Test
         }
         #region baseline tests
         [TestMethod]
-        public void TestUtilityReader()
+        public void TestUtilityReader() 
         {
             const int goal = 99;
             var str = $"{SharedConstants.BlueFactionColor}{SharedConstants.MilitaryStr}";

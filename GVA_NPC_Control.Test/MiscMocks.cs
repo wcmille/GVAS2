@@ -1,4 +1,5 @@
 ﻿using Digi.Example_NetworkProtobuf;
+using GVA.NPCControl.Server;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -14,6 +15,15 @@ using VRageMath;
 
 namespace GVA_NPC_Control.Test
 {
+    public class MockServer : IFactionsApi
+    {
+        public IMyFactionCollection Mfc { get; set; }
+
+        public void SetReputation(long playerID, long factionID, int reputation)
+        {
+            Mfc.SetReputationBetweenPlayerAndFaction(playerID, factionID, reputation);
+        }
+    }
     public class MockPlayerCollection : IMyPlayerCollection
     {
         public long Count => throw new NotImplementedException();
@@ -86,6 +96,80 @@ namespace GVA_NPC_Control.Test
         }
 
         public bool TryReduceControl(IMyControllableEntity entityWhichKeepsControl, IMyEntity entityWhichLoosesControl)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class MockMultiPlayer : IMyMultiplayer
+    {
+        public bool IsServer => true;
+        public bool IsClient => false;
+        public bool IsReplay => false;
+        public bool IsSinglePlayer => true;
+        public ulong MyId { get; set; }
+
+        public bool MultiplayerActive => throw new NotImplementedException();
+
+        public ulong ServerId => throw new NotImplementedException();
+
+        public string MyName => throw new NotImplementedException();
+
+        public IMyPlayerCollection Players => throw new NotImplementedException();
+
+        public event Action<IMyPlayer> PlayerJoined;
+        public event Action<IMyPlayer> PlayerLeft;
+        public event Action<IMyPlayer> PlayerRenamed;
+        public event Action<IMyPlayer> PlayerBanned;
+        public event Action<IMyPlayer> PlayerUnbanned;
+        public event Action<IMyPlayer> PlayerKicked;
+
+        public bool IsServerPlayer(IMyNetworkClient player)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void JoinServer(string address)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RegisterMessageHandler(ushort id, Action<byte[]> messageHandler)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RegisterSecureMessageHandler(ushort id, Action<ushort, byte[], ulong, bool> messageHandler)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SendEntitiesCreated(List<MyObjectBuilder_EntityBase> objectBuilders)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool SendMessageTo(ushort id, byte[] message, ulong recipient, bool reliable = true)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool SendMessageToOthers(ushort id, byte[] message, bool reliable = true)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool SendMessageToServer(ushort id, byte[] message, bool reliable = true)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UnregisterMessageHandler(ushort id, Action<byte[]> messageHandler)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UnregisterSecureMessageHandler(ushort id, Action<ushort, byte[], ulong, bool> messageHandler)
         {
             throw new NotImplementedException();
         }
@@ -377,6 +461,10 @@ namespace GVA_NPC_Control.Test
         }
         public Dictionary<long, IMyFaction> Factions { get; set; }
 
+        //player, faction, reputation.
+        readonly Dictionary<long, Dictionary<long, int>> reputation = new Dictionary<long, Dictionary<long, int>>();
+        const int defaultRep = -1000;
+
         public event Action<long, bool, bool> FactionAutoAcceptChanged;
         public event Action<long> FactionEdited;
         public event Action<long> FactionCreated;
@@ -483,20 +571,14 @@ namespace GVA_NPC_Control.Test
             throw new NotImplementedException();
         }
 
-        //player, faction, reputation.
-        Dictionary<long, Dictionary<long, int>> reputation = new Dictionary<long, Dictionary<long, int>>();
-        const int defaultRep = -1000;
-
         public int GetReputationBetweenPlayerAndFaction(long identityId, long factionId)
         {
-            Dictionary<long, int> dict;
-            if (!reputation.TryGetValue(identityId, out dict))
-            { 
+            if (!reputation.TryGetValue(identityId, out Dictionary<long, int> dict))
+            {
                 dict = new Dictionary<long, int>();
                 reputation[identityId] = dict;
             }
-            int rep;
-            if (!dict.TryGetValue(factionId, out rep))
+            if (!dict.TryGetValue(factionId, out int rep))
             {
                 dict[factionId] = defaultRep;
                 rep = defaultRep;
@@ -556,8 +638,7 @@ namespace GVA_NPC_Control.Test
 
         public void SetReputationBetweenPlayerAndFaction(long identityId, long factionId, int rep)
         {
-            Dictionary<long, int> dict;
-            if (!reputation.TryGetValue(identityId, out dict))
+            if (!reputation.TryGetValue(identityId, out var dict))
             {
                 dict = new Dictionary<long, int>();
                 reputation[identityId] = dict;
@@ -975,7 +1056,7 @@ namespace GVA_NPC_Control.Test
             }
             else
             {
-                T val = default(T);
+                T val = default;
                 value = val;
                 return false;
             }
@@ -1141,7 +1222,7 @@ namespace GVA_NPC_Control.Test
 
         public void RelayToClients(PacketBase packet, byte[] rawData = null)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         public void SendToPlayer(PacketBase packet, ulong steamId)
