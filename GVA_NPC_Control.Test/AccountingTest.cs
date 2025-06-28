@@ -29,18 +29,18 @@ namespace GVA_NPC_Control.Test
         public void TestMethodx2()
         {
             //ServerAccount acct = new ServerAccount(facColor, serverLog, server);
-            ServerAccount acct = new ServerAccount(faction, null, "Blue", 4, 55, 0);
+            ServerAccount acct = new ServerAccount(faction, null, facColor, 4, 55, 0);
             acct.TimePeriod();
 
             Assert.AreEqual(4, acct.Civilian, "Civilian");
-            Assert.AreEqual(45, acct.Military, "Military");
+            Assert.AreEqual(48, acct.Military, "Military");
             Assert.AreEqual(0.0, acct.UnspentUnits, 0.001);
         }
 
         [TestMethod]
         public void TestMethodx1()
         {
-            ServerAccount acct = new ServerAccount(faction, null, "Blue", 0, 13, 0);
+            ServerAccount acct = new ServerAccount(faction, null, facColor, 0, 13, 0);
             acct.TimePeriod();
 
             Assert.AreEqual(0, acct.Civilian, "Civilian");
@@ -51,44 +51,44 @@ namespace GVA_NPC_Control.Test
         [TestMethod]
         public void TestMethod10_10_0()
         {
-            ServerAccount acct = new ServerAccount(faction, null, "Blue", 10, 10, 0);
+            ServerAccount acct = new ServerAccount(faction, null, facColor, 10, 10, 0);
             acct.TimePeriod();
 
             Assert.AreEqual(10, acct.Civilian);
             Assert.AreEqual(10, acct.Military);
-            Assert.AreEqual(0.666, acct.UnspentUnits, 0.001);
+            Assert.AreEqual(6.03, acct.UnspentUnits, 0.001);
         }
 
         [TestMethod]
         public void TestMethod10_10_0_Unowned()
         {
-            ServerAccount acct = new ServerAccount(null, null, "Blue", 10, 10, 0);
+            ServerAccount acct = new ServerAccount(null, null, facColor, 10, 10, 0);
             acct.TimePeriod();
 
-            Assert.AreEqual(5, acct.Civilian);
+            Assert.AreEqual(7, acct.Civilian, "Civilian");
             Assert.AreEqual(5, acct.Military);
-            Assert.AreEqual(0.333, acct.UnspentUnits, 0.001);
+            Assert.AreEqual(3.014, acct.UnspentUnits, 0.001);
         }
 
         [TestMethod]
         public void TestMethod30_10_0()
         {
-            ServerAccount acct = new ServerAccount(faction, null, "Blue", 30, 10, 0);
+            ServerAccount acct = new ServerAccount(faction, null, facColor, 30, 10, 0);
             acct.TimePeriod();
 
             Assert.AreEqual(30, acct.Civilian);
             Assert.AreEqual(10, acct.Military);
-            Assert.AreEqual(2, acct.UnspentUnits, 0.001);
+            Assert.AreEqual(12.416, acct.UnspentUnits, 0.001);
         }
 
         [TestMethod]
         public void TestMethod50_0_0()
         {
-            ServerAccount acct = new ServerAccount(faction, null, "Blue", 50, 0, 0);
+            ServerAccount acct = new ServerAccount(faction, null, facColor, 50, 0, 0);
             acct.TimePeriod();
 
-            Assert.AreEqual(49, acct.Civilian, "Civilian");
-            Assert.AreEqual(1, acct.UnspentUnits, 0.001, "Unspent");
+            Assert.AreEqual(50, acct.Civilian, "Civilian");
+            Assert.AreEqual(18.924, acct.UnspentUnits, 0.001, "Unspent");
             Assert.AreEqual(0, acct.Military, "Military");
         }
 
@@ -129,7 +129,7 @@ namespace GVA_NPC_Control.Test
             MockServer ms = new MockServer();
             ms.Mfc = mfc;
 
-            ServerAccount acct = new ServerAccount(faction, npcFaction, "Blue", 15, 0, 0, ms);
+            ServerAccount acct = new ServerAccount(faction, npcFaction, facColor, 15, 0, 0, ms);
 
             MyAPIGateway.Session.Factions.SetReputationBetweenPlayerAndFaction(playerId, npcFaction.FactionId, 501);
             acct.TimePeriod();

@@ -76,7 +76,7 @@ namespace GVA.NPCControl.Server
 
         private void ResolveReputation(int boostCiv, int boostMil)
         {
-            const double friction = 0.95;
+            const double friction = 0.905;
             const int civMult = 2;
             if (OwningPCFaction != null)
             {
@@ -97,9 +97,10 @@ namespace GVA.NPCControl.Server
                 { 
                 }
 
+                int boostedCiv = Math.Min(Civilian + boostCiv, 50);
                 minRep = (int)((minRep - SharedConstants.AlliedRep) * friction + SharedConstants.AlliedRep);
+                minRep = Math.Min(civMult * (boostedCiv) + minRep, maxRep);
 
-                minRep = Math.Min(civMult * (Civilian + boostCiv) + minRep, maxRep);
                 foreach (var player in OwningPCFaction.Members.Keys)
                 {
                     var rep = MyAPIGateway.Session.Factions.GetReputationBetweenPlayerAndFaction(player, npcOwner.FactionId);
@@ -131,15 +132,17 @@ namespace GVA.NPCControl.Server
                 }
 
             }
-            if (UnspentUnits > 50.0)
-            {
-                UnspentUnits *= corruption;
-            }
             if (OwningPCTag == "SPRT")
             {
                 Military /= 2;
-                Civilian /= 2;
+                if (Civilian > 5) Civilian = ((Civilian - 5)/2) + 5;
                 UnspentUnits /= 2;
+            }
+            if (UnspentUnits > Civilian + 1)
+            {
+                int uu = (int)(UnspentUnits - Civilian);
+                if (Military > Civilian) BuyCivilian(uu);
+                else BuyMilitary(uu);
             }
         }
 

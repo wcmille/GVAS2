@@ -1,4 +1,5 @@
 ﻿using Sandbox.ModAPI;
+using System;
 using VRage.Game.ModAPI;
 
 namespace GVA.NPCControl
@@ -14,6 +15,8 @@ namespace GVA.NPCControl
         const double militaryCosts = 0.2;
         const double timePeriodConst = 0.333333;
         const double pirateFactor = 0.006667;
+        const double coeff = 2.355;
+        const double exp = 0.5327;
         IMyFaction pcOwner;
         protected IMyFaction npcOwner;
 
@@ -85,7 +88,8 @@ namespace GVA.NPCControl
             civ += Civilian;
             mil += Military;
 
-            double grossIncome = civ * timePeriodConst - civ * civ * pirateFactor;
+            //double grossIncome = civ * timePeriodConst - civ * civ * pirateFactor;
+            double grossIncome = coeff * Math.Pow(civ, exp);
             double expenses = mil * militaryCosts;
             double netIncome = grossIncome - expenses;
             return netIncome;
