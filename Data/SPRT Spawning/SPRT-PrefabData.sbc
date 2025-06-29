@@ -10,10 +10,11 @@
       <Description>
         [MES Prefab Data]
 
-        [Prefabs:Tempest Class Cruiser Block IV]
+        [Prefabs:Destroyer Tidehunter]
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ManipulationProfiles:GVA-Manipulation-MediumLoot]
         [ManipulationProfiles:GVA-Manipulation-Black-DestroyerName]
+        [ManipulationProfiles:GVA-SPRT-Manipulation-NAGA]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
@@ -24,10 +25,11 @@
       <Description>
         [MES Prefab Data]
 
-        [Prefabs:Enforcer]
+        [Prefabs:Frigate Shorestriker]
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ManipulationProfiles:GVA-Manipulation-MediumLoot]
         [ManipulationProfiles:GVA-Manipulation-Black-FrigateName]
+        [ManipulationProfiles:GVA-SPRT-Manipulation-NAGA]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
@@ -38,9 +40,11 @@
       <Description>
         [MES Prefab Data]
 
-        [Prefabs:SPS-350 Dagger]
+        [Prefabs:Corvette Lurker]
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ManipulationProfiles:GVA-Manipulation-MediumLoot]
         [ManipulationProfiles:GVA-Manipulation-Black-FrigateName]
+        [ManipulationProfiles:GVA-SPRT-Manipulation-NAGA]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
@@ -51,9 +55,40 @@
       <Description>
         [MES Prefab Data]
 
-        [Prefabs:Rocketeer MKI Pirate Attacker]
+        [Prefabs:Scout]
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ManipulationProfiles:GVA-Manipulation-Black-FighterName]
+        [ManipulationProfiles:GVA-SPRT-Manipulation-NAGA]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-PrefabData-Black-CL</SubtypeId>
+      </Id>
+      <Description>
+        [MES Prefab Data]
+
+        [Prefabs:Cruiser Nightcrawler]
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ManipulationProfiles:GVA-Manipulation-MediumLoot]
+        [ManipulationProfiles:GVA-Manipulation-Black-CruiserName]
+        [ManipulationProfiles:GVA-SPRT-Manipulation-NAGA]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-PrefabData-Black-CV</SubtypeId>
+      </Id>
+      <Description>
+        [MES Prefab Data]
+
+        [Prefabs:Carrier Oracle]
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ManipulationProfiles:GVA-Manipulation-MediumLoot]
+        [ManipulationProfiles:GVA-Manipulation-Black-CarrierName]
+        [ManipulationProfiles:GVA-SPRT-Manipulation-NAGA]
       </Description>
     </EntityComponent>
   </EntityComponents>

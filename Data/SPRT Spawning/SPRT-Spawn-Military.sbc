@@ -12,8 +12,6 @@
         [Modular Encounters SpawnGroup]
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
-        [ManipulationProfiles:GVA-SPRT-Manipulation-NAGA]
-
         [ReplenishSystems:true]
 
         [SpawnConditionsProfiles:SPRT-SpawnCondition-BlackZone]
@@ -45,7 +43,6 @@
         [Modular Encounters SpawnGroup]
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
-        [ManipulationProfiles:GVA-SPRT-Manipulation-NAGA]
         [ReplenishSystems:true]
 
         [SpawnConditionsProfiles:SPRT-SpawnCondition-BlueZoneSpace]
@@ -80,7 +77,6 @@
         [Modular Encounters SpawnGroup]
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
-        [ManipulationProfiles:GVA-SPRT-Manipulation-NAGA]
         [ReplenishSystems:true]
 
         [SpawnConditionsProfiles:GVA-Black-RedIncursions0]
@@ -116,7 +112,6 @@
         [Modular Encounters SpawnGroup]
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
-        [ManipulationProfiles:GVA-SPRT-Manipulation-NAGA]
         [ReplenishSystems:true]
 
         [SpawnConditionsProfiles:GVA-Black-RedIncursions0]
