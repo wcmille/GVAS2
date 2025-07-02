@@ -127,7 +127,7 @@
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
-        <SubtypeId>GVA-Blue-PI-EconomicStations</SubtypeId>
+        <SubtypeId>GVA-Blue-PI-Airfield</SubtypeId>
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]
@@ -143,14 +143,14 @@
       <IsPirate>true</IsPirate>
       <Frequency>6.0</Frequency>
       <Prefabs>
-        <Prefab SubtypeId="[NPC] Shipyard">
+        <Prefab SubtypeId="[NPC] Airfield">
           <Position>
             <X>0.0</X>
-            <Y>16.5</Y>
+            <Y>8.5</Y>
             <Z>0.0</Z>
           </Position>
           <Behaviour>GVA-Behavior-PassiveCivilian-R-Shipyard</Behaviour>
-          <BeaconText>Shipyard</BeaconText>
+          <BeaconText>Airfield</BeaconText>
         </Prefab>
       </Prefabs>
     </SpawnGroup>
@@ -159,7 +159,7 @@
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
-        <SubtypeId>GVA-Blue-PI-PermanentTown</SubtypeId>
+        <SubtypeId>GVA-Blue-PI-Town</SubtypeId>
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]
@@ -173,40 +173,13 @@
       <IsPirate>true</IsPirate>
       <Frequency>20.0</Frequency>
       <Prefabs>
-        <Prefab SubtypeId="[NPC] Greenhouse">
-          <Position>
-            <X>75.0</X>
-            <Y>10.0</Y>
-            <Z>75.0</Z>
-          </Position>
-          <BeaconText>Greenhouse</BeaconText>
-          <Behaviour>JAGH-Behavior-PassiveCivilian</Behaviour>
-        </Prefab>
-        <Prefab SubtypeId="Economy_Outpost_4">
+        <Prefab SubtypeId="[NPC] Spaceport">
           <Position>
             <X>0.0</X>
-            <Y>37.5</Y>
+            <Y>17.5</Y>
             <Z>0.0</Z>
           </Position>
-          <BeaconText>Outpost</BeaconText>
-          <Behaviour>GVA-Behavior-PassiveCivilian-RC1</Behaviour>
-        </Prefab>
-        <Prefab SubtypeId="[NPC] Snow SAM Battery">
-          <Position>
-            <X>-150.0</X>
-            <Y>5.0</Y>
-            <Z>0.0</Z>
-          </Position>
-          <BeaconText>SAM</BeaconText>
-          <Behaviour>JAGH-Behavior-PassiveCivilian</Behaviour>
-        </Prefab>
-        <Prefab SubtypeId="[NPC] Cafe">
-          <Position>
-            <X>-5</X>
-            <Y>12.5</Y>
-            <Z>45.0</Z>
-          </Position>
-          <BeaconText>Cafe</BeaconText>
+          <BeaconText>Spaceport</BeaconText>
           <Behaviour>JAGH-Behavior-PassiveCivilian</Behaviour>
         </Prefab>
       </Prefabs>
@@ -216,7 +189,7 @@
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
-        <SubtypeId>GVA-Blue-PI-PermanentCity</SubtypeId>
+        <SubtypeId>GVA-Blue-PI-City</SubtypeId>
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]
