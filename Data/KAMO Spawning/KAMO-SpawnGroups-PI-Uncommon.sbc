@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SpawnGroups>
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <SubtypeId>GVA-Green-PI-Uncommon</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ManipulationProfiles:GVA-KAMO-Manipulation-Std]
+
+        [SpawnConditionsProfiles:Green-GreenAlienRegion-RandomFixed-Spawns]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>21.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="[NPC] Uranium Refinery">
+          <Position>
+            <X>0.0</X>
+            <Y>31.25</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Behaviour>KAMO-Behavior-PI</Behaviour>
+          <BeaconText>Weak Signal</BeaconText>
+        </Prefab>
+        <Prefab SubtypeId="[NPC] Bio Laboratory">
+          <Position>
+            <X>0.0</X>
+            <Y>16.25</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Behaviour>KAMO-Behavior-PI</Behaviour>
+          <BeaconText>Weak Signal</BeaconText>
+        </Prefab>
+        <Prefab SubtypeId="[NPC] Small Outpost">
+          <Position>
+            <X>0.0</X>
+            <Y>11.25</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Behaviour>KAMO-Behavior-PI</Behaviour>
+          <BeaconText>Weak Signal</BeaconText>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+  </SpawnGroups>
+</Definitions>

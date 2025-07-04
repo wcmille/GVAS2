@@ -16,7 +16,7 @@
         [SpawnConditionsProfiles:Green-GreenAlienRegion-Fixed-Spawns]
       </Description>
       <IsPirate>true</IsPirate>
-      <Frequency>50.0</Frequency>
+      <Frequency>7.0</Frequency>
       <Prefabs>
         <Prefab SubtypeId="[NPC] Debris">
           <Position>
@@ -29,63 +29,6 @@
       </Prefabs>
     </SpawnGroup>
    
-    <!--HighTech Outpost-->
-    <SpawnGroup>
-      <Id>
-        <TypeId>SpawnGroupDefinition</TypeId>
-        <SubtypeId>GVA-Green-PI-AmbushInstallation</SubtypeId>
-      </Id>
-      <Description>
-        [Modular Encounters SpawnGroup]
-
-        [ManipulationProfiles:GVA-Common-Manipulation-Std]
-        [ManipulationProfiles:GVA-KAMO-Manipulation-Std]
-
-        [SpawnConditionsProfiles:Green-GreenAlienRegion-Fixed-Spawns]
-      </Description>
-      <IsPirate>true</IsPirate>
-      <Frequency>1.0</Frequency>
-      <Prefabs>
-        <Prefab SubtypeId="[NPC] HighTech Outpost">
-          <Position>
-            <X>0.0</X>
-            <Y>-20.0</Y>
-            <Z>0.0</Z>
-          </Position>
-          <Behaviour>KAMO-Behavior-PI</Behaviour>
-          <BeaconText>...</BeaconText>
-        </Prefab>
-      </Prefabs>
-    </SpawnGroup>
-    <!-- Crashed Warship -->
-    <SpawnGroup>
-      <Id>
-        <TypeId>SpawnGroupDefinition</TypeId>
-        <SubtypeId>GVA-Green-PI-CrashedWarship</SubtypeId>
-      </Id>
-      <Description>
-        [Modular Encounters SpawnGroup]
-
-        [ManipulationProfiles:GVA-Common-Manipulation-Std]
-        [ManipulationProfiles:GVA-KAMO-Manipulation-Std]
-        [ManipulationProfiles:GVA-Manipulation-Crashed]
-
-        [SpawnConditionsProfiles:Green-GreenAlienRegion-Fixed-Spawns]
-      </Description>
-      <IsPirate>true</IsPirate>
-      <Frequency>1.0</Frequency>
-      <Prefabs>
-        <Prefab SubtypeId="[NPC] KAMO Warship">
-          <Position>
-            <X>0.0</X>
-            <Y>10.0</Y>
-            <Z>0.0</Z>
-          </Position>
-          <Behaviour>KAMO-Behavior-PI</Behaviour>
-          <BeaconText>...</BeaconText>
-        </Prefab>
-      </Prefabs>
-    </SpawnGroup>
     <!-- Common Junk Spawn-->
     <SpawnGroup>
       <Id>
@@ -102,7 +45,7 @@
         [SpawnConditionsProfiles:Green-GreenAlienRegion-RandomFixed-Spawns]
       </Description>
       <IsPirate>true</IsPirate>
-      <Frequency>50.0</Frequency>
+      <Frequency>70.0</Frequency>
       <Prefabs>
         <Prefab SubtypeId="[NPC] RustedColonyShip">
           <Position>
@@ -111,7 +54,7 @@
             <Z>-50.0</Z>
           </Position>
           <Behaviour>KAMO-Behavior-PI</Behaviour>
-          <BeaconText>...</BeaconText>
+          <BeaconText>Weak Signal</BeaconText>
         </Prefab>
         <Prefab SubtypeId="[NPC] RustedExplorer">
           <Position>
@@ -120,7 +63,7 @@
             <Z>50.0</Z>
           </Position>
           <Behaviour>KAMO-Behavior-PI</Behaviour>
-          <BeaconText>...</BeaconText>
+          <BeaconText>Weak Signal</BeaconText>
         </Prefab>
         <Prefab SubtypeId="[NPC] RustedRover">
           <Position>
@@ -129,7 +72,7 @@
             <Z>0.0</Z>
           </Position>
           <Behaviour>KAMO-Behavior-PI</Behaviour>
-          <BeaconText>...</BeaconText>
+          <BeaconText>Weak Signal</BeaconText>
         </Prefab>
         <Prefab SubtypeId="[NPC] RustedShuttle">
           <Position>
@@ -138,7 +81,7 @@
             <Z>0.0</Z>
           </Position>
           <Behaviour>KAMO-Behavior-PI</Behaviour>
-          <BeaconText>...</BeaconText>
+          <BeaconText>Weak Signal</BeaconText>
         </Prefab>
       </Prefabs>
     </SpawnGroup>

@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SpawnGroups> 
+    <!--HighTech Outpost-->
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <SubtypeId>GVA-Green-PI-AmbushInstallation</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ManipulationProfiles:GVA-KAMO-Manipulation-Std]
+
+        [SpawnConditionsProfiles:Green-GreenAlienRegion-Fixed-Spawns]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>1.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="[NPC] HighTech Outpost">
+          <Position>
+            <X>0.0</X>
+            <Y>-20.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Behaviour>KAMO-Behavior-PI</Behaviour>
+          <BeaconText>Weak Signal</BeaconText>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+    <!-- Crashed Warship -->
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <SubtypeId>GVA-Green-PI-CrashedWarship</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ManipulationProfiles:GVA-KAMO-Manipulation-Std]
+        [ManipulationProfiles:GVA-Manipulation-Crashed]
+
+        [SpawnConditionsProfiles:Green-GreenAlienRegion-Fixed-Spawns]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>6.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="[NPC] KAMO Warship">
+          <Position>
+            <X>0.0</X>
+            <Y>10.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Behaviour>KAMO-Behavior-PI</Behaviour>
+          <BeaconText>Weak Signal</BeaconText>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+  </SpawnGroups>
+</Definitions>

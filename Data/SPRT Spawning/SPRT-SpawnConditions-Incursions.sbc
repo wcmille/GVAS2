@@ -12,7 +12,7 @@
         [ZoneConditions:GVA-ZoneConditionProfile-BlueZone]
         [BossEncounterSpace:true]
         [BossEncounterAtmo:true]
-        [BossCustomGPSLabel:Incursion]
+        [BossCustomGPSLabel:Incursion Reported]
         [CustomPathStartAltitude:3000]
         [CustomPathEndAltitude:3000]
 
