@@ -4216,8 +4216,8 @@
               <ShowInInventory>true</ShowInInventory>
               <NumberInGrid>1</NumberInGrid>
               <Enabled>true</Enabled>
-              <BroadcastRadius>8000</BroadcastRadius>
-              <HudText>Distress Signal</HudText>
+              <BroadcastRadius>4000</BroadcastRadius>
+              <HudText>Weak Signal</HudText>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Conveyor">
               <SubtypeName>LargeBlockConveyor</SubtypeName>
