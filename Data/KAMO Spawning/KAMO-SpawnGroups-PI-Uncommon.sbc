@@ -12,6 +12,7 @@
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ManipulationProfiles:GVA-KAMO-Manipulation-Uncommon]
         [ManipulationProfiles:GVA-Manipulation-LargeLoot]
+        [ManipulationProfiles:GVA-Common-Manipulation-DisposableNPC]
 
         [SpawnConditionsProfiles:Green-GreenAlienRegion-RandomFixed-Spawns]
       </Description>

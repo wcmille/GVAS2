@@ -56,10 +56,25 @@
         [MES Prefab Data]
 
         [Prefabs:Scout]
+        [ManipulationProfiles:GVA-Common-Manipulation-DisposableNPC]
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ManipulationProfiles:GVA-Manipulation-SmallLoot]
         [ManipulationProfiles:GVA-Manipulation-Black-FighterName]
         [ManipulationProfiles:GVA-SPRT-Manipulation-NAGA]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-PrefabData-Black-Drone</SubtypeId>
+      </Id>
+      <Description>
+        [MES Prefab Data]
+
+        [Prefabs:Cartel Scout Drone]
+        [ManipulationProfiles:GVA-Common-Manipulation-DisposableNPC]
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ManipulationProfiles:GVA-Manipulation-Black-ScoutName]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">

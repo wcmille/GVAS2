@@ -38,6 +38,7 @@
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ManipulationProfiles:GVA-KAMO-Manipulation-Common]
         [ManipulationProfiles:GVA-Manipulation-Crashed]
+        [ManipulationProfiles:GVA-Common-Manipulation-DisposableNPC]
 
         [SpawnConditionsProfiles:Green-GreenAlienRegion-RandomFixed-Spawns]
       </Description>

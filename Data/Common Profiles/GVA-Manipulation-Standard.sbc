@@ -126,6 +126,20 @@
         [NewBlock:MyObjectBuilder_Reactor/ProprietaryLargeBlockLargeGenerator]
       </Description>
     </EntityComponent>
+    
+    <!-- Disposable Block Replacement -->
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Common-Manipulation-DisposableNPC</SubtypeId>
+      </Id>
+      <Description>
+        [MES Manipulation]
+
+        [UseBlockReplacerProfile:true]
+        [BlockReplacerProfileNames:MES-DisposableNpcBeacons]
+      </Description>
+    </EntityComponent>
 
     <!-- Small Loot -->
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">

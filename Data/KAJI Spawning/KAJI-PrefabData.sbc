@@ -28,5 +28,18 @@
         [ManipulationProfiles:GVA-Manipulation-OneRemote]
       </Description>
     </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>KAJI-PrefabData-Scout</SubtypeId>
+      </Id>
+      <Description>
+        [MES Prefab Data]
+
+        [Prefabs:Kunai Interceptor]
+        [ManipulationProfiles:GVA-Common-Manipulation-DisposableNPC]
+      </Description>
+    </EntityComponent>
   </EntityComponents>
 </Definitions>

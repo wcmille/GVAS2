@@ -28,5 +28,19 @@
         [ManipulationProfiles:GVA-Manipulation-OneRemote]
       </Description>
     </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>JAGH-PrefabData-Scout</SubtypeId>
+      </Id>
+      <Description>
+        [MES Prefab Data]
+
+        [Prefabs:Huginn Interceptor]
+        [Prefabs:Huginn Interceptor - Atmospheric]
+        [ManipulationProfiles:GVA-Common-Manipulation-DisposableNPC]
+      </Description>
+    </EntityComponent>
   </EntityComponents>
 </Definitions>
