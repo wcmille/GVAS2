@@ -13954,7 +13954,7 @@ Items=false
               <ShowInToolbarConfig>true</ShowInToolbarConfig>
               <ShowInInventory>true</ShowInInventory>
               <NumberInGrid>2</NumberInGrid>
-              <Enabled>true</Enabled>
+              <Enabled>false</Enabled>
               <TextPanelsNew>
                 <MySerializedTextPanelData>
                   <ChangeInterval>0</ChangeInterval>

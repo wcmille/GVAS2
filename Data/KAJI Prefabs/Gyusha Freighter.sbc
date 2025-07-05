@@ -7096,7 +7096,7 @@
               <ShowInToolbarConfig>true</ShowInToolbarConfig>
               <ShowInInventory>true</ShowInInventory>
               <NumberInGrid>1</NumberInGrid>
-              <Enabled>true</Enabled>
+              <Enabled>false</Enabled>
               <TextPanelsNew>
                 <MySerializedTextPanelData>
                   <ChangeInterval>0</ChangeInterval>

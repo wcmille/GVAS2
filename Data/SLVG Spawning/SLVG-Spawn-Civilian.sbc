@@ -27,7 +27,7 @@
           </Position>
           <Speed>50</Speed>
           <Behaviour>GVA-SLVG-Behavior-Civilian</Behaviour>
-          <BeaconText>Highliner Superfreighter</BeaconText>
+          <BeaconText>AK</BeaconText>
         </Prefab>
       </Prefabs>
     </SpawnGroup>

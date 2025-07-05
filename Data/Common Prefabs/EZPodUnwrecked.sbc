@@ -1948,7 +1948,7 @@ than dying!</Text>
               <ShowInTerminal>true</ShowInTerminal>
               <ShowInToolbarConfig>true</ShowInToolbarConfig>
               <ShowInInventory>true</ShowInInventory>
-              <Enabled>true</Enabled>
+              <Enabled>false</Enabled>
               <ProjectionOffset>
                 <X>0</X>
                 <Y>0</Y>

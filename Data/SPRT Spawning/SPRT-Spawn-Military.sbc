@@ -231,7 +231,7 @@
             <Z>0.0</Z>
           </Position>
           <Speed>50</Speed>
-          <BeaconText>Drone</BeaconText>
+          <BeaconText>Q</BeaconText>
           <Behaviour>SPRT-Behavior-SpaceDestroyer</Behaviour>
         </Prefab>
       </Prefabs>
