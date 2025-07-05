@@ -83,5 +83,22 @@
     </Faction>
     <!--Copy To This Line And Paste Directly Below-->
     <!--Do Not Edit Below Here-->
+<!--  <Faction Tag="UNKN" Founder="Unknown Founder">
+    <Id>
+      <TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+      <SubtypeId>UnknownFactionSubID</SubtypeId>
+    </Id>
+    <DisplayName>Unknown</DisplayName>
+    <Description>Space is vast. As humans push into the void of space, sometimes the void pushes back. Danger, mystery, or reward may lie ahead.</Description>
+    <IsDefault>true</IsDefault>
+    <StaticReputation>true</StaticReputation>
+    <StartingReputation>0</StartingReputation>
+    <AcceptHumans>false</AcceptHumans>
+    <AutoAcceptMember>false</AutoAcceptMember>
+    <StartingBalance>100000000000</StartingBalance>
+    <Type>None</Type>
+    <DiscoveredByDefault>true</DiscoveredByDefault>
+    <FactionIcon>Textures\FactionLogo\Unknown.dds</FactionIcon>
+  </Faction> -->
   </Factions>
 </Definitions>

@@ -10,7 +10,8 @@
         [Modular Encounters SpawnGroup]
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
-        [ManipulationProfiles:GVA-KAMO-Manipulation-Std]
+        [ManipulationProfiles:GVA-KAMO-Manipulation-Uncommon]
+        [ManipulationProfiles:GVA-Manipulation-LargeLoot]
 
         [SpawnConditionsProfiles:Green-GreenAlienRegion-RandomFixed-Spawns]
       </Description>

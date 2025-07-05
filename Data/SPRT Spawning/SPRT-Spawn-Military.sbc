@@ -1,6 +1,74 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<SpawnGroups>
+    <!-- Carrier Group -->
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <!--Do Not Edit-->
+        <SubtypeId>GVA-Black-CV</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ReplenishSystems:true]
+
+        [SpawnConditionsProfiles:GVA-SpawnCondition-Black-SpaceBoss]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>1.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="Carrier Oracle">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>50</Speed>
+          <Behaviour>SPRT-Behavior-SpaceDestroyer</Behaviour>
+        </Prefab>
+        <Prefab SubtypeId="Destroyer Tidehunter">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>800.0</Z>
+          </Position>
+          <Speed>50</Speed>
+          <Behaviour>SPRT-Behavior-SpaceDestroyer</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+
+    <!-- Cruiser Group  -->
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <!-- CL -->
+        <SubtypeId>GVA-Black-CL</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ReplenishSystems:true]
+
+        [SpawnConditionsProfiles:GVA-SpawnCondition-Black-SpaceBoss]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>1.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="Cruiser Nightcrawler">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>50</Speed>
+          <Behaviour>SPRT-Behavior-SpaceDestroyer</Behaviour>
+          <BeaconText>CL</BeaconText>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+
     <!-- DDO -->
     <SpawnGroup>
       <Id>
@@ -15,7 +83,7 @@
         [ReplenishSystems:true]
 
         [SpawnConditionsProfiles:SPRT-SpawnCondition-BlackZone]
-        [FactionOwner:SPRT]
+        [SpawnConditionsProfiles:GVA-SpawnCondition-Black-SpaceBoss]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>1.0</Frequency>
@@ -48,7 +116,6 @@
         [SpawnConditionsProfiles:SPRT-SpawnCondition-BlueZoneSpace]
         [SpawnConditionsProfiles:SPRT-SpawnCondition-RedZoneSpace]
         [SpawnConditionsProfiles:SPRT-SpawnCondition-BlackZone]
-        [FactionOwner:SPRT]
       </Description>
 			<IsPirate>true</IsPirate>
 			<Frequency>1.0</Frequency>
@@ -82,8 +149,6 @@
         [SpawnConditionsProfiles:GVA-Black-RedIncursions0]
         [SpawnConditionsProfiles:GVA-Black-BlueIncursions0]
         [SpawnConditionsProfiles:SPRT-SpawnCondition-BlackZone]
-
-        [FactionOwner:SPRT]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>5.0</Frequency>
@@ -122,7 +187,6 @@
         [SpawnConditionsProfiles:Black-Planet-All-Weak]
         [SpawnConditionsProfiles:Black-Planet-All-Normal]
         [SpawnConditionsProfiles:Black-Planet-All-Strong]
-        [FactionOwner:SPRT]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>20.0</Frequency>
@@ -139,7 +203,8 @@
         </Prefab>
       </Prefabs>
     </SpawnGroup>
-    
+
+    <!-- Scout Drone -->
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
@@ -155,7 +220,6 @@
         [SpawnConditionsProfiles:Black-Planet-All-Weak]
         [SpawnConditionsProfiles:Black-Planet-All-Normal]
         [SpawnConditionsProfiles:Black-Planet-All-Strong]
-        [FactionOwner:SPRT]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>95.0</Frequency>

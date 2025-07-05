@@ -4,21 +4,20 @@
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
-        <SubtypeId>GVA-Wreck-Common</SubtypeId>
+        <SubtypeId>GVA-Wreck-Uncommon</SubtypeId>
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]
         [ManipulationProfiles:GVA-Manipulation-MinerDerelict]
         [ManipulationProfiles:GVA-Manipulation-RepaintWartorn]
-        [ManipulationProfiles:GVA-Manipulation-SmallLoot]
+        [ManipulationProfiles:GVA-Manipulation-LargeLoot]
 
         [SpawnConditionsProfiles:SPRT-SpawnCondition-BlackZoneWreck]
-        [SpawnConditionsProfiles:GVA-SpawnCondition-Derelict-SpaceBoss]
       </Description>
       <IsPirate>true</IsPirate>
-      <Frequency>70.0</Frequency>
+      <Frequency>21.0</Frequency>
       <Prefabs>
-        <Prefab SubtypeId="EZPodUnwrecked">
+        <Prefab SubtypeId="Gyusha Freighter">
           <Position>
             <X>0.0</X>
             <Y>0.0</Y>
@@ -27,31 +26,13 @@
           <Speed>0</Speed>
           <BeaconText>Distress</BeaconText>
         </Prefab>
-        <Prefab SubtypeId="Sparrowhawk Corvette">
+        <Prefab SubtypeId="Olvaldi Freighter">
           <Position>
             <X>0.0</X>
             <Y>0.0</Y>
             <Z>0.0</Z>
           </Position>
           <Speed>0</Speed>
-          <BeaconText>Distress</BeaconText>
-        </Prefab>
-        <Prefab SubtypeId="Rocketeer MKI Pirate Attacker">
-          <Position>
-            <X>0.0</X>
-            <Y>0.0</Y>
-            <Z>0.0</Z>
-          </Position>
-          <Speed>0</Speed>
-          <BeaconText>Distress</BeaconText>
-        </Prefab>
-        <Prefab SubtypeId="LifePod2">
-          <Position>
-            <X>0.0</X>
-            <Y>0.0</Y>
-            <Z>0.0</Z>
-          </Position>
-          <Speed>2</Speed>
           <BeaconText>Distress</BeaconText>
         </Prefab>
       </Prefabs>

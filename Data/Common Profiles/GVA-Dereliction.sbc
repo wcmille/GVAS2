@@ -9,8 +9,6 @@
       <Description>
         [MES Manipulation]
 
-        [FactionOwner:Nobody]
-
         [UseRandomNameGenerator:true]
         [RandomGridNamePattern:[NPC] Wreck]
 

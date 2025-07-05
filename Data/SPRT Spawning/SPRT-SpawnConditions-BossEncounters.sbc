@@ -1,118 +1,38 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	<SpawnGroups>
-    
-    <!-- DD Encounter -->
-		<SpawnGroup>
-			<Id>
-				<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
-				<SubtypeId>GVA-Black-RandomSpaceBoss</SubtypeId> 
-			</Id>
-			<Description>
-        [Modular Encounters SpawnGroup]
-
-        [BossEncounterSpace:true]
-        [BossCustomGPSLabel:Pirate Activity]
-        [IgnoreCleanupRules:false]
-        [ManipulationProfiles:GVA-SPRT-Manipulation-NAGA]
-        [ReplenishSystems:true]
-
-        [FactionOwner:SPRT]
-
-        [ZoneConditions:GVA-ZoneConditionProfile-PirateZone]
-      </Description>
-			<IsPirate>true</IsPirate>
-			<Frequency>5.0</Frequency>
-			<Prefabs>
-				<Prefab SubtypeId="Destroyer Tidehunter">
-					<Position>
-						<X>0.0</X>
-						<Y>0.0</Y>
-						<Z>0.0</Z>
-					</Position>
-					<Speed>50</Speed>
-					<Behaviour>SPRT-Behavior-SpaceDestroyer</Behaviour>
-				</Prefab>
-			</Prefabs>
-		</SpawnGroup>
-    
-    <!-- CR Encounter -->    
-    <SpawnGroup>
+  <EntityComponents>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
-        <TypeId>SpawnGroupDefinition</TypeId>
-        <!--Do Not Edit-->
-        <SubtypeId>GVA-Black-RandomSpaceBoss1</SubtypeId>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-SpawnCondition-Black-SpaceBoss</SubtypeId>
       </Id>
       <Description>
-        [Modular Encounters SpawnGroup]
+        [MES Spawn Conditions]
 
         [BossEncounterSpace:true]
-        [BossCustomGPSLabel:Heavy Pirate Activity]
+        [BossCustomGPSLabel:Pirate Report]
         [IgnoreCleanupRules:false]
-        [ManipulationProfiles:GVA-SPRT-Manipulation-NAGA]
         [ReplenishSystems:true]
 
         [FactionOwner:SPRT]
 
         [ZoneConditions:GVA-ZoneConditionProfile-PirateZone]
       </Description>
-      <IsPirate>true</IsPirate>
-      <Frequency>2.0</Frequency>
-      <Prefabs>
-        <Prefab SubtypeId="Cruiser Nightcrawler">
-          <Position>
-            <X>0.0</X>
-            <Y>0.0</Y>
-            <Z>0.0</Z>
-          </Position>
-          <Speed>50</Speed>
-          <Behaviour>SPRT-Behavior-SpaceDestroyer</Behaviour>
-        </Prefab>
-      </Prefabs>
-    </SpawnGroup>
-    
-    <!-- Carrier Group -->
-    <SpawnGroup>
+    </EntityComponent>
+    <EntityComponent>
       <Id>
-        <TypeId>SpawnGroupDefinition</TypeId>
-        <!--Do Not Edit-->
-        <SubtypeId>GVA-Black-RandomSpaceBoss2</SubtypeId>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-SpawnCondition-Derelict-SpaceBoss</SubtypeId>
       </Id>
       <Description>
-        [Modular Encounters SpawnGroup]
+        [MES Spawn Conditions]
 
         [BossEncounterSpace:true]
-        [BossCustomGPSLabel:Extreme Pirate Activity]
-        [IgnoreCleanupRules:false]
-        [ManipulationProfiles:GVA-SPRT-Manipulation-NAGA]
-        [ReplenishSystems:true]
+        [BossCustomGPSLabel:Possible Salvage]
+        [BossCustomGPSColor:{X:200 Y:200 Z:200}]
 
-        [FactionOwner:SPRT]
-
-        [ZoneConditions:GVA-ZoneConditionProfile-PirateZone]
+        [FactionOwner:UNKN]
       </Description>
-      <IsPirate>true</IsPirate>
-      <Frequency>1.0</Frequency>
-      <Prefabs>
-        <Prefab SubtypeId="Carrier Oracle">
-          <Position>
-            <X>0.0</X>
-            <Y>0.0</Y>
-            <Z>0.0</Z>
-          </Position>
-          <Speed>50</Speed>
-          <Behaviour>SPRT-Behavior-SpaceDestroyer</Behaviour>
-        </Prefab>
-        <Prefab SubtypeId="Destroyer Tidehunter">
-          <Position>
-            <X>0.0</X>
-            <Y>0.0</Y>
-            <Z>800.0</Z>
-          </Position>
-          <Speed>50</Speed>
-          <Behaviour>SPRT-Behavior-SpaceDestroyer</Behaviour>
-        </Prefab>
-      </Prefabs>
-    </SpawnGroup>
-  </SpawnGroups>
+    </EntityComponent>
+  </EntityComponents>
 </Definitions>

@@ -110,9 +110,10 @@
       </Id>
       <Description>
         [MES Spawn Conditions]
-        [FactionOwner:Nobody]
+        [FactionOwner:UNKN]
         [ZoneConditions:GVA-ZoneConditionProfile-PirateZone]
         [SpaceRandomEncounter:true]
+        [PrefabSpawningMode:Random]
       </Description>
     </EntityComponent>
   </EntityComponents>

@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <EntityComponents>
+    <!-- Standard Manipulation -->
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
@@ -17,6 +18,12 @@
         [GridsAreDestructable:true]
         [GridsAreEditable:true]
 
+        [UseLootProfiles:true]
+        [LootProfiles:MES-Loot-Corpses]
+        [LootProfiles:MES-Loot-Freight]
+        [LootProfiles:MES-Loot-Lockers]
+        [LootProfiles:MES-Loot-WeaponRacks]
+
         [ShiftBlockColorsHue:false]
         [RandomHueShift:false]
 
@@ -31,6 +38,8 @@
         [NpcHydroThrustPowerMultiply:0.0001]
       </Description>
     </EntityComponent>
+    
+    <!-- Super Buffed Manipulation -->
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
@@ -62,6 +71,7 @@
         [NpcHydroThrustPowerMultiply:0.0001]
       </Description>
     </EntityComponent>
+    
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
@@ -97,6 +107,8 @@
         [RandomHueShift:false]
       </Description>
     </EntityComponent>
+    
+    <!-- NPC Reactors -->
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
@@ -114,6 +126,22 @@
         [NewBlock:MyObjectBuilder_Reactor/ProprietaryLargeBlockLargeGenerator]
       </Description>
     </EntityComponent>
+
+    <!-- Small Loot -->
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Manipulation-SmallLoot</SubtypeId>
+      </Id>
+      <Description>
+        [MES Manipulation]
+
+        [UseLootProfiles:true]
+        [LootProfiles:GVA-Loot-Small]
+      </Description>
+    </EntityComponent>
+
+    <!-- Medium Loot -->
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
@@ -126,6 +154,8 @@
         [LootProfiles:GVA-Loot-Medium]
       </Description>
     </EntityComponent>
+    
+    <!-- Large Loot -->
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
@@ -138,6 +168,8 @@
         [LootProfiles:GVA-Loot-Large]
       </Description>
     </EntityComponent>
+
+    <!-- Huge Loot -->
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>

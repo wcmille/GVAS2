@@ -11,7 +11,7 @@
         [Modular Encounters SpawnGroup]
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
-        [ManipulationProfiles:GVA-KAMO-Manipulation-Std]
+        [ManipulationProfiles:GVA-KAMO-Manipulation-Rare]
 
         [SpawnConditionsProfiles:Green-GreenAlienRegion-Fixed-Spawns]
       </Description>
@@ -39,7 +39,7 @@
         [Modular Encounters SpawnGroup]
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
-        [ManipulationProfiles:GVA-KAMO-Manipulation-Std]
+        [ManipulationProfiles:GVA-KAMO-Manipulation-Rare]
         [ManipulationProfiles:GVA-Manipulation-Crashed]
 
         [SpawnConditionsProfiles:Green-GreenAlienRegion-Fixed-Spawns]

@@ -10,9 +10,6 @@
       <Description>
         [Modular Encounters SpawnGroup]
 
-        [ManipulationProfiles:GVA-Common-Manipulation-Std]
-        [ManipulationProfiles:GVA-KAMO-Manipulation-Std]
-
         [SpawnConditionsProfiles:Green-GreenAlienRegion-Fixed-Spawns]
       </Description>
       <IsPirate>true</IsPirate>
@@ -33,13 +30,13 @@
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
-        <SubtypeId>GVA-Green-PI-CommonJunk</SubtypeId>
+        <SubtypeId>GVA-Green-PI-Common</SubtypeId>
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
-        [ManipulationProfiles:GVA-KAMO-Manipulation-Std]
+        [ManipulationProfiles:GVA-KAMO-Manipulation-Common]
         [ManipulationProfiles:GVA-Manipulation-Crashed]
 
         [SpawnConditionsProfiles:Green-GreenAlienRegion-RandomFixed-Spawns]
