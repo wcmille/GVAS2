@@ -1019,7 +1019,7 @@ Centrip. Max (fw) @ 100m/s: 2958m
               <ShowInToolbarConfig>true</ShowInToolbarConfig>
               <ShowInInventory>true</ShowInInventory>
               <NumberInGrid>2</NumberInGrid>
-              <Enabled>true</Enabled>
+              <Enabled>false</Enabled>
               <ProjectedGrids>
                 <MyObjectBuilder_CubeGrid>
                   <SubtypeName />
@@ -17228,7 +17228,7 @@ public class SensibleNamer
               <ConveyorLineConductivity>BACKWARD</ConveyorLineConductivity>
             </MyObjectBuilder_ConveyorLine>
           </ConveyorLines>
-          <DisplayName>Clydsedale</DisplayName>
+          <DisplayName>[NPC] Clydsedale</DisplayName>
           <DestructibleBlocks>true</DestructibleBlocks>
           <CreatePhysics>false</CreatePhysics>
           <EnableSmallToLargeConnections>false</EnableSmallToLargeConnections>

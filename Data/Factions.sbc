@@ -20,7 +20,9 @@
       <Type>None</Type>
       <!--None, Miner, Trader, Builder-->
       <DiscoveredByDefault>true</DiscoveredByDefault>
-      <FactionIcon>Textures\FactionLogo\Builders\BuilderIcon_15.dds</FactionIcon>
+      <BackgroundColor Hex="E3242B" />
+      <IconColor Hex="FFFFFF"/>
+      <FactionIcon>Textures\FactionLogo\\GVA\Kajiya.png</FactionIcon>
       <!--Game or Mod Path For Texture File-->
     </Faction>
     <Faction Tag="JAGH" Founder="Helmut Adenauer CEO">
@@ -40,7 +42,9 @@
       <Type>None</Type>
       <!--None, Miner, Trader, Builder-->
       <DiscoveredByDefault>true</DiscoveredByDefault>
-      <FactionIcon>Textures\FactionLogo\Others\OtherIcon_1.dds</FactionIcon>
+      <BackgroundColor Hex="0C34E9" />
+      <IconColor Hex="FFFFFF"/>
+      <FactionIcon>Textures\FactionLogo\\GVA\Jagdhund.png</FactionIcon>
       <!--Game or Mod Path For Texture File-->
     </Faction>
     <Faction Tag="SLVG" Founder="Lance Winters CEO">
@@ -60,7 +64,9 @@
       <Type>None</Type>
       <!--None, Miner, Trader, Builder-->
       <DiscoveredByDefault>true</DiscoveredByDefault>
-      <FactionIcon>Textures\FactionLogo\Others\OtherIcon_1.dds</FactionIcon>
+      <BackgroundColor R="255" G="215" B="0" A="255" />
+      <IconColor R="255" G="255" B="255" A="255" />
+      <FactionIcon>Textures\FactionLogo\\GVA\Silverbranch.png</FactionIcon>
       <!--Game or Mod Path For Texture File-->
     </Faction>
     <Faction Tag="KAMO" Founder="Dr. Umbrage">
@@ -77,8 +83,10 @@
       <StartingBalance>100000000000</StartingBalance>
       <Type>None</Type>
       <!--None, Miner, Trader, Builder-->
+      <BackgroundColor Hex="00A86B" />
+      <IconColor Hex="FFFFFF"/>
       <DiscoveredByDefault>false</DiscoveredByDefault>
-      <FactionIcon>Textures\FactionLogo\Others\OtherIcon_1.dds</FactionIcon>
+      <FactionIcon>Textures\FactionLogo\\GVA\Kaplan-Moore.png</FactionIcon>
       <!--Game or Mod Path For Texture File-->
     </Faction>
     <!--Copy To This Line And Paste Directly Below-->
