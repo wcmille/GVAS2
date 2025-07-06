@@ -76,11 +76,11 @@
         [Color:Azure]
 
         [ChatMessages: This is {AntennaName} requesting clearance for approach.]
-        [ChatAudio:ArcHudGPSNotification1]
+        [ChatAudio:GVA-RadioSigs-White]
         [BroadcastChatType:Chat]
 
         [ChatMessages:{AntennaName} approaching now. See you soon.]
-        [ChatAudio:ArcHudGPSNotification1]
+        [ChatAudio:GVA-RadioSigs-White]
         [BroadcastChatType:Chat]
       </Description>
     </EntityComponent>
