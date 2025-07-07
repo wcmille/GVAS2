@@ -43,6 +43,6 @@ namespace GVA.NPCControl
         public static readonly string PointCheck = "GVA.NPCControl.NPCPoints";
 
         public static readonly Vector3D WorldCenter = new Vector3D(-870575, 131504, 4105278);
-        public static readonly BoundingSphereD NpcSphere = new BoundingSphereD(WorldCenter, 3000000.0);
+        public static readonly BoundingSphereD NpcSphere = new BoundingSphereD(new Vector3D(0,0,0), 7000000.0);
     }
 }

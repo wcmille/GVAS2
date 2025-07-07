@@ -27,7 +27,7 @@ namespace GVA.NPCControl.LimitedProduction
             if (productionBlock != null)
             {
                 NeedsUpdate |= MyEntityUpdateEnum.BEFORE_NEXT_FRAME;
-                NeedsUpdate |= MyEntityUpdateEnum.EACH_10TH_FRAME;
+                NeedsUpdate |= MyEntityUpdateEnum.EACH_100TH_FRAME;
             }
         }
 
@@ -48,9 +48,9 @@ namespace GVA.NPCControl.LimitedProduction
             return SharedConstants.NpcSphere.Contains(productionBlock.GetPosition()) != ContainmentType.Contains;
         }
 
-        public override void UpdateBeforeSimulation10()
+        public override void UpdateBeforeSimulation100()
         {
-            base.UpdateBeforeSimulation10();
+            base.UpdateBeforeSimulation100();
 
             try
             {
@@ -73,7 +73,7 @@ namespace GVA.NPCControl.LimitedProduction
 
         private void WorkingStateChange(IMyCubeBlock block)
         {
-            if (!productionBlock.Enabled)
+            if (productionBlock.Enabled)
             {
                 if (Illegal())
                 {
