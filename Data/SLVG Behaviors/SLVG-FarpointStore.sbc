@@ -16,10 +16,10 @@
 
         [ItemsRequireInventory:false]
 
-        [RequiredOffers:Durinn Excavator]
+        [RequiredOffers:Goblin Dx]
+        [RequiredOffers:Goblin Ex]
         [RequiredOffers:Nidavellir Mobile Base]
         [RequiredOffers:Olvaldi Freighter]
-        [RequiredOffers:Rhino Jumptug]
         [RequiredOffers:Sparrowhawk Corvette]
       </Description>
     </EntityComponent>

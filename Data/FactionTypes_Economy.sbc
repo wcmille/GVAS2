@@ -42,10 +42,10 @@
         </OrdersList>
 
         <GridsForSale>
-            <PrefabName>Durinn Excavator</PrefabName>
+            <PrefabName>Goblin Dx</PrefabName>
+            <PrefabName>Goblin Ex</PrefabName>
             <PrefabName>Nidavellir Mobile Base</PrefabName>
             <PrefabName>Olvaldi Freighter</PrefabName>
-            <PrefabName>Rhino Jumptug</PrefabName>
             <PrefabName>Sparrowhawk Corvette</PrefabName>
         </GridsForSale>
         <MaxContractCount>15</MaxContractCount>
