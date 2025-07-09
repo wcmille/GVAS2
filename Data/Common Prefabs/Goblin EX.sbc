@@ -5,8 +5,8 @@
       <Id Type="MyObjectBuilder_PrefabDefinition" Subtype="Goblin Ex" />
       <DisplayName>Goblin Ex</DisplayName>
       <Description>The Goblin EX is a large grid with a rotating large grid drill head. It is jump capable and comes with a gravity generator.</Description>
-      <Icon>Textures\GUI\Prefabs\GoblinEx.dds</Icon>
-      <TooltipImage>Textures\GUI\Prefabs\GoblinEx.png</TooltipImage>
+      <Icon>Textures\GUI\Prefabs\Goblin.dds</Icon>
+      <TooltipImage>Textures\GUI\Prefabs\Goblin.png</TooltipImage>
       <EnvironmentType>All</EnvironmentType>
       <CubeGrids>
         <CubeGrid>

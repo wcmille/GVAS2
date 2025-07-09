@@ -5,8 +5,8 @@
       <Id Type="MyObjectBuilder_PrefabDefinition" Subtype="Goblin Dx" />
       <DisplayName>Goblin Dx</DisplayName>
       <Description>The Goblin DX is a large grid with a rotating large grid drill head. The DX is an entry-level model with no jump drive.</Description>
-      <Icon>Textures\GUI\Prefabs\GoblinDx.dds</Icon>
-      <TooltipImage>Textures\GUI\Prefabs\GoblinDx.png</TooltipImage>
+      <Icon>Textures\GUI\Prefabs\Goblin.dds</Icon>
+      <TooltipImage>Textures\GUI\Prefabs\Goblin.png</TooltipImage>
       <EnvironmentType>All</EnvironmentType>
       <CubeGrids>
         <CubeGrid>
