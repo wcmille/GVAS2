@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SpawnGroups>
+    <!--Null Building-->
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <SubtypeId>GVA-Green-CS-Null</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+
+        [SpawnConditionsProfiles:Green-GreenAlienRegion-Fixed-Spawns]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>7.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="[NPC] Debris">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Behaviour>KAMO-Behavior-PI</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+   
+    <!-- Common Junk Spawn-->
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <SubtypeId>GVA-Green-CS-Common</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+
+        [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ManipulationProfiles:GVA-KAMO-Manipulation-Common]
+        [ManipulationProfiles:GVA-Common-Manipulation-DisposableNPC]
+
+        [SpawnConditionsProfiles:Green-GreenAlienRegion-Random-Spawns]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>70.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="[NPC] Bastion Drone">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Behaviour>KAMO-Behavior-Drone</Behaviour>
+          <BeaconText>Q</BeaconText>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+  </SpawnGroups>
+</Definitions>

@@ -29,5 +29,18 @@
         [PrefabSpawningMode:Random]
       </Description>
     </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Green-GreenAlienRegion-Random-Spawns</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+        [FactionOwner:KAMO]
+        [ZoneConditions:GVA-ZoneConditionProfile-GreenZone]
+        [PrefabSpawningMode:Random]
+        [AtmosphericCargoShip:true]
+      </Description>
+    </EntityComponent>
   </EntityComponents>
 </Definitions>

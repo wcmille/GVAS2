@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+          <TypeId>Inventory</TypeId>
+          <SubtypeId>KAMO-Trigger-Drones</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Trigger]
+        [UseTrigger:true]
+        [StartsReady:true]
+        [Type:AcquiredTarget]
+        [MaxActions:2]
+        [MinCooldownMs:30000]
+        [MaxCooldownMs:40000]
+        [Actions:KAMO-Action-Acquired]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>KAMO-Action-Acquired</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Action]
+
+        [UseChatBroadcast:true]
+        [ChatData:KAMO-Chat-One]
+
+        [EnableBlocks:true]
+        [EnableBlockNames:Main Antenna]
+        [EnableBlockStates:On]
+      </Description>
+    </EntityComponent>
+        <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>KAMO-Chat-One</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Chat]
+
+        [UseChat:true]
+        [StartsReady:true]
+        [MaxChats:2]
+        [BroadcastRandomly:true]
+        [Author:{AntennaName}]
+        [IgnoreAntennaRequirement:true]
+        [IgnoredAntennaRangeOverride:6000]
+        [Color:Red]
+
+        [ChatMessages:...]
+        [ChatAudio:GVA-RadioSigs-Green]
+        [BroadcastChatType:Chat]
+      </Description>
+    </EntityComponent>
+  </EntityComponents>
+</Definitions>

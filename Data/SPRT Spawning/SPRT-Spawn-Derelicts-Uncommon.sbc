@@ -38,5 +38,33 @@
         </Prefab>
       </Prefabs>
     </SpawnGroup>
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <SubtypeId>GVA-Wreck-Rare</SubtypeId>
+      </Id>
+      <Description>
+        [Modular Encounters SpawnGroup]
+        [ManipulationProfiles:GVA-Manipulation-MinerDerelict]
+        [ManipulationProfiles:GVA-Manipulation-RepaintWartorn]
+        [ManipulationProfiles:GVA-Manipulation-LargeLoot]
+        [ManipulationProfiles:GVA-Common-Manipulation-DisposableNPC]
+
+        [SpawnConditionsProfiles:SPRT-SpawnCondition-BlackZoneWreck]
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>7.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="Rhino Jumptug">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>0</Speed>
+          <BeaconText>Distress</BeaconText>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
   </SpawnGroups>
 </Definitions>

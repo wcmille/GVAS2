@@ -15,5 +15,31 @@
         [Triggers:GVA-Trigger-StandardCompromised]
       </Description>
     </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>KAMO-Behavior-Drone</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Behavior]
+        [BehaviorName:Hunter]
+
+        [AutopilotData:GVA-Autopilot-Common-Cruise]
+        [SecondaryAutopilotData:GVA-Autopilot-Common-CapitalAttack]
+
+        [TargetData:Common-Target-Main-A]
+        [OverrideTargetData:Common-Target-Main-Combat]
+
+        [EngageOnTargetLineOfSight:true]
+        [EngageOnWeaponActivation:true]
+
+        [WeaponSystem:GVA-Common-Weapons]
+
+        [Triggers:GVA-Trigger-StandardCompromised]
+        [Triggers:GVA-Trigger-Bingo]
+        [Triggers:KAMO-Trigger-Drones]
+      </Description>
+    </EntityComponent>
   </EntityComponents>
 </Definitions>
