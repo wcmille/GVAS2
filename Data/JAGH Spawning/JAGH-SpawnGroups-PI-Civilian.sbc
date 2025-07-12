@@ -180,7 +180,7 @@
             <Z>0.0</Z>
           </Position>
           <BeaconText>Spaceport</BeaconText>
-          <Behaviour>JAGH-Behavior-PassiveCivilian</Behaviour>
+          <Behaviour>GVA-Behavior-PassiveCivilian-R-Minor</Behaviour>
         </Prefab>
       </Prefabs>
     </SpawnGroup>

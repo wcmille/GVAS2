@@ -72,6 +72,7 @@
         [Color:Red]
 
         [ChatMessages:Enemy located. Move in.]
+        [ChatAudio:GVA-RadioSigs-Red]
         [BroadcastChatType:Chat]
       </Description>
     </EntityComponent>

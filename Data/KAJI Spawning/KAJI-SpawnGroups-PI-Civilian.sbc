@@ -180,41 +180,14 @@
       <IsPirate>true</IsPirate>
       <Frequency>20.0</Frequency>
       <Prefabs>
-        <Prefab SubtypeId="[NPC] Greenhouse">
-          <Position>
-            <X>75.0</X>
-            <Y>10.0</Y>
-            <Z>75.0</Z>
-          </Position>
-          <BeaconText>Greenhouse</BeaconText>
-          <Behaviour>KAJI-Behavior-PassiveCivilian</Behaviour>
-        </Prefab>
-        <Prefab SubtypeId="Economy_Outpost_7">
+        <Prefab SubtypeId="[NPC] Trade Township">
           <Position>
             <X>0.0</X>
-            <Y>5.0</Y>
+            <Y>-21.0</Y>
             <Z>0.0</Z>
           </Position>
-          <BeaconText>Outpost</BeaconText>
-          <Behaviour>GVA-Behavior-PassiveCivilian-RC1</Behaviour>
-        </Prefab>
-        <Prefab SubtypeId="[NPC] Snow SAM Battery">
-          <Position>
-            <X>-150.0</X>
-            <Y>5.0</Y>
-            <Z>0.0</Z>
-          </Position>
-          <BeaconText>SAM</BeaconText>
-          <Behaviour>KAJI-Behavior-PassiveCivilian</Behaviour>
-        </Prefab>
-        <Prefab SubtypeId="[NPC] Cafe">
-          <Position>
-            <X>-5</X>
-            <Y>12.5</Y>
-            <Z>45.0</Z>
-          </Position>
-          <BeaconText>Cafe</BeaconText>
-          <Behaviour>KAJI-Behavior-PassiveCivilian</Behaviour>
+          <BeaconText>Township</BeaconText>
+          <Behaviour>GVA-Behavior-PassiveCivilian-R-Minor</Behaviour>
         </Prefab>
       </Prefabs>
     </SpawnGroup>
@@ -269,10 +242,10 @@
       <IsPirate>true</IsPirate>
       <Frequency>122.0</Frequency>
       <Prefabs>
-        <Prefab SubtypeId="[NPC] Industry Tower">
+        <Prefab SubtypeId="Tower City">
           <Position>
             <X>0.0</X>
-            <Y>22.5</Y>
+            <Y>52</Y>
             <Z>0.0</Z>
           </Position>
           <BeaconText>City</BeaconText>

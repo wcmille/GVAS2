@@ -72,12 +72,15 @@
         [Color:Red]
 
         [ChatMessages:Enemy hostiles. Request reinforcements.]
+        [ChatAudio:GVA-RadioSigs-Blue]
         [BroadcastChatType:Chat]
 
         [ChatMessages:Tangos in our AO. Sending their location.]
+        [ChatAudio:GVA-RadioSigs-Blue]
         [BroadcastChatType:Chat]
 
         [ChatMessages:Confirmed enemies. Need assistance.]
+        [ChatAudio:GVA-RadioSigs-Blue]
         [BroadcastChatType:Chat]
       </Description>
     </EntityComponent>
