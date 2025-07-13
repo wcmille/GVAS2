@@ -53,10 +53,11 @@
 
         [MaxActions:1]
         [Actions:GVA-Action-InitMinorTrade]
+        [Actions:GVA-Action-InitVendingMachineTrade]
       </Description>
     </EntityComponent>
 
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+    <!--<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
         <SubtypeId>GVA-Trigger-RefreshMinorTrade</SubtypeId>
@@ -73,7 +74,7 @@
         [Actions:GVA-Action-InitMinorTrade]
         [Actions:GVA-Action-InitVendingMachineTrade]
       </Description>
-    </EntityComponent>
+    </EntityComponent>-->
 
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
@@ -83,11 +84,9 @@
       <Description>
         [MES AI Action]
 
-        [ApplyStoreProfiles:true]
-        [ClearStoreContentsFirst:true]
-
-        [StoreBlocks:Store Block]
-        [StoreProfiles:GVA-StoreProfile-BasicStation]
+        [AddCustomDataToBlocks:true]
+        [CustomDataBlockNames:Store Block]
+        [CustomDataFiles:MinorTradeStore.xml]
       </Description>
     </EntityComponent>
 
@@ -103,8 +102,8 @@
         [UseTrigger:true]
         [Type:Timer]
 
-        [MinCooldownMs:1]
-        [MaxCooldownMs:2]
+        [MinCooldownMs:10]
+        [MaxCooldownMs:20]
         [StartsReady:true]
 
         [MaxActions:1]

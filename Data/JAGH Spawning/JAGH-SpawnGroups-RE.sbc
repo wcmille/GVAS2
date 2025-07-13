@@ -73,9 +73,6 @@
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ManipulationProfiles:GVA-Manipulation-MajorTrade]
 
-        [InitializeStoreBlocks:true]
-        [ContainerTypesForStoreOrders:GVA-ContainerTypes-Purchase1]
-
         [IgnoreCleanupRules:true]
 
         [SpawnConditionsProfiles:Blue-BlueAlienRegion-RE-Spawns-Civ20]

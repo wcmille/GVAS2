@@ -65,5 +65,31 @@
         [ReplaceAntennaNameWithRandomizedName:Main Antenna]
       </Description>
     </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Manipulation-Blue-TownName</SubtypeId>
+      </Id>
+      <Description>
+        [MES Manipulation]
+        [UseRandomNameGenerator:true]
+        [RandomGridNamePattern:ExplorerNoun RandomNumberRandomNumber]
+        [RandomGridNamePrefix:[NPC] ]
+        [ReplaceAntennaNameWithRandomizedName:Main Antenna]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Manipulation-Blue-CityName</SubtypeId>
+      </Id>
+      <Description>
+        [MES Manipulation]
+        [UseRandomNameGenerator:true]
+        [RandomGridNamePattern:SurnamesNoun City]
+        [RandomGridNamePrefix:[NPC] ]
+        [ReplaceAntennaNameWithRandomizedName:Main Antenna]
+      </Description>
+    </EntityComponent>
   </EntityComponents>
 </Definitions>

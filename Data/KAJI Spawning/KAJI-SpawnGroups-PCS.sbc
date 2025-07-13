@@ -252,6 +252,7 @@
           </Position>
           <Speed>50</Speed>
           <Behaviour>GVA-Behavior-StandardCivilian</Behaviour>
+          <BeaconText>AKL</BeaconText>
         </Prefab>
       </Prefabs>
     </SpawnGroup>
@@ -284,6 +285,7 @@
           </Position>
           <Speed>50</Speed>
           <Behaviour>GVA-Behavior-StandardCivilian</Behaviour>
+          <BeaconText>AKL</BeaconText>
         </Prefab>
       </Prefabs>
     </SpawnGroup>

@@ -10686,7 +10686,7 @@
               <ShowInInventory>true</ShowInInventory>
               <NumberInGrid>1</NumberInGrid>
               <Enabled>true</Enabled>
-              <AnyoneCanUse>false</AnyoneCanUse>
+              <AnyoneCanUse>true</AnyoneCanUse>
               <PlayerItems>
                 <MyObjectBuilder_StoreItem>
                   <Id>1136189434942549542</Id>
@@ -12147,8 +12147,7 @@
               <ShowInInventory>true</ShowInInventory>
               <NumberInGrid>1</NumberInGrid>
               <Enabled>true</Enabled>
-              <BroadcastRadius>500</BroadcastRadius>
-              <HudText>Spaceport (4584)</HudText>
+              <BroadcastRadius>6000</BroadcastRadius>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>LargeBlockArmorHalfSlopeInverted</SubtypeName>
@@ -15137,7 +15136,7 @@
                   </ComponentData>
                 </Components>
               </ComponentContainer>
-              <CustomName>Store</CustomName>
+              <CustomName>Store Block</CustomName>
               <ShowOnHUD>false</ShowOnHUD>
               <ShowInTerminal>false</ShowInTerminal>
               <ShowInToolbarConfig>false</ShowInToolbarConfig>

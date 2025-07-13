@@ -2,7 +2,7 @@
 <Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Prefabs>
     <Prefab xsi:type="MyObjectBuilder_PrefabDefinition">
-      <Id Type="MyObjectBuilder_PrefabDefinition" Subtype="Tower City" />
+      <Id Type="MyObjectBuilder_PrefabDefinition" Subtype="[NPC] Tower City" />
       <CubeGrids>
         <CubeGrid>
           <SubtypeName />
@@ -5313,11 +5313,24 @@
                       </TextPanelsContents>
                     </Component>
                   </ComponentData>
+                  <ComponentData>
+                    <TypeId>MyModStorageComponentBase</TypeId>
+                    <Component xsi:type="MyObjectBuilder_ModStorageComponent">
+                      <Storage>
+                        <dictionary>
+                          <item>
+                            <Key>74de02b3-27f9-4960-b1c4-27351f2b06d1</Key>
+                            <Value>[NPC Trade Station] Major Trade 7e6bd5e2-7942-4700-9b56-32e8288a1684</Value>
+                          </item>
+                        </dictionary>
+                      </Storage>
+                    </Component>
+                  </ComponentData>
                 </Components>
               </ComponentContainer>
               <CustomName>Store Block</CustomName>
               <ShowOnHUD>false</ShowOnHUD>
-              <ShowInTerminal>false</ShowInTerminal>
+              <ShowInTerminal>true</ShowInTerminal>
               <ShowInToolbarConfig>false</ShowInToolbarConfig>
               <ShowInInventory>false</ShowInInventory>
               <NumberInGrid>1</NumberInGrid>
@@ -27995,6 +28008,19 @@
                           </Sprites>
                         </MySerializedTextPanelData>
                       </TextPanelsContents>
+                    </Component>
+                  </ComponentData>
+                  <ComponentData>
+                    <TypeId>MyModStorageComponentBase</TypeId>
+                    <Component xsi:type="MyObjectBuilder_ModStorageComponent">
+                      <Storage>
+                        <dictionary>
+                          <item>
+                            <Key>74de02b3-27f9-4960-b1c4-27351f2b06d1</Key>
+                            <Value>[NPC Trade Station] Major Trade 7e6bd5e2-7942-4700-9b56-32e8288a1684</Value>
+                          </item>
+                        </dictionary>
+                      </Storage>
                     </Component>
                   </ComponentData>
                 </Components>

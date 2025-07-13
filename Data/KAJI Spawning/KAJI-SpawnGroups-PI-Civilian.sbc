@@ -138,9 +138,6 @@
         [ManipulationProfiles:GVA-Common-Manipulation-MinorShipyardSetup]
         [ManipulationProfiles:GVA-Manipulation-Shipyards]
 
-        [InitializeStoreBlocks:true]
-        [ContainerTypesForStoreOrders:GVA-ContainerTypes-Purchase1]
-
         [SpawnConditionsProfiles:Red-RedAlienRegion-PI-Spawns-Civ10]
       </Description>
       <IsPirate>true</IsPirate>
@@ -171,9 +168,7 @@
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ManipulationProfiles:GVA-Manipulation-MinorTrade]
-
-        [InitializeStoreBlocks:true]
-        [ContainerTypesForStoreOrders:GVA-ContainerTypes-Purchase1]
+        [ManipulationProfiles:GVA-Manipulation-Red-TownName]
 
         [SpawnConditionsProfiles:Red-RedAlienRegion-PI-Spawns-Civ20]
       </Description>
@@ -183,7 +178,7 @@
         <Prefab SubtypeId="[NPC] Trade Township">
           <Position>
             <X>0.0</X>
-            <Y>-21.0</Y>
+            <Y>-19.0</Y>
             <Z>0.0</Z>
           </Position>
           <BeaconText>Township</BeaconText>
@@ -233,9 +228,7 @@
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ManipulationProfiles:GVA-Manipulation-MajorTrade]
-
-        [InitializeStoreBlocks:true]
-        [ContainerTypesForStoreOrders:GVA-ContainerTypes-Purchase1]
+        [ManipulationProfiles:GVA-Manipulation-Red-CityName]
 
         [SpawnConditionsProfiles:Red-RedAlienRegion-PI-Spawns-Civ40]
       </Description>
@@ -245,11 +238,11 @@
         <Prefab SubtypeId="Tower City">
           <Position>
             <X>0.0</X>
-            <Y>52</Y>
+            <Y>55</Y>
             <Z>0.0</Z>
           </Position>
           <BeaconText>City</BeaconText>
-          <Behaviour>GVA-Behavior-PassiveCivilian-R-Major</Behaviour>
+          <Behaviour>GVA-Behavior-PassiveCivilian-R-Minor</Behaviour>
         </Prefab>
       </Prefabs>
     </SpawnGroup>

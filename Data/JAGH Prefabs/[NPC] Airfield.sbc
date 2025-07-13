@@ -12644,7 +12644,6 @@
               <NumberInGrid>1</NumberInGrid>
               <Enabled>true</Enabled>
               <BroadcastRadius>500</BroadcastRadius>
-              <HudText>Airfield (3598)</HudText>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
               <SubtypeName>TrussFloor</SubtypeName>

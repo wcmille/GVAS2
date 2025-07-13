@@ -167,6 +167,8 @@
         [IgnoreCleanupRules:true]
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
+        [ManipulationProfiles:GVA-Manipulation-MinorTrade]
+        [ManipulationProfiles:GVA-Manipulation-Blue-TownName]
 
         [SpawnConditionsProfiles:Blue-BlueAlienRegion-PI-Spawns-Civ20]
       </Description>
@@ -196,9 +198,7 @@
 
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ManipulationProfiles:GVA-Manipulation-MajorTrade]
-
-        [InitializeStoreBlocks:true]
-        [ContainerTypesForStoreOrders:GVA-ContainerTypes-Purchase1]
+        [ManipulationProfiles:GVA-Manipulation-Blue-CityName]
 
         [IgnoreCleanupRules:true]
 

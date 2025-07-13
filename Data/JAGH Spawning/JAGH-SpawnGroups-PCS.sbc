@@ -157,7 +157,7 @@
           </Position>
           <Speed>50</Speed>
           <Behaviour>JAGH-Behavior-FFO</Behaviour>
-          <BeaconText>FFO</BeaconText>
+          <BeaconText>FF</BeaconText>
         </Prefab>
       </Prefabs>
     </SpawnGroup>
@@ -252,6 +252,7 @@
             <Y>0.0</Y>
             <Z>0.0</Z>
           </Position>
+          <BeaconText>AKL</BeaconText>
           <Speed>50</Speed>
           <Behaviour>GVA-Behavior-StandardCivilian</Behaviour>
         </Prefab>
@@ -285,6 +286,7 @@
             <Z>0.0</Z>
           </Position>
           <Speed>50</Speed>
+          <BeaconText>AKL</BeaconText>
           <Behaviour>GVA-Behavior-StandardCivilian</Behaviour>
         </Prefab>
       </Prefabs>
