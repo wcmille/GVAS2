@@ -57,7 +57,7 @@
             <Z>0.0</Z>
           </Position>
           <Behaviour>KAJI-Behavior-PassiveCivilian</Behaviour>
-          <BeaconText>Shelter</BeaconText>
+          <BeaconText>INST</BeaconText>
         </Prefab>
       </Prefabs>
     </SpawnGroup>
@@ -86,7 +86,7 @@
             <Z>0.0</Z>
           </Position>
           <Behaviour>KAJI-Behavior-PassiveCivilian</Behaviour>
-          <BeaconText>Cabin</BeaconText>
+          <BeaconText>INST</BeaconText>
         </Prefab>
       </Prefabs>
     </SpawnGroup>
@@ -118,7 +118,7 @@
             <Z>0.0</Z>
           </Position>
           <Behaviour>KAJI-Behavior-PassiveCivilian</Behaviour>
-          <BeaconText>Radio Tower</BeaconText>
+          <BeaconText>INST</BeaconText>
         </Prefab>
       </Prefabs>
     </SpawnGroup>
@@ -150,7 +150,7 @@
             <Z>0.0</Z>
           </Position>
           <Behaviour>GVA-Behavior-PassiveCivilian-R-Shipyard</Behaviour>
-          <BeaconText>Shipyard</BeaconText>
+          <BeaconText>INST</BeaconText>
         </Prefab>
       </Prefabs>
     </SpawnGroup>
@@ -181,7 +181,7 @@
             <Y>60.0</Y>
             <Z>0.0</Z>
           </Position>
-          <BeaconText>Township</BeaconText>
+          <BeaconText>INST</BeaconText>
           <Behaviour>GVA-Behavior-PassiveCivilian-R-Minor</Behaviour>
         </Prefab>
       </Prefabs>
@@ -209,7 +209,7 @@
             <Y>35.0</Y>
             <Z>0.0</Z>
           </Position>
-          <BeaconText>City</BeaconText>
+          <BeaconText>INST</BeaconText>
           <Behaviour>GVA-Behavior-PassiveCivilian-R-EnergySales</Behaviour>
         </Prefab>
       </Prefabs>
@@ -241,7 +241,7 @@
             <Y>55</Y>
             <Z>0.0</Z>
           </Position>
-          <BeaconText>City</BeaconText>
+          <BeaconText>INST</BeaconText>
           <Behaviour>GVA-Behavior-PassiveCivilian-R-Minor</Behaviour>
         </Prefab>
       </Prefabs>

@@ -9682,13 +9682,14 @@
               <ColorMaskHSV x="0.625" y="-0.8" z="0.07" />
               <SkinSubtypeId>Rusty_Armor</SkinSubtypeId>
               <ShareMode>Faction</ShareMode>
+              <CustomName>NPC Beacon</CustomName>
               <ShowOnHUD>false</ShowOnHUD>
               <ShowInTerminal>true</ShowInTerminal>
               <ShowInToolbarConfig>true</ShowInToolbarConfig>
               <ShowInInventory>true</ShowInInventory>
               <NumberInGrid>1</NumberInGrid>
-              <Enabled>false</Enabled>
-              <BroadcastRadius>20000</BroadcastRadius>
+              <Enabled>true</Enabled>
+              <BroadcastRadius>5000</BroadcastRadius>
               <HudText />
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
@@ -9982,7 +9983,7 @@
               <ShowInInventory>true</ShowInInventory>
               <NumberInGrid>1</NumberInGrid>
               <Enabled>true</Enabled>
-              <AnyoneCanUse>false</AnyoneCanUse>
+              <AnyoneCanUse>true</AnyoneCanUse>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Door">
               <SubtypeName>LargeBlockOffsetDoor</SubtypeName>
@@ -12895,7 +12896,7 @@
               <MasterToSlaveTransform xsi:nil="true" />
               <MasterToSlaveGrid xsi:nil="true" />
               <IsMaster>true</IsMaster>
-              <TradingEnabled>false</TradingEnabled>
+              <TradingEnabled>true</TradingEnabled>
               <AutoUnlockTime>0</AutoUnlockTime>
               <TimeOfConnection>0</TimeOfConnection>
               <IsParkingEnabled>true</IsParkingEnabled>
