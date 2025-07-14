@@ -19,19 +19,10 @@
       <IsPirate>true</IsPirate>
       <Frequency>70.0</Frequency>
       <Prefabs>
-        <Prefab SubtypeId="EZPodUnwrecked">
-          <Position>
-            <X>0.0</X>
-            <Y>0.0</Y>
-            <Z>0.0</Z>
-          </Position>
-          <Speed>0</Speed>
-          <BeaconText>Distress</BeaconText>
-        </Prefab>
         <Prefab SubtypeId="Sparrowhawk Corvette">
           <Position>
             <X>0.0</X>
-            <Y>0.0</Y>
+            <Y>100.0</Y>
             <Z>0.0</Z>
           </Position>
           <Speed>0</Speed>
@@ -46,16 +37,7 @@
           <Speed>0</Speed>
           <BeaconText>Distress</BeaconText>
         </Prefab>
-        <Prefab SubtypeId="LifePod2">
-          <Position>
-            <X>0.0</X>
-            <Y>0.0</Y>
-            <Z>0.0</Z>
-          </Position>
-          <Speed>2</Speed>
-          <BeaconText>Distress</BeaconText>
-        </Prefab>
-      </Prefabs>
+        </Prefabs>
     </SpawnGroup>
   </SpawnGroups>
 </Definitions>

@@ -5879,6 +5879,7 @@
           <IsRespawnGrid>false</IsRespawnGrid>
           <LocalCoordSys>0</LocalCoordSys>
           <TargetingTargets />
+          <DisplayName>Rhino Jumptug</DisplayName>
           <OxygenRooms>
             <OxygenRoom OxygenAmount="10096.2041">
               <StartingPosition>

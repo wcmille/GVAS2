@@ -31,6 +31,8 @@
         [BossCustomGPSLabel:Possible Salvage]
         [BossCustomGPSColor:{X:200 Y:200 Z:200}]
 
+        [PrefabSpawningMode:Random]
+
         [FactionOwner:UNKN]
       </Description>
     </EntityComponent>

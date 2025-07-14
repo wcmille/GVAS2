@@ -14045,6 +14045,7 @@
           <IsRespawnGrid>false</IsRespawnGrid>
           <LocalCoordSys>0</LocalCoordSys>
           <TargetingTargets />
+          <DisplayName>Nidavellir Mobile Base</DisplayName>
           <OxygenRooms>
             <OxygenRoom OxygenAmount="62.5">
               <StartingPosition>

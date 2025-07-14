@@ -3,8 +3,8 @@
   <Prefabs>
     <Prefab xsi:type="MyObjectBuilder_PrefabDefinition">
       <Id Type="MyObjectBuilder_PrefabDefinition" Subtype="Sparrowhawk Corvette" />
-      <DisplayName>Sparrowhawk Corvette</DisplayName>
       <EnvironmentType>All</EnvironmentType>
+      <DisplayName>Sparrowhawk Corvette</DisplayName>
       <CubeGrids>
         <CubeGrid>
           <SubtypeName />
@@ -96,6 +96,7 @@
               <ColorMaskHSV x="0.0583333336" y="0.11" z="0.43" />
               <SkinSubtypeId>Clean_Armor</SkinSubtypeId>
               <ShareMode>Faction</ShareMode>
+              <CustomName>Main Antenna</CustomName>
               <ShowOnHUD>false</ShowOnHUD>
               <ShowInTerminal>true</ShowInTerminal>
               <ShowInToolbarConfig>true</ShowInToolbarConfig>
@@ -6089,6 +6090,7 @@
               </StartingPosition>
             </OxygenRoom>
           </OxygenRooms>
+          <DisplayName>Sparrowhawk Corvette</DisplayName>
         </CubeGrid>
       </CubeGrids>
     </Prefab>

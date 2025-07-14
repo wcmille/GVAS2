@@ -3,6 +3,7 @@
   <Prefabs>
     <Prefab xsi:type="MyObjectBuilder_PrefabDefinition">
       <Id Type="MyObjectBuilder_PrefabDefinition" Subtype="Rocketeer MKI Pirate Attacker" />
+      <DisplayName>Rocketeer MKI Pirate Attacker</DisplayName>
       <CubeGrids>
         <CubeGrid>
           <SubtypeName />

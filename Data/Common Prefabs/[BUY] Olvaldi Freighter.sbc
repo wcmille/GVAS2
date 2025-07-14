@@ -12044,6 +12044,7 @@
           <IsRespawnGrid>false</IsRespawnGrid>
           <LocalCoordSys>45</LocalCoordSys>
           <TargetingTargets />
+          <DisplayName>Olvaldi Freighter</DisplayName>
           <OxygenRooms>
             <OxygenRoom OxygenAmount="10708.67">
               <StartingPosition>

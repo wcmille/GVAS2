@@ -11,6 +11,7 @@
 
         [UseRandomNameGenerator:true]
         [RandomGridNamePattern:[NPC] Wreck]
+        [ReplaceAntennaNameWithRandomizedName:Main Antenna]
 
         [UseGridDereliction:true]
         [DerelictionProfiles:GVA-Dereliction-Armor-DamageOnly]
