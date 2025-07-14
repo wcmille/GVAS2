@@ -2060,7 +2060,7 @@
                           <item>
                             <Key>74de02b3-27f9-4960-b1c4-27351f2b06d1</Key>
                             <Value>[GVA.NPCControl.NPCPoints]
-Civilian=1</Value>
+Civilian=10</Value>
                           </item>
                         </dictionary>
                       </Storage>

@@ -178,7 +178,7 @@
         <Prefab SubtypeId="[NPC] Trade Township">
           <Position>
             <X>0.0</X>
-            <Y>-19.0</Y>
+            <Y>60.0</Y>
             <Z>0.0</Z>
           </Position>
           <BeaconText>Township</BeaconText>

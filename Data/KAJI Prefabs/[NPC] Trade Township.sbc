@@ -2,7 +2,7 @@
 <Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Prefabs>
     <Prefab xsi:type="MyObjectBuilder_PrefabDefinition">
-      <Id Type="MyObjectBuilder_PrefabDefinition" Subtype="Trade Township" />
+      <Id Type="MyObjectBuilder_PrefabDefinition" Subtype="[NPC] Trade Township" />
       <CubeGrids>
         <CubeGrid>
           <SubtypeName />
@@ -5631,7 +5631,25 @@ scanRadius=20000
               <Min x="2" y="19" z="-1" />
               <BlockOrientation Forward="Right" Up="Up" />
               <ShareMode>Faction</ShareMode>
-              <CustomName>Beacon</CustomName>
+              <CustomName>NPC Beacon</CustomName>
+              <ComponentContainer>
+                <Components>
+                  <ComponentData>
+                    <TypeId>MyModStorageComponent</TypeId>
+                    <Component xsi:type="MyObjectBuilder_ModStorageComponent">
+                      <Storage>
+                        <dictionary>
+                          <item>
+                            <Key>74de02b3-27f9-4960-b1c4-27351f2b06d1</Key>
+                            <Value>[GVA.NPCControl.NPCPoints]
+Civilian=4</Value>
+                          </item>
+                        </dictionary>
+                      </Storage>
+                    </Component>
+                  </ComponentData>
+                </Components>
+              </ComponentContainer>
               <ShowOnHUD>false</ShowOnHUD>
               <ShowInTerminal>false</ShowInTerminal>
               <ShowInToolbarConfig>true</ShowInToolbarConfig>
@@ -51725,7 +51743,7 @@ scanRadius=20000
               <ConveyorLineType>LARGE_LINE</ConveyorLineType>
             </MyObjectBuilder_ConveyorLine>
           </ConveyorLines>
-          <DisplayName>Trade Township</DisplayName>
+          <DisplayName>[NPC] Trade Township</DisplayName>
           <DestructibleBlocks>true</DestructibleBlocks>
           <CreatePhysics>false</CreatePhysics>
           <EnableSmallToLargeConnections>false</EnableSmallToLargeConnections>
