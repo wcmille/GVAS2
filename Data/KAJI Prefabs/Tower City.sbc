@@ -37519,7 +37519,7 @@ POPULATION DEVELOPMENT      _______
                   </ComponentData>
                 </Components>
               </ComponentContainer>
-              <CustomName>Verbinder 2</CustomName>
+              <CustomName>Connector 2</CustomName>
               <ShowOnHUD>false</ShowOnHUD>
               <ShowInTerminal>false</ShowInTerminal>
               <ShowInToolbarConfig>false</ShowInToolbarConfig>
@@ -37527,10 +37527,11 @@ POPULATION DEVELOPMENT      _______
               <NumberInGrid>6</NumberInGrid>
               <Enabled>true</Enabled>
               <MasterToSlaveTransform xsi:nil="true" />
+              <Strength>0</Strength>
               <MasterToSlaveGrid xsi:nil="true" />
               <IsMaster>true</IsMaster>
-              <TradingEnabled>false</TradingEnabled>
-              <AutoUnlockTime>0</AutoUnlockTime>
+              <TradingEnabled>true</TradingEnabled>
+              <AutoUnlockTime>1800</AutoUnlockTime>
               <TimeOfConnection>0</TimeOfConnection>
               <IsParkingEnabled>true</IsParkingEnabled>
               <IsPowerTransferOverrideEnabled>false</IsPowerTransferOverrideEnabled>
@@ -39351,7 +39352,7 @@ POPULATION DEVELOPMENT      _______
                   </ComponentData>
                 </Components>
               </ComponentContainer>
-              <CustomName>Verbinder</CustomName>
+              <CustomName>Connector</CustomName>
               <ShowOnHUD>false</ShowOnHUD>
               <ShowInTerminal>false</ShowInTerminal>
               <ShowInToolbarConfig>false</ShowInToolbarConfig>
@@ -39359,10 +39360,11 @@ POPULATION DEVELOPMENT      _______
               <NumberInGrid>5</NumberInGrid>
               <Enabled>true</Enabled>
               <MasterToSlaveTransform xsi:nil="true" />
+              <Strength>0</Strength>
               <MasterToSlaveGrid xsi:nil="true" />
               <IsMaster>true</IsMaster>
-              <TradingEnabled>false</TradingEnabled>
-              <AutoUnlockTime>0</AutoUnlockTime>
+              <TradingEnabled>true</TradingEnabled>
+              <AutoUnlockTime>1800</AutoUnlockTime>
               <TimeOfConnection>0</TimeOfConnection>
               <IsParkingEnabled>true</IsParkingEnabled>
               <IsPowerTransferOverrideEnabled>false</IsPowerTransferOverrideEnabled>
@@ -87814,7 +87816,7 @@ _________________________________________</Text>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_LargeMissileTurret">
               <SubtypeName />
-              <EntityId>131180273086708269</EntityId>
+              <EntityId>129972394621070235</EntityId>
               <Min x="10" y="21" z="1" />
               <BlockOrientation Forward="Backward" Up="Up" />
               <ColorMaskHSV x="0.08888889" y="-0.8" z="0.15" />
@@ -87857,7 +87859,7 @@ _________________________________________</Text>
                         <dictionary>
                           <item>
                             <Key>75bbb4f5-4fb9-4230-beef-bb79c9811501</Key>
-                            <Value>+nzJAQoJCAAQAB0AAAAAErsBCAASPC0AgDtFMjUIABAAGAAgACgAMABIAFAAWAB4AIABAJABAKABALABAMABANABANgBAOgBAPABAPgBAZACABo6EgkNAAAAABAAIE8YADAAOABAAEgAUiMaGwkAAAAAAAAAACEAAAAAAAAAADkAAAAAAAAAACAAKAAwACIrCAAQACAAKgYgvfz//wcyGwkAAAAAAAAAACEAAAAAAAAAADkAAAAAAAAAACoQCAAgASgAMAA4AEAASABQAAgi</Value>
+                            <Value>+nzVAQoJCAAQAB0AAAAAEscBCAASPi0AAHpFMjcIABAAGAAgACgBMABABUgAUABYAHgAgAEAkAEAoAEAsAEAwAEA0AEA2AEA6AEA8AEA+AEBkAIAGkQSCQ0AAAAAEAAgOhgAIJmAgICAgICAAjAAOABAAEgAUiMaGwkAAAAAAAAAACEAAAAAAAAAADkAAAAAAAAAACAAKAAwACIrCAAQACAAKgYg0/3//wcyGwkAAAAAAAAAACEAAAAAAAAAADkAAAAAAAAAACoQCAAgASgAMAE4AEAASABQAAgi</Value>
                           </item>
                         </dictionary>
                       </Storage>
@@ -90468,7 +90470,7 @@ _________________________________________</Text>
                         <dictionary>
                           <item>
                             <Key>75bbb4f5-4fb9-4230-beef-bb79c9811501</Key>
-                            <Value>+nzJAQoJCAAQAB0AAAAAErsBCAASPC0AgDtFMjUIABAAGAAgACgAMABIAFAAWAB4AIABAJABAKABALABAMABANABANgBAOgBAPABAPgBAZACABo6EgkNAAAAABAAIFAYADAAOABAAEgAUiMaGwkAAAAAAAAAACEAAAAAAAAAADkAAAAAAAAAACAAKAAwACIrCAAQACAAKgYguPz//wcyGwkAAAAAAAAAACEAAAAAAAAAADkAAAAAAAAAACoQCAAgASgAMAA4AEAASABQAAgi</Value>
+                            <Value>+nzVAQoJCAAQAB0AAAAAEscBCAASPi0AAHpFMjcIABAAGAAgACgBMABABUgAUABYAHgAgAEAkAEAoAEAsAEAwAEA0AEA2AEA6AEA8AEA+AEBkAIAGkQSCQ0AAAAAEAAgOhgAIJmAgICAgICAAjAAOABAAEgAUiMaGwkAAAAAAAAAACEAAAAAAAAAADkAAAAAAAAAACAAKAAwACIrCAAQACAAKgYg0/3//wcyGwkAAAAAAAAAACEAAAAAAAAAADkAAAAAAAAAACoQCAAgASgAMAE4AEAASABQAAgi</Value>
                           </item>
                         </dictionary>
                       </Storage>
@@ -93263,7 +93265,7 @@ _________________________________________</Text>
                         <dictionary>
                           <item>
                             <Key>75bbb4f5-4fb9-4230-beef-bb79c9811501</Key>
-                            <Value>+nzJAQoJCAAQAB0AAAAAErsBCAASPC0AgDtFMjUIABAAGAAgACgAMABIAFAAWAB4AIABAJABAKABALABAMABANABANgBAOgBAPABAPgBAZACABo6EgkNAAAAABAAIFMYADAAOABAAEgAUiMaGwkAAAAAAAAAACEAAAAAAAAAADkAAAAAAAAAACAAKAAwACIrCAAQACAAKgYgqfz//wcyGwkAAAAAAAAAACEAAAAAAAAAADkAAAAAAAAAACoQCAAgASgAMAA4AEAASABQAAgi</Value>
+                            <Value>+nzVAQoJCAAQAB0AAAAAEscBCAASPi0AAHpFMjcIABAAGAAgACgBMABABUgAUABYAHgAgAEAkAEAoAEAsAEAwAEA0AEA2AEA6AEA8AEA+AEBkAIAGkQSCQ0AAAAAEAAgOhgAIJmAgICAgICAAjAAOABAAEgAUiMaGwkAAAAAAAAAACEAAAAAAAAAADkAAAAAAAAAACAAKAAwACIrCAAQACAAKgYg0/3//wcyGwkAAAAAAAAAACEAAAAAAAAAADkAAAAAAAAAACoQCAAgASgAMAE4AEAASABQAAgi</Value>
                           </item>
                         </dictionary>
                       </Storage>
@@ -94370,13 +94372,14 @@ _________________________________________</Text>
               <ShowInTerminal>true</ShowInTerminal>
               <ShowInToolbarConfig>true</ShowInToolbarConfig>
               <ShowInInventory>true</ShowInInventory>
-              <NumberInGrid>4</NumberInGrid>
+              <NumberInGrid>3</NumberInGrid>
               <Enabled>true</Enabled>
               <MasterToSlaveTransform xsi:nil="true" />
+              <Strength>0</Strength>
               <MasterToSlaveGrid xsi:nil="true" />
               <IsMaster>true</IsMaster>
-              <TradingEnabled>false</TradingEnabled>
-              <AutoUnlockTime>0</AutoUnlockTime>
+              <TradingEnabled>true</TradingEnabled>
+              <AutoUnlockTime>1800</AutoUnlockTime>
               <TimeOfConnection>0</TimeOfConnection>
               <IsParkingEnabled>true</IsParkingEnabled>
               <IsPowerTransferOverrideEnabled>false</IsPowerTransferOverrideEnabled>
