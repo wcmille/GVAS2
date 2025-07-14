@@ -238,7 +238,7 @@
         <Prefab SubtypeId="Tower City">
           <Position>
             <X>0.0</X>
-            <Y>55</Y>
+            <Y>62</Y>
             <Z>0.0</Z>
           </Position>
           <BeaconText>INST</BeaconText>
