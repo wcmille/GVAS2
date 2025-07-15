@@ -3300,7 +3300,7 @@ Civilian=1</Value>
               <NumberInGrid>1</NumberInGrid>
               <Enabled>true</Enabled>
               <Range>50</Range>
-              <Volume>1</Volume>
+              <Volume>0.5</Volume>
               <CueName>MusComp_05</CueName>
               <LoopPeriod>1</LoopPeriod>
               <IsPlaying>true</IsPlaying>

@@ -9180,7 +9180,7 @@ Civilian=4</Value>
               <NumberInGrid>1</NumberInGrid>
               <Enabled>true</Enabled>
               <Range>50</Range>
-              <Volume>1</Volume>
+              <Volume>0.5</Volume>
               <CueName>MusLightFight_01</CueName>
               <LoopPeriod>1</LoopPeriod>
               <IsPlaying>false</IsPlaying>
@@ -14038,7 +14038,7 @@ Civilian=4</Value>
               <NumberInGrid>3</NumberInGrid>
               <Enabled>true</Enabled>
               <Range>50</Range>
-              <Volume>1</Volume>
+              <Volume>0.5</Volume>
               <CueName />
               <LoopPeriod>1</LoopPeriod>
               <IsPlaying>false</IsPlaying>
@@ -15031,7 +15031,7 @@ Civilian=4</Value>
               <NumberInGrid>2</NumberInGrid>
               <Enabled>true</Enabled>
               <Range>50</Range>
-              <Volume>1</Volume>
+              <Volume>0.5</Volume>
               <CueName />
               <LoopPeriod>1</LoopPeriod>
               <IsPlaying>false</IsPlaying>
@@ -32315,7 +32315,7 @@ Civilian=4</Value>
               <NumberInGrid>1</NumberInGrid>
               <Enabled>true</Enabled>
               <Range>100</Range>
-              <Volume>1</Volume>
+              <Volume>0.5</Volume>
               <CueName>SoundBlockAlert1</CueName>
               <LoopPeriod>6</LoopPeriod>
               <IsPlaying>false</IsPlaying>

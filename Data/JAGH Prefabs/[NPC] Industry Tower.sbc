@@ -17938,8 +17938,8 @@ Civilian=10</Value>
               <ShowInInventory>true</ShowInInventory>
               <NumberInGrid>2</NumberInGrid>
               <Enabled>true</Enabled>
-              <Range>30</Range>
-              <Volume>0.25</Volume>
+              <Range>50</Range>
+              <Volume>0.5</Volume>
               <CueName>MusComp_16</CueName>
               <LoopPeriod>1</LoopPeriod>
               <IsPlaying>false</IsPlaying>
@@ -18751,7 +18751,7 @@ Civilian=10</Value>
               <NumberInGrid>1</NumberInGrid>
               <Enabled>true</Enabled>
               <Range>50</Range>
-              <Volume>1</Volume>
+              <Volume>0.5</Volume>
               <CueName />
               <LoopPeriod>1</LoopPeriod>
               <IsPlaying>false</IsPlaying>

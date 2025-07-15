@@ -112459,7 +112459,7 @@ Connectors Only</PublicDescription>
                 </MySerializedTextPanelData>
               </TextPanelsNew>
               <Range>50</Range>
-              <Volume>1</Volume>
+              <Volume>0.5</Volume>
               <CueName />
               <LoopPeriod>1</LoopPeriod>
               <IsPlaying>false</IsPlaying>
