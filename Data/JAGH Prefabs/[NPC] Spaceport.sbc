@@ -40811,10 +40811,11 @@ Civilian=4</Value>
               <NumberInGrid>1</NumberInGrid>
               <Enabled>true</Enabled>
               <MasterToSlaveTransform xsi:nil="true" />
+              <Strength>0</Strength>
               <MasterToSlaveGrid xsi:nil="true" />
               <IsMaster>true</IsMaster>
-              <TradingEnabled>false</TradingEnabled>
-              <AutoUnlockTime>0</AutoUnlockTime>
+              <TradingEnabled>true</TradingEnabled>
+              <AutoUnlockTime>1800</AutoUnlockTime>
               <TimeOfConnection>0</TimeOfConnection>
               <IsParkingEnabled>true</IsParkingEnabled>
               <IsPowerTransferOverrideEnabled>false</IsPowerTransferOverrideEnabled>
@@ -43104,10 +43105,11 @@ Civilian=4</Value>
               <NumberInGrid>1</NumberInGrid>
               <Enabled>true</Enabled>
               <MasterToSlaveTransform xsi:nil="true" />
+              <Strength>0</Strength>
               <MasterToSlaveGrid xsi:nil="true" />
               <IsMaster>true</IsMaster>
-              <TradingEnabled>false</TradingEnabled>
-              <AutoUnlockTime>0</AutoUnlockTime>
+              <TradingEnabled>true</TradingEnabled>
+              <AutoUnlockTime>1800</AutoUnlockTime>
               <TimeOfConnection>0</TimeOfConnection>
               <IsParkingEnabled>true</IsParkingEnabled>
               <IsPowerTransferOverrideEnabled>false</IsPowerTransferOverrideEnabled>

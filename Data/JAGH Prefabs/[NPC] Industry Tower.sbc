@@ -12763,10 +12763,11 @@ Civilian=10</Value>
               <NumberInGrid>1</NumberInGrid>
               <Enabled>true</Enabled>
               <MasterToSlaveTransform xsi:nil="true" />
+              <Strength>0</Strength>
               <MasterToSlaveGrid xsi:nil="true" />
               <IsMaster>true</IsMaster>
-              <TradingEnabled>false</TradingEnabled>
-              <AutoUnlockTime>0</AutoUnlockTime>
+              <TradingEnabled>true</TradingEnabled>
+              <AutoUnlockTime>1800</AutoUnlockTime>
               <TimeOfConnection>0</TimeOfConnection>
               <IsParkingEnabled>true</IsParkingEnabled>
               <IsPowerTransferOverrideEnabled>false</IsPowerTransferOverrideEnabled>
@@ -12826,10 +12827,11 @@ Civilian=10</Value>
               <NumberInGrid>2</NumberInGrid>
               <Enabled>true</Enabled>
               <MasterToSlaveTransform xsi:nil="true" />
+              <Strength>0</Strength>
               <MasterToSlaveGrid xsi:nil="true" />
               <IsMaster>true</IsMaster>
-              <TradingEnabled>false</TradingEnabled>
-              <AutoUnlockTime>0</AutoUnlockTime>
+              <TradingEnabled>true</TradingEnabled>
+              <AutoUnlockTime>1800</AutoUnlockTime>
               <TimeOfConnection>0</TimeOfConnection>
               <IsParkingEnabled>true</IsParkingEnabled>
               <IsPowerTransferOverrideEnabled>false</IsPowerTransferOverrideEnabled>
@@ -12942,10 +12944,11 @@ Civilian=10</Value>
               <NumberInGrid>4</NumberInGrid>
               <Enabled>true</Enabled>
               <MasterToSlaveTransform xsi:nil="true" />
+              <Strength>0</Strength>
               <MasterToSlaveGrid xsi:nil="true" />
               <IsMaster>true</IsMaster>
-              <TradingEnabled>false</TradingEnabled>
-              <AutoUnlockTime>0</AutoUnlockTime>
+              <TradingEnabled>true</TradingEnabled>
+              <AutoUnlockTime>1800</AutoUnlockTime>
               <TimeOfConnection>0</TimeOfConnection>
               <IsParkingEnabled>true</IsParkingEnabled>
               <IsPowerTransferOverrideEnabled>false</IsPowerTransferOverrideEnabled>
@@ -12997,10 +13000,11 @@ Civilian=10</Value>
               <NumberInGrid>5</NumberInGrid>
               <Enabled>true</Enabled>
               <MasterToSlaveTransform xsi:nil="true" />
+              <Strength>0</Strength>
               <MasterToSlaveGrid xsi:nil="true" />
               <IsMaster>true</IsMaster>
-              <TradingEnabled>false</TradingEnabled>
-              <AutoUnlockTime>0</AutoUnlockTime>
+              <TradingEnabled>true</TradingEnabled>
+              <AutoUnlockTime>1800</AutoUnlockTime>
               <TimeOfConnection>0</TimeOfConnection>
               <IsParkingEnabled>true</IsParkingEnabled>
               <IsPowerTransferOverrideEnabled>false</IsPowerTransferOverrideEnabled>
@@ -13249,10 +13253,11 @@ Civilian=10</Value>
               <NumberInGrid>7</NumberInGrid>
               <Enabled>true</Enabled>
               <MasterToSlaveTransform xsi:nil="true" />
+              <Strength>0</Strength>
               <MasterToSlaveGrid xsi:nil="true" />
               <IsMaster>true</IsMaster>
-              <TradingEnabled>false</TradingEnabled>
-              <AutoUnlockTime>0</AutoUnlockTime>
+              <TradingEnabled>true</TradingEnabled>
+              <AutoUnlockTime>1800</AutoUnlockTime>
               <TimeOfConnection>0</TimeOfConnection>
               <IsParkingEnabled>true</IsParkingEnabled>
               <IsPowerTransferOverrideEnabled>false</IsPowerTransferOverrideEnabled>
