@@ -10,7 +10,12 @@
         [MES Manipulation]
 
         [UseLootProfiles:true]
+        [ClearExistingContainerTypes:true]
         [LootProfiles:GVA-Loot-SmallTech]
+        [LootProfiles:MES-Loot-BasicContainersLarge]
+        [LootProfiles:MES-Loot-Freight]
+        [LootProfiles:MES-Loot-Lockers]
+        [LootProfiles:MES-Loot-WeaponRacks]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
@@ -22,7 +27,12 @@
         [MES Manipulation]
 
         [UseLootProfiles:true]
-        [LootProfiles:GVA-Loot-SmallTech]
+        [ClearExistingContainerTypes:true]
+        [LootProfiles:GVA-Loot-MediumTech]
+        [LootProfiles:MES-Loot-MixedContainersLarge]
+        [LootProfiles:MES-Loot-Freight]
+        [LootProfiles:MES-Loot-Lockers]
+        [LootProfiles:MES-Loot-WeaponRacks]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
@@ -34,7 +44,12 @@
         [MES Manipulation]
 
         [UseLootProfiles:true]
-        [LootProfiles:GVA-Loot-SmallTech]
+        [ClearExistingContainerTypes:true]
+        [LootProfiles:GVA-Loot-GreatTech]
+        [LootProfiles:MES-Loot-AdvancedContainersLarge]
+        [LootProfiles:MES-Loot-Freight]
+        [LootProfiles:MES-Loot-Lockers]
+        [LootProfiles:MES-Loot-WeaponRacks]
       </Description>
     </EntityComponent>
   </EntityComponents>

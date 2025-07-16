@@ -1,22 +1,6 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<EntityComponents>
-		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-			<Id>
-				<TypeId>Inventory</TypeId>
-				<SubtypeId>GVA-Loot-Small</SubtypeId>
-			</Id>
-			<Description>
-				[MES Loot]
-				[ContainerBlockTypes:MyObjectBuilder_CargoContainer/LargeBlockSmallContainer]
-				[ContainerTypes:GVA_Loot_Small]
-				[MinBlocks:4]
-				[MaxBlocks:6]
-				[AppendNameToBlock:true]
-				[AppendedName: (Loot)]
-				[Chance:100]
-			</Description>
-		</EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
       <Id>
         <TypeId>Inventory</TypeId>
@@ -24,68 +8,94 @@
       </Id>
       <Description>
         [MES Loot]
+
+        [ContainerBlockTypes:MyObjectBuilder_CargoContainer/SmallBlockMediumContainer]
+        [ContainerBlockTypes:MyObjectBuilder_CargoContainer/SmallBlockLargeContainer]
         [ContainerBlockTypes:MyObjectBuilder_CargoContainer/LargeBlockSmallContainer]
-        [ContainerTypes:GVA_Loot_Small]
-        [MinBlocks:4]
-        [MaxBlocks:6]
-        [AppendNameToBlock:true]
-        [AppendedName: (Loot)]
-        [Chance:100]
+
+        [ContainerTypes:MES-ContainerTypes-RareTech-1]
+        [ContainerTypes:MES-ContainerTypes-BasicComponents-1]
+        [ContainerTypes:MES-ContainerTypes-MixedComponents-1]
+
+        [ContainerTypes:MES-ContainerTypes-BasicIngots-1]
+        [ContainerTypes:MES-ContainerTypes-MixedOres-1]
+        [ContainerTypes:MES-ContainerTypes-BasicOres-2]
+
+        [ContainerTypes:MES-ContainerTypes-Credits-1]
+        [ContainerTypes:MES-ContainerTypes-Credits-1]
+        [ContainerTypes:MES-ContainerTypes-Credits-2]
+
+        [MinBlocks:1]
+        [MaxBlocks:2]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-			<Id>
-				<TypeId>Inventory</TypeId>
-				<SubtypeId>GVA-Loot-Medium</SubtypeId>
-			</Id>
-			<Description>
-				[MES Loot]
-				[ContainerBlockTypes:MyObjectBuilder_CargoContainer/LargeBlockSmallContainer]
-				[ContainerBlockTypes:MyObjectBuilder_CargoContainer/LargeBlockLargeContainer]
-				[ContainerTypes:GVA_Loot_Medium]
-				[MinBlocks:8]
-				[MaxBlocks:12]
-				[AppendNameToBlock:true]
-				[AppendedName: (Loot)]
-				[Chance:100]
-			</Description>
-		</EntityComponent>
-		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-			<Id>
-				<TypeId>Inventory</TypeId>
-				<SubtypeId>GVA-Loot-Large</SubtypeId>
-			</Id>
-			<Description>
-				[MES Loot]
-				[ContainerBlockTypes:MyObjectBuilder_CargoContainer/LargeBlockSmallContainer]
-				[ContainerBlockTypes:MyObjectBuilder_CargoContainer/LargeBlockLargeContainer]
-				[ContainerTypes:GVA_Loot_Large]
-				[MinBlocks:16]
-				[MaxBlocks:20]
-				[AppendNameToBlock:true]
-				[AppendedName: (Loot)]
-				[Chance:100]
-			</Description>
-		</EntityComponent>
-		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-			<Id>
-				<TypeId>Inventory</TypeId>
-				<SubtypeId>GVK-Loot-Huge</SubtypeId>
-			</Id>
-			<Description>
-				[MES Loot]
-				[ContainerBlockTypes:MyObjectBuilder_CargoContainer/LargeBlockSmallContainer]
-				[ContainerBlockTypes:MyObjectBuilder_CargoContainer/LargeBlockLargeContainer]
-				[ContainerTypes:GVA_Loot_Large]
-				[MinBlocks:20]
-				[MaxBlocks:24]
-				[AppendNameToBlock:true]
-				[AppendedName: (Loot)]
-				[Chance:100]
-			</Description>
-		</EntityComponent>
-	
-		<!-- only using the loot groups because there is a bug with loot profiles used directly -->
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Loot-MediumTech</SubtypeId>
+      </Id>
+      <Description>
+        [MES Loot]
+
+        [ContainerBlockTypes:MyObjectBuilder_CargoContainer/SmallBlockMediumContainer]
+        [ContainerBlockTypes:MyObjectBuilder_CargoContainer/SmallBlockLargeContainer]
+        [ContainerBlockTypes:MyObjectBuilder_CargoContainer/LargeBlockSmallContainer]
+
+        [ContainerTypes:MES-ContainerTypes-RareTech-1]
+        [ContainerTypes:MES-ContainerTypes-RareTech-1]
+        [ContainerTypes:MES-ContainerTypes-RareTech-2]
+
+        [ContainerTypes:MES-ContainerTypes-AdvancedComponents-1]
+        [ContainerTypes:MES-ContainerTypes-AdvancedComponents-2]
+        [ContainerTypes:MES-ContainerTypes-AdvancedComponents-2]
+
+        [ContainerTypes:MES-ContainerTypes-AdvancedIngots-1]
+        [ContainerTypes:MES-ContainerTypes-AdvancedIngots-1]
+        [ContainerTypes:MES-ContainerTypes-AdvancedIngots-2]
+
+        [ContainerTypes:MES-ContainerTypes-Credits-2]
+        [ContainerTypes:MES-ContainerTypes-Credits-2]
+        [ContainerTypes:MES-ContainerTypes-Credits-3]
+
+        [MinBlocks:2]
+        [MaxBlocks:4]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Loot-GreatTech</SubtypeId>
+      </Id>
+      <Description>
+
+        [MES Loot]
+
+        [ContainerBlockTypes:MyObjectBuilder_CargoContainer/SmallBlockMediumContainer]
+        [ContainerBlockTypes:MyObjectBuilder_CargoContainer/SmallBlockLargeContainer]
+        [ContainerBlockTypes:MyObjectBuilder_CargoContainer/LargeBlockSmallContainer]
+
+        [ContainerTypes:MES-ContainerTypes-RareTech-1]
+        [ContainerTypes:MES-ContainerTypes-RareTech-2]
+        [ContainerTypes:MES-ContainerTypes-RareTech-3]
+
+        [ContainerTypes:MES-ContainerTypes-AdvancedComponents-1]
+        [ContainerTypes:MES-ContainerTypes-AdvancedComponents-1]
+        [ContainerTypes:MES-ContainerTypes-AdvancedComponents-2]
+
+        [ContainerTypes:MES-ContainerTypes-AdvancedIngots-1]
+        [ContainerTypes:MES-ContainerTypes-AdvancedIngots-1]
+        [ContainerTypes:MES-ContainerTypes-AdvancedIngots-2]
+
+        [ContainerTypes:MES-ContainerTypes-Credits-2]
+        [ContainerTypes:MES-ContainerTypes-Credits-2]
+        [ContainerTypes:MES-ContainerTypes-Credits-3]
+
+        [MinBlocks:3]
+        [MaxBlocks:8]
+      </Description>
+    </EntityComponent>
+
+    <!-- only using the loot groups because there is a bug with loot profiles used directly -->
 		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 			<Id>
 				<TypeId>Inventory</TypeId>
@@ -93,7 +103,6 @@
 			</Id>
 			<Description>
 				[MES Loot Group]
-				[LootProfiles:GVA-Loot-Small]
 			</Description>
 		</EntityComponent>
 	</EntityComponents>

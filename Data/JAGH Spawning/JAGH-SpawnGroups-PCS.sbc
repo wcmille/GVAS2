@@ -45,7 +45,6 @@
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]
-        [ManipulationProfiles:GVA-Manipulation-MediumLoot]
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ManipulationProfiles:GVA-JAGH-Manipulation-Std]
         [ManipulationProfiles:GVA-Manipulation-Blue-FrigateName]
@@ -81,7 +80,6 @@
       <Description>
         [Modular Encounters SpawnGroup]
 
-        [ManipulationProfiles:GVA-Manipulation-MediumLoot]
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ManipulationProfiles:GVA-JAGH-Manipulation-Std]
         [ManipulationProfiles:GVA-Manipulation-Blue-DestroyerName]
@@ -118,7 +116,6 @@
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]
-        [ManipulationProfiles:GVA-Manipulation-MediumLoot]
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ManipulationProfiles:GVA-JAGH-Manipulation-Std]
         [ManipulationProfiles:GVA-Manipulation-Blue-FrigateName]
@@ -173,7 +170,6 @@
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]
-        [ManipulationProfiles:GVA-Manipulation-MediumLoot]
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
         [ManipulationProfiles:GVA-JAGH-Manipulation-Std]
         [ManipulationProfiles:GVA-Manipulation-Blue-FrigateName]

@@ -18,12 +18,6 @@
         [GridsAreDestructable:true]
         [GridsAreEditable:true]
 
-        [UseLootProfiles:true]
-        [LootProfiles:MES-Loot-Corpses]
-        [LootProfiles:MES-Loot-Freight]
-        [LootProfiles:MES-Loot-Lockers]
-        [LootProfiles:MES-Loot-WeaponRacks]
-
         [ShiftBlockColorsHue:false]
         [RandomHueShift:false]
 
@@ -138,62 +132,6 @@
 
         [UseBlockReplacerProfile:true]
         [BlockReplacerProfileNames:MES-DisposableNpcBeacons]
-      </Description>
-    </EntityComponent>
-
-    <!-- Small Loot -->
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
-        <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-Manipulation-SmallLoot</SubtypeId>
-      </Id>
-      <Description>
-        [MES Manipulation]
-
-        [UseLootProfiles:true]
-        [LootProfiles:GVA-Loot-Small]
-      </Description>
-    </EntityComponent>
-
-    <!-- Medium Loot -->
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
-        <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-Manipulation-MediumLoot</SubtypeId>
-      </Id>
-      <Description>
-        [MES Manipulation]
-
-        [UseLootProfiles:true]
-        [LootProfiles:GVA-Loot-Medium]
-      </Description>
-    </EntityComponent>
-    
-    <!-- Large Loot -->
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
-        <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-Manipulation-LargeLoot</SubtypeId>
-      </Id>
-      <Description>
-        [MES Manipulation]
-
-        [UseLootProfiles:true]
-        [LootProfiles:GVA-Loot-Large]
-      </Description>
-    </EntityComponent>
-
-    <!-- Huge Loot -->
-    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-      <Id>
-        <TypeId>Inventory</TypeId>
-        <SubtypeId>GVA-Manipulation-HugeLoot</SubtypeId>
-      </Id>
-      <Description>
-        [MES Manipulation]
-
-        [UseLootProfiles:true]
-        [LootProfiles:GVA-Loot-Huge]
       </Description>
     </EntityComponent>
   </EntityComponents>

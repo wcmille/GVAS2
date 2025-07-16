@@ -12,7 +12,6 @@
 
         [Prefabs:Destroyer Tidehunter]
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
-        [ManipulationProfiles:GVA-Manipulation-LargeLoot]
         [ManipulationProfiles:GVA-Manipulation-Black-DestroyerName]
         [ManipulationProfiles:GVA-SPRT-Manipulation-NAGA]
       </Description>
@@ -27,7 +26,6 @@
 
         [Prefabs:Frigate Shorestriker]
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
-        [ManipulationProfiles:GVA-Manipulation-MediumLoot]
         [ManipulationProfiles:GVA-Manipulation-Black-FrigateName]
         [ManipulationProfiles:GVA-SPRT-Manipulation-NAGA]
       </Description>
@@ -42,7 +40,6 @@
 
         [Prefabs:Corvette Lurker]
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
-        [ManipulationProfiles:GVA-Manipulation-MediumLoot]
         [ManipulationProfiles:GVA-Manipulation-Black-FrigateName]
         [ManipulationProfiles:GVA-SPRT-Manipulation-NAGA]
       </Description>
@@ -58,7 +55,6 @@
         [Prefabs:Scout]
         [ManipulationProfiles:GVA-Common-Manipulation-DisposableNPC]
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
-        [ManipulationProfiles:GVA-Manipulation-SmallLoot]
         [ManipulationProfiles:GVA-Manipulation-Black-FighterName]
         [ManipulationProfiles:GVA-SPRT-Manipulation-NAGA]
       </Description>
@@ -87,7 +83,6 @@
 
         [Prefabs:Cruiser Nightcrawler]
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
-        [ManipulationProfiles:GVA-Manipulation-LargeLoot]
         [ManipulationProfiles:GVA-Manipulation-Black-CruiserName]
         [ManipulationProfiles:GVA-SPRT-Manipulation-NAGA]
       </Description>
@@ -102,7 +97,6 @@
 
         [Prefabs:Carrier Oracle]
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
-        [ManipulationProfiles:GVA-Manipulation-HugeLoot]
         [ManipulationProfiles:GVA-Manipulation-Black-CarrierName]
         [ManipulationProfiles:GVA-SPRT-Manipulation-NAGA]
       </Description>

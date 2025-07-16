@@ -10,7 +10,12 @@
         [MES Manipulation]
 
         [UseLootProfiles:true]
-        [LootProfiles:GVA-Loot-Small]
+        [ClearExistingContainerTypes:true]
+        [LootProfiles:MES-Loot-BasicContainers]
+        [LootProfiles:MES-Loot-BasicContainersLarge]
+        [LootProfiles:MES-Loot-Freight]
+        [LootProfiles:MES-Loot-Lockers]
+        [LootProfiles:MES-Loot-WeaponRacks]
 
         [GridsAreEditable:false]
         [GridsAreDestructable:false]

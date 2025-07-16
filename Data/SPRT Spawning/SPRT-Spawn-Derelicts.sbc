@@ -10,7 +10,6 @@
         [Modular Encounters SpawnGroup]
         [ManipulationProfiles:GVA-Manipulation-MinerDerelict]
         [ManipulationProfiles:GVA-Manipulation-RepaintWartorn]
-        [ManipulationProfiles:GVA-Manipulation-SmallLoot]
         [ManipulationProfiles:GVA-Common-Manipulation-DisposableNPC]
 
         [SpawnConditionsProfiles:SPRT-SpawnCondition-BlackZoneWreck]
