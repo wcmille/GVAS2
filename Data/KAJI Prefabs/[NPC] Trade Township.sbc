@@ -29355,7 +29355,7 @@ Civilian=4</Value>
                       <CanPutItems>true</CanPutItems>
                       <Items>
                         <MyObjectBuilder_InventoryItem>
-                          <Amount>9</Amount>
+                          <Amount>0</Amount>
                           <PhysicalContent xsi:type="MyObjectBuilder_AmmoMagazine">
                             <SubtypeName>Missile200mm</SubtypeName>
                             <ProjectilesCount>0</ProjectilesCount>
@@ -29393,7 +29393,7 @@ Civilian=4</Value>
                         <dictionary>
                           <item>
                             <Key>75bbb4f5-4fb9-4230-beef-bb79c9811501</Key>
-                            <Value>+nzTAQoJCAAQBh0AAAAAEsUBCAASPC0AgDtFMjUIABAAGAAgACgAMABIAFAAWAB4AIABAJABAKABALABAMABANABANgBAOgBAPABAPgBAZACABpEEgkNAAAAABAAIGEYACCZgICAgICAgAIwADgAQABIAFIjGhsJAAAAAAAAAAAhAAAAAAAAAAA5AAAAAAAAAAAgACgAMAAiKwgAEAAgACoGILH7//8HMhsJAAAAAAAAAAAhAAAAAAAAAAA5AAAAAAAAAAAqEAgAIAYoADAAOAlAAUgAUAAIIg==</Value>
+                            <Value>+nzVAQoJCAAQAB0AAAAAEscBCAASPi0AAHpFMjcIABAAGAAgACgBMABABUgAUABYAHgAgAEAkAEAoAEAsAEAwAEA0AEA2AEA6AEA8AEA+AEBkAIAGkQSCQ0AAAAAEAAgbRgAIJmAgICAgICAAjAAOABAAEgAUiMaGwkAAAAAAAAAACEAAAAAAAAAADkAAAAAAAAAACAAKAAwACIrCAAQACAAKgYg2fv//wcyGwkAAAAAAAAAACEAAAAAAAAAADkAAAAAAAAAACoQCAAgBigAMAE4AEABSABQAAgi</Value>
                           </item>
                         </dictionary>
                       </Storage>
@@ -43134,7 +43134,7 @@ Civilian=4</Value>
                       <CanPutItems>true</CanPutItems>
                       <Items>
                         <MyObjectBuilder_InventoryItem>
-                          <Amount>9</Amount>
+                          <Amount>0</Amount>
                           <PhysicalContent xsi:type="MyObjectBuilder_AmmoMagazine">
                             <SubtypeName>Missile200mm</SubtypeName>
                             <ProjectilesCount>0</ProjectilesCount>
@@ -43172,7 +43172,7 @@ Civilian=4</Value>
                         <dictionary>
                           <item>
                             <Key>75bbb4f5-4fb9-4230-beef-bb79c9811501</Key>
-                            <Value>+nzTAQoJCAAQBh0AAAAAEsUBCAASPC0AgDtFMjUIABAAGAAgACgAMABIAFAAWAB4AIABAJABAKABALABAMABANABANgBAOgBAPABAPgBAZACABpEEgkNAAAAABAAIGcYACCZgICAgICAgAIwADgAQABIAFIjGhsJAAAAAAAAAAAhAAAAAAAAAAA5AAAAAAAAAAAgACgAMAAiKwgAEAAgACoGIJP7//8HMhsJAAAAAAAAAAAhAAAAAAAAAAA5AAAAAAAAAAAqEAgAIAYoADAAOAlAAUgAUAAIIg==</Value>
+                            <Value>+nzVAQoJCAAQAB0AAAAAEscBCAASPi0AAHpFMjcIABAAGAAgACgBMABABUgAUABYAHgAgAEAkAEAoAEAsAEAwAEA0AEA2AEA6AEA8AEA+AEBkAIAGkQSCQ0AAAAAEAAgbRgAIJmAgICAgICAAjAAOABAAEgAUiMaGwkAAAAAAAAAACEAAAAAAAAAADkAAAAAAAAAACAAKAAwACIrCAAQACAAKgYg2fv//wcyGwkAAAAAAAAAACEAAAAAAAAAADkAAAAAAAAAACoQCAAgBigAMAE4AEABSABQAAgi</Value>
                           </item>
                         </dictionary>
                       </Storage>
