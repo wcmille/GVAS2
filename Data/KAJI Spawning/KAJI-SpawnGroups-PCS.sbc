@@ -14,13 +14,12 @@
         [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
         [ManipulationProfiles:GVA-Manipulation-Red-FighterName]
 
-        [IgnoreCleanupRules:false]
         [ReplenishSystems:true]
 
         [SpawnConditionsProfiles:Red-Spawns-RM1]
       </Description>
       <IsPirate>true</IsPirate>
-      <Frequency>90.0</Frequency>
+      <Frequency>95.0</Frequency>
       <Prefabs>
         <Prefab SubtypeId="Kunai Interceptor">
           <Position>
@@ -52,10 +51,12 @@
 
         [ReplenishSystems:true]
 
+        [SpawnConditionsProfiles:Red-Spawns-RM2]
         [SpawnConditionsProfiles:Red-Spawns-RM10]
+        [SpawnConditionsProfiles:Red-Spawns-RM20]
       </Description>
 			<IsPirate>true</IsPirate>
-			<Frequency>5.0</Frequency>
+			<Frequency>100.0</Frequency>
 			<Prefabs>
 				<Prefab SubtypeId="Yumi-class Frigate">
 					<Position>
@@ -74,11 +75,11 @@
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
-        <!--Do Not Edit-->
         <SubtypeId>GVA-Red-DDO</SubtypeId>
       </Id>
       <Description>
         [Modular Encounters SpawnGroup]
+
         [ManipulationProfiles:GVA-Manipulation-MediumLoot]
         [ManipulationProfiles:GVA-Common-Manipulation-SuperBuff]
         [ManipulationProfiles:GVA-KAJI-Manipulation-Std]
@@ -86,10 +87,11 @@
 
         [ReplenishSystems:true]
 
+        [SpawnConditionsProfiles:Red-Spawns-RM1O]
         [SpawnConditionsProfiles:Red-Spawns-RM2O]
       </Description>
       <IsPirate>true</IsPirate>
-      <Frequency>2.0</Frequency>
+      <Frequency>40.0</Frequency>
       <Prefabs>
         <Prefab SubtypeId="Nodachi-class Destroyer">
           <Position>
@@ -123,9 +125,10 @@
         [ReplenishSystems:true]
 
         [SpawnConditionsProfiles:Red-Spawns-RM10]
+        [SpawnConditionsProfiles:Red-Spawns-RM20]
       </Description>
       <IsPirate>true</IsPirate>
-      <Frequency>5.0</Frequency>
+      <Frequency>60.0</Frequency>
       <Prefabs>
         <Prefab SubtypeId="Yumi-class Frigate">
           <Position>
@@ -179,7 +182,7 @@
         [SpawnConditionsProfiles:Red-Spawns-RM20]
       </Description>
       <IsPirate>true</IsPirate>
-      <Frequency>5.0</Frequency>
+      <Frequency>40.0</Frequency>
       <Prefabs>
         <Prefab SubtypeId="Nodachi-class Destroyer">
           <Position>
@@ -242,7 +245,7 @@
         [SpawnConditionsProfiles:Red-Spawns-RCA]
       </Description>
       <IsPirate>true</IsPirate>
-      <Frequency>60.0</Frequency>
+      <Frequency>55.0</Frequency>
       <Prefabs>
         <Prefab SubtypeId="ISL - Myxini Quarry Miner MK2-AO 1400">
           <Position>
@@ -272,7 +275,7 @@
 
         [ReplenishSystems:true]
 
-        [SpawnConditionsProfiles:Red-Spawns-RCA]
+        [SpawnConditionsProfiles:Red-Spawns-RCA10]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>30.0</Frequency>

@@ -9,11 +9,126 @@
       <Description>
         [MES Spawn Conditions]
 
+        [FactionOwner:KAJI]
+
+        [AtmosphericCargoShip:true]
+        [SkipAirDensityCheck:true]
+        [ZoneConditions:GVA-ZoneConditionProfile-RedZone]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Red-Spawns-RCA10</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+
+        [FactionOwner:KAJI]
+
+        [AtmosphericCargoShip:true]
+        [SkipAirDensityCheck:true]
+        [ZoneConditions:GVA-ZoneConditionProfile-RedZone]
+
+        [CustomApiConditions:RedCivMoreThan10]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Red-Spawns-RMO</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+        [SpaceCargoShip:true]
+
         [AtmosphericCargoShip:true]
         [SkipAirDensityCheck:true]
 
+        [GravityCargoShip:true]
+
         [FactionOwner:KAJI]
         [ZoneConditions:GVA-ZoneConditionProfile-RedZone]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Red-Spawns-RM1</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+
+        [SpaceCargoShip:true]
+        [AtmosphericCargoShip:true]
+        [SkipAirDensityCheck:true]
+        [GravityCargoShip:true]
+
+        [FactionOwner:KAJI]
+        [ZoneConditions:GVA-ZoneConditionProfile-RedZone]
+        [CustomApiConditions:RedMilMoreThan1]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Red-Spawns-RM2</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+
+        [SpaceCargoShip:true]
+        [AtmosphericCargoShip:true]
+        [SkipAirDensityCheck:true]
+        [GravityCargoShip:true]
+
+        [SpaceCargoShipChance:10]
+        [GravityCargoShipChance:10]
+        [AtmosphericCargoShipChance:10]
+
+        [FactionOwner:KAJI]
+        [ZoneConditions:GVA-ZoneConditionProfile-RedZone]
+        [CustomApiConditions:RedMilMoreThan2]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Red-Spawns-RM10</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+
+        [SpaceCargoShip:true]
+        [AtmosphericCargoShip:true]
+        [SkipAirDensityCheck:true]
+        [GravityCargoShip:true]
+
+        [SpaceCargoShipChance:50]
+        [GravityCargoShipChance:50]
+        [AtmosphericCargoShipChance:50]
+
+        [FactionOwner:KAJI]
+        [ZoneConditions:GVA-ZoneConditionProfile-RedZone]
+        [CustomApiConditions:RedIsNormal]
+      </Description>
+    </EntityComponent>
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Red-Spawns-RM2O</SubtypeId>
+      </Id>
+      <Description>
+        [MES Spawn Conditions]
+
+        [SpaceCargoShip:true]
+        [AtmosphericCargoShip:true]
+        [SkipAirDensityCheck:true]
+        [GravityCargoShip:true]
+
+        [FactionOwner:KAJI]
+        [ZoneConditions:GVA-ZoneConditionProfile-RedZone]
+        [CustomApiConditions:RedIsStrong]
       </Description>
     </EntityComponent>
   </EntityComponents>

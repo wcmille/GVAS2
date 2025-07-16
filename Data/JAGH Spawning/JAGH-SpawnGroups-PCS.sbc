@@ -20,7 +20,7 @@
         [SpawnConditionsProfiles:Blue-Spawns-BM1]
       </Description>
       <IsPirate>true</IsPirate>
-      <Frequency>90.0</Frequency>
+      <Frequency>95.0</Frequency>
       <Prefabs>
         <Prefab SubtypeId="Huginn Interceptor">
           <Position>
@@ -41,7 +41,6 @@
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
-        <!--Do Not Edit-->
         <SubtypeId>GVA-Blue-FFO</SubtypeId>
       </Id>
       <Description>
@@ -54,9 +53,11 @@
         [ReplenishSystems:true]
 
         [SpawnConditionsProfiles:Blue-Spawns-BM2]
+        [SpawnConditionsProfiles:Blue-Spawns-BM10]
+        [SpawnConditionsProfiles:Blue-Spawns-BM20]
       </Description>
       <IsPirate>true</IsPirate>
-      <Frequency>5.0</Frequency>
+      <Frequency>100.0</Frequency>
       <Prefabs>
         <Prefab SubtypeId="Fenrir-class Interdictor">
           <Position>
@@ -75,7 +76,6 @@
     <SpawnGroup>
       <Id>
         <TypeId>SpawnGroupDefinition</TypeId>
-        <!--Do Not Edit-->
         <SubtypeId>GVA-Blue-DDO</SubtypeId>
       </Id>
       <Description>
@@ -89,9 +89,10 @@
         [ReplenishSystems:true]
 
         [SpawnConditionsProfiles:Blue-Spawns-BM10]
+        [SpawnConditionsProfiles:Blue-Spawns-BM20]
       </Description>
       <IsPirate>true</IsPirate>
-      <Frequency>2.0</Frequency>
+      <Frequency>40.0</Frequency>
       <Prefabs>
         <Prefab SubtypeId="Valkyrie-class Destroyer">
           <Position>
@@ -125,9 +126,10 @@
         [ReplenishSystems:true]
 
         [SpawnConditionsProfiles:Blue-Spawns-BM10]
+        [SpawnConditionsProfiles:Blue-Spawns-BM20]
       </Description>
       <IsPirate>true</IsPirate>
-      <Frequency>5.0</Frequency>
+      <Frequency>60.0</Frequency>
       <Prefabs>
         <Prefab SubtypeId="Fenrir-class Interdictor">
           <Position>
@@ -181,7 +183,7 @@
         [SpawnConditionsProfiles:Blue-Spawns-BM20]
       </Description>
       <IsPirate>true</IsPirate>
-      <Frequency>5.0</Frequency>
+      <Frequency>40.0</Frequency>
       <Prefabs>
         <Prefab SubtypeId="Valkyrie-class Destroyer">
           <Position>
@@ -244,7 +246,7 @@
         [SpawnConditionsProfiles:Blue-Spawns-BCA]
       </Description>
       <IsPirate>true</IsPirate>
-      <Frequency>60.0</Frequency>
+      <Frequency>55.0</Frequency>
       <Prefabs>
         <Prefab SubtypeId="ISL - Myxini Quarry Miner MK2-AO 1400">
           <Position>
@@ -274,7 +276,7 @@
 
         [ReplenishSystems:true]
 
-        [SpawnConditionsProfiles:Blue-Spawns-BCA]
+        [SpawnConditionsProfiles:Blue-Spawns-BCA10]
       </Description>
       <IsPirate>true</IsPirate>
       <Frequency>30.0</Frequency>
@@ -291,8 +293,6 @@
         </Prefab>
       </Prefabs>
     </SpawnGroup>
-
-
     <!-- Jump Transport -->
   </SpawnGroups>
 </Definitions>
