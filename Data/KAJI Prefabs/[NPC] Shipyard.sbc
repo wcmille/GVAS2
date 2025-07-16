@@ -3532,7 +3532,7 @@ Civilian=2</Value>
               <ShowInInventory>true</ShowInInventory>
               <NumberInGrid>2</NumberInGrid>
               <Enabled>false</Enabled>
-              <BroadcastRadius>5000</BroadcastRadius>
+              <BroadcastRadius>15000</BroadcastRadius>
               <ShowShipName>false</ShowShipName>
               <EnableBroadcasting>true</EnableBroadcasting>
               <AttachedPB>0</AttachedPB>

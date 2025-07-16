@@ -11,10 +11,13 @@
         [RivalAI Trigger]
         [UseTrigger:true]
         [Type:HasTarget]
-        [MinCooldownMs:60000]
-        [MaxCooldownMs:600000]       
+        [MinCooldownMs:30000]
+        [MaxCooldownMs:300000]
         [StartsReady:false]
-        [MaxActions:1]
+        
+        [MaxActions:2]
+        [ActionExecution:Sequential]
+        [Actions:GVA-Action-RadioOn]
         [Actions:GVA-KAJI-Action-CallReinforcements]
       </Description>
     </EntityComponent>
@@ -30,10 +33,6 @@
 
         [UseChatBroadcast:true]
         [ChatData:GVA-KAJI-Chat-CallReinforcements]
-
-        [CreateKnownPlayerArea:true]
-        [KnownPlayerAreaRadius:8000]
-        [KnownPlayerAreaTimer:30]
       </Description>
     </EntityComponent>
     <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">

@@ -5824,8 +5824,8 @@ inconclusiveinconclusiveinconclusiveinconclusiveinconclusive</Text>
               <ShowInToolbarConfig>true</ShowInToolbarConfig>
               <ShowInInventory>true</ShowInInventory>
               <NumberInGrid>1</NumberInGrid>
-              <Enabled>false</Enabled>
-              <BroadcastRadius>25000.0059</BroadcastRadius>
+              <Enabled>true</Enabled>
+              <BroadcastRadius>2500</BroadcastRadius>
               <ShowShipName>false</ShowShipName>
               <EnableBroadcasting>true</EnableBroadcasting>
               <AttachedPB>0</AttachedPB>

@@ -26,5 +26,19 @@
         [RivalAI Action]
       </Description>
     </EntityComponent>
+      
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>GVA-Action-RadioOn</SubtypeId>
+      </Id>
+      <Description>
+        [RivalAI Action]
+
+        [ChangeAntennaRanges:true]
+        [AntennaRangeChangeType:Set]
+        [AntennaRangeChangeAmount:25000]
+      </Description>
+    </EntityComponent>
   </EntityComponents>
 </Definitions>

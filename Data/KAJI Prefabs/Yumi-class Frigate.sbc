@@ -7680,9 +7680,9 @@
               <ShowInInventory>true</ShowInInventory>
               <NumberInGrid>2</NumberInGrid>
               <Enabled>true</Enabled>
-              <BroadcastRadius>25000</BroadcastRadius>
+              <BroadcastRadius>2500</BroadcastRadius>
               <ShowShipName>false</ShowShipName>
-              <EnableBroadcasting>false</EnableBroadcasting>
+              <EnableBroadcasting>true</EnableBroadcasting>
               <AttachedPB>0</AttachedPB>
               <IgnoreAllied>false</IgnoreAllied>
               <IgnoreOther>true</IgnoreOther>
