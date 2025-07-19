@@ -6,6 +6,8 @@
       <CubeGrids>
         <CubeGrid>
           <SubtypeName />
+          <Editable>false</Editable>
+          <DestructibleBlocks>false</DestructibleBlocks>
           <EntityId>141347783286288099</EntityId>
           <PersistentFlags>CastShadows InScene</PersistentFlags>
           <Name>141347783286288099</Name>

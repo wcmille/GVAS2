@@ -4863,8 +4863,8 @@
               <ShowInToolbarConfig>true</ShowInToolbarConfig>
               <ShowInInventory>true</ShowInInventory>
               <NumberInGrid>3</NumberInGrid>
-              <Enabled>false</Enabled>
-              <BroadcastRadius>20000</BroadcastRadius>
+              <Enabled>true</Enabled>
+              <BroadcastRadius>8000</BroadcastRadius>
               <HudText />
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CargoContainer">

@@ -9,8 +9,8 @@
       <Description>
         [Modular Encounters SpawnGroup]
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
-        [ManipulationProfiles:SLVG-Manipulation-Std]
         [ManipulationProfiles:SLVG-Manipulation-AKName]
+        [ManipulationProfiles:SLVG-Manipulation-Std]
 
         [ReplenishSystems:true]
 

@@ -9,11 +9,10 @@
 			<Description>
         [Modular Encounters SpawnGroup]
         [ManipulationProfiles:GVA-Common-Manipulation-Std]
-        [ManipulationProfiles:SLVG-Manipulation-Std]
         [ManipulationProfiles:SLVG-Manipulation-DDName]
+        [ManipulationProfiles:SLVG-Manipulation-Std]
 
         [ReplenishSystems:true]
-
         [SpawnConditionsProfiles:GVA-White-FarpointZone]
         [FactionOwner:SLVG]
       </Description>
