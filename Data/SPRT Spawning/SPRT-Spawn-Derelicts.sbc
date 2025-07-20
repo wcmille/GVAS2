@@ -18,6 +18,24 @@
       <IsPirate>true</IsPirate>
       <Frequency>70.0</Frequency>
       <Prefabs>
+        <Prefab SubtypeId="LIM Avidan II Light Runabout">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>100.0</Z>
+          </Position>
+          <Speed>0</Speed>
+          <BeaconText>Distress</BeaconText>
+        </Prefab>
+        <Prefab SubtypeId="LIM Buffalo Cargo Shuttle">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>100.0</Z>
+          </Position>
+          <Speed>0</Speed>
+          <BeaconText>Distress</BeaconText>
+        </Prefab>
         <Prefab SubtypeId="EZ-POD Wreck01">
           <Position>
             <X>100.0</X>

@@ -72,7 +72,7 @@
         [Blocks:MyObjectBuilder_UpgradeModule/(null)]
         [MatchOnlyTypeId:true]
 
-        [Chance:99]
+        [Chance:75]
         [UseSeparatePercentages:true]
         [MinIntegrityPercentage:1]
         [MaxIntegrityPercentage:70]
