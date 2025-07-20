@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-16"?>
+<BeaconConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MinBeaconRadius>2500</MinBeaconRadius>
+  <MaxBeaconRadius>25000</MaxBeaconRadius>
+  <WeaponPCUWeight>1</WeaponPCUWeight>
+  <BlockMassWeight>10</BlockMassWeight>
+  <GridDimensionsWeight>10</GridDimensionsWeight>
+  <MaxWeaponPCU>200000</MaxWeaponPCU>
+  <MaxRangeBlockMass>5000000</MaxRangeBlockMass>
+  <MaxGridDimensions>
+    <X>45</X>
+    <Y>25</Y>
+    <Z>15</Z>
+  </MaxGridDimensions>
+  <SmallGridRangeFactor>0.2</SmallGridRangeFactor>
+  <AffectingWeatherTypes>
+    <dictionary>
+      <item>
+        <Key>AlienFogHeavy</Key>
+        <Value>0.3</Value>
+      </item>
+      <item>
+        <Key>AlienFogLight</Key>
+        <Value>0.2</Value>
+      </item>
+      <item>
+        <Key>AlienRainHeavy</Key>
+        <Value>0.3</Value>
+      </item>
+      <item>
+        <Key>AlienRainLight</Key>
+        <Value>0.2</Value>
+      </item>
+      <item>
+        <Key>AlienThunderstormHeavy</Key>
+        <Value>0.4</Value>
+      </item>
+      <item>
+        <Key>AlienThunderstormLight</Key>
+        <Value>0.3</Value>
+      </item>
+      <item>
+        <Key>Dust</Key>
+        <Value>0.1</Value>
+      </item>
+      <item>
+        <Key>ElectricStorm</Key>
+        <Value>0.5</Value>
+      </item>
+      <item>
+        <Key>FogHeavy</Key>
+        <Value>0.3</Value>
+      </item>
+      <item>
+        <Key>FogLight</Key>
+        <Value>0.2</Value>
+      </item>
+      <item>
+        <Key>MarsSnow</Key>
+        <Value>0.1</Value>
+      </item>
+      <item>
+        <Key>MarsStormHeavy</Key>
+        <Value>0.4</Value>
+      </item>
+      <item>
+        <Key>MarsStormLight</Key>
+        <Value>0.2</Value>
+      </item>
+      <item>
+        <Key>RainHeavy</Key>
+        <Value>0.3</Value>
+      </item>
+      <item>
+        <Key>RainLight</Key>
+        <Value>0.2</Value>
+      </item>
+      <item>
+        <Key>SandStormHeavy</Key>
+        <Value>0.3</Value>
+      </item>
+      <item>
+        <Key>SandStormLight</Key>
+        <Value>0.2</Value>
+      </item>
+      <item>
+        <Key>SnowHeavy</Key>
+        <Value>0.3</Value>
+      </item>
+      <item>
+        <Key>SnowLight</Key>
+        <Value>0.2</Value>
+      </item>
+      <item>
+        <Key>ThunderstormHeavy</Key>
+        <Value>0.4</Value>
+      </item>
+      <item>
+        <Key>ThunderstormLight</Key>
+        <Value>0.3</Value>
+      </item>
+      <item>
+        <Key>RadiationStorm</Key>
+        <Value>0.5</Value>
+      </item>
+    </dictionary>
+  </AffectingWeatherTypes>
+  <ForceRescanPeriodSecs>30</ForceRescanPeriodSecs>
+  <OverrideFallbackName>Notice Me Senpai! &gt;_&lt;;</OverrideFallbackName>
+  <CooldownSecs>60</CooldownSecs>
+  <WeatherPeakPoint>0.75</WeatherPeakPoint>
+  <NoGravityCooldownSecs>30</NoGravityCooldownSecs>
+  <NoGravityBeaconRadiusMultiplier>2</NoGravityBeaconRadiusMultiplier>
+  <JumpCooldownSecs>30</JumpCooldownSecs>
+  <JumpBeaconRadiusMultiplier>2</JumpBeaconRadiusMultiplier>
+  <WeaponFireCooldownSecs>0</WeaponFireCooldownSecs>
+  <WeaponStrategy>PCU</WeaponStrategy>
+  <ManualWeaponPoints>
+    <dictionary>
+      <item>
+        <Key Type="MyObjectBuilder_Warhead" Subtype="LargeExplosiveBarrel" />
+        <Value>100</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_Warhead" Subtype="SmallExplosiveBarrel" />
+        <Value>100</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_SmallMissileLauncher" Subtype="SmallMissileLauncherWarfare2" />
+        <Value>425</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_SmallGatlingGun" Subtype="SmallGatlingGunWarfare2" />
+        <Value>80</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_Warhead" Subtype="LargeWarhead" />
+        <Value>100</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_Warhead" Subtype="SmallWarhead" />
+        <Value>50</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeGatlingTurret" Subtype="" />
+        <Value>225</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeGatlingTurret" Subtype="SmallGatlingTurret" />
+        <Value>225</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeMissileTurret" Subtype="" />
+        <Value>275</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeMissileTurret" Subtype="SmallMissileTurret" />
+        <Value>100</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_InteriorTurret" Subtype="LargeInteriorTurret" />
+        <Value>125</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_SmallMissileLauncher" Subtype="" />
+        <Value>425</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_SmallMissileLauncher" Subtype="LargeMissileLauncher" />
+        <Value>825</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_SmallMissileLauncherReload" Subtype="SmallRocketLauncherReload" />
+        <Value>425</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_SmallGatlingGun" Subtype="" />
+        <Value>80</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_SmallGatlingGun" Subtype="SmallBlockAutocannon" />
+        <Value>80</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_SmallMissileLauncherReload" Subtype="SmallBlockMediumCalibreGun" />
+        <Value>80</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_SmallMissileLauncher" Subtype="LargeBlockLargeCalibreGun" />
+        <Value>80</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeMissileTurret" Subtype="LargeCalibreTurret" />
+        <Value>275</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeMissileTurret" Subtype="LargeBlockMediumCalibreTurret" />
+        <Value>275</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeMissileTurret" Subtype="SmallBlockMediumCalibreTurret" />
+        <Value>275</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeMissileTurret" Subtype="AutoCannonTurret" />
+        <Value>225</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_SmallMissileLauncher" Subtype="LargeFlareLauncher" />
+        <Value>150</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_SmallMissileLauncher" Subtype="SmallFlareLauncher" />
+        <Value>150</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_InteriorTurret" Subtype="NpcLargeInteriorTurret" />
+        <Value>125</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_ConveyorSorter" Subtype="LargeRailgun" />
+        <Value>80</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_ConveyorSorter" Subtype="SmallRailgun" />
+        <Value>80</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_Searchlight" Subtype="LargeSearchlight" />
+        <Value>50</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_Searchlight" Subtype="SmallSearchlight" />
+        <Value>50</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeMissileTurret" Subtype="ARYXVulcanTurret" />
+        <Value>500</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeMissileTurret" Subtype="SentinelTurret" />
+        <Value>100</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeGatlingTurret" Subtype="AutoCannonTurret" />
+        <Value>225</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeMissileTurret" Subtype="ARYXRailgunTurret" />
+        <Value>600</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeMissileTurret" Subtype="MA_PDT" />
+        <Value>300</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeMissileTurret" Subtype="MA_PDT_sm" />
+        <Value>200</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeMissileTurret" Subtype="ARYXSpartanTurret" />
+        <Value>400</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeMissileTurret" Subtype="ReceptorTurret" />
+        <Value>200</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_SmallMissileLauncherReload" Subtype="SmallRocketLauncherReload_NPC" />
+        <Value>200</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeMissileTurret" Subtype="LaserDesignatorTurret" />
+        <Value>100</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_ConveyorSorter" Subtype="Missile_Torpedo_Large" />
+        <Value>600</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_ConveyorSorter" Subtype="Missile_Torpedo_Small" />
+        <Value>600</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_ConveyorSorter" Subtype="Missile_Torpedo_Large_NPC" />
+        <Value>600</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_ConveyorSorter" Subtype="Missile_Torpedo_Small_NPC" />
+        <Value>600</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_ConveyorSorter" Subtype="MA_T2PDX" />
+        <Value>200</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_ConveyorSorter" Subtype="ReceptorCoilGun" />
+        <Value>300</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_ConveyorSorter" Subtype="MA_Fixed_T2" />
+        <Value>300</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_ConveyorSorter" Subtype="missileBattery01" />
+        <Value>400</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_ConveyorSorter" Subtype="ARYXLargeRadar" />
+        <Value>50</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_ConveyorSorter" Subtype="ARYXSmallRadar" />
+        <Value>50</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_ConveyorSorter" Subtype="AutoCannonTurret" />
+        <Value>200</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_ConveyorSorter" Subtype="LaserDesignator" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeMissileTurret" Subtype="honir_designator_01" />
+        <Value>100</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeMissileTurret" Subtype="LargeMissileTurretReskin" />
+        <Value>275</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeMissileTurret" Subtype="SmallMissileTurretReskin" />
+        <Value>100</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeGatlingTurret" Subtype="LargeGatlingTurretReskin" />
+        <Value>225</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeGatlingTurret" Subtype="SmallGatlingTurretReskin" />
+        <Value>225</Value>
+      </item>
+    </dictionary>
+  </ManualWeaponPoints>
+  <WeaponSignatureMultipliers>
+    <dictionary>
+      <item>
+        <Key Type="MyObjectBuilder_Warhead" Subtype="LargeExplosiveBarrel" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_Warhead" Subtype="SmallExplosiveBarrel" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_SmallMissileLauncher" Subtype="SmallMissileLauncherWarfare2" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_SmallGatlingGun" Subtype="SmallGatlingGunWarfare2" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_Warhead" Subtype="LargeWarhead" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_Warhead" Subtype="SmallWarhead" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeGatlingTurret" Subtype="" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeGatlingTurret" Subtype="SmallGatlingTurret" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeMissileTurret" Subtype="" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeMissileTurret" Subtype="SmallMissileTurret" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_InteriorTurret" Subtype="LargeInteriorTurret" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_SmallMissileLauncher" Subtype="" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_SmallMissileLauncher" Subtype="LargeMissileLauncher" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_SmallMissileLauncherReload" Subtype="SmallRocketLauncherReload" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_SmallGatlingGun" Subtype="" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_SmallGatlingGun" Subtype="SmallBlockAutocannon" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_SmallMissileLauncherReload" Subtype="SmallBlockMediumCalibreGun" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_SmallMissileLauncher" Subtype="LargeBlockLargeCalibreGun" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeMissileTurret" Subtype="LargeCalibreTurret" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeMissileTurret" Subtype="LargeBlockMediumCalibreTurret" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeMissileTurret" Subtype="SmallBlockMediumCalibreTurret" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeMissileTurret" Subtype="AutoCannonTurret" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_SmallMissileLauncher" Subtype="LargeFlareLauncher" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_SmallMissileLauncher" Subtype="SmallFlareLauncher" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_InteriorTurret" Subtype="NpcLargeInteriorTurret" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_ConveyorSorter" Subtype="LargeRailgun" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_ConveyorSorter" Subtype="SmallRailgun" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_Searchlight" Subtype="LargeSearchlight" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_Searchlight" Subtype="SmallSearchlight" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeMissileTurret" Subtype="ARYXVulcanTurret" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeMissileTurret" Subtype="SentinelTurret" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeGatlingTurret" Subtype="AutoCannonTurret" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeMissileTurret" Subtype="ARYXRailgunTurret" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeMissileTurret" Subtype="MA_PDT" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeMissileTurret" Subtype="MA_PDT_sm" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeMissileTurret" Subtype="ARYXSpartanTurret" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeMissileTurret" Subtype="ReceptorTurret" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_SmallMissileLauncherReload" Subtype="SmallRocketLauncherReload_NPC" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeMissileTurret" Subtype="LaserDesignatorTurret" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_ConveyorSorter" Subtype="Missile_Torpedo_Large" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_ConveyorSorter" Subtype="Missile_Torpedo_Small" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_ConveyorSorter" Subtype="Missile_Torpedo_Large_NPC" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_ConveyorSorter" Subtype="Missile_Torpedo_Small_NPC" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_ConveyorSorter" Subtype="MA_T2PDX" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_ConveyorSorter" Subtype="ReceptorCoilGun" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_ConveyorSorter" Subtype="MA_Fixed_T2" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_ConveyorSorter" Subtype="missileBattery01" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_ConveyorSorter" Subtype="ARYXLargeRadar" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_ConveyorSorter" Subtype="ARYXSmallRadar" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_ConveyorSorter" Subtype="AutoCannonTurret" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_ConveyorSorter" Subtype="LaserDesignator" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeMissileTurret" Subtype="honir_designator_01" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeMissileTurret" Subtype="LargeMissileTurretReskin" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeMissileTurret" Subtype="SmallMissileTurretReskin" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeGatlingTurret" Subtype="LargeGatlingTurretReskin" />
+        <Value>1</Value>
+      </item>
+      <item>
+        <Key Type="MyObjectBuilder_LargeGatlingTurret" Subtype="SmallGatlingTurretReskin" />
+        <Value>1</Value>
+      </item>
+    </dictionary>
+  </WeaponSignatureMultipliers>
+</BeaconConfiguration>
