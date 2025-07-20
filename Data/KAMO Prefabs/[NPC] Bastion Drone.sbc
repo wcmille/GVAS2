@@ -2314,13 +2314,14 @@
               <SkinSubtypeId>DigitalCamouflage_Armor</SkinSubtypeId>
             </MyObjectBuilder_CubeBlock>
             <MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Beacon">
-              <SubtypeName>SmallBlockBeaconReskin</SubtypeName>
+              <SubtypeName>SmallBlockBeacon</SubtypeName>
               <EntityId>96779157973563582</EntityId>
               <Min x="0" y="12" z="4" />
               <BlockOrientation Forward="Down" Up="Backward" />
               <ColorMaskHSV x="0" y="-0.8" z="-0.3" />
               <SkinSubtypeId>DigitalCamouflage_Armor</SkinSubtypeId>
               <ShareMode>Faction</ShareMode>
+              <CustomName>NPC Beacon</CustomName>
               <ShowOnHUD>false</ShowOnHUD>
               <ShowInTerminal>true</ShowInTerminal>
               <ShowInToolbarConfig>true</ShowInToolbarConfig>
@@ -2350,7 +2351,7 @@
               <ConveyorLineType>SMALL_LINE</ConveyorLineType>
             </MyObjectBuilder_ConveyorLine>
           </ConveyorLines>
-          <DisplayName>Bastion Drone</DisplayName>
+          <DisplayName>[NPC] Bastion Drone</DisplayName>
           <DestructibleBlocks>true</DestructibleBlocks>
           <CreatePhysics>false</CreatePhysics>
           <EnableSmallToLargeConnections>false</EnableSmallToLargeConnections>

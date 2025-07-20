@@ -1,0 +1,12 @@
+Grid Name:          [BMC] Pappy Memorial
+
+Tags For SpawnGroup:
+[StaticEncounterCoords:{X:160335.286454284 Y:181304.732170118 Z:5757249.41477545}]
+[StaticEncounterForward:{X:-0.625748517478417 Y:0.614811720772164 Z:-0.480047227754451}]
+[StaticEncounterUp:{X:0.459035483860204 Y:0.787824493692271 Z:0.410632428938272}]
+
+Optional Tags For Dynamic Planet Spawning:
+[StaticEncounterUsePlanetDirectionAndAltitude:true]
+[StaticEncounterPlanet:Alien]
+[StaticEncounterPlanetDirection:{X:0.458981402633969 Y:0.787883287016929 Z:0.410580075107833}]
+[StaticEncounterPlanetAltitude:-1.25825131085003]
